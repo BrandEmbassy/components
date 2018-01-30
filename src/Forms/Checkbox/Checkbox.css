@@ -1,0 +1,13 @@
+.Checkbox {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.Checkbox input[type=checkbox] {
+  position: absolute;
+  display: none;
+}
+
