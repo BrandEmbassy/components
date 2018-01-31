@@ -1,6 +1,13 @@
 .GridDemo {
 }
 
+.h3 {
+  margin: 30px 0 20px;
+}
+
+.h2 {
+  margin: 20px 0 20px;
+}
 
 .color {
   background-color: rgba(3, 82, 16, 0.61);
@@ -20,7 +27,7 @@
 }
 
 .color3 {
-  background-color: rgba(82, 3, 3, 0.61);
+  background-color: rgba(168, 1, 1, 0.61);
   color: #fff;
   padding: 10px;
   font-size: 14px;
@@ -28,7 +35,7 @@
 }
 
 .color4 {
-  background-color: rgba(138, 138, 138, 0.61);
+  background-color: rgba(138, 138, 138, 0.329);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
@@ -49,6 +56,14 @@
   padding: 20px 0 0  ;
   font-weight: 700;
 }
+
+.color7 {
+  background: #1ab7ff;
+  color: #111f25;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 
 
 .row {

@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../styles/Base.css';
 import Button from './../Controls/Button/Button';
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { vs } from 'react-syntax-highlighter/styles/prism';
+
+const code = 
+`<div class="Button">
+  Button
+</div>        
+`;
 
 export default class ButtonComponent extends Component {
   render() {
     return (
       <div className="container">
         <div className="row">
+          <div className="HeaderBox">
+            <div className="step">Controls</div>
+            <div className="step">Button</div>
+          </div>
+        </div>
 
+        <SyntaxHighlighter language='jsx' style={vs}>
+          {code}
+        </SyntaxHighlighter> 
+
+        <div className="row">
           <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
           <div class="box">      
             <h2 className="h2"> Button </h2>

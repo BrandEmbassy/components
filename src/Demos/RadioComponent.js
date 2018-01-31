@@ -8,7 +8,7 @@ export default class RadioComponent extends Component {
       <div className="container">
         <div className="row">
           <div className="HeaderBox">
-            <div className="step">Controls</div>
+            <div className="step">Forms</div>
             <div className="step">Radio</div>
           </div>
         </div>

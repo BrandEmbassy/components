@@ -9,6 +9,7 @@ export default class Headings extends Component {
         <div className="row">
           <div className="HeaderBox">
             <div className="step">Brand Embassy</div>
+            <div class="be-icon-arrow-right"></div>
             <div className="step">Headings</div>
           </div>
         </div>  

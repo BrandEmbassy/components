@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import  '!style-loader!css-loader!../../styles/Base.css';
 import styles from './Input.css';
 
 export default class Input extends Component {
   render() {
     return (
-      <div className={styles.InputContent}>
-     
-          <h1 className={styles.H1}> Input </h1>
-
-          <input type="text" className={styles.Input} />
-
+      <div className={styles.InputField}>
+        <div className={styles.Label}>
+          {this.props.label}                
+        </div>
+        <div className={styles.Input}>
+          <input type="text" name="headline" id="form" placeholder="" />
+        </div>
+        <div className={styles.Desc}>
+          {this.props.desc}                
+        </div>
       </div>
     );
   }

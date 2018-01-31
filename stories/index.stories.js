@@ -8,15 +8,26 @@ import Grid from './../src/Basic/Grid/Grid';
 import Headings from './../src/Basic/Headings/Headings';
 import Paragraphs from './../src/Basic/Paragraphs/Paragraphs';
 
-import Input from './../src/Forms/Input/Input';
-import Textarea from './../src/Forms/Textarea/Textarea';
-import Checkbox from './../src/Forms/Checkbox/Checkbox';
-import Radio from './../src/Forms/Radio/Radio';
-import TableComponent from './../src/Forms/Table/TableComponent';
+import InputComponent from './../src/Demos/InputComponent';
+import TextareaComponent from './../src/Demos/TextareaComponent';
+import CheckboxComponent from './../src/Demos/CheckboxComponent';
+import RadioComponent from './../src/Demos/RadioComponent';
+import TableComponent from './../src/Demos/TableComponent';
 
 import ButtonComponent from './../src/Demos/ButtonComponent';
 import ButtonGroupComponent from './../src/Demos/ButtonGroupComponent';
 import SwitcherComponent from './../src/Demos/SwitcherComponent';
+
+import DropdownComponent from './../src/Demos/Navigation/DropdownComponent';
+import BreadcrumbsComponent from './../src/Demos/Navigation/BreadcrumbsComponent';
+
+import ChanelLabelComponent from './../src/Demos/Custom/ChanelLabelComponent';
+import ChanelPictureComponent from './../src/Demos/Custom/ChanelPictureComponent';
+import NotificationMessageComponent from './../src/Demos/Custom/NotificationMessageComponent';
+import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
+import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
+import TagsComponent from './../src/Demos/Custom/TagsComponent';
+
 
 storiesOf('Basic', module)
   .add('Grid', () => <Grid /> )
@@ -24,10 +35,10 @@ storiesOf('Basic', module)
   .add('Paragraphs', () => <Paragraphs /> );
 
 storiesOf('Forms', module)
-  .add('Input', () => <Input/> )
-  .add('Textarea', () => <Textarea/> )
-  .add('Checkbox', () => <Checkbox/> )
-  .add('Radio', () => <Radio/> )
+  .add('Input', () => <InputComponent/> )
+  .add('Textarea', () => <TextareaComponent/> )
+  .add('Checkbox', () => <CheckboxComponent/> )
+  .add('Radio', () => <RadioComponent/> )
   .add('Table', () => <TableComponent/> );
 
 storiesOf('Controls', module)
@@ -36,12 +47,13 @@ storiesOf('Controls', module)
   .add('Switcher', () => <SwitcherComponent /> );
 
 storiesOf('Navigation', module)
-  .add('Dropdown menu', () => <div>Dropdown menu</div> )
-  .add('Breadcrumbs', () => <div>Breadcrumbs</div> );
+  .add('Dropdown menu', () => <DropdownComponent/> )
+  .add('Breadcrumbs', () => <BreadcrumbsComponent/> );
 
 storiesOf('Custom', module)
-  .add('Chanel picture', () => <div>Chanel picture</div> )
-  .add('Profile picture', () => <div>Profile picture</div> )
-  .add('Chanel label', () => <div>Chanel label</div> )
-  .add('Statuses', () => <div>Statuses</div> )
-  .add('Tags', () => <div>Tags</div> );
+  .add('Chanel Label', () => <ChanelLabelComponent /> )
+  .add('Chanel Picture', () => <ChanelPictureComponent /> )
+  .add('Notification Message', () => <NotificationMessageComponent /> )
+  .add('Profile Picture', () => <ProfilePictureComponent /> )
+  .add('Statuses', () => <StatusesComponent /> )
+  .add('Tags', () => <TagsComponent /> );

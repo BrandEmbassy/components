@@ -5,11 +5,16 @@ import styles from './Textarea.css';
 export default class Textarea extends Component {
   render() {
     return (
-      <div className={styles.TextareaContent}>
-     
-          <h1 className={styles.H1}> Textarea </h1>
-
-          <textarea className={styles.Textarea} placeholder="sem pis" />
+      <div className={styles.TextareaField}>
+        <div className={styles.Label}>
+          {this.props.label}                
+        </div>
+        <div className={styles.Textarea}>
+        <textarea name="xyz" class="textarea" id="form" placeholder=""> </textarea>
+        </div>
+        <div className={styles.Desc}>
+          {this.props.desc}                
+        </div>
       </div>
     );
   }

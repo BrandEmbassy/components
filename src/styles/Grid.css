@@ -9,21 +9,6 @@
   text-align: center;
 }
 
-.padding-5{
-  padding: 5px;
-}
-
-.padding-10{
-  padding: 10px;
-}
-
-.padding-15{
-  padding: 15px;
-}
-
-.padding-20{
-  padding: 20px;
-}
 
 .row {
   box-sizing: border-box;
@@ -282,6 +267,25 @@
   -ms-flex-order: 1;
   order: 1;
 }
+
+
+
+.padding-5{
+  padding: 5px;
+}
+
+.padding-10{
+  padding: 10px;
+}
+
+.padding-15{
+  padding: 15px;
+}
+
+.padding-20{
+  padding: 20px;
+}
+
 
 @media only screen and (min-width: 640px) {
 

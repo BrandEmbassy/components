@@ -9,7 +9,7 @@ export default class ButtonGroupComponent extends Component {
       <div className="container">
         <div className="row">
           <div className="HeaderBox">
-            <div className="step">Brand Embassy</div>
+            <div className="step">Controls</div>
             <div className="step">ButtonGroup</div>
           </div>
         </div>
