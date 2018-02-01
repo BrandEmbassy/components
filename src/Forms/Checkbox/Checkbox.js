@@ -9,7 +9,6 @@ export default class Checkbox extends Component {
           <input type="checkbox" className={styles.Checkbox} name="xxx" id="xxx" />
           <label for="xxx" ></label>
         </div>
-      
     );
   }
 }

@@ -1,21 +1,20 @@
-.RadioContent{
-position: relative;
-}
-
-
 .Radio {
-  position: absolute;
-  top: 16px;
-  left: 10px;
-  display: block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #ccc;
-  border-radius: 16px;
-  border-color: #8989af;
+  position: relative;
+  display: flex;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+
+  & input {
+    height: 14px;
+  }
+}
+.Radio span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; 
 }
 
-  
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
   position: absolute;
@@ -72,4 +71,5 @@ position: relative;
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
-} 
+}
+
