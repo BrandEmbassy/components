@@ -25,6 +25,13 @@
   padding: 0;
 }
 
+.Ceckbox label {
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  transition: all .15s;
+  cursor: pointer;
+}
+
 .Checkbox label:after {
   content: "e";
   padding-right: 1px;

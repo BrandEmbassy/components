@@ -25,7 +25,7 @@ export default class App extends Component {
         <div className={styles.Appo}>
           <h1> components </h1>
 
-          <ButtonGroupComponent /><br />
+
 
 
           <SyntaxHighlighter language='jsx' style={duotoneDark}>
@@ -34,15 +34,8 @@ export default class App extends Component {
 
 
 <div class="be-icon-arrow-right"></div>
-            <div className="row">
-              <div className="col-xs-6">
-                dadawda
-              </div>
-              <div className="col-xs-6">
-                ddawwwwddddd
-              </div>
-            </div>
-
+          
+        
 
 
 
