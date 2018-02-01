@@ -9,7 +9,7 @@ export default class Input extends Component {
           {this.props.label}                
         </div>
         <div className={styles.Field}>
-          <input type="text" name="headline" id="form" placeholder="" />
+          <input type="text" name="headline" id="form" placeholder="" disabled={this.props.isDisabled} />
         </div>
         <div className={styles.Desc}>
           {this.props.desc}                

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import  '!style-loader!css-loader!../../styles/Base.css';
 import styles from './Textarea.css';
 
 export default class Textarea extends Component {
@@ -10,7 +9,7 @@ export default class Textarea extends Component {
           {this.props.label}                
         </div>
         <div className={styles.Field}>
-        <textarea name="xyz" id="form" placeholder="" />
+        <textarea name="xyz" id="form" placeholder="" disabled={this.props.isDisabled} />
         </div>
         <div className={`${styles.Desc} ${styles.isRed} `}>
           {this.props.desc}                
