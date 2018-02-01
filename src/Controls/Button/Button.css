@@ -1,0 +1,61 @@
+.Button {
+  font-family: Open Sans,Arial;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 44px;
+  margin: 5px;
+  padding: 0 42px;
+  line-height: 44px;
+  border-radius: 3px;
+  background-color: #329d53;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition-duration: 0.18s;
+
+  &:hover {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+
+  &.Reversed {
+    color: #329d53;
+    background-color: #fff;
+
+    &:hover {
+      color: #fff;
+      background-color: #329d53;
+    }
+  }
+
+  &.Negative {
+    background-color: #E8585D;
+  }
+
+  &.Cancel {
+    color: #E8585D;
+    background-color: #fff;
+
+    &:hover {
+      color: #fff;
+      background-color: #E8585D;
+    }
+  }
+
+  &.Disabled {
+    border-color: #c5c5c5!important;
+    background-color: #cfcfcf!important;
+    color: #a6a6a6!important;
+    cursor: not-allowed!important;
+    pointer-events: none!important;
+  }
+
+  &.Small {
+    height: 30px;
+    padding: 0 22px;
+    line-height: 30px;
+  }
+}
+
