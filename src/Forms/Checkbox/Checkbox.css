@@ -1,53 +1,53 @@
 .Checkbox {
+  box-sizing: border-box;
   position: relative;
   display: inline-block;
+  font-family: "be-engager" !important;
   width: 16px;
   height: 16px;
   line-height: 16px;
-}
 
-.Checkbox input[type=checkbox] {
-  position: absolute;
-  display: none;
-}
-
-.Checkbox input {
-  background-color: #fff;
-  border: none;
-}
-
-.Checkbox label, .Checkbox label:after {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: inherit;
-  padding: 0;
-}
-
-.Ceckbox label {
-  border: 1px solid #d9d9d9;
-  border-radius: 3px;
-  transition: all .15s;
-  cursor: pointer;
-}
-
-.Checkbox label:after {
-  content: "e";
-  padding-right: 1px;
-  text-align: center;
-  text-transform: none!important;
-  font-family: be-engager!important;
-  font-size: 8px;
-  font-weight: 400;
-  font-style: normal;
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-  color: #fff;
-  opacity: 0;
-}
-
-.Checkbox input[type=checkbox]:checked~label {
-  border-color: #40c268;
-  background-color: #40c268;
+  & label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: inherit;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    background-color: #fff;
+    .transition:(all 0.15s);
+    cursor: pointer;
+    &:after {
+      content: "\65";
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-right: 1px;
+      line-height: inherit;
+      text-align: center;
+      text-transform: none !important;
+      font-family: "be-engager" !important;
+      font-size:  8px;
+      font-weight: 400;
+      speak: none;
+      -webkit-font-smoothing: antialiased;
+      color: #fff;
+      opacity: 0;
+    }
+  }
+  & input[type=checkbox] {
+    position: absolute;
+    display: none;
+    &:checked {
+      & ~ label {
+        border-color: #40c268;
+        background-color: #40c268;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
