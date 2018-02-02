@@ -27,15 +27,16 @@ export default class Grid extends Component {
         <div className="container">
 
           <h2 className="h2">
-          Grid 
-
+            Grid 
           </h2>
+
           <h4 className="h4">
           .container have 100% width<br /> 
           (you can overwrite it by max-width)
           </h4>
+
           <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-            {`<div class="container"> 
+{`<div class="container"> 
   <div class="row">
     <div class="col-xs-3">
       ...
@@ -77,7 +78,7 @@ export default class Grid extends Component {
                 ( ... width 960px + )
               </div>
             </div>
-          </div>
+          </div> 
 
             <h2 className="h2">class padding</h2>
             <h3 className="h3">rows and columns are without default padding<br />

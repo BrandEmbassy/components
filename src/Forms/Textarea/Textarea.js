@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import  '!style-loader!css-loader!../../styles/Base.css';
 import styles from './Textarea.css';
 
 export default class Textarea extends Component {
   render() {
     return (
-      <div className={styles.TextareaField}>
-        <div className={`${styles.Label} ${styles.isRed} `}>
+      <div className={`${styles.Textarea} ${this.props.isDisabled === true ? styles.Disabled : ''} ${this.props.isError === true ? styles.Error : ''}`}>
+        <div className={styles.Label}>
           {this.props.label}                
         </div>
-        <div className={styles.Textarea}>
-        <textarea name="xyz" class="textarea" id="form" placeholder=""> </textarea>
+        <div className={styles.Field}>
+        <textarea name={this.props.name} placeholder={this.props.placeholder} disabled={this.props.isDisabled} />
         </div>
         <div className={`${styles.Desc} ${styles.isRed} `}>
           {this.props.desc}                
