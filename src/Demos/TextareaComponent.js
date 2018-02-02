@@ -21,7 +21,7 @@ export default class TextareaComponent extends Component {
     label text here
   </div>
   <div class="Textarea__Field">
-    <textarea type="text" name="headline" id="form" placeholder="..." />
+    <textarea type="text" name="headline" placeholder="..." />
   </div>
   <div class="Textarea__Desc">
     description text here               
@@ -29,7 +29,9 @@ export default class TextareaComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
-<br /><br />
+<div className="row">
+</div>
+
 <h3 className="h3">add class Textarea__Disabled</h3>
 
 <h3 className="h3">and property <u>disabled</u> to textarea </h3>
@@ -46,7 +48,7 @@ export default class TextareaComponent extends Component {
     label text here
   </div>
   <div class="Textarea__Field">
-    <textarea type="text" name="headline" id="form" placeholder="..." />
+    <textarea type="text" name="headline" placeholder="..." />
   </div>
   <div class="Textarea__Desc">
     description text here               
@@ -54,7 +56,8 @@ export default class TextareaComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
-<br /><br />
+<div className="row">
+</div>
 
 <h3 className="h3">add class Textarea__Error</h3>
 
@@ -70,7 +73,7 @@ export default class TextareaComponent extends Component {
     label text here
   </div>
   <div class="Textarea__Field">
-    <textarea type="text" name="headline" id="form" placeholder="..." />
+    <textarea type="text" name="headline" placeholder="..." />
   </div>
   <div class="Textarea__Desc">
     description text here               

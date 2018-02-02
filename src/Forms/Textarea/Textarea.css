@@ -29,7 +29,6 @@
     width: 100%;
 
     & textarea {
-      box-sizing: border-box;
       position: relative;
       display: block;
       width: 100%;
@@ -65,7 +64,7 @@
   }
 
   &.Disabled {
-    & .Label{
+    & .Label {
       color: #9b9b9b;
     }
 
@@ -81,7 +80,7 @@
       }
     }
 
-    & textarea::placeholder{
+    & textarea::placeholder {
       color: #b3b3b3;
     }
   }
@@ -93,7 +92,7 @@
         box-shadow: none;
         border: 2px solid #e85d5f;
 
-        &:focus{
+        &:focus {
           outline: none;
         }
       }
