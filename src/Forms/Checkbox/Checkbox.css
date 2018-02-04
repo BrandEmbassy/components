@@ -1,3 +1,11 @@
+.CheckboxContent{
+  display: flex;
+
+  & .Label {
+    padding-left: 8px;
+  }
+}
+
 .Checkbox {
   box-sizing: border-box;
   position: relative;

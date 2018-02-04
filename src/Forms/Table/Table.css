@@ -1,10 +1,9 @@
 .Table {
   position: relative;
+  float: left;
   display: block;
   width: 100%;
-  float: left;
   margin: 20px 0;
-  overflow: hidden;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -13,35 +12,34 @@
   font-weight: 400;
   font-style: normal;
   color: #4a4a4a;
+  overflow: hidden;
 }
 
 .Table table {
+  table-layout: fixed;
   position: relative;
   width: 100%;
-  table-layout: fixed;
   border-collapse: collapse;
   border: none;
 }
 
-.Table table tr .Fix200 {
-  width: 200px;
-  max-width: 200px;
-}
-
-.Table table tr th:first-child, .Table table tr td:first-child  {
+.Table table tr th:first-child, .Table table tr td:first-child {
   padding-left: 20px;
 }
 
-.Table table tr th{
+.Table table tr th {
+  display: table-cell;
   height: 40px;
   background-color: #f5f5f5;
   font-weight: 700;
   color: gray;
-  display: table-cell;
 }
 
-.Table table tr td{
+.Table table tr td {
   height: 40px;
   color: gray;
   display: table-cell;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

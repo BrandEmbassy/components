@@ -12,9 +12,40 @@
   font-weight: 700;
   font-style: normal;
   color: #9b9b9b; 
-}
 
-.H1 {
+  & .Step {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    float: left;
+    cursor: default;
+    color: #9b9b9b; 
+  }
 
-  
+  & .Step:first-child {
+    padding-left: 0;
+
+    &:before {
+      content: "";
+    }
+  }
+  & .Step:last-child{
+    color: #4a4a4a;
+  }
+
+  & .Step:before{
+    content: "z";
+    position: absolute;
+    top: 0;
+    left: 8px;
+    display: block;
+    font-family: be-engager!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    font-variant: normal!important;
+    text-transform: none!important;
+    color: #9b9b9b!important;
+    pointer-events: none;
+    cursor: default!important;
+  }
 }

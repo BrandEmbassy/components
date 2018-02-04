@@ -5,8 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import Grid from './../src/Basic/Grid/Grid';
-import Headings from './../src/Basic/Headings/Headings';
-import Paragraphs from './../src/Basic/Paragraphs/Paragraphs';
+import HeadingsComponent from './../src/Demos/HeadingsComponent';
+import Typography from './../src/Basic/Typography/Typography';
 
 import InputComponent from './../src/Demos/InputComponent';
 import TextareaComponent from './../src/Demos/TextareaComponent';
@@ -31,8 +31,8 @@ import TagsComponent from './../src/Demos/Custom/TagsComponent';
 
 storiesOf('Basic', module)
   .add('Grid', () => <Grid /> )
-  .add('Headings', () => <Headings /> )
-  .add('Paragraphs', () => <Paragraphs /> );
+  .add('Headings', () => <HeadingsComponent /> )
+  .add('Typography', () => <Typography /> );
 
 storiesOf('Forms', module)
   .add('Input', () => <InputComponent/> )

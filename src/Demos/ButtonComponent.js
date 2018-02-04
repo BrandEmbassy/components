@@ -2,59 +2,122 @@ import React, { Component } from 'react';
 import '!style-loader!css-loader!./../styles/Base.css';
 import Button from './../Controls/Button/Button';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
-import { vs } from 'react-syntax-highlighter/styles/prism';
-
-const code = 
-`<div class="Button">
-  Button
-</div>        
-`;
+import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 
 export default class ButtonComponent extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div className="HeaderBox">
-            <div className="step">Controls</div>
-            <div className="step">Button</div>
+        <div className="row padding-20">
+          <div className="col-xs-5 ">
+            <h2 className="h2">Button</h2>
+            <Button text="Button"/>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button">
+  Button
+</div>
+`}
+            </SyntaxHighlighter> 
+          </div>
+          <div className="col-xs-5 col-xs-offset-1">
+          <h2 className="h2">small</h2>
+            <Button text="button" Small />
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Small">
+  Button
+</div>
+`}
+            </SyntaxHighlighter> 
           </div>
         </div>
-
-        <SyntaxHighlighter language='jsx' style={vs}>
-          {code}
-        </SyntaxHighlighter> 
-
-        <div className="row">
-          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6"> 
-          <div class="box">      
-            <h2 className="h2"> Button </h2>
-              <Button text="button"/>
-            <h3 className="h3">Negative </h3>
-              <Button text="button" isNegative />
-            <h3 className="h3">Cancel </h3>
-              <Button text="button" isCancel />
-            <h3 className="h3">Reversed </h3>
-              <Button text="button" isReversed />
-            <h3 className="h3">Disabled </h3>
-              <Button text="button" isDisabled />
-            </div>
-          </div>
-
-          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h2 className="h2"> props smal</h2>
-              <Button text="button" Small />
-            <h3 className="h3">Negative </h3>
-              <Button text="button" isNegative Small />
-            <h3 className="h3">Cancel </h3>
-              <Button text="button" isCancel Small />
-            <h3 className="h3">Reversed </h3>
-              <Button text="button" isReversed Small />
-            <h3 className="h3">Disabled </h3>
-              <Button text="button" isDisabled Small />
-          </div>
-
+        <div className="row padding-20">
+        <div className="col-xs-5 ">
+          <h2 className="h2">Negative</h2>
+          <Button text="Button" isNegative/>
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Negative">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
         </div>
+        <div className="col-xs-5 col-xs-offset-1">
+        <h2 className="h2">small</h2>
+          <Button text="button" isNegative Small />
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Negative Button__Small">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+      </div>
+      <div className="row padding-20">
+        <div className="col-xs-5 ">
+          <h2 className="h2">Disabled</h2>
+          <Button text="Button" isDisabled/>
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Disabled">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+        <div className="col-xs-5 col-xs-offset-1">
+        <h2 className="h2">small</h2>
+          <Button text="button" isDisabled Small />
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Disabled Button__Small">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+      </div>
+      <div className="row padding-20">
+        <div className="col-xs-5 ">
+          <h2 className="h2">Cancel</h2>
+          <Button text="Button" isCancel/>
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Cancel">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+        <div className="col-xs-5 col-xs-offset-1">
+        <h2 className="h2">small</h2>
+          <Button text="button" isCancel Small />
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Cancel Button__Small">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+      </div>
+      <div className="row padding-20">
+        <div className="col-xs-5 ">
+          <h2 className="h2">Reversed</h2>
+          <Button text="Button" isReversed/>
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Reversed">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+        <div className="col-xs-5 col-xs-offset-1">
+        <h2 className="h2">small</h2>
+          <Button text="button" isReversed Small />
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button  Button__Reversed Button__Small">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+      </div>
       </div>
     );
   }

@@ -1,6 +1,13 @@
+.RadioContent{
+  display: flex;
+
+  & .Label {
+    padding-left: 4px;
+  }
+}
+
 .Radio {
   position: relative;
-  display: flex;
   width: 14px;
   height: 14px;
   margin-right: 6px;
@@ -22,8 +29,7 @@
 }
 
 [type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
+[type="radio"]:not(:checked) + label{
   position: relative;
   width: 14px;
   height: 14px;
