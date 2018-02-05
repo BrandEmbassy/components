@@ -11,6 +11,7 @@ export default class Button extends Component {
         ${this.props.isCancel === true ? styles.Cancel : ''}
         ${this.props.isDisabled === true ? styles.Disabled : ''}
         ${this.props.Small === true ? styles.Small : ''}
+        ${this.props.Wide === true ? styles.Wide : ''}
         `}>
           {this.props.text} 
       </div>

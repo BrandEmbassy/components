@@ -15,14 +15,16 @@ export default class ButtonGroupComponent extends Component {
           </div>
         </div>
         <div className="row padding-20">
-          <ButtonGroup>
-            <Button text="buttonA" />
-            <Button text="buttonB" isNegative/>
-            <Button text="buttonC" isDisabled/>
-            <Button text="buttonD" />
-            <Button text="buttonE" isDisabled/>
-            <Button text="buttonF" isNegative/>
-          </ButtonGroup>
+          <div className="col-xs-12">
+            <ButtonGroup>
+              <Button text="buttonA" />
+              <Button text="buttonB" isNegative/>
+              <Button text="buttonC" isDisabled/>
+              <Button text="buttonD" />
+              <Button text="buttonE" isDisabled/>
+              <Button text="buttonF" isNegative/>
+            </ButtonGroup>
+          </div>
         </div>
 
         <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>

@@ -7,7 +7,6 @@
 }
 
 .Checkbox {
-  box-sizing: border-box;
   position: relative;
   display: inline-block;
   font-family: "be-engager" !important;

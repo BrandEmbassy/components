@@ -1,4 +1,4 @@
-.RadioContent{
+.RadioContent {
   display: flex;
 
   & .Label {
@@ -15,11 +15,12 @@
   & input {
     height: 14px;
   }
-}
-.Radio span {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; 
+
+  & span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+  }
 }
 
 [type="radio"]:checked,

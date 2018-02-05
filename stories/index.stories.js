@@ -21,8 +21,8 @@ import SwitcherComponent from './../src/Demos/SwitcherComponent';
 import DropdownComponent from './../src/Demos/Navigation/DropdownComponent';
 import BreadcrumbsComponent from './../src/Demos/Navigation/BreadcrumbsComponent';
 
-import ChanelLabelComponent from './../src/Demos/Custom/ChanelLabelComponent';
-import ChanelPictureComponent from './../src/Demos/Custom/ChanelPictureComponent';
+import ChannelLabelComponent from './../src/Demos/Custom/ChannelLabelComponent';
+import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureComponent';
 import NotificationMessageComponent from './../src/Demos/Custom/NotificationMessageComponent';
 import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
 import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
@@ -51,8 +51,8 @@ storiesOf('Navigation', module)
   .add('Breadcrumbs', () => <BreadcrumbsComponent/> );
 
 storiesOf('Custom', module)
-  .add('Chanel Label', () => <ChanelLabelComponent /> )
-  .add('Chanel Picture', () => <ChanelPictureComponent /> )
+  .add('Chanel Label', () => <ChannelLabelComponent /> )
+  .add('Chanel Picture', () => <ChannelPictureComponent /> )
   .add('Notification Message', () => <NotificationMessageComponent /> )
   .add('Profile Picture', () => <ProfilePictureComponent /> )
   .add('Statuses', () => <StatusesComponent /> )

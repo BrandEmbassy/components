@@ -4,7 +4,7 @@ import styles from './Table.css';
 export default class Table extends Component {
   render() {
     return (
-      <div className={styles.Table}>
+      <div className={`${styles.Table} ${this.props.Fixed === true ? styles.Fixed : ''}`}>
         <table>
           <thead>
             <tr>

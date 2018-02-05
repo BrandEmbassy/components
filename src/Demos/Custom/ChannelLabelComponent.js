@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import ChanelLabel from './../../Custom/ChanelLabel/ChanelLabel';
+import ChannelLabel from './../../Custom/ChannelLabel/ChannelLabel';
 
-export default class ChanelLabelComponent extends Component {
+export default class ChannelLabelComponent extends Component {
   render() {
     return (
       <div className="container">
@@ -13,7 +13,7 @@ export default class ChanelLabelComponent extends Component {
           </div>
         </div>
         
-        <ChanelLabel />
+        <ChannelLabel />
 
       </div>
     );

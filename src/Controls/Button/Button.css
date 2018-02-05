@@ -56,5 +56,11 @@
     padding: 0 22px;
     line-height: 30px;
   }
+
+  &.Wide {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
 }
 

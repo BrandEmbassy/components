@@ -22,7 +22,7 @@ export default class TextareaComponent extends Component {
           </div>
         </div>
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Textarea__Input">
+{`<div class="Textarea__Textarea">
   <div class="Textarea__Label">
     label text here
   </div>
@@ -47,7 +47,7 @@ export default class TextareaComponent extends Component {
 </div>
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`
-<div class="Textarea__Input Textarea__Disabled">
+<div class="Textarea__Textarea Textarea__Disabled">
   <div class="Textarea__Label">
     label text here
   </div>
@@ -70,7 +70,7 @@ export default class TextareaComponent extends Component {
 </div>
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`
-<div class="Textarea__Input Textarea__Error">
+<div class="Textarea__Textarea Textarea__Error">
   <div class="Textarea__Label">
     label text here
   </div>

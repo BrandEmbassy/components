@@ -118,6 +118,28 @@ export default class ButtonComponent extends Component {
           </SyntaxHighlighter> 
         </div>
       </div>
+      <div className="row padding-20">
+        <div className="col-xs-5 ">
+          <h2 className="h2">Wide</h2>
+          <Button text="Button" Wide/>
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Wide">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+        <div className="col-xs-5 col-xs-offset-1">
+        <h2 className="h2">small</h2>
+          <Button text="button" Wide Small />
+          <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Small Button__Wide">
+  Button
+</div>
+`}
+          </SyntaxHighlighter> 
+        </div>
+      </div>
       </div>
     );
   }
