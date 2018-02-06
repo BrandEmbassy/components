@@ -4,14 +4,14 @@ import styles from './Table.css';
 export default class Table extends Component {
   render() {
     return (
-      <div className={styles.Table}>
+      <div className={`${styles.Table} ${this.props.Fixed === true ? styles.Fixed : ''}`}>
         <table>
           <thead>
             <tr>
                 <th>Channel</th>
-                <th className={styles.Fix200}>Delaying messages</th>
-                <th className={styles.Fix200}>Default delay value</th>
-                <th className={styles.Fix200}>Maximum delay value</th>
+                <th>Delaying messages</th>
+                <th>Default delay value</th>
+                <th>Maximum delay value</th>
             </tr>
           </thead>
           <tbody>
@@ -19,13 +19,13 @@ export default class Table extends Component {
               <td>
                 <span>acc.socialmedia@homecredit.co.id</span>
               </td>
-              <td className={styles.Fix200}>
+              <td>
                 test
               </td>
-              <td className={styles.Fix200}>
+              <td>
               testtest
               </td>
-              <td className={styles.Fix200}>
+              <td>
               testtesttest
               </td>
             </tr>
@@ -33,28 +33,14 @@ export default class Table extends Component {
               <td>
                 <span>acc.nevim@nevim.co.id</span>
               </td>
-              <td className={styles.Fix200}>
+              <td>
                 test2131
               </td>
-              <td className={styles.Fix200}>
-              testtest32
-              </td>
-              <td className={styles.Fix200}>
-              testtesttest31
-              </td>
-            </tr>
-            <tr>
               <td>
-                <span>nic@homecredit.co.id</span>
-              </td>
-              <td className={styles.Fix200}>
-                test42
-              </td>
-              <td className={styles.Fix200}>
               testtest32
               </td>
-              <td className={styles.Fix200}>
-              testtesttest213
+              <td>
+              testtesttest31
               </td>
             </tr>
           </tbody>

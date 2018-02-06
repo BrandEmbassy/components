@@ -1,5 +1,4 @@
 .Button {
-  font-family: Open Sans,Arial;
   position: relative;
   display: inline-block;
   width: auto;
@@ -13,7 +12,7 @@
   font-weight: 700;
   color: #fff;
   cursor: pointer;
-  transition-duration: 0.18s;
+  transition-duration: 0.1s;
 
   &:hover {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
@@ -56,6 +55,12 @@
     height: 30px;
     padding: 0 22px;
     line-height: 30px;
+  }
+
+  &.Wide {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
   }
 }
 

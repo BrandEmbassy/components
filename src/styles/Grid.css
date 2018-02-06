@@ -269,21 +269,20 @@
 }
 
 
-
-.padding-5{
-  padding: 5px;
+.padding-5 {
+  padding: 5px 0 5px 0;
 }
 
-.padding-10{
-  padding: 10px;
+.padding-10 {
+  padding: 10px 0 10px 0;
 }
 
 .padding-15{
-  padding: 15px;
+  padding: 15px 0 15px 0;
 }
 
 .padding-20{
-  padding: 20px;
+  padding: 20px 0 20px 0;
 }
 
 

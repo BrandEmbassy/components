@@ -1,6 +1,13 @@
+.RadioContent {
+  display: flex;
+
+  & .Label {
+    padding-left: 4px;
+  }
+}
+
 .Radio {
   position: relative;
-  display: flex;
   width: 14px;
   height: 14px;
   margin-right: 6px;
@@ -8,11 +15,12 @@
   & input {
     height: 14px;
   }
-}
-.Radio span {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; 
+
+  & span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+  }
 }
 
 [type="radio"]:checked,
@@ -22,8 +30,7 @@
 }
 
 [type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
+[type="radio"]:not(:checked) + label{
   position: relative;
   width: 14px;
   height: 14px;

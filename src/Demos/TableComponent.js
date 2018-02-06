@@ -8,22 +8,25 @@ export default class TableComponent extends Component {
   render() {
     return (
       <div className="container">
-        <h2 className="h2">Table</h2>
-
-        <div className="row">
-          <Table />       
+        <div className="row padding-20">
+          <h2 className="h2">Table</h2>
         </div>
-        
-        <h3 className="h3">html</h3>
+        <div className="row">
+          <Table />   
+          </div>
+       
+        <div className="row padding-20"> 
+          <h3 className="h3">html</h3>
+        </div>
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Table">
+{`<div class="Table__Table">
 <table>
   <thead>
     <tr>
-      <th>Channel</th>
-      <th class="Fix200">Delaying messages</th>
-      <th class="Fix200">Default delay value</th>
-      <th class="Fix200">Maximum delay value</th>
+        <th>Channel</th>
+        <th>Delaying messages</th>
+        <th>Default delay value</th>
+        <th>Maximum delay value</th>
     </tr>
   </thead>
   <tbody>
@@ -31,13 +34,13 @@ export default class TableComponent extends Component {
       <td>
         <span>acc.socialmedia@homecredit.co.id</span>
       </td>
-      <td class="Fix200">
+      <td>
         test
       </td>
-      <td class="Fix200">
+      <td>
       testtest
       </td>
-      <td class="Fix200">
+      <td>
       testtesttest
       </td>
     </tr>
@@ -45,18 +48,15 @@ export default class TableComponent extends Component {
       <td>
         <span>acc.nevim@nevim.co.id</span>
       </td>
-      <td class="Fix200">
+      <td>
         test2131
       </td>
-      <td class="Fix200">
+      <td>
       testtest32
       </td>
-      <td class="Fix200">
+      <td>
       testtesttest31
       </td>
-    </tr>
-    <tr>
-      ...
     </tr>
   </tbody>
 </table>
@@ -64,57 +64,20 @@ export default class TableComponent extends Component {
 `}
 </SyntaxHighlighter> 
 
-<h3 className="h3">css</h3>
+<div className="row">
+  <div className="col-xs-12 padding-20">
+    <h3 className="h3">.fixed</h3> 
+    try resize window to see diference
+  </div>
+  <div className="col-xs-12">
+    <Table Fixed/>
+  </div>
+</div>
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`.Table {
-  position: relative;
-  display: block;
-  width: 100%;
-  float: left;
-  margin: 20px 0;
-  overflow: hidden;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  text-align: left;
-  font-size: 13px;
-  font-weight: 400;
-  font-style: normal;
-  color: #4a4a4a;
-}
-
-.Table table {
-  position: relative;
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border: none;
-}
-
-.Table table tr .Fix200 {
-  width: 200px;
-  max-width: 200px;
-}
-
-.Table table tr th:first-child, .Table table tr td:first-child  {
-  padding-left: 20px;
-}
-
-.Table table tr th{
-  height: 40px;
-  background-color: #f5f5f5;
-  font-weight: 700;
-  color: gray;
-  display: table-cell;
-}
-
-.Table table tr td{
-  height: 40px;
-  color: gray;
-  display: table-cell;
-}
+{`<div class="Table__Table Table__Fixed">
 `}
 </SyntaxHighlighter> 
+
 </div>
     );
   }

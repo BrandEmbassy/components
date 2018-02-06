@@ -8,16 +8,20 @@ export default class InputComponent extends Component {
   render() {
     return (
       <div className="container">
-        <h2 className="h2">Input</h2>
-
-        <div className="row">
+        <div className="row padding-20">
+          <div className="col-xs-12 ">
+            <h2 className="h2">Input</h2>
+          </div>
           <div className="col-xs-6">
             <Input label="Label here" desc="description here"/>
           </div>
         </div>
 
-        <h3 className="h3">html</h3>
-      
+        <div className="row padding-20">
+          <div className="col-xs-12 ">
+            <h3 className="h3">html</h3>
+          </div>
+        </div>
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Input__Input">
   <div class="Input__Label">
@@ -32,20 +36,16 @@ export default class InputComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
-<div className="row">
-</div>
+<div className="row padding-20">
+  <div className="col-xs-12 ">
+    <h3 className="h3">add class Input__Disabled</h3>
 
-  <h3 className="h3">add class Input__Disabled</h3>
-
-  <h3 className="h3">and property <u>disabled</u> to input </h3>
-
-<div className="row">
+    <h3 className="h3">and property <u>disabled</u> to input </h3>
+  </div>
   <div className="col-xs-6">
     <Input label="Label here" desc="description here" isDisabled/>
   </div>
 </div>
-
-
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`
 <div class="Input__Input Input__Disabled">
@@ -61,12 +61,11 @@ export default class InputComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
-<div className="row">
-</div>
-
-<h3 className="h3">add class Input__Error</h3>
-
-<div className="row">
+<div className="row padding-20">
+  <div className="col-xs-12 ">
+    <h3 className="h3">add class Input__Error</h3>
+  </div>
+  
   <div className="col-xs-6">
     <Input label="Label here" desc="description here" isError/>
   </div>
