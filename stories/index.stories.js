@@ -5,8 +5,6 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import Grid from './../src/Basic/Grid/Grid';
-import HeaderComponent from './../src/Demos/HeaderComponent';
-import HeadingsComponent from './../src/Demos/HeadingsComponent';
 import Typography from './../src/Basic/Typography/Typography';
 
 import InputComponent from './../src/Demos/InputComponent';
@@ -17,23 +15,21 @@ import TableComponent from './../src/Demos/TableComponent';
 
 import ButtonComponent from './../src/Demos/ButtonComponent';
 import ButtonGroupComponent from './../src/Demos/ButtonGroupComponent';
-import SwitcherComponent from './../src/Demos/SwitcherComponent';
+import LinkComponent from './../src/Demos/LinkComponent';
 
-import DropdownComponent from './../src/Demos/Navigation/DropdownComponent';
-import BreadcrumbsComponent from './../src/Demos/Navigation/BreadcrumbsComponent';
+import BreadcrumbsComponent from './../src/Demos/BreadcrumbsComponent';
 
+import Header from './../src/Custom/Header/Header';
 import ChannelLabelComponent from './../src/Demos/Custom/ChannelLabelComponent';
 import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureComponent';
 import NotificationMessageComponent from './../src/Demos/Custom/NotificationMessageComponent';
 import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
 import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
-import TagsComponent from './../src/Demos/Custom/TagsComponent';
 
+import ExampleA from './../src/Demos/Example/ExampleA';
 
 storiesOf('Basic', module)
   .add('Grid', () => <Grid /> )
-  .add('Header', () => <HeaderComponent /> )
-  .add('Headings', () => <HeadingsComponent /> )
   .add('Typography', () => <Typography /> );
 
 storiesOf('Forms', module)
@@ -46,16 +42,18 @@ storiesOf('Forms', module)
 storiesOf('Controls', module)
   .add('Button', () => <ButtonComponent /> )
   .add('Button group', () => <ButtonGroupComponent /> )
-  .add('Switcher', () => <SwitcherComponent /> );
+  .add('Link', () => <LinkComponent /> );
 
 storiesOf('Navigation', module)
-  .add('Dropdown menu', () => <DropdownComponent/> )
   .add('Breadcrumbs', () => <BreadcrumbsComponent/> );
 
 storiesOf('Custom', module)
+  .add('Header', () => <Header /> )
   .add('Chanel Label', () => <ChannelLabelComponent /> )
   .add('Chanel Picture', () => <ChannelPictureComponent /> )
   .add('Notification Message', () => <NotificationMessageComponent /> )
   .add('Profile Picture', () => <ProfilePictureComponent /> )
   .add('Statuses', () => <StatusesComponent /> )
-  .add('Tags', () => <TagsComponent /> );
+
+  storiesOf('Example', module)
+  .add('Example1', () => <ExampleA /> );
