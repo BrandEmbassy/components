@@ -26,13 +26,16 @@ export default class ButtonGroupComponent extends Component {
             </ButtonGroup>
           </div>
         </div>
-
+        <div className="row">
+          <div className="col-xs-12 ">
         <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="ButtonGroup__ButtonGroup">
   ...
 </div>
 `}
-</SyntaxHighlighter> 
+</SyntaxHighlighter>
+          </div>
+        </div>
       </div>
     );
   }

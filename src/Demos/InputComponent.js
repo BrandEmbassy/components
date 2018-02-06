@@ -12,6 +12,8 @@ export default class InputComponent extends Component {
           <div className="col-xs-12 ">
             <h2 className="h2">Input</h2>
           </div>
+        </div>
+        <div className="row">
           <div className="col-xs-6">
             <Input label="Label here" desc="description here"/>
           </div>
@@ -22,6 +24,8 @@ export default class InputComponent extends Component {
             <h3 className="h3">html</h3>
           </div>
         </div>
+        <div className="row">
+          <div className="col-xs-12 ">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Input__Input">
   <div class="Input__Label">
@@ -36,6 +40,8 @@ export default class InputComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
+</div>
+</div>
 <div className="row padding-20">
   <div className="col-xs-12 ">
     <h3 className="h3">add class Input__Disabled</h3>
@@ -46,6 +52,8 @@ export default class InputComponent extends Component {
     <Input label="Label here" desc="description here" isDisabled/>
   </div>
 </div>
+<div className="row">
+  <div className="col-xs-12 ">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`
 <div class="Input__Input Input__Disabled">
@@ -61,6 +69,8 @@ export default class InputComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
+  </div>
+</div>
 <div className="row padding-20">
   <div className="col-xs-12 ">
     <h3 className="h3">add class Input__Error</h3>
@@ -70,6 +80,8 @@ export default class InputComponent extends Component {
     <Input label="Label here" desc="description here" isError/>
   </div>
 </div>
+<div className="row">
+  <div className="col-xs-12 ">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`
 <div class="Input__Input Input__Error">
@@ -84,7 +96,9 @@ export default class InputComponent extends Component {
   </div>
 </div>
 `}
-</SyntaxHighlighter> 
+</SyntaxHighlighter>
+</div>
+</div> 
 </div>
     );
   }

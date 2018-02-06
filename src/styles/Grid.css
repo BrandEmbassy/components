@@ -2,7 +2,6 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding: 20px;
 }
 
 .center {
@@ -73,8 +72,8 @@
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .col-xs {
@@ -270,19 +269,23 @@
 
 
 .padding-5 {
-  padding: 5px 0 5px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .padding-10 {
-  padding: 10px 0 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .padding-15{
-  padding: 15px 0 15px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .padding-20{
-  padding: 20px 0 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 
@@ -318,8 +321,6 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0;
-    padding-left: 0;
   }
 
   .col-md {
@@ -547,8 +548,6 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0;
-    padding-left: 0;
   }
 
   .col-lg {

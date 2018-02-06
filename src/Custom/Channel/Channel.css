@@ -31,7 +31,7 @@
   &:after {
     content: none;
   }
-  &.dm, &.message {
+  &.DM, &.message {
     &:before {
       width: 24px;
     }
@@ -131,100 +131,171 @@
     height: 60px;
     line-height: 60px;
     font-size: 30px;
+    border-radius: 7px;
 
-    &.dm, &.message {
+    &.DM, &.message {
       &:before {
         width: 60px;
       }
       &:after {
-        content: "9";
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        display: block;
         height: 45px;
         width: 45px;
         line-height: 46px;
         font-size: 44px;
-        color: #ffc36b;
       }
     }
     &.Facebook {
       line-height: 60px;
-      background-color: #3b5998;
       font-size: 30px;
+    }
+
+    &.Instagram {
+      font-size: 36px;
+    }
+
+    &.Google {
+      font-size: 36px;
+    }
+
+    &.Email {
+      font-size: 33px;
+    }
+
+    &.Forum {
+      font-size: 27px;
+    }
+
+    &.Vkontakte {
+      font-size: 30px;
+    }
+
+    &.Listening {
+      font-size: 36px;
+    }
+  }
+
+
+  &.Size40 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+
+    &.DM, &.message {
       &:before {
-        content: "\6d";
+        width: 40px;
+      }
+      &:after {
+        height: 30px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 29px;
       }
     }
-    &.Twitter {
-      background-color: #55acee;
-      &:before {
-        content: "\6e";
-      }
+    &.Facebook {
+      line-height: 40px;
+      font-size: 20px;
     }
     &.Instagram {
-      background-color: #55acee00;
-      background: linear-gradient( 45deg, #ee8252, #eb4b66, #a8478c);
-      font-size: 36px;
-      &:before {
-        content: "\73";
-      }
+      font-size: 24px;
     }
     &.Google {
-      background-color: #dd4b39;
-      font-size: 36px;
-      &:before {
-        content: "\70";
-      }
-    }
-    &.Youtube {
-      background-color: #b00;
-      &:before {
-        content: "\6c";
-      }
-    }
-    &.Linkedin {
-      background-color: #007bb6;
-      &:before {
-        content: "\6b";
-      }
-    }
-    &.Livechat {
-      background-color: #35b072;
-      &:before {
-        content: "\71";
-      }
+      font-size: 24px;
     }
     &.Email {
-      background-color: #dee4eb;
-      font-size: 33px;
-      color: #545968;
-      &:before {
-        content: "\69";
-      }
+      font-size: 22px;
     }
     &.Forum {
-      background-color: #4a4a4a;
-      font-size: 27px;
-      &:before {
-        content: "\64";
-      }
+      font-size: 18px;
     }
     &.Vkontakte {
-      background-color: #45668e;
-      font-size: 30px;
-      &:before {
-        content: "\74";
-      }
+      font-size: 20px;
     }
     &.Listening {
-      background-color: #dcdcdc;
-      font-size: 36px;
-      color: #a2a2a2;
+      font-size: 24px;
+    }
+  }
+
+  &.Size20 {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+
+    &.DM, &.message {
       &:before {
-        content: "\46";
+        width: 20px;
       }
+      &:after {
+        height: 15px;
+        width: 15px;
+        line-height: 16px;
+        font-size: 14px;
+      }
+    }
+    &.Facebook {
+      line-height: 20px;
+      font-size: 10px;
+    }
+    &.Instagram {
+      font-size: 12px;
+    }
+    &.Google {
+      font-size: 12px;
+    }
+    &.Email {
+      font-size: 11px;
+    }
+    &.Forum {
+      font-size: 9px;
+    }
+    &.Vkontakte {
+      font-size: 10px;
+    }
+    &.Listening {
+      font-size: 12px;
+    }
+  }
+
+  &.Size16 {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 8px;
+
+    &.DM, &.message {
+      &:before {
+        width: 16px;
+      }
+      &:after {
+        height: 12px;
+        width: 12px;
+        line-height: 13px;
+        font-size: 11px;
+      }
+    }
+    &.Facebook {
+      line-height: 16px;
+      font-size: 8px;
+    }
+    &.Instagram {
+      font-size: 9.6px;
+    }
+    &.Google {
+      font-size: 9.6px;
+    }
+    &.Email {
+      font-size: 8.8px;
+    }
+    &.Forum {
+      font-size: 7.2px;
+    }
+    &.Vkontakte {
+      font-size: 8px;
+    }
+    &.Listening {
+      font-size: 9.6px;
     }
   }
 }
