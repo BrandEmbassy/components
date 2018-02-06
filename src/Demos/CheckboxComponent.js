@@ -29,7 +29,7 @@ export default class CheckboxComponent extends Component {
           <div className="col-xs-12 ">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Checkbox id="0"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -58,11 +58,16 @@ export default class CheckboxComponent extends Component {
   </div>
 </div>
 `}
-</SyntaxHighlighter> 
+<<<<<<< HEAD
+</SyntaxHighlighter>
     </div>
   </div>
+=======
+</SyntaxHighlighter>
+
+
+>>>>>>> improvements of code
 </div>
     );
   }
 }
-

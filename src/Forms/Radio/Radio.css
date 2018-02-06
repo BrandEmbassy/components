@@ -1,5 +1,5 @@
 .RadioContent {
-  display: flex;
+  display: inline-flex;
 
   & .Label {
     padding-left: 4px;
@@ -19,7 +19,7 @@
   & span {
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
   }
 }
 
@@ -79,4 +79,3 @@
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-

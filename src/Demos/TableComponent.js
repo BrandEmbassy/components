@@ -15,10 +15,10 @@ export default class TableComponent extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12">
-          <Table />   
+          <Table />
           </div>
         </div>
-        <div className="row padding-20"> 
+        <div className="row padding-20">
           <div className="col-xs-12">
           <h3 className="h3">html</h3>
           </div>
@@ -69,12 +69,12 @@ export default class TableComponent extends Component {
 </table>
 </div>
 `}
-</SyntaxHighlighter> 
+</SyntaxHighlighter>
   </div>
 </div>
 <div className="row">
   <div className="col-xs-12 padding-20">
-    <h3 className="h3">.fixed</h3> 
+    <h3 className="h3">.Fixed</h3>
     try resize window to see diference
   </div>
   <div className="col-xs-12">
@@ -86,7 +86,7 @@ export default class TableComponent extends Component {
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Table__Table Table__Fixed">
 `}
-</SyntaxHighlighter> 
+</SyntaxHighlighter>
     </div>
   </div>
 </div>

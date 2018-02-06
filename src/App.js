@@ -15,32 +15,18 @@ const code = `
   <div className="col-xs-6">
     ddawwwwddddd
   </div>
-</div>         
+</div>
 `;
 
 export default class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className={styles.Appo}>
-          <h1> components </h1>
-
-
-
-
-          <SyntaxHighlighter language='jsx' style={duotoneDark}>
-            {code}
-          </SyntaxHighlighter> 
-
-
-<div class="be-icon-arrow-right"></div>
-          
-        
-
-
-
+        <div className="row">
+          <div className="col-xs-12">
+            <b><a href="http://localhost:6006">Open</a></b> component library
+          </div>
         </div>
-
       </div>
     );
   }

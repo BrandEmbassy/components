@@ -1,5 +1,5 @@
-.CheckboxContent{
-  display: flex;
+.CheckboxContent {
+  display: inline-flex;
 
   & .Label {
     padding-left: 8px;
@@ -25,6 +25,7 @@
     background-color: #fff;
     .transition:(all 0.15s);
     cursor: pointer;
+
     &:after {
       content: "\65";
       position: relative;
@@ -47,10 +48,13 @@
   & input[type=checkbox] {
     position: absolute;
     display: none;
+
     &:checked {
+
       & ~ label {
         border-color: #40c268;
         background-color: #40c268;
+        
         &:after {
           opacity: 1;
         }
