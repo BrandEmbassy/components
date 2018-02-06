@@ -14,22 +14,30 @@ export default class CheckboxComponent extends Component {
           <div className="col-xs-12 ">
             <h2 className="h2">Checkbox</h2>
           </div>
-          <div className="col-xs-6 padding-20">
+        </div>
+        <div className="row">
+          <div className="col-xs-6 ">
             <Checkbox id="0" label="" />
           </div>
+        </div>
+        <div className="row padding-20">
           <div className="col-xs-12 ">
             <h3 className="h3">html</h3>
           </div>
         </div>
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-          {beautify.html(renderToString(<Checkbox id="0"/>))}
-        </SyntaxHighlighter> 
+        <div className="row">
+          <div className="col-xs-12 ">
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Checkbox id="0"/>))}
+            </SyntaxHighlighter> 
+          </div>
+        </div>
         <div className="row padding-20">
           <div className="col-xs-12 ">
             <h4 className="h4">checkbox ID=" " must be same with laber FOR=" " </h4>
           </div>
         </div>
-        <div className="row padding-20">
+        <div className="row">
           <div className="col-xs-12 ">
             <h3 className="h3">usage with text </h3>
           </div>
@@ -39,6 +47,8 @@ export default class CheckboxComponent extends Component {
             <Checkbox id="xzs" label="chose one" />
           </div>
         </div>
+        <div className="row">
+          <div className="col-xs-12 ">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Checkbox__CheckboxContent">
   <div class="Checkbox__Checkbox">
@@ -49,8 +59,8 @@ export default class CheckboxComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
-
-
+    </div>
+  </div>
 </div>
     );
   }

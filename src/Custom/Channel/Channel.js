@@ -20,6 +20,7 @@ export default class Picture extends Component {
         ${this.props.Size40 === true ? styles.Size40 : ''}
         ${this.props.Size20 === true ? styles.Size20 : ''}
         ${this.props.Size16 === true ? styles.Size16 : ''}
+        ${this.props.DM === true ? styles.DM : ''}
         `}>
       </div>
     );

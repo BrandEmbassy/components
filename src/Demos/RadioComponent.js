@@ -12,13 +12,19 @@ export default class RadioComponent extends Component {
           <div className="col-xs-12 ">
             <h2 className="h2">Radio</h2>
           </div>
-          <div className="col-xs-6 padding-20">
+        </div>
+        <div className="row">
+          <div className="col-xs-6">
             <Radio name="name" id="aaa" />
           </div>
+        </div>
+        <div className="row padding-20">
           <div className="col-xs-12 ">
             <h3 className="h3">html</h3>
           </div>
       </div>
+      <div className="row">
+        <div className="col-xs-12 ">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Radio__RadioComponent">
   <div class="Radio__Radio">
@@ -28,6 +34,8 @@ export default class RadioComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
+</div>
+</div>
 <div className="row padding-20">
   <div className="col-xs-12 ">
     <h3 className="h3">usage with text </h3>
@@ -42,6 +50,8 @@ export default class RadioComponent extends Component {
     <Radio name="yyy" id="ddd" label="or this" />
   </div>
 </div>
+<div className="row padding-20">
+  <div className="col-xs-12 ">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Radio__RadioComponent">
   <div class="Radio__Radio">
@@ -65,7 +75,9 @@ export default class RadioComponent extends Component {
   <div class="Radio__Label" >or this</div>
 </div>
 `}
-</SyntaxHighlighter> 
+</SyntaxHighlighter>
+</div>
+</div> 
 </div>
 );
 }

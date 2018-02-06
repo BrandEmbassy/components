@@ -9,15 +9,22 @@ export default class TableComponent extends Component {
     return (
       <div className="container">
         <div className="row padding-20">
-          <h2 className="h2">Table</h2>
+          <div className="col-xs-12">
+            <h2 className="h2">Table</h2>
+          </div>
         </div>
         <div className="row">
+          <div className="col-xs-12">
           <Table />   
           </div>
-       
-        <div className="row padding-20"> 
-          <h3 className="h3">html</h3>
         </div>
+        <div className="row padding-20"> 
+          <div className="col-xs-12">
+          <h3 className="h3">html</h3>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Table__Table">
 <table>
@@ -63,7 +70,8 @@ export default class TableComponent extends Component {
 </div>
 `}
 </SyntaxHighlighter> 
-
+  </div>
+</div>
 <div className="row">
   <div className="col-xs-12 padding-20">
     <h3 className="h3">.fixed</h3> 
@@ -73,11 +81,14 @@ export default class TableComponent extends Component {
     <Table Fixed/>
   </div>
 </div>
+<div className="row">
+  <div className="col-xs-12">
 <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
 {`<div class="Table__Table Table__Fixed">
 `}
 </SyntaxHighlighter> 
-
+    </div>
+  </div>
 </div>
     );
   }

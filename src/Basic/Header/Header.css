@@ -1,0 +1,13 @@
+.Header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin: 0;
+  padding: 10px 10px;
+  background-color: #B93537;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  color: #9b9b9b; 
+}
