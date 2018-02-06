@@ -58,15 +58,9 @@ export default class CheckboxComponent extends Component {
   </div>
 </div>
 `}
-<<<<<<< HEAD
 </SyntaxHighlighter>
     </div>
   </div>
-=======
-</SyntaxHighlighter>
-
-
->>>>>>> improvements of code
 </div>
     );
   }

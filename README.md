@@ -5,6 +5,9 @@
 ### `yarn install`
 * Run in console in the root of the repository to install all dependencies.
 
+### `yarn run build`
+* Run in console in the root of the repository to build all dependencies.
+
 ## Open library
 
 ### `yarn run storybook`
