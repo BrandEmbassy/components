@@ -12,20 +12,22 @@
   font-weight: 700;
   color: #fff;
   cursor: pointer;
-  transition-duration: 0.1s;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.05s;
 
   &:hover {
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-    transform: translateY(-2px);
+    box-shadow: 0 10px 5px -10px rgba(0, 0, 0, 0.7);
+    transform: translateY(1px);
   }
 
   &.Reversed {
     color: #329d53;
     background-color: #fff;
+    box-shadow: none;
 
     &:hover {
-      color: #fff;
-      background-color: #329d53;
+    color: #39b35f;
+    transform: translateY(0px);
     }
   }
 
@@ -34,12 +36,13 @@
   }
 
   &.Cancel {
-    color: #E8585D;
+    color: #E8585D ;
     background-color: #fff;
+    box-shadow: none;
 
     &:hover {
-      color: #fff;
-      background-color: #E8585D;
+      color: rgb(228, 114, 118);
+      transform: translateY(0px);
     }
   }
 
@@ -52,9 +55,10 @@
   }
 
   &.Small {
-    height: 30px;
+    height: 28px;
     padding: 0 22px;
-    line-height: 30px;
+    line-height: 28px;
+    margin: 0;
   }
 
   &.Wide {
