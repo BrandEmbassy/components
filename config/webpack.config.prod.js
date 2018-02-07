@@ -35,7 +35,7 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
 }
 
 // Note: defined here because it will be used more than once.
-const cssFilename = 'static/css/[name].[contenthash:8].css';
+const cssFilename = 'static/css/components.css';
 
 // ExtractTextPlugin expects the build output to be flat.
 // (See https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/27)
@@ -140,7 +140,7 @@ module.exports = {
             loader: require.resolve('url-loader'),
             options: {
               limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
+              name: 'static/media/[name].[ext]',
             },
           },
           // Process JS with Babel.
@@ -167,56 +167,94 @@ module.exports = {
           // in the main CSS file.
           {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract(
-              Object.assign(
+            loader: ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: [
                 {
-                  fallback: {
-                    loader: require.resolve('style-loader'),
-                    options: {
-                      hmr: false,
-                    },
+                  loader: require.resolve('css-loader'),
+                  options: {
+                    importLoaders: 1,
+                    modules: true,
+                    localIdentName: '[name]__[local]'
                   },
-                  use: [
-                    {
-                      loader: require.resolve('css-loader'),
-                      options: {
-                        importLoaders: 1,
-                        modules: true,
-                        localIdentName: "[local]",
-                        minimize: true,
-                        sourceMap: shouldUseSourceMap,
-                      },
-                    },
-                    {
-                      loader: require.resolve('postcss-loader'),
-                      options: {
-                        // Necessary for external CSS imports to work
-                        // https://github.com/facebookincubator/create-react-app/issues/2677
-                        ident: 'postcss',
-                        plugins: () => [
-                          require('postcss-flexbugs-fixes'),
-                          require('postcss-import')({
-                            addModulesDirectories: [
-                              require.resolve(paths.appSrc)
-                            ]
-                          }),
-                          autoprefixer({
-                            browsers: [
-                              '>1%',
-                              'last 4 versions',
-                              'Firefox ESR',
-                              'not ie < 9', // React doesn't support IE8 anyway
-                            ],
-                            flexbox: 'no-2009',
-                          }),
-                        ],
-                      },
-                    },
-                  ],
                 },
-                extractTextPluginOptions
-              )
-            ),
+                {
+                  loader: require.resolve('postcss-loader'),
+                  options: {
+                    // Necessary for external CSS imports to work
+                    // https://github.com/facebookincubator/create-react-app/issues/2677
+                    ident: 'postcss',
+                    plugins: () => [
+                      require('postcss-flexbugs-fixes'),
+                      require('postcss-import')({
+                        addModulesDirectories: [
+                          require.resolve(paths.appSrc)
+                        ]
+                      }),
+                      require('postcss-cssnext')({
+                        browsers: [
+                          '>1%',
+                          'last 4 versions',
+                          'Firefox ESR',
+                          'not ie < 10', // React doesn't support IE8 anyway
+                        ]
+                      }),
+                    ],
+                  },
+                },
+              ]
+            }),
+            // loader: ExtractTextPlugin.extract(
+            //   Object.assign(
+            //     {
+            //       fallback: {
+            //         loader: require.resolve('style-loader'),
+            //         options: {
+            //           hmr: false,
+            //         },
+            //       },
+            //       use: [
+            //         {
+            //           loader: require.resolve('css-loader'),
+            //           options: {
+            //             // importLoaders: 1,
+            //             // modules: true,
+            //             importLoaders: 1,
+            //             minimize: true,
+            //             sourceMap: true,
+            //             localIdentName: "[local]",
+            //           },
+            //         },
+            //         {
+            //           loader: require.resolve('postcss-loader'),
+            //           options: {
+            //             // Necessary for external CSS imports to work
+            //             // https://github.com/facebookincubator/create-react-app/issues/2677
+            //             ident: 'postcss',
+            //             plugins: () => [
+            //               require('postcss-flexbugs-fixes'),
+            //               require('postcss-import')({
+            //                 addModulesDirectories: [
+            //                   require.resolve(paths.appSrc)
+            //                 ]
+            //               }),
+            //               autoprefixer({
+            //                 browsers: [
+            //                   '>1%',
+            //                   'last 4 versions',
+            //                   'Firefox ESR',
+            //                   'not ie < 9', // React doesn't support IE8 anyway
+            //                 ],
+            //                 flexbox: 'no-2009',
+            //               }),
+            //             ],
+            //           },
+            //         },
+            //       ],
+            //     },
+            //     extractTextPluginOptions
+            //   )
+            // ),
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
           },
           // "file" loader makes sure assets end up in the `build` folder.
@@ -231,7 +269,7 @@ module.exports = {
             // by webpacks internal loaders.
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
             options: {
-              name: 'static/media/[name].[hash:8].[ext]',
+              name: 'static/media/[name].[ext]',
             },
           },
           // ** STOP ** Are you adding a new loader?

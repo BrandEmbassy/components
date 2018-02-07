@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './App.css';
 import Grid from './../src/Basic/Grid/Grid';
 import Typography from './../src/Basic/Typography/Typography';
 
@@ -21,6 +20,7 @@ import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureCompone
 import NotificationMessageComponent from './../src/Demos/Custom/NotificationMessageComponent';
 import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
 import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
+import './styles/Base.css';
 
 export default class App extends Component {
   render() {

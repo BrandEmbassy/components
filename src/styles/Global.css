@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.Componenta {
+:global(.Componenta) {
   width: 300px;
   padding: 20px;
   background-color: aquamarine;
@@ -15,39 +15,39 @@
 
 
 /*  Headings   */
-.h1,
+:global(.h1,
 .h2,
 .h3,
 .h4,
 .h5,
-.h6 {
+.h6) {
   line-height: 150%;
   margin: 6px 0;
   display: block;
 }
 
-.h1 {
+:global(.h1) {
   font-size: 24px;
 }
 
-.h2 {
+:global(.h2) {
   font-size: 20px;
 }
 
-.h3 {
+:global(.h3) {
   font-size: 16px;
 }
 
-.h4 {
+:global(.h4) {
   font-size: 14px;
 }
 
-.p {
+:global(.p) {
   font-size: 13px;
   color:  #4a4a4a;
   line-height: 140%;
 }
 
-.justify{
+:global(.justify) {
   text-align: justify;
 }

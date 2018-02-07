@@ -55,11 +55,12 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js && yarn run concat-css",
     "test": "node scripts/test.js --env=jsdom",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "library": "yarn run build && yarn run build-storybook && node scripts/storybook.js && yarn run storybook"
+    "library": "yarn run build && yarn run build-storybook && node scripts/storybook.js && yarn run storybook",
+    "concat-css": "cat src/styles/Grid.css build/static/css/components.css > build/static/css/all.css"
   },
   "jest": {
     "collectCoverageFrom": [
