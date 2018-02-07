@@ -1,14 +1,9 @@
-.GridDemo {
-
-}
-
 
 .color {
   background-color: rgba(3, 82, 16, 0.61);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-
 }
 
 .color2 {
@@ -26,7 +21,7 @@
 }
 
 .color4 {
-  background-color: rgba(138, 138, 138, 0.329);
+  background-color: rgba(185, 184, 184, 0.329);
   color: #fff;
   font-size: 14px;
   font-weight: 700;

@@ -31,6 +31,30 @@ export default class ButtonComponent extends Component {
           </div>
         </div>
         <div className="row padding-20">
+          <div className="col-xs-5 ">
+            <h2 className="h2">Icon</h2>
+            <Button text="Button" Icon="be-icon-plus" />
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button">
+  <div className="be-icon-plus"></div>
+  Button
+</div>
+`}
+            </SyntaxHighlighter> 
+          </div>
+          <div className="col-xs-5 col-xs-offset-1">
+          <h2 className="h2">cancel</h2>
+            <Button text="button" isNegative Icon="be-icon-cross" />
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+{`<div class="Button__Button Button__Small">
+  <div className="be-icon-cross"></div>
+  Button
+</div>
+`}
+            </SyntaxHighlighter> 
+          </div>
+        </div>
+        <div className="row padding-20">
         <div className="col-xs-5 ">
           <h2 className="h2">Negative</h2>
           <Button text="Button" isNegative/>

@@ -1,10 +1,10 @@
 .Breadcrumbs {
   position: relative;
-  display: block;
+  display: flex;
   width: 100%;
   height: auto;
-  margin: 0;
-  padding: 10px 0;
+  margin: 10px 0 0 ;
+  padding: 10px 10px;
   line-height: 28px;
   float: left;
   border-bottom: 1px solid #e6e6e6;
@@ -12,6 +12,10 @@
   font-weight: 700;
   font-style: normal;
   color: #9b9b9b; 
+
+  & .Textwrap {
+    flex: 1;
+  }
 
   & .Step {
     position: relative;

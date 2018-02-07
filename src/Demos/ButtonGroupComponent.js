@@ -17,7 +17,9 @@ export default class ButtonGroupComponent extends Component {
         <div className="row padding-20">
           <div className="col-xs-12">
             <ButtonGroup>
-              <Button text="buttonA" />
+              <Button text="buttonA" >
+              <div className="be-icon-plus"></div>
+              </Button>
               <Button text="buttonB" isNegative/>
               <Button text="buttonC" isDisabled/>
               <Button text="buttonD" />
