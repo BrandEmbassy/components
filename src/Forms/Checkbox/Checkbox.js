@@ -14,4 +14,3 @@ export default class Checkbox extends Component {
     );
   }
 }
-

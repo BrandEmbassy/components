@@ -1,21 +1,20 @@
-# Components Library of Brand Embassy
+# UI components library of Brand Embassy
 
 ## Getting Started
 
 ### `yarn install`
-* Run in console in the root of the repository to install all dependencies.
+* Run in console in the root of the repository to install all dependencies
 
-### `yarn run build`
-* Run in console in the root of the repository to build all dependencies.
+## Build & run library
 
-## Open library
+### `yarn run library`
+* Run in console in the root of the repository to build all dependencies and launch UI library
+* Library will open automatically on http://localhost:6006
+* CSS will be prepared in `/build/static/css` folder
 
-### `yarn run storybook`
-* Run in console in the root of the repository to start storybook. <br>
-* Storybook can be found (http://localhost:6006) <br>
 
 ## Development
 
-### `yarn start`
-* Run in console in the root of the repository to start development mode. <br>
-* This command will run development environment
+### `yarn run storybook`
+* Run in console in the root of the repository to start storybook in development mode
+* Storybook can be found (http://localhost:6006)

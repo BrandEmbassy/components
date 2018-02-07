@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../styles/Base.css';
-import Breadcrumbs from './../Custom/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '../Navigation/Breadcrumbs/Breadcrumbs';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 
@@ -45,4 +45,3 @@ export default class BreadcrumbsComponent extends Component {
     );
   }
 }
-

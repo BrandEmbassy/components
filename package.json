@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-knobs": "^3.3.12",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
@@ -31,6 +32,7 @@
     "jest": "20.0.4",
     "js-beautify": "^1.7.5",
     "object-assign": "4.1.1",
+    "openurl": "^1.1.1",
     "postcss": "^6.0.14",
     "postcss-cssnext": "^3.0.2",
     "postcss-flexbugs-fixes": "3.2.0",
@@ -56,7 +58,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "library": "yarn run build && yarn run build-storybook && node scripts/storybook.js && yarn run storybook"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -102,7 +105,6 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.9",
-    "@storybook/addon-knobs": "^3.3.11",
     "@storybook/addon-links": "^3.3.9",
     "@storybook/addons": "^3.3.9",
     "@storybook/react": "^3.3.9",

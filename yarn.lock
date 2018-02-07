@@ -17,7 +17,7 @@
     react-inspector "^2.2.2"
     uuid "^3.1.0"
 
-"@storybook/addon-knobs@^3.3.11":
+"@storybook/addon-knobs@^3.3.12":
   version "3.3.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.3.12.tgz#371c3d5b50bd0220a7f0d18e5c20794fb6292545"
   dependencies:
@@ -5615,6 +5615,10 @@ onetime@^2.0.0:
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
   dependencies:
     mimic-fn "^1.0.0"
+
+openurl@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/openurl/-/openurl-1.1.1.tgz#3875b4b0ef7a52c156f0db41d4609dbb0f94b387"
 
 opn@5.2.0, opn@^5.1.0:
   version "5.2.0"
