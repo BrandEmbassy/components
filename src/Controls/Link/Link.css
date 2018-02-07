@@ -1,3 +1,50 @@
 .Link {
+  position: relative;
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  line-height: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a4a4a;
+  cursor: pointer;
+
+  &:hover{
+    filter: contrast(200%);
+    transform: translateY(1px);
+  }
+
+  & .Text{
+    display: inline;
+    color: inherit;
+    margin-left: 4px;
+  }
+
+  & [class^='be-icon'] {
+    line-height: inherit;
+    float: left;
+    font-size: 13px;
+    color: inherit;
+  }
+
+  &.Blue {
+    color: #2eaae8;
+  }
+
+  &.White {
+    color: #ffffff;
+  }
   
+  &.Green {
+    color: #329d53;
+  }
+
+  &.Red {
+    color: #E8585D;
+  }
+  
+  &.Black {
+    color: #000000;
+  }
 }

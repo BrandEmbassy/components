@@ -15,6 +15,15 @@
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   transition-duration: 0.05s;
 
+  & [class^='be-icon'] {
+    margin-right: 8px;
+    margin-top: 2px;
+    line-height: inherit;
+    float: left;
+    font-size: inherit;
+    color: inherit;
+  }
+
   &:hover {
     box-shadow: 0 10px 5px -10px rgba(0, 0, 0, 0.7);
     transform: translateY(1px);
@@ -52,6 +61,7 @@
     color: #a6a6a6!important;
     cursor: not-allowed!important;
     pointer-events: none!important;
+    box-shadow: none;
   }
 
   &.Small {
