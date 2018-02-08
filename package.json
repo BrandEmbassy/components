@@ -60,7 +60,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "library": "yarn run build && yarn run build-storybook && node scripts/storybook.js && yarn run storybook",
-    "concat-css": "cat src/styles/Grid.css build/static/css/components.css > build/static/css/all.css"
+    "concat-css": "cat src/styles/Grid.css build/static/css/main.css > build/static/css/components.css && yarn run cleanup",
+    "cleanup": "rm -f build/static/css/main.css && rm -r build/static/js"
   },
   "jest": {
     "collectCoverageFrom": [

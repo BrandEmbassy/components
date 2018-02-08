@@ -3,7 +3,7 @@ import '!style-loader!css-loader!./../../styles/Base.css';
 import styles from './Link.css';
 
 export default class Link extends Component {
-  renderIcon = () => {
+  renderIcon() {
     if (this.props.Icon) {
       return(
         <div className={this.props.Icon}></div>
@@ -14,7 +14,7 @@ export default class Link extends Component {
 
   render() {
     return (
-      <div className={`${styles.Link} 
+      <div className={`${styles.Link}
         ${this.props.Blue === true ? styles.Blue : ''}
         ${this.props.White === true ? styles.White : ''}
         ${this.props.Green === true ? styles.Green : ''}
@@ -23,10 +23,9 @@ export default class Link extends Component {
         `}>
           {this.renderIcon()}
           <div className={styles.Text}>
-            {this.props.text} 
+            {this.props.text}
           </div>
       </div>
     );
   }
 }
-

@@ -10,7 +10,7 @@
 ### `yarn run library`
 * Run in console in the root of the repository to build all dependencies and launch UI library
 * Library will open automatically on http://localhost:6006
-* CSS will be prepared in `/build/static/css` folder
+* CSS & other necessary files will be prepared in `/build/static` folder
 
 
 ## Development
