@@ -40,7 +40,7 @@
     background-color: #E8585D;
 
     &:hover {
-      color: #39b35f;
+      background-color: rgb(243, 118, 122);
     }
   }
 
@@ -75,4 +75,3 @@
     margin: 5px 0;
   }
 }
-
