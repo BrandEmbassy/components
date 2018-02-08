@@ -19,7 +19,7 @@ export default class Input extends Component {
           {this.props.label}                
         </div>
         <div className={styles.Field}>
-          <input type="email" name={this.props.name} placeholder={this.props.placeholder} disabled={this.props.isDisabled} />
+          <input type="text" name={this.props.name} placeholder={this.props.placeholder} disabled={this.props.isDisabled} />
         </div>
         <div className={styles.Desc}>
           {this.props.desc}                
