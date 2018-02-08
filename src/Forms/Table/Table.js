@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
+import classNames from 'classnames/bind';
 import styles from './Table.css';
 import Checkbox from './../Checkbox/Checkbox';
 import Link from './../../Controls/Link/Link';
 
+const cx = classNames.bind(styles);
+
 export default class Table extends Component {
   render() {
+    const { Fixed } = this.props;
+
+    const className = cx(styles.Table, {
+      Fixed
+    });
+
     return (
-      <div className={`${styles.Table} ${this.props.Fixed === true ? styles.Fixed : ''}`}>
+      <div className={className}>
         <table>
           <thead>
             <tr>

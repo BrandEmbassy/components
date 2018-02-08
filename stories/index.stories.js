@@ -12,6 +12,7 @@ import TextareaComponent from './../src/Demos/TextareaComponent';
 import CheckboxComponent from './../src/Demos/CheckboxComponent';
 import RadioComponent from './../src/Demos/RadioComponent';
 import TableComponent from './../src/Demos/TableComponent';
+import SubmitComponent from './../src/Demos/SubmitComponent';
 
 import ButtonComponent from './../src/Demos/ButtonComponent';
 import ButtonGroupComponent from './../src/Demos/ButtonGroupComponent';
@@ -37,7 +38,8 @@ storiesOf('Forms', module)
   .add('Textarea', () => <TextareaComponent/> )
   .add('Checkbox', () => <CheckboxComponent/> )
   .add('Radio', () => <RadioComponent/> )
-  .add('Table', () => <TableComponent/> );
+  .add('Table', () => <TableComponent/> )
+  .add('Submit', () => <SubmitComponent/> );
 
 storiesOf('Controls', module)
   .add('Button', () => <ButtonComponent /> )

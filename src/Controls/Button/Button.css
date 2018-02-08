@@ -3,7 +3,7 @@
   display: inline-block;
   width: auto;
   height: 44px;
-  margin: 5px;
+  margin: 5px 0;
   padding: 0 42px;
   line-height: 44px;
   border-radius: 3px;
@@ -13,6 +13,7 @@
   color: #fff;
   cursor: pointer;
   transition-duration: 0.05s;
+  user-select: none;
 
   & [class^='be-icon'] {
     margin-right: 8px;

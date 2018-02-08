@@ -3,6 +3,8 @@ import '!style-loader!css-loader!./../../styles/Base.css';
 import Channel from './../../Custom/Channel/Channel';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import { renderToString } from 'react-dom/server';
+import beautify from 'js-beautify';
 
 export default class ChannelPictureComponent extends Component {
   render() {
@@ -20,8 +22,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Facebook"></div>
-`}
+              {beautify.html(renderToString(<Channel Facebook/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -43,17 +44,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`
-<div class="Channel_Channel Channel_Facebook Channel__Size60"></div>
-
-<div class="Channel_Channel Channel_Facebook Channel__Size40"></div>
-
-<div class="Channel_Channel Channel_Facebook"></div>
-
-<div class="Channel_Channel Channel_Facebook Channel__Size20"></div>
-
-<div class="Channel_Channel Channel_Facebook Channel__Size16"></div>
-`}
+              {beautify.html(renderToString(<Channel Facebook Size60 />))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -72,17 +63,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`
-<div class="Channel_Channel Channel_Facebook Channel__Size60 Channel__DM "></div>
-
-<div class="Channel_Channel Channel_Facebook Channel__Size40 Channel__DM"></div>
-
-<div class="Channel_Channel Channel_Facebook Channel__DM"></div>
-
-<div class="Channel_Channel Channel_Facebook Channel__Size20 Channel__DM"></div>
-
-<div class="Channel_Channel Channel_Facebook Channel__Size16 Channel__DM"></div>
-`}
+              {beautify.html(renderToString(<Channel Facebook DM/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -99,8 +80,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Twitter"></div>
-`}
+              {beautify.html(renderToString(<Channel Twitter/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -117,8 +97,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Instagram"></div>
-`}
+              {beautify.html(renderToString(<Channel Instagram/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -135,8 +114,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Google"></div>
-`}
+              {beautify.html(renderToString(<Channel Google/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -153,8 +131,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Youtube"></div>
-`}
+              {beautify.html(renderToString(<Channel Youtube/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -171,8 +148,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Linkedin"></div>
-`}
+              {beautify.html(renderToString(<Channel Linkedin/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -189,8 +165,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Livechat"></div>
-`}
+              {beautify.html(renderToString(<Channel Livechat/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -207,8 +182,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Email"></div>
-`}
+              {beautify.html(renderToString(<Channel Email/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -225,8 +199,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Forum"></div>
-`}
+              {beautify.html(renderToString(<Channel Forum/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -243,8 +216,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Vkontakte"></div>
-`}
+              {beautify.html(renderToString(<Channel Vkontakte/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -261,8 +233,7 @@ export default class ChannelPictureComponent extends Component {
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Channel_Channel Channel_Listening"></div>
-`}
+              {beautify.html(renderToString(<Channel Listening/>))}
             </SyntaxHighlighter> 
           </div>
         </div>

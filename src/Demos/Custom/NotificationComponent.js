@@ -17,13 +17,13 @@ export default class NotificationComponent extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12 " >
-            <Notification text="notification text here" />
+            <Notification Fix text="notification text here" />
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-12 ">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification text="notification text here" />))}
+              {beautify.html(renderToString(<Notification Fix text="notification text here" />))}
             </SyntaxHighlighter>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default class NotificationComponent extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12 " >
-            <Notification isGreen text="notification text here" />
+            <Notification Fix isGreen text="notification text here" />
           </div>
         </div>
         <div className="row padding-20">
