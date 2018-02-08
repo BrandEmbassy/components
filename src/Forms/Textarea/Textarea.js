@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
+import classNames from 'classnames/bind';
 import styles from './Textarea.css';
+
+const cx = classNames.bind(styles);
 
 export default class Textarea extends Component {
   render() {
+    const { isDisabled, isError } = this.props;
+
+    const className = cx(styles.Textarea, {
+      Disabled: isDisabled,
+      Error: isError
+    });
+
     return (
-      <div className={`${styles.Textarea} ${this.props.isDisabled === true ? styles.Disabled : ''} ${this.props.isError === true ? styles.Error : ''}`}>
+      <div className={className}>
         <div className={styles.Label}>
           {this.props.label}                
         </div>

@@ -84,7 +84,7 @@
     }
   }
 
-  &.Error {
+  &.Error{
 
     & .Field {
       & input {

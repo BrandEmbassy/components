@@ -10,13 +10,39 @@ import Radio from './../../Forms/Radio/Radio';
 import Button from './../../Controls/Button/Button';
 import Link from './../../Controls/Link/Link';
 import Channel from './../../Custom/Channel/Channel';
+import Notification from './../../Custom/Notification/Notification';
 
 export default class ExampleA extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      ShowNotif: false,
+      ShowNotifFix: false,
+    };
+  }
+
+  renderNotif = () => {
+    if (this.state.ShowNotif) {
+      return <Notification isRed text="button was pressed here here hrere"/>
+    }
+    return null;
+  }
+
+  renderNotifFix = () => {
+    if (this.state.ShowNotifFix) {
+      return <Notification Fixed isRed text="button was pressed here here hrere"/>
+    }
+    return null;
+  }
+
   render() {
     return (
       <div className="container">
         <div className="row">
-          <Header />
+          <Header/>
+        </div>
+        <div className="row">
+          {this.renderNotifFix()}
         </div>
         <div className="row">
           <div className="col-xs">
@@ -104,6 +130,32 @@ export default class ExampleA extends Component {
                 <Channel Instagram Size40/>
                 <Channel Twitter Size40/>
                 <Channel Livechat Size40 DM/>
+              </div>
+            </div>
+            <div className="row padding-10">
+              <div className="col-xs-12">
+                <h3 className="h3">Notification message</h3>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12">
+                {this.renderNotif()}
+              </div>
+              <div className="col-xs-12 padding-15">
+                <Button Small Wide text="Show notification on click" 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  this.setState({ ShowNotif: !this.state.ShowNotif })
+                }}/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xs-12 padding-15">
+                <Button Small Wide text="Show Fix notification on click" 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  this.setState({ ShowNotifFix: !this.state.ShowNotifFix })
+                }}/>
               </div>
             </div>
           </div>

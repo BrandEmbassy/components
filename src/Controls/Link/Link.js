@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import classNames from 'classnames/bind';
 import '!style-loader!css-loader!./../../styles/Base.css';
 import styles from './Link.css';
+
+const cx = classNames.bind(styles);
 
 export default class Link extends Component {
   renderIcon() {
@@ -13,19 +16,23 @@ export default class Link extends Component {
   }
 
   render() {
+    const { Blue, White, Green, Red, Black } = this.props;
+
+    const className = cx(styles.Link, {
+      Blue,
+      White,
+      Green,
+      Red,
+      Black
+    });
+
     return (
-      <div className={`${styles.Link}
-        ${this.props.Blue === true ? styles.Blue : ''}
-        ${this.props.White === true ? styles.White : ''}
-        ${this.props.Green === true ? styles.Green : ''}
-        ${this.props.Red === true ? styles.Red : ''}
-        ${this.props.Black === true ? styles.Black : ''}
-        `}>
+      <a className={className}>
           {this.renderIcon()}
           <div className={styles.Text}>
             {this.props.text}
           </div>
-      </div>
+      </a>
     );
   }
 }

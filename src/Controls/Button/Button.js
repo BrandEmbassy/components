@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import classNames from 'classnames/bind';
 import styles from './Button.css';
+
+const cx = classNames.bind(styles);
 
 export default class Button extends Component {
   renderIcon() {
@@ -13,19 +16,22 @@ export default class Button extends Component {
   }
 
   render() {
+    const { isDisabled, isReversed, isNegative, isCancel, Small, Wide } = this.props;
+
+    const className = cx(styles.Button, {
+      Disabled: isDisabled,
+      Reversed: isReversed,
+      Negative: isNegative,
+      Cancel: isCancel,
+      Small,
+      Wide 
+    });
+
     return (
-      <div className={`${styles.Button}
-        ${this.props.isDisabled === true ? styles.Disabled : ''}
-        ${this.props.isReversed === true ? styles.Reversed : ''}
-        ${this.props.isNegative === true ? styles.Negative : ''}
-        ${this.props.isCancel === true ? styles.Cancel : ''}
-        ${this.props.isDisabled === true ? styles.Disabled : ''}
-        ${this.props.Small === true ? styles.Small : ''}
-        ${this.props.Wide === true ? styles.Wide : ''}
-        `}>
+      <button className={className} onClick={this.props.onClick}>
           {this.renderIcon()}
-          {this.props.text}
-      </div>
+          {this.props.text} 
+      </button>
     );
   }
 }
