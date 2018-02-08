@@ -4,6 +4,8 @@ import ButtonGroup from './../Controls/ButtonGroup/ButtonGroup';
 import Button from './../Controls/Button/Button';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import { renderToString } from 'react-dom/server';
+import beautify from 'js-beautify';
 
 export default class ButtonGroupComponent extends Component {
   render() {
@@ -30,12 +32,18 @@ export default class ButtonGroupComponent extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12 ">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="ButtonGroup__ButtonGroup">
-  ...
-</div>
-`}
-</SyntaxHighlighter>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<ButtonGroup>
+              <Button text="buttonA" >
+              <div className="be-icon-plus"></div>
+              </Button>
+              <Button text="buttonB" isNegative/>
+              <Button text="buttonC" isDisabled/>
+              <Button text="buttonD" />
+              <Button text="buttonE" isDisabled/>
+              <Button text="buttonF" isNegative/>
+            </ButtonGroup>))} 
+            </SyntaxHighlighter>
           </div>
         </div>
       </div>

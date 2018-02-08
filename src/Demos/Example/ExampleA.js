@@ -16,7 +16,7 @@ export default class ExampleA extends Component {
     return (
       <div className="container">
         <div className="row">
-          <Header Title="Title text"/>
+          <Header />
         </div>
         <div className="row">
           <div className="col-xs">

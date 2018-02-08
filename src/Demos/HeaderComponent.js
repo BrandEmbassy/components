@@ -3,6 +3,8 @@ import '!style-loader!css-loader!./../styles/Base.css';
 import Header from './../Basic/Header/Header';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import { renderToString } from 'react-dom/server';
+import beautify from 'js-beautify';
 
 export default class HeaderComponent extends Component {
   render() {
@@ -13,15 +15,12 @@ export default class HeaderComponent extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12">
-<SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Header__Header">
-
-</div>
-`}
-</SyntaxHighlighter>
-    </div>
-  </div>
-</div>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Header />))}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+      </div>
     );
   }
 }

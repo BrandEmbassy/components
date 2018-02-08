@@ -3,6 +3,8 @@ import '!style-loader!css-loader!./../../styles/Base.css';
 import Notification from './../../Custom/Notification/Notification';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import { renderToString } from 'react-dom/server';
+import beautify from 'js-beautify';
 
 export default class NotificationComponent extends Component {
   render() {
@@ -20,12 +22,9 @@ export default class NotificationComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12 ">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Notification__Notification">
-  <span>notification text here</span>
-</div>
-`}
-</SyntaxHighlighter>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Notification text="notification text here" />))}
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -40,12 +39,9 @@ export default class NotificationComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12 ">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Notification__Notification Notification__isGreen">
-  <span>notification text here</span>
-</div>
-`}
-</SyntaxHighlighter>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Notification isGreen text="notification text here" />))}
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row">
@@ -60,12 +56,9 @@ export default class NotificationComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12 ">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Notification__Notification Notification__isGreen">
-  <span>notification text here</span>
-</div>
-`}
-</SyntaxHighlighter>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Notification isRed text="notification text here" />))}
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row">
@@ -80,12 +73,9 @@ export default class NotificationComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12 ">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Notification__Notification Notification__isGreen">
-  <span>notification text here</span>
-</div>
-`}
-</SyntaxHighlighter>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Notification isYellow text="notification text here" />))}
+            </SyntaxHighlighter>
           </div>
         </div>
 

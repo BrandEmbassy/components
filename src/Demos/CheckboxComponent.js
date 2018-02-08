@@ -49,19 +49,12 @@ export default class CheckboxComponent extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12 ">
-<SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Checkbox__CheckboxContent">
-  <div class="Checkbox__Checkbox">
-    <input type="checkbox" name="name" id="sss" />
-    <label for="sss" ></label>
-    <div class="Checkbox__Label" >chose one</div>
-  </div>
-</div>
-`}
-</SyntaxHighlighter>
-    </div>
-  </div>
-</div>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Checkbox id="xzs" label="chose one" />))}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+      </div>
     );
   }
 }

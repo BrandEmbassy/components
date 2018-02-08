@@ -3,6 +3,8 @@ import '!style-loader!css-loader!./../styles/Base.css';
 import Link from './../Controls/Link/Link';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import { renderToString } from 'react-dom/server';
+import beautify from 'js-beautify';
 
 export default class ButtonGroupComponent extends Component {
   render() {
@@ -23,16 +25,9 @@ export default class ButtonGroupComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Link__Link Link__Blue">
-  <div class="be-icon-pencil"></div>
-  edit
-</div>
-<div class="Link__Link Link__White">
-  <div class="be-icon-trash"></div>
-</div>
-`}
-          </SyntaxHighlighter> 
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Link Icon="be-icon-pencil" text="edit" />))}
+            </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
@@ -50,16 +45,9 @@ export default class ButtonGroupComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Link__Link Link__Blue">
-  <div class="be-icon-pencil"></div>
-  edit
-</div>
-<div class="Link__Link Link__White">
-  <div class="be-icon-trash"></div>
-</div>
-`}
-          </SyntaxHighlighter> 
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Link Icon="be-icon-pencil" Blue text="edit" />))}
+            </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
@@ -77,16 +65,9 @@ export default class ButtonGroupComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12">
-        <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="Link__Link Link__White">
-  <div class="be-icon-pencil"></div>
-  edit
-</div>
-<div class="Link__Link Link__White">
-  <div class="be-icon-trash"></div>
-</div>
-`}
-          </SyntaxHighlighter> 
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Link Icon="be-icon-pencil" White text="edit" />))}
+            </SyntaxHighlighter> 
           </div>
         </div>
       </div>
