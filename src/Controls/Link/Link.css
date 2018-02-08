@@ -1,6 +1,7 @@
 .Link {
   position: relative;
   display: inline-flex;
+  align-self: center;
   width: auto;
   height: auto;
   padding: 5px;
@@ -12,7 +13,6 @@
 
   &:hover{
     filter: contrast(200%);
-    transform: translateY(1px);
   }
 
   & .Text{
@@ -34,6 +34,10 @@
 
   &.White {
     color: #ffffff;
+    &:hover{
+      color: #dadada;
+      filter: contrast(100%);
+    }
   }
   
   &.Green {
@@ -46,5 +50,10 @@
   
   &.Black {
     color: #000000;
+
+    &:hover{
+      color: #333333;
+      filter: contrast(100%);
+    }
   }
 }

@@ -12,7 +12,6 @@
   font-weight: 700;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   transition-duration: 0.05s;
 
   & [class^='be-icon'] {
@@ -25,33 +24,32 @@
   }
 
   &:hover {
-    box-shadow: 0 10px 5px -10px rgba(0, 0, 0, 0.7);
-    transform: translateY(1px);
+    background-color: #3bbb64;
   }
 
   &.Reversed {
     color: #329d53;
     background-color: #fff;
-    box-shadow: none;
 
     &:hover {
     color: #39b35f;
-    transform: translateY(0px);
     }
   }
 
   &.Negative {
     background-color: #E8585D;
+
+    &:hover {
+      color: #39b35f;
+    }
   }
 
   &.Cancel {
     color: #E8585D ;
     background-color: #fff;
-    box-shadow: none;
 
     &:hover {
       color: rgb(228, 114, 118);
-      transform: translateY(0px);
     }
   }
 

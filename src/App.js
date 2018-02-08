@@ -17,7 +17,7 @@ import BreadcrumbsComponent from './../src/Demos/BreadcrumbsComponent';
 import Header from './../src/Custom/Header/Header';
 import ChannelLabelComponent from './../src/Demos/Custom/ChannelLabelComponent';
 import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureComponent';
-import NotificationMessageComponent from './../src/Demos/Custom/NotificationMessageComponent';
+import NotificationComponent from './../src/Demos/Custom/NotificationComponent';
 import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
 import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
 import './styles/Base.css';
