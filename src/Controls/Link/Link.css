@@ -11,10 +11,11 @@
   color: #4a4a4a;
   text-decoration: none;
   cursor: pointer;
+  transition-duration: 0.11s;
   user-select: none;
 
   &:hover{
-    filter: contrast(200%);
+    filter:brightness(115%);
   }
 
   & .Text{
@@ -36,9 +37,9 @@
 
   &.White {
     color: #ffffff;
-    &:hover{
-      color: #dadada;
-      filter: contrast(100%);
+
+    &:hover {
+      filter:brightness(80%);
     }
   }
   
@@ -52,10 +53,5 @@
   
   &.Black {
     color: #000000;
-
-    &:hover{
-      color: #333333;
-      filter: contrast(100%);
-    }
   }
 }

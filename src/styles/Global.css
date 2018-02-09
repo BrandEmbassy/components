@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+#root, body, html {
+  height: 100%; 
+  width: 100%; 
+}
+
 :global(.Componenta) {
   width: 300px;
   padding: 20px;
@@ -39,6 +44,10 @@ input[type="submit"]:focus {
   line-height: 150%;
   margin: 6px 0;
   display: block;
+}
+
+:global(.background) {
+  background-color: #F5F5F5;
 }
 
 :global(.h1) {

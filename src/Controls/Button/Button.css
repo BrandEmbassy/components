@@ -12,7 +12,7 @@
   font-weight: 700;
   color: #fff;
   cursor: pointer;
-  transition-duration: 0.05s;
+  transition-duration: 0.11s;
   user-select: none;
 
   & [class^='be-icon'] {
@@ -25,33 +25,21 @@
   }
 
   &:hover {
-    background-color: #3bbb64;
+    filter:brightness(115%);
   }
 
   &.Reversed {
     color: #329d53;
     background-color: #fff;
-
-    &:hover {
-    color: #39b35f;
-    }
   }
 
   &.Negative {
     background-color: #E8585D;
-
-    &:hover {
-      background-color: rgb(243, 118, 122);
-    }
   }
 
   &.Cancel {
     color: #E8585D ;
     background-color: #fff;
-
-    &:hover {
-      color: rgb(228, 114, 118);
-    }
   }
 
   &.Disabled {

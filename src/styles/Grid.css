@@ -1,13 +1,28 @@
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.static {
+  position: relative;
+  flex: 0 1 auto;
+  z-index: 2;
+}
 
 .container {
+  flex: 1 1 auto;
   margin-right: auto;
   margin-left: auto;
+  overflow-y: scroll;
+  z-index: 1;
 }
 
 .center {
   text-align: center;
 }
-
 
 .row {
   box-sizing: border-box;

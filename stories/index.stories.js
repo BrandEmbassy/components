@@ -6,8 +6,10 @@ import { linkTo } from '@storybook/addon-links';
 
 import Grid from './../src/Basic/Grid/Grid';
 import Typography from './../src/Basic/Typography/Typography';
+import Icons from './../src/Basic/Icons/Icons';
 
 import InputComponent from './../src/Demos/InputComponent';
+import SelectboxComponent from './../src/Demos/SelectboxComponent';
 import TextareaComponent from './../src/Demos/TextareaComponent';
 import CheckboxComponent from './../src/Demos/CheckboxComponent';
 import RadioComponent from './../src/Demos/RadioComponent';
@@ -31,10 +33,12 @@ import ExampleA from './../src/Demos/Example/ExampleA';
 
 storiesOf('Basic', module)
   .add('Grid', () => <Grid /> )
-  .add('Typography', () => <Typography /> );
+  .add('Typography', () => <Typography /> )
+  .add('Icons', () => <Icons /> );
 
 storiesOf('Forms', module)
   .add('Input', () => <InputComponent/> )
+  .add('Selectbox', () => <SelectboxComponent/> )
   .add('Textarea', () => <TextareaComponent/> )
   .add('Checkbox', () => <CheckboxComponent/> )
   .add('Radio', () => <RadioComponent/> )
