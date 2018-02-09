@@ -32,6 +32,23 @@ export default class InputComponent extends Component {
             </SyntaxHighlighter>
           </div>
         </div> 
+        <div className="row padding-20">
+          <div className="col-xs-12 ">
+            <h3 className="h3">Wide</h3>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-6">
+            <Selectbox Wide/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 ">
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Selectbox Wide/>))}
+            </SyntaxHighlighter>
+          </div>
+        </div> 
       </div>
     );
   }
