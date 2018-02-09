@@ -6,11 +6,10 @@ const cx = classNames.bind(styles);
 
 export default class Selectbox extends Component {
   render() {
-    const { isDisabled, isError } = this.props;
+    const { Wide } = this.props;
 
     const className = cx(styles.Selectbox, {
-      Disabled: isDisabled,
-      Error: isError
+      Wide
     });
 
     return (
