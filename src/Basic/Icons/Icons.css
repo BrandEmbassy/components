@@ -1,0 +1,16 @@
+.Icons {
+  & div {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  & [class^='be-icon'] {
+    margin-right: 8px;
+    margin-top: 2px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    font-size: 30px;
+    color: inherit;
+  }
+}

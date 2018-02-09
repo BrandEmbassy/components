@@ -16,10 +16,10 @@ export default class Notification extends Component {
     });
 
     return (
-      <div className={styles.NotificationWrap}>
-        <div className={className}>
+      <div className={className}>
+
           <span>{this.props.text}</span>
-        </div>
+
       </div>
     );
   }

@@ -1,0 +1,45 @@
+.Selectbox {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 250px;
+  height: auto;
+  margin: 10px 0;
+
+  & select {
+    display: inline-block;
+    position: relative;
+    float: none;
+    margin-bottom: 0;
+    min-width: 42px;
+    max-width: 100%;
+    max-width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    background-clip: padding-box;
+    background-color: #fff;
+    outline: 0;
+    cursor: pointer;
+    color: #3f3f3f;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  & option {
+    display: block;
+    max-width: 300px;
+    min-height: 1.2em;
+    padding: 4px 2px 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &.Selectbox select:focus {
+    outline: none;
+  }
+}
+
