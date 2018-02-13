@@ -17,9 +17,7 @@ export default class Notification extends Component {
 
     return (
       <div className={className}>
-
-          <span>{this.props.text}</span>
-
+        <span>{this.props.text}</span>
       </div>
     );
   }

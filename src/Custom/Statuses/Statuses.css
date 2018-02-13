@@ -1,0 +1,53 @@
+.Statuses {
+  position: relative;
+  display: inline-flex;
+  align-self: center;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  padding: 3px 6px;
+  line-height: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  color: #8d1616;
+  border: solid 2px #dadada;
+  border-radius: 3px;
+  text-decoration: none;
+  user-select: none;
+  text-transform: uppercase;
+
+  &.Orange {
+    color: #F57D4A;
+    border-color: #F57D4A;
+  }
+
+  &.Yellow {
+    color: #F6AF4A;
+    border-color: #F6AF4A;
+  }
+  
+  &.Green {
+    color: #31B272;
+    border-color: #31B272;
+  }
+
+  &.Blue {
+    color: #2A84F1;
+    border-color: #2A84F1;
+  }
+  
+  &.Purple {
+    color: #9C418C;
+    border-color: #9C418C;
+  }
+    
+  &.Red {
+    color: #E9575B;
+    border-color: #E9575B;
+  }
+    
+  &.Grey {
+    color: #9A9A9A;
+    border-color: #9A9A9A;
+  }
+}

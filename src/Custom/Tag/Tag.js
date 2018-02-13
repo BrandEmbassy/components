@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
-import styles from './Statuses.css';
+import styles from './Tag.css';
 
 const cx = classNames.bind(styles);
 
-export default class Statuses extends Component {
+export default class Tag extends Component {
   render() {
-    const { Orange, Yellow, Green, Blue, Purple, Red, Grey } = this.props;
+    const { Pink, Yellow, Green, Blue, LightBlue, Purple, DarkPurple, Turquoise, Red, Grey } = this.props;
 
-    const className = cx(styles.Statuses, {
-      Orange,
+    const className = cx(styles.Tag, {
+      Pink,
       Yellow,
       Green,
       Blue,
+      LightBlue,
       Purple,
+      Turquoise,
+      DarkPurple,
       Red,
       Grey
     });
@@ -25,4 +28,3 @@ export default class Statuses extends Component {
     );
   }
 }
-

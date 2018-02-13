@@ -11,13 +11,6 @@
   width: 100%; 
 }
 
-:global(.Componenta) {
-  width: 300px;
-  padding: 20px;
-  background-color: aquamarine;
-  color: blueviolet;
-}
-
 button, input[type="reset"] {
   background: none;
   color: inherit;

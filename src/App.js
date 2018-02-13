@@ -14,6 +14,8 @@ import SubmitComponent from './../src/Demos/SubmitComponent';
 import ButtonComponent from './../src/Demos/ButtonComponent';
 import ButtonGroupComponent from './../src/Demos/ButtonGroupComponent';
 import LinkComponent from './../src/Demos/LinkComponent';
+import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
+import TagComponent from './../src/Demos/Custom/TagComponent';
 
 import BreadcrumbsComponent from './../src/Demos/BreadcrumbsComponent';
 
@@ -22,16 +24,18 @@ import ChannelLabelComponent from './../src/Demos/Custom/ChannelLabelComponent';
 import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureComponent';
 import NotificationComponent from './../src/Demos/Custom/NotificationComponent';
 import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
-import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
 import './styles/Base.css';
+import styles from './App.css';
 
 export default class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12">
-            <b><a href="http://localhost:6006">Open</a></b> component library
+      <div className={styles.App}>
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12">
+              <b><a href="http://localhost:6006">Open</a></b> component library
+            </div>
           </div>
         </div>
       </div>

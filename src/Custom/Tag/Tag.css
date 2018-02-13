@@ -1,0 +1,63 @@
+.Tag {
+  position: relative;
+  display: inline-flex;
+  align-self: center;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  padding: 2px 8px;
+  line-height: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  color: #111111;
+  background-color: #dadada;
+  border-radius: 3px;
+  text-decoration: none;
+  user-select: none;
+
+  &.Pink {
+    color: #A65297;
+    background-color: #F4D8EF;
+  }
+
+  &.Yellow {
+    color: #C78A30;
+    background-color: #FFF1DC;
+  }
+  
+  &.Green {
+    color: #3EA271;
+    background-color: #DDF5E9;
+  }
+
+  &.Blue {
+    color: #398DF2;
+    background-color: #D7E8FF;
+  }
+
+  &.LightBlue {
+    color: #3AA2D5;
+    background-color: #DCF4FF;
+  }
+  
+  &.Purple {
+    color: #434483;
+    background-color: #E6E6FF;
+  }
+
+  &.DarkPurple {
+    color: #5B4657;
+    background-color: #EBDDE7;
+  }
+
+  &.Turquoise {
+    color: #38A0A0;
+    background-color: #CFF4F4;
+  }
+    
+  &.Red {
+    color: #E9575B;
+    background-color: #FFE1E1;
+  }
+  
+}

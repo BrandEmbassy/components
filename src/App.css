@@ -1,0 +1,35 @@
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  & .Static {
+    position: relative;
+    flex: 0 1 auto;
+    z-index: 2;
+  }
+
+  & .Flex {
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    z-index: 1;
+  }
+
+  & .Flexcols {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    overflow-y: hidden;
+    z-index: 1;
+  }
+
+  & .Flexrows {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow-y: hidden;
+    z-index: 1;
+  }
+}

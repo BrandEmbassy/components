@@ -11,6 +11,9 @@ import Button from './../../Controls/Button/Button';
 import Link from './../../Controls/Link/Link';
 import Channel from './../../Custom/Channel/Channel';
 import Notification from './../../Custom/Notification/Notification';
+import Statuses from './../../Custom/Statuses/Statuses';
+import Tag from './../../Custom/Tag/Tag';
+import styles from './../../App.css';
 
 export default class ExampleA extends Component {
   constructor(props) {
@@ -37,13 +40,13 @@ export default class ExampleA extends Component {
 
   render() {
     return (
-      <div className="app">
-        <div className="static">
+      <div className={styles.App}>
+        <div className={styles.Static}>
           <div className="row">
             <Header/>
           </div>
         </div>
-        <div className="container">
+        <div className={styles.Flex}>
           <div className="row">
             {this.renderNotifFix()}
           </div>
@@ -137,6 +140,36 @@ export default class ExampleA extends Component {
               </div>
               <div className="row padding-10">
                 <div className="col-xs-12">
+                  <h3 className="h3">Statuses</h3>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-12 padding-15">
+                  <Statuses Orange text="new"/>
+                  <Statuses Yellow text="open"/>
+                  <Statuses Green text="resolved"/>
+                  <Statuses Blue text="pending"/>
+                  <Statuses Purple text="escalated"/>
+                  <Statuses Red text="closed"/>
+                </div>
+              </div>
+              <div className="row padding-10">
+                <div className="col-xs-12">
+                  <h3 className="h3">Tags</h3>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xs-12 padding-15">
+                  <Tag Red text="Tag name"/>
+                  <Tag Yellow text="Tag name"/>
+                  <Tag Turquoise text="Tag name"/>
+                  <Tag Green text="Tag name"/>
+                  <Tag LightBlue text="Tag name"/>
+                  <Tag Blue text="Tag name"/>
+                </div>
+              </div>
+              <div className="row padding-10">
+                <div className="col-xs-12">
                   <h3 className="h3">Notification message</h3>
                 </div>
               </div>
@@ -144,8 +177,8 @@ export default class ExampleA extends Component {
                 <div className="col-xs-12">
                   {this.renderNotif()}
                 </div>
-                <div className="col-xs-12 padding-15">
-                  <Button Small Wide text="Show notification on click" 
+                <div className="col-xs-12 padding-15 center">
+                  <Button Small text="Show notification on click" 
                   onClick={(e) => {
                     e.stopPropagation();
                     this.setState({ ShowNotif: !this.state.ShowNotif })
