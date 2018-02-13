@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
-import '!style-loader!css-loader!./../../styles/Base.css';
 import styles from './Link.css';
 
 const cx = classNames.bind(styles);

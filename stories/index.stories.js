@@ -28,8 +28,10 @@ import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureCompone
 import NotificationComponent from './../src/Demos/Custom/NotificationComponent';
 import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
 import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
+import TagComponent from './../src/Demos/Custom/TagComponent';
 
 import ExampleA from './../src/Demos/Example/ExampleA';
+import ExampleB from './../src/Demos/Example/ExampleB';
 
 storiesOf('Basic', module)
   .add('Grid', () => <Grid /> )
@@ -60,6 +62,8 @@ storiesOf('Custom', module)
   .add('Notification Message', () => <NotificationComponent /> )
   .add('Profile Picture', () => <ProfilePictureComponent /> )
   .add('Statuses', () => <StatusesComponent /> )
+  .add('Tag', () => <TagComponent /> );
 
   storiesOf('Example', module)
-  .add('Example1', () => <ExampleA /> );
+  .add('ExampleA', () => <ExampleA /> )
+  .add('testuju', () => <ExampleB /> );

@@ -15,10 +15,11 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  z-index: 10000;
 
   &.Fixed {
     position: fixed;
-    top: 20px;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
@@ -68,7 +69,7 @@
     color: #865b29;
     
     &:before {
-      content: "\7a";
+      content: "\2e";
     }
   }
 }

@@ -29,6 +29,24 @@ export default class NotificationComponent extends Component {
         </div>
         <div className="row padding-20">
           <div className="col-xs-12" >
+            <h3 className="h3">Fixed</h3>
+            fixed on top 
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 " >
+            <Notification Fixed isGreen text="notification Fixed here" />
+          </div>
+        </div>
+        <div className="row padding-20">
+          <div className="col-xs-12 ">
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Notification Fixed isGreen text="notification text here" />))}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+        <div className="row padding-20">
+          <div className="col-xs-12" >
             <h3 className="h3">isGreen</h3>
           </div>
         </div>
