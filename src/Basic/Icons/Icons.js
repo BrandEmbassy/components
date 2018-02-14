@@ -211,6 +211,52 @@ export default class Icons extends Component {
               <div className="be-icon-external-link-square"></div>
 
               <div className="be-icon-livechat-2"></div>
+
+
+
+
+              <div className="be-icon-rating-1"></div>
+
+<div className="be-icon-rating-2"></div>
+
+<div className="be-icon-rating-3"></div>
+
+<div className="be-icon-rating-5"></div>
+
+<div className="be-icon-thumb-down"></div>
+
+<div className="be-icon-thumb-up"></div>
+
+<div className="be-icon-close-big"></div>
+
+<div className="be-icon-chevron-right"></div>
+
+<div className="be-icon-chevron-left"></div>
+
+<div className="be-icon-emoji"></div>
+
+<div className="be-icon-be-logo"></div>
+
+<div className="be-icon-rating-4"></div>
+
+<div className="be-icon-arrow-drop"></div>
+
+<div className="be-icon-file-drop"></div>
+
+<div className="be-icon-enlarge"></div>
+
+<div className="be-icon-mail-1"></div>
+
+<div className="be-icon-agent"></div>
+
+<div className="be-icon-moon"></div>
+
+<div className="be-icon-livechat-off"></div>
+
+<div className="be-icon-plug"></div>
+
+
+
             </div>
           </div>
         </div>
