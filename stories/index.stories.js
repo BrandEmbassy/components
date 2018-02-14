@@ -66,4 +66,4 @@ storiesOf('Custom', module)
 
   storiesOf('Example', module)
   .add('ExampleA', () => <ExampleA /> )
-  .add('testuju', () => <ExampleB /> );
+  .add('ExampleB', () => <ExampleB /> );
