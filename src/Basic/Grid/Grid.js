@@ -3,6 +3,7 @@ import  '!style-loader!css-loader!../../styles/Base.css';
 import  '!style-loader!css-loader!./GridDemo.css';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import styles from './../../App.css';
 
 const code = 
 `<div class="container"> 
@@ -24,27 +25,53 @@ const code =
 export default class Grid extends Component {
   render() {
     return (
-        <div className="container">
+        <div className={styles.App}>
+          <div className={styles.Static}>
+            <div className="row">
+              <div className="col-xs-12">
+                <h2 className="h2">
+                  Grid 
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div className={styles.Flex}>
+          <div className="row">
+            <div className="col-xs-12">
+             
+              .App__App have 100% width and 100% height<br /><br />  
+              
+              inside, you can have App__Static and App__Flex<br /> <br /> 
+
+              Static stay fixed and Flex is posible to scroll - Example : this page<br /> <br /> 
+           
+
+              you can nest it using Flexcols or Flexrows - Example in Example/ExampleB
+            </div>
+          </div>
           <div className="row padding-20">
             <div className="col-xs-12">
               <h2 className="h2">
-                Grid 
+                Rows and columns 
               </h2>
             </div>
-          </div>
-          <div className="row">
+
             <div className="col-xs-12">
-              <h4 className="h4">
-              .container have 100% width<br /> 
-              (you can overwrite it by max-width)
-              </h4>
+              
+            .Row is parent everytime<br /> <br /> 
+
+            inside use columns <br /> <br /> 
+
+            12 grid system or auto size col
+ 
+              
+
             </div>
           </div>
-
           <div className="row">
             <div className="col-xs-12">
           <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-{`<div class="container"> 
+{`
   <div class="row">
     <div class="col-xs-3">
       ...
@@ -56,17 +83,11 @@ export default class Grid extends Component {
     ...
     </div>
   </div>
-</div>
 `}
           </SyntaxHighlighter> 
           </div>
           </div>
           <div className="container color6 center">
-            <div className="row">
-              <div class="col-xs-12">
-                <h3 className="h3">.container</h3><br />
-              </div>
-            </div>
             <div className="row around-xs color5">
               <div class="col-xs-12 center">
                 <h3 className="h3">.row</h3><br />
@@ -750,6 +771,7 @@ export default class Grid extends Component {
           
           </div>
         </div>
+      </div>
     );
   }
 }
