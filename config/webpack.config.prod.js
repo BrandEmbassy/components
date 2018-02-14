@@ -270,7 +270,7 @@ module.exports = {
             // by webpacks internal loaders.
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
             options: {
-              name: 'static/media/[name].[ext]',
+              name: '[name].[ext]',
             },
           },
           // ** STOP ** Are you adding a new loader?
