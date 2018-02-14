@@ -21,6 +21,7 @@ import ButtonGroupComponent from './../src/Demos/ButtonGroupComponent';
 import LinkComponent from './../src/Demos/LinkComponent';
 
 import BreadcrumbsComponent from './../src/Demos/BreadcrumbsComponent';
+import DropdownComponent from './../src/Demos/DropdownComponent';
 
 import Header from './../src/Custom/Header/Header';
 import ChannelLabelComponent from './../src/Demos/Custom/ChannelLabelComponent';
@@ -53,7 +54,8 @@ storiesOf('Controls', module)
   .add('Link', () => <LinkComponent /> );
 
 storiesOf('Navigation', module)
-  .add('Breadcrumbs', () => <BreadcrumbsComponent/> );
+  .add('Breadcrumbs', () => <BreadcrumbsComponent/> )
+  .add('Dropdown', () => <DropdownComponent/> );
 
 storiesOf('Custom', module)
   .add('Header', () => <Header /> )
