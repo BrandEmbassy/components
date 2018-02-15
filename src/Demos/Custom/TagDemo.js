@@ -6,7 +6,7 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class TagComponent extends Component {
+export default class TagDemo extends Component {
   render() {
     return (
       <div className="container">
@@ -35,7 +35,6 @@ export default class TagComponent extends Component {
             </SyntaxHighlighter> 
           </div>
         </div>
-
       </div>
     );
   }

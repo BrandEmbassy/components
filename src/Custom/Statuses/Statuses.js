@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 export default class Statuses extends Component {
   render() {
-    const { Orange, Yellow, Green, Blue, Purple, Red, Grey } = this.props;
+    const { Orange, Yellow, Green, Blue, Purple, Red, Grey, Reversed } = this.props;
 
     const className = cx(styles.Statuses, {
       Orange,
@@ -15,7 +15,8 @@ export default class Statuses extends Component {
       Blue,
       Purple,
       Red,
-      Grey
+      Grey,
+      Reversed
     });
 
     return (

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '!style-loader!css-loader!./../styles/Base.css';
-import Checkbox from './../Forms/Checkbox/Checkbox';
+import '!style-loader!css-loader!./../../styles/Base.css';
+import Checkbox from './../../Forms/Checkbox/Checkbox';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class CheckboxComponent extends Component {
+export default class CheckboxDemo extends Component {
   render() {
     return (
       <div className="container">

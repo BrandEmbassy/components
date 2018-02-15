@@ -6,7 +6,7 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class StatusesComponent extends Component {
+export default class StatusesDemo extends Component {
   render() {
     return (
       <div className="container">
@@ -32,7 +32,27 @@ export default class StatusesComponent extends Component {
             </SyntaxHighlighter> 
           </div>
         </div>
-
+        <div className="row">
+        <div className="col-xs-12 ">
+            <h3 className="h3">Reversed</h3>
+          </div>
+          <div className="col-xs-10 padding-20">
+            <Statuses Reversed Orange text="new"/>
+            <Statuses Reversed Yellow text="open"/>
+            <Statuses Reversed Green text="resolved"/>
+            <Statuses Reversed Blue text="pending"/>
+            <Statuses Reversed Purple text="escalated"/>
+            <Statuses Reversed Red text="closed"/>
+            <Statuses Reversed Grey text="trashed"/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12">
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Statuses Reversed Orange text="new"/>))}
+            </SyntaxHighlighter> 
+          </div>
+        </div>
       </div>
     );
   }

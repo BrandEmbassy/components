@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '!style-loader!css-loader!./../styles/Base.css';
-import Selectbox from './../Forms/Selectbox/Selectbox';
+import '!style-loader!css-loader!./../../styles/Base.css';
+import Selectbox from './../../Forms/Selectbox/Selectbox';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class InputComponent extends Component {
+export default class InputDemo extends Component {
   render() {
     return (
       <div className="container">

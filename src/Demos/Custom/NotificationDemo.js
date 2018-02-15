@@ -6,7 +6,7 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class NotificationComponent extends Component {
+export default class NotificationDemo extends Component {
   render() {
     return (
       <div className="container">
