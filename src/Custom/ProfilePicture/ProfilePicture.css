@@ -1,4 +1,4 @@
-.ProfilePic {
+.ProfilePicture {
   position: relative;
   display: flex;
   width: 32px;
@@ -6,7 +6,7 @@
   float: left;
   border-radius: 2px;
   background-color: #d8d8d8;
-  margin-right: 12px;
+  margin-right: 5px;
   overflow: hidden;
 
   & img {
@@ -16,9 +16,33 @@
     width: 100%;
   }
 
+  &.Size60 {
+    width: 60px;
+    height: 60px;
+    border-radius: 3px;
+  }
+
   &.Size40 {
     width: 40px;
     height: 40px;
+    border-radius: 3px;
+  }
+
+  &.Size24 {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+  }
+
+  &.Size20 {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+  }
+
+  &.Size16 {
+    width: 16px;
+    height: 16px;
     border-radius: 3px;
   }
 }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '!style-loader!css-loader!./../styles/Base.css';
-import Link from './../Controls/Link/Link';
+import '!style-loader!css-loader!./../../styles/Base.css';
+import Link from './../../Controls/Link/Link';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class ButtonGroupComponent extends Component {
+export default class LinkDemo extends Component {
   render() {
     return (
       <div className="container">

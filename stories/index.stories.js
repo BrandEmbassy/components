@@ -8,28 +8,28 @@ import Grid from './../src/Basic/Grid/Grid';
 import Typography from './../src/Basic/Typography/Typography';
 import Icons from './../src/Basic/Icons/Icons';
 
-import InputComponent from './../src/Demos/InputComponent';
-import SelectboxComponent from './../src/Demos/SelectboxComponent';
-import TextareaComponent from './../src/Demos/TextareaComponent';
-import CheckboxComponent from './../src/Demos/CheckboxComponent';
-import RadioComponent from './../src/Demos/RadioComponent';
-import TableComponent from './../src/Demos/TableComponent';
-import SubmitComponent from './../src/Demos/SubmitComponent';
+import InputDemo from './../src/Demos/Forms/InputDemo';
+import SelectboxDemo from './../src/Demos/Forms/SelectboxDemo';
+import TextareaDemo from './../src/Demos/Forms/TextareaDemo';
+import CheckboxDemo from './../src/Demos/Forms/CheckboxDemo';
+import RadioDemo from './../src/Demos/Forms/RadioDemo';
+import TableDemo from './../src/Demos/Forms/TableDemo';
+import SubmitDemo from './../src/Demos/Forms/SubmitDemo';
 
-import ButtonComponent from './../src/Demos/ButtonComponent';
-import ButtonGroupComponent from './../src/Demos/ButtonGroupComponent';
-import LinkComponent from './../src/Demos/LinkComponent';
+import ButtonDemo from './../src/Demos/Controls/ButtonDemo';
+import ButtonGroupDemo from './../src/Demos/Controls/ButtonGroupDemo';
+import LinkDemo from './../src/Demos/Controls/LinkDemo';
 
-import BreadcrumbsComponent from './../src/Demos/BreadcrumbsComponent';
-import DropdownComponent from './../src/Demos/DropdownComponent';
+import BreadcrumbsDemo from './../src/Demos/Navigation/BreadcrumbsDemo';
+import DropdownDemo from './../src/Demos/Navigation/DropdownDemo';
 
-import Header from './../src/Custom/Header/Header';
-import ChannelLabelComponent from './../src/Demos/Custom/ChannelLabelComponent';
-import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureComponent';
-import NotificationComponent from './../src/Demos/Custom/NotificationComponent';
-import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
-import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
-import TagComponent from './../src/Demos/Custom/TagComponent';
+import HeaderDemo from './../src/Demos/Custom/HeaderDemo';
+import LabelDemo from './../src/Demos/Custom/LabelDemo';
+import ChannelDemo from './../src/Demos/Custom/ChannelDemo';
+import NotificationDemo from './../src/Demos/Custom/NotificationDemo';
+import ProfilePictureDemo from './../src/Demos/Custom/ProfilePictureDemo';
+import StatusesDemo from './../src/Demos/Custom/StatusesDemo';
+import TagDemo from './../src/Demos/Custom/TagDemo';
 
 import ExampleA from './../src/Demos/Example/ExampleA';
 import ExampleB from './../src/Demos/Example/ExampleB';
@@ -40,31 +40,31 @@ storiesOf('Basic', module)
   .add('Icons', () => <Icons /> );
 
 storiesOf('Forms', module)
-  .add('Input', () => <InputComponent/> )
-  .add('Selectbox', () => <SelectboxComponent/> )
-  .add('Textarea', () => <TextareaComponent/> )
-  .add('Checkbox', () => <CheckboxComponent/> )
-  .add('Radio', () => <RadioComponent/> )
-  .add('Table', () => <TableComponent/> )
-  .add('Submit', () => <SubmitComponent/> );
+  .add('Input', () => <InputDemo/> )
+  .add('Selectbox', () => <SelectboxDemo/> )
+  .add('Textarea', () => <TextareaDemo/> )
+  .add('Checkbox', () => <CheckboxDemo/> )
+  .add('Radio', () => <RadioDemo/> )
+  .add('Table', () => <TableDemo/> )
+  .add('Submit', () => <SubmitDemo/> );
 
 storiesOf('Controls', module)
-  .add('Button', () => <ButtonComponent /> )
-  .add('Button group', () => <ButtonGroupComponent /> )
-  .add('Link', () => <LinkComponent /> );
+  .add('Button', () => <ButtonDemo /> )
+  .add('Button group', () => <ButtonGroupDemo /> )
+  .add('Link', () => <LinkDemo /> );
 
 storiesOf('Navigation', module)
-  .add('Breadcrumbs', () => <BreadcrumbsComponent/> )
-  .add('Dropdown', () => <DropdownComponent/> );
+  .add('Breadcrumbs', () => <BreadcrumbsDemo/> )
+  .add('Dropdown', () => <DropdownDemo/> );
 
 storiesOf('Custom', module)
-  .add('Header', () => <Header /> )
-  .add('Chanel Label', () => <ChannelLabelComponent /> )
-  .add('Chanel Picture', () => <ChannelPictureComponent /> )
-  .add('Notification Message', () => <NotificationComponent /> )
-  .add('Profile Picture', () => <ProfilePictureComponent /> )
-  .add('Statuses', () => <StatusesComponent /> )
-  .add('Tag', () => <TagComponent /> );
+  .add('Header', () => <HeaderDemo /> )
+  .add('Label', () => <LabelDemo /> )
+  .add('Chanel', () => <ChannelDemo /> )
+  .add('Notification Message', () => <NotificationDemo /> )
+  .add('Profile Picture', () => <ProfilePictureDemo /> )
+  .add('Statuses', () => <StatusesDemo /> )
+  .add('Tag', () => <TagDemo /> );
 
   storiesOf('Example', module)
   .add('ExampleA', () => <ExampleA /> )

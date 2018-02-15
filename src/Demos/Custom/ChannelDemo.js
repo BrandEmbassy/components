@@ -6,7 +6,7 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class ChannelPictureComponent extends Component {
+export default class ChannelDemo extends Component {
   render() {
     return (
       <div className="container">
@@ -32,8 +32,8 @@ export default class ChannelPictureComponent extends Component {
             <h4 className="h4">for 60px use class Size60</h4>
             <h4 className="h4">for 40px use class Size40</h4>
             <h4 className="h4">24px is default</h4>
-            <h4 className="h4">for 40px use class Size20</h4>
-            <h4 className="h4">for 40px use class Size16</h4>
+            <h4 className="h4">for 20px use class Size20</h4>
+            <h4 className="h4">for 16px use class Size16</h4>
             <Channel Facebook Size60 />
             <Channel Facebook Size40 />
             <Channel Facebook />

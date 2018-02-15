@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '!style-loader!css-loader!./../styles/Base.css';
-import Radio from './../Forms/Radio/Radio';
+import '!style-loader!css-loader!./../../styles/Base.css';
+import Radio from './../../Forms/Radio/Radio';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
-export default class RadioComponent extends Component {
+export default class RadioDemo extends Component {
   render() {
     return (
       <div className="container"> 

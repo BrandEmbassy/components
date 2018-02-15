@@ -1,0 +1,15 @@
+.Label {
+  display: flex;
+  flex: 0 0 auto;
+  padding: 10px 0;
+
+  & .Children {
+    flex: 0 1 auto;
+  }
+
+  & .Text {
+    flex: 1 1 auto;
+    align-self: center;
+    margin-left: 7px;
+  }
+}

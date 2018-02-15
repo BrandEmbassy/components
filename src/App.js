@@ -3,27 +3,29 @@ import Grid from './../src/Basic/Grid/Grid';
 import Typography from './../src/Basic/Typography/Typography';
 import Icons from './../src/Basic/Icons/Icons';
 
-import InputComponent from './../src/Demos/InputComponent';
-import SelectComponent from './../src/Demos/SelectboxComponent';
-import TextareaComponent from './../src/Demos/TextareaComponent';
-import CheckboxComponent from './../src/Demos/CheckboxComponent';
-import RadioComponent from './../src/Demos/RadioComponent';
-import TableComponent from './../src/Demos/TableComponent';
-import SubmitComponent from './../src/Demos/SubmitComponent';
+import InputDemo from './../src/Demos/Forms/InputDemo';
+import SelectDemo from './../src/Demos/Forms/SelectboxDemo';
+import TextareaDemo from './../src/Demos/Forms/TextareaDemo';
+import CheckboxDemo from './../src/Demos/Forms/CheckboxDemo';
+import RadioDemo from './../src/Demos/Forms/RadioDemo';
+import TableDemo from './../src/Demos/Forms/TableDemo';
+import SubmitDemo from './../src/Demos/Forms/SubmitDemo';
 
-import ButtonComponent from './../src/Demos/ButtonComponent';
-import ButtonGroupComponent from './../src/Demos/ButtonGroupComponent';
-import LinkComponent from './../src/Demos/LinkComponent';
-import StatusesComponent from './../src/Demos/Custom/StatusesComponent';
-import TagComponent from './../src/Demos/Custom/TagComponent';
+import ButtonDemo from './../src/Demos/Controls/ButtonDemo';
+import ButtonGroupDemo from './../src/Demos/Controls/ButtonGroupDemo';
+import LinkDemo from './../src/Demos/Controls/LinkDemo';
 
-import BreadcrumbsComponent from './../src/Demos/BreadcrumbsComponent';
+import StatusesDemo from './../src/Demos/Custom/StatusesDemo';
+import TagDemo from './../src/Demos/Custom/TagDemo';
 
-import Header from './../src/Custom/Header/Header';
-import ChannelLabelComponent from './../src/Demos/Custom/ChannelLabelComponent';
-import ChannelPictureComponent from './../src/Demos/Custom/ChannelPictureComponent';
-import NotificationComponent from './../src/Demos/Custom/NotificationComponent';
-import ProfilePictureComponent from './../src/Demos/Custom/ProfilePictureComponent';
+import BreadcrumbsDemo from './../src/Demos/Navigation/BreadcrumbsDemo';
+import DropdownDemo from './../src/Demos/Navigation/DropdownDemo';
+
+import HeaderDemo from './../src/Demos/Custom/HeaderDemo';
+import LabelDemo from './../src/Demos/Custom/LabelDemo';
+import ChannelDemo from './../src/Demos/Custom/ChannelDemo';
+import NotificationDemo from './../src/Demos/Custom/NotificationDemo';
+import ProfilePictureDemo from './../src/Demos/Custom/ProfilePictureDemo';
 import './styles/Base.css';
 import styles from './App.css';
 
