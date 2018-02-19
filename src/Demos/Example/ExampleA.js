@@ -10,6 +10,7 @@ import Radio from './../../Forms/Radio/Radio';
 import Button from './../../Controls/Button/Button';
 import Link from './../../Controls/Link/Link';
 import Channel from './../../Custom/Channel/Channel';
+import Label from './../../Custom/Label/Label';
 import Notification from './../../Custom/Notification/Notification';
 import Statuses from './../../Custom/Statuses/Statuses';
 import Tag from './../../Custom/Tag/Tag';
@@ -152,6 +153,14 @@ export default class ExampleA extends Component {
                   <Statuses Purple text="escalated"/>
                   <Statuses Red text="closed"/>
                 </div>
+                <div className="col-xs-12 padding-15">
+                  <Statuses Reversed Orange text="new"/>
+                  <Statuses Reversed Yellow text="open"/>
+                  <Statuses Reversed Green text="resolved"/>
+                  <Statuses Reversed Blue text="pending"/>
+                  <Statuses Reversed Purple text="escalated"/>
+                  <Statuses Reversed Red text="closed"/>
+                </div>
               </div>
               <div className="row padding-10">
                 <div className="col-xs-12">
@@ -201,6 +210,11 @@ export default class ExampleA extends Component {
             <div className="row">
                 <div className="col-xs-12">
                   <h3 className="h3">Form</h3>
+                </div>
+                <div className="col-xs-12">
+                  <Label text="facebook channel label text here">
+                    <Channel Facebook Size40/>
+                  </Label>
                 </div>
                 <div className="col-xs-12">
                   <Input label="Input text here" desc="description..." />
