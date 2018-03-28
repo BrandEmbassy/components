@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Statuses from './../../Custom/Statuses/Statuses';
+import Statuses from './../../node_modules/componentsBE/Statuses/Statuses';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';

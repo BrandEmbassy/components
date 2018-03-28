@@ -1,0 +1,51 @@
+.Table {
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  color: #4a4a4a;
+  overflow: hidden;
+
+  & table {
+    table-layout: auto;
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+  }
+
+  & table tr th:first-child, & table tr td:first-child {
+    padding-left: 20px;
+  }
+
+  & table tr th {
+    display: table-cell;
+    height: 40px;
+    background-color: #f5f5f5;
+    font-weight: 700;
+    color: gray;
+  }
+
+  & table tr td {
+    height: 40px;
+    color: gray;
+    display: table-cell;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &.Fixed {
+    & table {
+      table-layout: fixed;
+    }
+  }
+}

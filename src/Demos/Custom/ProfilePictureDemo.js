@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import ProfilePicture from './../../Custom/ProfilePicture/ProfilePicture';
+import ProfilePicture from './../../node_modules/componentsBE/ProfilePicture/ProfilePicture';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
