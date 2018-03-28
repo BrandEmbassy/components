@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Header from './../../Custom/Header/Header';
-import Breadcrumbs from './../../Navigation/Breadcrumbs/Breadcrumbs';
-import Table from './../../Forms/Table/Table';
-import Input from './../../Forms/Input/Input';
-import Textarea from './../../Forms/Textarea/Textarea';
-import Checkbox from './../../Forms/Checkbox/Checkbox';
-import Radio from './../../Forms/Radio/Radio';
-import Button from './../../Controls/Button/Button';
-import Link from './../../Controls/Link/Link';
-import Channel from './../../Custom/Channel/Channel';
-import Label from './../../Custom/Label/Label';
-import Notification from './../../Custom/Notification/Notification';
-import Statuses from './../../Custom/Statuses/Statuses';
-import Tag from './../../Custom/Tag/Tag';
+import Header from './../../node_modules/componentsBE/Header/Header';
+import Breadcrumbs from './../../node_modules/componentsBE/Breadcrumbs/Breadcrumbs';
+import Table from './../../node_modules/componentsBE/Table/Table';
+import Input from './../../node_modules/componentsBE/Input/Input';
+import Textarea from './../../node_modules/componentsBE/Textarea/Textarea';
+import Checkbox from './../../node_modules/componentsBE/Checkbox/Checkbox';
+import Radio from './../../node_modules/componentsBE/Radio/Radio';
+import Button from './../../node_modules/componentsBE/Button/Button';
+import Link from './../../node_modules/componentsBE/Link/Link';
+import Channel from './../../node_modules/componentsBE/Channel/Channel';
+import Label from './../../node_modules/componentsBE/Label/Label';
+import Notification from './../../node_modules/componentsBE/Notification/Notification';
+import Statuses from './../../node_modules/componentsBE/Statuses/Statuses';
+import Tag from './../../node_modules/componentsBE/Tag/Tag';
 import styles from './../../App.css';
 
 export default class ExampleA extends Component {
@@ -73,7 +73,7 @@ export default class ExampleA extends Component {
                   <Input label="Input text here" desc="description..." />
                 </div>
                 <div className="col-xs-12">
-                  <Textarea label="Input text here" desc="description..." />
+                  <Textarea rows="12" label="Input text here" desc="description..." />
                 </div>
               </div>
               <div className="row padding-15">

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Label from './../../Custom/Label/Label';
-import ProfilePicture from './../../Custom/ProfilePicture/ProfilePicture';
-import Channel from './../../Custom/Channel/Channel';
+import Label from './../../node_modules/componentsBE/Label/Label';
+import ProfilePicture from './../../node_modules/componentsBE/ProfilePicture/ProfilePicture';
+import Channel from './../../node_modules/componentsBE/Channel/Channel';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
