@@ -29,28 +29,28 @@ import ProfilePictureDemo from './Demos/Custom/ProfilePictureDemo';
 import './styles/Base.css';
 import styles from './App.css';
 
-import Button from 'componentsBE/Button';
-import Link from 'componentsBE/Link';
-import ButtonGroup from 'componentsBE/ButtonGroup';
-import Switcher from 'componentsBE/Switcher';
-import Header from 'componentsBE/Header';
-import Dropdown from 'componentsBE/Dropdown';
-import Breadcrumbs from 'componentsBE/Breadcrumbs';
-import Channel from 'componentsBE/Channel';
-import Checkbox from 'componentsBE/Checkbox';
-import Input from 'componentsBE/Input';
-import Label from 'componentsBE/Label';
-import Notification from 'componentsBE/Notification';
-import ProfilePicture from 'componentsBE/ProfilePicture';
-import Radio from 'componentsBE/Radio';
-import Selectbox from 'componentsBE/Selectbox';
-import Submit from 'componentsBE/Submit';
-import Table from 'componentsBE/Table';
-import Tag from 'componentsBE/Tag';
-import Textarea from 'componentsBE/Textarea';
-import Statuses from 'componentsBE/Statuses';
+import Button from 'components/Button';
+import Link from 'components/Link';
+import ButtonGroup from 'components/ButtonGroup';
+import Switcher from 'components/Switcher';
+import Header from 'components/Header';
+import Dropdown from 'components/Dropdown';
+import Breadcrumbs from 'components/Breadcrumbs';
+import Channel from 'components/Channel';
+import Checkbox from 'components/Checkbox';
+import Input from 'components/Input';
+import Label from 'components/Label';
+import Notification from 'components/Notification';
+import ProfilePicture from 'components/ProfilePicture';
+import Radio from 'components/Radio';
+import Selectbox from 'components/Selectbox';
+import Submit from 'components/Submit';
+import Table from 'components/Table';
+import Tag from 'components/Tag';
+import Textarea from 'components/Textarea';
+import Statuses from 'components/Statuses';
 
-import Global from 'componentsBE/Global';
+import Global from 'components/Global';
 
 export default class App extends Component {
   render() {
