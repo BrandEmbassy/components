@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Header from './../../node_modules/componentsBE/Header/Header';
-import Breadcrumbs from './../../node_modules/componentsBE/Breadcrumbs/Breadcrumbs';
-import Table from './../../node_modules/componentsBE/Table/Table';
-import Input from './../../node_modules/componentsBE/Input/Input';
-import Textarea from './../../node_modules/componentsBE/Textarea/Textarea';
-import Checkbox from './../../node_modules/componentsBE/Checkbox/Checkbox';
-import Radio from './../../node_modules/componentsBE/Radio/Radio';
-import Button from './../../node_modules/componentsBE/Button/Button';
-import Link from './../../node_modules/componentsBE/Link/Link';
-import Channel from './../../node_modules/componentsBE/Channel/Channel';
-import Notification from './../../node_modules/componentsBE/Notification/Notification';
+import Header from './../../node_modules/components/Header/Header';
+import Breadcrumbs from './../../node_modules/components/Breadcrumbs/Breadcrumbs';
+import Table from './../../node_modules/components/Table/Table';
+import Input from './../../node_modules/components/Input/Input';
+import Textarea from './../../node_modules/components/Textarea/Textarea';
+import Checkbox from './../../node_modules/components/Checkbox/Checkbox';
+import Radio from './../../node_modules/components/Radio/Radio';
+import Button from './../../node_modules/components/Button/Button';
+import Link from './../../node_modules/components/Link/Link';
+import Channel from './../../node_modules/components/Channel/Channel';
+import Notification from './../../node_modules/components/Notification/Notification';
 import styles from './../../App.css';
 
 export default class ExampleB extends Component {

@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Header from './../../node_modules/componentsBE/Header/Header';
-import Breadcrumbs from './../../node_modules/componentsBE/Breadcrumbs/Breadcrumbs';
-import Table from './../../node_modules/componentsBE/Table/Table';
-import Input from './../../node_modules/componentsBE/Input/Input';
-import Textarea from './../../node_modules/componentsBE/Textarea/Textarea';
-import Checkbox from './../../node_modules/componentsBE/Checkbox/Checkbox';
-import Radio from './../../node_modules/componentsBE/Radio/Radio';
-import Button from './../../node_modules/componentsBE/Button/Button';
-import Link from './../../node_modules/componentsBE/Link/Link';
-import Channel from './../../node_modules/componentsBE/Channel/Channel';
-import Label from './../../node_modules/componentsBE/Label/Label';
-import Notification from './../../node_modules/componentsBE/Notification/Notification';
-import Statuses from './../../node_modules/componentsBE/Statuses/Statuses';
-import Tag from './../../node_modules/componentsBE/Tag/Tag';
+import Header from './../../node_modules/components/Header/Header';
+import Breadcrumbs from './../../node_modules/components/Breadcrumbs/Breadcrumbs';
+import Table from './../../node_modules/components/Table/Table';
+import Input from './../../node_modules/components/Input/Input';
+import Textarea from './../../node_modules/components/Textarea/Textarea';
+import Checkbox from './../../node_modules/components/Checkbox/Checkbox';
+import Radio from './../../node_modules/components/Radio/Radio';
+import Button from './../../node_modules/components/Button/Button';
+import Link from './../../node_modules/components/Link/Link';
+import Channel from './../../node_modules/components/Channel/Channel';
+import Label from './../../node_modules/components/Label/Label';
+import Notification from './../../node_modules/components/Notification/Notification';
+import Statuses from './../../node_modules/components/Statuses/Statuses';
+import Tag from './../../node_modules/components/Tag/Tag';
 import styles from './../../App.css';
 
 export default class ExampleA extends Component {
