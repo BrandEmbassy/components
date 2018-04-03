@@ -6,6 +6,8 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
+const importComponent = `import { Button } from 'components';`;
+
 export default class ButtonDemo extends Component {
   render() {
     return (
@@ -13,6 +15,10 @@ export default class ButtonDemo extends Component {
         <div className="row padding-20">
           <div className="col-xs-5 ">
             <h2 className="h2">Button</h2>
+
+              <h3 className="h3">{importComponent}</h3>
+      
+      
             <Button text="Button"/>
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Button text="Button"/>))}

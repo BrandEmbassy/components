@@ -3,24 +3,11 @@ import  '!style-loader!css-loader!../../styles/Base.css';
 import  '!style-loader!css-loader!./GridDemo.css';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
+import { renderToString } from 'react-dom/server';
+import beautify from 'js-beautify';
 import styles from './../../App.css';
 
-const code = 
-`<div class="container"> 
-  <div class="row">
-    <div class="col-xs-3">
-      ...
-    </div>
-    <div class="col-xs-4">
-    ...
-    </div>
-    <div class="col-xs-3">
-    ...
-    </div>
-  </div>
-</div>
-`;
-
+const importComponent = `import { Global } from 'components';`;
 
 export default class Grid extends Component {
   render() {
@@ -38,7 +25,11 @@ export default class Grid extends Component {
           <div className={styles.Flex}>
           <div className="row">
             <div className="col-xs-12">
-             
+              <h3 className="h3">{importComponent}</h3>
+              <a href="https://github.com/BrandEmbassy/components" >Readme here</a>
+
+
+              <br /><br /><br /><br />
               .App__App have 100% width and 100% height<br /><br />  
               
               inside, you can have App__Static and App__Flex<br /> <br /> 

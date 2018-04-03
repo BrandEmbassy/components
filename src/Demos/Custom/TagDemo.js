@@ -6,6 +6,8 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
+const importComponent = `import { Tag } from 'components';`;
+
 export default class TagDemo extends Component {
   render() {
     return (
@@ -13,6 +15,7 @@ export default class TagDemo extends Component {
         <div className="row padding-20">
           <div className="col-xs-12 ">
             <h2 className="h2">Tag</h2>
+            <h3 className="h3">{importComponent}</h3>
             DarkPurple / Purple / Pink / Red / Yellow / Turquoise / Green / LightBlue / Blue 
           </div>
           <div className="col-xs-10 padding-20">

@@ -7,12 +7,15 @@ import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 import styles from './../../App.css';
 
+const importComponent = `import { Dropdown } from 'components';`;
+
 export default class DropdownDemo extends Component {
   render() {
     return (
       <div className={styles.App}>
         <div className="row padding-20">
           <div className="col-xs-12">
+          <h3 className="h3">{importComponent}</h3>
             <Dropdown isActive/>
             <br /><br /><br /><br />
             <br /><br /><br /><br />

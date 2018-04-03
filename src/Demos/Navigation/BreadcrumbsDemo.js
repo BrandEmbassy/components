@@ -7,12 +7,16 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
+const importComponent = `import { Breadcrumbs } from 'components';`;
+
 export default class BreadcrumbsDemo extends Component {
   render() {
     return (
       <div className="container">
         <div className="row padding-20">
           <div className="col-xs-12">
+          <h3 className="h3">{importComponent}</h3>
+
             <Breadcrumbs />
           </div>
         </div>

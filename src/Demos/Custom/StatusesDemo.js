@@ -6,6 +6,8 @@ import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/p
 import { renderToString } from 'react-dom/server';
 import beautify from 'js-beautify';
 
+const importComponent = `import { Statuses } from 'components';`;
+
 export default class StatusesDemo extends Component {
   render() {
     return (
@@ -13,6 +15,7 @@ export default class StatusesDemo extends Component {
         <div className="row padding-20">
           <div className="col-xs-12 ">
             <h2 className="h2">Statuses</h2>
+            <h3 className="h3">{importComponent}</h3>
             Orange / Yellow / Green / Blue / Purple / Red / Grey
           </div>
           <div className="col-xs-10 padding-20">
