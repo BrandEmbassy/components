@@ -8,6 +8,7 @@ import beautify from 'js-beautify';
 
 const importComponent = `import { Button } from 'components';`;
 
+
 export default class ButtonDemo extends Component {
   render() {
     return (
