@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
 import Header from './../../node_modules/components/Header/Header';
 import Breadcrumbs from './../../node_modules/components/Breadcrumbs/Breadcrumbs';
+import Submit from './../../node_modules/components/Submit/Submit';
 import Table from './../../node_modules/components/Table/Table';
 import Input from './../../node_modules/components/Input/Input';
 import Textarea from './../../node_modules/components/Textarea/Textarea';
@@ -226,6 +227,7 @@ export default class ExampleA extends Component<Props> {
               <div className="row">
                 <div className="col-xs-12">
                   <Button text="Send Form Wide" Wide/>
+                  <Submit value="Send Form Wide"/>
                 </div>
               </div>
             </div>
