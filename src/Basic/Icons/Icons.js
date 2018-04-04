@@ -1,23 +1,9 @@
-
-// @flow
-
 import React, { Component } from 'react';
 import  '!style-loader!css-loader!../../styles/Base.css';
 import styles from './Icons.css';
 
-// type Props = {
-//   onClick: Function,
-//   text: string,
-//   Icon: string,
-//   Disabled: string,
-//   Reversed: string,
-//   Negative: string,
-//   Cancel: string,
-//   Small: string
-// }
-
 export default class Icons extends Component {
-  
+
   render() {
     return (
       <div className="container">
