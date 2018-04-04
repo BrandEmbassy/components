@@ -1,12 +1,17 @@
 [ignore]
 .*/build/.*
+.*/node_modules/.*
 
 [include]
-
+.*/src/.*
+.*/src/node_modules/.*
 [libs]
 
 [lints]
 
 [options]
-
+esproposal.decorators=ignore
+suppress_comment= \\(.\\|\n\\)*\\@flow-skip-next-line.*
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=./src
 [strict]

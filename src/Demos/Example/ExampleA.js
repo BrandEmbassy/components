@@ -1,3 +1,6 @@
+
+// @flow
+
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
 import Header from './../../node_modules/components/Header/Header';
@@ -16,7 +19,18 @@ import Statuses from './../../node_modules/components/Statuses/Statuses';
 import Tag from './../../node_modules/components/Tag/Tag';
 import styles from './../../App.css';
 
-export default class ExampleA extends Component {
+type Props = {
+  onClick: Function,
+  text: string,
+  Icon: string,
+  Disabled: string,
+  Reversed: string,
+  Negative: string,
+  Cancel: string,
+  Small: string
+}
+
+export default class ExampleA extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = { 
