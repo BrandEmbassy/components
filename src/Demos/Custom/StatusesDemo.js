@@ -19,13 +19,8 @@ export default class StatusesDemo extends Component {
             Orange / Yellow / Green / Blue / Purple / Red / Grey
           </div>
           <div className="col-xs-10 padding-20">
-            <Statuses Orange text="new"/>
-            <Statuses Yellow text="open"/>
-            <Statuses Green text="resolved"/>
-            <Statuses Blue text="pending"/>
-            <Statuses Purple text="escalated"/>
-            <Statuses Red text="closed"/>
-            <Statuses Grey text="trashed"/>
+            <Statuses New />
+            <Statuses Open />
           </div>
         </div>
         <div className="row">
@@ -40,13 +35,7 @@ export default class StatusesDemo extends Component {
             <h3 className="h3">Reversed</h3>
           </div>
           <div className="col-xs-10 padding-20">
-            <Statuses Reversed Orange text="new"/>
-            <Statuses Reversed Yellow text="open"/>
-            <Statuses Reversed Green text="resolved"/>
-            <Statuses Reversed Blue text="pending"/>
-            <Statuses Reversed Purple text="escalated"/>
-            <Statuses Reversed Red text="closed"/>
-            <Statuses Reversed Grey text="trashed"/>
+        
           </div>
         </div>
         <div className="row">

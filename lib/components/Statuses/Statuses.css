@@ -16,7 +16,7 @@
   user-select: none;
   text-transform: uppercase;
 
-  &.Orange {
+  &.New {
     color: #F57D4A;
     border-color: #F57D4A;
 
@@ -26,7 +26,7 @@
     }
   }
 
-  &.Yellow {
+  &.Open {
     color: #F6AF4A;
     border-color: #F6AF4A;
 
@@ -36,7 +36,7 @@
     }
   }
   
-  &.Green {
+  &.Resolved {
     color: #31B272;
     border-color: #31B272;
 
@@ -46,7 +46,7 @@
     }
   }
 
-  &.Blue {
+  &.Pending {
     color: #2A84F1;
     border-color: #2A84F1;
 
@@ -56,7 +56,7 @@
     }
   }
   
-  &.Purple {
+  &.Escalated {
     color: #9C418C;
     border-color: #9C418C;
 
@@ -66,7 +66,7 @@
     }
   }
     
-  &.Red {
+  &.Closed {
     color: #E9575B;
     border-color: #E9575B;
 
@@ -76,7 +76,7 @@
     }
   }
     
-  &.Grey {
+  &.Trashed {
     color: #9A9A9A;
     border-color: #9A9A9A;
 

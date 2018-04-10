@@ -164,12 +164,13 @@ export default class App extends Component {
             </div>
             <div className="row">
               <div className="col-xs-12 padding-15">
-                <Statuses Orange text="new"/>
-                <Statuses Yellow text="open"/>
-                <Statuses Green text="resolved"/>
-                <Statuses Blue text="pending"/>
-                <Statuses Purple text="escalated"/>
-                <Statuses Red text="closed"/>
+                <Statuses New text="new"/>
+                <Statuses Open text="open"/>
+                <Statuses Resolved text="resolved"/>
+                <Statuses Pending text="pending"/>
+                <Statuses Escalated text="escalated"/>
+                <Statuses Closed text="closed"/>
+                <Statuses Trashed text="closed"/>
               </div>
               <div className="col-xs-12 padding-15">
                 <Statuses Reversed Orange text="new"/>

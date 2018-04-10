@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+.no-pad {
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
 .row {
   box-sizing: border-box;
   display: -webkit-box;
