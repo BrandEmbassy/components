@@ -16,17 +16,23 @@ export default class StatusesDemo extends Component {
           <div className="col-xs-12 ">
             <h2 className="h2">Statuses</h2>
             <h3 className="h3">{importComponent}</h3>
-            Orange / Yellow / Green / Blue / Purple / Red / Grey
+            status = "New, Open, Resolved, Pending, Escalated, Closed, Trashed, Reversed"
           </div>
           <div className="col-xs-10 padding-20">
-            <Statuses New />
-            <Statuses Open />
+            <Statuses status="New" />
+            <Statuses status="Open" />
+            <Statuses status="Resolved" />
+            <Statuses status="Pending" />
+            <Statuses status="Escalated" />
+            <Statuses status="Closed" />
+            <Statuses status="Trashed" />
+            <Statuses status="Reversed" />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Statuses Orange text="new"/>))}
+              {beautify.html(renderToString(<Statuses status="New" />))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -35,13 +41,20 @@ export default class StatusesDemo extends Component {
             <h3 className="h3">Reversed</h3>
           </div>
           <div className="col-xs-10 padding-20">
-        
+            <Statuses status="New" Reversed />
+            <Statuses status="Open" Reversed />
+            <Statuses status="Resolved" Reversed />
+            <Statuses status="Pending" Reversed />
+            <Statuses status="Escalated" Reversed />
+            <Statuses status="Closed" Reversed />
+            <Statuses status="Trashed" Reversed />
+            <Statuses status="Reversed" Reversed />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Statuses Reversed Orange text="new"/>))}
+              {beautify.html(renderToString(<Statuses status="New" Reversed />))}
             </SyntaxHighlighter> 
           </div>
         </div>

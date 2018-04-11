@@ -1,14 +1,22 @@
-* {
+/* * {
   font-family: Open Sans,Arial;
   color: #4a4a4a;
   font-size: 13px;
   color:  #4a4a4a;
   box-sizing: border-box;
-}
+} */
 
 #root, body, html {
   height: 100%; 
   width: 100%; 
+}
+
+body {
+  font-family: Open Sans,Arial;
+  color: #4a4a4a;
+  font-size: 13px;
+  color:  #4a4a4a;
+  box-sizing: border-box;
 }
 
 button, input[type="reset"] {

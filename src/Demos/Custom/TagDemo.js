@@ -16,25 +16,26 @@ export default class TagDemo extends Component {
           <div className="col-xs-12 ">
             <h2 className="h2">Tag</h2>
             <h3 className="h3">{importComponent}</h3>
-            DarkPurple / Purple / Pink / Red / Yellow / Turquoise / Green / LightBlue / Blue 
+            color="DarkPurple / Purple / Pink / Red / Yellow / Turquoise / Green / LightBlue / Blue"
           </div>
           <div className="col-xs-10 padding-20">
-            <Tag DarkPurple text="Tag name"/>
-            <Tag Purple text="Tag name"/>
-            <Tag Pink text="Tag name"/>
-            <Tag Red text="Tag name"/>
-            <Tag Yellow text="Tag name"/>
-            <Tag Turquoise text="Tag name"/>
-            <Tag Green text="Tag name"/>
-            <Tag LightBlue text="Tag name"/>
-            <Tag Blue text="Tag name"/>
+            <Tag text="Tag name"/>
+            <Tag color="DarkPurple" text="Tag name"/>
+            <Tag color="Purple" text="Tag name"/>
+            <Tag color="Pink" text="Tag name"/>
+            <Tag color="Red" text="Tag name"/>
+            <Tag color="Yellow" text="Tag name"/>
+            <Tag color="Turquoise" text="Tag name"/>
+            <Tag color="Green" text="Tag name"/>
+            <Tag color="LightBlue" text="Tag name"/>
+            <Tag color="Blue" text="Tag name"/>
             <Tag text="Tag name"/>
           </div>
         </div>
         <div className="row">
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Tag Green text="Tag name"/>))}
+              {beautify.html(renderToString(<Tag color="Green" text="Tag name"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
