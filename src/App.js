@@ -164,21 +164,24 @@ export default class App extends Component {
             </div>
             <div className="row">
               <div className="col-xs-12 padding-15">
-                <Statuses New text="new"/>
-                <Statuses Open text="open"/>
-                <Statuses Resolved text="resolved"/>
-                <Statuses Pending text="pending"/>
-                <Statuses Escalated text="escalated"/>
-                <Statuses Closed text="closed"/>
-                <Statuses Trashed text="closed"/>
+                <Statuses status="New" />
+                <Statuses status="Open" />
+                <Statuses status="Resolved" />
+                <Statuses status="Pending" />
+                <Statuses status="Escalated" />
+                <Statuses status="Closed" />
+                <Statuses status="Trashed" />
+                <Statuses status="Reversed" />
               </div>
               <div className="col-xs-12 padding-15">
-                <Statuses Reversed Orange text="new"/>
-                <Statuses Reversed Yellow text="open"/>
-                <Statuses Reversed Green text="resolved"/>
-                <Statuses Reversed Blue text="pending"/>
-                <Statuses Reversed Purple text="escalated"/>
-                <Statuses Reversed Red text="closed"/>
+                <Statuses status="New" Reversed />
+                <Statuses status="Open" Reversed />
+                <Statuses status="Resolved" Reversed />
+                <Statuses status="Pending" Reversed />
+                <Statuses status="Escalated" Reversed />
+                <Statuses status="Closed" Reversed />
+                <Statuses status="Trashed" Reversed />
+                <Statuses status="Reversed" Reversed />
               </div>
             </div>
             <div className="row padding-10">
@@ -188,12 +191,17 @@ export default class App extends Component {
             </div>
             <div className="row">
               <div className="col-xs-12 padding-15">
-                <Tag Red text="Tag name"/>
-                <Tag Yellow text="Tag name"/>
-                <Tag Turquoise text="Tag name"/>
-                <Tag Green text="Tag name"/>
-                <Tag LightBlue text="Tag name"/>
-                <Tag Blue text="Tag name"/>
+                <Tag text="Tag name"/>
+                <Tag color="DarkPurple" text="Tag name"/>
+                <Tag color="Purple" text="Tag name"/>
+                <Tag color="Pink" text="Tag name"/>
+                <Tag color="Red" text="Tag name"/>
+                <Tag color="Yellow" text="Tag name"/>
+                <Tag color="Turquoise" text="Tag name"/>
+                <Tag color="Green" text="Tag name"/>
+                <Tag color="LightBlue" text="Tag name"/>
+                <Tag color="Blue" text="Tag name"/>
+                <Tag text="Tag name"/>
               </div>
             </div>
             <div className="row padding-10">
