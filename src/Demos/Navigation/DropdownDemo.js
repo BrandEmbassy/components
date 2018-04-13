@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
 import Dropdown from '../../node_modules/components/Dropdown/Dropdown';
+import DropdownToggle from '../../node_modules/components/Dropdown/DropdownToggle';
+import DropdownMenu from '../../node_modules/components/Dropdown/DropdownMenu';
+import DropdownItem from '../../node_modules/components/Dropdown/DropdownItem';
+
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -10,16 +14,36 @@ import styles from './../../App.css';
 const importComponent = `import { Dropdown } from 'components';`;
 
 export default class DropdownDemo extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
+
   render() {
     return (
       <div className={styles.App}>
         <div className="row padding-20">
           <div className="col-xs-12">
           <h3 className="h3">{importComponent}</h3>
-            <Dropdown isActive/>
-            <br /><br /><br /><br />
-            <br /><br /><br /><br />
-            <br /><br /><br /><br />
+            <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+              <DropdownToggle >
+                Select Channel
+              </DropdownToggle>
+              <DropdownMenu >
+                <DropdownItem>Facebook</DropdownItem>
+                <DropdownItem>Twitter</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           </div>
         </div>
         <div className="row">
