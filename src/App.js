@@ -34,7 +34,6 @@ import Link from 'components/Link';
 import ButtonGroup from 'components/ButtonGroup';
 import Switcher from 'components/Switcher';
 import Header from 'components/Header';
-import Dropdown from 'components/Dropdown';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Channel from 'components/Channel';
 import Checkbox from 'components/Checkbox';
@@ -49,6 +48,15 @@ import Table from 'components/Table';
 import Tag from 'components/Tag';
 import Textarea from 'components/Textarea';
 import Statuses from 'components/Statuses';
+import H1 from 'components/H1';
+import H2 from 'components/H2';
+import H3 from 'components/H3';
+import P from 'components/P';
+
+import Dropdown from './node_modules/components/Dropdown/Dropdown';
+import DropdownToggle from './node_modules/components/Dropdown/DropdownToggle';
+import DropdownMenu from './node_modules/components/Dropdown/DropdownMenu';
+import DropdownItem from './node_modules/components/Dropdown/DropdownItem';
 
 import Global from 'components/Global';
 
@@ -65,6 +73,12 @@ export default class App extends Component {
         <div className="row">
           <div className="col-xs">
             <b><a href="http://localhost:6006">Open</a></b> component library
+            <H1>test H1</H1>
+            <H2>test H2</H2>
+            <H3>test H3</H3>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sodales turpis, ac sollicitudin sem. Sed et eros porttitor, ullamcorper ante vel, consectetur metus. Integer in ante nec leo viverra varius et egestas mauris. Vestibulum consequat orci laoreet tellus condimentum lacinia. Maecenas eu justo sit amet nulla aliquam consectetur. Aenean nec fermentum velit. Mauris dictum justo ipsum, vitae pharetra nibh sodales ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce dapibus felis et nunc consequat sollicitudin.
+            </P>
           </div>
         </div>
         <div className="row">
@@ -116,7 +130,7 @@ export default class App extends Component {
                 <Button text="Send Form Wide" Wide/>
               </div>
               <div className="col-xs-12 padding-15">
-                <Button text="Send Form"/>
+                <Button text="Send Form" />
               </div>
             </div>
           </div>
