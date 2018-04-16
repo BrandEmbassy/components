@@ -1,6 +1,7 @@
 
 .DropdownItem {
-  width: 160px;
+  display: block;
+  width: 100%;
   height: 34px;
   padding: 15px 10px;
   border-radius: 3px;
