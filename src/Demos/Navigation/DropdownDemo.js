@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Dropdown from '../../node_modules/components/Dropdown/Dropdown';
-import DropdownToggle from '../../node_modules/components/Dropdown/DropdownToggle';
-import DropdownMenu from '../../node_modules/components/Dropdown/DropdownMenu';
-import DropdownItem from '../../node_modules/components/Dropdown/DropdownItem';
+import Dropdown from './../../node_modules/components/Dropdown/Dropdown';
+import DropdownToggle from './../../node_modules/components/DropdownToggle/DropdownToggle';
+import DropdownMenu from './../../node_modules/components/DropdownMenu/DropdownMenu';
+import DropdownItem from './../../node_modules/components/DropdownItem/DropdownItem';
 
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
