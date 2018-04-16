@@ -54,9 +54,9 @@ import H3 from 'components/H3';
 import P from 'components/P';
 
 import Dropdown from './node_modules/components/Dropdown/Dropdown';
-import DropdownToggle from './node_modules/components/Dropdown/DropdownToggle';
-import DropdownMenu from './node_modules/components/Dropdown/DropdownMenu';
-import DropdownItem from './node_modules/components/Dropdown/DropdownItem';
+import DropdownToggle from './node_modules/components/DropdownToggle/DropdownToggle';
+import DropdownMenu from './node_modules/components/DropdownMenu/DropdownMenu';
+import DropdownItem from './node_modules/components/DropdownItem/DropdownItem';
 
 import Select from 'components/Select';
 
