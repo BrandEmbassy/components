@@ -24,16 +24,13 @@ export default class DropdownDemo extends Component {
   }
 
   toggle() {
-    console.log('togle');
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
   }
 
   toggle2(e) {
-    console.log('togle2');
     e.preventDefault();
-
   }
 
   render() {
@@ -57,9 +54,9 @@ export default class DropdownDemo extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12">
-            {/* <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Dropdown isActive/>))}
-            </SyntaxHighlighter> */}
+            </SyntaxHighlighter>
           </div>
         </div>
       </div>
