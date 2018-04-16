@@ -1,7 +1,8 @@
 
 .Channel {
   position: relative;
-  display:inline-block;
+  display: inline-block;
+  align-self: center;
   width: 24px;
   height: 24px;
   margin-right: 5px;
