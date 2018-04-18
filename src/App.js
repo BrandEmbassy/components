@@ -89,10 +89,7 @@ export default class App extends Component {
             <b><a href="http://localhost:6006">Open</a></b> component library
             <br /><br />
             {/* isOpen={this.state.popupVisible} */}
-            <Dropdown >
-              <DropdownToggle  >
-                Select Channel
-              </DropdownToggle>
+            <Dropdown toggleDefault="Select Channel">
               <DropdownMenu >
                 <DropdownItem><Channel Facebook Size24 />Facebook</DropdownItem>
                 <DropdownItem><Channel Twitter Size24 />Twitter</DropdownItem>
