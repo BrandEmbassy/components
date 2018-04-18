@@ -63,48 +63,42 @@ import Select from 'components/Select';
 import Global from 'components/Global';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
+  // constructor() {
+  //   super();
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: true
-    };
-  }
+  //   this.handleClick = this.handleClick.bind(this);
+  //   this.handleOutsideClick = this.handleOutsideClick.bind(this);
 
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
-  }
+  //   this.state = {
+  //     popupVisible: false
+  //   };
+  // }
 
-  toggle2(e) {
-    e.preventDefault();
-  }
 
   render() {
     return (
-      <div className={styles.App}>
+      <div className={styles.App} >
       <div className={styles.Static}>
         <div className="row">
           <Header/>
         </div>
       </div>
-      <div className={styles.Flex}>
+      <div className={styles.Flex} >
         <div className="row">
           <div className="col-xs">
             <b><a href="http://localhost:6006">Open</a></b> component library
-            <Select />
-            <Dropdown>
-              <DropdownToggle onClick={this.toggle} >
+            <br /><br />
+            {/* isOpen={this.state.popupVisible} */}
+            <Dropdown >
+              <DropdownToggle  >
                 Select Channel
               </DropdownToggle>
-              <DropdownMenu isOpen={this.state.dropdownOpen} >
-                  <DropdownItem><Channel Facebook Size24 />Facebook</DropdownItem>
-                  <DropdownItem><Channel Twitter Size24 />Twitter</DropdownItem>
+              <DropdownMenu >
+                <DropdownItem><Channel Facebook Size24 />Facebook</DropdownItem>
+                <DropdownItem><Channel Twitter Size24 />Twitter</DropdownItem>
               </DropdownMenu>
             </Dropdown>
-            
+            <br /><br />
             <H1>test H1</H1>
             <H2>test H2</H2>
             <H3>test H3</H3>
