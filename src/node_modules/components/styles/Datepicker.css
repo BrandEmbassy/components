@@ -1,0 +1,130 @@
+
+@import '~react-daterange-picker/dist/css/react-calendar.css';
+
+.daterangepicker {
+  & .materialBoxShadow(2, false);
+  border-radius: 3px;
+  overflow: hidden;
+  & .DateRangePicker {
+    min-height: 270px;
+    margin-bottom: 0;
+    &__MonthHeader {
+      height: 40px;
+      line-height: 40px;
+      background-color: #e6e6e6;
+      text-transform: uppercase;
+      text-align: center;
+      .fontProperties(11px, 700);
+      color: #4a4a4a;
+    }
+    &__Month {
+      margin: 0;
+      &:first-child {
+        margin-right: 5px;
+      }
+      &:nth-child(2) {
+        .DateRangePicker__MonthHeader {
+          &:after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: block;
+            width: 5px;
+            height: 40px;
+            background-color: #e6e6e6;
+          }
+        }
+        margin-right: 5px;
+      }
+    }
+    &__PaginationArrow {
+      height: 40px;
+      line-height: 40px;
+      &--previous {
+        left: 0;
+      }
+      &--next {
+        right: 0;
+      }
+    }
+    &__PaginationArrowIcon {
+      top: 12px;
+    }
+    &__MonthDates {
+      border: none;
+      border-collapse: collapse;
+      border-spacing: 0 0;
+    }
+    &__WeekdayHeading, &__Date {
+      color: #4a4a4a;
+      font-size: 13px;
+    }
+    &__WeekdayHeading {
+      color: #9b9b9b;
+      font-weight: 400;
+    }
+    &__Date {
+      border: none;
+      &--is-highlighted {
+        border-color: #40c268;
+        color: #4a4a4a !important;
+      }
+      &--is-selected {
+        color: #fff;
+      }
+      &--is-disabled {
+        color: #cdcdd1 !important;
+        opacity: 0.25 !important;
+        cursor: not-allowed !important;
+      }
+      &--otherMonth {
+        opacity: .6;
+      }
+    }
+    &__CalendarSelection {
+      border-color: #40c268;
+      background-color: #40c268;
+      &--single {
+        border-radius: 3px;
+      }
+      &--start {
+        border-radius: 3px 0 0 3px;
+      }
+      &--end {
+        border-radius: 0 3px 3px 0;
+      }
+    }
+    &__CalendarHighlight {
+      border-color: #e6e6e6;
+      background-color: #e6e6e6;
+      border-radius: 3px !important;
+    }
+  }
+  &__control-panel {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 0 12px;
+    line-height: 50px;
+    border-top: 1px solid #e6e6e6;
+    & .button, & .gl-button {
+      position: relative;
+      display: inline-block;
+      min-width: 60px;
+      height: 26px;
+      margin: 12px 0 12px 5px;
+      line-height: 26px;
+      float: right;
+      text-align: center;
+    }
+    & .selected-range {
+      position: relative;
+      display: inline-block;
+      line-height: 50px;
+      .fontProperties(13px, 400);
+      color: #9b9b9b;
+    }
+  }
+}
