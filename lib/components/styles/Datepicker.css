@@ -11,8 +11,6 @@
       background-color: #e6e6e6;
       text-transform: uppercase;
       text-align: center;
-      .fontProperties(11px, 700);
-      color: #4a4a4a;
     }
     &__Month {
       margin: 0;
@@ -120,8 +118,6 @@
       position: relative;
       display: inline-block;
       line-height: 50px;
-      .fontProperties(13px, 400);
-      color: #9b9b9b;
     }
   }
 }
