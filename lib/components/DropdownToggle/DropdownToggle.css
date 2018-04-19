@@ -1,8 +1,9 @@
 
 .DropdownToggle {
   position: relative;
+  min-width: 160px;
   display: flex;
-  padding: 0 0px 0 10px;
+  padding: 0 0px 0 0px;
   line-height: 36px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -18,7 +19,7 @@
     display: block;
     width: 40px;
     height: 100%;
-    line-height: 36px;
+    line-height: 40px;
     text-align: center;
     color: #9b9b9b;
     transition: all .2s;

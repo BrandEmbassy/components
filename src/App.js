@@ -63,17 +63,6 @@ import Select from 'components/Select';
 import Global from 'components/Global';
 
 export default class App extends Component {
-  // constructor() {
-  //   super();
-
-  //   this.handleClick = this.handleClick.bind(this);
-  //   this.handleOutsideClick = this.handleOutsideClick.bind(this);
-
-  //   this.state = {
-  //     popupVisible: false
-  //   };
-  // }
-
 
   render() {
     return (

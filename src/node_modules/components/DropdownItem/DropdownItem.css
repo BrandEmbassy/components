@@ -1,6 +1,7 @@
 
 .DropdownItem {
   display: flex;
+  min-width: 119px;
   align-items: center;
   width: 100%;
   padding: 0px 10px;
