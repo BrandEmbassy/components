@@ -29,6 +29,7 @@
     width: 100%;
 
     & textarea {
+      box-sizing: border-box;
       position: relative;
       display: block;
       width: 100%;

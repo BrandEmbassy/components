@@ -88,7 +88,6 @@ export default class App extends Component {
           <div className="col-xs">
             <b><a href="http://localhost:6006">Open</a></b> component library
             <br /><br />
-            {/* isOpen={this.state.popupVisible} */}
             <Dropdown toggleDefault="Select Channel">
               <DropdownMenu >
                 <DropdownItem><Channel Facebook Size24 />Facebook</DropdownItem>
