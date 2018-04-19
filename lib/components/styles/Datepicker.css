@@ -2,9 +2,6 @@
 @import '~react-daterange-picker/dist/css/react-calendar.css';
 
 .daterangepicker {
-  .materialBoxShadow(2, false);
-  border-radius: 3px;
-  overflow: hidden;
   .DateRangePicker {
     min-height: 270px;
     margin-bottom: 0;
