@@ -2,10 +2,10 @@
 @import '~react-daterange-picker/dist/css/react-calendar.css';
 
 .daterangepicker {
-  & .materialBoxShadow(2, false);
+  .materialBoxShadow(2, false);
   border-radius: 3px;
   overflow: hidden;
-  & .DateRangePicker {
+  .DateRangePicker {
     min-height: 270px;
     margin-bottom: 0;
     &__MonthHeader {
@@ -109,7 +109,7 @@
     padding: 0 12px;
     line-height: 50px;
     border-top: 1px solid #e6e6e6;
-    & .button, & .gl-button {
+    .button, .gl-button {
       position: relative;
       display: inline-block;
       min-width: 60px;
@@ -119,7 +119,7 @@
       float: right;
       text-align: center;
     }
-    & .selected-range {
+    .selected-range {
       position: relative;
       display: inline-block;
       line-height: 50px;
