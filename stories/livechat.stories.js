@@ -27,9 +27,9 @@ const menuElement = {
   id: 'Ek4tPy1h4',
   type: 'MENU',
   elements: [
-    { id: 'Ek4tPy1h2', type: 'IMAGE', url: 'https://picsum.photos/300/150', postback: 'click-on-button-3' },
-    { id: 'Ek4tPy1h3', type: 'HEADING', text: 'Heading', postback: 'click-on-button-3' },
-    { id: 'Ek4tPy1h1', type: 'TEXT', text: 'Lorem Impsum...', postback: 'click-on-button-3' },
+    { id: 'Ek4tPy1h2', type: 'IMAGE', url: 'https://picsum.photos/300/150' },
+    { id: 'Ek4tPy1h3', type: 'HEADING', text: 'Hello!' },
+    { id: 'Ek4tPy1h1', type: 'TEXT', text: 'Lorem Impsum...' },
     { id: 'Nkm0hRAiE', type: 'BUTTON', text: 'Click me!', postback: 'click-on-button-1' },
     { id: 'NkGJ6CAiN', type: 'BUTTON', text: 'No click me!', postback: 'click-on-button-2' },
     { id: 'EyCyTRCi4', type: 'BUTTON', text: 'Aww don`t click on me', postback: 'click-on-button-3' }
