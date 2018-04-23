@@ -1,0 +1,11 @@
+.Text {
+  padding: 14px;
+  border-top: solid 1px #e6e6e6;
+
+  & h1 {
+    font-size : 16px;
+    margin: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
