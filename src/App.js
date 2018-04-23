@@ -171,15 +171,15 @@ export default class App extends Component {
             </div>
             <div className="row padding-10">
               <div className="col-xs-12">
-                <h3 className="h3">Chanels</h3>
+                <h3 className="h3">Channels</h3>
               </div>
             </div>
             <div className="row">
               <div className="col-xs-12 padding-15">
-                <Channel Facebook Size40 DM/>
-                <Channel Instagram Size40/>
-                <Channel Twitter Size40/>
-                <Channel Livechat Size40 DM/>
+                  <Channel type="facebook" Size40 DM/>
+                  <Channel type="instagram" Size40/>
+                  <Channel type="twitter" Size40/>
+                  <Channel type="livechat" Size40 DM/>
               </div>
             </div>
             <div className="row padding-10">

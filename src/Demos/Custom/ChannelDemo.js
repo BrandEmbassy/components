@@ -14,18 +14,18 @@ export default class ChannelDemo extends Component {
       <div className="container">
         <div className="row padding-20">
           <div className="col-xs-12 ">
-            <h2 className="h2">ChanelPicture</h2>
+            <h2 className="h2">Channel</h2>
             <h3 className="h3">{importComponent}</h3>
           </div>
           <div className="col-xs-6">
             <h3 className="h3">Facebook</h3>
-            <Channel Facebook/>
+            <Channel type="facebook"/>
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Facebook/>))}
+              {beautify.html(renderToString(<Channel type="facebook"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -37,17 +37,17 @@ export default class ChannelDemo extends Component {
             <h4 className="h4">24px is default</h4>
             <h4 className="h4">for 20px use class Size20</h4>
             <h4 className="h4">for 16px use class Size16</h4>
-            <Channel Facebook Size60 />
-            <Channel Facebook Size40 />
-            <Channel Facebook />
-            <Channel Facebook Size20 />
-            <Channel Facebook Size16 />
+            <Channel type="facebook" Size60 />
+            <Channel type="facebook" Size40 />
+            <Channel type="facebook" />
+            <Channel type="facebook" Size20 />
+            <Channel type="facebook" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Facebook Size60 />))}
+              {beautify.html(renderToString(<Channel type="facebook" Size60 />))}
             </SyntaxHighlighter> 
           </div>
         </div>
@@ -56,11 +56,11 @@ export default class ChannelDemo extends Component {
         <div className="col-xs-6">
             <h3 className="h3">DM</h3>
             <h4 className="h4"> add class DM</h4>
-            <Channel Facebook Size60 DM/>
-            <Channel Facebook Size40 DM/>
-            <Channel Facebook DM/>
-            <Channel Facebook Size20 DM/>
-            <Channel Facebook Size16 DM/>
+            <Channel type="facebook" Size60 DM/>
+            <Channel type="facebook" Size40 DM/>
+            <Channel type="facebook" DM/>
+            <Channel type="facebook" Size20 DM/>
+            <Channel type="facebook" Size16 DM/>
           </div>
         </div>
         <div className="row">
@@ -73,170 +73,170 @@ export default class ChannelDemo extends Component {
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Twitter</h3>
-            <Channel Twitter Size60 />
-            <Channel Twitter Size40 />
-            <Channel Twitter/>
-            <Channel Twitter Size20 />
-            <Channel Twitter Size16 />
+            <Channel type="twitter" Size60 />
+            <Channel type="twitter" Size40 />
+            <Channel type="twitter"/>
+            <Channel type="twitter" Size20 />
+            <Channel type="twitter" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Twitter/>))}
+              {beautify.html(renderToString(<Channel type="twitter"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Instagram</h3>
-            <Channel Instagram Size60 />
-            <Channel Instagram Size40 />
-            <Channel Instagram/>
-            <Channel Instagram Size20 />
-            <Channel Instagram Size16 />
+            <Channel type="instagram" Size60 />
+            <Channel type="instagram" Size40 />
+            <Channel type="instagram"/>
+            <Channel type="instagram" Size20 />
+            <Channel type="instagram" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Instagram/>))}
+              {beautify.html(renderToString(<Channel type="instagram"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Google</h3>
-            <Channel Google Size60 />
-            <Channel Google Size40 />
-            <Channel Google/>
-            <Channel Google Size20 />
-            <Channel Google Size16 />
+            <Channel type="google" Size60 />
+            <Channel type="google" Size40 />
+            <Channel type="google"/>
+            <Channel type="google" Size20 />
+            <Channel type="google" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Google/>))}
+              {beautify.html(renderToString(<Channel type="google"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Youtube</h3>
-            <Channel Youtube Size60 />
-            <Channel Youtube Size40 />
-            <Channel Youtube/>
-            <Channel Youtube Size20 />
-            <Channel Youtube Size16 />
+            <Channel type="youtube" Size60 />
+            <Channel type="youtube" Size40 />
+            <Channel type="youtube"/>
+            <Channel type="youtube" Size20 />
+            <Channel type="youtube" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Youtube/>))}
+              {beautify.html(renderToString(<Channel type="youtube"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Linkedin</h3>
-            <Channel Linkedin Size60 />
-            <Channel Linkedin Size40 />
-            <Channel Linkedin/>
-            <Channel Linkedin Size20 />
-            <Channel Linkedin Size16 />
+            <Channel type="linkedin" Size60 />
+            <Channel type="linkedin" Size40 />
+            <Channel type="linkedin"/>
+            <Channel type="linkedin" Size20 />
+            <Channel type="linkedin" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Linkedin/>))}
+              {beautify.html(renderToString(<Channel type="linkedin"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Livechat</h3>
-            <Channel Livechat Size60 />
-            <Channel Livechat Size40 />
-            <Channel Livechat/>
-            <Channel Livechat Size20 />
-            <Channel Livechat Size16 />
+            <Channel type="livechat" Size60 />
+            <Channel type="livechat" Size40 />
+            <Channel type="livechat"/>
+            <Channel type="livechat" Size20 />
+            <Channel type="livechat" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Livechat/>))}
+              {beautify.html(renderToString(<Channel type="livechat"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Email</h3>
-            <Channel Email Size60 />
-            <Channel Email Size40 />
-            <Channel Email/>
-            <Channel Email Size20 />
-            <Channel Email Size16 />
+            <Channel type="email" Size60 />
+            <Channel type="email" Size40 />
+            <Channel type="email"/>
+            <Channel type="email" Size20 />
+            <Channel type="email" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Email/>))}
+              {beautify.html(renderToString(<Channel type="email"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Forum</h3>
-            <Channel Forum Size60 />
-            <Channel Forum Size40 />
-            <Channel Forum/>
-            <Channel Forum Size20 />
-            <Channel Forum Size16 />
+            <Channel type="forum" Size60 />
+            <Channel type="forum" Size40 />
+            <Channel type="forum"/>
+            <Channel type="forum" Size20 />
+            <Channel type="forum" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Forum/>))}
+              {beautify.html(renderToString(<Channel type="forum"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Vkontakte</h3>
-            <Channel Vkontakte Size60 />
-            <Channel Vkontakte Size40 />
-            <Channel Vkontakte/>
-            <Channel Vkontakte Size20 />
-            <Channel Vkontakte Size16 />
+            <Channel type="vkontakte" Size60 />
+            <Channel type="vkontakte" Size40 />
+            <Channel type="vkontakte"/>
+            <Channel type="vkontakte" Size20 />
+            <Channel type="vkontakte" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Vkontakte/>))}
+              {beautify.html(renderToString(<Channel type="vkontakte"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-6 ">
             <h3 className="h3">Listening</h3>
-            <Channel Listening Size60 />
-            <Channel Listening Size40 />
-            <Channel Listening/>
-            <Channel Listening Size20 />
-            <Channel Listening Size16 />
+            <Channel type="listening" Size60 />
+            <Channel type="listening" Size40 />
+            <Channel type="listening"/>
+            <Channel type="listening" Size20 />
+            <Channel type="listening" Size16 />
           </div>
         </div>
         <div className="row">
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Listening/>))}
+              {beautify.html(renderToString(<Channel type="listening"/>))}
             </SyntaxHighlighter> 
           </div>
         </div>
