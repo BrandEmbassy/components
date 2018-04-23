@@ -36,6 +36,11 @@ const menuElement = {
   ]
 }
 
+const textAndButtons = {
+  ...menuElement,
+  type: 'TEXT_AND_BUTTONS'
+}
+
 const galleryElements = [
   menuElement,
   menuElement,
@@ -54,5 +59,5 @@ storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)
   .add('Menu', () => <Plugin elements={object('elements', [menuElement])} onClick={() => { }} />)
   .add('Gallery', () => <Plugin elements={object('elements', galleryElements)} onClick={() => {}} />)
-  .add('Text and buttons', () => <Plugin elements={object('elements', [menuElement])} onClick={() => {}} />)
+  .add('Text and buttons', () => <Plugin elements={object('elements', [textAndButtons])} onClick={() => {}} />)
   .add('Quick Replies', () => <Plugin elements={object('elements', quickReplies)} onClick={() => {}} />)
