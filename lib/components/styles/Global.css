@@ -1,0 +1,69 @@
+
+#root, body, html {
+  height: 100%; 
+  width: 100%; 
+  font-size: 13px;
+  font-family: Open Sans,Arial;
+  color: #4a4a4a;
+  box-sizing: border-box;
+}
+
+button, input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input[type="submit"] {
+  border: none;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+/*  Headings   */
+:global(.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6) {
+  line-height: 150%;
+  margin: 6px 0;
+  display: block;
+}
+
+:global(.background) {
+  background-color: #F5F5F5;
+}
+
+:global(.h1) {
+  font-size: 24px;
+}
+
+:global(.h2) {
+  font-size: 20px;
+}
+
+:global(.h3) {
+  font-size: 16px;
+}
+
+:global(.h4) {
+  font-size: 14px;
+}
+
+:global(.p) {
+  font-size: 13px;
+  color:  #4a4a4a;
+  line-height: 140%;
+}
+
+:global(.justify) {
+  text-align: justify;
+}

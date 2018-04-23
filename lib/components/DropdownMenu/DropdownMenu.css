@@ -1,0 +1,26 @@
+
+.DropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  margin: .125rem 0 0;
+  padding-bottom: 1px;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+
+  &.Show {
+    display: block;
+  }
+
+  & .MenuFlex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

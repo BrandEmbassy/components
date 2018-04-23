@@ -1,0 +1,20 @@
+
+.DropdownItem {
+  display: flex;
+  min-width: 119px;
+  align-items: center;
+  width: 100%;
+  padding: 0px 10px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  text-align: left;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+
+.DropdownItem:hover{
+  background-color: #f5f5f5;
+}
