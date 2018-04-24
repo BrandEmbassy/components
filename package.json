@@ -32,7 +32,6 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "install": "^0.11.0",
-    "jest": "22.4.3",
     "js-beautify": "^1.7.5",
     "npm": "^5.8.0",
     "object-assign": "4.1.1",
@@ -128,6 +127,7 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "jest": "20",
     "postcss-load-config": "^1.2.0",
     "react-storybook-addon-chapters": "^2.1.3"
   },
