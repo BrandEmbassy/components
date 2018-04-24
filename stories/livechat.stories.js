@@ -47,17 +47,19 @@ const galleryElements = [
   menuElement,
 ]
 
+const clickHandler = (postback) => console.log(postback)
+
 storiesOf('Chatbots elements', module)
   .addDecorator(withKnobs)
   .add('Button', () => <Button label={text('label', 'Click me!')} />)
   .add('Heading', () => <Heading content={text('content', 'Lorem Ipsum!')} />)
   .add('Image', () => <Image src={text('src', 'http://via.placeholder.com/350x150')} />)
   .add('Text', () => <Text content={text('content', 'Hello world!')} />)
-  .add('QuickReply', () => <QuickReply replies={repliesButtons} onClick={() => {}} />)
+  .add('QuickReply', () => <QuickReply replies={repliesButtons} onClick={clickHandler} />)
 
 storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)
-  .add('Menu', () => <Plugin elements={object('elements', [menuElement])} onClick={() => { }} />)
-  .add('Gallery', () => <Plugin elements={object('elements', galleryElements)} onClick={() => {}} />)
-  .add('Text and buttons', () => <Plugin elements={object('elements', [textAndButtons])} onClick={() => {}} />)
-  .add('Quick Replies', () => <Plugin elements={object('elements', quickReplies)} onClick={() => {}} />)
+  .add('Menu', () => <Plugin elements={object('elements', [menuElement])} onClick={clickHandler} />)
+  .add('Gallery', () => <Plugin elements={object('elements', galleryElements)} onClick={clickHandler} />)
+  .add('Text and buttons', () => <Plugin elements={object('elements', [textAndButtons])} onClick={clickHandler} />)
+  .add('Quick Replies', () => <Plugin elements={object('elements', quickReplies)} onClick={clickHandler} />)
