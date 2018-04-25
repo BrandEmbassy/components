@@ -8,7 +8,7 @@
 .PluginFrame {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+  overflow: scroll;
   width: 280px;
 }
 
