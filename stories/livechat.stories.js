@@ -37,8 +37,16 @@ const menuElement = {
 }
 
 const textAndButtons = {
-  ...menuElement,
-  type: 'TEXT_AND_BUTTONS'
+  id: 'Ek4tPy1h4',
+  type: 'TEXT_AND_BUTTONS',
+  elements: [
+    { id: 'Ek4tPy1h3', type: 'TITLE', text: 'Hello!' },
+    { id: 'Ek4tPy1h3', type: 'SUBTITLE', text: 'Hello again!' },
+    { id: 'Ek4tPy1h1', type: 'TEXT', text: 'Lorem Impsum...' },
+    { id: 'Nkm0hRAiE', type: 'BUTTON', text: 'Click me!', postback: 'click-on-button-1' },
+    { id: 'NkGJ6CAiN', type: 'BUTTON', text: 'No click me!', postback: 'click-on-button-2' },
+    { id: 'EyCyTRCi4', type: 'BUTTON', text: 'Aww don`t click on me', postback: 'click-on-button-3' }
+  ]
 }
 
 const galleryElements = [
