@@ -1,5 +1,5 @@
 {
   "private": true,
   "name": "ChatBotPlugin",
-  "main": "./Plugin.js"
+  "main": "./index.js"
 }
