@@ -47,7 +47,7 @@ const galleryElements = [
   menuElement,
 ]
 
-const clickHandler = (postback) => console.log(postback)
+const clickHandler = (postback, label) => console.log(postback, label)
 
 storiesOf('Chatbots elements', module)
   .addDecorator(withKnobs)
