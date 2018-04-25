@@ -28,7 +28,7 @@ const menuElement = {
   type: 'MENU',
   elements: [
     { id: 'Ek4tPy1h2', type: 'IMAGE', url: 'https://picsum.photos/300/150' },
-    { id: 'Ek4tPy1h3', type: 'HEADING', text: 'Hello!' },
+    { id: 'Ek4tPy1h3', type: 'TITLE', text: 'Hello!' },
     { id: 'Ek4tPy1h1', type: 'TEXT', text: 'Lorem Impsum...' },
     { id: 'Nkm0hRAiE', type: 'BUTTON', text: 'Click me!', postback: 'click-on-button-1' },
     { id: 'NkGJ6CAiN', type: 'BUTTON', text: 'No click me!', postback: 'click-on-button-2' },
