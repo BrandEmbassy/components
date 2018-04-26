@@ -1,0 +1,13 @@
+.Button {
+  text-align: center;
+  padding: 14px;
+  border-top: solid 1px #e6e6e6;
+  color:#0099e6;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+
+  &:hover {
+    color: #0077b3;
+  }
+}
