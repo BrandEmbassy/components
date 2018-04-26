@@ -6,6 +6,7 @@
   cursor: pointer;
   display: flex;
   width: 100%;
+  background: #fff;
 
   &:hover {
     color: #0077b3;

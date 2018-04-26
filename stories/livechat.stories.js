@@ -63,7 +63,7 @@ storiesOf('Chatbots elements', module)
   .add('Heading', () => <Heading content={text('content', 'Lorem Ipsum!')} />)
   .add('Image', () => <Image src={text('src', 'http://via.placeholder.com/350x150')} />)
   .add('Text', () => <Text content={text('content', 'Hello world!')} />)
-  .add('QuickReply', () => <QuickReply replies={repliesButtons} onClick={clickHandler} />)
+  .add('QuickReply', () => <QuickReply elements={object('elements', repliesButtons)} onClick={clickHandler} />)
 
 storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)

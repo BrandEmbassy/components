@@ -3,13 +3,15 @@
   flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: flex-end;
-  width: 280px;
+  width: 100%;
   border: red 1px solid;
   background-color: #fff;
   border: solid 1px #dadada;
   overflow: hidden;
 
   & button {
+    display: block;
+    width: auto;
     font-size: 12px;
     white-space: nowrap;
     text-overflow: ellipsis;
