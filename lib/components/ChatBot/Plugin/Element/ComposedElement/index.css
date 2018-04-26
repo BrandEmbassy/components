@@ -1,5 +1,6 @@
 .ComposedElement {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 100%;
+  background: #fff;
 }
