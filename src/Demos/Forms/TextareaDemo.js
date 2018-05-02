@@ -20,7 +20,7 @@ export default class TextareaDemo extends Component {
           </div>
         <div className="row">
           <div className="col-xs-6">
-            <Textarea label="Label here" desc="description here"/>
+            <Textarea label="Label here" desc="description here" placeholder="text here" />
           </div>
         </div>
         <div className="row padding-20">
