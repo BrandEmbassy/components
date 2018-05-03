@@ -5,14 +5,14 @@
   & .DateRangePicker {
     min-height: 270px;
     margin-bottom: 0;
-    &__MonthHeader {
+    &.__MonthHeader {
       height: 40px;
       line-height: 40px;
       background-color: #e6e6e6;
       text-transform: uppercase;
       text-align: center;
     }
-    &__Month {
+    &.__Month {
       margin: 0;
       &:first-child {
         margin-right: 5px;
@@ -33,70 +33,70 @@
         margin-right: 5px;
       }
     }
-    &__PaginationArrow {
+    &.__PaginationArrow {
       height: 40px;
       line-height: 40px;
-      &--previous {
+      &.--previous {
         left: 0;
       }
-      &--next {
+      &.--next {
         right: 0;
       }
     }
-    &__PaginationArrowIcon {
+    &.__PaginationArrowIcon {
       top: 12px;
     }
-    &__MonthDates {
+    &.__MonthDates {
       border: none;
       border-collapse: collapse;
       border-spacing: 0 0;
     }
-    &__WeekdayHeading, &__Date {
+    &.__WeekdayHeading, &.__Date {
       color: #4a4a4a;
       font-size: 13px;
     }
-    &__WeekdayHeading {
+    &.__WeekdayHeading {
       color: #9b9b9b;
       font-weight: 400;
     }
-    &__Date {
+    &.__Date {
       border: none;
       &--is-highlighted {
         border-color: #40c268;
         color: #4a4a4a !important;
       }
-      &--is-selected {
+      &.--is-selected {
         color: #fff;
       }
-      &--is-disabled {
+      &.--is-disabled {
         color: #cdcdd1 !important;
         opacity: 0.25 !important;
         cursor: not-allowed !important;
       }
-      &--otherMonth {
+      &.--otherMonth {
         opacity: .6;
       }
     }
-    &__CalendarSelection {
+    &.__CalendarSelection {
       border-color: #40c268;
       background-color: #40c268;
       &--single {
         border-radius: 3px;
       }
-      &--start {
+      &.--start {
         border-radius: 3px 0 0 3px;
       }
-      &--end {
+      &.--end {
         border-radius: 0 3px 3px 0;
       }
     }
-    &__CalendarHighlight {
+    &.__CalendarHighlight {
       border-color: #e6e6e6;
       background-color: #e6e6e6;
       border-radius: 3px !important;
     }
   }
-  &__control-panel {
+  &.__control-panel {
     position: relative;
     display: block;
     width: 100%;
