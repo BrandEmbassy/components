@@ -2,10 +2,11 @@
 @import '~react-daterange-picker/dist/css/react-calendar.css';
 
 .daterangepicker {
-  & .DateRangePicker {
+  color: red;
+  /* & .DateRangePicker {
     min-height: 270px;
     margin-bottom: 0;
-    &.__MonthHeader {
+    &__MonthHeader {
       height: 40px;
       line-height: 40px;
       background-color: #e6e6e6;
@@ -119,5 +120,5 @@
       display: inline-block;
       line-height: 50px;
     }
-  }
+  } */
 }
