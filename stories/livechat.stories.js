@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, object } from '@storybook/addon-knobs/react';
 
-import QuickReply from '../src/node_modules/components/ChatBot/Plugin/Element/QuickReply'
+import QuickReplies from '../src/node_modules/components/ChatBot/Plugin/Element/QuickReplies'
 import Button from '../src/node_modules/components/ChatBot/Plugin/Element/Button'
 import Heading from '../src/node_modules/components/ChatBot/Plugin/Element/Heading'
 import Image from '../src/node_modules/components/ChatBot/Plugin/Element/Image'
@@ -10,6 +10,7 @@ import Text from '../src/node_modules/components/ChatBot/Plugin/Element/Text'
 import Plugin from '../src/node_modules/components/ChatBot/Plugin'
 
 const repliesButtons = [
+  { id: 'Nkm0hRAiE', type: 'TEXT', text: 'Button 1', postback: 'click-on-button-1' },
   { id: 'Nkm0hRAiE', type: 'BUTTON', text: 'Button 1', postback: 'click-on-button-1' },
   { id: 'TkGJ6CAiN', type: 'BUTTON', text: 'Button 2', postback: 'click-on-button-2' },
   { id: 'EyCyTRCi4', type: 'BUTTON', text: 'Button 3', postback: 'click-on-button-3' }
@@ -18,7 +19,7 @@ const repliesButtons = [
 const quickReplies = [
   {
     id: 'Ukm0hRAiA',
-    type: 'QUICK_REPLY',
+    type: 'QUICK_REPLIES',
     elements: repliesButtons
   }
 ]
@@ -63,7 +64,7 @@ storiesOf('Chatbots elements', module)
   .add('Heading', () => <Heading content={text('content', 'Lorem Ipsum!')} />)
   .add('Image', () => <Image src={text('src', 'http://via.placeholder.com/350x150')} />)
   .add('Text', () => <Text content={text('content', 'Hello world!')} />)
-  .add('QuickReply', () => <QuickReply elements={object('elements', repliesButtons)} onClick={clickHandler} />)
+  .add('QuickReplies', () => <QuickReplies elements={object('elements', repliesButtons)} onClick={clickHandler} />)
 
 storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)
