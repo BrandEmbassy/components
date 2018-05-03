@@ -45,6 +45,7 @@
       font-style: normal;
       transition: box-shadow .15s linear;
       resize: none;
+      outline: none;
       
       &:placeholder {
         color: #999;
