@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// eslint-disable-next-line
-import '!style-loader!css-loader!./../styles/Base.css'
+import '!style-loader!css-loader!./../styles/Base.css' // eslint-disable-line
 
 export default class Global extends Component {
   static get propTypes () {
