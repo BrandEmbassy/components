@@ -35,6 +35,7 @@
     "start": "node scripts/start.js",
     "build": "yarn lib",
     "test": "node scripts/test.js --env=jsdom",
+    "lint": "standard './src/package/**/*.js'",
     "lib": "babel src/package --out-dir lib --copy-files",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -85,8 +86,25 @@
       "flow"
     ]
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [],
+    "globals": [
+      "it",
+      "afterEach",
+      "after",
+      "describe",
+      "before",
+      "beforeEach",
+      "expect",
+      "shallow",
+      "render",
+      "mount"
+    ],
+    "environment": [
+      "jest",
+      "enzyme"
+    ]
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.9",

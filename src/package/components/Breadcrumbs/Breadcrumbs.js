@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styles from './Breadcrumbs.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styles from './Breadcrumbs.css'
 
 export default class Breadcrumbs extends Component {
-
-  static get propTypes() {
+  static get propTypes () {
     return {
       onClick: PropTypes.function
-    };
+    }
   };
 
-  render() {
+  render () {
     return (
       <div className={styles.Breadcrumbs}>
         <div className={styles.Textwrap}>
@@ -19,6 +18,6 @@ export default class Breadcrumbs extends Component {
         </div>
         <div className={styles.Right}>{this.props.children}</div>
       </div>
-    );
+    )
   }
 }
