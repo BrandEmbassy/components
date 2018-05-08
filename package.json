@@ -36,7 +36,7 @@
     "build": "yarn lib",
     "pretest": "npm run lint",
     "test": "jest",
-    "lint": "standard './src/**/*.js'",
+    "lint": "standard './src/**/*.js' './stories/**/*.js'",
     "lib": "babel src/package --out-dir lib --copy-files",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

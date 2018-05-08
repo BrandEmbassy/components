@@ -1,71 +1,69 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import { storiesOf } from '@storybook/react'
 
-import Grid from './../src/Basic/Grid/Grid';
-import Typography from './../src/Basic/Typography/Typography';
-import Icons from './../src/Basic/Icons/Icons';
+import Grid from './../src/Basic/Grid/Grid'
+import Typography from './../src/Basic/Typography/Typography'
+import Icons from './../src/Basic/Icons/Icons'
 
-import InputDemo from './../src/Demos/Forms/InputDemo';
-import SelectboxDemo from './../src/Demos/Forms/SelectboxDemo';
-import TextareaDemo from './../src/Demos/Forms/TextareaDemo';
-import CheckboxDemo from './../src/Demos/Forms/CheckboxDemo';
-import RadioDemo from './../src/Demos/Forms/RadioDemo';
-import TableDemo from './../src/Demos/Forms/TableDemo';
-import SubmitDemo from './../src/Demos/Forms/SubmitDemo';
+import InputDemo from './../src/Demos/Forms/InputDemo'
+import SelectboxDemo from './../src/Demos/Forms/SelectboxDemo'
+import TextareaDemo from './../src/Demos/Forms/TextareaDemo'
+import CheckboxDemo from './../src/Demos/Forms/CheckboxDemo'
+import RadioDemo from './../src/Demos/Forms/RadioDemo'
+import TableDemo from './../src/Demos/Forms/TableDemo'
+import SubmitDemo from './../src/Demos/Forms/SubmitDemo'
 
-import ButtonDemo from './../src/Demos/Controls/ButtonDemo';
-import ButtonGroupDemo from './../src/Demos/Controls/ButtonGroupDemo';
-import LinkDemo from './../src/Demos/Controls/LinkDemo';
+import ButtonDemo from './../src/Demos/Controls/ButtonDemo'
+import ButtonGroupDemo from './../src/Demos/Controls/ButtonGroupDemo'
+import LinkDemo from './../src/Demos/Controls/LinkDemo'
 
-import BreadcrumbsDemo from './../src/Demos/Navigation/BreadcrumbsDemo';
-import DropdownDemo from './../src/Demos/Navigation/DropdownDemo';
+import BreadcrumbsDemo from './../src/Demos/Navigation/BreadcrumbsDemo'
+import DropdownDemo from './../src/Demos/Navigation/DropdownDemo'
 
-import HeaderDemo from './../src/Demos/Custom/HeaderDemo';
-import LabelDemo from './../src/Demos/Custom/LabelDemo';
-import ChannelDemo from './../src/Demos/Custom/ChannelDemo';
-import NotificationDemo from './../src/Demos/Custom/NotificationDemo';
-import ProfilePictureDemo from './../src/Demos/Custom/ProfilePictureDemo';
-import StatusesDemo from './../src/Demos/Custom/StatusesDemo';
-import TagDemo from './../src/Demos/Custom/TagDemo';
+import HeaderDemo from './../src/Demos/Custom/HeaderDemo'
+import LabelDemo from './../src/Demos/Custom/LabelDemo'
+import ChannelDemo from './../src/Demos/Custom/ChannelDemo'
+import NotificationDemo from './../src/Demos/Custom/NotificationDemo'
+import ProfilePictureDemo from './../src/Demos/Custom/ProfilePictureDemo'
+import StatusesDemo from './../src/Demos/Custom/StatusesDemo'
+import TagDemo from './../src/Demos/Custom/TagDemo'
 
-import ExampleA from './../src/Demos/Example/ExampleA';
-import ExampleB from './../src/Demos/Example/ExampleB';
+import ExampleA from './../src/Demos/Example/ExampleA'
+import ExampleB from './../src/Demos/Example/ExampleB'
 
 storiesOf('Basic', module)
-  .add('Grid', () => <Grid /> )
-  .add('Typography', () => <Typography /> )
-  .add('Icons', () => <Icons /> );
+  .add('Grid', () => <Grid />)
+  .add('Typography', () => <Typography />)
+  .add('Icons', () => <Icons />)
 
 storiesOf('Forms', module)
-  .add('Input', () => <InputDemo/> )
-  .add('Selectbox', () => <SelectboxDemo/> )
-  .add('Textarea', () => <TextareaDemo/> )
-  .add('Checkbox', () => <CheckboxDemo/> )
-  .add('Radio', () => <RadioDemo/> )
-  .add('Table', () => <TableDemo/> )
-  .add('Submit', () => <SubmitDemo/> );
+  .add('Input', () => <InputDemo />)
+  .add('Selectbox', () => <SelectboxDemo />)
+  .add('Textarea', () => <TextareaDemo />)
+  .add('Checkbox', () => <CheckboxDemo />)
+  .add('Radio', () => <RadioDemo />)
+  .add('Table', () => <TableDemo />)
+  .add('Submit', () => <SubmitDemo />)
 
 storiesOf('Controls', module)
-  .add('Button', () => <ButtonDemo /> )
-  .add('Button group', () => <ButtonGroupDemo /> )
-  .add('Link', () => <LinkDemo /> );
+  .add('Button', () => <ButtonDemo />)
+  .add('Button group', () => <ButtonGroupDemo />)
+  .add('Link', () => <LinkDemo />)
 
 storiesOf('Navigation', module)
-  .add('Breadcrumbs', () => <BreadcrumbsDemo/> )
-  .add('Dropdown', () => <DropdownDemo/> );
+  .add('Breadcrumbs', () => <BreadcrumbsDemo />)
+  .add('Dropdown', () => <DropdownDemo />)
 
 storiesOf('Custom', module)
-  .add('Header', () => <HeaderDemo /> )
-  .add('Label', () => <LabelDemo /> )
-  .add('Chanel', () => <ChannelDemo /> )
-  .add('Notification Message', () => <NotificationDemo /> )
-  .add('Profile Picture', () => <ProfilePictureDemo /> )
-  .add('Statuses', () => <StatusesDemo /> )
-  .add('Tag', () => <TagDemo /> );
+  .add('Header', () => <HeaderDemo />)
+  .add('Label', () => <LabelDemo />)
+  .add('Chanel', () => <ChannelDemo />)
+  .add('Notification Message', () => <NotificationDemo />)
+  .add('Profile Picture', () => <ProfilePictureDemo />)
+  .add('Statuses', () => <StatusesDemo />)
+  .add('Tag', () => <TagDemo />)
 
-  storiesOf('Example', module)
-  .add('ExampleA', () => <ExampleA /> )
-  .add('ExampleB', () => <ExampleB /> );
+storiesOf('Example', module)
+  .add('ExampleA', () => <ExampleA />)
+  .add('ExampleB', () => <ExampleB />)
