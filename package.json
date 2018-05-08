@@ -34,7 +34,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "yarn lib",
-    "test": "node scripts/test.js --env=jsdom",
+    "pretest": "npm run lint",
+    "test": "jest",
     "lint": "standard './src/**/*.js'",
     "lib": "babel src/package --out-dir lib --copy-files",
     "storybook": "start-storybook -p 6006",
