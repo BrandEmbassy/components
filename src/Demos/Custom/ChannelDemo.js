@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Channel from './../../node_modules/components/Channel/Channel';
+import Channel from './../../package/components/Channel/Channel';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -26,7 +26,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="facebook"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -48,7 +48,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="facebook" Size60 />))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel Facebook DM/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -84,7 +84,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="twitter"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -101,7 +101,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="instagram"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -118,7 +118,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="google"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -135,7 +135,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="youtube"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -152,7 +152,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="linkedin"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -169,7 +169,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="livechat"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -186,7 +186,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="email"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -203,7 +203,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="forum"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -220,7 +220,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="vkontakte"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -237,7 +237,7 @@ export default class ChannelDemo extends Component {
           <div className="col-xs-6">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Channel type="listening"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
       </div>

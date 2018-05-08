@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Statuses from './../../node_modules/components/Statuses/Statuses';
+import Statuses from './../../package/components/Statuses/Statuses';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -33,7 +33,7 @@ export default class StatusesDemo extends Component {
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Statuses status="New" />))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row">
@@ -55,7 +55,7 @@ export default class StatusesDemo extends Component {
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Statuses status="New" Reversed />))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
       </div>

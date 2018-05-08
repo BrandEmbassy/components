@@ -29,38 +29,38 @@ import ProfilePictureDemo from './Demos/Custom/ProfilePictureDemo';
 import './styles/Base.css';
 import styles from './App.css';
 
-import Button from 'components/Button';
-import Link from 'components/Link';
-import ButtonGroup from 'components/ButtonGroup';
-import Switcher from 'components/Switcher';
-import Header from 'components/Header';
-import Breadcrumbs from 'components/Breadcrumbs';
-import Channel from 'components/Channel';
-import Checkbox from 'components/Checkbox';
-import Input from 'components/Input';
-import Label from 'components/Label';
-import Notification from 'components/Notification';
-import ProfilePicture from 'components/ProfilePicture';
-import Radio from 'components/Radio';
-import Selectbox from 'components/Selectbox';
-import Submit from 'components/Submit';
-import Table from 'components/Table';
-import Tag from 'components/Tag';
-import Textarea from 'components/Textarea';
-import Statuses from 'components/Statuses';
-import H1 from 'components/H1';
-import H2 from 'components/H2';
-import H3 from 'components/H3';
-import P from 'components/P';
+import Button from './package/components/Button';
+import Link from './package/components/Link';
+import ButtonGroup from './package/components/ButtonGroup';
+import Switcher from './package/components/Switcher';
+import Header from './package/components/Header';
+import Breadcrumbs from './package/components/Breadcrumbs';
+import Channel from './package/components/Channel';
+import Checkbox from './package/components/Checkbox';
+import Input from './package/components/Input';
+import Label from './package/components/Label';
+import Notification from './package/components/Notification';
+import ProfilePicture from './package/components/ProfilePicture';
+import Radio from './package/components/Radio';
+import Selectbox from './package/components/Selectbox';
+import Submit from './package/components/Submit';
+import Table from './package/components/Table';
+import Tag from './package/components/Tag';
+import Textarea from './package/components/Textarea';
+import Statuses from './package/components/Statuses';
+import H1 from './package/components/H1';
+import H2 from './package/components/H2';
+import H3 from './package/components/H3';
+import P from './package/components/P';
 
-import Dropdown from './node_modules/components/Dropdown/Dropdown';
-import DropdownToggle from './node_modules/components/DropdownToggle/DropdownToggle';
-import DropdownMenu from './node_modules/components/DropdownMenu/DropdownMenu';
-import DropdownItem from './node_modules/components/DropdownItem/DropdownItem';
+import Dropdown from './package/components/Dropdown/Dropdown';
+import DropdownToggle from './package/components/DropdownToggle/DropdownToggle';
+import DropdownMenu from './package/components/DropdownMenu/DropdownMenu';
+import DropdownItem from './package/components/DropdownItem/DropdownItem';
 
-import Select from 'components/Select';
+import Select from './package/components/Select';
 
-import Global from 'components/Global';
+import Global from './package/components/Global';
 
 export default class App extends Component {
 
@@ -145,7 +145,7 @@ export default class App extends Component {
               </div>
             </div>
           </div>
-          
+
           <div className="col-xs-6">
             <div className="row">
               <div className="col-xs-12">

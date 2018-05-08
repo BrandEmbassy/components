@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "H2",
+  "main": "./H2.js"
+}

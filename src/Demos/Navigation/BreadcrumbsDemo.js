@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Breadcrumbs from '../../node_modules/components/Breadcrumbs/Breadcrumbs';
-import Button from '../../node_modules/components/Button/Button';
+import Breadcrumbs from '../../package/components/Breadcrumbs/Breadcrumbs';
+import Button from '../../package/components/Button/Button';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
