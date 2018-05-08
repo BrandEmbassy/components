@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Selectbox from './../../node_modules/components/Selectbox/Selectbox';
+import Selectbox from './../../package/components/Selectbox/Selectbox';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -34,7 +34,7 @@ export default class InputDemo extends Component {
               {beautify.html(renderToString(<Selectbox label="Label here" desc="description here"/>))}
             </SyntaxHighlighter>
           </div>
-        </div> 
+        </div>
         <div className="row">
           <div className="col-xs-12 ">
             <h3 className="h3">Wide</h3>
@@ -51,7 +51,7 @@ export default class InputDemo extends Component {
               {beautify.html(renderToString(<Selectbox Wide label="Label here" desc="description here"/>))}
             </SyntaxHighlighter>
           </div>
-        </div> 
+        </div>
         <div className="row">
           <div className="col-xs-12 ">
             <h3 className="h3">Disabled</h3>
@@ -68,7 +68,7 @@ export default class InputDemo extends Component {
               {beautify.html(renderToString(<Selectbox isDisabled Wide label="Label here" desc="description here"/>))}
             </SyntaxHighlighter>
           </div>
-        </div> 
+        </div>
         <div className="row">
           <div className="col-xs-12 ">
             <h3 className="h3">Error</h3>
@@ -85,7 +85,7 @@ export default class InputDemo extends Component {
               {beautify.html(renderToString(<Selectbox isError Wide label="Label here" desc="description here"/>))}
             </SyntaxHighlighter>
           </div>
-        </div> 
+        </div>
       </div>
     );
   }

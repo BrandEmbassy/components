@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Header from './../../node_modules/components/Header/Header';
-import Breadcrumbs from './../../node_modules/components/Breadcrumbs/Breadcrumbs';
-import Submit from './../../node_modules/components/Submit/Submit';
-import Table from './../../node_modules/components/Table/Table';
-import Input from './../../node_modules/components/Input/Input';
-import Textarea from './../../node_modules/components/Textarea/Textarea';
-import Checkbox from './../../node_modules/components/Checkbox/Checkbox';
-import Radio from './../../node_modules/components/Radio/Radio';
-import Button from './../../node_modules/components/Button/Button';
-import Link from './../../node_modules/components/Link/Link';
-import Channel from './../../node_modules/components/Channel/Channel';
-import Label from './../../node_modules/components/Label/Label';
-import Notification from './../../node_modules/components/Notification/Notification';
-import Statuses from './../../node_modules/components/Statuses/Statuses';
-import Tag from './../../node_modules/components/Tag/Tag';
+import Header from './../../package/components/Header/Header';
+import Breadcrumbs from './../../package/components/Breadcrumbs/Breadcrumbs';
+import Submit from './../../package/components/Submit/Submit';
+import Table from './../../package/components/Table/Table';
+import Input from './../../package/components/Input/Input';
+import Textarea from './../../package/components/Textarea/Textarea';
+import Checkbox from './../../package/components/Checkbox/Checkbox';
+import Radio from './../../package/components/Radio/Radio';
+import Button from './../../package/components/Button/Button';
+import Link from './../../package/components/Link/Link';
+import Channel from './../../package/components/Channel/Channel';
+import Label from './../../package/components/Label/Label';
+import Notification from './../../package/components/Notification/Notification';
+import Statuses from './../../package/components/Statuses/Statuses';
+import Tag from './../../package/components/Tag/Tag';
 import styles from './../../App.css';
 
 export default class ExampleA extends Component<Props> {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       ShowNotif: false,
       ShowNotifFix: false,
     };
@@ -103,7 +103,7 @@ export default class ExampleA extends Component<Props> {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-xs-6">
               <div className="row">
                 <div className="col-xs-12">
@@ -188,7 +188,7 @@ export default class ExampleA extends Component<Props> {
                   {this.renderNotif()}
                 </div>
                 <div className="col-xs-12 padding-15 center">
-                  <Button Small text="Show notification on click" 
+                  <Button Small text="Show notification on click"
                   onClick={(e) => {
                     e.stopPropagation();
                     this.setState({ ShowNotif: !this.state.ShowNotif })
@@ -197,7 +197,7 @@ export default class ExampleA extends Component<Props> {
               </div>
               <div className="row">
                 <div className="col-xs-12 padding-15">
-                  <Button Small Wide text="Show Fix notification on click" 
+                  <Button Small Wide text="Show Fix notification on click"
                   onClick={(e) => {
                     e.stopPropagation();
                     this.setState({ ShowNotifFix: !this.state.ShowNotifFix })

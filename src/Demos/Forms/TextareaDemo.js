@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Textarea from './../../node_modules/components/Textarea/Textarea';
+import Textarea from './../../package/components/Textarea/Textarea';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -32,7 +32,7 @@ export default class TextareaDemo extends Component {
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Textarea label="Label here" desc="description here"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -48,7 +48,7 @@ export default class TextareaDemo extends Component {
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Textarea label="Label here" desc="description here" isDisabled/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -65,7 +65,7 @@ export default class TextareaDemo extends Component {
               {beautify.html(renderToString(<Textarea label="Label here" desc="description here" isError/>))}
             </SyntaxHighlighter>
           </div>
-        </div> 
+        </div>
       </div>
     );
   }

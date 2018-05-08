@@ -35,7 +35,7 @@
     "start": "node scripts/start.js",
     "build": "yarn lib",
     "test": "node scripts/test.js --env=jsdom",
-    "lib": "babel src/node_modules --out-dir lib --copy-files",
+    "lib": "babel src/package --out-dir lib --copy-files",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "library": "yarn run build && yarn run build-storybook && node scripts/storybook.js && yarn run storybook",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Link from './../../node_modules/components/Link/Link';
+import Link from './../../package/components/Link/Link';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -23,14 +23,14 @@ export default class LinkDemo extends Component {
             <Link Icon="be-icon-trash" />
           </div>
           <div className="col-xs-12">
-            <Link Icon="be-icon-pencil" text="edit" /> 
+            <Link Icon="be-icon-pencil" text="edit" />
           </div>
         </div>
         <div className="row padding-20">
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Link Icon="be-icon-pencil" text="edit" />))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -50,7 +50,7 @@ export default class LinkDemo extends Component {
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Link Icon="be-icon-pencil" Blue text="edit" />))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
         <div className="row padding-20">
@@ -70,7 +70,7 @@ export default class LinkDemo extends Component {
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Link Icon="be-icon-pencil" White text="edit" />))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
       </div>

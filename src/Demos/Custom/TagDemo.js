@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Tag from './../../node_modules/components/Tag/Tag';
+import Tag from './../../package/components/Tag/Tag';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -36,7 +36,7 @@ export default class TagDemo extends Component {
           <div className="col-xs-12">
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Tag color="Green" text="Tag name"/>))}
-            </SyntaxHighlighter> 
+            </SyntaxHighlighter>
           </div>
         </div>
       </div>

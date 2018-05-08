@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Input from './../../node_modules/components/Input/Input';
+import Input from './../../package/components/Input/Input';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -65,7 +65,7 @@ export default class InputDemo extends Component {
               {beautify.html(renderToString(<Input label="Label here" desc="description here" isError/>))}
             </SyntaxHighlighter>
           </div>
-        </div> 
+        </div>
       </div>
     );
   }

@@ -1,0 +1,304 @@
+
+.Channel {
+  position: relative;
+  display: inline-block;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  line-height: 24px;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+
+  &:before, &:after {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    height: inherit;
+    line-height: inherit;
+    float: left;
+    font-family: "be-engager" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  &:after {
+    content: none;
+  }
+  &.DM, &.message {
+    &:before {
+      width: 24px;
+    }
+    &:after {
+      content: "9";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: 18px;
+      width: 18px;
+      line-height: 19px;
+      font-size: 17px;
+      color: #ffc36b;
+    }
+  }
+  &.Facebook {
+    line-height: 25px;
+    background-color: #3b5998;
+    font-size: 12px;
+    &:before {
+      content: "\6d";
+    }
+  }
+  &.Twitter {
+    background-color: #55acee;
+    &:before {
+      content: "\6e";
+    }
+  }
+  &.Instagram {
+    background-color: #55acee00;
+    background: linear-gradient( 45deg, #ee8252, #eb4b66, #a8478c);
+    font-size: 14.4px;
+    &:before {
+      content: "\73";
+    }
+  }
+  &.Google {
+    background-color: #dd4b39;
+    font-size: 14.4px;
+    &:before {
+      content: "\70";
+    }
+  }
+  &.Youtube {
+    background-color: #b00;
+    &:before {
+      content: "\6c";
+    }
+  }
+  &.Linkedin {
+    background-color: #007bb6;
+    &:before {
+      content: "\6b";
+    }
+  }
+  &.Livechat {
+    background-color: #35b072;
+    &:before {
+      content: "\71";
+    }
+  }
+  &.Email {
+    background-color: #dee4eb;
+    font-size: 13.2px;
+    color: #545968;
+    &:before {
+      content: "\69";
+    }
+  }
+  &.Forum {
+    background-color: #4a4a4a;
+    font-size: 10.8px;
+    &:before {
+      content: "\64";
+    }
+  }
+  &.Vkontakte {
+    background-color: #45668e;
+    font-size: 12px;
+    &:before {
+      content: "\74";
+    }
+  }
+  &.Listening {
+    background-color: #dcdcdc;
+    font-size: 14.4px;
+    color: #a2a2a2;
+    &:before {
+      content: "\46";
+    }
+  }
+
+  &.Size60 {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    border-radius: 7px;
+
+    &.DM, &.message {
+      &:before {
+        width: 60px;
+      }
+      &:after {
+        height: 45px;
+        width: 45px;
+        line-height: 46px;
+        font-size: 44px;
+      }
+    }
+    &.Facebook {
+      line-height: 60px;
+      font-size: 30px;
+    }
+
+    &.Instagram {
+      font-size: 36px;
+    }
+
+    &.Google {
+      font-size: 36px;
+    }
+
+    &.Email {
+      font-size: 33px;
+    }
+
+    &.Forum {
+      font-size: 27px;
+    }
+
+    &.Vkontakte {
+      font-size: 30px;
+    }
+
+    &.Listening {
+      font-size: 36px;
+    }
+  }
+
+
+  &.Size40 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+
+    &.DM, &.message {
+      &:before {
+        width: 40px;
+      }
+      &:after {
+        height: 30px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 29px;
+      }
+    }
+    &.Facebook {
+      line-height: 40px;
+      font-size: 20px;
+    }
+    &.Instagram {
+      font-size: 24px;
+    }
+    &.Google {
+      font-size: 24px;
+    }
+    &.Email {
+      font-size: 22px;
+    }
+    &.Forum {
+      font-size: 18px;
+    }
+    &.Vkontakte {
+      font-size: 20px;
+    }
+    &.Listening {
+      font-size: 24px;
+    }
+  }
+
+  &.Size20 {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+
+    &.DM, &.message {
+      &:before {
+        width: 20px;
+      }
+      &:after {
+        height: 15px;
+        width: 15px;
+        line-height: 16px;
+        font-size: 14px;
+      }
+    }
+    &.Facebook {
+      line-height: 20px;
+      font-size: 10px;
+    }
+    &.Instagram {
+      font-size: 12px;
+    }
+    &.Google {
+      font-size: 12px;
+    }
+    &.Email {
+      font-size: 11px;
+    }
+    &.Forum {
+      font-size: 9px;
+    }
+    &.Vkontakte {
+      font-size: 10px;
+    }
+    &.Listening {
+      font-size: 12px;
+    }
+  }
+
+  &.Size16 {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 8px;
+
+    &.DM, &.message {
+      &:before {
+        width: 16px;
+      }
+      &:after {
+        height: 12px;
+        width: 12px;
+        line-height: 13px;
+        font-size: 11px;
+      }
+    }
+    &.Facebook {
+      line-height: 16px;
+      font-size: 8px;
+    }
+    &.Instagram {
+      font-size: 9.6px;
+    }
+    &.Google {
+      font-size: 9.6px;
+    }
+    &.Email {
+      font-size: 8.8px;
+    }
+    &.Forum {
+      font-size: 7.2px;
+    }
+    &.Vkontakte {
+      font-size: 8px;
+    }
+    &.Listening {
+      font-size: 9.6px;
+    }
+  }
+}

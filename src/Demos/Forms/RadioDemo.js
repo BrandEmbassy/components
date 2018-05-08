@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Radio from './../../node_modules/components/Radio/Radio';
+import Radio from './../../package/components/Radio/Radio';
 import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism';
 import { renderToString } from 'react-dom/server';
@@ -11,7 +11,7 @@ const importComponent = `import { Radio } from 'components';`;
 export default class RadioDemo extends Component {
   render() {
     return (
-      <div className="container"> 
+      <div className="container">
         <div className="row padding-20">
           <div className="col-xs-12 ">
             <h2 className="h2">Radio</h2>
@@ -32,7 +32,7 @@ export default class RadioDemo extends Component {
         <div className="col-xs-12 ">
           <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
             {beautify.html(renderToString(<Radio name="name" id="aaa" />))}
-          </SyntaxHighlighter> 
+          </SyntaxHighlighter>
         </div>
       </div>
       <div className="row padding-20">
@@ -61,7 +61,7 @@ export default class RadioDemo extends Component {
           </div>))}
           </SyntaxHighlighter>
         </div>
-      </div> 
+      </div>
     </div>
     );
   }
