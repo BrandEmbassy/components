@@ -1,268 +1,229 @@
-import React, { Component } from 'react';
-import Grid from './../src/Basic/Grid/Grid';
-import Typography from './../src/Basic/Typography/Typography';
-import Icons from './../src/Basic/Icons/Icons';
+import React, { Component } from 'react'
+import './styles/Base.css'
+import styles from './App.css'
 
-import InputDemo from './Demos/Forms/InputDemo';
-import SelectDemo from './Demos/Forms/SelectboxDemo';
-import TextareaDemo from './Demos/Forms/TextareaDemo';
-import CheckboxDemo from './Demos/Forms/CheckboxDemo';
-import RadioDemo from './Demos/Forms/RadioDemo';
-import TableDemo from './Demos/Forms/TableDemo';
-import SubmitDemo from './Demos/Forms/SubmitDemo';
+import Button from './package/components/Button'
+import Link from './package/components/Link'
+import Header from './package/components/Header'
+import Breadcrumbs from './package/components/Breadcrumbs'
+import Channel from './package/components/Channel'
+import Checkbox from './package/components/Checkbox'
+import Input from './package/components/Input'
+import Label from './package/components/Label'
+import Radio from './package/components/Radio'
+import Table from './package/components/Table'
+import Tag from './package/components/Tag'
+import Textarea from './package/components/Textarea'
+import Statuses from './package/components/Statuses'
+import H1 from './package/components/H1'
+import H2 from './package/components/H2'
+import H3 from './package/components/H3'
+import P from './package/components/P'
 
-import ButtonDemo from './Demos/Controls/ButtonDemo';
-import ButtonGroupDemo from './Demos/Controls/ButtonGroupDemo';
-import LinkDemo from './Demos/Controls/LinkDemo';
-
-import StatusesDemo from './Demos/Custom/StatusesDemo';
-import TagDemo from './Demos/Custom/TagDemo';
-
-import BreadcrumbsDemo from './Demos/Navigation/BreadcrumbsDemo';
-import DropdownDemo from './Demos/Navigation/DropdownDemo';
-
-import HeaderDemo from './Demos/Custom/HeaderDemo';
-import LabelDemo from './Demos/Custom/LabelDemo';
-import ChannelDemo from './Demos/Custom/ChannelDemo';
-import NotificationDemo from './Demos/Custom/NotificationDemo';
-import ProfilePictureDemo from './Demos/Custom/ProfilePictureDemo';
-import './styles/Base.css';
-import styles from './App.css';
-
-import Button from './package/components/Button';
-import Link from './package/components/Link';
-import ButtonGroup from './package/components/ButtonGroup';
-import Switcher from './package/components/Switcher';
-import Header from './package/components/Header';
-import Breadcrumbs from './package/components/Breadcrumbs';
-import Channel from './package/components/Channel';
-import Checkbox from './package/components/Checkbox';
-import Input from './package/components/Input';
-import Label from './package/components/Label';
-import Notification from './package/components/Notification';
-import ProfilePicture from './package/components/ProfilePicture';
-import Radio from './package/components/Radio';
-import Selectbox from './package/components/Selectbox';
-import Submit from './package/components/Submit';
-import Table from './package/components/Table';
-import Tag from './package/components/Tag';
-import Textarea from './package/components/Textarea';
-import Statuses from './package/components/Statuses';
-import H1 from './package/components/H1';
-import H2 from './package/components/H2';
-import H3 from './package/components/H3';
-import P from './package/components/P';
-
-import Dropdown from './package/components/Dropdown/Dropdown';
-import DropdownToggle from './package/components/DropdownToggle/DropdownToggle';
-import DropdownMenu from './package/components/DropdownMenu/DropdownMenu';
-import DropdownItem from './package/components/DropdownItem/DropdownItem';
-
-import Select from './package/components/Select';
-
-import Global from './package/components/Global';
+import Dropdown from './package/components/Dropdown/Dropdown'
+import DropdownMenu from './package/components/DropdownMenu/DropdownMenu'
+import DropdownItem from './package/components/DropdownItem/DropdownItem'
 
 export default class App extends Component {
-
-  render() {
+  render () {
     return (
       <div className={styles.App} >
-      <div className={styles.Static}>
-        <div className="row">
-          <Header/>
+        <div className={styles.Static}>
+          <div className='row'>
+            <Header />
+          </div>
         </div>
-      </div>
-      <div className={styles.Flex} >
-        <div className="row">
-          <div className="col-xs">
-            <b><a href="http://localhost:6006">Open</a></b> component library
-            <br /><br />
-            <Dropdown toggleDefault="Select Channel">
-              <DropdownMenu >
-                <DropdownItem><Channel Facebook Size24 />Facebook</DropdownItem>
-                <DropdownItem><Channel Twitter Size24 />Twitter</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-            <br /><br />
-            <H1>test H1</H1>
-            <H2>test H2</H2>
-            <H3>test H3</H3>
-            <P>
+        <div className={styles.Flex} >
+          <div className='row'>
+            <div className='col-xs'>
+              <b><a href='http://localhost:6006'>Open</a></b> component library
+              <br /><br />
+              <Dropdown toggleDefault='Select Channel'>
+                <DropdownMenu >
+                  <DropdownItem><Channel Facebook Size24 />Facebook</DropdownItem>
+                  <DropdownItem><Channel Twitter Size24 />Twitter</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+              <br /><br />
+              <H1>test H1</H1>
+              <H2>test H2</H2>
+              <H3>test H3</H3>
+              <P>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sodales turpis, ac sollicitudin sem. Sed et eros porttitor, ullamcorper ante vel, consectetur metus. Integer in ante nec leo viverra varius et egestas mauris. Vestibulum consequat orci laoreet tellus condimentum lacinia. Maecenas eu justo sit amet nulla aliquam consectetur. Aenean nec fermentum velit. Mauris dictum justo ipsum, vitae pharetra nibh sodales ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce dapibus felis et nunc consequat sollicitudin.
-            </P>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs">
-            <Breadcrumbs>
-              <Button Small text="Add someting" Icon="be-icon-plus" />
-            </Breadcrumbs>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs">
-            <Table />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-6">
-            <div className="row">
-              <div className="col-xs-12">
-                <h3 className="h3">Form</h3>
-              </div>
-              <div className="col-xs-12">
-                <Input label="Input text here" desc="description..." />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12">
-                <Textarea label="Textarea here" desc="description..." />
-              </div>
-            </div>
-            <div className="row padding-15">
-              <div className="col-xs-12 padding-10">
-                <Checkbox name="nameA" id="aaa" label="label text here"/>
-              </div>
-              <div className="col-xs-12 padding-10">
-                <Checkbox name="nameA" id="bbb" label="label text here"/>
-              </div>
-            </div>
-            <div className="row padding-10">
-              <div className="col-xs-12 padding-5">
-                <Radio name="nameB" id="C" label="male"/>
-              </div>
-              <div className="col-xs-12 padding-5">
-                <Radio name="nameB" id="D" label="female"/>
-              </div>
-              <div className="col-xs-12 padding-5">
-                <Radio name="nameB" id="E" label="apache helicopter"/>
-              </div>
-              <div className="col-xs-12 padding-15">
-                <Button text="Send Form Wide" Wide/>
-              </div>
-              <div className="col-xs-12 padding-15">
-                <Button text="Send Form" />
-              </div>
+              </P>
             </div>
           </div>
+          <div className='row'>
+            <div className='col-xs'>
+              <Breadcrumbs>
+                <Button Small text='Add someting' Icon='be-icon-plus' />
+              </Breadcrumbs>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-xs'>
+              <Table />
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-xs-6'>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <h3 className='h3'>Form</h3>
+                </div>
+                <div className='col-xs-12'>
+                  <Input label='Input text here' desc='description...' />
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <Textarea label='Textarea here' desc='description...' />
+                </div>
+              </div>
+              <div className='row padding-15'>
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='aaa' label='label text here' />
+                </div>
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='bbb' label='label text here' />
+                </div>
+              </div>
+              <div className='row padding-10'>
+                <div className='col-xs-12 padding-5'>
+                  <Radio name='nameB' id='C' label='male' />
+                </div>
+                <div className='col-xs-12 padding-5'>
+                  <Radio name='nameB' id='D' label='female' />
+                </div>
+                <div className='col-xs-12 padding-5'>
+                  <Radio name='nameB' id='E' label='apache helicopter' />
+                </div>
+                <div className='col-xs-12 padding-15'>
+                  <Button text='Send Form Wide' Wide />
+                </div>
+                <div className='col-xs-12 padding-15'>
+                  <Button text='Send Form' />
+                </div>
+              </div>
+            </div>
 
-          <div className="col-xs-6">
-            <div className="row">
-              <div className="col-xs-12">
-                <h3 className="h3">Links</h3>
+            <div className='col-xs-6'>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <h3 className='h3'>Links</h3>
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 padding-15">
-                <Link Icon="be-icon-plus" Green text="Add"/>
-                <Link Icon="be-icon-pencil" Blue text="Edit"/>
-                <Link Icon="be-icon-trash" text="Remove"/>
-                <Link Icon="be-icon-mail" text=""/>
-                <Link Icon="be-icon-check" Green text=""/>
-                <Link Icon="be-icon-more" text=""/>
-                <Link Icon="be-icon-search" Red text=""/>
+              <div className='row'>
+                <div className='col-xs-12 padding-15'>
+                  <Link Icon='be-icon-plus' Green text='Add' />
+                  <Link Icon='be-icon-pencil' Blue text='Edit' />
+                  <Link Icon='be-icon-trash' text='Remove' />
+                  <Link Icon='be-icon-mail' text='' />
+                  <Link Icon='be-icon-check' Green text='' />
+                  <Link Icon='be-icon-more' text='' />
+                  <Link Icon='be-icon-search' Red text='' />
+                </div>
+                <div className='col-xs-12 color4 padding-10'>
+                  <Link Icon='be-icon-check' Green text='' />
+                  <Link Icon='be-icon-more' Black text='' />
+                  <Link Icon='be-icon-search' Red text='search' />
+                  <Link Icon='be-icon-mail' White text='Mail' />
+                </div>
               </div>
-              <div className="col-xs-12 color4 padding-10">
-                <Link Icon="be-icon-check" Green text=""/>
-                <Link Icon="be-icon-more" Black text=""/>
-                <Link Icon="be-icon-search" Red text="search"/>
-                <Link Icon="be-icon-mail" White text="Mail"/>
+              <div className='row padding-10'>
+                <div className='col-xs-12'>
+                  <h3 className='h3'>Channels</h3>
+                </div>
               </div>
-            </div>
-            <div className="row padding-10">
-              <div className="col-xs-12">
-                <h3 className="h3">Channels</h3>
+              <div className='row'>
+                <div className='col-xs-12 padding-15'>
+                  <Channel type='facebook' Size40 DM />
+                  <Channel type='instagram' Size40 />
+                  <Channel type='twitter' Size40 />
+                  <Channel type='livechat' Size40 DM />
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 padding-15">
-                  <Channel type="facebook" Size40 DM/>
-                  <Channel type="instagram" Size40/>
-                  <Channel type="twitter" Size40/>
-                  <Channel type="livechat" Size40 DM/>
+              <div className='row padding-10'>
+                <div className='col-xs-12'>
+                  <h3 className='h3'>Statuses</h3>
+                </div>
               </div>
-            </div>
-            <div className="row padding-10">
-              <div className="col-xs-12">
-                <h3 className="h3">Statuses</h3>
+              <div className='row'>
+                <div className='col-xs-12 padding-15'>
+                  <Statuses status='New' />
+                  <Statuses status='Open' />
+                  <Statuses status='Resolved' />
+                  <Statuses status='Pending' />
+                  <Statuses status='Escalated' />
+                  <Statuses status='Closed' />
+                  <Statuses status='Trashed' />
+                  <Statuses status='Reversed' />
+                </div>
+                <div className='col-xs-12 padding-15'>
+                  <Statuses status='New' Reversed />
+                  <Statuses status='Open' Reversed />
+                  <Statuses status='Resolved' Reversed />
+                  <Statuses status='Pending' Reversed />
+                  <Statuses status='Escalated' Reversed />
+                  <Statuses status='Closed' Reversed />
+                  <Statuses status='Trashed' Reversed />
+                  <Statuses status='Reversed' Reversed />
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 padding-15">
-                <Statuses status="New" />
-                <Statuses status="Open" />
-                <Statuses status="Resolved" />
-                <Statuses status="Pending" />
-                <Statuses status="Escalated" />
-                <Statuses status="Closed" />
-                <Statuses status="Trashed" />
-                <Statuses status="Reversed" />
+              <div className='row padding-10'>
+                <div className='col-xs-12'>
+                  <h3 className='h3'>Tags</h3>
+                </div>
               </div>
-              <div className="col-xs-12 padding-15">
-                <Statuses status="New" Reversed />
-                <Statuses status="Open" Reversed />
-                <Statuses status="Resolved" Reversed />
-                <Statuses status="Pending" Reversed />
-                <Statuses status="Escalated" Reversed />
-                <Statuses status="Closed" Reversed />
-                <Statuses status="Trashed" Reversed />
-                <Statuses status="Reversed" Reversed />
+              <div className='row'>
+                <div className='col-xs-12 padding-15'>
+                  <Tag text='Tag name' />
+                  <Tag color='DarkPurple' text='Tag name' />
+                  <Tag color='Purple' text='Tag name' />
+                  <Tag color='Pink' text='Tag name' />
+                  <Tag color='Red' text='Tag name' />
+                  <Tag color='Yellow' text='Tag name' />
+                  <Tag color='Turquoise' text='Tag name' />
+                  <Tag color='Green' text='Tag name' />
+                  <Tag color='LightBlue' text='Tag name' />
+                  <Tag color='Blue' text='Tag name' />
+                  <Tag text='Tag name' />
+                </div>
               </div>
-            </div>
-            <div className="row padding-10">
-              <div className="col-xs-12">
-                <h3 className="h3">Tags</h3>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12 padding-15">
-                <Tag text="Tag name"/>
-                <Tag color="DarkPurple" text="Tag name"/>
-                <Tag color="Purple" text="Tag name"/>
-                <Tag color="Pink" text="Tag name"/>
-                <Tag color="Red" text="Tag name"/>
-                <Tag color="Yellow" text="Tag name"/>
-                <Tag color="Turquoise" text="Tag name"/>
-                <Tag color="Green" text="Tag name"/>
-                <Tag color="LightBlue" text="Tag name"/>
-                <Tag color="Blue" text="Tag name"/>
-                <Tag text="Tag name"/>
-              </div>
-            </div>
-            <div className="row padding-10">
-              <div className="col-xs-12">
-                <h3 className="h3">Notification message</h3>
+              <div className='row padding-10'>
+                <div className='col-xs-12'>
+                  <h3 className='h3'>Notification message</h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="row around-xs padding-20">
-          <div className="col-xs-6 background padding-20">
-          <div className="row">
-              <div className="col-xs-12">
-                <h3 className="h3">Form</h3>
+          <div className='row around-xs padding-20'>
+            <div className='col-xs-6 background padding-20'>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <h3 className='h3'>Form</h3>
+                </div>
+                <div className='col-xs-12'>
+                  <Label text='facebook channel label text here'>
+                    <Channel Facebook Size40 />
+                  </Label>
+                </div>
+                <div className='col-xs-12'>
+                  <Input label='Input text here' desc='description...' />
+                </div>
+                <div className='col-xs-12'>
+                  <Textarea label='Input text here' desc='description...' />
+                </div>
               </div>
-              <div className="col-xs-12">
-                <Label text="facebook channel label text here">
-                  <Channel Facebook Size40/>
-                </Label>
-              </div>
-              <div className="col-xs-12">
-                <Input label="Input text here" desc="description..." />
-              </div>
-              <div className="col-xs-12">
-                <Textarea label="Input text here" desc="description..." />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xs-12">
-                <Button text="Send Form Wide" Wide/>
+              <div className='row'>
+                <div className='col-xs-12'>
+                  <Button text='Send Form Wide' Wide />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    );
+    )
   }
 }
