@@ -56,10 +56,15 @@ const galleryElements = [
   menuElement,
 ]
 
+const withGrayBackground = (story) => {
+  return (<div style={{ background: '#f0f0f0' }}>{story()}</div>)
+}
+
 const clickHandler = (postback, label) => console.log(postback, label)
 
 storiesOf('Chatbots elements', module)
   .addDecorator(withKnobs)
+
   .add('Button', () => <Button label={text('label', 'Click me!')} />)
   .add('Heading', () => <Heading content={text('content', 'Lorem Ipsum!')} />)
   .add('Image', () => <Image src={text('src', 'http://via.placeholder.com/350x150')} />)
@@ -68,6 +73,7 @@ storiesOf('Chatbots elements', module)
 
 storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)
+  .addDecorator(withGrayBackground)
   .add('Menu', () => <Plugin elements={object('elements', [menuElement])} onClick={clickHandler} />)
   .add('Gallery', () => <Plugin elements={object('elements', galleryElements)} onClick={clickHandler} />)
   .add('Text and buttons', () => <Plugin elements={object('elements', [textAndButtons])} onClick={clickHandler} />)
