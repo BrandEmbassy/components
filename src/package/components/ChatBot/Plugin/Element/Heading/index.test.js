@@ -7,7 +7,7 @@ describe('Heading', () => {
   levels.forEach((level) => {
     it(`should return heading with correct level ${level}`, () => {
       const wrapper = shallow(<Heading level={level} />)
-      epxect(wrapper).toMatchSnapshot()
+      expect(wrapper).toMatchSnapshot()
     });
   });
 
