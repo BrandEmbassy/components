@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Header from './../../node_modules/components/Header/Header';
-import Breadcrumbs from './../../node_modules/components/Breadcrumbs/Breadcrumbs';
-import Table from './../../node_modules/components/Table/Table';
-import Input from './../../node_modules/components/Input/Input';
-import Textarea from './../../node_modules/components/Textarea/Textarea';
-import Checkbox from './../../node_modules/components/Checkbox/Checkbox';
-import Radio from './../../node_modules/components/Radio/Radio';
-import Button from './../../node_modules/components/Button/Button';
-import Link from './../../node_modules/components/Link/Link';
-import Channel from './../../node_modules/components/Channel/Channel';
-import Notification from './../../node_modules/components/Notification/Notification';
+import Header from './../../package/components/Header/Header';
+import Breadcrumbs from './../../package/components/Breadcrumbs/Breadcrumbs';
+import Table from './../../package/components/Table/Table';
+import Input from './../../package/components/Input/Input';
+import Textarea from './../../package/components/Textarea/Textarea';
+import Checkbox from './../../package/components/Checkbox/Checkbox';
+import Radio from './../../package/components/Radio/Radio';
+import Button from './../../package/components/Button/Button';
+import Link from './../../package/components/Link/Link';
+import Channel from './../../package/components/Channel/Channel';
+import Notification from './../../package/components/Notification/Notification';
 import styles from './../../App.css';
 
 export default class ExampleB extends Component {
