@@ -35,6 +35,7 @@
   &:hover {
     border: solid 2px #0077b3;
     background-color: #0077b3;
+    background: #0077b3;
     color: #fff;
   }
 }
