@@ -15,7 +15,7 @@
 .Plugin {
   display: flex;
   flex-direction: row;
-  background-color: #fff;
+  background: #fff;
   border-radius: 12px;
   border: solid 1px #e6e6e6;
   margin: 5px;
