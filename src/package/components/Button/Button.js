@@ -1,27 +1,26 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Button.css'
 
 const cx = classNames.bind(styles)
 
-export default class Button extends Component {
-  static get propTypes () {
-    return {
-      onClick: PropTypes.Func,
-      text: PropTypes.string,
-      Icon: PropTypes.string,
-      Disabled: PropTypes.boolean,
-      Reversed: PropTypes.boolean,
-      Negative: PropTypes.boolean,
-      Cancel: PropTypes.boolean,
-      Small: PropTypes.boolean,
-      Wide: PropTypes.boolean,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  onClick: Function,
+  text: string,
+  Icon: string,
+  Disabled: boolean,
+  Reversed: boolean,
+  Negative: boolean,
+  Cancel: boolean,
+  Small: boolean,
+  Wide: boolean,
+  styleName: string
+}
 
-  renderIcon () {
+export default class Button extends React.Component<Props> {
+  renderIcon (): ?React.Element<any> {
     if (this.props.Icon) {
       return (
         <div className={this.props.Icon} />
