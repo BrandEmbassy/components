@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import '!style-loader!css-loader!./../../styles/Base.css';
-import Header from './../../node_modules/components/Header/Header';
-import Breadcrumbs from './../../node_modules/components/Breadcrumbs/Breadcrumbs';
-import Submit from './../../node_modules/components/Submit/Submit';
-import Table from './../../node_modules/components/Table/Table';
-import Input from './../../node_modules/components/Input/Input';
-import Textarea from './../../node_modules/components/Textarea/Textarea';
-import Checkbox from './../../node_modules/components/Checkbox/Checkbox';
-import Radio from './../../node_modules/components/Radio/Radio';
-import Button from './../../node_modules/components/Button/Button';
-import Link from './../../node_modules/components/Link/Link';
-import Channel from './../../node_modules/components/Channel/Channel';
-import Label from './../../node_modules/components/Label/Label';
-import Notification from './../../node_modules/components/Notification/Notification';
-import Statuses from './../../node_modules/components/Statuses/Statuses';
-import Tag from './../../node_modules/components/Tag/Tag';
+import Header from './../../package/components/Header/Header';
+import Breadcrumbs from './../../package/components/Breadcrumbs/Breadcrumbs';
+import Submit from './../../package/components/Submit/Submit';
+import Table from './../../package/components/Table/Table';
+import Input from './../../package/components/Input/Input';
+import Textarea from './../../package/components/Textarea/Textarea';
+import Checkbox from './../../package/components/Checkbox/Checkbox';
+import Radio from './../../package/components/Radio/Radio';
+import Button from './../../package/components/Button/Button';
+import Link from './../../package/components/Link/Link';
+import Channel from './../../package/components/Channel/Channel';
+import Label from './../../package/components/Label/Label';
+import Notification from './../../package/components/Notification/Notification';
+import Statuses from './../../package/components/Statuses/Statuses';
+import Tag from './../../package/components/Tag/Tag';
 import styles from './../../App.css';
 
 export default class ExampleA extends Component<Props> {
@@ -71,10 +71,10 @@ export default class ExampleA extends Component<Props> {
                   <h3 className="h3">Form</h3>
                 </div>
                 <div className="col-xs-12">
-                  <Input label="Input text here" desc="description..." />
+                  <Input desc="description..." />
                 </div>
                 <div className="col-xs-12">
-                  <Textarea rows="12" label="Input text here" desc="description..." />
+                  <Textarea rows="12" label="Textarea text here" desc="description..." />
                 </div>
               </div>
               <div className="row padding-15">

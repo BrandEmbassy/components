@@ -21,6 +21,17 @@ export default class Input extends Component {
     };
   };
 
+  renderLabel() {
+    if (this.props.label) {
+      return (
+        <div className={styles.Label}>
+          {this.props.label}
+        </div>
+      );
+    }
+    return null;
+  }
+
   render() {
     const { isDisabled, isError, styleName } = this.props;
 
@@ -31,9 +42,8 @@ export default class Input extends Component {
 
     return (
       <div className={className}>
-        <div className={styles.Label}>
-          {this.props.label}
-        </div>
+
+        {this.renderLabel()}
         <div className={styles.Field}>
           <input 
             type={this.props.type} 

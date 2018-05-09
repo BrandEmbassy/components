@@ -2,12 +2,12 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, object, boolean } from '@storybook/addon-knobs/react';
 
-import QuickReplies from '../src/node_modules/components/ChatBot/Plugin/Element/QuickReplies'
-import Button from '../src/node_modules/components/ChatBot/Plugin/Element/Button'
-import Heading from '../src/node_modules/components/ChatBot/Plugin/Element/Heading'
-import Image from '../src/node_modules/components/ChatBot/Plugin/Element/Image'
-import Text from '../src/node_modules/components/ChatBot/Plugin/Element/Text'
-import Plugin from '../src/node_modules/components/ChatBot/Plugin'
+import QuickReplies from '../src/package/components/ChatBot/Plugin/Element/QuickReplies'
+import Button from '../src/package/components/ChatBot/Plugin/Element/Button'
+import Heading from '../src/package/components/ChatBot/Plugin/Element/Heading'
+import Image from '../src/package/components/ChatBot/Plugin/Element/Image'
+import Text from '../src/package/components/ChatBot/Plugin/Element/Text'
+import Plugin from '../src/package/components/ChatBot/Plugin'
 
 const repliesButtons = [
   { id: 'Akm0hRAiX', type: 'TEXT', text: 'Button 1', postback: 'click-on-button-1' },

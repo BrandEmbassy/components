@@ -22,6 +22,17 @@ export default class Textarea extends Component {
     };
   };
 
+  renderLabel() {
+    if (this.props.label) {
+      return (
+        <div className={styles.Label}>
+          {this.props.label}
+        </div>
+      );
+    }
+    return null;
+  }
+
   render() {
     const { styleName, isDisabled, isError } = this.props;
 
@@ -32,9 +43,7 @@ export default class Textarea extends Component {
 
     return (
       <div className={className}>
-        <div className={styles.Label}>
-          {this.props.label}                
-        </div>
+        {this.renderLabel()}
         <div className={styles.Field}>
         <textarea 
           name={this.props.name} 
