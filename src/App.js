@@ -3,32 +3,34 @@ import React, { Component } from 'react'
 import './styles/Base.css'
 import styles from './App.css'
 
-import Button from 'components/Button'
-import Link from 'components/Link'
-import Header from 'components/Header'
-import Breadcrumbs from 'components/Breadcrumbs'
-import Channel from 'components/Channel'
-import Checkbox from 'components/Checkbox'
-import Input from 'components/Input'
-import Label from 'components/Label'
-import Radio from 'components/Radio'
-import Table from 'components/Table'
-import Tag from 'components/Tag'
-import Textarea from 'components/Textarea'
-import Statuses from 'components/Statuses'
-import H1 from 'components/H1'
-import H2 from 'components/H2'
-import H3 from 'components/H3'
-import P from 'components/P'
+import Button from './package/components/Button'
+import Link from './package/components/Link'
+import Header from './package/components/Header'
+import Breadcrumbs from './package/components/Breadcrumbs'
+import Channel from './package/components/Channel'
+import Checkbox from './package/components/Checkbox'
+import Input from './package/components/Input'
+import Label from './package/components/Label'
+import Radio from './package/components/Radio'
+import Table from './package/components/Table'
+import Tag from './package/components/Tag'
+import Textarea from './package/components/Textarea'
+import Statuses from './package/components/Statuses'
+import H1 from './package/components/H1'
+import H2 from './package/components/H2'
+import H3 from './package/components/H3'
+import P from './package/components/P'
+import Global from './package/components/Global'
 
-import Dropdown from './node_modules/components/Dropdown/Dropdown'
-import DropdownMenu from './node_modules/components/DropdownMenu/DropdownMenu'
-import DropdownItem from './node_modules/components/DropdownItem/DropdownItem'
+import Dropdown from './package/components/Dropdown/Dropdown'
+import DropdownMenu from './package/components/DropdownMenu/DropdownMenu'
+import DropdownItem from './package/components/DropdownItem/DropdownItem'
 
 export default class App extends Component {
   render () {
     return (
       <div className={styles.App} >
+        <Global />
         <div className={styles.Static}>
           <div className='row'>
             <Header />
