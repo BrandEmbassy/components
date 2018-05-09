@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styles from './ButtonGroup.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styles from './ButtonGroup.css'
 
 export default class ButtonGroup extends Component {
-
-  static get propTypes() {
+  static get propTypes () {
     return {
       children: PropTypes.Array
-    }; 
+    }
   };
 
-  render() {
+  render () {
     return (
       <div className={styles.ButtonGroup}>
         {this.props.children}
       </div>
-    );
+    )
   }
 }
-

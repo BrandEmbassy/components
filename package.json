@@ -43,7 +43,8 @@
     "library": "yarn run build && yarn run build-storybook && node scripts/storybook.js && yarn run storybook",
     "concat-css": "cat src/styles/Grid.css build/static/css/main.css > build/static/css/components.css && yarn run cleanup",
     "cleanup": "rm -f build/static/css/main.css && rm -r build/static/js",
-    "flow": "flow"
+    "flow": "flow check",
+    "flow:watch": "flow"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -134,7 +135,7 @@
     "eslint-plugin-import": "2.10.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.7.0",
-    "flow-bin": "^0.69.0",
+    "flow-bin": "^0.71.0",
     "jest": "20",
     "js-beautify": "^1.7.5",
     "postcss": "^6.0.14",

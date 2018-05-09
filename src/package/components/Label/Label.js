@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import styles from './Label.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames/bind'
+import styles from './Label.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 export default class Label extends Component {
-
-  static get propTypes() {
+  static get propTypes () {
     return {
       children: PropTypes.Array,
       text: PropTypes.string,
       styleName: PropTypes.string
-    };
+    }
   };
 
-  render() {
-    const { styleName } = this.props;
+  render () {
+    const { styleName } = this.props
 
-    const className = cx(styles.Label, styleName );
+    const className = cx(styles.Label, styleName)
 
     return (
       <div className={className}>
@@ -29,7 +28,6 @@ export default class Label extends Component {
           {this.props.text}
         </div>
       </div>
-    );
+    )
   }
 }
-
