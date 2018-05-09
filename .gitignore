@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# npm types
+/flow-typed/npm
+
 # testing
 /coverage
 
