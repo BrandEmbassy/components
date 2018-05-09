@@ -1,3 +1,13 @@
 .Text {
-  margin: 14px;
+  padding: 14px;
+  margin: 0;
+}
+
+.MessageText {
+  padding: 14px;
+  margin: 0;
+  background-color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
 }
