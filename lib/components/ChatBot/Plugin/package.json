@@ -1,5 +1,0 @@
-{
-  "private": true,
-  "name": "ChatBotPlugin",
-  "main": "./index.js"
-}
