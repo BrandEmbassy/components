@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 import styles from './Dropdown.css'
@@ -7,7 +7,7 @@ import DropdownMenu from './../DropdownMenu/DropdownMenu'
 
 const cx = classNames.bind(styles)
 
-export default class Dropdown extends Component {
+export default class Dropdown extends PureComponent {
   constructor () {
     super()
 

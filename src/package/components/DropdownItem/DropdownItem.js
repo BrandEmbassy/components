@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 import styles from './DropdownItem.css'
 
 const cx = classNames.bind(styles)
 
-export default class DropdownItem extends Component {
+export default class DropdownItem extends PureComponent {
   static get propTypes () {
     return {
       onClick: PropTypes.Func,

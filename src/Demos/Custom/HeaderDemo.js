@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Header from './../../package/components/Header/Header'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
@@ -8,7 +8,7 @@ import beautify from 'js-beautify'
 
 const importComponent = `import { Header } from 'components';`
 
-export default class HeaderDemo extends Component {
+export default class HeaderDemo extends PureComponent {
   render () {
     return (
       <div className='container'>

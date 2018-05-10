@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!../../styles/Base.css' //eslint-disable-line
 import styles from './Icons.css'
 
-export default class Icons extends Component {
+export default class Icons extends PureComponent {
   render () {
     return (
       <div className='container'>

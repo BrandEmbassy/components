@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Channel from './../../package/components/Channel/Channel'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
@@ -8,7 +8,7 @@ import beautify from 'js-beautify'
 
 const importComponent = `import { Channel } from 'components';`
 
-export default class ChannelDemo extends Component {
+export default class ChannelDemo extends PureComponent {
   render () {
     return (
       <div className='container'>
