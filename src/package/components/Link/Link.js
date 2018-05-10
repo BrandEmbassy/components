@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import styles from './Link.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames/bind'
+import styles from './Link.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 export default class Link extends Component {
-
-  static get propTypes() {
+  static get propTypes () {
     return {
       onClick: PropTypes.Func,
       text: PropTypes.string,
@@ -18,20 +17,20 @@ export default class Link extends Component {
       Red: PropTypes.boolean,
       Black: PropTypes.boolean,
       styleName: PropTypes.string
-    };
+    }
   };
 
-  renderIcon() {
+  renderIcon () {
     if (this.props.Icon) {
-      return(
-        <div className={this.props.Icon}></div>
-      );
+      return (
+        <div className={this.props.Icon} />
+      )
     }
-    return null;
+    return null
   }
 
-  render() {
-    const { Blue, White, Green, Red, Black, styleName } = this.props;
+  render () {
+    const { Blue, White, Green, Red, Black, styleName } = this.props
 
     const className = cx(styles.Link, styleName, {
       Blue,
@@ -39,15 +38,15 @@ export default class Link extends Component {
       Green,
       Red,
       Black
-    });
+    })
 
     return (
       <a className={className} onClick={this.props.onClick}>
-          {this.renderIcon()}
-          <div className={styles.Text}>
-            {this.props.text}
-          </div>
+        {this.renderIcon()}
+        <div className={styles.Text}>
+          {this.props.text}
+        </div>
       </a>
-    );
+    )
   }
 }

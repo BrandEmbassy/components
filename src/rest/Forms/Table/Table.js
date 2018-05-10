@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
-import classNames from 'classnames/bind';
-import styles from './Table.css';
-import Checkbox from './../Checkbox/Checkbox';
-import Link from './../../Controls/Link/Link';
+import React, { Component } from 'react'
+import classNames from 'classnames/bind'
+import styles from './Table.css'
+import Checkbox from './../Checkbox/Checkbox'
+import Link from './../../Controls/Link/Link'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 export default class Table extends Component {
-  render() {
-    const { Fixed } = this.props;
+  render () {
+    const { Fixed } = this.props
 
     const className = cx(styles.Table, {
       Fixed
-    });
+    })
 
     return (
       <div className={className}>
         <table>
           <thead>
             <tr>
-                <th></th>
-                <th>Channel</th>
-                <th>Delaying messages</th>
-                <th>Default delay value</th>
-                <th>Maximum delay value</th>
-                <th></th>
-                <th></th>
+              <th />
+              <th>Channel</th>
+              <th>Delaying messages</th>
+              <th>Default delay value</th>
+              <th>Maximum delay value</th>
+              <th />
+              <th />
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <Checkbox name="nameA" id="xxx"/>
+                <Checkbox name='nameA' id='xxx' />
               </td>
               <td>
                 <span>acc.socialmedia@homecredit.co.id</span>
@@ -46,15 +46,15 @@ export default class Table extends Component {
               testtesttest
               </td>
               <td>
-                <Link Icon="be-icon-pencil" Blue text="Edit"/>
+                <Link Icon='be-icon-pencil' Blue text='Edit' />
               </td>
               <td>
-              <Link Icon="be-icon-trash"/>
+                <Link Icon='be-icon-trash' />
               </td>
             </tr>
             <tr>
               <td>
-                <Checkbox name="nameA" id="yyy"/>
+                <Checkbox name='nameA' id='yyy' />
               </td>
               <td>
                 <span>acc.nevim@nevim.co.id</span>
@@ -69,15 +69,15 @@ export default class Table extends Component {
               testtesttest31
               </td>
               <td>
-              <Link Icon="be-icon-pencil" Blue text="Edit"/>
+                <Link Icon='be-icon-pencil' Blue text='Edit' />
               </td>
               <td>
-              <Link Icon="be-icon-trash"/>
+                <Link Icon='be-icon-trash' />
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-    );
+    )
   }
 }

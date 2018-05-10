@@ -4,7 +4,7 @@
 
 [include]
 .*/src/.*
-.*/src/node_modules/.*
+
 [libs]
 
 [lints]

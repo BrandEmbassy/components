@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, object, boolean } from '@storybook/addon-knobs/react';
+import { withKnobs, text, object, boolean } from '@storybook/addon-knobs/react'
 
 import QuickReplies from '../src/package/components/ChatBot/Plugin/Element/QuickReplies'
 import Button from '../src/package/components/ChatBot/Plugin/Element/Button'
@@ -75,4 +75,4 @@ storiesOf('Chatbots Plugins', module)
   .add('Menu', () => <Plugin elements={object('elements', [menuElement])} onClick={clickHandler} />)
   .add('Gallery', () => <Plugin elements={object('elements', galleryElements)} onClick={clickHandler} />)
   .add('Text and buttons', () => <Plugin elements={object('elements', [textAndButtons])} onClick={clickHandler} />)
-  .add('Quick Replies', () => <Plugin elements={object('elements', quickReplies)} onClick={clickHandler} hideButtons={boolean('hideButtons', false)}/>)
+  .add('Quick Replies', () => <Plugin elements={object('elements', quickReplies)} onClick={clickHandler} hideButtons={boolean('hideButtons', false)} />)
