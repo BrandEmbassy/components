@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Notification.css'
 
 const cx = classNames.bind(styles)
 
-export default class Notification extends Component {
-  static get propTypes () {
-    return {
-      text: PropTypes.string,
-      Fixed: PropTypes.boolean,
-      isYellow: PropTypes.boolean,
-      isRed: PropTypes.boolean,
-      isGreen: PropTypes.boolean,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  text: string,
+  Fixed: boolean,
+  isYellow: boolean,
+  isRed: boolean,
+  isGreen: boolean,
+  styleName: string
+}
+
+export default class Notification extends React.Component<Props> {
 
   render () {
     const { Fixed, isYellow, isRed, isGreen, styleName } = this.props

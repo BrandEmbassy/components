@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
 import styles from './Breadcrumbs.css'
 
-export default class Breadcrumbs extends Component {
-  static get propTypes () {
-    return {
-      onClick: PropTypes.function
-    }
-  };
+type Props = {
+  onClick: Function,
+  children?: React.Node
+}
 
+export default class Breadcrumbs extends React.Component<Props> {
   render () {
     return (
       <div className={styles.Breadcrumbs}>

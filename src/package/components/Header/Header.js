@@ -1,18 +1,19 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Header.css'
 
 const cx = classNames.bind(styles)
 
-export default class Header extends Component {
-  static get propTypes () {
-    return {
-      title: PropTypes.string,
-      children: PropTypes.function,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  children?: React.Node,
+  title: string,
+  styleName: string
+}
+
+export default class Header extends React.Component<Props> {
 
   renderTitle (title) {
     if (!title) {

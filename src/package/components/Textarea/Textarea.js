@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Textarea.css'
 
 const cx = classNames.bind(styles)
 
-export default class Textarea extends Component {
-  static get propTypes () {
-    return {
-      children: PropTypes.Array,
-      name: PropTypes.string,
-      rows: PropTypes.number,
-      value: PropTypes.string,
-      placeholder: PropTypes.string,
-      isDisabled: PropTypes.boolean,
-      isError: PropTypes.boolean,
-      onChange: PropTypes.func,
-      desc: PropTypes.string,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  name: string,
+  rows: number,
+  value: string,
+  placeholder: string,
+  isDisabled: Function,
+  isError: Function,
+  onChange: Function,
+  desc: string,
+  styleName: string,
+  label: string
+}
+
+export default class Textarea extends React.Component<Props> {
 
   renderLabel () {
     if (this.props.label) {

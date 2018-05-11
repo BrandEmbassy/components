@@ -1,20 +1,23 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Selectbox.css'
 
 const cx = classNames.bind(styles)
 
-export default class Selectbox extends Component {
-  static get propTypes () {
-    return {
-      label: PropTypes.string,
-      isDisabled: PropTypes.boolean,
-      desc: PropTypes.string,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  label: string,
+  isDisabled: boolean,
+  isError: boolean,
+  desc: string,
+  styleName: string,
+  Wide: boolean
 
+}
+
+export default class Selectbox extends React.Component<Props> {
   render () {
     const { styleName, Wide, isDisabled, isError } = this.props
 

@@ -1,18 +1,19 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Label.css'
 
 const cx = classNames.bind(styles)
 
-export default class Label extends Component {
-  static get propTypes () {
-    return {
-      children: PropTypes.Array,
-      text: PropTypes.string,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  children?: React.Node,
+  text: string,
+  styleName: string
+}
+
+export default class Label extends React.Component<Props> {
 
   render () {
     const { styleName } = this.props

@@ -1,19 +1,20 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Statuses.css'
 
 const cx = classNames.bind(styles)
 
-export default class Statuses extends Component {
-  static get propTypes () {
-    return {
-      text: PropTypes.string,
-      status: PropTypes.string,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  text: string,
+  status: string,
+  styleName: string,
+  Reversed: boolean
+}
 
+export default class Statuses extends React.Component<Props> {
   renderText () {
     const { status } = this.props
 

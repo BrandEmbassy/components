@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Table.css'
-import Checkbox from './../Checkbox/Checkbox'
-import Link from './../Link/Link'
 
 const cx = classNames.bind(styles)
 
-export default class Table extends Component {
-  static get propTypes () {
-    return {
-      children: PropTypes.Array,
-      Fixed: PropTypes.boolean,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  children?: React.Node,
+  Fixed: boolean,
+  styleName: string
+}
+
+export default class Table extends React.Component<Props> {
 
   render () {
     const { styleName, Fixed } = this.props
@@ -40,7 +39,7 @@ export default class Table extends Component {
           <tbody>
             <tr>
               <td>
-                <Checkbox name='nameA' id='xxx' />
+               someting here
               </td>
               <td>
                 <span>acc.socialmedia@homecredit.co.id</span>
@@ -55,15 +54,15 @@ export default class Table extends Component {
               testtesttest
               </td>
               <td>
-                <Link Icon='be-icon-pencil' Blue text='Edit' />
+                maybe
               </td>
               <td>
-                <Link Icon='be-icon-trash' />
+                and here
               </td>
             </tr>
             <tr>
               <td>
-                <Checkbox name='nameA' id='yyy' />
+                some checkbox
               </td>
               <td>
                 <span>acc.nevim@nevim.co.id</span>
@@ -78,10 +77,10 @@ export default class Table extends Component {
               testtesttest31
               </td>
               <td>
-                <Link Icon='be-icon-pencil' Blue text='Edit' />
+                link
               </td>
               <td>
-                <Link Icon='be-icon-trash' />
+                link
               </td>
             </tr>
           </tbody>

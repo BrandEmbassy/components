@@ -1,7 +1,13 @@
-import React, { PureComponent } from 'react'
+// @flow
+
+import * as React from 'react'
 import '!style-loader!css-loader!./../styles/Base.css' //eslint-disable-line
 
-export default class Global extends PureComponent {
+type Props = {
+  children?: React.Node
+}
+
+export default class Global extends React.PureComponent<Props> {
   render () {
     return (
       <div>

@@ -1,22 +1,23 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Channel.css'
 
 const cx = classNames.bind(styles)
 
-export default class Picture extends Component {
-  static get propTypes () {
-    return {
-      styleName: PropTypes.string,
-      type: PropTypes.string,
-      Size60: PropTypes.string,
-      Size40: PropTypes.string,
-      Size20: PropTypes.string,
-      Size16: PropTypes.string,
-      DM: PropTypes.string
-    }
-  };
+type Props = {
+  styleName: string,
+  type: string,
+  Size60: string,
+  Size40: string,
+  Size20: string,
+  Size16: string,
+  DM: string
+}
+
+export default class Picture extends React.Component<Props> {
 
   render () {
     const { styleName, type, Size60, Size40, Size20, Size16, DM } = this.props
