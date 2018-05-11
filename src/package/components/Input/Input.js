@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Input.css'
 
 const cx = classNames.bind(styles)
 
-export default class Input extends Component {
-  static get propTypes () {
-    return {
-      onChange: PropTypes.Func,
-      label: PropTypes.string,
-      name: PropTypes.string,
-      type: PropTypes.string,
-      value: PropTypes.string,
-      placeholder: PropTypes.string,
-      isDisabled: PropTypes.boolean,
-      desc: PropTypes.string,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  onChange: Function,
+  label: string,
+  name: string,
+  type: string,
+  value: string,
+  placeholder: string,
+  isDisabled: boolean,
+  isError: boolean,
+  desc: string,
+  styleName: string
+}
 
+export default class Input extends React.Component<Props> {
   renderLabel () {
     if (this.props.label) {
       return (

@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
 import styles from './ButtonGroup.css'
 
-export default class ButtonGroup extends Component {
-  static get propTypes () {
-    return {
-      children: PropTypes.Array
-    }
-  };
+type Props = {
+  children?: React.Node
+}
 
+export default class ButtonGroup extends React.Component<Props> {
   render () {
     return (
       <div className={styles.ButtonGroup}>

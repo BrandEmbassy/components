@@ -46,12 +46,13 @@
     "babel-runtime": "6.26.0"
   },
   "scripts": {
+    "jest": "jest",
     "start": "node scripts/start.js",
-    "postinstall": "npm run build",
-    "build": "npm run lib",
-    "pretest": "npm run lint",
-    "test": "npm run flow && jest",
-    "lint": "standard './src/**/*.js' './stories/**/*.js'",
+    "postinstall": "yarn run build",
+    "build": "yarn run lib",
+    "pretest": "yarn run lint && npm run flow",
+    "test": "yarn run jest",
+    "lint": "standard './src/**/*.js' './stories/**/*.js' './src/**/*.jsx'",
     "lib": "babel src/package --out-dir lib --copy-files",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

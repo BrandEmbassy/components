@@ -1,19 +1,24 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Switcher.css'
 
 const cx = classNames.bind(styles)
 
-export default class Switcher extends Component {
-  static get propTypes () {
-    return {
-      isActive: PropTypes.boolean,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  title: string,
+  styleName: string,
+  isActive: boolean
+}
 
-  constructor (props) {
+type State = {
+  isActive: boolean
+}
+
+export default class Switcher extends React.Component<Props, State> {
+  constructor (props: Props) {
     super(props)
     this.state = { isActive: this.props.isActive }
   }

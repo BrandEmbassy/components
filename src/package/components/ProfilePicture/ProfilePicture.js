@@ -1,23 +1,23 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './ProfilePicture.css'
 
 const cx = classNames.bind(styles)
 
-export default class ProfilePicture extends Component {
-  static get propTypes () {
-    return {
-      imgSrc: PropTypes.string,
-      Size60: PropTypes.string,
-      Size40: PropTypes.string,
-      Size24: PropTypes.string,
-      Size20: PropTypes.string,
-      Size16: PropTypes.string,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  imgSrc: string,
+  Size60: string,
+  Size40: string,
+  Size24: string,
+  Size20: string,
+  Size16: string,
+  styleName: string
+}
 
+export default class ProfilePicture extends React.Component<Props> {
   render () {
     const { styleName, Size60, Size40, Size24, Size20, Size16 } = this.props
 
