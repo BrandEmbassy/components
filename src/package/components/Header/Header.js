@@ -14,8 +14,7 @@ type Props = {
 }
 
 export default class Header extends React.Component<Props> {
-
-  renderTitle (title) {
+  renderTitle (title: string): ?React.Node {
     if (!title) {
       return null
     }

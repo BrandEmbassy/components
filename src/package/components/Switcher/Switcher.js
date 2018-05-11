@@ -13,9 +13,12 @@ type Props = {
   isActive: boolean
 }
 
-export default class Switcher extends React.Component<Props> {
+type State = {
+  isActive: boolean
+}
 
-  constructor (props) {
+export default class Switcher extends React.Component<Props, State> {
+  constructor (props: Props) {
     super(props)
     this.state = { isActive: this.props.isActive }
   }
