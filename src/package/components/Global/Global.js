@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from 'react'
+// @flow-skip-next-line
 import '!style-loader!css-loader!./../styles/Base.css' //eslint-disable-line
 
 type Props = {
