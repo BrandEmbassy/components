@@ -20,7 +20,6 @@ type Props = {
 }
 
 export default class Link extends React.Component<Props> {
-
   renderIcon () {
     if (this.props.Icon) {
       return (

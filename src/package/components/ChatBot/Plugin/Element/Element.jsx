@@ -18,9 +18,9 @@ export default function Element (props) {
   if (type === ElementType.BUTTON) {
     return <Button label={text} onClick={onClick} postback={postback} />
   }
-  if (headingType.indexOf(type) > -1) {
+  if (headingType.indexOf(type) > -1) {
     const level = type === ElementType.SUBTITLE ? SUBTITLE_HEADING_LEVEL : TITLE_HEADING_LEVEL
-    return <Heading content={text} level={level}/>
+    return <Heading content={text} level={level} />
   }
   if (type === ElementType.TEXT) {
     return <Text content={text} showAsMessage={showTextAsMessage} />

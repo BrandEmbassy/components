@@ -15,7 +15,6 @@ type Props = {
 }
 
 export default class Radio extends React.Component<Props> {
-
   render () {
     const { styleName } = this.props
 

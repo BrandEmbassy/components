@@ -15,7 +15,6 @@ type Props = {
 }
 
 export default class Checkbox extends React.Component<Props> {
-
   render () {
     const { styleName } = this.props
 

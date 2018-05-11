@@ -17,7 +17,6 @@ type Props = {
 }
 
 export default class Notification extends React.Component<Props> {
-
   render () {
     const { Fixed, isYellow, isRed, isGreen, styleName } = this.props
 

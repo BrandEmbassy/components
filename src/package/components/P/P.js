@@ -13,7 +13,6 @@ type Props = {
 }
 
 export default class P extends React.Component<Props> {
-
   render () {
     const { styleName } = this.props
 

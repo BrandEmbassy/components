@@ -18,7 +18,6 @@ type Props = {
 }
 
 export default class ProfilePicture extends React.Component<Props> {
-
   render () {
     const { styleName, Size60, Size40, Size24, Size20, Size16 } = this.props
 

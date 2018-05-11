@@ -21,7 +21,6 @@ type Props = {
 }
 
 export default class Input extends React.Component<Props> {
-
   renderLabel () {
     if (this.props.label) {
       return (

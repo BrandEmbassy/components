@@ -14,7 +14,6 @@ type Props = {
 }
 
 export default class Label extends React.Component<Props> {
-
   render () {
     const { styleName } = this.props
 
