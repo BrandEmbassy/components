@@ -27,7 +27,15 @@ export default class QuickReplies extends PureComponent {
     return (
       <div className={styles.ButtonsGroup}>
         {this.getButtons().map(({ text, id, postback }) => {
-          return <button className={styles.QuickReplyButton} key={id} onClick={this.createOnClickHandler(postback, text)}>{text}</button>
+          return (
+            <button
+              key={id}
+              className={styles.QuickReplyButton}
+              title={text}
+              onClick={this.createOnClickHandler(postback, text)}>
+              {text}
+            </button>
+          )
         })}
       </div>
     )
