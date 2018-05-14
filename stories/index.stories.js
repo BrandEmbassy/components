@@ -19,7 +19,6 @@ import ButtonGroupDemo from './../src/Demos/Controls/ButtonGroupDemo'
 import LinkDemo from './../src/Demos/Controls/LinkDemo'
 
 import BreadcrumbsDemo from './../src/Demos/Navigation/BreadcrumbsDemo'
-import DropdownDemo from './../src/Demos/Navigation/DropdownDemo'
 
 import HeaderDemo from './../src/Demos/Custom/HeaderDemo'
 import LabelDemo from './../src/Demos/Custom/LabelDemo'
@@ -53,7 +52,6 @@ storiesOf('Controls', module)
 
 storiesOf('Navigation', module)
   .add('Breadcrumbs', () => <BreadcrumbsDemo />)
-  .add('Dropdown', () => <DropdownDemo />)
 
 storiesOf('Custom', module)
   .add('Header', () => <HeaderDemo />)
