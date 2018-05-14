@@ -61,7 +61,8 @@
     "cleanup": "rm -f build/static/css/main.css && rm -r build/static/js",
     "flow": "flow check",
     "flow:watch": "flow",
-    "flow-typed": "flow-typed install"
+    "flow-typed": "flow-typed install",
+    "build:ostrava": "node scripts/build.js && yarn concat-css"
   },
   "jest": {
     "collectCoverageFrom": [
