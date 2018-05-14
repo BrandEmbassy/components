@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './H2.css'
 
 const cx = classNames.bind(styles)
 
-export default class H2 extends Component {
-  static get propTypes () {
-    return {
-      children: PropTypes.Array,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  children?: React.Node,
+  styleName: string
+}
 
+export default class H2 extends React.Component<Props> {
   render () {
     const { styleName } = this.props
 

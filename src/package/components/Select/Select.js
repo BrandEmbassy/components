@@ -1,20 +1,22 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Select.css'
 
 const cx = classNames.bind(styles)
 
-export default class Select extends Component {
-  static get propTypes () {
-    return {
-      label: PropTypes.string,
-      isDisabled: PropTypes.boolean,
-      desc: PropTypes.string,
-      styleName: PropTypes.string
-    }
-  };
+type Props = {
+  label: string,
+  isDisabled: boolean,
+  desc: string,
+  styleName: string,
+  Wide: boolean,
+  isError: boolean
+}
 
+export default class Select extends React.Component<Props> {
   render () {
     const { styleName, Wide, isDisabled, isError } = this.props
 

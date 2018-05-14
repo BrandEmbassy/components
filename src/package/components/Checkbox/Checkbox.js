@@ -1,20 +1,20 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Checkbox.css'
 
 const cx = classNames.bind(styles)
 
-export default class Checkbox extends Component {
-  static get propTypes () {
-    return {
-      styleName: PropTypes.string,
-      label: PropTypes.string,
-      name: PropTypes.string,
-      id: PropTypes.string
-    }
-  };
+type Props = {
+  styleName: string,
+  label: string,
+  name: string,
+  id: string
+}
 
+export default class Checkbox extends React.Component<Props> {
   render () {
     const { styleName } = this.props
 

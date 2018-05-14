@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+
+import * as React from 'react'
+// @flow-skip-next-line
 import '!style-loader!css-loader!./../styles/Base.css' //eslint-disable-line
 
-export default class Global extends Component {
-  static get propTypes () {
-    return {
-      children: PropTypes.Array
-    }
-  };
+type Props = {
+  children?: React.Node
+}
 
+export default class Global extends React.PureComponent<Props> {
   render () {
     return (
       <div>

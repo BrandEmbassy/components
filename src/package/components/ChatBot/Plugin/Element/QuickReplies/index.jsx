@@ -4,14 +4,13 @@ import Bubble from '../Text/Bubble'
 import styles from './index.css'
 
 export default class QuickReplies extends PureComponent {
-
-  getTextElement() {
+  getTextElement () {
     const { elements } = this.props
     const textElements = elements.filter((el) => el.type === ElementType.TEXT)
     return textElements[0] ? textElements[0] : null
   }
 
-  getButtons() {
+  getButtons () {
     const { elements } = this.props
     return elements.filter((el) => el.type === ElementType.BUTTON)
   }
@@ -24,23 +23,22 @@ export default class QuickReplies extends PureComponent {
     return onClick(postback, text)
   }
 
-  renderButtons() {
-    const { onClick } = this.props;
+  renderButtons () {
     return (
       <div className={styles.ButtonsGroup}>
         {this.getButtons().map(({ text, id, postback }) => {
           return <button className={styles.QuickReplyButton} key={id} onClick={this.createOnClickHandler(postback, text)}>{text}</button>
         })}
       </div>
-    );
+    )
   }
 
-  renderMessage(textElement) {
+  renderMessage (textElement) {
     return <div className={styles.Message}><Bubble text={textElement.text} /></div>
   }
 
-  render() {
-    const { elements, hideButtons } = this.props;
+  render () {
+    const { hideButtons } = this.props
     const textElement = this.getTextElement()
 
     return (
@@ -50,5 +48,4 @@ export default class QuickReplies extends PureComponent {
       </div>
     )
   }
-
 }

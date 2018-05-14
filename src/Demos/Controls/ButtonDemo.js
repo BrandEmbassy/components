@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Button from './../../package/components/Button/Button'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
@@ -8,7 +8,7 @@ import beautify from 'js-beautify'
 
 const importComponent = `import { Button } from 'components';`
 
-export default class ButtonDemo extends Component {
+export default class ButtonDemo extends PureComponent {
   render () {
     return (
       <div className='container'>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import ButtonGroup from './../../package/components/ButtonGroup/ButtonGroup'
 import Button from './../../package/components/Button/Button'
@@ -9,7 +9,7 @@ import beautify from 'js-beautify'
 
 const importComponent = `import { ButtonGroup } from 'components';`
 
-export default class ButtonGroupDemo extends Component {
+export default class ButtonGroupDemo extends PureComponent {
   render () {
     return (
       <div className='container'>

@@ -22,7 +22,6 @@ import H3 from './package/components/H3'
 import P from './package/components/P'
 import Global from './package/components/Global'
 
-
 export default class App extends Component {
   render () {
     return (
@@ -36,14 +35,8 @@ export default class App extends Component {
         <div className={styles.Flex} >
           <div className='row'>
             <div className='col-xs'>
-              <b><a href='http://localhost:6006'>Open</a></b> component library
               <br /><br />
-              <Dropdown toggleDefault='Select Channel'>
-                <DropdownMenu >
-                  <DropdownItem><Channel Facebook Size24 />Facebook</DropdownItem>
-                  <DropdownItem><Channel Twitter Size24 />Twitter</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
+              <b><a href='http://localhost:6006'>Open</a></b> component library
               <br /><br />
               <H1>test H1</H1>
               <H2>test H2</H2>
