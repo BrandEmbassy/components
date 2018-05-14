@@ -62,7 +62,7 @@
     "flow": "flow check",
     "flow:watch": "flow",
     "flow-typed": "flow-typed install",
-    "build:ostrava": "node scripts/build.js && concact-css"
+    "build:ostrava": "node scripts/build.js && yarn concat-css"
   },
   "jest": {
     "collectCoverageFrom": [
