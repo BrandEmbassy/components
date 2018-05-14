@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactResizeDetector from 'react-resize-detector'
 import ComposedElement from './Element/ComposedElement'
 import ElementType from './Element/ElementType'
 import styles from './index.css'
@@ -48,6 +49,7 @@ class Plugin extends Component {
   renderCarusel (elements, onClick) {
     return (
       <div className={styles.PluginFrameWrapper}>
+        <ReactResizeDetector handleWidth />
         <div className={styles.ArrowWrapper}>
           {<div className={styles.LeftRow} onMouseLeave={this.stopScroll} onMouseUp={this.stopScroll} onMouseDown={this.handleLeftArrowClick} />}
         </div>
