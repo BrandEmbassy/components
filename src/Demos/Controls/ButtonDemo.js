@@ -43,71 +43,71 @@ export default class ButtonDemo extends PureComponent {
             <h2 className='h2'>cancel</h2>
             <Button text='button' isNegative Icon='be-icon-cross' />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='button' isNegative Icon='be-icon-cross' />))}
+              {beautify.html(renderToString(<Button text='button' Negative Icon='be-icon-cross' />))}
             </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-5 '>
             <h2 className='h2'>Negative</h2>
-            <Button text='Button' isNegative />
+            <Button text='Button' Negative />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='Button' isNegative />))}
+              {beautify.html(renderToString(<Button text='Button' Negative />))}
             </SyntaxHighlighter>
           </div>
           <div className='col-xs-5 col-xs-offset-1'>
             <h2 className='h2'>small</h2>
-            <Button text='button' isNegative Small />
+            <Button text='button' Negative Small />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='button' isNegative Small />))}
+              {beautify.html(renderToString(<Button text='button' Negative Small />))}
             </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-5 '>
             <h2 className='h2'>Disabled</h2>
-            <Button text='Button' isDisabled />
+            <Button text='Button' Disabled />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='Button' isDisabled />))}
+              {beautify.html(renderToString(<Button text='Button' Disabled />))}
             </SyntaxHighlighter>
           </div>
           <div className='col-xs-5 col-xs-offset-1'>
             <h2 className='h2'>small</h2>
-            <Button text='button' isDisabled Small />
+            <Button text='button' Disabled Small />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='button' isDisabled Small />))}
+              {beautify.html(renderToString(<Button text='button' Disabled Small />))}
             </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-5 '>
             <h2 className='h2'>Cancel</h2>
-            <Button text='Button' isCancel />
+            <Button text='Button' Cancel />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='Button' isCancel />))}
+              {beautify.html(renderToString(<Button text='Button' Cancel />))}
             </SyntaxHighlighter>
           </div>
           <div className='col-xs-5 col-xs-offset-1'>
             <h2 className='h2'>small</h2>
-            <Button text='button' isCancel Small />
+            <Button text='button' Cancel Small />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='button' isCancel Small />))}
+              {beautify.html(renderToString(<Button text='button' Cancel Small />))}
             </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-5 '>
             <h2 className='h2'>Reversed</h2>
-            <Button text='Button' isReversed />
+            <Button text='Button' Reversed />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='Button' isReversed />))}
+              {beautify.html(renderToString(<Button text='Button' Reversed />))}
             </SyntaxHighlighter>
           </div>
           <div className='col-xs-5 col-xs-offset-1'>
             <h2 className='h2'>small</h2>
-            <Button text='button' isReversed Small />
+            <Button text='button' Reversed Small />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Button text='button' isReversed Small />))}
+              {beautify.html(renderToString(<Button text='button' Reversed Small />))}
             </SyntaxHighlighter>
           </div>
         </div>

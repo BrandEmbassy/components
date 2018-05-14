@@ -25,11 +25,11 @@ export default class ButtonGroupDemo extends PureComponent {
               <Button text='buttonA' >
                 <div className='be-icon-plus' />
               </Button>
-              <Button text='buttonB' isNegative />
-              <Button text='buttonC' isDisabled />
+              <Button text='buttonB' Negative />
+              <Button text='buttonC' Disabled />
               <Button text='buttonD' />
-              <Button text='buttonE' isDisabled />
-              <Button text='buttonF' isNegative />
+              <Button text='buttonE' Disabled />
+              <Button text='buttonF' Negative />
             </ButtonGroup>
           </div>
         </div>
@@ -40,11 +40,11 @@ export default class ButtonGroupDemo extends PureComponent {
                 <Button text='buttonA' >
                   <div className='be-icon-plus' />
                 </Button>
-                <Button text='buttonB' isNegative />
-                <Button text='buttonC' isDisabled />
+                <Button text='buttonB' Negative />
+                <Button text='buttonC' Disabled />
                 <Button text='buttonD' />
-                <Button text='buttonE' isDisabled />
-                <Button text='buttonF' isNegative />
+                <Button text='buttonE' Disabled />
+                <Button text='buttonF' Negative />
               </ButtonGroup>))}
             </SyntaxHighlighter>
           </div>
