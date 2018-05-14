@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
-import Dropdown from './../../package/components/Dropdown/Dropdown'
-import DropdownToggle from './../../package/components/DropdownToggle/DropdownToggle'
-import DropdownMenu from './../../package/components/DropdownMenu/DropdownMenu'
-import DropdownItem from './../../package/components/DropdownItem/DropdownItem'
 
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
@@ -38,27 +34,11 @@ export default class DropdownDemo extends Component {
       <div className={styles.App}>
         <div className='row padding-20'>
           <div className='col-xs-12'>
-            <h3 className='h3'>{importComponent}</h3>
-            <Dropdown>
-              <DropdownToggle onClick={this.toggle} >
-                Select Channel
-              </DropdownToggle>
-              <DropdownMenu isOpen={this.state.dropdownOpen} >
-                <DropdownItem onClick={this.toggle2}>Facebook</DropdownItem>
-                <DropdownItem>Twitter</DropdownItem>
-                <DropdownItem>vkontakte</DropdownItem>
-                <DropdownItem>Twitter</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+   
+            
           </div>
         </div>
-        <div className='row'>
-          <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Dropdown isActive />))}
-            </SyntaxHighlighter>
-          </div>
-        </div>
+ 
       </div>
     )
   }
