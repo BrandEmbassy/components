@@ -22,9 +22,6 @@ import H3 from './package/components/H3'
 import P from './package/components/P'
 import Global from './package/components/Global'
 
-import Dropdown from './package/components/Dropdown/Dropdown'
-import DropdownMenu from './package/components/DropdownMenu/DropdownMenu'
-import DropdownItem from './package/components/DropdownItem/DropdownItem'
 
 export default class App extends Component {
   render () {
