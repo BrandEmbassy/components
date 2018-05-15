@@ -1,87 +1,13 @@
-import React, { Component } from 'react'
-import ReactResizeDetector from 'react-resize-detector'
+import React, { PureComponent } from 'react'
+import Plugin from './Plugin'
+import Carusel from './Carusel'
 import ComposedElement from './Element/ComposedElement'
 import ElementType from './Element/ElementType'
-import styles from './index.css'
 
-class Plugin extends Component {
+export default class PluginWrapper extends PureComponent {
   static defaultProps = {
     elements: [],
     hidePostbackControls: false
-  }
-
-  scroller = null
-  requestAnimationFrameId = null
-
-  SCROLL_DIRECTION_RIGHT = 1
-  SCROLL_DIRECTION_LEFT = -1
-
-  scrollTo = (direction) => {
-    if (this.scroller !== null) {
-      this.scroller.scrollLeft += (direction * 10)
-    }
-    this.requestAnimationFrameId = requestAnimationFrame(() => this.scrollTo(direction))
-  }
-
-  stopScroll = () => {
-    cancelAnimationFrame(this.requestAnimationFrameId)
-  }
-
-  startScroll = (direction) => {
-    if (this.requestAnimationFrameId !== null) {
-      cancelAnimationFrame(this.requestAnimationFrameId)
-    }
-    this.requestAnimationFrameId = requestAnimationFrame(() => this.scrollTo(direction))
-  }
-
-  handleLeftArrowClick = () => {
-    this.startScroll(this.SCROLL_DIRECTION_LEFT)
-  }
-
-  handleRightArrowClick = () => {
-    this.startScroll(this.SCROLL_DIRECTION_RIGHT)
-  }
-
-  handleRef = (element) => {
-    this.scroller = element
-  }
-
-  renderCarusel (elements, onClick) {
-    return (
-      <div className={styles.PluginFrameWrapper}>
-        <ReactResizeDetector handleWidth />
-        <div className={styles.ArrowWrapper}>
-          {<div className={styles.LeftRow} onMouseLeave={this.stopScroll} onMouseUp={this.stopScroll} onMouseDown={this.handleLeftArrowClick} />}
-        </div>
-        <div className={styles.PluginFrame} ref={this.handleRef}>
-          <div className={styles.Carusel}>
-            {elements.map(element => (<div className={styles.Plugin}>
-              {this.renderRawElement(element.elements, onClick)}
-            </div>))}
-          </div>
-        </div>
-        <div className={styles.ArrowWrapper}>
-          {<div className={styles.RightRow} onMouseLeave={this.stopScroll} onMouseUp={this.stopScroll} onMouseDown={this.handleRightArrowClick} />}
-        </div>
-      </div>
-    )
-  }
-
-  renderPlugin (elements, onClick) {
-    return (
-      <div className={styles.PluginFrameWrapper}>
-        <div className={styles.PluginFrame}>
-          <div className={styles.Plugin}>
-            {this.renderRawElement(elements, onClick)}
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  renderRawElement (elements, onClick) {
-    const { hideButtons } = this.props
-    return (<ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />)
   }
 
   isPluginWithoutWrapper (element) {
@@ -89,15 +15,13 @@ class Plugin extends Component {
   }
 
   render () {
-    const { elements, onClick } = this.props
+    const { elements, onClick, hideButtons } = this.props
     if (elements.length > 1) {
-      return this.renderCarusel(elements, onClick)
+      return <Carusel elements={elements} onClick={onClick} hideButtons={hideButtons}  />
     } else if (this.isPluginWithoutWrapper(elements[0])) {
-      return this.renderRawElement(elements, onClick)
+      return <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else {
-      return this.renderPlugin(elements, onClick)
+      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} />
     }
   }
 }
-
-export default Plugin
