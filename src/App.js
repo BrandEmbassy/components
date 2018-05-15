@@ -1,26 +1,30 @@
 import React, { Component } from 'react'
-
 import './styles/Base.css'
 import styles from './App.css'
 
-import Button from './package/components/Button'
-import Link from './package/components/Link'
-import Header from './package/components/Header'
 import Breadcrumbs from './package/components/Breadcrumbs'
+import Button from './package/components/Button'
+import ButtonGroup from './package/components/ButtonGroup'
+import Global from './package/components/Global'
+import H1 from './package/components/H1'
+import H2 from './package/components/H2'
+import H3 from './package/components/H3'
+import Header from './package/components/Header'
 import Channel from './package/components/Channel'
 import Checkbox from './package/components/Checkbox'
 import Input from './package/components/Input'
 import Label from './package/components/Label'
+import Link from './package/components/Link'
+import Notification from './package/components/Notification'
+import P from './package/components/P'
+import ProfilePicture from './package/components/ProfilePicture'
 import Radio from './package/components/Radio'
+import Selectbox from './package/components/Selectbox'
+import Statuses from './package/components/Statuses'
+import Submit from './package/components/Submit'
 import Table from './package/components/Table'
 import Tag from './package/components/Tag'
 import Textarea from './package/components/Textarea'
-import Statuses from './package/components/Statuses'
-import H1 from './package/components/H1'
-import H2 from './package/components/H2'
-import H3 from './package/components/H3'
-import P from './package/components/P'
-import Global from './package/components/Global'
 
 export default class App extends Component {
   render () {
@@ -186,6 +190,7 @@ export default class App extends Component {
               <div className='row padding-10'>
                 <div className='col-xs-12'>
                   <h3 className='h3'>Notification message</h3>
+                  <Notification isRed text="notif text"/>
                 </div>
               </div>
             </div>
@@ -211,6 +216,15 @@ export default class App extends Component {
               <div className='row'>
                 <div className='col-xs-12'>
                   <Button text='Send Form Wide' Wide />
+
+                  <ButtonGroup>
+                    <Button text='Send Form ' />
+                    <Button text='Send Form ' />
+                    <Button text='Send Form ' />
+                  </ButtonGroup>
+                  <ProfilePicture />
+                  <Selectbox />
+                  <Submit />
                 </div>
               </div>
             </div>
