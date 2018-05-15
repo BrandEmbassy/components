@@ -4,6 +4,7 @@ import '!style-loader!css-loader!./GridDemo.css' //eslint-disable-line
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
 import styles from './../../App.css'
+import Global from './../../package/components/Global/Global'
 
 const importComponent = `import { Global } from 'components';`
 
@@ -11,6 +12,7 @@ export default class Grid extends Component {
   render () {
     return (
       <div className={styles.App}>
+        <Global />
         <div className={styles.Static}>
           <div className='row'>
             <div className='col-xs-12'>
