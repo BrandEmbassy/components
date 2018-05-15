@@ -1,6 +1,6 @@
+// @flow
 import React, { PureComponent } from 'react'
 import ReactResizeDetector from 'react-resize-detector'
-import SwipeableViews from 'react-swipeable-views'
 import ComposedElement from './Element/ComposedElement'
 import styles from './index.css'
 
@@ -10,10 +10,8 @@ type Props = {
   hideButtons: boolean
 }
 
-
 export default class Gallery extends PureComponent<Props> {
-
-  render() {
+  render () {
     const { elements, onClick, hideButtons } = this.props
 
     return (

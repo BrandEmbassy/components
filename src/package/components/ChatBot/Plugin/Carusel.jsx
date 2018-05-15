@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from 'react'
 import ReactResizeDetector from 'react-resize-detector'
 import SwipeableViews from 'react-swipeable-views'

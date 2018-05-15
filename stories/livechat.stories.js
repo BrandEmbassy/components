@@ -62,6 +62,7 @@ const clickHandler = (postback, label) => console.log(postback, label)
 
 storiesOf('Chatbots elements', module)
   .addDecorator(withKnobs)
+  .addDecorator(withGrayBackground)
 
   .add('Button', () => <Button label={text('label', 'Click me!')} />)
   .add('Heading', () => <Heading content={text('content', 'Lorem Ipsum!')} />)
