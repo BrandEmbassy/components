@@ -7,7 +7,7 @@ import styles from './index.css'
 type Props = {
   elements: Array<any>,
   onClick: Function,
-  hideButtons: boolean
+  hideButtons?: boolean
 }
 
 export default class Gallery extends PureComponent<Props> {
@@ -19,7 +19,7 @@ export default class Gallery extends PureComponent<Props> {
         <div className={styles.PluginFrame}>
           <ReactResizeDetector />
           {elements.map(element => (
-            <div className={styles.Plugin}>
+            <div className={styles.Plugin} key={element.id}>
               <ComposedElement elements={element.elements} onClick={onClick} hideButtons={hideButtons} />
             </div>
           ))}

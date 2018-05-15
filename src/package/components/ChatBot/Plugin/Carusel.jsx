@@ -6,9 +6,9 @@ import ComposedElement from './Element/ComposedElement'
 import styles from './index.css'
 
 type Props = {
-  elements: Array<any>,
+  elements: Array<Object>,
   onClick: Function,
-  hideButtons: boolean
+  hideButtons?: boolean
 }
 
 type State = {
@@ -19,11 +19,8 @@ export default class Carusel extends PureComponent<Props, State> {
   SCROLL_DIRECTION_RIGHT = 1
   SCROLL_DIRECTION_LEFT = -1
 
-  constructor (props) {
-    super(props)
-    this.state = {
-      index: 0
-    }
+  state = {
+    index: 0
   }
 
   handleLeftArrowClick = () => {
@@ -34,11 +31,11 @@ export default class Carusel extends PureComponent<Props, State> {
     this.swipe(this.SCROLL_DIRECTION_RIGHT)
   }
 
-  handleChangeIndex = (index) => {
+  handleChangeIndex = (index: number) => {
     this.setState({ index })
   }
 
-  swipe = (direction) => {
+  swipe = (direction: number) => {
     const { index } = this.state
     const { elements } = this.props
 
@@ -63,7 +60,7 @@ export default class Carusel extends PureComponent<Props, State> {
           <ReactResizeDetector />
           <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
             {elements.map(element => (
-              <div className={styles.Plugin}>
+              <div className={styles.Plugin} key={element.id}>
                 <ComposedElement elements={element.elements} onClick={onClick} hideButtons={hideButtons} />
               </div>
             ))}

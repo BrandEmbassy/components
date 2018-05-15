@@ -1,3 +1,4 @@
+// @flow
 import React, { PureComponent } from 'react'
 import Plugin from './Plugin'
 import Carusel from './Carusel'
@@ -5,13 +6,21 @@ import Gallery from './Gallery'
 import ComposedElement from './Element/ComposedElement'
 import ElementType from './Element/ElementType'
 
-export default class PluginWrapper extends PureComponent {
+type Props = {
+  disableCarusel?: boolean,
+  hideButtons?: boolean,
+  onClick: Function,
+  elements: Array<Object>
+}
+
+export default class PluginWrapper extends PureComponent<Props> {
   static defaultProps = {
     elements: [],
-    hidePostbackControls: false
+    hideButtons: false,
+    disableCarusel: false
   }
 
-  isPluginWithoutWrapper (element) {
+  isPluginWithoutWrapper (element: any) {
     return element && element.type === ElementType.QUICK_REPLIES
   }
 

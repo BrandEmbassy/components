@@ -7,7 +7,7 @@ import styles from './index.css'
 type Props = {
   elements: Array<any>,
   onClick: Function,
-  hideButtons: boolean,
+  hideButtons?: boolean
 }
 
 export default class Plugin extends PureComponent<Props> {
