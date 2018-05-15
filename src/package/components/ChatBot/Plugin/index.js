@@ -17,7 +17,7 @@ export default class PluginWrapper extends PureComponent {
   render () {
     const { elements, onClick, hideButtons } = this.props
     if (elements.length > 1) {
-      return <Carusel elements={elements} onClick={onClick} hideButtons={hideButtons}  />
+      return <Carusel elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else if (this.isPluginWithoutWrapper(elements[0])) {
       return <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else {

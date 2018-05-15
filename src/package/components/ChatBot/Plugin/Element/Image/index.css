@@ -1,11 +1,17 @@
 .Image {
   padding: 0;
   margin: 0 ;
-
+  width: 100%;
+  padding-top: 52%;
+  overflow: hidden;
+  position: relative
+  ;
   & img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    float: left;
     height: auto;
-    max-height: 200px;
+    object-fit: cover;
   }
 }
