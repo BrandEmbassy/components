@@ -1,12 +1,12 @@
 .Heading {
   font-size : 16px;
-  margin: 14px;
-  margin-bottom: 10px;
+  padding: 2px 10px;
+  margin: 0;
   display: block;
 }
 .SubHeading {
   font-size : 13px;
-  margin: 14px;
-  margin-bottom: 10px;
+  padding: 2px 10px;
+  margin: 0;
   display: block;
 }
