@@ -1,8 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react'
 import ReactResizeDetector from 'react-resize-detector'
-import SwipeableViews from 'react-swipeable-views'
-import ComposedElement from './Element/ComposedElement'
+import CaruselItems from './CaruselItems'
 import styles from './index.css'
 
 type Props = {
@@ -48,7 +47,6 @@ export default class Carusel extends PureComponent<Props, State> {
   }
 
   render () {
-    const { elements, onClick, hideButtons } = this.props
     const { index } = this.state
 
     return (
@@ -58,13 +56,7 @@ export default class Carusel extends PureComponent<Props, State> {
         </div>
         <div className={styles.PluginFrame}>
           <ReactResizeDetector />
-          <SwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
-            {elements.map(element => (
-              <div className={styles.Plugin} key={element.id}>
-                <ComposedElement elements={element.elements} onClick={onClick} hideButtons={hideButtons} />
-              </div>
-            ))}
-          </SwipeableViews>
+          <CaruselItems {...this.props} index={index} handleChangeIndex={this.handleChangeIndex} />
         </div>
         <div className={styles.ArrowWrapper}>
           {<div className={styles.RightRow} onMouseDown={this.handleRightArrowClick} />}
