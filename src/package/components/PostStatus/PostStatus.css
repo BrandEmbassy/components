@@ -1,0 +1,48 @@
+.PostStatus {
+  position: relative;
+  display: inline-flex;
+  align-self: center;
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  padding: 4px 8px;
+  line-height: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4d4d4d;
+  border: solid 2px #dadada;
+  border-radius: 3px;
+  text-decoration: none;
+  user-select: none;
+  text-transform: uppercase;
+
+  &.New {
+    color: #E9575B;
+    border-color: #E9575B;
+
+    &.Reversed {
+      color: #ffffff;
+      background-color: #E9575B;
+    }
+  }
+
+  &.Draft {
+    color: #F57D4A;
+    border-color: #F57D4A;
+
+    &.Reversed {
+      color: #ffffff;
+      background-color: #F57D4A;
+    }
+  }
+  
+  &.Post {
+    color: #31B272;
+    border-color: #31B272;
+
+    &.Reversed {
+      color: #ffffff;
+      background-color: #31B272;
+    }
+  }
+}
