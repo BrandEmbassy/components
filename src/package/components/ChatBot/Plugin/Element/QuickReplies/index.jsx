@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react'
+import memoize from 'lodash.memoize'
 import ElementType from '../ElementType'
 import Bubble from '../Text/Bubble'
 import styles from './index.css'
@@ -23,6 +24,8 @@ export default class QuickReplies extends PureComponent {
     return onClick(postback, text)
   }
 
+  memoizedCreateOnClickHandler = memoize(this.createOnClickHandler)
+
   renderButtons () {
     return (
       <div className={styles.ButtonsGroup}>
@@ -32,7 +35,7 @@ export default class QuickReplies extends PureComponent {
               key={id}
               className={styles.QuickReplyButton}
               title={text}
-              onClick={this.createOnClickHandler(postback, text)}>
+              onClick={this.memoizedCreateOnClickHandler(postback, text)}>
               {text}
             </button>
           )

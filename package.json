@@ -162,5 +162,8 @@
     "plugins": {
       "postcss-plugin": {}
     }
+  },
+  "peerDependencies": {
+    "lodash.memoize": "^4.1.2"
   }
 }
