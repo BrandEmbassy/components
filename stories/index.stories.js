@@ -25,7 +25,6 @@ import LabelDemo from './../src/Demos/Custom/LabelDemo'
 import ChannelDemo from './../src/Demos/Custom/ChannelDemo'
 import NotificationDemo from './../src/Demos/Custom/NotificationDemo'
 import ProfilePictureDemo from './../src/Demos/Custom/ProfilePictureDemo'
-import PostStatusDemo from './../src/Demos/Custom/PostStatusDemo'
 import StatusesDemo from './../src/Demos/Custom/StatusesDemo'
 import TagDemo from './../src/Demos/Custom/TagDemo'
 
@@ -60,7 +59,6 @@ storiesOf('Custom', module)
   .add('Chanel', () => <ChannelDemo />)
   .add('Notification Message', () => <NotificationDemo />)
   .add('Profile Picture', () => <ProfilePictureDemo />)
-  .add('PostStatus', () => <PostStatusDemo />)
   .add('Statuses', () => <StatusesDemo />)
   .add('Tag', () => <TagDemo />)
 

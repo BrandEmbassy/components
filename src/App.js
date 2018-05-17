@@ -17,7 +17,6 @@ import Label from './package/components/Label'
 import Link from './package/components/Link'
 import Notification from './package/components/Notification'
 import P from './package/components/P'
-import PostStatus from './package/components/PostStatus'
 import ProfilePicture from './package/components/ProfilePicture'
 import Radio from './package/components/Radio'
 import Selectbox from './package/components/Selectbox'
@@ -46,13 +45,6 @@ export default class App extends Component {
               <H1>test H1</H1>
               <H2>test H2</H2>
               <H3>test H3</H3>
-              <PostStatus status='New' />
-              <PostStatus status='Draft' />
-              <PostStatus status='Post' />
-
-              <PostStatus status='New' Reversed />
-              <PostStatus status='Draft' Reversed />
-              <PostStatus status='Post' Reversed />
               <P>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sodales turpis, ac sollicitudin sem. Sed et eros porttitor, ullamcorper ante vel, consectetur metus. Integer in ante nec leo viverra varius et egestas mauris. Vestibulum consequat orci laoreet tellus condimentum lacinia. Maecenas eu justo sit amet nulla aliquam consectetur. Aenean nec fermentum velit. Mauris dictum justo ipsum, vitae pharetra nibh sodales ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce dapibus felis et nunc consequat sollicitudin.
               </P>
