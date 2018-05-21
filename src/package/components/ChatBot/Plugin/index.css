@@ -16,9 +16,11 @@
   background: #fff;
   border-radius: 12px;
   border: solid 1px #e6e6e6;
-  margin: 5px;
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  margin-top: 10px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
   overflow: hidden;
+  min-width: 150px;
 }
 
 .LeftRow, .RightRow {
