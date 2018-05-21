@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+h1 + .Text, h2 + .Text {
+  padding-top: 0;
+}
+
 .MessageText {
   padding: 8px 12px;
   margin: 0;
