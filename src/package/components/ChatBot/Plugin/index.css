@@ -41,16 +41,16 @@
 }
 
 .LeftRow {
-  border-right: 10px solid #666666;
+  border-right: 10px solid #666;
   &:hover {
-    border-right: 11px solid #333333;
+    border-right: 10px solid #333;
   }
 }
 
 .RightRow {
-  border-left: 10px solid #666666;
+  border-left: 10px solid #666;
   &:hover {
-    border-left: 11px solid #333333;
+    border-left: 10px solid #333;
   }
 }
 
