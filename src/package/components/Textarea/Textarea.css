@@ -46,6 +46,7 @@
       transition: box-shadow .15s linear;
       resize: none;
       outline: none;
+      font-family: Open Sans;
       
       &:placeholder {
         color: #999;
