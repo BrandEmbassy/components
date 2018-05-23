@@ -7,12 +7,12 @@ describe('Button', function () {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should render button if onClick and postback is provided', () => {
+  it('should render button if onClick and postback is provided', () => {
     const wrapper = shallow(<Button label='this is a button' postback='postback-value' onClick={jest.fn()} />)
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should handle click on button', () => {
+  it('should handle click on button', () => {
     const clickHandler = jest.fn()
     const wrapper = shallow(<Button label='this is a button' postback='postback-value' onClick={clickHandler} />)
     wrapper.find('button').simulate('click')

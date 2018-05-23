@@ -50,11 +50,11 @@ export default class Carusel extends PureComponent<Props, State> {
     const { index } = this.state
 
     return (
-      <div className={styles.PluginFrameWrapper}>
+      <div className={styles.PluginFrame}>
         <div className={styles.ArrowWrapper}>
           {<div className={styles.LeftRow} onMouseDown={this.handleLeftArrowClick} />}
         </div>
-        <div className={styles.PluginFrame}>
+        <div className={styles.CaruselContent}>
           <ReactResizeDetector />
           <CaruselItems {...this.props} index={index} handleChangeIndex={this.handleChangeIndex} />
         </div>

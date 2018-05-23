@@ -9,48 +9,6 @@ initialize {
         "attribs": Object {},
         "children": Array [
           Object {
-            "attribs": Object {
-              "style": "position:absolute;width:0;height:0;visibility:hidden;display:none",
-            },
-            "children": Array [],
-            "name": "div",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": Object {
-              "attribs": Object {},
-              "children": Array [
-                Object {
-                  "attribs": Object {},
-                  "children": Array [],
-                  "name": "div",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {},
-                  "x-attribsPrefix": Object {},
-                },
-              ],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {},
-              "x-attribsPrefix": Object {},
-            },
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "style": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "style": undefined,
-            },
-          },
-          Object {
             "attribs": Object {},
             "children": Array [
               Object {
@@ -70,24 +28,7 @@ initialize {
             "namespace": "http://www.w3.org/1999/xhtml",
             "next": null,
             "parent": [Circular],
-            "prev": Object {
-              "attribs": Object {
-                "style": "position:absolute;width:0;height:0;visibility:hidden;display:none",
-              },
-              "children": Array [],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "style": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "style": undefined,
-              },
-            },
+            "prev": null,
             "type": "tag",
             "x-attribsNamespace": Object {},
             "x-attribsPrefix": Object {},

@@ -10,12 +10,17 @@ type Props = {
 }
 
 export default class Button extends React.PureComponent<Props> {
+  handleClick = () => {
+    const { postback, label, onClick } = this.props
+    if (onClick) {
+      onClick(postback, label)
+    }
+  }
 
-  renderButton (label: string, postback: ?string, onClick: ?Function): React.Node {
-    const clickHandler = onClick && postback ? () => onClick(postback, label) : null
+  renderButton (label: string): React.Node {
     return (
       <div>
-        <button className={styles.Button} onClick={clickHandler} title={label}>
+        <button className={styles.Button} onClick={this.handleClick} title={label}>
           {label}
         </button>
       </div>
@@ -27,12 +32,11 @@ export default class Button extends React.PureComponent<Props> {
   }
 
   render () {
-    const { postback, label, onClick, url } = this.props
+    const { label, url } = this.props
 
     if (url) {
       return this.renderLink(label, url)
     }
-    return this.renderButton(label, postback, onClick)
+    return this.renderButton(label)
   }
-
 }

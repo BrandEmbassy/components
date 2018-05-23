@@ -15,8 +15,8 @@ export default class Gallery extends PureComponent<Props> {
     const { elements, onClick, hideButtons } = this.props
 
     return (
-      <div className={styles.PluginFrameWrapper}>
-        <div className={styles.PluginFrame}>
+      <div className={styles.PluginFrame}>
+        <div className={styles.CaruselContent}>
           <ReactResizeDetector />
           {elements.map(element => (
             <div className={styles.Plugin} key={element.id}>

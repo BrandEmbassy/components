@@ -5,6 +5,7 @@ import Carusel from './Carusel'
 import Gallery from './Gallery'
 import ComposedElement from './Element/ComposedElement'
 import ElementType from './Element/ElementType'
+import styles from './index.css'
 
 type Props = {
   disableCarusel?: boolean,
@@ -31,7 +32,11 @@ export default class PluginWrapper extends PureComponent<Props> {
     } else if (elements.length > 1) {
       return <Carusel elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else if (this.isPluginWithoutWrapper(elements[0])) {
-      return <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />
+      return (
+        <div className={styles.PluginFrame}>
+          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />
+        </div>
+      )
     } else {
       return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} />
     }
