@@ -7,10 +7,12 @@
   display: flex;
   width: 100%;
   background: #fff;
+  text-decoration: none;
 
   &:hover {
     color: #0077b3;
     background: #fff;
     background-color: #fff;
+    text-decoration: none;
   }
 }
