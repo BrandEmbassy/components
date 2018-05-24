@@ -62,6 +62,7 @@ const clickHandler = (postback, label) => console.log(postback, label)
 
 storiesOf('Chatbots elements', module)
   .addDecorator(withKnobs)
+  .addDecorator(withGrayBackground)
 
   .add('Button', () => <Button label={text('label', 'Click me!')} />)
   .add('Heading', () => <Heading content={text('content', 'Lorem Ipsum!')} />)
@@ -71,8 +72,7 @@ storiesOf('Chatbots elements', module)
 
 storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)
-  .addDecorator(withGrayBackground)
   .add('Menu', () => <Plugin elements={object('elements', [menuElement])} onClick={clickHandler} />)
-  .add('Gallery', () => <Plugin elements={object('elements', galleryElements)} onClick={clickHandler} />)
+  .add('Gallery', () => <Plugin disableCarusel={boolean('disableCarusel', false)} elements={object('elements', galleryElements)} onClick={clickHandler} />)
   .add('Text and buttons', () => <Plugin elements={object('elements', [textAndButtons])} onClick={clickHandler} />)
   .add('Quick Replies', () => <Plugin elements={object('elements', quickReplies)} onClick={clickHandler} hideButtons={boolean('hideButtons', false)} />)

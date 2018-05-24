@@ -18,6 +18,7 @@ pipeline {
           steps {
               echo 'Installing NPM dependencies'
               sh 'yarn install'
+              sh 'yarn flow-typed'
           }
       }
       stage('Test') {

@@ -1,39 +1,52 @@
-import React, {PureComponent} from 'react'
+// @flow
+import * as React from 'react'
 import ElementType from '../ElementType'
 import Bubble from '../Text/Bubble'
 import styles from './index.css'
 
-export default class QuickReplies extends PureComponent {
-  getTextElement () {
+type Props = {
+  elements: Array<Object>,
+  onClick: Function,
+  hideButtons: boolean
+}
+export default class QuickReplies extends React.PureComponent<Props> {
+  getTextElement (): ?Object {
     const { elements } = this.props
     const textElements = elements.filter((el) => el.type === ElementType.TEXT)
     return textElements[0] ? textElements[0] : null
   }
 
-  getButtons () {
+  getButtons (): Array<Object> {
     const { elements } = this.props
     return elements.filter((el) => el.type === ElementType.BUTTON)
   }
 
-  createOnClickHandler = (postback, text) => () => {
+  createOnClickHandler = (postback: string, text: string) => (): ?Function => {
     const { onClick } = this.props
-    if (!onClick) {
-      return null
+    if (onClick) {
+      onClick(postback, text)
     }
-    return onClick(postback, text)
   }
 
-  renderButtons () {
+  renderButtons (): React.Node {
     return (
       <div className={styles.ButtonsGroup}>
-        {this.getButtons().map(({ text, id, postback }) => {
-          return <button className={styles.QuickReplyButton} key={id} onClick={this.createOnClickHandler(postback, text)}>{text}</button>
+        {this.getButtons().map(({ id, postback, text }) => {
+          return (
+            <button
+              key={id}
+              className={styles.QuickReplyButton}
+              title={text}
+              onClick={this.createOnClickHandler(postback, text)}>
+              {text}
+            </button>
+          )
         })}
       </div>
     )
   }
 
-  renderMessage (textElement) {
+  renderMessage (textElement: Object): React.Node {
     return <div className={styles.Message}><Bubble text={textElement.text} /></div>
   }
 

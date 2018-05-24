@@ -1,15 +1,15 @@
-.PluginFrameWrapper {
-  display: flex;
-  flex-direction: row;
-  width: 250px;
-  align-items: center;
-}
-
 .PluginFrame {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.CaruselContent {
+  display: flex;
+  flex-direction: row;
   overflow: hidden;
-  width: 230px;
+  width: 100%;
 }
 
 .Plugin {
@@ -18,10 +18,12 @@
   background: #fff;
   border-radius: 12px;
   border: solid 1px #e6e6e6;
-  margin: 5px;
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
-  width: 200px;
+  margin: 0;
+  margin-bottom: 1px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
   overflow: hidden;
+  width: 100%;
+  min-width: 150px;
 }
 
 .LeftRow, .RightRow {
@@ -40,16 +42,16 @@
 }
 
 .LeftRow {
-  border-right: 10px solid #666666;
+  border-right: 10px solid #666;
   &:hover {
-    border-right: 11px solid #333333;
+    border-right: 10px solid #333;
   }
 }
 
 .RightRow {
-  border-left: 10px solid #666666;
+  border-left: 10px solid #666;
   &:hover {
-    border-left: 11px solid #333333;
+    border-left: 10px solid #333;
   }
 }
 

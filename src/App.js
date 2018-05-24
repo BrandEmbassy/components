@@ -190,7 +190,7 @@ export default class App extends Component {
               <div className='row padding-10'>
                 <div className='col-xs-12'>
                   <h3 className='h3'>Notification message</h3>
-                  <Notification isRed text="notif text"/>
+                  <Notification isRed text='notif text' />
                 </div>
               </div>
             </div>

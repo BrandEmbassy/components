@@ -1,14 +1,42 @@
-import React from 'react'
+// @flow
+import * as React from 'react'
 import styles from './index.css'
 
-export default function Button ({ label, onClick, postback }) {
-  const clickHandler = onClick ? () => onClick(postback, label) : null
+type Props = {
+  label: string,
+  onClick?: Function,
+  postback?: string,
+  url?: string
+}
 
-  return (
-    <div>
-      <button className={styles.Button} onClick={clickHandler}>
-        {label}
-      </button>
-    </div>
-  )
+export default class Button extends React.PureComponent<Props> {
+  handleClick = () => {
+    const { postback, label, onClick } = this.props
+    if (onClick) {
+      onClick(postback, label)
+    }
+  }
+
+  renderButton (label: string): React.Node {
+    return (
+      <div>
+        <button className={styles.Button} onClick={this.handleClick} title={label}>
+          {label}
+        </button>
+      </div>
+    )
+  }
+
+  renderLink (label: string, url: string): React.Node {
+    return (<a className={styles.Button} href={url} title={label} target='_blank'>{label}</a>)
+  }
+
+  render () {
+    const { label, url } = this.props
+
+    if (url) {
+      return this.renderLink(label, url)
+    }
+    return this.renderButton(label)
+  }
 }

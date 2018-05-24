@@ -1,101 +1,44 @@
-import React, { Component } from 'react'
+// @flow
+import React, { PureComponent } from 'react'
+import Plugin from './Plugin'
+import Carusel from './Carusel'
+import Gallery from './Gallery'
 import ComposedElement from './Element/ComposedElement'
 import ElementType from './Element/ElementType'
 import styles from './index.css'
 
-class Plugin extends Component {
+type Props = {
+  disableCarusel?: boolean,
+  hideButtons?: boolean,
+  onClick: Function,
+  elements: Array<Object>
+}
+
+export default class PluginWrapper extends PureComponent<Props> {
   static defaultProps = {
     elements: [],
-    hidePostbackControls: false
+    hideButtons: false,
+    disableCarusel: false
   }
 
-  scroller = null
-  requestAnimationFrameId = null
-
-  SCROLL_DIRECTION_RIGHT = 1
-  SCROLL_DIRECTION_LEFT = -1
-
-  scrollTo = (direction) => {
-    if (this.scroller !== null) {
-      this.scroller.scrollLeft += (direction * 10)
-    }
-    this.requestAnimationFrameId = requestAnimationFrame(() => this.scrollTo(direction))
-  }
-
-  stopScroll = () => {
-    cancelAnimationFrame(this.requestAnimationFrameId)
-  }
-
-  startScroll = (direction) => {
-    if (this.requestAnimationFrameId !== null) {
-      cancelAnimationFrame(this.requestAnimationFrameId)
-    }
-    this.requestAnimationFrameId = requestAnimationFrame(() => this.scrollTo(direction))
-  }
-
-  handleLeftArrowClick = () => {
-    this.startScroll(this.SCROLL_DIRECTION_LEFT)
-  }
-
-  handleRightArrowClick = () => {
-    this.startScroll(this.SCROLL_DIRECTION_RIGHT)
-  }
-
-  handleRef = (element) => {
-    this.scroller = element
-  }
-
-  renderCarusel (elements, onClick) {
-    return (
-      <div className={styles.PluginFrameWrapper}>
-        <div className={styles.ArrowWrapper}>
-          {<div className={styles.LeftRow} onMouseLeave={this.stopScroll} onMouseUp={this.stopScroll} onMouseDown={this.handleLeftArrowClick} />}
-        </div>
-        <div className={styles.PluginFrame} ref={this.handleRef}>
-          <div className={styles.Carusel}>
-            {elements.map(element => (<div className={styles.Plugin}>
-              {this.renderRawElement(element.elements, onClick)}
-            </div>))}
-          </div>
-        </div>
-        <div className={styles.ArrowWrapper}>
-          {<div className={styles.RightRow} onMouseLeave={this.stopScroll} onMouseUp={this.stopScroll} onMouseDown={this.handleRightArrowClick} />}
-        </div>
-      </div>
-    )
-  }
-
-  renderPlugin (elements, onClick) {
-    return (
-      <div className={styles.PluginFrameWrapper}>
-        <div className={styles.PluginFrame}>
-          <div className={styles.Plugin}>
-            {this.renderRawElement(elements, onClick)}
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  renderRawElement (elements, onClick) {
-    const { hideButtons } = this.props
-    return (<ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />)
-  }
-
-  isPluginWithoutWrapper (element) {
+  isPluginWithoutWrapper (element: any) {
     return element && element.type === ElementType.QUICK_REPLIES
   }
 
   render () {
-    const { elements, onClick } = this.props
-    if (elements.length > 1) {
-      return this.renderCarusel(elements, onClick)
+    const { elements, onClick, hideButtons, disableCarusel } = this.props
+    if (elements.length > 1 && disableCarusel) {
+      return <Gallery elements={elements} onClick={onClick} hideButtons={hideButtons} />
+    } else if (elements.length > 1) {
+      return <Carusel elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else if (this.isPluginWithoutWrapper(elements[0])) {
-      return this.renderRawElement(elements, onClick)
+      return (
+        <div className={styles.PluginFrame}>
+          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />
+        </div>
+      )
     } else {
-      return this.renderPlugin(elements, onClick)
+      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} />
     }
   }
 }
-
-export default Plugin

@@ -1,6 +1,10 @@
 .Text {
-  padding: 14px;
+  padding: 10px;
   margin: 0;
+}
+
+h1 + .Text, h2 + .Text {
+  padding-top: 0;
 }
 
 .MessageText {
