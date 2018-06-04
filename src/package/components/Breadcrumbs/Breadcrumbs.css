@@ -22,7 +22,7 @@
     display: inline-block;
     padding-left: 30px;
     float: left;
-    cursor: default;
+    cursor: pointer;
     color: #9b9b9b; 
 
     &:first-child {
@@ -34,6 +34,7 @@
     }
     &:last-child{
       color: #4a4a4a;
+      cursor: default;
     }
   
     &:before{
