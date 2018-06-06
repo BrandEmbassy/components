@@ -74,7 +74,7 @@ export default class App extends Component {
               </div>
               <div className='row'>
                 <div className='col-xs-12'>
-                  <Textarea label='Textarea here' desc='description...' />
+                  <Textarea label='Textarea here' isError desc='description...' />
                 </div>
               </div>
               <div className='row padding-15'>
