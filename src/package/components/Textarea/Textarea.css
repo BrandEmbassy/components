@@ -101,8 +101,8 @@
 
     & .Field {
       & textarea {
-        border-color: #e85d5f;
-        box-shadow: inset 0 0 0 #fff, 0 0 6px #e85d5f;
+        border-color: #e73133;
+        box-shadow: inset 0 0 0 #fff, 0 0 6px #e73133;
 
         &:focus {
           outline: none;
