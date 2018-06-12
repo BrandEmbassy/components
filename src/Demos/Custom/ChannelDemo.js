@@ -72,19 +72,22 @@ export default class ChannelDemo extends PureComponent {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
+            <h3 className='h3'>FacebookMessenger</h3>
+            <Channel type='FacebookMessenger' Size60 />
+            <Channel type='FacebookMessenger' Size40 />
+            <Channel type='FacebookMessenger' />
+            <Channel type='FacebookMessenger' Size20 />
+            <Channel type='FacebookMessenger' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
             <h3 className='h3'>Twitter</h3>
             <Channel type='twitter' Size60 />
             <Channel type='twitter' Size40 />
             <Channel type='twitter' />
             <Channel type='twitter' Size20 />
             <Channel type='twitter' Size16 />
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='twitter' />))}
-            </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
@@ -97,11 +100,14 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='instagram' Size16 />
           </div>
         </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='instagram' />))}
-            </SyntaxHighlighter>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>instagram DM</h3>
+            <Channel type='instagram' DM Size60 />
+            <Channel type='instagram' DM Size40 />
+            <Channel type='instagram' DM />
+            <Channel type='instagram' DM Size20 />
+            <Channel type='instagram' DM Size16 />
           </div>
         </div>
         <div className='row padding-20'>
@@ -114,11 +120,14 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='google' Size16 />
           </div>
         </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='google' />))}
-            </SyntaxHighlighter>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>GoogleSearch</h3>
+            <Channel type='GoogleSearch' Size60 />
+            <Channel type='GoogleSearch' Size40 />
+            <Channel type='GoogleSearch' />
+            <Channel type='GoogleSearch' Size20 />
+            <Channel type='GoogleSearch' Size16 />
           </div>
         </div>
         <div className='row padding-20'>
@@ -131,13 +140,6 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='youtube' Size16 />
           </div>
         </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='youtube' />))}
-            </SyntaxHighlighter>
-          </div>
-        </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
             <h3 className='h3'>Linkedin</h3>
@@ -146,13 +148,6 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='linkedin' />
             <Channel type='linkedin' Size20 />
             <Channel type='linkedin' Size16 />
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='linkedin' />))}
-            </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
@@ -165,13 +160,6 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='livechat' Size16 />
           </div>
         </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='livechat' />))}
-            </SyntaxHighlighter>
-          </div>
-        </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
             <h3 className='h3'>Email</h3>
@@ -180,13 +168,6 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='email' />
             <Channel type='email' Size20 />
             <Channel type='email' Size16 />
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='email' />))}
-            </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
@@ -199,13 +180,6 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='forum' Size16 />
           </div>
         </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='forum' />))}
-            </SyntaxHighlighter>
-          </div>
-        </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
             <h3 className='h3'>Vkontakte</h3>
@@ -214,13 +188,6 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='vkontakte' />
             <Channel type='vkontakte' Size20 />
             <Channel type='vkontakte' Size16 />
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='vkontakte' />))}
-            </SyntaxHighlighter>
           </div>
         </div>
         <div className='row padding-20'>
@@ -233,13 +200,168 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='listening' Size16 />
           </div>
         </div>
-        <div className='row'>
-          <div className='col-xs-6'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='listening' />))}
-            </SyntaxHighlighter>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Whatsapp</h3>
+            <Channel type='Whatsapp' Size60 />
+            <Channel type='Whatsapp' Size40 />
+            <Channel type='Whatsapp' />
+            <Channel type='Whatsapp' Size20 />
+            <Channel type='Whatsapp' Size16 />
           </div>
         </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Viber</h3>
+            <Channel type='Viber' Size60 />
+            <Channel type='Viber' Size40 />
+            <Channel type='Viber' />
+            <Channel type='Viber' Size20 />
+            <Channel type='Viber' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Pinterest</h3>
+            <Channel type='Pinterest' Size60 />
+            <Channel type='Pinterest' Size40 />
+            <Channel type='Pinterest' />
+            <Channel type='Pinterest' Size20 />
+            <Channel type='Pinterest' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Tumblr</h3>
+            <Channel type='Tumblr' Size60 />
+            <Channel type='Tumblr' Size40 />
+            <Channel type='Tumblr' />
+            <Channel type='Tumblr' Size20 />
+            <Channel type='Tumblr' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Snapchat</h3>
+            <Channel type='Snapchat' Size60 />
+            <Channel type='Snapchat' Size40 />
+            <Channel type='Snapchat' />
+            <Channel type='Snapchat' Size20 />
+            <Channel type='Snapchat' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>OK</h3>
+            <Channel type='OK' Size60 />
+            <Channel type='OK' Size40 />
+            <Channel type='OK' />
+            <Channel type='OK' Size20 />
+            <Channel type='OK' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Kik</h3>
+            <Channel type='Kik' Size60 />
+            <Channel type='Kik' Size40 />
+            <Channel type='Kik' />
+            <Channel type='Kik' Size20 />
+            <Channel type='Kik' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Slack</h3>
+            <Channel type='Slack' Size60 />
+            <Channel type='Slack' Size40 />
+            <Channel type='Slack' />
+            <Channel type='Slack' Size20 />
+            <Channel type='Slack' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Amazon</h3>
+            <Channel type='Amazon' Size60 />
+            <Channel type='Amazon' Size40 />
+            <Channel type='Amazon' />
+            <Channel type='Amazon' Size20 />
+            <Channel type='Amazon' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>GooglePlay</h3>
+            <Channel type='GooglePlay' Size60 />
+            <Channel type='GooglePlay' Size40 />
+            <Channel type='GooglePlay' />
+            <Channel type='GooglePlay' Size20 />
+            <Channel type='GooglePlay' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>GoogleMaps</h3>
+            <Channel type='GoogleMaps' Size60 />
+            <Channel type='GoogleMaps' Size40 />
+            <Channel type='GoogleMaps' />
+            <Channel type='GoogleMaps' Size20 />
+            <Channel type='GoogleMaps' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>SMS</h3>
+            <Channel type='SMS' Size60 />
+            <Channel type='SMS' Size40 />
+            <Channel type='SMS' />
+            <Channel type='SMS' Size20 />
+            <Channel type='SMS' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>RSS</h3>
+            <Channel type='RSS' Size60 />
+            <Channel type='RSS' Size40 />
+            <Channel type='RSS' />
+            <Channel type='RSS' Size20 />
+            <Channel type='RSS' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Telegram</h3>
+            <Channel type='Telegram' Size60 />
+            <Channel type='Telegram' Size40 />
+            <Channel type='Telegram' />
+            <Channel type='Telegram' Size20 />
+            <Channel type='Telegram' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>Apple</h3>
+            <Channel type='Apple' Size60 />
+            <Channel type='Apple' Size40 />
+            <Channel type='Apple' />
+            <Channel type='Apple' Size20 />
+            <Channel type='Apple' Size16 />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>AppleApp</h3>
+            <Channel type='AppleApp' Size60 />
+            <Channel type='AppleApp' Size40 />
+            <Channel type='AppleApp' />
+            <Channel type='AppleApp' Size20 />
+            <Channel type='AppleApp' Size16 />
+          </div>
+        </div>
+
+
       </div>
     )
   }

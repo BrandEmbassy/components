@@ -59,6 +59,14 @@
       content: "\6d";
     }
   }
+  &.FacebookMessenger {
+    line-height: 25px;
+    background-color: #448aff;
+    font-size: 12px;
+    &:before {
+      content: "\o";
+    }
+  }
   &.Twitter {
     background-color: #55acee;
     &:before {
@@ -80,16 +88,127 @@
       content: "\70";
     }
   }
+  &.GoogleSearch {
+    background-color: #000000;
+    font-size: 14.4px;
+    &:before {
+      content: "\E032";
+    }
+  }
+  &.GooglePlay {
+    background-color: #000000;
+    background: linear-gradient( 145deg, #00ceff, #d53f62, #f8c971);
+    font-size: 14.4px;
+    &:before {
+      content: "\E036";
+    }
+  }
+  &.GoogleMaps {
+    background-color: #009600;
+    font-size: 14.4px;
+    &:before {
+      content: "\E037";
+    }
+  }
+  &.Telegram {
+    background-color: #229dd8;
+    &:before {
+      content: "\E03A";
+    }
+  }
   &.Youtube {
     background-color: #b00;
     &:before {
       content: "\6c";
     }
   }
+  &.Pinterest {
+    background-color: #d63633;
+    &:before {
+      content: "\E02B";
+    }
+  }
+  &.Whatsapp {
+    background-color: #009d00;
+    &:before {
+      content: "\E033";
+    }
+  }
+  &.Viber {
+    background-color: #7b519d;
+    &:before {
+      content: "\E034";
+    }
+  }
+  &.AppleApp {
+    background-color: #0269e2;
+    &:before {
+      content: "\E038";
+    }
+  }
+  &.Apple {
+    background-color: #a7a7a7;
+    color: #000;
+    &:before {
+      content: "\E03B";
+    }
+  }
+  &.SMS {
+    background-color: #a1a1a1;
+    color: #000;
+    &:before {
+      content: "\E03C";
+    }
+  }
+  &.RSS {
+    background-color: #ffa500;
+    &:before {
+      content: "\E039";
+    }
+  }
+  &.OK {
+    background-color: #f68634;
+    &:before {
+      content: "\E035";
+    }
+  }
+  &.Kik {
+    background-color: #000000;
+    color:#7db703;
+    &:before {
+      content: "\E02F";
+    }
+  }
   &.Linkedin {
     background-color: #007bb6;
     &:before {
       content: "\6b";
+    }
+  }
+  &.Slack {
+    background-color: #77d4b6;
+    color: #fff;
+    &:before {
+      content: "\E02E";
+    }
+  }
+  &.Tumblr {
+    background-color: #395a76;
+    &:before {
+      content: "\E02C";
+    }
+  }
+  &.Snapchat {
+    background-color: #000000;
+    &:before {
+      content: "\E02D";
+    }
+  }
+  &.Amazon {
+    background-color: #000000;
+    color: #f90;
+    &:before {
+      content: "\E031";
     }
   }
   &.Livechat {
