@@ -20,7 +20,7 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12 ' >
-            <Notification Fix text='notification text here' />
+            <Notification type='default' text='default notification' />
           </div>
         </div>
         <div className='row padding-20'>
@@ -38,13 +38,13 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12 ' >
-            <Notification Fixed isGreen text='notification Fixed here' />
+            <Notification Fixed type='success' text='notification Fixed here' />
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification Fixed isGreen text='notification text here' />))}
+              {beautify.html(renderToString(<Notification Fixed type='success' text='notification text here' />))}
             </SyntaxHighlighter>
           </div>
         </div>
@@ -55,47 +55,83 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12 ' >
-            <Notification Fix isGreen text='notification text here' />
+            <Notification Fix type='success' text='notification text here' />
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification isGreen text='notification text here' />))}
+              {beautify.html(renderToString(<Notification type='success' text='notification text here' />))}
             </SyntaxHighlighter>
           </div>
         </div>
         <div className='row'>
           <div className='col-xs-12 padding-20' >
-            <h3 className='h3'>isRed</h3>
+            <h3 className='h3'>error</h3>
           </div>
         </div>
         <div className='row'>
           <div className='col-xs-12' >
-            <Notification isRed text='notification text here' />
+            <Notification type='error' text='notification text here' />
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification isRed text='notification text here' />))}
+              {beautify.html(renderToString(<Notification type='error' text='notification text here' />))}
             </SyntaxHighlighter>
           </div>
         </div>
         <div className='row'>
           <div className='col-xs-12 padding-20' >
-            <h3 className='h3'>isYellow</h3>
+            <h3 className='h3'>warning</h3>
           </div>
         </div>
         <div className='row'>
           <div className='col-xs-12' >
-            <Notification isYellow text='notification text here' />
+            <Notification type='warning' text='notification text here' />
           </div>
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification isYellow text='notification text here' />))}
+              {beautify.html(renderToString(<Notification type='warning' text='notification text here' />))}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+
+        <div className='row'>
+          <div className='col-xs-12 padding-20' >
+            <h3 className='h3'>info</h3>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-xs-12' >
+            <Notification type='info' text='notification text here' />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-12 '>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Notification type='info' text='notification text here' />))}
+            </SyntaxHighlighter>
+          </div>
+        </div>
+
+        <div className='row'>
+          <div className='col-xs-12 padding-20' >
+            <h3 className='h3'>default</h3>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-xs-12' >
+            <Notification type='default' text='notification text here' />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-12 '>
+            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
+              {beautify.html(renderToString(<Notification type='default' text='notification text here' />))}
             </SyntaxHighlighter>
           </div>
         </div>
@@ -105,7 +141,7 @@ export default class NotificationDemo extends Component {
             <h3 className='h3'>Notification long text</h3>
           </div>
           <div className='col-xs-12' >
-            <Notification isRed text='notification longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer text here' />
+            <Notification type='warning' text='notification longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer text here' />
           </div>
         </div>
         <div className='row padding-20' />
