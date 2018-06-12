@@ -10,26 +10,36 @@ const cx = classNames.bind(styles)
 type Props = {
   text: string,
   Fixed: boolean,
-  isYellow: boolean,
-  isRed: boolean,
-  isGreen: boolean,
+  type: string,
   styleName: string
 }
 
 export default class Notification extends React.Component<Props> {
+  renderText () {
+    const { text, type } = this.props
+
+    if (!text) {
+      return (`${type}`)
+    } else {
+      return (`${text}`)
+    }
+  };
+
   render () {
-    const { Fixed, isYellow, isRed, isGreen, styleName } = this.props
+    const { Fixed, type, styleName } = this.props
 
     const className = cx(styles.Notification, styleName, {
       Fixed,
-      isYellow,
-      isRed,
-      isGreen
+      isWarning: type === 'warning',
+      isError: type === 'error',
+      isSuccess: type === 'success',
+      isInfo: type === 'info',
+      isDefault: type === 'default'
     })
 
     return (
       <div className={className}>
-        <span>{this.props.text}</span>
+        <span>{this.renderText()}</span>
       </div>
     )
   }

@@ -47,7 +47,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  &.isRed {
+  &.isError {
     background-color: #ffd0d1;
     color: #7d1719;
 
@@ -56,7 +56,7 @@
     }
   }
 
-  &.isGreen {
+  &.isSuccess {
     background-color: #c8ecba;
     color: #2e5e1b;
     
@@ -65,9 +65,27 @@
     }
   }
 
-  &.isYellow {
+  &.isWarning {
     background-color: #ffd5a5;
     color: #865b29;
+    
+    &:before {
+      content: "\2e";
+    }
+  }
+  
+  &.isInfo {
+    background-color: #b6dcff;
+    color: #294286;
+    
+    &:before {
+      content: "\z";
+    }
+  }
+  
+  &.isDefault {
+    background-color: #e4e4e4;
+    color: #666;
     
     &:before {
       content: "\2e";

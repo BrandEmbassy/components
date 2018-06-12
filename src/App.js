@@ -69,7 +69,7 @@ export default class App extends Component {
                   <h3 className='h3'>Form</h3>
                 </div>
                 <div className='col-xs-12'>
-                  <Input label='Input text here' desc='description...' />
+                  <Input label='Input text here' isError desc='description...' />
                 </div>
               </div>
               <div className='row'>
