@@ -390,6 +390,26 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='apple-apps' size={16} />
           </div>
         </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>wechat</h3>
+            <Channel type='wechat' size={60} />
+            <Channel type='wechat' size={40} />
+            <Channel type='wechat' />
+            <Channel type='wechat' size={20} />
+            <Channel type='wechat' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>voice</h3>
+            <Channel type='voice' size={60} />
+            <Channel type='voice' size={40} />
+            <Channel type='voice' />
+            <Channel type='voice' size={20} />
+            <Channel type='voice' size={16} />
+          </div>
+        </div>
       </div>
     )
   }

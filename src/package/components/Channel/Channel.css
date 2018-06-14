@@ -211,6 +211,19 @@
       content: "\E02B";
     }
   }
+  &.wechat {
+    background-color: #3de414;
+    &:before {
+      content: "\E02B";
+    }
+  }
+  &.voice {
+    background-color: #145de4;
+    background: linear-gradient( 180deg, #145de4, #0f44a7);
+    &:before {
+      content: "\#";
+    }
+  }
   &.whatsapp {
     background-color: #009d00;
     &:before {
@@ -242,7 +255,7 @@
     background-color: #a228b7;
     color: #fff;
     &:before {
-      content: "\E03F";
+      content: "\E03C";
     }
   }
   &.rss {
@@ -406,7 +419,7 @@
     }
 
     &.apple-apps {
-      font-size: 40px;
+      font-size: 46px;
     }
 
     &.sms {
@@ -467,7 +480,9 @@
     &.forum {
       font-size: 27px;
     }
-
+    &.voice {
+      font-size: 36px;
+    }
     &.vkontakte {
       font-size: 30px;
     }
@@ -539,9 +554,12 @@
       }
     }
     &.apple-apps {
-      font-size: 24px;
+      font-size: 28px;
     }
     &.sms {
+      font-size: 26px;
+    }
+    &.voice {
       font-size: 26px;
     }
     &.amazon {
