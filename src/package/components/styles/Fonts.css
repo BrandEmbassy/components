@@ -404,8 +404,6 @@
 }
 
 
-
-
 :global(.be-icon-bold:before) {
   content: "\e01b";
 }
@@ -508,8 +506,16 @@
 :global(.be-icon-speech-bubble:before) {
   content: "\e03c";
 }
+:global(.be-icon-map-marker:before) {
+  content: "\e03d";
+}
 
-
+:global(.be-icon-app-store-1:before) {
+  content: "\e03e";
+}
+.be-icon-speech-bubble-1:before {
+  content: "\e03f";
+}
 // COPY CSS FROM FONTASTIC BEFORE THIS SELECTOR
 
 [class^="be-icon"] {
