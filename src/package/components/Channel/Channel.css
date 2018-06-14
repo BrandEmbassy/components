@@ -59,6 +59,27 @@
       content: "\6d";
     }
   }
+  &.facebook-dm {
+    line-height: 25px;
+    background-color: #3b5998;
+    font-size: 12px;
+    &:before {
+      content: "\6d";
+      width: 24px;
+    }
+    &:after {
+      content: "9";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: 18px;
+      width: 18px;
+      line-height: 19px;
+      font-size: 17px;
+      color: #ffc36b;
+    }
+  }
   &.facebook-messenger {
     line-height: 25px;
     background-color: #448aff;
@@ -73,12 +94,52 @@
       content: "\6e";
     }
   }
+  &.twitter-dm {
+    background-color: #55acee;
+    &:before {
+      content: "\6e";
+      width: 24px;
+    }
+    &:after {
+      content: "9";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: 18px;
+      width: 18px;
+      line-height: 19px;
+      font-size: 17px;
+      color: #ffc36b;
+    }
+  }
   &.instagram {
     background-color: #55acee00;
     background: linear-gradient( 45deg, #ee8252, #eb4b66, #a8478c);
     font-size: 14.4px;
     &:before {
       content: "\73";
+    }
+  }
+  &.instagram-dm {
+    background-color: #55acee00;
+    background: linear-gradient( 45deg, #ee8252, #eb4b66, #a8478c);
+    font-size: 14.4px;
+    &:before {
+      content: "\73";
+      width: 24px;
+    }
+    &:after {
+      content: "9";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: 18px;
+      width: 18px;
+      line-height: 19px;
+      font-size: 17px;
+      color: #ffc36b;
     }
   }
   &.google {
@@ -88,11 +149,31 @@
       content: "\70";
     }
   }
+  &.google-dm {
+    background-color: #dd4b39;
+    font-size: 14.4px;
+    &:before {
+      content: "\70";
+      width: 24px;
+    }
+    &:after {
+      content: "9";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: 18px;
+      width: 18px;
+      line-height: 19px;
+      font-size: 17px;
+      color: #ffc36b;
+    }
+  }
   &.google-search {
     background-color: #000000;
     font-size: 14.4px;
     &:before {
-      content: "\E032";
+      content: "\v";
     }
   }
   &.google-play {
@@ -246,6 +327,26 @@
       content: "\74";
     }
   }
+  &.vkontakte-dm {
+    background-color: #45668e;
+    font-size: 12px;
+    &:before {
+      content: "\74";
+      width: 24px;
+    }
+    &:after {
+      content: "9";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      height: 18px;
+      width: 18px;
+      line-height: 19px;
+      font-size: 17px;
+      color: #ffc36b;
+    }
+  }
   &.listening {
     background-color: #dcdcdc;
     font-size: 14.4px;
@@ -277,6 +378,32 @@
       line-height: 60px;
       font-size: 30px;
     }
+    &.facebook-dm {
+      line-height: 60px;
+      font-size: 30px;
+      &:before {
+        width: 60px;
+      }
+      &:after {
+        height: 45px;
+        width: 45px;
+        line-height: 46px;
+        font-size: 44px;
+      }
+    }
+
+    &.twitter-dm {
+      line-height: 60px;
+      &:before {
+        width: 60px;
+      }
+      &:after {
+        height: 45px;
+        width: 45px;
+        line-height: 46px;
+        font-size: 44px;
+      }
+    }
 
     &.apple-apps {
       font-size: 40px;
@@ -292,6 +419,19 @@
     &.instagram {
       font-size: 36px;
     }
+    &.instagram-dm {
+      line-height: 60px;
+      font-size: 36px;
+      &:before {
+        width: 60px;
+      }
+      &:after {
+        height: 45px;
+        width: 45px;
+        line-height: 46px;
+        font-size: 44px;
+      }
+    }
     &.amazon {
       font-size: 36px;
     }
@@ -301,6 +441,19 @@
 
     &.google {
       font-size: 36px;
+    }
+    &.google-dm {
+      line-height: 60px;
+      font-size: 36px;
+      &:before {
+        width: 60px;
+      }
+      &:after {
+        height: 45px;
+        width: 45px;
+        line-height: 46px;
+        font-size: 44px;
+      }
     }
 
     &.google-maps {
@@ -318,11 +471,24 @@
     &.vkontakte {
       font-size: 30px;
     }
+    &.vkontakte-dm {
+      font-size: 30px;
+      &:before {
+        width: 60px;
+      }
+      &:after {
+        height: 45px;
+        width: 45px;
+        line-height: 46px;
+        font-size: 44px;
+      }
+    }
 
     &.listening {
       font-size: 36px;
     }
-  }
+
+    }
 
 
   &.size40 {
@@ -347,6 +513,31 @@
       line-height: 40px;
       font-size: 20px;
     }
+    &.facebook-dm {
+      line-height: 40px;
+      font-size: 20px;
+      &:before {
+        width: 40px;
+      }
+      &:after {
+        height: 30px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 29px;
+      }
+    }
+    &.twitter-dm {
+      line-height: 40px;
+      &:before {
+        width: 40px;
+      }
+      &:after {
+        height: 30px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 29px;
+      }
+    }
     &.apple-apps {
       font-size: 24px;
     }
@@ -363,8 +554,34 @@
     &.instagram {
       font-size: 24px;
     }
+    &.instagram-dm {
+      line-height: 40px;
+      font-size: 24px;
+      &:before {
+        width: 40px;
+      }
+      &:after {
+        height: 30px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 29px;
+      }
+    }
     &.google {
       font-size: 24px;
+    }
+    &.google-dm {
+      line-height: 40px;
+      font-size: 24px;
+      &:before {
+        width: 40px;
+      }
+      &:after {
+        height: 30px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 29px;
+      }
     }
     &.google-maps {
       font-size: 26px;
@@ -377,6 +594,18 @@
     }
     &.vkontakte {
       font-size: 20px;
+    }
+    &.vkontakte-dm {
+      font-size: 20px;
+      &:before {
+        width: 40px;
+      }
+      &:after {
+        height: 30px;
+        width: 30px;
+        line-height: 31px;
+        font-size: 29px;
+      }
     }
     &.listening {
       font-size: 24px;
@@ -404,11 +633,64 @@
       line-height: 20px;
       font-size: 10px;
     }
+    &.facebook-dm {
+      line-height: 20px;
+      font-size: 10px;
+      &:before {
+        width: 20px;
+      }
+      &:after {
+        height: 15px;
+        width: 15px;
+        line-height: 16px;
+        font-size: 14px;
+      }
+    }
+    &.twitter-dm {
+      line-height: 20px;
+      font-size: 10px;
+      &:before {
+        width: 20px;
+      }
+      &:after {
+        height: 15px;
+        width: 15px;
+        line-height: 16px;
+        font-size: 14px;
+      }
+    }
     &.instagram {
       font-size: 12px;
     }
+    &.instagram-dm {
+      line-height: 20px;
+      font-size: 12px;
+      &:before {
+        width: 20px;
+      }
+      &:after {
+        height: 15px;
+        width: 15px;
+        line-height: 16px;
+        font-size: 14px;
+      }
+    }
     &.google {
       font-size: 12px;
+    }
+
+    &.google-dm {
+      line-height: 20px;
+      font-size: 12px;
+      &:before {
+        width: 20px;
+      }
+      &:after {
+        height: 15px;
+        width: 15px;
+        line-height: 16px;
+        font-size: 14px;
+      }
     }
     &.email {
       font-size: 11px;
@@ -419,6 +701,19 @@
     &.vkontakte {
       font-size: 10px;
     }
+    &.vkontakte-dm {
+      font-size: 10px;
+      &:before {
+        width: 20px;
+      }
+      &:after {
+        height: 15px;
+        width: 15px;
+        line-height: 16px;
+        font-size: 14px;
+      }
+    }
+    
     &.listening {
       font-size: 12px;
     }
@@ -445,11 +740,62 @@
       line-height: 16px;
       font-size: 8px;
     }
+    &.facebook-dm {
+      line-height: 16px;
+      font-size: 8px;
+      &:before {
+        width: 16px;
+      }
+      &:after {
+        height: 12px;
+        width: 12px;
+        line-height: 13px;
+        font-size: 11px;
+      }
+    }
+    &.twitter-dm {
+      line-height: 16px;
+      font-size: 8px;
+      &:before {
+        width: 16px;
+      }
+      &:after {
+        height: 12px;
+        width: 12px;
+        line-height: 13px;
+        font-size: 11px;
+      }
+    }
     &.instagram {
       font-size: 9.6px;
     }
+    &.instagram-dm {
+      line-height: 16px;
+      font-size: 9.6px;
+      &:before {
+        width: 16px;
+      }
+      &:after {
+        height: 12px;
+        width: 12px;
+        line-height: 13px;
+        font-size: 11px;
+      }
+    }
     &.google {
       font-size: 9.6px;
+    }
+    &.google-dm {
+      font-size: 9.6px;
+      &:before {
+        width: 16px;
+      }
+      &:after {
+        height: 12px;
+        width: 12px;
+        line-height: 13px;
+        font-size: 11px;
+      }
     }
     &.email {
       font-size: 8.8px;
@@ -460,6 +806,19 @@
     &.vkontakte {
       font-size: 8px;
     }
+    &.vkontakte-dm {
+      font-size: 8px;
+      &:before {
+        width: 16px;
+      }
+      &:after {
+        height: 12px;
+        width: 12px;
+        line-height: 13px;
+        font-size: 11px;
+      }
+    }
+    
     &.listening {
       font-size: 9.6px;
     }

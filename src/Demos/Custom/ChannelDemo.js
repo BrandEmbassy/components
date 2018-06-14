@@ -54,19 +54,19 @@ export default class ChannelDemo extends PureComponent {
 
         <div className='row padding-20'>
           <div className='col-xs-6'>
-            <h3 className='h3'>isPrivate</h3>
-            <h4 className='h4'> add class isPrivate</h4>
-            <Channel type='facebook' Size={60} isPrivate />
-            <Channel type='facebook' size={40} isPrivate />
-            <Channel type='facebook' isPrivate />
-            <Channel type='facebook' size={20} isPrivate />
-            <Channel type='facebook' size={16} isPrivate />
+            <h3 className='h3'>facebook-dm</h3>
+            <h4 className='h4'> add class facebook-dm</h4>
+            <Channel type='facebook-dm' size={60} />
+            <Channel type='facebook-dm' size={40} />
+            <Channel type='facebook-dm' />
+            <Channel type='facebook-dm' size={20} />
+            <Channel type='facebook-dm' size={16} />
           </div>
         </div>
         <div className='row'>
           <div className='col-xs-6'>
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel Facebook isPrivate />))}
+              {beautify.html(renderToString(<Channel type='facebook-dm' />))}
             </SyntaxHighlighter>
           </div>
         </div>
@@ -92,6 +92,16 @@ export default class ChannelDemo extends PureComponent {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
+            <h3 className='h3'>twitter-dm</h3>
+            <Channel type='twitter-dm' size={60} />
+            <Channel type='twitter-dm' size={40} />
+            <Channel type='twitter-dm' />
+            <Channel type='twitter-dm' size={20} />
+            <Channel type='twitter-dm' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
             <h3 className='h3'>instagram</h3>
             <Channel type='instagram' size={60} />
             <Channel type='instagram' size={40} />
@@ -102,12 +112,12 @@ export default class ChannelDemo extends PureComponent {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
-            <h3 className='h3'>instagram isPrivate</h3>
-            <Channel type='instagram' isPrivate size={60} />
-            <Channel type='instagram' isPrivate size={40} />
-            <Channel type='instagram' isPrivate />
-            <Channel type='instagram' isPrivate size={20} />
-            <Channel type='instagram' isPrivate size={16} />
+            <h3 className='h3'>instagram-dm</h3>
+            <Channel type='instagram-dm' size={60} />
+            <Channel type='instagram-dm' size={40} />
+            <Channel type='instagram-dm' />
+            <Channel type='instagram-dm' size={20} />
+            <Channel type='instagram-dm' size={16} />
           </div>
         </div>
         <div className='row padding-20'>
@@ -118,6 +128,16 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='google' />
             <Channel type='google' size={20} />
             <Channel type='google' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>google-dm</h3>
+            <Channel type='google-dm' size={60} />
+            <Channel type='google-dm' size={40} />
+            <Channel type='google-dm' />
+            <Channel type='google-dm' size={20} />
+            <Channel type='google-dm' size={16} />
           </div>
         </div>
         <div className='row padding-20'>
@@ -188,6 +208,16 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='vkontakte' />
             <Channel type='vkontakte' size={20} />
             <Channel type='vkontakte' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>vkontakte-dm</h3>
+            <Channel type='vkontakte-dm' size={60} />
+            <Channel type='vkontakte-dm' size={40} />
+            <Channel type='vkontakte-dm' />
+            <Channel type='vkontakte-dm' size={20} />
+            <Channel type='vkontakte-dm' size={16} />
           </div>
         </div>
         <div className='row padding-20'>
@@ -360,8 +390,6 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='apple-apps' size={16} />
           </div>
         </div>
-
-
       </div>
     )
   }
