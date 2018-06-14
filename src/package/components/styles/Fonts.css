@@ -513,9 +513,10 @@
 :global(.be-icon-app-store-1:before) {
   content: "\e03e";
 }
-.be-icon-speech-bubble-1:before {
+:global(.be-icon-speech-bubble-1:before) {
   content: "\e03f";
 }
+
 // COPY CSS FROM FONTASTIC BEFORE THIS SELECTOR
 
 [class^="be-icon"] {

@@ -144,14 +144,14 @@
   }
   &.apple-apps {
     background-color: #0269e2;
-    background: linear-gradient( 0deg, #1ac1fb, #1d77f2);
+    background: linear-gradient( 180deg, #1ac1fb, #1d77f2);
     &:before {
       content: "\e03e";
     }
   }
   &.apple {
     background-color: #a7a7a7;
-    background: linear-gradient( 0deg,#bbbbbb, #a7a7a7);
+    background: linear-gradient( 180deg,#bbbbbb, #a7a7a7);
     color: #000;
     &:before {
       content: "\E03B";
@@ -161,7 +161,7 @@
     background-color: #a228b7;
     color: #fff;
     &:before {
-      content: "\E03C";
+      content: "\E03F";
     }
   }
   &.rss {
@@ -278,12 +278,33 @@
       font-size: 30px;
     }
 
+    &.apple-apps {
+      font-size: 40px;
+    }
+
+    &.sms {
+      font-size: 40px;
+    }
+
+    &.telegram {
+      font-size: 36px;
+    }
     &.instagram {
       font-size: 36px;
+    }
+    &.amazon {
+      font-size: 36px;
+    }
+    &.snapchat {
+      font-size: 38px;
     }
 
     &.google {
       font-size: 36px;
+    }
+
+    &.google-maps {
+      font-size: 40px;
     }
 
     &.email {
@@ -326,11 +347,27 @@
       line-height: 40px;
       font-size: 20px;
     }
+    &.apple-apps {
+      font-size: 24px;
+    }
+    &.sms {
+      font-size: 26px;
+    }
+    &.amazon {
+      font-size: 26px;
+    }
+    &.snapchat {
+      font-size: 26px;
+    }
+
     &.instagram {
       font-size: 24px;
     }
     &.google {
       font-size: 24px;
+    }
+    &.google-maps {
+      font-size: 26px;
     }
     &.email {
       font-size: 22px;

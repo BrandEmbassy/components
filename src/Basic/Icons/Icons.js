@@ -287,7 +287,8 @@ export default class Icons extends PureComponent {
               <div className='be-icon-telegram' />
               <div className='be-icon-apple' />
               <div className='be-icon-speech-bubble' />
-
+              <div className='be-icon-app-store-1' />
+              <div className='be-icon-speech-bubble-1' />
             </div>
           </div>
         </div>
