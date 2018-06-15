@@ -289,6 +289,21 @@ export default class Icons extends PureComponent {
               <div className='be-icon-speech-bubble' />
               <div className='be-icon-app-store-1' />
               <div className='be-icon-speech-bubble-1' />
+
+
+
+
+              <div className='be-icon-map-marker' />
+              <div className='be-icon-app-store-1' />
+              <div className='be-icon-speech-bubble-1' />
+              <div className='be-icon-weixin' />
+              <div className='be-icon-if-line-message-2559802' />
+              <div className='be-icon-if-66-wechat-1181189' />
+              <div className='be-icon-if-imessage-social-media-765233' />
+              <div className='be-icon-align-left-1' />
+              <div className='be-icon-if-66-wechat-1181189' />
+
+
             </div>
           </div>
         </div>

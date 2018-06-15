@@ -94,6 +94,31 @@
       content: "\6e";
     }
   }
+  &.co-browsing {
+    background-color: #cf6dca;
+    &:before {
+      content: "\U";
+    }
+  }
+  &.in-app-messaging {
+    background-color: #cf6dca;
+    &:before {
+      content: "\U";
+    }
+  }
+  &.kakao-talk {
+    background-color: #ffe812;
+    color: #000;
+    &:before {
+      content: "\U";
+    }
+  }
+  &.tango {
+    background-color: #db4301;
+    &:before {
+      content: "\U";
+    }
+  }
   &.twitter-dm {
     background-color: #55acee;
     &:before {
@@ -205,6 +230,13 @@
       content: "\6c";
     }
   }
+  &.rcs {
+    background-color: #000000;
+
+    &:before {
+      content: "\E006";
+    }
+  }
   &.pinterest {
     background-color: #d63633;
     &:before {
@@ -212,9 +244,9 @@
     }
   }
   &.wechat {
-    background-color: #3de414;
+    background-color: #2dc100;
     &:before {
-      content: "\E02B";
+      content: "\E038";
     }
   }
   &.voice {
@@ -228,6 +260,12 @@
     background-color: #009d00;
     &:before {
       content: "\E033";
+    }
+  }
+  &.contact-form {
+    background-color: #000000;
+    &:before {
+      content: "\E042";
     }
   }
   &.viber {
@@ -251,6 +289,13 @@
       content: "\E03B";
     }
   }
+  &.apple-imessage {
+    background: linear-gradient( 180deg,#5bf677, #00b618);
+    font-size: 20px;
+    &:before {
+      content: "\E041";
+    }
+  }
   &.sms {
     background-color: #a228b7;
     color: #fff;
@@ -264,7 +309,7 @@
       content: "\E039";
     }
   }
-  &.ok {
+  &.ok-ru {
     background-color: #f68634;
     &:before {
       content: "\E035";
@@ -283,6 +328,13 @@
       content: "\6b";
     }
   }
+  &.livechat-contact-form {
+    background-color: #b42c2a;
+    &:before {
+      content: "\E019";
+    }
+  }
+  
   &.slack {
     background-color: #77d4b6;
     color: #fff;
@@ -313,9 +365,16 @@
     }
   }
   &.livechat {
-    background-color: #35b072;
+    background-color: #b42c2a;
     &:before {
       content: "\71";
+    }
+  }
+  &.line-message {
+    background: linear-gradient( 180deg, #35be19, #32b418);
+    font-size: 16px;
+    &:before {
+      content: "\E040";
     }
   }
   &.email {
@@ -360,7 +419,7 @@
       color: #ffc36b;
     }
   }
-  &.listening {
+  &.listening, &.kbm-1 {
     background-color: #dcdcdc;
     font-size: 14.4px;
     color: #a2a2a2;
@@ -421,8 +480,17 @@
     &.apple-apps {
       font-size: 46px;
     }
-
+    &.wechat {
+      font-size: 42px;
+    }
+    &.apple-imessage {
+      font-size: 65px;
+    }
+    
     &.sms {
+      font-size: 40px;
+    }
+    &.co-browsing {
       font-size: 40px;
     }
 
@@ -476,7 +544,9 @@
     &.email {
       font-size: 33px;
     }
-
+    &.line-message {
+      font-size: 40px;
+    }
     &.forum {
       font-size: 27px;
     }
@@ -499,7 +569,7 @@
       }
     }
 
-    &.listening {
+    &.listening, &.kbm-1 {
       font-size: 36px;
     }
 
@@ -556,7 +626,16 @@
     &.apple-apps {
       font-size: 28px;
     }
+    &.apple-imessage {
+      font-size: 35px;
+    }
+    &.line-message {
+      font-size: 28px;
+    }
     &.sms {
+      font-size: 26px;
+    }
+    &.wechat {
       font-size: 26px;
     }
     &.voice {
@@ -625,7 +704,7 @@
         font-size: 29px;
       }
     }
-    &.listening {
+    &.listening, &.kbm-1 {
       font-size: 24px;
     }
   }
@@ -732,7 +811,7 @@
       }
     }
     
-    &.listening {
+    &.listening, &.kbm-1 {
       font-size: 12px;
     }
   }
@@ -837,7 +916,7 @@
       }
     }
     
-    &.listening {
+    &.listening, &.kbm-1 {
       font-size: 9.6px;
     }
   }

@@ -232,6 +232,16 @@ export default class ChannelDemo extends PureComponent {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
+            <h3 className='h3'>kbm-1</h3>
+            <Channel type='kbm-1' size={60} />
+            <Channel type='kbm-1' size={40} />
+            <Channel type='kbm-1' />
+            <Channel type='kbm-1' size={20} />
+            <Channel type='kbm-1' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
             <h3 className='h3'>whatsapp</h3>
             <Channel type='whatsapp' size={60} />
             <Channel type='whatsapp' size={40} />
@@ -282,12 +292,12 @@ export default class ChannelDemo extends PureComponent {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-6 '>
-            <h3 className='h3'>ok</h3>
-            <Channel type='ok' size={60} />
-            <Channel type='ok' size={40} />
-            <Channel type='ok' />
-            <Channel type='ok' size={20} />
-            <Channel type='ok' size={16} />
+            <h3 className='h3'>ok-ru</h3>
+            <Channel type='ok-ru' size={60} />
+            <Channel type='ok-ru' size={40} />
+            <Channel type='ok-ru' />
+            <Channel type='ok-ru' size={20} />
+            <Channel type='ok-ru' size={16} />
           </div>
         </div>
         <div className='row padding-20'>
@@ -408,6 +418,96 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='voice' />
             <Channel type='voice' size={20} />
             <Channel type='voice' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>contact-form</h3>
+            <Channel type='contact-form' size={60} />
+            <Channel type='contact-form' size={40} />
+            <Channel type='contact-form' />
+            <Channel type='contact-form' size={20} />
+            <Channel type='contact-form' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>livechat-contact-form</h3>
+            <Channel type='livechat-contact-form' size={60} />
+            <Channel type='livechat-contact-form' size={40} />
+            <Channel type='livechat-contact-form' />
+            <Channel type='livechat-contact-form' size={20} />
+            <Channel type='livechat-contact-form' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>line-message</h3>
+            <Channel type='line-message' size={60} />
+            <Channel type='line-message' size={40} />
+            <Channel type='line-message' />
+            <Channel type='line-message' size={20} />
+            <Channel type='line-message' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>rcs</h3>
+            <Channel type='rcs' size={60} />
+            <Channel type='rcs' size={40} />
+            <Channel type='rcs' />
+            <Channel type='rcs' size={20} />
+            <Channel type='rcs' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>apple-imessage</h3>
+            <Channel type='apple-imessage' size={60} />
+            <Channel type='apple-imessage' size={40} />
+            <Channel type='apple-imessage' />
+            <Channel type='apple-imessage' size={20} />
+            <Channel type='apple-imessage' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>co-browsing</h3>
+            <Channel type='co-browsing' size={60} />
+            <Channel type='co-browsing' size={40} />
+            <Channel type='co-browsing' />
+            <Channel type='co-browsing' size={20} />
+            <Channel type='co-browsing' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>in-app-messaging</h3>
+            <Channel type='in-app-messaging' size={60} />
+            <Channel type='in-app-messaging' size={40} />
+            <Channel type='in-app-messaging' />
+            <Channel type='in-app-messaging' size={20} />
+            <Channel type='in-app-messaging' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>kakao-talk</h3>
+            <Channel type='kakao-talk' size={60} />
+            <Channel type='kakao-talk' size={40} />
+            <Channel type='kakao-talk' />
+            <Channel type='kakao-talk' size={20} />
+            <Channel type='kakao-talk' size={16} />
+          </div>
+        </div>
+        <div className='row padding-20'>
+          <div className='col-xs-6 '>
+            <h3 className='h3'>tango</h3>
+            <Channel type='tango' size={60} />
+            <Channel type='tango' size={40} />
+            <Channel type='tango' />
+            <Channel type='tango' size={20} />
+            <Channel type='tango' size={16} />
           </div>
         </div>
       </div>
