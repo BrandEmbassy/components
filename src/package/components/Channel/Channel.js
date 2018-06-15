@@ -4,13 +4,14 @@ import * as React from 'react'
 // @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Channel.css'
+import SizeTypes from './SizeTypes'
 
 const cx = classNames.bind(styles)
 
 type Props = {
   styleName: string,
   type: string,
-  size: number,
+  size: string,
   isPrivate: boolean
 }
 
@@ -19,10 +20,10 @@ export default class Picture extends React.Component<Props> {
     const { styleName, size, isPrivate, type } = this.props
 
     const className = cx(styles.Channel, styleName, type, {
-      size60: size === 60,
-      size40: size === 40,
-      size20: size === 20,
-      size16: size === 16,
+      size60: size === SizeTypes.LARGE,
+      size40: size === SizeTypes.MEDIUM,
+      size20: size === SizeTypes.SMALL,
+      size16: size === SizeTypes.TINY,
       isPrivate
     })
 
