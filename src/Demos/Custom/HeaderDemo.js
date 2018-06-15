@@ -15,7 +15,7 @@ export default class HeaderDemo extends PureComponent {
       <div className='container'>
         <div className='row'>
           <Header >
-            <Link text="Go back to settings" White Icon="be-icon-long-arrow-left"/>
+            <Link text='Go back to settings' White Icon='be-icon-long-arrow-left' />
           </Header >
         </div>
         <div className='row'>
