@@ -51,6 +51,7 @@
       color: #ffc36b;
     }
   }
+
   &.facebook {
     line-height: 25px;
     background-color: #3b5998;
@@ -427,9 +428,9 @@
     }
   }
 
-  /* SIZE 60 */
+  /* SIZE XL */
 
-  &.size60 {
+  &.sizeXL {
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -567,9 +568,9 @@
     }
   }
 
-  /* SIZE 40 */
+  /* SIZE L */
 
-  &.size40 {
+  &.sizeL {
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -701,9 +702,9 @@
     }
   }
 
-  /* SIZE 20 */
+  /* SIZE S */
 
-  &.size20 {
+  &.sizeS {
     width: 20px;
     height: 20px;
     line-height: 20px;
@@ -808,9 +809,9 @@
     }
   }
 
-  /* SIZE 16 */
+  /* SIZE XS */
 
-  &.size16 {
+  &.sizeXS {
     width: 16px;
     height: 16px;
     line-height: 16px;
@@ -911,6 +912,13 @@
     }
     &.listening, &.kbm-1 {
       font-size: 9.6px;
+    }
+  }
+  &.isGrayscale {
+    background-color: #00000000;
+    color: #fff;
+    &.active {
+      color: #666;
     }
   }
 }
