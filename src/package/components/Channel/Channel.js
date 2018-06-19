@@ -17,7 +17,6 @@ type Props = {
 }
 
 export default class Picture extends React.Component<Props> {
-
   static defaultProps = {
     size: SizeTypes.M
   }
