@@ -252,6 +252,54 @@ export default class Icons extends PureComponent {
 
               <div className='be-icon-plug' />
 
+              <div className='be-icon-bold' />
+              <div className='be-icon-underline' />
+              <div className='be-icon-italic' />
+              <div className='be-icon-list-ul' />
+              <div className='be-icon-list-ol' />
+              <div className='be-icon-align-left' />
+              <div className='be-icon-align-right' />
+              <div className='be-icon-align-justify' />
+              <div className='be-icon-align-center' />
+              <div className='be-icon-chain-broken' />
+              <div className='be-icon-sort-amount-asc' />
+              <div className='be-icon-sort-amount-desc' />
+              <div className='be-icon-page-export' />
+              <div className='be-icon-briefcase' />
+              <div className='be-icon-arrow-right-1' />
+              <div className='be-icon-vcard' />
+              <div className='be-icon-pinterest' />
+              <div className='be-icon-tumblr' />
+              <div className='be-icon-social-snapchat' />
+              <div className='be-icon-slack' />
+              <div className='be-icon-kik' />
+              <div className='be-icon-amazon' />
+              <div className='be-icon-search-1' />
+              <div className='be-icon-whatsapp-logo' />
+              <div className='be-icon-microphone' />
+              <div className='be-icon-viber' />
+              <div className='be-icon-odnoklassniki-logo' />
+
+              <div className='be-icon-google-play' />
+              <div className='be-icon-google' />
+              <div className='be-icon-app-store' />
+              <div className='be-icon-rss' />
+              <div className='be-icon-telegram' />
+              <div className='be-icon-apple' />
+              <div className='be-icon-speech-bubble' />
+              <div className='be-icon-app-store-1' />
+              <div className='be-icon-speech-bubble-1' />
+
+              <div className='be-icon-map-marker' />
+              <div className='be-icon-app-store-1' />
+              <div className='be-icon-speech-bubble-1' />
+              <div className='be-icon-weixin' />
+              <div className='be-icon-if-line-message-2559802' />
+              <div className='be-icon-if-66-wechat-1181189' />
+              <div className='be-icon-if-imessage-social-media-765233' />
+              <div className='be-icon-align-left-1' />
+              <div className='be-icon-if-66-wechat-1181189' />
+
             </div>
           </div>
         </div>

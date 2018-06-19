@@ -403,6 +403,138 @@
   content: "\e01a";
 }
 
+
+:global(.be-icon-bold:before) {
+  content: "\e01b";
+}
+:global(.be-icon-underline:before) {
+  content: "\e01c";
+}
+:global(.be-icon-italic:before) {
+  content: "\e01d";
+}
+:global(.be-icon-list-ul:before) {
+  content: "\e01e";
+}
+:global(.be-icon-list-ol:before) {
+  content: "\e01f";
+}
+:global(.be-icon-align-left:before) {
+  content: "\e020";
+}
+:global(.be-icon-align-right:before) {
+  content: "\e021";
+}
+:global(.be-icon-align-justify:before) {
+  content: "\e022";
+}
+:global(.be-icon-align-center:before) {
+  content: "\e023";
+}
+:global(.be-icon-chain-broken:before) {
+  content: "\e024";
+}
+:global(.be-icon-sort-amount-asc:before) {
+  content: "\e025";
+}
+:global(.be-icon-sort-amount-desc:before) {
+  content: "\e026";
+}
+:global(.be-icon-page-export:before) {
+  content: "\e027";
+}
+:global(.be-icon-briefcase:before) {
+  content: "\e028";
+}
+:global(.be-icon-arrow-right-1:before) {
+  content: "\e029";
+}
+:global(.be-icon-vcard:before) {
+  content: "\e02a";
+}
+:global(.be-icon-pinterest:before) {
+  content: "\e02b";
+}
+:global(.be-icon-tumblr:before) {
+  content: "\e02c";
+}
+:global(.be-icon-social-snapchat:before) {
+  content: "\e02d";
+}
+:global(.be-icon-slack:before) {
+  content: "\e02e";
+}
+:global(.be-icon-kik:before) {
+  content: "\e02f";
+}
+:global(.be-icon-amazon:before) {
+  content: "\e031";
+}
+:global(.be-icon-search-1:before) {
+  content: "\e032";
+}
+:global(.be-icon-whatsapp-logo:before) {
+  content: "\e033";
+}
+:global(.be-icon-microphone:before) {
+  content: "\e030";
+}
+:global(.be-icon-viber:before) {
+  content: "\e034";
+}
+:global(.be-icon-odnoklassniki-logo:before) {
+  content: "\e035";
+}
+:global(.be-icon-google-play:before) {
+  content: "\e036";
+}
+:global(.be-icon-google:before) {
+  content: "\e037";
+}
+:global(.be-icon-app-store:before) {
+  content: "\e038";
+}
+:global(.be-icon-rss:before) {
+  content: "\e039";
+}
+:global(.be-icon-telegram:before) {
+  content: "\e03a";
+}
+:global(.be-icon-apple:before) {
+  content: "\e03b";
+}
+:global(.be-icon-speech-bubble:before) {
+  content: "\e03c";
+}
+:global(.be-icon-map-marker:before) {
+  content: "\e03d";
+}
+
+:global(.be-icon-app-store-1:before) {
+  content: "\e03e";
+}
+:global(.be-icon-speech-bubble-1:before) {
+  content: "\e03f";
+}
+:global(.be-icon-weixin:before) {
+  content: "\e038";
+}
+:global(.be-icon-if-line-message-2559802:before) {
+  content: "\e040";
+}
+:global(.be-icon-if-66-wechat-1181189:before) {
+  content: "\e041";
+}
+:global(.be-icon-if-imessage-social-media-765233:before) {
+  content: "\e041";
+}
+:global(.be-icon-align-left-1:before) {
+  content: "\e042";
+}
+:global(.be-icon-if-66-wechat-1181189:before) {
+  content: "\e043";
+}
+
 // COPY CSS FROM FONTASTIC BEFORE THIS SELECTOR
 
 [class^="be-icon"] {
