@@ -4,7 +4,7 @@ import * as React from 'react'
 // @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Channel.css'
-import { SizeTypes } from './SizeTypes'
+import SizeTypes from './SizeTypes'
 
 const cx = classNames.bind(styles)
 
@@ -16,7 +16,7 @@ type Props = {
   isGrayscale: boolean
 }
 
-export default class Picture extends React.Component<Props> {
+export default class Channel extends React.Component<Props> {
   static defaultProps = {
     size: SizeTypes.M
   }

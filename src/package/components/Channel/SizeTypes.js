@@ -1,4 +1,4 @@
-export const SizeTypes = {
+export default {
   XS: 'XS',
   S: 'S',
   M: 'M',
