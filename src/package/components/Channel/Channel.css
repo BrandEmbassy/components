@@ -364,7 +364,7 @@
       content: "\E031";
     }
   }
-  &.livechat {
+  &.livechat, &.live-chat {
     background-color: #b42c2a;
     &:before {
       content: "\71";
