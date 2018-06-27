@@ -1,5 +1,5 @@
 {
   "private": true,
   "name": "Channel",
-  "main": "./Channel.js"
+  "main": "./index.js"
 }
