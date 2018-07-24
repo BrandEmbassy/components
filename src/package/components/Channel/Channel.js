@@ -13,8 +13,7 @@ type Props = {
   type: string,
   size: string,
   isPrivate: boolean,
-  isGrayscale: boolean,
-  isPointer: boolean
+  isGrayscale: boolean
 }
 
 export default class Channel extends React.Component<Props> {
@@ -23,13 +22,12 @@ export default class Channel extends React.Component<Props> {
   }
 
   render () {
-    const { styleName, size, isPrivate, isGrayscale, isPointer, type } = this.props
+    const { styleName, size, isPrivate, isGrayscale, type } = this.props
 
     const className = cx(styles.Channel, styleName, type, {
       [`size${size}`]: size,
       isGrayscale,
-      isPrivate,
-      isPointer
+      isPrivate
     })
 
     return (
