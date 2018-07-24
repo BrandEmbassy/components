@@ -8,7 +8,7 @@
   margin-right: 5px;
   line-height: 24px;
   border-radius: 3px;
-  background-color: #f5f5f5;
+  background-color: #f5f5f500;
   text-align: center;
   font-size: 12px;
   color: #fff;
@@ -247,7 +247,7 @@
       content: "\E02B";
     }
   }
-  &.wechat {
+  &.wechat, &.we-chat {
     background-color: #2dc100;
     &:before {
       content: "\E038";
@@ -278,7 +278,7 @@
       content: "\E034";
     }
   }
-  &.apple-apps {
+  &.apple-apps, &.apple-apps-reviews {
     background-color: #0269e2;
     background: linear-gradient( 180deg, #1ac1fb, #1d77f2);
     &:before {
@@ -293,14 +293,14 @@
       content: "\E03B";
     }
   }
-  &.apple-imessage {
+  &.apple-imessage, &.apple-business {
     background: linear-gradient( 180deg,#5bf677, #00b618);
     font-size: 20px;
     &:before {
       content: "\E041";
     }
   }
-  &.sms {
+  &.sms, &.twilio {
     background-color: #a228b7;
     color: #fff;
     &:before {
@@ -373,7 +373,7 @@
       content: "\71";
     }
   }
-  &.line-message {
+  &.line-message, &.line {
     background: linear-gradient( 180deg, #35be19, #32b418);
     font-size: 16px;
     &:before {
@@ -480,16 +480,16 @@
         font-size: 44px;
       }
     }
-    &.apple-apps {
+    &.apple-apps, &.apple-apps-reviews {
       font-size: 46px;
     }
-    &.wechat {
+    &.wechat, &.we-chat {
       font-size: 42px;
     }
-    &.apple-imessage {
+    &.apple-imessage, &.apple-business {
       font-size: 65px;
     }
-    &.sms {
+    &.sms, &.twilio {
       font-size: 40px;
     }
     &.co-browsing {
@@ -542,7 +542,7 @@
     &.email {
       font-size: 33px;
     }
-    &.line-message {
+    &.line-message, &.line {
       font-size: 40px;
     }
     &.forum {
@@ -620,19 +620,19 @@
         font-size: 29px;
       }
     }
-    &.apple-apps {
+    &.apple-apps, &.apple-apps-reviews {
       font-size: 28px;
     }
-    &.apple-imessage {
+    &.apple-imessage, &.apple-business {
       font-size: 35px;
     }
-    &.line-message {
+    &.line-message, &.line {
       font-size: 28px;
     }
-    &.sms {
+    &.sms, &.twilio {
       font-size: 26px;
     }
-    &.wechat {
+    &.wechat, &.we-chat {
       font-size: 26px;
     }
     &.voice {
