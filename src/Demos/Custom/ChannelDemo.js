@@ -20,9 +20,9 @@ export default class ChannelDemo extends PureComponent {
 
           <div className='col-xs-12 padding-10'>
             <h3 className='h3'>Facebook</h3>
-            <Channel type='facebook' isPointer/>
+            <Channel type='facebook' isPointer />
 
-            <Channel size='XL'/>
+            <Channel size='XL' />
           </div>
 
           <div className='col-xs-12 padding-10'>
