@@ -1,5 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react'
+// @flow-skip-next-line
 import ReactResizeDetector from 'react-resize-detector'
 import CaruselItems from './CaruselItems'
 import styles from './index.css'

@@ -1,5 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react'
+// @flow-skip-next-line
 import SwipeableViews from 'react-swipeable-views'
 import ComposedElement from './Element/ComposedElement'
 import styles from './index.css'
