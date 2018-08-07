@@ -21,6 +21,7 @@ export default class ChannelDemo extends PureComponent {
           <div className='col-xs-12 padding-10'>
             <h3 className='h3'>Facebook</h3>
             <Channel type='facebook' />
+
           </div>
 
           <div className='col-xs-12 padding-10'>
@@ -470,6 +471,14 @@ export default class ChannelDemo extends PureComponent {
             <Channel type='facebook' isGrayscale />
             <Channel type='facebook' size='S' isGrayscale />
             <Channel type='facebook' size='XS' isGrayscale />
+          </div>
+
+          <div className='col-xs-12 col-md-6 col-lg-4 padding-20'>
+            <Channel type='apple-apps-reviews' size='XL' />
+            <Channel type='line' size='XL' />
+            <Channel type='twilio' size='XL' />
+            <Channel type='apple-business' size='XL' />
+            <Channel type='we-chat' size='XL' />
           </div>
         </div>
       </div>
