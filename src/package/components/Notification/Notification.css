@@ -47,7 +47,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  &.isError {
+  &.isError, &.isRed {
     background-color: #ffd0d1;
     color: #7d1719;
 
@@ -56,7 +56,7 @@
     }
   }
 
-  &.isSuccess {
+  &.isSuccess, &.isGreen {
     background-color: #c8ecba;
     color: #2e5e1b;
     
@@ -65,7 +65,7 @@
     }
   }
 
-  &.isWarning {
+  &.isWarning, &.isYellow {
     background-color: #ffd5a5;
     color: #865b29;
     
@@ -74,7 +74,7 @@
     }
   }
   
-  &.isInfo {
+  &.isInfo, &.isBlue {
     background-color: #b6dcff;
     color: #294286;
     
