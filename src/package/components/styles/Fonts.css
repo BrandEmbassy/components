@@ -449,6 +449,8 @@
 :global(.be-icon-arrow-right-1:before) {
   content: "\e029";
 }
+
+
 :global(.be-icon-vcard:before) {
   content: "\e02a";
 }
@@ -485,6 +487,8 @@
 :global(.be-icon-odnoklassniki-logo:before) {
   content: "\e035";
 }
+
+
 :global(.be-icon-google-play:before) {
   content: "\e036";
 }
@@ -509,15 +513,11 @@
 :global(.be-icon-map-marker:before) {
   content: "\e03d";
 }
-
 :global(.be-icon-app-store-1:before) {
   content: "\e03e";
 }
 :global(.be-icon-speech-bubble-1:before) {
   content: "\e03f";
-}
-:global(.be-icon-weixin:before) {
-  content: "\e038";
 }
 :global(.be-icon-if-line-message-2559802:before) {
   content: "\e040";
@@ -525,14 +525,8 @@
 :global(.be-icon-if-66-wechat-1181189:before) {
   content: "\e041";
 }
-:global(.be-icon-if-imessage-social-media-765233:before) {
-  content: "\e041";
-}
 :global(.be-icon-align-left-1:before) {
   content: "\e042";
-}
-:global(.be-icon-if-66-wechat-1181189:before) {
-  content: "\e043";
 }
 
 // COPY CSS FROM FONTASTIC BEFORE THIS SELECTOR
