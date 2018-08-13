@@ -46,6 +46,8 @@ export default function Element (props: IElement) {
   if (type === ElementType.TEXT) {
     return <Text content={text} showAsMessage={showTextAsMessage} />
   }
+
+  // IMAGE will not bu supported from next release onward but we keep it here for backward compatibility.
   if (type === ElementType.IMAGE) {
     return <Image src={url} />
   }
