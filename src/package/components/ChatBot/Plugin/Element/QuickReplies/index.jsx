@@ -4,12 +4,12 @@ import ElementType from '../ElementType'
 import Bubble from '../Text/Bubble'
 import styles from './index.css'
 
-type Props = {
+export type QuickRepliesProps = {
   elements: Array<Object>,
   onClick: Function,
   hideButtons: boolean
 }
-export default class QuickReplies extends React.PureComponent<Props> {
+export default class QuickReplies extends React.PureComponent<QuickRepliesProps> {
   getTextElement (): ?Object {
     const { elements } = this.props
     const textElements = elements.filter((el) => el.type === ElementType.TEXT)

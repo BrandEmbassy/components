@@ -2,14 +2,14 @@
 import * as React from 'react'
 import styles from './index.css'
 
-type Props = {
+export type ButtonElementProps = {
   label: string,
   onClick?: Function,
   postback?: string,
   url?: string
 }
 
-export default class Button extends React.PureComponent<Props> {
+export default class Button extends React.PureComponent<ButtonElementProps> {
   handleClick = () => {
     const { postback, label, onClick } = this.props
     if (onClick) {

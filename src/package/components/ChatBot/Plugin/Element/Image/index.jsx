@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './index.css'
 
+export type ImageElementProps = {
+  src: string,
+  title: string
+}
+
 export default function Image ({ src, title }) {
   return (
     <div className={styles.ImageWrapper}>

@@ -7,6 +7,7 @@ import Button from '../src/package/components/ChatBot/Plugin/Element/Button'
 import Heading from '../src/package/components/ChatBot/Plugin/Element/Heading'
 import Image from '../src/package/components/ChatBot/Plugin/Element/Image'
 import Text from '../src/package/components/ChatBot/Plugin/Element/Text'
+import File from '../src/package/components/ChatBot/Plugin/Element/File'
 import Plugin from '../src/package/components/ChatBot/Plugin'
 
 const repliesButtons = [
@@ -69,6 +70,9 @@ storiesOf('Chatbots elements', module)
   .add('Image', () => <Image src={text('src', 'http://via.placeholder.com/350x150')} />)
   .add('Text', () => <Text content={text('content', 'Hello world!')} />)
   .add('QuickReplies', () => <QuickReplies elements={object('elements', repliesButtons)} onClick={clickHandler} />)
+  .add('File - basic', () => <File url='http://via.placeholder.com/350x150' mimeType='audio/mp3' title='file' />)
+  .add('File - image', () => <File url='http://via.placeholder.com/350x150' mimeType='image/jpeg' />)
+  .add('File - video', () => <File url='https://www.w3schools.com/tags/movie.mp4' mimeType='video/mp4' />)
 
 storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)
