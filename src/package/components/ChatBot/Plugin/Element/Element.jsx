@@ -13,6 +13,7 @@ import type ButtonElementProps from './Button'
 import type QuickRepliesProps from './QuickReplies'
 import type FileElementsProps from './File'
 
+// @todo use Disjoint Unions from flow-typed
 type IElement = ButtonElementProps | HeadingElementProps |
   TextElementProps | ImageElementProps |
   QuickRepliesProps | FileElementsProps | ComposedElement
@@ -47,7 +48,7 @@ export default function Element (props: IElement) {
     return <Text content={text} showAsMessage={showTextAsMessage} />
   }
 
-  // IMAGE will not bu supported from next release onward but we keep it here for backward compatibility.
+  // IMAGE will not be supported from next release onward but we keep it here for backward compatibility.
   if (type === ElementType.IMAGE) {
     return <Image src={url} />
   }
