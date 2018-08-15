@@ -10,7 +10,7 @@ const cx = classNames.bind(styles)
 type Props = {
   children?: React.Node,
   text: string,
-  styleName: string
+  styleName?: string
 }
 
 export default class Label extends React.Component<Props> {

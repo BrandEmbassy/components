@@ -3,7 +3,6 @@ import * as React from 'react'
 import Image from '../Image'
 import Video from '../Video'
 import Label from '../../../../Label'
-import Channel from '../../../../Channel'
 
 export type FileElementsProps = {
   type: 'FILE',
@@ -13,7 +12,6 @@ export type FileElementsProps = {
 }
 
 export default function File ({url, mimeType, title}: FileElementsProps) {
-
   if (mimeType.indexOf('image') >= 0) {
     return <Image src={url} />
   }
@@ -28,12 +26,11 @@ export default function File ({url, mimeType, title}: FileElementsProps) {
     )
   }
 
-
   return (
     <a href={url} title={title} download>
       <strong>
-        <Label text={title || url} styleName="myStylename">
-          <Channel type='facebook' />
+        <Label text={title || url}>
+          <div className='be-icon-paperclip' />
         </Label>
       </strong>
     </a>
