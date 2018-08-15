@@ -575,9 +575,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="Nkm0hRAiE"
                             label="Click me!"
                             onClick={[Function]}
                             postback="click-on-button-1"
+                            text="Click me!"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -599,9 +603,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="NkGJ6CAiN"
                             label="No click me!"
                             onClick={[Function]}
                             postback="click-on-button-2"
+                            text="No click me!"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -623,9 +631,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="EyCyTRCi4"
                             label="Aww don\`t click on me"
                             onClick={[Function]}
                             postback="click-on-button-3"
+                            text="Aww don\`t click on me"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -762,9 +774,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="aNkm0hRAiE"
                             label="Click me!"
                             onClick={[Function]}
                             postback="click-on-button-1"
+                            text="Click me!"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -786,9 +802,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="aNkGJ6CAiN"
                             label="No click me!"
                             onClick={[Function]}
                             postback="click-on-button-2"
+                            text="No click me!"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -810,9 +830,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="aEyCyTRCi4"
                             label="Aww don\`t click on me"
                             onClick={[Function]}
                             postback="click-on-button-3"
+                            text="Aww don\`t click on me"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -949,9 +973,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="bNkm0hRAiE"
                             label="Click me!"
                             onClick={[Function]}
                             postback="click-on-button-1"
+                            text="Click me!"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -973,9 +1001,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="bNkGJ6CAiN"
                             label="No click me!"
                             onClick={[Function]}
                             postback="click-on-button-2"
+                            text="No click me!"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -997,9 +1029,13 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           type="BUTTON"
                         >
                           <Button
+                            hideButtons={false}
+                            id="bEyCyTRCi4"
                             label="Aww don\`t click on me"
                             onClick={[Function]}
                             postback="click-on-button-3"
+                            text="Aww don\`t click on me"
+                            type="BUTTON"
                           >
                             <div>
                               <button
@@ -1412,9 +1448,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="Nkm0hRAiE"
                   label="Click me!"
                   onClick={[Function]}
                   postback="click-on-button-1"
+                  text="Click me!"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1436,9 +1476,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="NkGJ6CAiN"
                   label="No click me!"
                   onClick={[Function]}
                   postback="click-on-button-2"
+                  text="No click me!"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1460,9 +1504,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="EyCyTRCi4"
                   label="Aww don\`t click on me"
                   onClick={[Function]}
                   postback="click-on-button-3"
+                  text="Aww don\`t click on me"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1585,9 +1633,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="aNkm0hRAiE"
                   label="Click me!"
                   onClick={[Function]}
                   postback="click-on-button-1"
+                  text="Click me!"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1609,9 +1661,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="aNkGJ6CAiN"
                   label="No click me!"
                   onClick={[Function]}
                   postback="click-on-button-2"
+                  text="No click me!"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1633,9 +1689,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="aEyCyTRCi4"
                   label="Aww don\`t click on me"
                   onClick={[Function]}
                   postback="click-on-button-3"
+                  text="Aww don\`t click on me"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1758,9 +1818,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="bNkm0hRAiE"
                   label="Click me!"
                   onClick={[Function]}
                   postback="click-on-button-1"
+                  text="Click me!"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1782,9 +1846,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="bNkGJ6CAiN"
                   label="No click me!"
                   onClick={[Function]}
                   postback="click-on-button-2"
+                  text="No click me!"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -1806,9 +1874,13 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 type="BUTTON"
               >
                 <Button
+                  hideButtons={false}
+                  id="bEyCyTRCi4"
                   label="Aww don\`t click on me"
                   onClick={[Function]}
                   postback="click-on-button-3"
+                  text="Aww don\`t click on me"
+                  type="BUTTON"
                 >
                   <div>
                     <button
@@ -2058,11 +2130,15 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       },
                     ]
                   }
+                  hideButtons={false}
+                  id="Ek4tPy1h4"
                   onClick={[Function]}
                   showTextAsMessage={false}
+                  type="MENU"
                 >
                   <div>
                     <Element
+                      hideButtons={false}
                       id="Uk4tPy1h2"
                       key="Uk4tPy1h2"
                       onClick={[Function]}
@@ -2083,6 +2159,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       </Image>
                     </Element>
                     <Element
+                      hideButtons={false}
                       id="Ck4tPy1h3"
                       key="Ck4tPy1h3"
                       onClick={[Function]}
@@ -2100,6 +2177,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       </Heading>
                     </Element>
                     <Element
+                      hideButtons={false}
                       id="Ek4tPy1h1"
                       key="Ek4tPy1h1"
                       onClick={[Function]}
@@ -2117,6 +2195,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       </Text>
                     </Element>
                     <Element
+                      hideButtons={false}
                       id="Nkm0hRAiE"
                       key="Nkm0hRAiE"
                       onClick={[Function]}
@@ -2126,9 +2205,14 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       type="BUTTON"
                     >
                       <Button
+                        hideButtons={false}
+                        id="Nkm0hRAiE"
                         label="Click me!"
                         onClick={[Function]}
                         postback="click-on-button-1"
+                        showTextAsMessage={false}
+                        text="Click me!"
+                        type="BUTTON"
                       >
                         <div>
                           <button
@@ -2141,6 +2225,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       </Button>
                     </Element>
                     <Element
+                      hideButtons={false}
                       id="NkGJ6CAiN"
                       key="NkGJ6CAiN"
                       onClick={[Function]}
@@ -2150,9 +2235,14 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       type="BUTTON"
                     >
                       <Button
+                        hideButtons={false}
+                        id="NkGJ6CAiN"
                         label="No click me!"
                         onClick={[Function]}
                         postback="click-on-button-2"
+                        showTextAsMessage={false}
+                        text="No click me!"
+                        type="BUTTON"
                       >
                         <div>
                           <button
@@ -2165,6 +2255,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       </Button>
                     </Element>
                     <Element
+                      hideButtons={false}
                       id="EyCyTRCi4"
                       key="EyCyTRCi4"
                       onClick={[Function]}
@@ -2174,9 +2265,14 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       type="BUTTON"
                     >
                       <Button
+                        hideButtons={false}
+                        id="EyCyTRCi4"
                         label="Aww don\`t click on me"
                         onClick={[Function]}
                         postback="click-on-button-3"
+                        showTextAsMessage={false}
+                        text="Aww don\`t click on me"
+                        type="BUTTON"
                       >
                         <div>
                           <button
@@ -2381,7 +2477,9 @@ exports[`Plugin index should render standalone plugin 1`] = `
               ]
             }
             hideButtons={false}
+            id="Ek4tPy1h4"
             onClick={[Function]}
+            type="QUICK_REPLIES"
           >
             <div>
               <div>

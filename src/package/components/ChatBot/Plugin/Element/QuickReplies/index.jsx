@@ -5,6 +5,7 @@ import Bubble from '../Text/Bubble'
 import styles from './index.css'
 
 export type QuickRepliesProps = {
+  type: 'QUICK_REPLIES',
   elements: Array<Object>,
   onClick: Function,
   hideButtons: boolean

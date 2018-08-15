@@ -14,23 +14,12 @@ import type QuickRepliesProps from './QuickReplies'
 import type FileElementsProps from './File'
 
 // @todo use Disjoint Unions from flow-typed
-type IElement = ButtonElementProps | HeadingElementProps |
-  TextElementProps | ImageElementProps |
-  QuickRepliesProps | FileElementsProps | ComposedElement
-
-// export type IElement = {
-//   type: 'BUTTON' | 'HEADING' | 'TITLE' | 'SUBTITLE' | 'TEXT' | 'IMAGE' | 'QUICK_REPLIES' | 'TEXT_AND_BUTTONS' | 'FILE',
-//   text: string,
-//   url?: string,
-//   postback?: string,
-//   elements: Array<IElement>,
-//   onClick: Function,
-//   hideButtons: boolean,
-//   showTextAsMessage: boolean
-// }
+type IElement = ButtonElementProps & HeadingElementProps &
+  TextElementProps & ImageElementProps &
+  QuickRepliesProps & FileElementsProps & ComposedElement
 
 export default function Element (props: IElement) {
-  const { type, text, url, postback, elements, onClick, hideButtons, showTextAsMessage } = props
+  const type = props.type
   const headingType = [
     ElementType.HEADING,
     ElementType.TITLE,
@@ -38,29 +27,29 @@ export default function Element (props: IElement) {
   ]
 
   if (type === ElementType.BUTTON) {
-    return <Button label={text} onClick={onClick} postback={postback} url={url} />
+    return <Button {...props} label={props.text} />
   }
   if (headingType.indexOf(type) > -1) {
     const level = type === ElementType.SUBTITLE ? SUBTITLE_HEADING_LEVEL : TITLE_HEADING_LEVEL
-    return <Heading content={text} level={level} />
+    return <Heading content={props.text} level={level} />
   }
   if (type === ElementType.TEXT) {
-    return <Text content={text} showAsMessage={showTextAsMessage} />
+    return <Text content={props.text} showAsMessage={props.showTextAsMessage} />
   }
 
   // IMAGE will not be supported from next release onward but we keep it here for backward compatibility.
   if (type === ElementType.IMAGE) {
-    return <Image src={url} />
+    return <Image src={props.url} />
   }
   if (type === ElementType.QUICK_REPLIES) {
-    return <QuickReplies elements={elements} onClick={onClick} hideButtons={hideButtons} />
+    return <QuickReplies {...props} />
   }
   if (type === ElementType.FILE) {
     return <File {...props} />
   }
-  if (Array.isArray(elements)) {
+  if (Array.isArray(props.elements)) {
     const showTextAsMessage = (type === ElementType.TEXT_AND_BUTTONS)
-    return <ComposedElement elements={elements} onClick={onClick} showTextAsMessage={showTextAsMessage} />
+    return <ComposedElement {...props} showTextAsMessage={showTextAsMessage} />
   }
   return null
 }

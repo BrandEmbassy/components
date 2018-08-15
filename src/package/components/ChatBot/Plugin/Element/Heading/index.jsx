@@ -5,6 +5,7 @@ export const TITLE_HEADING_LEVEL = 1
 export const SUBTITLE_HEADING_LEVEL = 2
 
 export type HeadingElementProps = {
+  type: 'HEAING',
   level: TITLE_HEADING_LEVEL | SUBTITLE_HEADING_LEVEL,
   content: string
 }
