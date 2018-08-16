@@ -2,16 +2,15 @@
 import * as React from 'react'
 import Image from '../Image'
 import Video from '../Video'
-import Label from '../../../../Label'
 
 export type FileElementsProps = {
   type: 'FILE',
   url: string,
   mimeType: string,
-  title?: string
+  filename?: string
 }
 
-export default function File ({url, mimeType, title}: FileElementsProps) {
+export default function File ({url, mimeType, filename}: FileElementsProps) {
   if (mimeType.indexOf('image') >= 0) {
     return <Image src={url} />
   }
@@ -21,18 +20,18 @@ export default function File ({url, mimeType, title}: FileElementsProps) {
       <Video
         url={url}
         mimeType={mimeType}
-        title={title}
+        title={url}
       />
     )
   }
 
   return (
-    <a href={url} title={title} download>
-      <strong>
-        <Label text={title || url}>
-          <div className='be-icon-paperclip' />
-        </Label>
-      </strong>
-    </a>
+    <div className='message--file'>
+      <span className='message--icon be-icon-file' />
+      <a href={url} title={url} download className='message--file'>
+        {filename || url}
+        <span className='message--icon be-icon-download-1' />
+      </a>
+    </div>
   )
 }
