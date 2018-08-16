@@ -3,7 +3,9 @@ import * as React from 'react'
 import styles from './index.css'
 
 export type ButtonElementProps = {
+  type: 'BUTTON',
   label: string,
+  text?: string,
   onClick?: Function,
   postback?: string,
   url?: string

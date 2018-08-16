@@ -16,7 +16,7 @@ export default class Plugin extends PureComponent<Props> {
       <div className={styles.PluginFrameWrapper}>
         <div className={styles.PluginFrame}>
           <div className={styles.Plugin}>
-            <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />
+            <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} topLevel />
           </div>
         </div>
       </div>

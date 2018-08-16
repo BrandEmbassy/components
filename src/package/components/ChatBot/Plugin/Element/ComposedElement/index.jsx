@@ -2,21 +2,15 @@ import React from 'react'
 import Element from '../Element'
 import styles from './index.css'
 
-export default function ComposedElement ({ elements, onClick, hideButtons, showTextAsMessage }) {
+export default function ComposedElement ({ elements, onClick, hideButtons, showTextAsMessage, topLevel }) {
   return (
     <div className={styles.ComposedElement}>
-      {elements.map(({ id, type, text, url, postback, elements }) => (
+      {elements.map(({ id, ...rest }) => (
         <Element
           key={id}
           id={id}
-          type={type}
-          text={text}
-          url={url}
-          postback={postback}
-          elements={elements}
-          onClick={onClick}
-          hideButtons={hideButtons}
-          showTextAsMessage={showTextAsMessage}
+          {...rest}
+          topLevel
         />
       )
       )}

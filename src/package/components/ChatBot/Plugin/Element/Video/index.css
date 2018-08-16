@@ -1,21 +1,16 @@
 .VideoWrapper {
   padding: 0;
   margin: 0 ;
-  height: 100%;
-  padding-top: 52%;
-  overflow: hidden;
-  position: relative;
+  min-width: 250px;
 }
 .Video {
-  position: absolute;
   top: 0;
   left: 0;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 
   & video {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
   }
 }

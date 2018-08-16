@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`File Component [1] should render basic component 1`] = `
+<div
+  className="message--file"
+>
+  <span
+    className="message--icon be-icon-file"
+  />
+  <a
+    className="message--file"
+    download={true}
+    href="https://www.facebook.com/"
+    target="_blank"
+    title="https://www.facebook.com/"
+  >
+    https://www.facebook.com/
+    <span
+      className="message--icon be-icon-download-1"
+    />
+  </a>
+</div>
+`;
+
+exports[`File Component [2] should render basic component 1`] = `
+<Image
+  mimeType="image/jpeg"
+  src="http://via.placeholder.com/350x150"
+  title="http://via.placeholder.com/350x150"
+/>
+`;
+
+exports[`File Component [3] should render basic component 1`] = `
+<Component
+  mimeType="video/mp4"
+  title="https://www.w3schools.com/tags/movie.mp4"
+  url="https://www.w3schools.com/tags/movie.mp4"
+/>
+`;
