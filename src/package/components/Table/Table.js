@@ -86,6 +86,75 @@ export default class Table extends React.Component<Props> {
                 link
               </td>
             </tr>
+            <tr>
+            <td>
+              some checkbox
+            </td>
+            <td>
+              <span>acc.nevim@nevim.co.id</span>
+            </td>
+            <td>
+              test2131
+            </td>
+            <td>
+            testtest32
+            </td>
+            <td>
+            testtesttest31
+            </td>
+            <td>
+              link
+            </td>
+            <td>
+              link
+            </td>
+          </tr>
+          <tr>
+          <td>
+            some checkbox
+          </td>
+          <td>
+            <span>acc.nevim@nevim.co.id</span>
+          </td>
+          <td>
+            test2131
+          </td>
+          <td>
+          testtest32
+          </td>
+          <td>
+          testtesttest31
+          </td>
+          <td>
+            link
+          </td>
+          <td>
+            link
+          </td>
+        </tr>
+        <tr>
+        <td>
+          some checkbox
+        </td>
+        <td>
+          <span>acc.nevim@nevim.co.id</span>
+        </td>
+        <td>
+          test2131
+        </td>
+        <td>
+        testtest32
+        </td>
+        <td>
+        testtesttest31
+        </td>
+        <td>
+          link
+        </td>
+        <td>
+          link
+        </td>
+      </tr>
           </tbody>
         </table>
       </div>
