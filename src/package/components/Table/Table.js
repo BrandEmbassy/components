@@ -87,74 +87,74 @@ export default class Table extends React.Component<Props> {
               </td>
             </tr>
             <tr>
-            <td>
+              <td>
               some checkbox
-            </td>
-            <td>
-              <span>acc.nevim@nevim.co.id</span>
-            </td>
-            <td>
+              </td>
+              <td>
+                <span>acc.nevim@nevim.co.id</span>
+              </td>
+              <td>
               test2131
-            </td>
-            <td>
+              </td>
+              <td>
             testtest32
-            </td>
-            <td>
+              </td>
+              <td>
             testtesttest31
-            </td>
-            <td>
+              </td>
+              <td>
               link
-            </td>
-            <td>
+              </td>
+              <td>
               link
-            </td>
-          </tr>
-          <tr>
-          <td>
+              </td>
+            </tr>
+            <tr>
+              <td>
             some checkbox
-          </td>
-          <td>
-            <span>acc.nevim@nevim.co.id</span>
-          </td>
-          <td>
+              </td>
+              <td>
+                <span>acc.nevim@nevim.co.id</span>
+              </td>
+              <td>
             test2131
-          </td>
-          <td>
+              </td>
+              <td>
           testtest32
-          </td>
-          <td>
+              </td>
+              <td>
           testtesttest31
-          </td>
-          <td>
+              </td>
+              <td>
             link
-          </td>
-          <td>
+              </td>
+              <td>
             link
-          </td>
-        </tr>
-        <tr>
-        <td>
+              </td>
+            </tr>
+            <tr>
+              <td>
           some checkbox
-        </td>
-        <td>
-          <span>acc.nevim@nevim.co.id</span>
-        </td>
-        <td>
+              </td>
+              <td>
+                <span>acc.nevim@nevim.co.id</span>
+              </td>
+              <td>
           test2131
-        </td>
-        <td>
+              </td>
+              <td>
         testtest32
-        </td>
-        <td>
+              </td>
+              <td>
         testtesttest31
-        </td>
-        <td>
+              </td>
+              <td>
           link
-        </td>
-        <td>
+              </td>
+              <td>
           link
-        </td>
-      </tr>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
