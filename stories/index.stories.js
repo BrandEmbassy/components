@@ -31,6 +31,11 @@ import TagDemo from './../src/Demos/Custom/TagDemo'
 import ExampleA from './../src/Demos/Example/ExampleA'
 import ExampleB from './../src/Demos/Example/ExampleB'
 
+import ReleaseNotes from './../src/Demos/ReleaseNotes/ReleaseNotes'
+
+storiesOf('Release Notes', module)
+  .add('Release Notes', () => <ReleaseNotes />)
+
 storiesOf('Basic', module)
   .add('Grid', () => <Grid />)
   .add('Typography', () => <Typography />)
