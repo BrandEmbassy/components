@@ -11,17 +11,17 @@ type Props = {
   children?: React.Node,
   Fixed: boolean,
   styleName: string,
-  isStrippted: boolean,
+  isStriped: boolean,
   hasRowHover: boolean
 }
 
 export default class Table extends React.Component<Props> {
   render () {
-    const { styleName, Fixed, isStrippted, hasRowHover } = this.props
+    const { styleName, Fixed, isStriped, hasRowHover } = this.props
 
     const className = cx(styles.Table, styleName, {
       Fixed,
-      isStrippted,
+      isStriped,
       hasRowHover
     })
 

@@ -50,7 +50,7 @@
   }
 }
 
-.isStrippted {
+.isStriped {
   & table tr:nth-child(even) {
     background-color: #fafafa;
   }
