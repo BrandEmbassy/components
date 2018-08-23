@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/vendor
+composer.lock
 
 # npm types
 /flow-typed/npm

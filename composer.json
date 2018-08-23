@@ -1,0 +1,28 @@
+{
+    "name": "brandembassy/components",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BrandEmbassy\\Components\\": "src-php"
+        }
+    },
+    "require": {
+        "php": "~7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3"
+    },
+    "archive": {
+        "exclude": [
+            "config",
+            ".storybook",
+            "public",
+            "scripts",
+            "src",
+            "stories"
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit src-php"
+    }
+}
