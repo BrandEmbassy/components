@@ -19,7 +19,7 @@ final class Cell implements UiComponent
 
     public function render(): string
     {
-        return '<th>' . $this->value . '</th>';
+        return '<td>' . $this->value . '</td>';
     }
 
 }

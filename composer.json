@@ -13,13 +13,22 @@
         "phpunit/phpunit": "^7.3"
     },
     "archive": {
+        "directory": "dist",
+        "format": "zip",
+        "skip-dev": true,
         "exclude": [
-            "config",
             ".storybook",
+            "config",
             "public",
             "scripts",
             "src",
-            "stories"
+            "stories",
+            ".flowconfig",
+            ".gitignore",
+            ".jsbeautifyrc",
+            "Jenkinsfile",
+            "package.json",
+            "yarn.lock"
         ]
     },
     "scripts": {
