@@ -59,7 +59,7 @@ export default class App extends Component {
           </div>
           <div className='row'>
             <div className='col-xs'>
-              <Table isStrippted hasRowHover />
+              <Table isStriped hasRowHover />
             </div>
           </div>
           <div className='row'>
