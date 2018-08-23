@@ -2,18 +2,21 @@
 
 ## Getting Started - Adding components to your project
 
-### add module to your project
+### React App
+
+#### add module to your project
 * `yarn add https://github.com/BrandEmbassy/components.git`
 
-### import global to app
+#### import global to app
 * `import { Global } from 'components';`
 
-### import chosen component from storybook
-
+#### import chosen component from storybook
 * `https://brand-embassy-components-prod.s3.amazonaws.com/1.0/storybook/index.html`
 
+### PHP Server-side-rendering App
+`composer install brandembassy/components`
 
-
+See: `src-php/Forms/Table/Ui/TableTest.php` for how to use Table Component.
 
 ## Developing components
 
