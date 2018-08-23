@@ -1,0 +1,10 @@
+/.storybook export-ignore
+/config export-ignore
+/public export-ignore
+/scripts export-ignore
+/stories export-ignore
+/.flowconfig export-ignore
+/.gitignore export-ignore
+/.jsbeautifyrc export-ignore
+/Jenkinsfile export-ignore
+/src export-ignore
