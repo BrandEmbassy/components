@@ -12,6 +12,25 @@
     "require-dev": {
         "phpunit/phpunit": "^7.3"
     },
+    "archive": {
+        "directory": "dist",
+        "format": "zip",
+        "skip-dev": true,
+        "exclude": [
+            ".storybook",
+            "config",
+            "public",
+            "scripts",
+            "src",
+            "stories",
+            ".flowconfig",
+            ".gitignore",
+            ".jsbeautifyrc",
+            "Jenkinsfile",
+            "package.json",
+            "yarn.lock"
+        ]
+    },
     "scripts": {
         "test": "vendor/bin/phpunit src-php"
     }
