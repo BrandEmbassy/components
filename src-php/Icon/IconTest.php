@@ -12,7 +12,7 @@ final class IconTest extends TestCase
 
     public function testRendering(): void
     {
-        $this->assertSnapshot(__DIR__ . '/__snapshots__/icon.html', new Icon('be-icon-plus'));
+        $this->assertSnapshot(__DIR__ . '/__snapshots__/icon.html', new Icon(IconType::get(IconType::PLUS)));
     }
 
 }

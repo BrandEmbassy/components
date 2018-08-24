@@ -2,7 +2,9 @@
 
 namespace BrandEmbassy\Components;
 
-interface Color
+use MabeEnum\Enum;
+
+final class Color extends Enum
 {
 
     public const POSITIVE = 'Green';

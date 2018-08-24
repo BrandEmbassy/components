@@ -11,10 +11,17 @@ final class RowData
     private $cellsData;
 
     /**
+     * @var string
+     */
+    private $rowIdentifier;
+
+    /**
+     * @param string $rowIdentifier
      * @param CellData[] $cellsData
      */
-    public function __construct(array $cellsData)
+    public function __construct(string $rowIdentifier, array $cellsData)
     {
+        $this->rowIdentifier = $rowIdentifier;
         $this->cellsData = $cellsData;
     }
 
@@ -24,6 +31,11 @@ final class RowData
     public function getCellsData(): array
     {
         return $this->cellsData;
+    }
+
+    public function getRowIdentifier(): string
+    {
+        return $this->rowIdentifier;
     }
 
 }
