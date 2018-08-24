@@ -2,6 +2,8 @@
 
 namespace BrandEmbassy\Components\Forms\Table\Model;
 
+use Assert\Assertion;
+
 final class RowData
 {
 
@@ -21,6 +23,7 @@ final class RowData
      */
     public function __construct(string $rowIdentifier, array $cellsData)
     {
+        Assertion::allIsInstanceOf($cellsData, CellData::class);
         $this->rowIdentifier = $rowIdentifier;
         $this->cellsData = $cellsData;
     }

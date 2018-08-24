@@ -2,6 +2,7 @@
 
 namespace BrandEmbassy\Components\Forms\Table\Ui;
 
+use Assert\Assertion;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
 
@@ -18,6 +19,7 @@ final class Row implements UiComponent
      */
     public function __construct(array $cells)
     {
+        Assertion::allIsInstanceOf($cells, Cell::class);
         $this->cells = $cells;
     }
 

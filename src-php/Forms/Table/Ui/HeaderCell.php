@@ -2,24 +2,28 @@
 
 namespace BrandEmbassy\Components\Forms\Table\Ui;
 
+use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
 
 final class HeaderCell implements UiComponent
 {
 
     /**
-     * @var string
+     * @var UiComponent[]|string[]
      */
-    private $value;
+    private $children;
 
-    public function __construct(string $value)
+    /**
+     * @param UiComponent[]|string[]|UiComponent|string $children
+     */
+    public function __construct($children)
     {
-        $this->value = $value;
+        $this->children = \is_array($children) ? $children : [$children];
     }
 
     public function render(): string
     {
-        return '<th>' . $this->value . '</th>';
+        return '<th>' . ArrayRenderer::render($this->children) . '</th>';
     }
 
 }
