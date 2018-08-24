@@ -18,7 +18,7 @@ final class Link implements UiComponent
     private $icon;
 
     /**
-     * @var string
+     * @var string|null
      */
     private $title;
 
@@ -27,19 +27,26 @@ final class Link implements UiComponent
      */
     private $color;
 
-    public function __construct(?string $title, ?string $color, ?string $icon = null)
+    /**
+     * @var string|null
+     */
+    private $url;
+
+    public function __construct(?string $title, ?string $url = null, ?string $color = null, ?string $icon = null)
     {
         $this->icon = $icon;
         $this->title = $title;
         $this->color = $color;
+        $this->url = $url;
     }
 
     public function render(): string
     {
         $icon = $this->icon !== null ? (new Icon($this->icon))->render() : '';
         $color = $this->color !== null && $this->color !== self::DEFAULT ? ('__' . $this->color) : '';
+        $url = $this->url !== null ? (' href="' . $this->url . '"') : '';
 
-        return '<a class="Link__Link Link' . $color . '" data-reactroot="">'
+        return '<a class="Link__Link Link' . $color . '"' . $url . ' data-reactroot="">'
             . $icon
             . '<div class="Link__Text">'
             . $this->title

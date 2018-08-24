@@ -24,9 +24,19 @@ final class LinkTest extends TestCase
     public function getLinkData(): array
     {
         return [
-            [__DIR__ . '/__snapshots__/linkDefault.html', new Link('Edit', Link::DEFAULT, 'be-icon-pencil')],
-            [__DIR__ . '/__snapshots__/linkBlue.html', new Link('Edit', Link::BLUE, 'be-icon-pencil')],
-            [__DIR__ . '/__snapshots__/linkWhite.html', new Link('Edit', Link::WHITE, 'be-icon-pencil')],
+            'linkUrl' => [__DIR__ . '/__snapshots__/linkUrl.html', new Link('Edit', 'http://google.com')],
+            'linkDefault' => [
+                __DIR__ . '/__snapshots__/linkDefault.html',
+                new Link('Edit', null, Link::DEFAULT, 'be-icon-pencil'),
+            ],
+            'linkBlue' => [
+                __DIR__ . '/__snapshots__/linkBlue.html',
+                new Link('Edit', null, Link::BLUE, 'be-icon-pencil'),
+            ],
+            'linkWhite' => [
+                __DIR__ . '/__snapshots__/linkWhite.html',
+                new Link('Edit', null, Link::WHITE, 'be-icon-pencil'),
+            ],
         ];
     }
 
