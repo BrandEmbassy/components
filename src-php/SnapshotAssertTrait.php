@@ -5,7 +5,7 @@ namespace BrandEmbassy\Components;
 trait SnapshotAssertTrait
 {
 
-    public function assertSnapshot(string $snapshotFileName, UiComponent $component)
+    public function assertSnapshot(string $snapshotFileName, UiComponent $component): void
     {
         $snapshot = \file_get_contents($snapshotFileName);
         $snapshot = \str_replace(['  ', "\n"], '', $snapshot);
