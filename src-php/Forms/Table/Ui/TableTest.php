@@ -15,7 +15,7 @@ final class TableTest extends TestCase
 
     use SnapshotAssertTrait;
 
-    public function testTableRendering(): void
+    public function testRendering(): void
     {
         $rowsData = [
             new RowData([new CellData('name', 'John'), new CellData('surname', 'Smith')]),
