@@ -4,6 +4,7 @@ namespace BrandEmbassy\Components\Controls\Button;
 
 use BrandEmbassy\Components\Color;
 use BrandEmbassy\Components\Icon\Icon;
+use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\UiComponent;
 
 final class Button implements UiComponent
@@ -15,27 +16,30 @@ final class Button implements UiComponent
     private $title;
 
     /**
-     * @var string|null
+     * @var Color|null
      */
     private $color;
 
     /**
-     * @var string|null
+     * @var IconType|null
      */
     private $icon;
 
-    public function __construct(string $title, ?string $color = Color::POSITIVE, ?string $icon = null)
+    public function __construct(string $title, ?Color $color = null, ?IconType $icon = null)
     {
-        $this->icon = $icon;
-        $this->color = $color;
         $this->title = $title;
+        $this->icon = $icon;
+        $this->color = $color ?? Color::get(Color::POSITIVE);
     }
 
     public function render(): string
     {
         $icon = $this->icon !== null ? (new Icon($this->icon))->render() : '';
-        $color = $this->color === Color::POSITIVE ? '' : ('__' . $this->color);
+        $color = $this->color->is(Color::POSITIVE) ? '' : ('__' . $this->color->getValue());
 
-        return '<button class="Button__Button' . $color . '" data-reactroot="">' . $icon .  $this->title . '</button>';
+        return '<button class="Button__Button' . $color . '" data-reactroot="">'
+            . $icon
+            . $this->title
+            . '</button>';
     }
 }

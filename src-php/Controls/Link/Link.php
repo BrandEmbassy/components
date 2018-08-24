@@ -3,17 +3,14 @@
 namespace BrandEmbassy\Components\Controls\Link;
 
 use BrandEmbassy\Components\Icon\Icon;
+use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\UiComponent;
 
 final class Link implements UiComponent
 {
 
-    public const DEFAULT = '';
-    public const WHITE = 'White';
-    public const BLUE = 'Blue';
-
     /**
-     * @var string|null
+     * @var IconType|null
      */
     private $icon;
 
@@ -23,7 +20,7 @@ final class Link implements UiComponent
     private $title;
 
     /**
-     * @var string|null
+     * @var LinkColor|null
      */
     private $color;
 
@@ -32,7 +29,7 @@ final class Link implements UiComponent
      */
     private $url;
 
-    public function __construct(?string $title, ?string $url = null, ?string $color = null, ?string $icon = null)
+    public function __construct(?string $title, ?string $url = null, ?LinkColor $color = null, ?IconType $icon = null)
     {
         $this->icon = $icon;
         $this->title = $title;
@@ -43,7 +40,9 @@ final class Link implements UiComponent
     public function render(): string
     {
         $icon = $this->icon !== null ? (new Icon($this->icon))->render() : '';
-        $color = $this->color !== null && $this->color !== self::DEFAULT ? ('__' . $this->color) : '';
+        $color = $this->color !== null && !$this->color->is(LinkColor::DEFAULT)
+            ? ('__' . $this->color->getValue())
+            : '';
         $url = $this->url !== null ? (' href="' . $this->url . '"') : '';
 
         return '<a class="Link__Link Link' . $color . '"' . $url . ' data-reactroot="">'

@@ -8,18 +8,18 @@ final class Icon implements UiComponent
 {
 
     /**
-     * @var string
+     * @var IconType
      */
-    private $class;
+    private $iconType;
 
-    public function __construct(string $class)
+    public function __construct(IconType $iconType)
     {
-        $this->class = $class;
+        $this->iconType = $iconType;
 
     }
 
     public function render(): string
     {
-        return '<div class="' . $this->class . '"></div>';
+        return '<div class="' . $this->iconType->getValue() . '"></div>';
     }
 }

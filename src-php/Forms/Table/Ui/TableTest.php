@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Forms\Table\Ui;
 
 use BrandEmbassy\Components\Controls\Link\Link;
+use BrandEmbassy\Components\Controls\Link\LinkColor;
 use BrandEmbassy\Components\Forms\Table\Model\ArrayDataProvider;
 use BrandEmbassy\Components\Forms\Table\Model\CellData;
 use BrandEmbassy\Components\Forms\Table\Model\ColumnDefinition;
@@ -34,7 +35,11 @@ final class TableTest extends TestCase
         $table->setCellRenderCallback(
             'actions',
             function (CellData $cellData, RowData $rowData): Cell {
-                $link = new Link('Delete', 'http://yolo?id=' . $rowData->getRowIdentifier(), Link::BLUE);
+                $link = new Link(
+                    'Delete',
+                    'http://yolo?id=' . $rowData->getRowIdentifier(),
+                    LinkColor::get(LinkColor::BLUE)
+                );
 
                 return new Cell($link->render());
             }

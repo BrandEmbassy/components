@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Controls\Button;
 
 use BrandEmbassy\Components\Color;
+use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use PHPUnit\Framework\TestCase;
 
@@ -27,13 +28,16 @@ final class ButtonTest extends TestCase
             'buttonNoIcon' => [__DIR__ . '/__snapshots__/buttonNoIcon.html', new Button('Save')],
             'buttonNoIconPostitive' => [
                 __DIR__ . '/__snapshots__/buttonNoIcon.html',
-                new Button('Save', Color::POSITIVE),
+                new Button('Save', Color::get(Color::POSITIVE)),
             ],
             'buttonWithIcon' => [
                 __DIR__ . '/__snapshots__/buttonWithIcon.html',
-                new Button('Save', Color::POSITIVE, 'be-icon-plus'),
+                new Button('Save', Color::get(Color::POSITIVE), IconType::get(IconType::PLUS)),
             ],
-            'buttonNegative' => [__DIR__ . '/__snapshots__/buttonNegative.html', new Button('Save', Color::NEGATIVE)],
+            'buttonNegative' => [
+                __DIR__ . '/__snapshots__/buttonNegative.html',
+                new Button('Save', Color::get(Color::NEGATIVE)),
+            ],
         ];
     }
 

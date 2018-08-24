@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Controls\Link;
 
 use BrandEmbassy\Components\Controls\Button\Button;
+use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use PHPUnit\Framework\TestCase;
 
@@ -27,15 +28,15 @@ final class LinkTest extends TestCase
             'linkUrl' => [__DIR__ . '/__snapshots__/linkUrl.html', new Link('Edit', 'http://google.com')],
             'linkDefault' => [
                 __DIR__ . '/__snapshots__/linkDefault.html',
-                new Link('Edit', null, Link::DEFAULT, 'be-icon-pencil'),
+                new Link('Edit', null, LinkColor::get(LinkColor::DEFAULT), IconType::get(IconType::PENCIL)),
             ],
             'linkBlue' => [
                 __DIR__ . '/__snapshots__/linkBlue.html',
-                new Link('Edit', null, Link::BLUE, 'be-icon-pencil'),
+                new Link('Edit', null, LinkColor::get(LinkColor::BLUE), IconType::get(IconType::PENCIL)),
             ],
             'linkWhite' => [
                 __DIR__ . '/__snapshots__/linkWhite.html',
-                new Link('Edit', null, Link::WHITE, 'be-icon-pencil'),
+                new Link('Edit', null, LinkColor::get(LinkColor::WHITE), IconType::get(IconType::PENCIL)),
             ],
         ];
     }
