@@ -2,6 +2,7 @@
 
 namespace BrandEmbassy\Components\Controls\Button;
 
+use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\Color;
 use BrandEmbassy\Components\Icon\Icon;
 use BrandEmbassy\Components\Icon\IconType;
@@ -11,12 +12,7 @@ final class Button implements UiComponent
 {
 
     /**
-     * @var string
-     */
-    private $title;
-
-    /**
-     * @var Color|null
+     * @var Color
      */
     private $color;
 
@@ -25,11 +21,21 @@ final class Button implements UiComponent
      */
     private $icon;
 
-    public function __construct(string $title, ?Color $color = null, ?IconType $icon = null)
+    /**
+     * @var UiComponent[]|string[]
+     */
+    private $children;
+
+    /**
+     * @param UiComponent[]|string[]|UiComponent|string $children
+     * @param Color|null $color
+     * @param IconType|null $icon
+     */
+    public function __construct($children, ?Color $color = null, ?IconType $icon = null)
     {
-        $this->title = $title;
         $this->icon = $icon;
         $this->color = $color ?? Color::get(Color::POSITIVE);
+        $this->children = \is_array($children) ? $children : [$children];
     }
 
     public function render(): string
@@ -39,7 +45,7 @@ final class Button implements UiComponent
 
         return '<button class="Button__Button' . $color . '" data-reactroot="">'
             . $icon
-            . $this->title
+            . ArrayRenderer::render($this->children)
             . '</button>';
     }
 }

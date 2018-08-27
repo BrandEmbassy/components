@@ -2,6 +2,8 @@
 
 namespace BrandEmbassy\Components\Forms\Table\Model;
 
+use Assert\Assertion;
+
 final class TableDefinition
 {
 
@@ -15,6 +17,7 @@ final class TableDefinition
      */
     public function __construct(array $columnDefinitions)
     {
+        Assertion::allIsInstanceOf($columnDefinitions, ColumnDefinition::class);
         $this->columnDefinitions = $columnDefinitions;
     }
 

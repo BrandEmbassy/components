@@ -5,6 +5,7 @@ namespace BrandEmbassy\Components\Controls\Link;
 use BrandEmbassy\Components\Controls\Button\Button;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
 
 final class LinkTest extends TestCase
@@ -25,7 +26,14 @@ final class LinkTest extends TestCase
     public function getLinkData(): array
     {
         return [
-            'linkUrl' => [__DIR__ . '/__snapshots__/linkUrl.html', new Link('Edit', 'http://google.com')],
+            'linkUrl' => [
+                __DIR__ . '/__snapshots__/linkUrl.html',
+                new Link('Edit', new Uri('http://google.com')),
+            ],
+            'linkUrlWithXssAttempt' => [
+                __DIR__ . '/__snapshots__/linkUrlWithXssAttempt.html',
+                new Link('Edit', new Uri('http://google.com?="><script>alert(\'Ahoj!\');</script><a ')),
+            ],
             'linkDefault' => [
                 __DIR__ . '/__snapshots__/linkDefault.html',
                 new Link('Edit', null, LinkColor::get(LinkColor::DEFAULT), IconType::get(IconType::PENCIL)),

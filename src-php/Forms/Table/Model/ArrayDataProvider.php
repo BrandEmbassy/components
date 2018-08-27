@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Forms\Table\Model;
 
 use ArrayIterator;
+use Assert\Assertion;
 use Iterator;
 
 final class ArrayDataProvider implements DataProvider
@@ -25,6 +26,7 @@ final class ArrayDataProvider implements DataProvider
      */
     public function __construct(array $data)
     {
+        Assertion::allIsInstanceOf($data, RowData::class);
         $this->data = $data;
     }
 

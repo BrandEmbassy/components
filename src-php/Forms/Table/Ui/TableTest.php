@@ -11,6 +11,7 @@ use BrandEmbassy\Components\Forms\Table\Model\RowData;
 use BrandEmbassy\Components\Forms\Table\Model\TableDefinition;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use BrandEmbassy\Components\UiComponent;
+use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
 
 final class TableTest extends TestCase
@@ -37,11 +38,11 @@ final class TableTest extends TestCase
             function (CellData $cellData, RowData $rowData): Cell {
                 $link = new Link(
                     'Delete',
-                    'http://yolo?id=' . $rowData->getRowIdentifier(),
+                    new Uri('http://yolo?id=' . $rowData->getRowIdentifier()),
                     LinkColor::get(LinkColor::BLUE)
                 );
 
-                return new Cell($link->render());
+                return new Cell($link);
             }
         );
 
