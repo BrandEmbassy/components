@@ -32,17 +32,29 @@ final class Link implements UiComponent
     private $children;
 
     /**
+     * @var string|null
+     */
+    private $onclick;
+
+    /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param UriInterface|null $url
      * @param LinkColor|null $color
      * @param IconType|null $icon
+     * @param null|string $onclick
      */
-    public function __construct($children, ?UriInterface $url = null, ?LinkColor $color = null, ?IconType $icon = null)
-    {
+    public function __construct(
+        $children,
+        ?UriInterface $url = null,
+        ?LinkColor $color = null,
+        ?IconType $icon = null,
+        ?string $onclick = null
+    ) {
         $this->icon = $icon;
         $this->color = $color;
         $this->url = $url;
         $this->children = \is_array($children) ? $children : [$children];
+        $this->onclick = $onclick;
     }
 
     public function render(): string
@@ -52,8 +64,9 @@ final class Link implements UiComponent
             ? ('__' . $this->color->getValue())
             : '';
         $url = $this->url !== null ? (' href="' . $this->urlToString($this->url) . '"') : '';
+        $onclick = $this->onclick !== null ? (' onclick="' . $this->onclick . '"') : '';
 
-        return '<a class="Link__Link Link' . $color . '"' . $url . ' data-reactroot="">'
+        return '<a class="Link__Link Link' . $color . '"' . $url . $onclick . '>'
             . $icon
             . '<div class="Link__Text">'
             . ArrayRenderer::render($this->children)

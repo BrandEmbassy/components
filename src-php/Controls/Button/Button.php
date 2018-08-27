@@ -52,7 +52,7 @@ final class Button implements UiComponent
         $color = $this->color->is(Color::POSITIVE) ? '' : (' Button__' . $this->color->getValue());
         $size = $this->size->is(Size::DEFAULT) ? '' : (' Button__' . $this->size->getValue());
 
-        return '<button class="Button__Button' . $color . $size . '" data-reactroot="">'
+        return '<button class="Button__Button' . $color . $size . '">'
             . $icon
             . ArrayRenderer::render($this->children)
             . '</button>';

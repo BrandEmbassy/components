@@ -50,7 +50,7 @@ final class Table implements UiComponent
 
     public function render(): string
     {
-        $result = '<div class="Table__Table" data-reactroot=""><table>';
+        $result = '<div class="Table__Table"><table>';
         $result .= $this->renderHead();
         $result .= $this->renderBody();
         $result .= '</table></div>';

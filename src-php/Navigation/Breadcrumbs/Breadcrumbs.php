@@ -39,7 +39,7 @@ final class Breadcrumbs implements UiComponent
             $this->steps
         );
 
-        return '<div class="Breadcrumbs__Breadcrumbs" data-reactroot="">'
+        return '<div class="Breadcrumbs__Breadcrumbs">'
             . '<div class="Breadcrumbs__Textwrap">' . ArrayRenderer::render($steps) . '</div>'
             . '<div class="Breadcrumbs__Right">' . ArrayRenderer::render($this->children) . '</div>'
             . '</div>';
