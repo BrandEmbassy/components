@@ -2,6 +2,7 @@
 
 namespace BrandEmbassy\Components\Forms\Table\Ui;
 
+use BrandEmbassy\Components\Align;
 use BrandEmbassy\Components\Controls\Link\Link;
 use BrandEmbassy\Components\Controls\Link\LinkColor;
 use BrandEmbassy\Components\Forms\Table\Model\ArrayDataProvider;
@@ -28,20 +29,20 @@ final class TableTest extends TestCase
         $columnDefinition = [
             new ColumnDefinition('name', 'Name'),
             new ColumnDefinition('surname', 'Surname'),
-            new ColumnDefinition('actions', 'Actions'),
+            new ColumnDefinition('actions', 'Actions', Align::get(Align::RIGHT)),
         ];
         $table = new Table(new TableDefinition($columnDefinition), $dataProvider);
         $table->setColumnsNotInDataSet(['actions']);
         $table->setCellRenderCallback(
             'actions',
-            function (CellData $cellData, RowData $rowData): Cell {
+            function (CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell {
                 $link = new Link(
                     'Delete',
                     new Uri('http://yolo?id=' . $rowData->getRowIdentifier()),
                     LinkColor::get(LinkColor::BLUE)
                 );
 
-                return new Cell($link);
+                return new Cell($link, $columnDefinition->getAlign());
             }
         );
 

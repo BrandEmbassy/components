@@ -24,7 +24,7 @@ final class Table implements UiComponent
     private $dataProvider;
 
     /**
-     * @var (callable(CellData $cellData, RowData $rowData): Cell)[]
+     * @var (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell)[]
      */
     private $cellRenderCallbacks;
 
@@ -41,7 +41,7 @@ final class Table implements UiComponent
 
     /**
      * @param string $column
-     * @param callable(CellData $cellData, RowData $rowData): Cell $function
+     * @param callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell $function
      */
     public function setCellRenderCallback(string $column, callable $function): void
     {
@@ -62,7 +62,7 @@ final class Table implements UiComponent
     {
         $headerCells = array_map(
             function (ColumnDefinition $columnDefinition): HeaderCell {
-                return new HeaderCell($columnDefinition->getHeaderLabel());
+                return new HeaderCell($columnDefinition->getHeaderLabel(), $columnDefinition->getAlign());
             },
             $this->tableDefinition->getColumnDefinitions()
         );
@@ -84,10 +84,10 @@ final class Table implements UiComponent
                 $renderFunction = $this->getCellRenderFunction($columnDefinition->getKey());
 
                 if (\in_array($columnKey, $this->columnsNotInDataSet, true)) {
-                    $cells[] = $renderFunction(new CellData($columnKey, ''), $rowData);
+                    $cells[] = $renderFunction(new CellData($columnKey, ''), $rowData, $columnDefinition);
 
                 } elseif (isset($cellsData[$columnKey])) {
-                    $cells[] = $renderFunction($cellsData[$columnKey], $rowData);
+                    $cells[] = $renderFunction($cellsData[$columnKey], $rowData, $columnDefinition);
 
                 } else {
                     throw InconsistentDataException::byCoordinates($columnKey, $rowData->getRowIdentifier());
@@ -102,7 +102,7 @@ final class Table implements UiComponent
 
     /**
      * @param string $key
-     * @return callable(CellData $cellData, RowData $rowData): Cell
+     * @return callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell
      */
     private function getCellRenderFunction(string $key): callable
     {
@@ -110,8 +110,8 @@ final class Table implements UiComponent
             return $this->cellRenderCallbacks[$key];
         }
 
-        return function (CellData $cellData, RowData $rowData): Cell {
-            return new Cell($cellData->getValue());
+        return function (CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell {
+            return new Cell($cellData->getValue(), $columnDefinition->getAlign());
         };
     }
 

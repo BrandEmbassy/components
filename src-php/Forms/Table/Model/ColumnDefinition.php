@@ -2,6 +2,8 @@
 
 namespace BrandEmbassy\Components\Forms\Table\Model;
 
+use BrandEmbassy\Components\Align;
+
 final class ColumnDefinition
 {
 
@@ -15,10 +17,16 @@ final class ColumnDefinition
      */
     private $headerLabel;
 
-    public function __construct(string $key, string $headerLabel)
+    /**
+     * @var Align|null
+     */
+    private $align;
+
+    public function __construct(string $key, string $headerLabel, ?Align $align = null)
     {
         $this->key = $key;
         $this->headerLabel = $headerLabel;
+        $this->align = $align;
     }
 
     public function getKey(): string
@@ -29,6 +37,11 @@ final class ColumnDefinition
     public function getHeaderLabel(): string
     {
         return $this->headerLabel;
+    }
+
+    public function getAlign(): ?Align
+    {
+        return $this->align;
     }
 
 }
