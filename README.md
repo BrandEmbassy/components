@@ -2,9 +2,16 @@
 
 ## Getting Started - Adding components to your project
 
+<<<<<<< HEAD
 ### React App
 
 #### add module to your project
+=======
+### your project needs to have redux and video-react dependencies installed
+* `yarn add redux video-react`
+
+### add module to your project
+>>>>>>> #23537 - HTML video exchanged for react library
 * `yarn add https://github.com/BrandEmbassy/components.git`
 
 #### import global to app
@@ -16,7 +23,10 @@
 ### PHP Server-side-rendering App
 `composer install brandembassy/components`
 
+<<<<<<< HEAD
 See: `src-php/Forms/Table/Ui/TableTest.php` for how to use Table Component.
+=======
+>>>>>>> #23537 - HTML video exchanged for react library
 
 ## Developing components
 
