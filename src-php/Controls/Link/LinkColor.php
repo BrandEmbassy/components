@@ -10,5 +10,6 @@ final class LinkColor extends Enum
     public const DEFAULT = '';
     public const WHITE = 'White';
     public const BLUE = 'Blue';
+    public const RED = 'Red';
 
 }
