@@ -1,14 +1,15 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Controls\Button;
+namespace BrandEmbassy\Components\Controls\ButtonLink;
 
 use BrandEmbassy\Components\Color;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\Size;
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
 
-final class ButtonTest extends TestCase
+final class ButtonLinkTest extends TestCase
 {
 
     use SnapshotAssertTrait;
@@ -16,9 +17,9 @@ final class ButtonTest extends TestCase
     /**
      * @dataProvider getButtonsData
      * @param string $snapshot
-     * @param Button $button
+     * @param ButtonLink $button
      */
-    public function testButtonRendering(string $snapshot, Button $button): void
+    public function testButtonRendering(string $snapshot, ButtonLink $button): void
     {
         $this->assertSnapshot($snapshot, $button);
     }
@@ -29,27 +30,37 @@ final class ButtonTest extends TestCase
         return [
             'buttonNoIcon' => [
                 __DIR__ . '/__snapshots__/buttonNoIcon.html',
-                new Button('Save'),
+                new ButtonLink('Save'),
             ],
             'buttonNoIconPositive' => [
                 __DIR__ . '/__snapshots__/buttonNoIcon.html',
-                new Button('Save', Color::get(Color::POSITIVE)),
+                new ButtonLink('Save', Color::get(Color::POSITIVE)),
             ],
             'buttonNoIconWithXssAttempt' => [
                 __DIR__ . '/__snapshots__/buttonNoIconWithXssAttempt.html',
-                new Button('<script>alert(\'Ahoj!\');</script>'),
+                new ButtonLink('<script>alert(\'Ahoj!\');</script>'),
             ],
             'buttonWithIcon' => [
                 __DIR__ . '/__snapshots__/buttonWithIcon.html',
-                new Button('Save', Color::get(Color::POSITIVE), IconType::get(IconType::PLUS)),
+                new ButtonLink('Save', Color::get(Color::POSITIVE), IconType::get(IconType::PLUS)),
             ],
             'buttonNegative' => [
                 __DIR__ . '/__snapshots__/buttonNegative.html',
-                new Button('Save', Color::get(Color::NEGATIVE)),
+                new ButtonLink('Save', Color::get(Color::NEGATIVE)),
             ],
             'buttonSmallNegative' => [
                 __DIR__ . '/__snapshots__/buttonSmallNegative.html',
-                new Button('Save', Color::get(Color::NEGATIVE), null, Size::get(Size::SMALL)),
+                new ButtonLink('Save', Color::get(Color::NEGATIVE), null, Size::get(Size::SMALL)),
+            ],
+            'buttonAsHyperlink' => [
+                __DIR__ . '/__snapshots__/buttonAsHyperlink.html',
+                new ButtonLink(
+                    'Save',
+                    null,
+                    null,
+                    null,
+                    new Uri('https://google.com')
+                ),
             ],
         ];
     }
