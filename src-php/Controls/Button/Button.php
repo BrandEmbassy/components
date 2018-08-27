@@ -33,17 +33,29 @@ final class Button implements UiComponent
     private $size;
 
     /**
+     * @var bool
+     */
+    private $asHypertextLink;
+
+    /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param Color|null $color
      * @param IconType|null $icon
      * @param Size|null $size
+     * @param bool $asHypertextLink
      */
-    public function __construct($children, ?Color $color = null, ?IconType $icon = null, ?Size $size = null)
-    {
+    public function __construct(
+        $children,
+        ?Color $color = null,
+        ?IconType $icon = null,
+        ?Size $size = null,
+        bool $asHypertextLink = false
+    ) {
         $this->children = \is_array($children) ? $children : [$children];
         $this->icon = $icon;
         $this->color = $color ?? Color::get(Color::POSITIVE);
         $this->size = $size ?? Size::get(Size::DEFAULT);
+        $this->asHypertextLink = $asHypertextLink;
     }
 
     public function render(): string
@@ -52,9 +64,11 @@ final class Button implements UiComponent
         $color = $this->color->is(Color::POSITIVE) ? '' : (' Button__' . $this->color->getValue());
         $size = $this->size->is(Size::DEFAULT) ? '' : (' Button__' . $this->size->getValue());
 
-        return '<button class="Button__Button' . $color . $size . '">'
+        $tag = $this->asHypertextLink ? 'a' : 'button';
+
+        return '<' . $tag . ' class="Button__Button' . $color . $size . '">'
             . $icon
             . ArrayRenderer::render($this->children)
-            . '</button>';
+            . '</' . $tag . '>';
     }
 }
