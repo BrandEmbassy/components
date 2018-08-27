@@ -51,6 +51,10 @@ final class ButtonTest extends TestCase
                 __DIR__ . '/__snapshots__/buttonSmallNegative.html',
                 new Button('Save', Color::get(Color::NEGATIVE), null, Size::get(Size::SMALL)),
             ],
+            'buttonAsHyperlink' => [
+                __DIR__ . '/__snapshots__/buttonAsHyperlink.html',
+                new Button('Save', null, null, null, true),
+            ],
         ];
     }
 
