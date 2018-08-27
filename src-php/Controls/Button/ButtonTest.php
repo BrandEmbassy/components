@@ -6,6 +6,7 @@ use BrandEmbassy\Components\Color;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\Size;
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
 
 final class ButtonTest extends TestCase
@@ -53,7 +54,14 @@ final class ButtonTest extends TestCase
             ],
             'buttonAsHyperlink' => [
                 __DIR__ . '/__snapshots__/buttonAsHyperlink.html',
-                new Button('Save', null, null, null, true),
+                new Button(
+                    'Save',
+                    null,
+                    null,
+                    null,
+                    true,
+                    new Uri('https://google.com')
+                ),
             ],
         ];
     }
