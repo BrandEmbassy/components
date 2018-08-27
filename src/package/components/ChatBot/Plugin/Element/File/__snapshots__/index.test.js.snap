@@ -31,7 +31,7 @@ exports[`File Component [2] should render basic component 1`] = `
 `;
 
 exports[`File Component [3] should render basic component 1`] = `
-<Component
+<Video
   mimeType="video/mp4"
   title="https://www.w3schools.com/tags/movie.mp4"
   url="https://www.w3schools.com/tags/movie.mp4"

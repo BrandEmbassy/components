@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { Player, ControlBar,
   VolumeMenuButton, PlayToggle,
   ProgressControl
@@ -7,23 +7,29 @@ import { Player, ControlBar,
 import styles from './index.css'
 
 export type VideoElementProps = {
-  url: string,
-  mimeType: string
+  url: string
 }
 
-export default function ({url, mimeType}: VideoElementProps) {
-  return (
-    <div className={styles.VideoWrapper}>
-      <div className={styles.Video}>
-        <Player disableDefaultControls>
-          <source src={url} />
-          <ControlBar>
-            <PlayToggle key='play-toggle' order={1} />
-            <ProgressControl order={2} />
-            <VolumeMenuButton order={3} />
-          </ControlBar>
-        </Player>
+export default class Video extends React.Component<VideoElementProps> {
+  disableToggleFulscreen = (ref) => {
+    ref.actions.toggleFullscreen = () => {}
+  }
+
+  render () {
+    const {url} = this.props
+    return (
+      <div className={styles.VideoWrapper}>
+        <div className={styles.Video}>
+          <Player disableDefaultControls ref={this.disableToggleFulscreen}>
+            <source src={url} />
+            <ControlBar>
+              <PlayToggle key='play-toggle' order={1} />
+              <ProgressControl order={2} />
+              <VolumeMenuButton order={3} />
+            </ControlBar>
+          </Player>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
