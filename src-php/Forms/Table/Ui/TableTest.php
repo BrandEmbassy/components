@@ -10,7 +10,6 @@ use BrandEmbassy\Components\Forms\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\Forms\Table\Model\RowData;
 use BrandEmbassy\Components\Forms\Table\Model\TableDefinition;
 use BrandEmbassy\Components\SnapshotAssertTrait;
-use BrandEmbassy\Components\UiComponent;
 use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
 

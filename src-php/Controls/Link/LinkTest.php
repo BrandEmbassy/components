@@ -46,6 +46,11 @@ final class LinkTest extends TestCase
                 __DIR__ . '/__snapshots__/linkWhite.html',
                 new Link('Edit', null, LinkColor::get(LinkColor::WHITE), IconType::get(IconType::PENCIL)),
             ],
+
+            'linkOnClick' => [
+                __DIR__ . '/__snapshots__/linkOnClick.html',
+                new Link('Edit', null, null, null, 'return confirm(\'Are you sure?\')'),
+            ],
         ];
     }
 
