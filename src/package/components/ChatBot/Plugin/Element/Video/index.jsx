@@ -19,8 +19,8 @@ export default function ({url, mimeType}: VideoElementProps) {
           <source src={url} />
           <ControlBar>
             <PlayToggle key='play-toggle' order={1} />
-            <ProgressControl order={7} />
-            <VolumeMenuButton order={8} />
+            <ProgressControl order={2} />
+            <VolumeMenuButton order={3} />
           </ControlBar>
         </Player>
       </div>
