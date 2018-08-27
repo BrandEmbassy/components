@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Controls\Link;
 
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\Controls\HrefRenderer;
 use BrandEmbassy\Components\Icon\Icon;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\UiComponent;
@@ -24,7 +25,7 @@ final class Link implements UiComponent
     /**
      * @var UriInterface|null
      */
-    private $url;
+    private $uri;
 
     /**
      * @var UiComponent[]|string[] $children
@@ -38,21 +39,21 @@ final class Link implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param UriInterface|null $url
+     * @param UriInterface|null $uri
      * @param LinkColor|null $color
      * @param IconType|null $icon
      * @param null|string $onclick
      */
     public function __construct(
         $children,
-        ?UriInterface $url = null,
+        ?UriInterface $uri = null,
         ?LinkColor $color = null,
         ?IconType $icon = null,
         ?string $onclick = null
     ) {
         $this->icon = $icon;
         $this->color = $color;
-        $this->url = $url;
+        $this->uri = $uri;
         $this->children = \is_array($children) ? $children : [$children];
         $this->onclick = $onclick;
     }
@@ -63,44 +64,13 @@ final class Link implements UiComponent
         $color = $this->color !== null && !$this->color->is(LinkColor::DEFAULT)
             ? ('__' . $this->color->getValue())
             : '';
-        $url = $this->url !== null ? (' href="' . $this->urlToString($this->url) . '"') : '';
+        $uri = HrefRenderer::uriToHrefFragment($this->uri);
         $onclick = $this->onclick !== null ? (' onclick="' . $this->onclick . '"') : '';
 
-        return '<a class="Link__Link Link' . $color . '"' . $url . $onclick . '>'
+        return '<a class="Link__Link Link' . $color . '"' . $uri . $onclick . '>'
             . $icon
             . '<div class="Link__Text">'
             . ArrayRenderer::render($this->children)
             . '</div></a>';
-    }
-
-    private function urlToString(UriInterface $url): string
-    {
-        $scheme = $url->getScheme();
-        $authority = $url->getAuthority();
-        $path = $url->getPath();
-        $query = $url->getQuery();
-        $fragment = $url->getFragment();
-
-        $uri = '';
-
-        if ($scheme !== '') {
-            $uri .= $scheme . ':';
-        }
-
-        if ($authority !== '' || $scheme === 'file') {
-            $uri .= '//' . $authority;
-        }
-
-        $uri .= $path;
-
-        if ($query !== '') {
-            $uri .= '?' . $query;
-        }
-
-        if ($fragment !== '') {
-            $uri .= '#' . $fragment;
-        }
-
-        return $uri;
     }
 }

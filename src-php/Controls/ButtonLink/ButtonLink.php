@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Controls\Button;
+namespace BrandEmbassy\Components\Controls\ButtonLink;
 
 use function Assert\thatAll;
 use BrandEmbassy\Components\ArrayRenderer;
@@ -12,7 +12,7 @@ use BrandEmbassy\Components\Size;
 use BrandEmbassy\Components\UiComponent;
 use Psr\Http\Message\UriInterface;
 
-final class Button implements UiComponent
+final class ButtonLink implements UiComponent
 {
 
     /**
@@ -36,21 +36,29 @@ final class Button implements UiComponent
     private $size;
 
     /**
+     * @var UriInterface|null
+     */
+    private $uri;
+
+    /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param Color|null $color
      * @param IconType|null $icon
      * @param Size|null $size
+     * @param UriInterface|null $uri Only accepted if $asHypertextLink === true
      */
     public function __construct(
         $children,
         ?Color $color = null,
         ?IconType $icon = null,
-        ?Size $size = null
+        ?Size $size = null,
+        ?UriInterface $uri = null
     ) {
         $this->children = \is_array($children) ? $children : [$children];
         $this->icon = $icon;
         $this->color = $color ?? Color::get(Color::POSITIVE);
         $this->size = $size ?? Size::get(Size::DEFAULT);
+        $this->uri = $uri;
     }
 
     public function render(): string
@@ -58,10 +66,11 @@ final class Button implements UiComponent
         $icon = $this->icon !== null ? (new Icon($this->icon))->render() : '';
         $color = $this->color->is(Color::POSITIVE) ? '' : (' Button__' . $this->color->getValue());
         $size = $this->size->is(Size::DEFAULT) ? '' : (' Button__' . $this->size->getValue());
+        $uri = HrefRenderer::uriToHrefFragment($this->uri);
 
-        return '<button class="Button__Button' . $color . $size . '">'
+        return '<a class="Button__Button' . $color . $size . '"' . $uri . '>'
             . $icon
             . ArrayRenderer::render($this->children)
-            . '</button>';
+            . '</a>';
     }
 }
