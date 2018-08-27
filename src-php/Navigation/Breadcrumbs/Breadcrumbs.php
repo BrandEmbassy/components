@@ -15,12 +15,19 @@ final class Breadcrumbs implements UiComponent
     private $steps;
 
     /**
+     * @var UiComponent[]|string[]
+     */
+    private $children;
+
+    /**
+     * @param UiComponent[]|string[]|UiComponent|string $children
      * @param string[] $steps
      */
-    public function __construct(array $steps)
+    public function __construct($children, array $steps)
     {
         Assert::thatAll($steps)->string();
         $this->steps = $steps;
+        $this->children = \is_array($children) ? $children : [$children];
     }
 
     public function render(): string
@@ -34,7 +41,7 @@ final class Breadcrumbs implements UiComponent
 
         return '<div class="Breadcrumbs__Breadcrumbs" data-reactroot="">'
             . '<div class="Breadcrumbs__Textwrap">' . ArrayRenderer::render($steps) . '</div>'
-            . '<div class="Breadcrumbs__Right"></div>'
+            . '<div class="Breadcrumbs__Right">' . ArrayRenderer::render($this->children) . '</div>'
             . '</div>';
     }
 }
