@@ -2,6 +2,7 @@
 import * as React from 'react'
 import Image from '../Image'
 import Video from '../Video'
+import styles from './index.css'
 
 export type FileElementsProps = {
   type: 'FILE',
@@ -35,9 +36,9 @@ export default function File ({url, mimeType, filename, topLevel}: FileElementsP
   }
 
   return (
-    <div className='message--file'>
+    <div className={styles.messageFile}>
       <span className='message--icon be-icon-file' />
-      <a href={url} title={url} download target='_blank' className='message--file'>
+      <a href={url} title={url} download target='_blank' className={styles.messageFilename}>
         {filename || url}
         <span className='message--icon be-icon-download-1' />
       </a>

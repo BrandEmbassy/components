@@ -12,7 +12,9 @@ export type VideoElementProps = {
 
 export default class Video extends React.Component<VideoElementProps> {
   disableToggleFulscreen = (ref) => {
-    ref.actions.toggleFullscreen = () => {}
+    if (ref) {
+      ref.actions.toggleFullscreen = () => {}
+    }
   }
 
   render () {

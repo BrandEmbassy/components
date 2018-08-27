@@ -1,14 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`File Component [1] should render basic component 1`] = `
-<div
-  className="message--file"
->
+<div>
   <span
     className="message--icon be-icon-file"
   />
   <a
-    className="message--file"
     download={true}
     href="https://www.facebook.com/"
     target="_blank"
