@@ -4,6 +4,9 @@
 
 ### React App
 
+#### your project needs to have redux and video-react dependencies installed
+* `yarn add redux video-react`
+
 #### add module to your project
 * `yarn add https://github.com/BrandEmbassy/components.git`
 
