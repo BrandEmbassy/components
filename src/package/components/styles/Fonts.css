@@ -528,6 +528,9 @@
 :global(.be-icon-align-left-1:before) {
   content: "\e042";
 }
+.be-icon-black-speech-bubble:before {
+  content: "\e049";
+}
 
 // COPY CSS FROM FONTASTIC BEFORE THIS SELECTOR
 

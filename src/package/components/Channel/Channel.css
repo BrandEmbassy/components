@@ -291,9 +291,9 @@
   }
   &.apple-imessage, &.apple-business {
     background: linear-gradient( 180deg,#5bf677, #00b618);
-    font-size: 20px;
+    font-size: 18px;
     &:before {
-      content: "\E041";
+      content: "\E049";
     }
   }
   &.sms, &.twilio {
@@ -373,7 +373,7 @@
     background: linear-gradient( 180deg, #35be19, #32b418);
     font-size: 16px;
     &:before {
-      content: "\E040";
+      content: "\E041";
     }
   }
   &.email {
@@ -483,7 +483,7 @@
       font-size: 42px;
     }
     &.apple-imessage, &.apple-business {
-      font-size: 65px;
+      font-size: 40px;
     }
     &.sms, &.twilio {
       font-size: 40px;
@@ -620,7 +620,7 @@
       font-size: 28px;
     }
     &.apple-imessage, &.apple-business {
-      font-size: 35px;
+      font-size: 30px;
     }
     &.line-message, &.line {
       font-size: 28px;

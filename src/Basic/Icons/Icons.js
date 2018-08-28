@@ -294,6 +294,7 @@ export default class Icons extends PureComponent {
               <div className='be-icon-if-line-message-2559802' />
               <div className='be-icon-if-66-wechat-1181189' />
               <div className='be-icon-align-left-1' />
+              <div className='be-icon-black-speech-bubble' />
             </div>
           </div>
         </div>
