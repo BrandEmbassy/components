@@ -1,3 +1,4 @@
+jest.mock('./Element/File/videoPlayerStylesLoader')
 import React from 'react'
 import Carusel from './Carusel'
 import elements from './__fixtures__/index.json'

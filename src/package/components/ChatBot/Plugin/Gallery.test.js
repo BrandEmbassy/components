@@ -1,3 +1,4 @@
+jest.mock('./Element/File/videoPlayerStylesLoader')
 import React from 'react'
 import Gallery from './Gallery'
 import elements from './__fixtures__/index.json'

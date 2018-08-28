@@ -3,6 +3,7 @@ import * as React from 'react'
 import Image from '../Image'
 import Video from '../Video'
 import styles from './index.css'
+import './videoPlayerStylesLoader'
 
 export type FileElementsProps = {
   type: 'FILE',

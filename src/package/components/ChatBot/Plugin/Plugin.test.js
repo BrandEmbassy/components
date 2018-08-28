@@ -1,3 +1,4 @@
+jest.mock('./Element/File/videoPlayerStylesLoader')
 import React from 'react'
 import Plugin from './Plugin'
 
