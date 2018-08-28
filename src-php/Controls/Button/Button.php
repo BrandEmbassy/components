@@ -5,7 +5,7 @@ namespace BrandEmbassy\Components\Controls\Button;
 use function Assert\thatAll;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\Color;
-use BrandEmbassy\Components\Controls\HrefRenderer;
+use BrandEmbassy\Components\Controls\UriRenderer;
 use BrandEmbassy\Components\Icon\Icon;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\Size;

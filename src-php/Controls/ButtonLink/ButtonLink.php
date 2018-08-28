@@ -5,7 +5,7 @@ namespace BrandEmbassy\Components\Controls\ButtonLink;
 use function Assert\thatAll;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\Color;
-use BrandEmbassy\Components\Controls\HrefRenderer;
+use BrandEmbassy\Components\Controls\UriRenderer;
 use BrandEmbassy\Components\Icon\Icon;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\Size;
@@ -66,7 +66,7 @@ final class ButtonLink implements UiComponent
         $icon = $this->icon !== null ? (new Icon($this->icon))->render() : '';
         $color = $this->color->is(Color::POSITIVE) ? '' : (' Button__' . $this->color->getValue());
         $size = $this->size->is(Size::DEFAULT) ? '' : (' Button__' . $this->size->getValue());
-        $uri = HrefRenderer::uriToHrefFragment($this->uri);
+        $uri = UriRenderer::uriToHrefFragment($this->uri);
 
         return '<a class="Button__Button' . $color . $size . '"' . $uri . '>'
             . $icon
