@@ -1,8 +1,70 @@
-.messageFilename {
-  padding-top: 0px;
-  padding-bottom: 2px;
-}
-.messageFile {
-  padding-top: 2px;
+.FilePlugin {
   display: flex;
-}
+  margin: 5px;
+
+   & .SpinnerIcon {
+     display: none;
+     width: 16px;
+     height: 16px;
+     margin-right: 10px;
+     font-size: 16px;
+     color: #fff;
+     cursor: pointer;
+     animation: spinner infinite 4s linear;
+   }
+
+   & .FileIcon {
+     padding-right: 10px;
+     font-size: 16px;
+     color: #060505;
+     opacity: 0.6;
+     transition: opacity 0.18s;
+     cursor: pointer;
+
+     &:hover {
+       opacity: 1;
+     }
+   }
+
+   & .Text {
+     width: 100%;
+     text-decoration: underline;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     overflow: hidden;
+     cursor: pointer;
+   }
+
+   & .FileDownload {
+     padding-left: 10px;
+     font-size: 16px;
+     color: #060505;
+     opacity: 0.6;
+     transition: opacity 0.18s;
+     cursor: pointer;
+
+     &:hover {
+       opacity: 1;
+     }
+   }
+
+   &.isUploading {
+     & .FileDownload {
+       display: none;
+     }
+
+     & .SpinnerIcon {
+       display: inline;
+     }
+
+     & .Text {
+       text-decoration: none;
+       cursor: default;
+     }
+
+     & .FileIcon {
+       display: none;
+     }
+   }
+
+ }

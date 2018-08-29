@@ -1,22 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`File Component [1] should render basic component 1`] = `
-<div>
-  <span
-    className="message--icon be-icon-file"
-  />
-  <a
-    download={true}
-    href="https://www.facebook.com/"
-    target="_blank"
-    title="https://www.facebook.com/"
-  >
-    https://www.facebook.com/
+<a
+  download={true}
+  href="https://www.facebook.com/"
+  target="_blank"
+>
+  <div>
     <span
-      className="message--icon be-icon-download-1"
+      class="be-icon-spinner"
     />
-  </a>
-</div>
+  </div>
+  <div>
+    <span
+      class="be-icon-file-drop"
+    />
+  </div>
+  <div>
+    https://www.facebook.com/
+  </div>
+  <div>
+    <span
+      class="be-icon-download-1"
+    />
+  </div>
+</a>
 `;
 
 exports[`File Component [2] should render basic component 1`] = `
