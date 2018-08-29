@@ -10,6 +10,19 @@ export type VideoElementProps = {
   url: string
 }
 
+export type VideoElement = {
+  filename: string,
+  mimeType: string,
+  id: string,
+  type: 'FILE',
+  url: string,
+  elements: Array<any>
+}
+
+export function isPluginVideo (elements: Array<VideoElement>): boolean {
+  return elements.length === 1 && elements[0].type === 'FILE' && elements[0].mimeType.indexOf('video') >= 0
+}
+
 export default class Video extends React.Component<VideoElementProps> {
   disableToggleFulscreen = (ref) => {
     if (ref) {

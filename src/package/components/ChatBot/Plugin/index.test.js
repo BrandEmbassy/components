@@ -16,7 +16,7 @@ describe('Plugin index', () => {
   })
 
   it('should render raw element inside plugin', () => {
-    const wrapper = mount(<Plugin elements={[elements[0]]} onClick={jest.fn()} />)
+    const wrapper = mount(<Plugin elements={[elements[0]]} onClick={jest.fn()} width='100%' />)
     expect(wrapper).toMatchSnapshot()
   })
 

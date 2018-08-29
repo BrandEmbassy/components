@@ -1949,6 +1949,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
   }
   hideButtons={false}
   onClick={[Function]}
+  width="100%"
 >
   <Plugin
     elements={
@@ -1997,15 +1998,12 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
     hideButtons={false}
     onClick={[Function]}
     topLevel={true}
+    width="100%"
   >
     <div>
       <div>
         <div
-          style={
-            Object {
-              "width": undefined,
-            }
-          }
+          style={Object {}}
         >
           <ComposedElement
             elements={
@@ -2054,6 +2052,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
             hideButtons={false}
             onClick={[Function]}
             topLevel={true}
+            width="100%"
           >
             <div>
               <Element
@@ -2100,6 +2099,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                 onClick={[Function]}
                 topLevel={true}
                 type="MENU"
+                width="100%"
               >
                 <ComposedElement
                   elements={
@@ -2145,6 +2145,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                   showTextAsMessage={false}
                   topLevel={false}
                   type="MENU"
+                  width="100%"
                 >
                   <div>
                     <Element
@@ -2156,6 +2157,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       topLevel={false}
                       type="IMAGE"
                       url="https://picsum.photos/300/150"
+                      width="100%"
                     >
                       <Image
                         src="https://picsum.photos/300/150"
@@ -2178,6 +2180,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       text="Hello!"
                       topLevel={false}
                       type="TITLE"
+                      width="100%"
                     >
                       <Heading
                         content="Hello!"
@@ -2197,6 +2200,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       text="Lorem Impsum..."
                       topLevel={false}
                       type="TEXT"
+                      width="100%"
                     >
                       <Text
                         content="Lorem Impsum..."
@@ -2217,6 +2221,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       text="Click me!"
                       topLevel={false}
                       type="BUTTON"
+                      width="100%"
                     >
                       <Button
                         hideButtons={false}
@@ -2228,6 +2233,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                         text="Click me!"
                         topLevel={false}
                         type="BUTTON"
+                        width="100%"
                       >
                         <div>
                           <button
@@ -2249,6 +2255,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       text="No click me!"
                       topLevel={false}
                       type="BUTTON"
+                      width="100%"
                     >
                       <Button
                         hideButtons={false}
@@ -2260,6 +2267,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                         text="No click me!"
                         topLevel={false}
                         type="BUTTON"
+                        width="100%"
                       >
                         <div>
                           <button
@@ -2281,6 +2289,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       text="Aww don\`t click on me"
                       topLevel={false}
                       type="BUTTON"
+                      width="100%"
                     >
                       <Button
                         hideButtons={false}
@@ -2292,6 +2301,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                         text="Aww don\`t click on me"
                         topLevel={false}
                         type="BUTTON"
+                        width="100%"
                       >
                         <div>
                           <button
