@@ -1996,6 +1996,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
     }
     hideButtons={false}
     onClick={[Function]}
+    topLevel={true}
   >
     <div>
       <div>
@@ -2136,7 +2137,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                   id="Ek4tPy1h4"
                   onClick={[Function]}
                   showTextAsMessage={false}
-                  topLevel={true}
+                  topLevel={false}
                   type="MENU"
                 >
                   <div>
@@ -2146,7 +2147,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       key="Uk4tPy1h2"
                       onClick={[Function]}
                       showTextAsMessage={false}
-                      topLevel={true}
+                      topLevel={false}
                       type="IMAGE"
                       url="https://picsum.photos/300/150"
                     >
@@ -2169,7 +2170,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       onClick={[Function]}
                       showTextAsMessage={false}
                       text="Hello!"
-                      topLevel={true}
+                      topLevel={false}
                       type="TITLE"
                     >
                       <Heading
@@ -2188,7 +2189,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       onClick={[Function]}
                       showTextAsMessage={false}
                       text="Lorem Impsum..."
-                      topLevel={true}
+                      topLevel={false}
                       type="TEXT"
                     >
                       <Text
@@ -2208,7 +2209,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       postback="click-on-button-1"
                       showTextAsMessage={false}
                       text="Click me!"
-                      topLevel={true}
+                      topLevel={false}
                       type="BUTTON"
                     >
                       <Button
@@ -2219,7 +2220,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                         postback="click-on-button-1"
                         showTextAsMessage={false}
                         text="Click me!"
-                        topLevel={true}
+                        topLevel={false}
                         type="BUTTON"
                       >
                         <div>
@@ -2240,7 +2241,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       postback="click-on-button-2"
                       showTextAsMessage={false}
                       text="No click me!"
-                      topLevel={true}
+                      topLevel={false}
                       type="BUTTON"
                     >
                       <Button
@@ -2251,7 +2252,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                         postback="click-on-button-2"
                         showTextAsMessage={false}
                         text="No click me!"
-                        topLevel={true}
+                        topLevel={false}
                         type="BUTTON"
                       >
                         <div>
@@ -2272,7 +2273,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       postback="click-on-button-3"
                       showTextAsMessage={false}
                       text="Aww don\`t click on me"
-                      topLevel={true}
+                      topLevel={false}
                       type="BUTTON"
                     >
                       <Button
@@ -2283,7 +2284,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                         postback="click-on-button-3"
                         showTextAsMessage={false}
                         text="Aww don\`t click on me"
-                        topLevel={true}
+                        topLevel={false}
                         type="BUTTON"
                       >
                         <div>
@@ -2404,6 +2405,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
       }
       hideButtons={false}
       onClick={[Function]}
+      topLevel={true}
     >
       <div>
         <Element
@@ -2448,6 +2450,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
           id="Ek4tPy1h4"
           key="Ek4tPy1h4"
           onClick={[Function]}
+          topLevel={true}
           type="QUICK_REPLIES"
         >
           <QuickReplies
@@ -2491,6 +2494,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
             hideButtons={false}
             id="Ek4tPy1h4"
             onClick={[Function]}
+            topLevel={true}
             type="QUICK_REPLIES"
           >
             <div>
