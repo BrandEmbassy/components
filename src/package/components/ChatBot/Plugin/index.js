@@ -11,7 +11,8 @@ type Props = {
   disableCarusel?: boolean,
   hideButtons?: boolean,
   onClick: Function,
-  elements: Array<Object>
+  elements: Array<Object>,
+  width?: string
 }
 
 export default class PluginWrapper extends PureComponent<Props> {
@@ -26,7 +27,7 @@ export default class PluginWrapper extends PureComponent<Props> {
   }
 
   render () {
-    const { elements, onClick, hideButtons, disableCarusel } = this.props
+    const { elements, onClick, hideButtons, disableCarusel, width } = this.props
     if (elements.length > 1 && disableCarusel) {
       return <Gallery elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else if (elements.length > 1) {
@@ -34,11 +35,11 @@ export default class PluginWrapper extends PureComponent<Props> {
     } else if (this.isPluginWithoutWrapper(elements[0])) {
       return (
         <div className={styles.PluginFrame}>
-          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} topLevel />
+          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} topLevel />
         </div>
       )
     } else {
-      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} topLevel />
+      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} topLevel />
     }
   }
 }

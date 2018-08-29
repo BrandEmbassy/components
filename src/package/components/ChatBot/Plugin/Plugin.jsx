@@ -7,7 +7,8 @@ type Props = {
   elements: Array<any>,
   onClick: Function,
   hideButtons?: boolean,
-  topLevel: boolean
+  topLevel: boolean,
+  width?: string
 }
 
 export default class Plugin extends PureComponent<Props> {
@@ -15,7 +16,7 @@ export default class Plugin extends PureComponent<Props> {
     return (
       <div className={styles.PluginFrameWrapper}>
         <div className={styles.PluginFrame}>
-          <div className={styles.Plugin}>
+          <div className={styles.Plugin} style={{'width': this.props.width}}>
             <ComposedElement {...this.props} />
           </div>
         </div>
