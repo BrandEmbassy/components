@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import Image from '../Image'
+import NewImage from '../newImage'
 import Video from '../Video'
 import styles from './index.css'
 import './videoPlayerStylesLoader'
@@ -15,12 +16,21 @@ export type FileElementsProps = {
 
 export default function File ({url, mimeType, filename, topLevel}: FileElementsProps) {
   if (mimeType.indexOf('image') >= 0) {
+    if (topLevel) {
+      return (
+        <NewImage
+          src={url}
+          title={filename}
+          mimeType={mimeType}
+        />
+      )
+    }
+
     return (
       <Image
         src={url}
-        title={url}
+        title={filename}
         mimeType={mimeType}
-        topLevel={topLevel}
       />
     )
   }

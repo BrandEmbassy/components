@@ -34,11 +34,11 @@ export default class PluginWrapper extends PureComponent<Props> {
     } else if (this.isPluginWithoutWrapper(elements[0])) {
       return (
         <div className={styles.PluginFrame}>
-          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} />
+          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} topLevel />
         </div>
       )
     } else {
-      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} />
+      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} topLevel />
     }
   }
 }

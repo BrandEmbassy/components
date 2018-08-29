@@ -49,7 +49,7 @@ export default function Element (props: IElement) {
   }
   if (Array.isArray(props.elements)) {
     const showTextAsMessage = (type === ElementType.TEXT_AND_BUTTONS)
-    return <ComposedElement {...props} showTextAsMessage={showTextAsMessage} />
+    return <ComposedElement {...props} showTextAsMessage={showTextAsMessage} topLevel={false} />
   }
   return null
 }
