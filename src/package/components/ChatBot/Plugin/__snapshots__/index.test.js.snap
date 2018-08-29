@@ -2000,7 +2000,13 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
   >
     <div>
       <div>
-        <div>
+        <div
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
           <ComposedElement
             elements={
               Array [
