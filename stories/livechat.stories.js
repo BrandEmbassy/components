@@ -72,6 +72,7 @@ storiesOf('Chatbots elements', module)
   .add('QuickReplies', () => <QuickReplies elements={object('elements', repliesButtons)} onClick={clickHandler} />)
   .add('File - basic', () => <File url='http://via.placeholder.com/350x150' mimeType='audio/mp3' title='file.txt' />)
   .add('File - image', () => <File url='http://via.placeholder.com/350x150' mimeType='image/jpeg' />)
+  .add('File - newImage', () => <File url='http://via.placeholder.com/350x150' mimeType='image/jpeg' filename='file.txt' topLevel />)
   .add('File - video', () => <File url='https://www.w3schools.com/tags/movie.mp4' mimeType='video/mp4' />)
 
 storiesOf('Chatbots Plugins', module)

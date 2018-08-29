@@ -23,7 +23,6 @@ exports[`File Component [2] should render basic component 1`] = `
 <Image
   mimeType="image/jpeg"
   src="http://via.placeholder.com/350x150"
-  title="http://via.placeholder.com/350x150"
 />
 `;
 

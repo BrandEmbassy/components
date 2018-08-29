@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import Image from '../Image'
-import NewImage from '../newImage'
+import StandaloneImage from '../StandaloneImage'
 import Video from '../Video'
 import styles from './index.css'
 import './videoPlayerStylesLoader'
@@ -18,7 +18,7 @@ export default function File ({url, mimeType, filename, topLevel}: FileElementsP
   if (mimeType.indexOf('image') >= 0) {
     if (topLevel) {
       return (
-        <NewImage
+        <StandaloneImage
           src={url}
           title={filename}
           mimeType={mimeType}
