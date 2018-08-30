@@ -3,7 +3,7 @@
 namespace BrandEmbassy\Components\Controls\Link;
 
 use BrandEmbassy\Components\ArrayRenderer;
-use BrandEmbassy\Components\Controls\HrefRenderer;
+use BrandEmbassy\Components\Controls\UriRenderer;
 use BrandEmbassy\Components\Icon\Icon;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\UiComponent;
@@ -64,7 +64,7 @@ final class Link implements UiComponent
         $color = $this->color !== null && !$this->color->is(LinkColor::DEFAULT)
             ? ('__' . $this->color->getValue())
             : '';
-        $uri = HrefRenderer::uriToHrefFragment($this->uri);
+        $uri = UriRenderer::uriToHrefFragment($this->uri);
         $onclick = $this->onclick !== null ? (' onclick="' . $this->onclick . '"') : '';
 
         return '<a class="Link__Link Link' . $color . '"' . $uri . $onclick . '>'
