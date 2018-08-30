@@ -1,7 +1,7 @@
 /* eslint-disable import/first */
 jest.mock('./Element/File/videoPlayerStylesLoader')
 import React from 'react'
-import Plugin from './index'
+import {default as Plugin, isPluginVideo} from './index'
 import elements from './__fixtures__/index.json'
 
 describe('Plugin index', () => {
@@ -16,7 +16,7 @@ describe('Plugin index', () => {
   })
 
   it('should render raw element inside plugin', () => {
-    const wrapper = mount(<Plugin elements={[elements[0]]} onClick={jest.fn()} />)
+    const wrapper = mount(<Plugin elements={[elements[0]]} onClick={jest.fn()} width='100%' />)
     expect(wrapper).toMatchSnapshot()
   })
 
@@ -25,5 +25,9 @@ describe('Plugin index', () => {
     quickReplies.type = 'QUICK_REPLIES'
     const wrapper = mount(<Plugin elements={[quickReplies]} onClick={jest.fn()} />)
     expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should be able to test for type of video plugin', () => {
+    expect(isPluginVideo([])).toEqual(false)
   })
 })

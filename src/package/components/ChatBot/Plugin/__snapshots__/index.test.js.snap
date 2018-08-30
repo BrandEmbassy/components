@@ -517,6 +517,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="Uk4tPy1h2"
                           key="Uk4tPy1h2"
                           onClick={[Function]}
+                          standalone={false}
                           type="IMAGE"
                           url="https://picsum.photos/300/150"
                         >
@@ -537,6 +538,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="Ck4tPy1h3"
                           key="Ck4tPy1h3"
                           onClick={[Function]}
+                          standalone={false}
                           text="Hello!"
                           type="TITLE"
                         >
@@ -554,6 +556,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="Ek4tPy1h1"
                           key="Ek4tPy1h1"
                           onClick={[Function]}
+                          standalone={false}
                           text="Lorem Impsum..."
                           type="TEXT"
                         >
@@ -571,6 +574,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="Nkm0hRAiE"
                           onClick={[Function]}
                           postback="click-on-button-1"
+                          standalone={false}
                           text="Click me!"
                           type="BUTTON"
                         >
@@ -580,6 +584,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="Click me!"
                             onClick={[Function]}
                             postback="click-on-button-1"
+                            standalone={false}
                             text="Click me!"
                             type="BUTTON"
                           >
@@ -599,6 +604,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="NkGJ6CAiN"
                           onClick={[Function]}
                           postback="click-on-button-2"
+                          standalone={false}
                           text="No click me!"
                           type="BUTTON"
                         >
@@ -608,6 +614,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="No click me!"
                             onClick={[Function]}
                             postback="click-on-button-2"
+                            standalone={false}
                             text="No click me!"
                             type="BUTTON"
                           >
@@ -627,6 +634,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="EyCyTRCi4"
                           onClick={[Function]}
                           postback="click-on-button-3"
+                          standalone={false}
                           text="Aww don\`t click on me"
                           type="BUTTON"
                         >
@@ -636,6 +644,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="Aww don\`t click on me"
                             onClick={[Function]}
                             postback="click-on-button-3"
+                            standalone={false}
                             text="Aww don\`t click on me"
                             type="BUTTON"
                           >
@@ -716,6 +725,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="aUk4tPy1h2"
                           key="aUk4tPy1h2"
                           onClick={[Function]}
+                          standalone={false}
                           type="IMAGE"
                           url="https://picsum.photos/300/150"
                         >
@@ -736,6 +746,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="aCk4tPy1h3"
                           key="aCk4tPy1h3"
                           onClick={[Function]}
+                          standalone={false}
                           text="Hello!"
                           type="TITLE"
                         >
@@ -753,6 +764,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="aEk4tPy1h1"
                           key="aEk4tPy1h1"
                           onClick={[Function]}
+                          standalone={false}
                           text="Lorem Impsum..."
                           type="TEXT"
                         >
@@ -770,6 +782,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="aNkm0hRAiE"
                           onClick={[Function]}
                           postback="click-on-button-1"
+                          standalone={false}
                           text="Click me!"
                           type="BUTTON"
                         >
@@ -779,6 +792,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="Click me!"
                             onClick={[Function]}
                             postback="click-on-button-1"
+                            standalone={false}
                             text="Click me!"
                             type="BUTTON"
                           >
@@ -798,6 +812,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="aNkGJ6CAiN"
                           onClick={[Function]}
                           postback="click-on-button-2"
+                          standalone={false}
                           text="No click me!"
                           type="BUTTON"
                         >
@@ -807,6 +822,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="No click me!"
                             onClick={[Function]}
                             postback="click-on-button-2"
+                            standalone={false}
                             text="No click me!"
                             type="BUTTON"
                           >
@@ -826,6 +842,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="aEyCyTRCi4"
                           onClick={[Function]}
                           postback="click-on-button-3"
+                          standalone={false}
                           text="Aww don\`t click on me"
                           type="BUTTON"
                         >
@@ -835,6 +852,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="Aww don\`t click on me"
                             onClick={[Function]}
                             postback="click-on-button-3"
+                            standalone={false}
                             text="Aww don\`t click on me"
                             type="BUTTON"
                           >
@@ -915,6 +933,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="bUk4tPy1h2"
                           key="bUk4tPy1h2"
                           onClick={[Function]}
+                          standalone={false}
                           type="IMAGE"
                           url="https://picsum.photos/300/150"
                         >
@@ -935,6 +954,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="bCk4tPy1h3"
                           key="bCk4tPy1h3"
                           onClick={[Function]}
+                          standalone={false}
                           text="Hello!"
                           type="TITLE"
                         >
@@ -952,6 +972,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           id="bEk4tPy1h1"
                           key="bEk4tPy1h1"
                           onClick={[Function]}
+                          standalone={false}
                           text="Lorem Impsum..."
                           type="TEXT"
                         >
@@ -969,6 +990,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="bNkm0hRAiE"
                           onClick={[Function]}
                           postback="click-on-button-1"
+                          standalone={false}
                           text="Click me!"
                           type="BUTTON"
                         >
@@ -978,6 +1000,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="Click me!"
                             onClick={[Function]}
                             postback="click-on-button-1"
+                            standalone={false}
                             text="Click me!"
                             type="BUTTON"
                           >
@@ -997,6 +1020,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="bNkGJ6CAiN"
                           onClick={[Function]}
                           postback="click-on-button-2"
+                          standalone={false}
                           text="No click me!"
                           type="BUTTON"
                         >
@@ -1006,6 +1030,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="No click me!"
                             onClick={[Function]}
                             postback="click-on-button-2"
+                            standalone={false}
                             text="No click me!"
                             type="BUTTON"
                           >
@@ -1025,6 +1050,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="bEyCyTRCi4"
                           onClick={[Function]}
                           postback="click-on-button-3"
+                          standalone={false}
                           text="Aww don\`t click on me"
                           type="BUTTON"
                         >
@@ -1034,6 +1060,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             label="Aww don\`t click on me"
                             onClick={[Function]}
                             postback="click-on-button-3"
+                            standalone={false}
                             text="Aww don\`t click on me"
                             type="BUTTON"
                           >
@@ -1390,6 +1417,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="Uk4tPy1h2"
                 key="Uk4tPy1h2"
                 onClick={[Function]}
+                standalone={false}
                 type="IMAGE"
                 url="https://picsum.photos/300/150"
               >
@@ -1410,6 +1438,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="Ck4tPy1h3"
                 key="Ck4tPy1h3"
                 onClick={[Function]}
+                standalone={false}
                 text="Hello!"
                 type="TITLE"
               >
@@ -1427,6 +1456,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="Ek4tPy1h1"
                 key="Ek4tPy1h1"
                 onClick={[Function]}
+                standalone={false}
                 text="Lorem Impsum..."
                 type="TEXT"
               >
@@ -1444,6 +1474,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="Nkm0hRAiE"
                 onClick={[Function]}
                 postback="click-on-button-1"
+                standalone={false}
                 text="Click me!"
                 type="BUTTON"
               >
@@ -1453,6 +1484,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="Click me!"
                   onClick={[Function]}
                   postback="click-on-button-1"
+                  standalone={false}
                   text="Click me!"
                   type="BUTTON"
                 >
@@ -1472,6 +1504,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="NkGJ6CAiN"
                 onClick={[Function]}
                 postback="click-on-button-2"
+                standalone={false}
                 text="No click me!"
                 type="BUTTON"
               >
@@ -1481,6 +1514,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="No click me!"
                   onClick={[Function]}
                   postback="click-on-button-2"
+                  standalone={false}
                   text="No click me!"
                   type="BUTTON"
                 >
@@ -1500,6 +1534,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="EyCyTRCi4"
                 onClick={[Function]}
                 postback="click-on-button-3"
+                standalone={false}
                 text="Aww don\`t click on me"
                 type="BUTTON"
               >
@@ -1509,6 +1544,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="Aww don\`t click on me"
                   onClick={[Function]}
                   postback="click-on-button-3"
+                  standalone={false}
                   text="Aww don\`t click on me"
                   type="BUTTON"
                 >
@@ -1575,6 +1611,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="aUk4tPy1h2"
                 key="aUk4tPy1h2"
                 onClick={[Function]}
+                standalone={false}
                 type="IMAGE"
                 url="https://picsum.photos/300/150"
               >
@@ -1595,6 +1632,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="aCk4tPy1h3"
                 key="aCk4tPy1h3"
                 onClick={[Function]}
+                standalone={false}
                 text="Hello!"
                 type="TITLE"
               >
@@ -1612,6 +1650,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="aEk4tPy1h1"
                 key="aEk4tPy1h1"
                 onClick={[Function]}
+                standalone={false}
                 text="Lorem Impsum..."
                 type="TEXT"
               >
@@ -1629,6 +1668,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="aNkm0hRAiE"
                 onClick={[Function]}
                 postback="click-on-button-1"
+                standalone={false}
                 text="Click me!"
                 type="BUTTON"
               >
@@ -1638,6 +1678,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="Click me!"
                   onClick={[Function]}
                   postback="click-on-button-1"
+                  standalone={false}
                   text="Click me!"
                   type="BUTTON"
                 >
@@ -1657,6 +1698,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="aNkGJ6CAiN"
                 onClick={[Function]}
                 postback="click-on-button-2"
+                standalone={false}
                 text="No click me!"
                 type="BUTTON"
               >
@@ -1666,6 +1708,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="No click me!"
                   onClick={[Function]}
                   postback="click-on-button-2"
+                  standalone={false}
                   text="No click me!"
                   type="BUTTON"
                 >
@@ -1685,6 +1728,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="aEyCyTRCi4"
                 onClick={[Function]}
                 postback="click-on-button-3"
+                standalone={false}
                 text="Aww don\`t click on me"
                 type="BUTTON"
               >
@@ -1694,6 +1738,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="Aww don\`t click on me"
                   onClick={[Function]}
                   postback="click-on-button-3"
+                  standalone={false}
                   text="Aww don\`t click on me"
                   type="BUTTON"
                 >
@@ -1760,6 +1805,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="bUk4tPy1h2"
                 key="bUk4tPy1h2"
                 onClick={[Function]}
+                standalone={false}
                 type="IMAGE"
                 url="https://picsum.photos/300/150"
               >
@@ -1780,6 +1826,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="bCk4tPy1h3"
                 key="bCk4tPy1h3"
                 onClick={[Function]}
+                standalone={false}
                 text="Hello!"
                 type="TITLE"
               >
@@ -1797,6 +1844,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 id="bEk4tPy1h1"
                 key="bEk4tPy1h1"
                 onClick={[Function]}
+                standalone={false}
                 text="Lorem Impsum..."
                 type="TEXT"
               >
@@ -1814,6 +1862,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="bNkm0hRAiE"
                 onClick={[Function]}
                 postback="click-on-button-1"
+                standalone={false}
                 text="Click me!"
                 type="BUTTON"
               >
@@ -1823,6 +1872,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="Click me!"
                   onClick={[Function]}
                   postback="click-on-button-1"
+                  standalone={false}
                   text="Click me!"
                   type="BUTTON"
                 >
@@ -1842,6 +1892,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="bNkGJ6CAiN"
                 onClick={[Function]}
                 postback="click-on-button-2"
+                standalone={false}
                 text="No click me!"
                 type="BUTTON"
               >
@@ -1851,6 +1902,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="No click me!"
                   onClick={[Function]}
                   postback="click-on-button-2"
+                  standalone={false}
                   text="No click me!"
                   type="BUTTON"
                 >
@@ -1870,6 +1922,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="bEyCyTRCi4"
                 onClick={[Function]}
                 postback="click-on-button-3"
+                standalone={false}
                 text="Aww don\`t click on me"
                 type="BUTTON"
               >
@@ -1879,6 +1932,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   label="Aww don\`t click on me"
                   onClick={[Function]}
                   postback="click-on-button-3"
+                  standalone={false}
                   text="Aww don\`t click on me"
                   type="BUTTON"
                 >
@@ -1949,6 +2003,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
   }
   hideButtons={false}
   onClick={[Function]}
+  width="100%"
 >
   <Plugin
     elements={
@@ -1995,15 +2050,16 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
       ]
     }
     hideButtons={false}
+    level={1}
     onClick={[Function]}
-    topLevel={true}
+    width="100%"
   >
     <div>
       <div>
         <div
           style={
             Object {
-              "width": undefined,
+              "width": "100%",
             }
           }
         >
@@ -2052,8 +2108,9 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
               ]
             }
             hideButtons={false}
+            level={1}
             onClick={[Function]}
-            topLevel={true}
+            width="100%"
           >
             <div>
               <Element
@@ -2097,9 +2154,11 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                 hideButtons={false}
                 id="Ek4tPy1h4"
                 key="Ek4tPy1h4"
+                level={1}
                 onClick={[Function]}
-                topLevel={true}
+                standalone={true}
                 type="MENU"
+                width="100%"
               >
                 <ComposedElement
                   elements={
@@ -2141,21 +2200,25 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                   }
                   hideButtons={false}
                   id="Ek4tPy1h4"
+                  level={2}
                   onClick={[Function]}
                   showTextAsMessage={false}
-                  topLevel={false}
+                  standalone={true}
                   type="MENU"
+                  width="100%"
                 >
                   <div>
                     <Element
                       hideButtons={false}
                       id="Ek4tPy1h4"
                       key="Uk4tPy1h2"
+                      level={2}
                       onClick={[Function]}
                       showTextAsMessage={false}
-                      topLevel={false}
+                      standalone={true}
                       type="IMAGE"
                       url="https://picsum.photos/300/150"
+                      width="100%"
                     >
                       <Image
                         src="https://picsum.photos/300/150"
@@ -2173,11 +2236,13 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       hideButtons={false}
                       id="Ek4tPy1h4"
                       key="Ck4tPy1h3"
+                      level={2}
                       onClick={[Function]}
                       showTextAsMessage={false}
+                      standalone={true}
                       text="Hello!"
-                      topLevel={false}
                       type="TITLE"
+                      width="100%"
                     >
                       <Heading
                         content="Hello!"
@@ -2192,11 +2257,13 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       hideButtons={false}
                       id="Ek4tPy1h4"
                       key="Ek4tPy1h1"
+                      level={2}
                       onClick={[Function]}
                       showTextAsMessage={false}
+                      standalone={true}
                       text="Lorem Impsum..."
-                      topLevel={false}
                       type="TEXT"
+                      width="100%"
                     >
                       <Text
                         content="Lorem Impsum..."
@@ -2211,23 +2278,27 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       hideButtons={false}
                       id="Ek4tPy1h4"
                       key="Nkm0hRAiE"
+                      level={2}
                       onClick={[Function]}
                       postback="click-on-button-1"
                       showTextAsMessage={false}
+                      standalone={true}
                       text="Click me!"
-                      topLevel={false}
                       type="BUTTON"
+                      width="100%"
                     >
                       <Button
                         hideButtons={false}
                         id="Ek4tPy1h4"
                         label="Click me!"
+                        level={2}
                         onClick={[Function]}
                         postback="click-on-button-1"
                         showTextAsMessage={false}
+                        standalone={true}
                         text="Click me!"
-                        topLevel={false}
                         type="BUTTON"
+                        width="100%"
                       >
                         <div>
                           <button
@@ -2243,23 +2314,27 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       hideButtons={false}
                       id="Ek4tPy1h4"
                       key="NkGJ6CAiN"
+                      level={2}
                       onClick={[Function]}
                       postback="click-on-button-2"
                       showTextAsMessage={false}
+                      standalone={true}
                       text="No click me!"
-                      topLevel={false}
                       type="BUTTON"
+                      width="100%"
                     >
                       <Button
                         hideButtons={false}
                         id="Ek4tPy1h4"
                         label="No click me!"
+                        level={2}
                         onClick={[Function]}
                         postback="click-on-button-2"
                         showTextAsMessage={false}
+                        standalone={true}
                         text="No click me!"
-                        topLevel={false}
                         type="BUTTON"
+                        width="100%"
                       >
                         <div>
                           <button
@@ -2275,23 +2350,27 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       hideButtons={false}
                       id="Ek4tPy1h4"
                       key="EyCyTRCi4"
+                      level={2}
                       onClick={[Function]}
                       postback="click-on-button-3"
                       showTextAsMessage={false}
+                      standalone={true}
                       text="Aww don\`t click on me"
-                      topLevel={false}
                       type="BUTTON"
+                      width="100%"
                     >
                       <Button
                         hideButtons={false}
                         id="Ek4tPy1h4"
                         label="Aww don\`t click on me"
+                        level={2}
                         onClick={[Function]}
                         postback="click-on-button-3"
                         showTextAsMessage={false}
+                        standalone={true}
                         text="Aww don\`t click on me"
-                        topLevel={false}
                         type="BUTTON"
+                        width="100%"
                       >
                         <div>
                           <button
@@ -2410,8 +2489,8 @@ exports[`Plugin index should render standalone plugin 1`] = `
         ]
       }
       hideButtons={false}
+      level={1}
       onClick={[Function]}
-      topLevel={true}
     >
       <div>
         <Element
@@ -2455,8 +2534,9 @@ exports[`Plugin index should render standalone plugin 1`] = `
           hideButtons={false}
           id="Ek4tPy1h4"
           key="Ek4tPy1h4"
+          level={1}
           onClick={[Function]}
-          topLevel={true}
+          standalone={true}
           type="QUICK_REPLIES"
         >
           <QuickReplies
@@ -2499,8 +2579,9 @@ exports[`Plugin index should render standalone plugin 1`] = `
             }
             hideButtons={false}
             id="Ek4tPy1h4"
+            level={1}
             onClick={[Function]}
-            topLevel={true}
+            standalone={true}
             type="QUICK_REPLIES"
           >
             <div>

@@ -14,12 +14,12 @@ import type QuickRepliesProps from './QuickReplies'
 import type FileElementsProps from './File'
 
 // @todo use Disjoint Unions from flow-typed
-type IElement = ButtonElementProps & HeadingElementProps &
+export type IElement = ButtonElementProps & HeadingElementProps &
   TextElementProps & ImageElementProps &
   QuickRepliesProps & FileElementsProps & ComposedElement
 
 export default function Element (props: IElement) {
-  const type = props.type
+  const {type, level} = props
   const headingType = [
     ElementType.HEADING,
     ElementType.TITLE,
@@ -49,7 +49,7 @@ export default function Element (props: IElement) {
   }
   if (Array.isArray(props.elements)) {
     const showTextAsMessage = (type === ElementType.TEXT_AND_BUTTONS)
-    return <ComposedElement {...props} showTextAsMessage={showTextAsMessage} topLevel={false} />
+    return <ComposedElement {...props} showTextAsMessage={showTextAsMessage} level={level + 1} />
   }
   return null
 }

@@ -11,12 +11,13 @@ export type FileElementsProps = {
   url: string,
   mimeType: string,
   filename?: string,
-  topLevel: boolean
+  level: number,
+  standalone: boolean
 }
 
-export default function File ({url, mimeType, filename, topLevel}: FileElementsProps) {
+export default function File ({url, mimeType, filename, level, standalone}: FileElementsProps) {
   if (mimeType.indexOf('image') >= 0) {
-    if (topLevel) {
+    if (standalone) {
       return (
         <StandaloneImage
           src={url}
@@ -41,18 +42,25 @@ export default function File ({url, mimeType, filename, topLevel}: FileElementsP
         url={url}
         title={url}
         mimeType={mimeType}
-        topLevel={topLevel}
+        level={level}
       />
     )
   }
 
   return (
-    <div className={styles.messageFile}>
-      <span className='message--icon be-icon-file' />
-      <a href={url} title={url} download target='_blank' className={styles.messageFilename}>
+    <a className={styles.FilePlugin} target='_blank' href={url} download>
+      <div className={styles.SpinnerIcon}>
+        <span className='be-icon-spinner' />
+      </div>
+      <div className={styles.FileIcon}>
+        <span className='be-icon-file-drop' />
+      </div>
+      <div className={styles.Text}>
         {filename || url}
-        <span className='message--icon be-icon-download-1' />
-      </a>
-    </div>
+      </div>
+      <div className={styles.FileDownload}>
+        <span className='be-icon-download-1' />
+      </div>
+    </a>
   )
 }

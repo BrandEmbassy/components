@@ -7,7 +7,7 @@ type Props = {
   elements: Array<any>,
   onClick: Function,
   hideButtons?: boolean,
-  topLevel: boolean,
+  level: number,
   width?: string
 }
 
