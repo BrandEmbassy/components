@@ -8,12 +8,12 @@ exports[`File Component [1] should render basic component 1`] = `
 >
   <div>
     <span
-      class="be-icon-spinner"
+      className="be-icon-spinner"
     />
   </div>
   <div>
     <span
-      class="be-icon-file-drop"
+      className="be-icon-file-drop"
     />
   </div>
   <div>
@@ -21,20 +21,27 @@ exports[`File Component [1] should render basic component 1`] = `
   </div>
   <div>
     <span
-      class="be-icon-download-1"
+      className="be-icon-download-1"
     />
   </div>
 </a>
 `;
 
 exports[`File Component [2] should render basic component 1`] = `
-<Image
+<StandaloneImage
   mimeType="image/jpeg"
   src="http://via.placeholder.com/350x150"
 />
 `;
 
 exports[`File Component [3] should render basic component 1`] = `
+<Image
+  mimeType="image/jpeg"
+  src="http://via.placeholder.com/350x150"
+/>
+`;
+
+exports[`File Component [4] should render basic component 1`] = `
 <Video
   mimeType="video/mp4"
   title="https://www.w3schools.com/tags/movie.mp4"

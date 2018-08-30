@@ -5,6 +5,7 @@ import Carusel from './Carusel'
 import Gallery from './Gallery'
 import ComposedElement from './Element/ComposedElement'
 import ElementType from './Element/ElementType'
+import {isPluginVideo} from './Element/Video/index'
 import styles from './index.css'
 
 type Props = {
@@ -14,6 +15,8 @@ type Props = {
   elements: Array<Object>,
   width?: string
 }
+
+export { isPluginVideo }
 
 export default class PluginWrapper extends PureComponent<Props> {
   static defaultProps = {
@@ -35,11 +38,11 @@ export default class PluginWrapper extends PureComponent<Props> {
     } else if (this.isPluginWithoutWrapper(elements[0])) {
       return (
         <div className={styles.PluginFrame}>
-          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} topLevel />
+          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} level={1} />
         </div>
       )
     } else {
-      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} topLevel />
+      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} level={1} />
     }
   }
 }
