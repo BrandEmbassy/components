@@ -8,12 +8,12 @@ export default function ComposedElement ({ elements, level, ...composedElementRe
     <div className={styles.ComposedElement}>
       {elements.map(({ id, ...rest }) => (
         <Element
+          {...composedElementRestProps}
+          {...rest}
           key={id}
           id={id}
           level={level}
           standalone={standalone}
-          {...composedElementRestProps}
-          {...rest}
         />
       )
       )}

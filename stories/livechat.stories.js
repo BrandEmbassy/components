@@ -9,6 +9,7 @@ import Image from '../src/package/components/ChatBot/Plugin/Element/Image'
 import Text from '../src/package/components/ChatBot/Plugin/Element/Text'
 import File from '../src/package/components/ChatBot/Plugin/Element/File'
 import Plugin from '../src/package/components/ChatBot/Plugin'
+import menuPluginData from './__fixtures__/menuPluginData.json'
 
 const repliesButtons = [
   { id: 'Akm0hRAiX', type: 'TEXT', text: 'Button 1', postback: 'click-on-button-1' },
@@ -81,3 +82,4 @@ storiesOf('Chatbots Plugins', module)
   .add('Gallery', () => <Plugin disableCarusel={boolean('disableCarusel', false)} elements={object('elements', galleryElements)} onClick={clickHandler} />)
   .add('Text and buttons', () => <Plugin elements={object('elements', [textAndButtons])} onClick={clickHandler} />)
   .add('Quick Replies', () => <Plugin elements={object('elements', quickReplies)} onClick={clickHandler} hideButtons={boolean('hideButtons', false)} />)
+  .add('Menu plugin with an image', () => <Plugin elements={menuPluginData.elements} onClick={clickHandler} hideButtons={boolean('hideButtons', false)} />)

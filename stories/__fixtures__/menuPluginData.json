@@ -1,0 +1,65 @@
+{
+  "text": "",
+  "postback": "",
+  "elements": [
+    {
+      "id": "menu-e3b30919-2fe3-4e19-9093-6b7389e8bd59",
+      "type": "MENU",
+      "text": "",
+      "postback": "",
+      "url": "",
+      "elements": [
+        {
+          "id": "image-b65c7b7b-15e8-4797-8c20-9079998d6301",
+          "type": "FILE",
+          "text": "",
+          "postback": "",
+          "url": "https://chatbot-workflow-plugins-dev.s3.eu-west-2.amazonaws.com/PluginSimpleMenu/2GiJxNrwFI7OpIBJt78IIIfJ0r2uCyR9gfCSmg6u.jpeg",
+          "elements": [],
+          "filename": "d4da7551-d412-4743-8f18-ffa4543d3637",
+          "mimeType": "image/jpeg"
+        },
+        {
+          "id": "title-d57a68e3-2ef9-4051-9dfd-f0283e41985f",
+          "type": "TITLE",
+          "text": "MENU heading text",
+          "postback": "",
+          "url": "",
+          "elements": []
+        },
+        {
+          "id": "text-40fbb9fc-62e0-4d1f-93a2-455c7511fdf4",
+          "type": "TEXT",
+          "text": "Some description",
+          "postback": "",
+          "url": "",
+          "elements": []
+        },
+        {
+          "id": "button-2d3a7068-87b7-468d-82d0-28e2e55e1884",
+          "type": "BUTTON",
+          "text": "Back to start",
+          "postback": "{\"block_id\":145,\"plugin_id\":39}",
+          "url": "",
+          "elements": []
+        },
+        {
+          "id": "button-74a48873-ab41-4141-b0b2-28a748960dbe",
+          "type": "BUTTON",
+          "text": "Go to agent",
+          "postback": "{\"block_id\":551,\"plugin_id\":39}",
+          "url": "",
+          "elements": []
+        },
+        {
+          "id": "button-21c3ba33-32bf-4085-b41e-83e59ea876ef",
+          "type": "BUTTON",
+          "text": "Repeat",
+          "postback": "{\"block_id\":599,\"plugin_id\":39}",
+          "url": "",
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

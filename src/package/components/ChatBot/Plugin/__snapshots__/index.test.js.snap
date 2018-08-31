@@ -2210,12 +2210,12 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                   <div>
                     <Element
                       hideButtons={false}
-                      id="Ek4tPy1h4"
+                      id="Uk4tPy1h2"
                       key="Uk4tPy1h2"
                       level={2}
                       onClick={[Function]}
                       showTextAsMessage={false}
-                      standalone={true}
+                      standalone={false}
                       type="IMAGE"
                       url="https://picsum.photos/300/150"
                       width="100%"
@@ -2234,12 +2234,12 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     </Element>
                     <Element
                       hideButtons={false}
-                      id="Ek4tPy1h4"
+                      id="Ck4tPy1h3"
                       key="Ck4tPy1h3"
                       level={2}
                       onClick={[Function]}
                       showTextAsMessage={false}
-                      standalone={true}
+                      standalone={false}
                       text="Hello!"
                       type="TITLE"
                       width="100%"
@@ -2255,12 +2255,12 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     </Element>
                     <Element
                       hideButtons={false}
-                      id="Ek4tPy1h4"
+                      id="Ek4tPy1h1"
                       key="Ek4tPy1h1"
                       level={2}
                       onClick={[Function]}
                       showTextAsMessage={false}
-                      standalone={true}
+                      standalone={false}
                       text="Lorem Impsum..."
                       type="TEXT"
                       width="100%"
@@ -2276,26 +2276,26 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     </Element>
                     <Element
                       hideButtons={false}
-                      id="Ek4tPy1h4"
+                      id="Nkm0hRAiE"
                       key="Nkm0hRAiE"
                       level={2}
                       onClick={[Function]}
                       postback="click-on-button-1"
                       showTextAsMessage={false}
-                      standalone={true}
+                      standalone={false}
                       text="Click me!"
                       type="BUTTON"
                       width="100%"
                     >
                       <Button
                         hideButtons={false}
-                        id="Ek4tPy1h4"
+                        id="Nkm0hRAiE"
                         label="Click me!"
                         level={2}
                         onClick={[Function]}
                         postback="click-on-button-1"
                         showTextAsMessage={false}
-                        standalone={true}
+                        standalone={false}
                         text="Click me!"
                         type="BUTTON"
                         width="100%"
@@ -2312,26 +2312,26 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     </Element>
                     <Element
                       hideButtons={false}
-                      id="Ek4tPy1h4"
+                      id="NkGJ6CAiN"
                       key="NkGJ6CAiN"
                       level={2}
                       onClick={[Function]}
                       postback="click-on-button-2"
                       showTextAsMessage={false}
-                      standalone={true}
+                      standalone={false}
                       text="No click me!"
                       type="BUTTON"
                       width="100%"
                     >
                       <Button
                         hideButtons={false}
-                        id="Ek4tPy1h4"
+                        id="NkGJ6CAiN"
                         label="No click me!"
                         level={2}
                         onClick={[Function]}
                         postback="click-on-button-2"
                         showTextAsMessage={false}
-                        standalone={true}
+                        standalone={false}
                         text="No click me!"
                         type="BUTTON"
                         width="100%"
@@ -2348,26 +2348,26 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     </Element>
                     <Element
                       hideButtons={false}
-                      id="Ek4tPy1h4"
+                      id="EyCyTRCi4"
                       key="EyCyTRCi4"
                       level={2}
                       onClick={[Function]}
                       postback="click-on-button-3"
                       showTextAsMessage={false}
-                      standalone={true}
+                      standalone={false}
                       text="Aww don\`t click on me"
                       type="BUTTON"
                       width="100%"
                     >
                       <Button
                         hideButtons={false}
-                        id="Ek4tPy1h4"
+                        id="EyCyTRCi4"
                         label="Aww don\`t click on me"
                         level={2}
                         onClick={[Function]}
                         postback="click-on-button-3"
                         showTextAsMessage={false}
-                        standalone={true}
+                        standalone={false}
                         text="Aww don\`t click on me"
                         type="BUTTON"
                         width="100%"
