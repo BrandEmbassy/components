@@ -9,7 +9,7 @@ trait SnapshotAssertTrait
     {
         $snapshot = \file_get_contents($snapshotFileName);
         \assert($snapshot !== false);
-        $snapshot = \str_replace(['  ', "\n"], '', $snapshot);
+        $snapshot = \str_replace(['  ', "\n", "\r", "\t"], '', $snapshot);
 
         $this->assertEquals($snapshot, $component->render());
     }

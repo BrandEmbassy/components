@@ -18,9 +18,9 @@ class SelectList implements UiComponent
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      */
-    public function __construct(array $children)
+    public function __construct($children)
     {
-        $this->children = $children;
+        $this->children = \is_array($children) ? $children : [$children];
     }
 
     public function render(): string
