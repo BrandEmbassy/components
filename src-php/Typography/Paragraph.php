@@ -10,6 +10,8 @@ use BrandEmbassy\Components\Utilities\UtilitiesOption;
 final class Paragraph implements UiComponent
 {
 
+    public const NEW_LINE = '<br />';
+
     /**
      * @var UiComponent[]|string[]
      */
@@ -21,18 +23,27 @@ final class Paragraph implements UiComponent
     private $utilityOptions;
 
     /**
+     * @var string
+     */
+    private $childrenSeparator;
+
+    /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param UtilitiesOption[] $utilityOptions
+     * @param string $childrenSeparator
      */
-    public function __construct($children, array $utilityOptions)
+    public function __construct($children, array $utilityOptions, string $childrenSeparator = '')
     {
         $this->children = \is_array($children) ? $children : [$children];
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
+        $this->childrenSeparator = $childrenSeparator;
     }
 
     public function render(): string
     {
-        return '<p class="' . $this->utilityOptions . '">' . ArrayRenderer::render($this->children) . '</p>';
+        return '<p class="' . $this->utilityOptions . '">'
+            . ArrayRenderer::render($this->children, $this->childrenSeparator)
+            . '</p>';
     }
 
 }
