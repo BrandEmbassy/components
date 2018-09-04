@@ -8,6 +8,9 @@ use BrandEmbassy\Components\UiComponent;
 final class Selectbox implements UiComponent
 {
 
+    private const CLASS_SELECTBOX = 'Selectbox__Selectbox';
+    private const CLASS_SELECTBOX_WIDE = 'Selectbox__Wide';
+
     /**
      * @var SelectboxOption[]
      */
@@ -21,7 +24,7 @@ final class Selectbox implements UiComponent
     /**
      * @var string
      */
-    private $selectboxClass = 'Selectbox__Selectbox';
+    private $selectboxClass = self::CLASS_SELECTBOX;
 
     /**
      * @param SelectboxOption[] $options
@@ -33,7 +36,7 @@ final class Selectbox implements UiComponent
         $this->name = $name;
 
         if ($type->getValue() === SelectboxType::WIDE) {
-            $this->selectboxClass .= ' Selectbox__Wide';
+            $this->selectboxClass .= ' ' . self::CLASS_SELECTBOX_WIDE;
         }
     }
 

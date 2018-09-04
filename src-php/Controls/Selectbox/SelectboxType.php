@@ -9,5 +9,5 @@ final class SelectboxType extends Enum
 
     public const NORMAL = 'normal';
     public const WIDE = 'wide';
-    
+
 }
