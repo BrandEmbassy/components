@@ -2,6 +2,7 @@
 
 namespace BrandEmbassy\Components\Navigation\Breadcrumbs;
 
+use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
 
 final class Step implements UiComponent
@@ -19,6 +20,6 @@ final class Step implements UiComponent
 
     public function render(): string
     {
-        return '<div class="Breadcrumbs__Step">' . \htmlspecialchars($this->text) . '</div>';
+        return '<div class="Breadcrumbs__Step">' . StringEscaper::makeSafe($this->text) . '</div>';
     }
 }
