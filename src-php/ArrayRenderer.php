@@ -7,9 +7,10 @@ final class ArrayRenderer
 
     /**
      * @param UiComponent[]|string[] $components
+     * @param string $separator
      * @return string
      */
-    public static function render(array $components): string
+    public static function render(array $components, string $separator = ''): string
     {
         $rendered = \array_map(
             function ($component): string {
@@ -24,8 +25,10 @@ final class ArrayRenderer
 
         $reduced = \array_reduce(
             $rendered,
-            function (string $carry, string $item): string {
-                return $carry . $item;
+            function (string $carry, string $item) use ($separator): string {
+                $itemsSeparator = $carry !== '' ? $separator : '';
+
+                return $carry . $itemsSeparator . $item;
             },
             ''
         );

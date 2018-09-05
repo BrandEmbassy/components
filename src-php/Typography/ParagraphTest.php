@@ -11,15 +11,30 @@ class ParagraphTest extends TestCase
 
     use SnapshotAssertTrait;
 
-    public function testShouldRenderParagraph(): void
+    /**
+     * @dataProvider paragraphData
+     * @param string $snapshot
+     * @param Paragraph $p
+     */
+    public function testShouldRenderParagraph(string $snapshot, Paragraph $p): void
     {
-        $snapshot = __DIR__ . '/__snapshots__/p.html';
+        $this->assertSnapshot($snapshot, $p);
+    }
 
+    public function paragraphData(): array
+    {
         $padding10 = UtilitiesOption::byValue(UtilitiesOption::PADDING_10);
 
-        $p = new Paragraph('Some text', [$padding10]);
-
-        $this->assertSnapshot($snapshot, $p);
+        return [
+            'More lines' => [
+                __DIR__ . '/__snapshots__/pMoreLines.html',
+                new Paragraph(['Some text', 'Another line'], [$padding10], Paragraph::NEW_LINE),
+            ],
+            'One line' => [
+                __DIR__ . '/__snapshots__/pOneLine.html',
+                new Paragraph('Some text', [$padding10]),
+            ],
+        ];
     }
 
 }
