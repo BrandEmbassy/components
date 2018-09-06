@@ -2,14 +2,26 @@
 
 namespace BrandEmbassy\Components;
 
+use Zend\Escaper\Escaper;
+
 final class StringEscaper
 {
 
-    private const ENCODING = 'UTF-8';
+    private const ENCODING = 'utf-8';
 
-    public static function makeSafe(string $input): string
+    public static function escapeHtml(string $input): string
     {
-        return \htmlspecialchars($input, ENT_QUOTES, static::ENCODING);
+        return self::getEscaper()->escapeHtml($input);
+    }
+
+    public static function escapeHtmlAttribute(string $input): string
+    {
+        return self::getEscaper()->escapeHtmlAttr($input);
+    }
+
+    private static function getEscaper(): Escaper
+    {
+        return new Escaper(self::ENCODING);
     }
 
 }

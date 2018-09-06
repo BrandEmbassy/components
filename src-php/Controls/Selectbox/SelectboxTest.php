@@ -30,7 +30,32 @@ final class SelectboxTest extends TestCase
         return [
             'selectboxNormal' => [
                 __DIR__ . '/__snapshots__/selectboxNormal.html',
-                new Selectbox($selectboxOptions, 'selectbox-name', SelectboxType::byValue(SelectboxType::NORMAL)),
+                new Selectbox(
+                    $selectboxOptions,
+                    'selectbox-"name"',
+                    SelectboxType::byValue(SelectboxType::NORMAL),
+                    'Some <strong>description</strong>'
+                ),
+            ],
+            'selectboxWithErrorOnly' => [
+                __DIR__ . '/__snapshots__/selectboxWithErrorOnly.html',
+                new Selectbox(
+                    $selectboxOptions,
+                    'selectbox-name',
+                    SelectboxType::byValue(SelectboxType::NORMAL),
+                    '',
+                    true
+                ),
+            ],
+            'selectboxWithErrorAndDescription' => [
+                __DIR__ . '/__snapshots__/selectboxWithErrorAndDescription.html',
+                new Selectbox(
+                    $selectboxOptions,
+                    'selectbox-name',
+                    SelectboxType::byValue(SelectboxType::NORMAL),
+                    'Some description',
+                    true
+                ),
             ],
             'selectboxWide' => [
                 __DIR__ . '/__snapshots__/selectboxWide.html',

@@ -18,7 +18,7 @@ final class ArrayRenderer
                     return $component->render();
                 }
 
-                return StringEscaper::makeSafe($component);
+                return StringEscaper::escapeHtml($component);
             },
             $components
         );

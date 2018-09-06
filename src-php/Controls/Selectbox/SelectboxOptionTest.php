@@ -25,7 +25,7 @@ final class SelectboxOptionTest extends TestCase
         return [
             'optionSelected' => [
                 __DIR__ . '/__snapshots__/optionSelected.html',
-                new SelectboxOption('test-value', 'Test value text', true),
+                new SelectboxOption('test-value-"test"', 'Test value <strong>text</strong>', true),
             ],
             'optionNotSelected' => [
                 __DIR__ . '/__snapshots__/optionNotSelected.html',
