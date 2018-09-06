@@ -32,8 +32,19 @@ export default class Input extends React.Component<Props> {
     return null
   }
 
+  renderDesc () {
+    if (this.props.desc) {
+      return (
+        <div className={`${styles.Desc} ${styles.isRed} `}>
+          {this.props.desc}
+        </div>
+      )
+    }
+    return null
+  }
+
   render () {
-    const { isDisabled, isError, styleName } = this.props
+    const { isDisabled, isError, styleName, type, name, placeholder, onChange, value } = this.props
 
     const className = cx(styles.Input, styleName, {
       Disabled: isDisabled,
@@ -46,16 +57,14 @@ export default class Input extends React.Component<Props> {
         {this.renderLabel()}
         <div className={styles.Field}>
           <input
-            type={this.props.type}
-            name={this.props.name}
-            placeholder={this.props.placeholder}
-            disabled={this.props.isDisabled}
-            onChange={this.props.onChange}
-            value={this.props.value} />
+            type={type}
+            name={name}
+            placeholder={placeholder}
+            disabled={isDisabled}
+            onChange={onChange}
+            value={value} />
         </div>
-        <div className={styles.Desc}>
-          {this.props.desc}
-        </div>
+        {this.renderDesc()}
       </div>
     )
   }

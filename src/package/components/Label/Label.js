@@ -15,17 +15,17 @@ type Props = {
 
 export default class Label extends React.Component<Props> {
   render () {
-    const { styleName } = this.props
+    const { styleName, children, text } = this.props
 
     const className = cx(styles.Label, styleName)
 
     return (
       <div className={className}>
         <div className={styles.Children}>
-          {this.props.children}
+          {children}
         </div>
         <div className={styles.Text}>
-          {this.props.text}
+          {text}
         </div>
       </div>
     )

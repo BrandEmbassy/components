@@ -37,6 +37,106 @@ export default class App extends Component {
           </div>
         </div>
         <div className={styles.Flex} >
+
+          <div className='row around-xs padding-20'>
+            <div className='col-xs-6 background padding-20'>
+              <div className='row padding-15'>
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='aaa' label='label text here' />
+                </div>
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                      <Channel type='facebook' size='M' />
+                    </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                      <Channel type='facebook' size='M' />
+                    </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
+                </div>
+
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Tag color='DarkPurple' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Tag color='Purple' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Tag color='Pink' />
+                    </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Tag color='Red' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Tag color='Yellow' />
+                  </Checkbox>
+                </div>
+
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Statuses status='New' Reversed />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Statuses status='Open' Reversed />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Statuses status='Resolved' Reversed />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Statuses status='Pending' Reversed />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Statuses status='Escalated' Reversed />
+                  </Checkbox>
+                </div>
+
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <ProfilePicture Size16 imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <ProfilePicture Size20  imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <ProfilePicture Size24  imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <ProfilePicture Size40  imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                  </Checkbox>
+                </div>
+
+                <div className='col-xs-12 padding-10'>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <div class="be-icon-rating-1"></div>
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <div class="be-icon-rating-1"></div>
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <div class="be-icon-rating-1"></div>
+                  </Checkbox>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className='row'>
             <div className='col-xs'>
               <br /><br />
@@ -77,14 +177,7 @@ export default class App extends Component {
                   <Textarea label='Textarea here' isError desc='description...' />
                 </div>
               </div>
-              <div className='row padding-15'>
-                <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='aaa' label='label text here' />
-                </div>
-                <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='bbb' label='label text here' />
-                </div>
-              </div>
+           
               <div className='row padding-10'>
                 <div className='col-xs-12 padding-5'>
                   <Radio name='nameB' id='C' label='male' />
@@ -184,7 +277,18 @@ export default class App extends Component {
                   <Tag color='Green' text='Tag name' />
                   <Tag color='LightBlue' text='Tag name' />
                   <Tag color='Blue' text='Tag name' />
-                  <Tag text='Tag name' />
+                </div>
+                <div className='col-xs-12 padding-15'>
+                  <Tag />
+                  <Tag color='DarkPurple' />
+                  <Tag color='Purple' />
+                  <Tag color='Pink' />
+                  <Tag color='Red' />
+                  <Tag color='Yellow' />
+                  <Tag color='Turquoise' />
+                  <Tag color='Green' />
+                  <Tag color='LightBlue' />
+                  <Tag color='Blue' />
                 </div>
               </div>
               <div className='row padding-10'>
@@ -207,10 +311,10 @@ export default class App extends Component {
                   </Label>
                 </div>
                 <div className='col-xs-12'>
-                  <Input label='Input text here' desc='description...' />
+                  <Input />
                 </div>
                 <div className='col-xs-12'>
-                  <Textarea label='Input text here' desc='description...' />
+                  <Textarea />
                 </div>
               </div>
               <div className='row'>

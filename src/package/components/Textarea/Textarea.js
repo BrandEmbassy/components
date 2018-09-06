@@ -32,8 +32,19 @@ export default class Textarea extends React.Component<Props> {
     return null
   }
 
+  renderDesc () {
+    if (this.props.desc) {
+      return (
+        <div className={`${styles.Desc} ${styles.isRed} `}>
+          {this.props.desc}
+        </div>
+      )
+    }
+    return null
+  }
+
   render () {
-    const { styleName, isDisabled, isError } = this.props
+    const { styleName, isDisabled, isError, name, rows, value, placeholder, onChange, desc } = this.props
 
     const className = cx(styles.Textarea, styleName, {
       Disabled: isDisabled,
@@ -45,16 +56,14 @@ export default class Textarea extends React.Component<Props> {
         {this.renderLabel()}
         <div className={styles.Field}>
           <textarea
-            name={this.props.name}
-            rows={this.props.rows}
-            value={this.props.value}
-            placeholder={this.props.placeholder}
-            disabled={this.props.isDisabled}
-            onChange={this.props.onChange} />
+            name={name}
+            rows={rows}
+            value={value}
+            placeholder={placeholder}
+            disabled={isDisabled}
+            onChange={onChange} />
         </div>
-        <div className={`${styles.Desc} ${styles.isRed} `}>
-          {this.props.desc}
-        </div>
+        {this.renderDesc()}
       </div>
     )
   }

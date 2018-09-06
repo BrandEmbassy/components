@@ -23,14 +23,14 @@ export default class Header extends React.Component<Props> {
   }
 
   render () {
-    const { styleName, title } = this.props
+    const { styleName, title, children } = this.props
 
     const className = cx(styles.Header, styleName)
 
     return (
       <div className={className}>
         <div className={styles.Logo}><div className='be-icon-be-symbol' /></div>
-        {this.props.children}
+        {children}
         {this.renderTitle(title)}
       </div>
     )

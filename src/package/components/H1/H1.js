@@ -14,13 +14,13 @@ type Props = {
 
 export default class H1 extends React.Component<Props> {
   render () {
-    const { styleName } = this.props
+    const { styleName, children } = this.props
 
     const className = cx(styles.H1, styleName)
 
     return (
       <h1 className={className}>
-        {this.props.children}
+        {children}
       </h1>
     )
   }

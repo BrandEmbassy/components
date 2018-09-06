@@ -1,25 +1,33 @@
-.app {
+.center, .center-content {
+  text-align: center;
+}
+
+.layout { 
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
-.app .static {
+.layout.horizontal {
+  position: absolute;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.layout .static {
   position: relative;
   flex: 0 1 auto;
   z-index: 2;
 }
 
-.app .flex {
+.layout .flex {
+  position: relative;
   flex: 1 1 auto;
   overflow-y: scroll;
   z-index: 1;
-}
-
-.center {
-  text-align: center;
 }
 
 .row {
@@ -37,11 +45,7 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: 0;
-  margin-left: 0;
-}
-
-.row.horizontal{
-  flex-direction: column;
+  margin-left: 0; 
 }
 
 .row.reverse {
