@@ -31,9 +31,9 @@ final class GridColumn implements UiComponent
      * @param GridColumnOption[] $columnOptions
      * @param UtilitiesOption[] $utilityOptions
      */
-    public function __construct($children, array $columnOptions, array $utilityOptions)
+    public function __construct($children, array $columnOptions, array $utilityOptions = [])
     {
-        \assert(count($columnOptions) > 0);
+        \assert(\count($columnOptions) > 0);
 
         $this->children = \is_array($children) ? $children : [$children];
         $this->columnOptions = EnumValuesToString::transform($columnOptions);

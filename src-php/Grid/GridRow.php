@@ -24,7 +24,7 @@ final class GridRow implements UiComponent
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param UtilitiesOption[] $utilityOptions
      */
-    public function __construct($children, array $utilityOptions)
+    public function __construct($children, array $utilityOptions = [])
     {
         $this->children = \is_array($children) ? $children : [$children];
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
