@@ -11,7 +11,8 @@ type Props = {
   styleName: string,
   label: string,
   name: string,
-  id: string
+  id: string,
+  children?: React.Node
 }
 
 export default class Checkbox extends React.Component<Props> {

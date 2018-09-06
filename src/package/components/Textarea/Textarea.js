@@ -44,7 +44,7 @@ export default class Textarea extends React.Component<Props> {
   }
 
   render () {
-    const { styleName, isDisabled, isError, name, rows, value, placeholder, onChange, desc } = this.props
+    const { styleName, isDisabled, isError, name, rows, value, placeholder, onChange } = this.props
 
     const className = cx(styles.Textarea, styleName, {
       Disabled: isDisabled,

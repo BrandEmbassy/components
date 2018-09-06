@@ -31,7 +31,7 @@ export default class ProfilePicture extends React.Component<Props> {
 
     return (
       <div className={className}>
-        <img src={imgSrc} alt='' width="100%" height="100%"/>
+        <img src={imgSrc} alt='' width='100%' height='100%' />
       </div>
     )
   }

@@ -52,9 +52,6 @@ export default class App extends Component {
                     <Channel type='facebook' size='M' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                      <Channel type='facebook' size='M' />
-                    </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
@@ -64,8 +61,11 @@ export default class App extends Component {
                     <Channel type='facebook' size='M' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                      <Channel type='facebook' size='M' />
-                    </Checkbox>
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
+                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                    <Channel type='facebook' size='M' />
+                  </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
@@ -80,7 +80,7 @@ export default class App extends Component {
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
                     <Tag color='Pink' />
-                    </Checkbox>
+                  </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
                     <Tag color='Red' />
                   </Checkbox>
@@ -109,28 +109,28 @@ export default class App extends Component {
 
                 <div className='col-xs-12 padding-10'>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                    <ProfilePicture Size16 imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                    <ProfilePicture Size16 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                    <ProfilePicture Size20  imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                    <ProfilePicture Size20 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                    <ProfilePicture Size24  imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                    <ProfilePicture Size24 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                    <ProfilePicture Size40  imgSrc="https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg"/>
+                    <ProfilePicture Size40 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
                 </div>
 
                 <div className='col-xs-12 padding-10'>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                    <div class="be-icon-rating-1"></div>
+                    <div class='be-icon-rating-1' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                    <div class="be-icon-rating-1"></div>
+                    <div class='be-icon-rating-1' />
                   </Checkbox>
                   <Checkbox name='nameA' id='bbb' label='label text here' >
-                    <div class="be-icon-rating-1"></div>
+                    <div class='be-icon-rating-1' />
                   </Checkbox>
                 </div>
               </div>
@@ -177,7 +177,7 @@ export default class App extends Component {
                   <Textarea label='Textarea here' isError desc='description...' />
                 </div>
               </div>
-           
+
               <div className='row padding-10'>
                 <div className='col-xs-12 padding-5'>
                   <Radio name='nameB' id='C' label='male' />
