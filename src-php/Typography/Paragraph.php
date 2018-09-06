@@ -32,7 +32,7 @@ final class Paragraph implements UiComponent
      * @param UtilitiesOption[] $utilityOptions
      * @param string $childrenSeparator
      */
-    public function __construct($children, array $utilityOptions, string $childrenSeparator = '')
+    public function __construct($children, array $utilityOptions = [], string $childrenSeparator = '')
     {
         $this->children = \is_array($children) ? $children : [$children];
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
