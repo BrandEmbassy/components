@@ -30,6 +30,7 @@ import TagDemo from './../src/Demos/Custom/TagDemo'
 
 import ExampleA from './../src/Demos/Example/ExampleA'
 import ExampleB from './../src/Demos/Example/ExampleB'
+import ExampleNewGrid2 from './../src/Demos/Example/ExampleNewGrid2'
 
 import ReleaseNotes from './../src/Demos/ReleaseNotes/ReleaseNotes'
 
@@ -70,3 +71,4 @@ storiesOf('Custom', module)
 storiesOf('Example', module)
   .add('ExampleA', () => <ExampleA />)
   .add('ExampleB', () => <ExampleB />)
+  .add('New Grid2', () => <ExampleNewGrid2 />)

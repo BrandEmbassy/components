@@ -2,9 +2,9 @@
   position: relative;
   display: inline-flex;
   align-self: center;
+  align-items: center;
   width: auto;
   height: auto;
-  padding: 5px;
   line-height: inherit;
   font-size: 13px;
   font-weight: 700;

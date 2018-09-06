@@ -3,8 +3,10 @@
   display: inline-flex;
   align-self: center;
   width: auto;
+  min-width: 0.1px;
+  min-height: 12px;
   height: auto;
-  margin-right: 10px;
+  margin-right: 6px;
   padding: 2px 8px;
   line-height: inherit;
   font-size: 10px;

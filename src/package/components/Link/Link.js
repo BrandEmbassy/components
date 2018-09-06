@@ -30,7 +30,7 @@ export default class Link extends React.Component<Props> {
   }
 
   render () {
-    const { Blue, White, Green, Red, Black, styleName } = this.props
+    const { Blue, White, Green, Red, Black, styleName, text, onClick } = this.props
 
     const className = cx(styles.Link, styleName, {
       Blue,
@@ -41,10 +41,10 @@ export default class Link extends React.Component<Props> {
     })
 
     return (
-      <a className={className} onClick={this.props.onClick}>
+      <a className={className} onClick={onClick}>
         {this.renderIcon()}
         <div className={styles.Text}>
-          {this.props.text}
+          {text}
         </div>
       </a>
     )

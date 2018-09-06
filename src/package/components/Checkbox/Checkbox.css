@@ -1,20 +1,29 @@
 .CheckboxContent {
   display: inline-flex;
+  align-items: center;
+  padding: 2px;
 
   & .Label {
-    padding-left: 8px;
+    padding-right: 2px;
+  }
+
+  & .Children {
+    padding-right: 0px;
   }
 }
 
 .Checkbox {
+  box-sizing: border-box;
   position: relative;
   display: inline-block;
   font-family: "be-engager" !important;
   width: 16px;
   height: 16px;
+  margin-right: 6px;
   line-height: 16px;
 
   & label {
+    box-sizing: border-box;
     position: relative;
     display: block;
     width: 100%;

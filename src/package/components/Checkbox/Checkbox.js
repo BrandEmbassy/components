@@ -11,22 +11,24 @@ type Props = {
   styleName: string,
   label: string,
   name: string,
-  id: string
+  id: string,
+  children?: React.Node
 }
 
 export default class Checkbox extends React.Component<Props> {
   render () {
-    const { styleName } = this.props
+    const { styleName, name, id, label, children } = this.props
 
     const className = cx(styles.CheckboxContent, styleName)
 
     return (
       <div className={className}>
         <div className={styles.Checkbox} >
-          <input type='checkbox' name={this.props.name} id={this.props.id} />
-          <label for={this.props.id} />
+          <input type='checkbox' name={name} id={id} />
+          <label for={id} />
         </div>
-        <div className={styles.Label}>{this.props.label}</div>
+        {children}
+        <div className={styles.Label}>{label}</div>
       </div>
     )
   }

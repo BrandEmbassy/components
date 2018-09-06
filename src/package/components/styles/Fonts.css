@@ -529,6 +529,20 @@
   content: "\e042";
 }
 
+:global(.be-icon-sitemap:before) {
+  content: "\e038";
+}
+:global(.be-icon-filter:before) {
+  content: "\e04a";
+}
+:global(.be-icon-triangle-down:before) {
+  content: "\e04b";
+}
+:global(.be-icon-triangle-up:before) {
+  content: "\e04c";
+}
+
+
 // COPY CSS FROM FONTASTIC BEFORE THIS SELECTOR
 
 [class^="be-icon"] {

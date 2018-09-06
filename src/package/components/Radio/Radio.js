@@ -16,17 +16,17 @@ type Props = {
 
 export default class Radio extends React.Component<Props> {
   render () {
-    const { styleName } = this.props
+    const { styleName, name, id, label } = this.props
 
     const className = cx(styles.RadioContent, styleName)
 
     return (
       <div className={className} >
         <div className={styles.Radio} >
-          <input type='radio' name={this.props.name} id={this.props.id} />
-          <label for={this.props.id} />
+          <input type='radio' name={name} id={id} />
+          <label for={id} />
         </div>
-        <div className={styles.Label}>{this.props.label}</div>
+        <div className={styles.Label}>{label}</div>
       </div>
     )
   }

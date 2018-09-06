@@ -19,7 +19,7 @@ type Props = {
 
 export default class ProfilePicture extends React.Component<Props> {
   render () {
-    const { styleName, Size60, Size40, Size24, Size20, Size16 } = this.props
+    const { styleName, Size60, Size40, Size24, Size20, Size16, imgSrc } = this.props
 
     const className = cx(styles.ProfilePicture, styleName, {
       Size60,
@@ -31,7 +31,7 @@ export default class ProfilePicture extends React.Component<Props> {
 
     return (
       <div className={className}>
-        <img src={this.props.imgSrc} alt='' />
+        <img src={imgSrc} alt='' width='100%' height='100%' />
       </div>
     )
   }

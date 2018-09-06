@@ -1,7 +1,9 @@
 .Button {
   box-sizing: border-box;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
   height: 40px;
   margin: 5px 0;
@@ -17,12 +19,12 @@
   user-select: none;
 
   & [class^='be-icon'] {
+    display: inline-flex;
     margin-right: 8px;
-    margin-top: 2px;
-    line-height: inherit;
-    float: left;
+    line-height: 15px;
     font-size: inherit;
     color: inherit;
+    height: auto;
   }
 
   &:hover {
@@ -57,11 +59,14 @@
     padding: 0 22px;
     line-height: 28px;
     margin: 0;
+    font-size: 13px;
+    & [class^='be-icon'] {
+      line-height: 13px;
+    }
   }
 
   &.Wide {
     width: 100%;
-    text-align: center;
     margin: 5px 0;
   }
 }
