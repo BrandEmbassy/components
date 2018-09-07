@@ -2,6 +2,7 @@
 
 namespace BrandEmbassy\Components\Controls\Input;
 
+use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
 
@@ -24,7 +25,7 @@ final class Input implements UiComponent
     private $type;
 
     /**
-     * @var string
+     * @var UiComponent|string
      */
     private $description;
 
@@ -37,7 +38,7 @@ final class Input implements UiComponent
         string $name,
         string $value,
         InputType $type,
-        string $description = '',
+        $description = '',
         bool $isError = false
     ) {
         $this->name = $name;
@@ -51,7 +52,7 @@ final class Input implements UiComponent
     {
         $errorClass = $this->isError ? ' Input__Error' : '';
         $description = $this->description !== ''
-            ? '<div class="Input__Desc">' . StringEscaper::escapeHtml($this->description) . '</div>'
+            ? '<div class="Input__Desc">' . ArrayRenderer::render([$this->description]) . '</div>'
             : '';
 
         return '<div class="Input__Input' . $errorClass . '" data-reactroot="">'

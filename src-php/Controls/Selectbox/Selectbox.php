@@ -28,7 +28,7 @@ final class Selectbox implements UiComponent
     private $selectboxClass = self::CLASS_SELECTBOX;
 
     /**
-     * @var string
+     * @var UiComponent|string
      */
     private $description;
 
@@ -48,7 +48,7 @@ final class Selectbox implements UiComponent
         array $options,
         string $name,
         SelectboxType $type,
-        string $description = '',
+        $description = '',
         bool $isError = false
     ) {
         $this->options = $options;
@@ -65,7 +65,7 @@ final class Selectbox implements UiComponent
     {
         $errorClass = $this->isError ? ' Selectbox__Error' : '';
         $description = $this->description !== ''
-            ? '<div class="Selectbox__Desc">' . StringEscaper::escapeHtml($this->description) . '</div>'
+            ? '<div class="Selectbox__Desc">' . ArrayRenderer::render([$this->description]) . '</div>'
             : '';
 
         return '<div class="' . $this->selectboxClass . $errorClass . '" data-reactroot="">'
