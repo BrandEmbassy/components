@@ -25,7 +25,15 @@ final class NotificationMessageTest extends TestCase
         return [
             'notificationSuccess' => [
                 __DIR__ . '/__snapshots__/success.html',
-                new NotificationMessage('Text text message', NotificationType::byValue(NotificationType::SUCCESS)),
+                new NotificationMessage('Text text <strong>message</strong>', NotificationType::byValue(NotificationType::SUCCESS)),
+            ],
+            'notificationFixed' => [
+                __DIR__ . '/__snapshots__/success_fixed.html',
+                new NotificationMessage(
+                    'Text text message',
+                    NotificationType::byValue(NotificationType::SUCCESS),
+                    NotificationMessage::FIXED
+                ),
             ],
             'notificationError' => [
                 __DIR__ . '/__snapshots__/error.html',

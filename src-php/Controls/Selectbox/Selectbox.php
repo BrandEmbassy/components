@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Controls\Selectbox;
 
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
 
 final class Selectbox implements UiComponent
@@ -27,13 +28,33 @@ final class Selectbox implements UiComponent
     private $selectboxClass = self::CLASS_SELECTBOX;
 
     /**
+     * @var string
+     */
+    private $description;
+
+    /**
+     * @var bool
+     */
+    private $isError;
+
+    /**
      * @param SelectboxOption[] $options
      * @param string $name
+     * @param SelectboxType $type
+     * @param string $description
+     * @param bool $isError
      */
-    public function __construct(array $options, string $name, SelectboxType $type)
-    {
+    public function __construct(
+        array $options,
+        string $name,
+        SelectboxType $type,
+        string $description = '',
+        bool $isError = false
+    ) {
         $this->options = $options;
         $this->name = $name;
+        $this->description = $description;
+        $this->isError = $isError;
 
         if ($type->getValue() === SelectboxType::WIDE) {
             $this->selectboxClass .= ' ' . self::CLASS_SELECTBOX_WIDE;
@@ -42,9 +63,15 @@ final class Selectbox implements UiComponent
 
     public function render(): string
     {
-        return '<div class="' . $this->selectboxClass . '" data-reactroot=""><select name="' . $this->name . '">'
+        $errorClass = $this->isError ? ' Selectbox__Error' : '';
+        $description = $this->description !== ''
+            ? '<div class="Selectbox__Desc">' . StringEscaper::escapeHtml($this->description) . '</div>'
+            : '';
+
+        return '<div class="' . $this->selectboxClass . $errorClass . '" data-reactroot="">'
+            . '<select name="' . StringEscaper::escapeHtmlAttribute($this->name) . '">'
             . ArrayRenderer::render($this->options)
-            . '</select></div>';
+            . '</select>' . $description . '</div>';
     }
 
 }

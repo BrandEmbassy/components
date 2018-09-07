@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Controls\Selectbox;
 
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
 
 final class SelectboxOption implements UiComponent
@@ -37,8 +38,8 @@ final class SelectboxOption implements UiComponent
 
     public function render(): string
     {
-        return '<option value="' . $this->value . '"' . $this->selected . '>'
-            . ArrayRenderer::render([$this->text])
+        return '<option value="' . StringEscaper::escapeHtmlAttribute($this->value) . '"' . $this->selected . '>'
+            . ArrayRenderer::render([StringEscaper::escapeHtml($this->text)])
             . '</option>';
     }
 

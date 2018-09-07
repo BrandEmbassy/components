@@ -20,6 +20,6 @@ final class Step implements UiComponent
 
     public function render(): string
     {
-        return '<div class="Breadcrumbs__Step">' . StringEscaper::makeSafe($this->text) . '</div>';
+        return '<div class="Breadcrumbs__Step">' . StringEscaper::escapeHtml($this->text) . '</div>';
     }
 }
