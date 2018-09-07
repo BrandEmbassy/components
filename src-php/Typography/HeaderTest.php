@@ -14,9 +14,9 @@ final class HeaderTest extends TestCase
     /**
      * @dataProvider HeaderDataProvider
      * @param string $snapshot
-     * @param Header $header
+     * @param Heading $header
      */
-    public function testShouldRenderHeader(string $snapshot, Header $header): void
+    public function testShouldRenderHeader(string $snapshot, Heading $header): void
     {
         $this->assertSnapshot($snapshot, $header);
     }
@@ -24,17 +24,17 @@ final class HeaderTest extends TestCase
     public function HeaderDataProvider(): array
     {
         $padding10 = UtilitiesOption::byValue(UtilitiesOption::PADDING_10);
-        $h1 = HeaderLevel::byValue(HeaderLevel::H1);
-        $h2 = HeaderLevel::byValue(HeaderLevel::H2);
+        $h1 = HeadingLevel::byValue(HeadingLevel::H1);
+        $h2 = HeadingLevel::byValue(HeadingLevel::H2);
 
         return [
             'H1' => [
                 __DIR__ . '/__snapshots__/h1.html',
-                new Header('Some text', [$padding10], $h1),
+                new Heading('Some text', [$padding10], $h1),
             ],
             'H2' => [
                 __DIR__ . '/__snapshots__/h2.html',
-                new Header('Some text', [$padding10], $h2),
+                new Heading('Some text', [$padding10], $h2),
             ],
         ];
     }

@@ -1,8 +1,7 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Grid;
+namespace BrandEmbassy\Components\Grid\GridColumn;
 
-use BrandEmbassy\Components\Grid\Options\GridColumnOption;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use PHPUnit\Framework\TestCase;

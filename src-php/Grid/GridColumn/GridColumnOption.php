@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Grid\Options;
+namespace BrandEmbassy\Components\Grid\GridColumn;
 
 use MabeEnum\Enum;
 

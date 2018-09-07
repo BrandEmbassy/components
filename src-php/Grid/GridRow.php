@@ -4,6 +4,7 @@ namespace BrandEmbassy\Components\Grid;
 
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\EnumValuesToString;
+use BrandEmbassy\Components\Grid\Options\GridRowOption;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 
@@ -16,23 +17,35 @@ final class GridRow implements UiComponent
     private $children;
 
     /**
-     * @var string
+     * @var UtilitiesOption[]
      */
     private $utilityOptions;
 
     /**
+     * @var GridRowOption[]
+     */
+    private $rowOptions;
+
+    /**
      * @param UiComponent[]|string[]|UiComponent|string $children
+     * @param GridRowOption[] $rowOptions
      * @param UtilitiesOption[] $utilityOptions
      */
-    public function __construct($children, array $utilityOptions = [])
+    public function __construct($children, array $rowOptions = [], array $utilityOptions = [])
     {
         $this->children = \is_array($children) ? $children : [$children];
-        $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
+        $this->rowOptions = $rowOptions;
+        $this->utilityOptions = $utilityOptions;
     }
 
     public function render(): string
     {
-        return '<div class="row ' . $this->utilityOptions . '">' . ArrayRenderer::render($this->children) . '</div>';
+        $classes = \trim(
+            EnumValuesToString::transform($this->rowOptions)
+            . ' ' . EnumValuesToString::transform($this->utilityOptions)
+        );
+
+        return '<div class="row ' . $classes . '">' . ArrayRenderer::render($this->children) . '</div>';
     }
 
 }

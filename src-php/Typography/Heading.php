@@ -1,14 +1,13 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Grid;
+namespace BrandEmbassy\Components\Typography;
 
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\EnumValuesToString;
-use BrandEmbassy\Components\Grid\Options\GridColumnOption;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 
-final class GridColumn implements UiComponent
+class Heading implements UiComponent
 {
 
     /**
@@ -19,32 +18,30 @@ final class GridColumn implements UiComponent
     /**
      * @var string
      */
-    private $columnOptions;
+    private $utilityOptions;
 
     /**
      * @var string
      */
-    private $utilityOptions;
+    private $level;
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param GridColumnOption[] $columnOptions
      * @param UtilitiesOption[] $utilityOptions
+     * @param HeadingLevel $level
      */
-    public function __construct($children, array $columnOptions, array $utilityOptions = [])
+    public function __construct($children, array $utilityOptions, HeadingLevel $level)
     {
-        \assert(\count($columnOptions) > 0);
-
         $this->children = \is_array($children) ? $children : [$children];
-        $this->columnOptions = EnumValuesToString::transform($columnOptions);
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
+        $this->level = (string)$level->getValue();
     }
 
     public function render(): string
     {
-        $options = $this->utilityOptions . ' ' . $this->columnOptions;
-
-        return '<div class="' . $options . '">' . ArrayRenderer::render($this->children) . '</div>';
+        return '<h' . $this->level . ' class="' . $this->utilityOptions . '">'
+            . ArrayRenderer::render($this->children)
+            . '</h' . $this->level . '>';
     }
 
 }

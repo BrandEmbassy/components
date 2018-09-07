@@ -4,7 +4,7 @@ namespace BrandEmbassy\Components\Typography;
 
 use MabeEnum\Enum;
 
-final class HeaderLevel extends Enum
+final class HeadingLevel extends Enum
 {
 
     public const H1 = '1';
