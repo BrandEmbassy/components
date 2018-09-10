@@ -43,4 +43,14 @@ final class SelectboxOption implements UiComponent
             . '</option>';
     }
 
+    public function getValue(): string
+    {
+        return $this->value;
+    }
+
+    public function getText(): string
+    {
+        return $this->text;
+    }
+
 }
