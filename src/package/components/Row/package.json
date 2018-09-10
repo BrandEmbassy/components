@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "name": "Row",
+  "main": "./Row.js"
+}
