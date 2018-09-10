@@ -11,7 +11,7 @@
     padding-right: 0px;
   }
 
-  &.isClickable {
+  &.hasBorder {
     padding: 4px;
     margin: 4px; 
     border: solid 1px #dadada;

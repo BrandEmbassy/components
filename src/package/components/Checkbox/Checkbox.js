@@ -13,15 +13,15 @@ type Props = {
   name: string,
   id: string,
   children?: React.Node,
-  isClickable: boolean
+  hasBorder: boolean
 }
 
 export default class Checkbox extends React.Component<Props> {
   render () {
-    const { styleName, name, id, label, children, isClickable } = this.props
+    const { styleName, name, id, label, children, hasBorder } = this.props
 
     const className = cx(styles.CheckboxContent, styleName, {
-      isClickable
+      hasBorder
     })
 
     return (
