@@ -42,7 +42,7 @@ export default class App extends Component {
             <div className='col-xs-6 background padding-20'>
               <div className='row padding-15'>
                 <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='aaa'/>
+                  <Checkbox name='nameA' id='aaa' />
                 </div>
                 <div className='col-xs-12 padding-10'>
                   <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
