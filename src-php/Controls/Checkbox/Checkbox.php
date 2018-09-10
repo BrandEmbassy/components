@@ -67,7 +67,7 @@ final class Checkbox implements UiComponent
 
         $onclick = 'onclick="document.getElementById(\'' . $this->id . '\').click();"';
 
-        $html = '<div class="Checkbox__CheckboxContent Checkbox__HasBorder" ' . $onclick . '>';
+        $html = '<div class="Checkbox__CheckboxContent Checkbox__hasBorder" ' . $onclick . '>';
         $html .= '<div class="Checkbox__Checkbox">'
             . $inputHtml
             . '<label onclick="return false;" for="' . $this->id . '"></label>'
