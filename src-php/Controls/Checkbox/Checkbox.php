@@ -65,12 +65,12 @@ final class Checkbox implements UiComponent
         $inputHtml .= ' id="' . $this->id . '" value="' . $this->value . '"';
         $inputHtml .= ' name="' . $this->name . '" ' . $checkedAsHtml . '/>';
 
-        $onclick = 'onclick="document.getElementById(\'' . $this->id . '\').click()"';
+        $onclick = 'onclick="document.getElementById(\'' . $this->id . '\').click();"';
 
         $html = '<div class="Checkbox__CheckboxContent" ' . $onclick . '>';
         $html .= '<div class="Checkbox__Checkbox">'
             . $inputHtml
-            . '<label ' . $onclick . ' for="' . $this->id . '"></label>'
+            . '<label onclick="return false;" for="' . $this->id . '"></label>'
             . '</div>';
         $html .= ArrayRenderer::render($this->children);
         $html .= '<div class="Checkbox__Label">' . StringEscaper::escapeHtml($this->label) . '</div>';
