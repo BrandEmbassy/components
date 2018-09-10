@@ -5,7 +5,7 @@ namespace BrandEmbassy\Components\SelectList;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
 
-class SelectListRow implements UiComponent
+class SelectListItem implements UiComponent
 {
 
     /**
@@ -20,7 +20,7 @@ class SelectListRow implements UiComponent
 
     public function render(): string
     {
-        return ArrayRenderer::render($this->children) . '<br />';
+        return ArrayRenderer::render($this->children);
     }
 
 }

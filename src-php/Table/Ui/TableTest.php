@@ -1,15 +1,15 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Forms\Table\Ui;
+namespace BrandEmbassy\Components\Table\Ui;
 
 use BrandEmbassy\Components\Align;
 use BrandEmbassy\Components\Controls\Link\Link;
 use BrandEmbassy\Components\Controls\Link\LinkColor;
-use BrandEmbassy\Components\Forms\Table\Model\ArrayDataProvider;
-use BrandEmbassy\Components\Forms\Table\Model\CellData;
-use BrandEmbassy\Components\Forms\Table\Model\ColumnDefinition;
-use BrandEmbassy\Components\Forms\Table\Model\RowData;
-use BrandEmbassy\Components\Forms\Table\Model\TableDefinition;
+use BrandEmbassy\Components\Table\Model\ArrayDataProvider;
+use BrandEmbassy\Components\Table\Model\CellData;
+use BrandEmbassy\Components\Table\Model\ColumnDefinition;
+use BrandEmbassy\Components\Table\Model\RowData;
+use BrandEmbassy\Components\Table\Model\TableDefinition;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;

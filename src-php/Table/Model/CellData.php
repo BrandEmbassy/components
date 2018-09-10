@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Forms\Table\Model;
+namespace BrandEmbassy\Components\Table\Model;
 
 final class CellData
 {
