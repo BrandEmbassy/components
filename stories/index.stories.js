@@ -17,6 +17,7 @@ import SubmitDemo from './../src/Demos/Forms/SubmitDemo'
 import ButtonDemo from './../src/Demos/Controls/ButtonDemo'
 import ButtonGroupDemo from './../src/Demos/Controls/ButtonGroupDemo'
 import LinkDemo from './../src/Demos/Controls/LinkDemo'
+import LinklistDemo from './../src/Demos/Controls/LinklistDemo'
 
 import BreadcrumbsDemo from './../src/Demos/Navigation/BreadcrumbsDemo'
 
@@ -55,6 +56,7 @@ storiesOf('Controls', module)
   .add('Button', () => <ButtonDemo />)
   .add('Button group', () => <ButtonGroupDemo />)
   .add('Link', () => <LinkDemo />)
+  .add('Linklist', () => <LinklistDemo />)
 
 storiesOf('Navigation', module)
   .add('Breadcrumbs', () => <BreadcrumbsDemo />)
