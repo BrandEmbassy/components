@@ -53,9 +53,9 @@ final class Checkbox implements UiComponent
     {
         $checkedAsHtml = $this->checked ? 'checked="checked"' : '';
 
-        $inputHtml = '<input type="checkbox" ';
-        $inputHtml .= ' id="' . $this->id . '" value="' . $this->value . '" ';
-        $inputHtml .= ' name="' . $this->name . '" ' . $checkedAsHtml . ' />';
+        $inputHtml = '<input type="checkbox"';
+        $inputHtml .= ' id="' . $this->id . '" value="' . $this->value . '"';
+        $inputHtml .= ' name="' . $this->name . '" ' . $checkedAsHtml . '/>';
 
         $html = '<div class="Checkbox__CheckboxContent" data-reactroot="">';
         $html .= '<div class="Checkbox__Checkbox">' . $inputHtml . '<label for="' . $this->id . '"></label></div>';

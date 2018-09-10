@@ -20,7 +20,7 @@ class SelectListRow implements UiComponent
 
     public function render(): string
     {
-        return ArrayRenderer::render($this->children) . '<br />';
+        return ArrayRenderer::render($this->children);
     }
 
 }
