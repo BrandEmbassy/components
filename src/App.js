@@ -42,94 +42,94 @@ export default class App extends Component {
             <div className='col-xs-6 background padding-20'>
               <div className='row padding-15'>
                 <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='aaa' label='label text here' />
+                  <Checkbox name='nameA' id='aaa' />
                 </div>
                 <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Channel type='facebook' size='M' />
                   </Checkbox>
                 </div>
 
                 <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Tag color='DarkPurple' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Tag color='Purple' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Tag color='Pink' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Tag color='Red' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Tag color='Yellow' />
                   </Checkbox>
                 </div>
 
                 <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Statuses status='New' Reversed />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Statuses status='Open' Reversed />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Statuses status='Resolved' Reversed />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Statuses status='Pending' Reversed />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <Statuses status='Escalated' Reversed />
                   </Checkbox>
                 </div>
 
                 <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <ProfilePicture Size16 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <ProfilePicture Size20 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <ProfilePicture Size24 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <ProfilePicture Size40 imgSrc='https://ih1.redbubble.net/image.422404940.7009/pp,550x550.jpg' />
                   </Checkbox>
                 </div>
 
                 <div className='col-xs-12 padding-10'>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <div class='be-icon-rating-1' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <div class='be-icon-rating-1' />
                   </Checkbox>
-                  <Checkbox name='nameA' id='bbb' label='label text here' >
+                  <Checkbox name='nameA' id='bbb' label='label text here' hasBorder >
                     <div class='be-icon-rating-1' />
                   </Checkbox>
                 </div>
