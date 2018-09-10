@@ -16,7 +16,7 @@ final class GridRowTest extends TestCase
         $snapshot = __DIR__ . '/__snapshots__/row.html';
         $padding10 = UtilitiesOption::byValue(UtilitiesOption::PADDING_10);
 
-        $row = new GridRow('Some text', [$padding10]);
+        $row = new GridRow('Some text', [], [$padding10]);
 
         $this->assertSnapshot($snapshot, $row);
     }

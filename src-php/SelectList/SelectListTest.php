@@ -13,8 +13,8 @@ final class SelectListTest extends TestCase
 
     public function testRendering(): void
     {
-        $checkbox = new Checkbox('Foo Bar', 'id-123', 'baz[]', '1', false);
-        $rows = [new SelectListRow([$checkbox])];
+        $checkbox = new Checkbox('', 'Foo Bar', 'id-123', 'baz[]', '1', false);
+        $rows = [new SelectListItem([$checkbox])];
         $selectList = new SelectList($rows);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/selectList.html', $selectList);

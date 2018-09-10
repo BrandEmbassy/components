@@ -4,7 +4,6 @@ namespace BrandEmbassy\Components\Grid;
 
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\EnumValuesToString;
-use BrandEmbassy\Components\Grid\Options\GridRowOption;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 

@@ -3,12 +3,9 @@
 namespace BrandEmbassy\Components;
 
 use MabeEnum\Enum;
-use Nette\StaticClass;
 
 final class EnumValuesToString
 {
-    use StaticClass;
-
     /**
      * @param Enum[] $options
      * @return string

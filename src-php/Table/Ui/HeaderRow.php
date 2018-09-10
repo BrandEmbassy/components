@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Forms\Table\Ui;
+namespace BrandEmbassy\Components\Table\Ui;
 
 use Assert\Assertion;
 use BrandEmbassy\Components\ArrayRenderer;

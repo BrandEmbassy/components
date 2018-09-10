@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Controls\Checkbox;
 
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
 
 final class Checkbox implements UiComponent
@@ -34,15 +35,22 @@ final class Checkbox implements UiComponent
     private $checked;
 
     /**
+     * @var string
+     */
+    private $label;
+
+    /**
      * @param UiComponent[]|string[]|UiComponent|string $children
+     * @param string $label
      * @param string $id
      * @param string $name
      * @param string $value
      * @param bool $checked
      */
-    public function __construct($children, string $id, string $name, string $value, bool $checked)
+    public function __construct($children, string $label, string $id, string $name, string $value, bool $checked)
     {
         $this->children = \is_array($children) ? $children : [$children];
+        $this->label = $label;
         $this->id = $id;
         $this->name = $name;
         $this->value = $value;
@@ -57,9 +65,15 @@ final class Checkbox implements UiComponent
         $inputHtml .= ' id="' . $this->id . '" value="' . $this->value . '"';
         $inputHtml .= ' name="' . $this->name . '" ' . $checkedAsHtml . '/>';
 
-        $html = '<div class="Checkbox__CheckboxContent" data-reactroot="">';
-        $html .= '<div class="Checkbox__Checkbox">' . $inputHtml . '<label for="' . $this->id . '"></label></div>';
-        $html .= '<div class="Checkbox__Label">' . ArrayRenderer::render($this->children) . '</div>';
+        $onclick = 'onclick="document.getElementById(\'' . $this->id . '\').click()"';
+
+        $html = '<div class="Checkbox__CheckboxContent" ' . $onclick . '>';
+        $html .= '<div class="Checkbox__Checkbox">'
+            . $inputHtml
+            . '<label ' . $onclick . ' for="' . $this->id . '"></label>'
+            . '</div>';
+        $html .= ArrayRenderer::render($this->children);
+        $html .= '<div class="Checkbox__Label">' . StringEscaper::escapeHtml($this->label) . '</div>';
         $html .= '</div>';
 
         return $html;

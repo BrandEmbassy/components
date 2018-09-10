@@ -1,14 +1,14 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Forms\Table\Ui;
+namespace BrandEmbassy\Components\Table\Ui;
 
-use BrandEmbassy\Components\Forms\Table\Model\InconsistentDataException;
+use BrandEmbassy\Components\Table\Model\InconsistentDataException;
 use BrandEmbassy\Components\UiComponent;
-use BrandEmbassy\Components\Forms\Table\Model\CellData;
-use BrandEmbassy\Components\Forms\Table\Model\ColumnDefinition;
-use BrandEmbassy\Components\Forms\Table\Model\DataProvider;
-use BrandEmbassy\Components\Forms\Table\Model\RowData;
-use BrandEmbassy\Components\Forms\Table\Model\TableDefinition;
+use BrandEmbassy\Components\Table\Model\CellData;
+use BrandEmbassy\Components\Table\Model\ColumnDefinition;
+use BrandEmbassy\Components\Table\Model\DataProvider;
+use BrandEmbassy\Components\Table\Model\RowData;
+use BrandEmbassy\Components\Table\Model\TableDefinition;
 
 final class Table implements UiComponent
 {
