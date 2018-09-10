@@ -12,14 +12,17 @@ type Props = {
   label: string,
   name: string,
   id: string,
-  children?: React.Node
+  children?: React.Node,
+  isClickable: boolean
 }
 
 export default class Checkbox extends React.Component<Props> {
   render () {
-    const { styleName, name, id, label, children } = this.props
+    const { styleName, name, id, label, children, isClickable } = this.props
 
-    const className = cx(styles.CheckboxContent, styleName)
+    const className = cx(styles.CheckboxContent, styleName, {
+      isClickable
+    })
 
     return (
       <div className={className}>
