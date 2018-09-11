@@ -291,9 +291,9 @@
   }
   &.apple-imessage, &.apple-business {
     background: linear-gradient( 180deg,#5bf677, #00b618);
-    font-size: 20px;
+    font-size: 28px;
     &:before {
-      content: "\E041";
+      content: "\E040";
     }
   }
   &.sms, &.twilio {
@@ -371,9 +371,9 @@
   }
   &.line-message, &.line {
     background: linear-gradient( 180deg, #35be19, #32b418);
-    font-size: 16px;
+    font-size: 18px;
     &:before {
-      content: "\E040";
+      content: "\E041";
     }
   }
   &.email {
@@ -539,7 +539,7 @@
       font-size: 33px;
     }
     &.line-message, &.line {
-      font-size: 40px;
+      font-size: 50px;
     }
     &.forum {
       font-size: 27px;
@@ -620,10 +620,10 @@
       font-size: 28px;
     }
     &.apple-imessage, &.apple-business {
-      font-size: 35px;
+      font-size: 44px;
     }
     &.line-message, &.line {
-      font-size: 28px;
+      font-size: 26px;
     }
     &.sms, &.twilio {
       font-size: 26px;
@@ -753,6 +753,9 @@
     &.instagram {
       font-size: 12px;
     }
+    &.line-message, &.line {
+      font-size: 14px;
+    }
     &.instagram-dm {
       line-height: 20px;
       font-size: 12px;
@@ -806,6 +809,9 @@
     &.listening, &.kbm-1 {
       font-size: 12px;
     }
+    &.apple-imessage, &.apple-business {
+      font-size: 20px;
+    }
   }
 
   /* SIZE XS */
@@ -843,6 +849,9 @@
         line-height: 13px;
         font-size: 11px;
       }
+    }
+    &.line-message, &.line {
+      font-size: 12px;
     }
     &.twitter-dm {
       line-height: 16px;
@@ -911,6 +920,9 @@
     }
     &.listening, &.kbm-1 {
       font-size: 9.6px;
+    }
+    &.apple-imessage, &.apple-business {
+      font-size: 16px;
     }
   }
   &.isGrayscale {
