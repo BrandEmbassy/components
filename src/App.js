@@ -206,13 +206,16 @@ export default class App extends Component {
               </div>
               <div className='row'>
                 <div className='col-xs-12 padding-15'>
-                  <Link Icon='be-icon-plus' Green text='Add' />
-                  <Link Icon='be-icon-pencil' Blue text='Edit' />
-                  <Link Icon='be-icon-trash' text='Remove' />
-                  <Link Icon='be-icon-mail' text='' />
-                  <Link Icon='be-icon-check' Green text='' />
-                  <Link Icon='be-icon-more' text='' />
-                  <Link Icon='be-icon-search' Red text='' />
+                  <Linklist>
+                    <Link Icon='be-icon-plus' Green text='Add' />
+                    <Link Icon='be-icon-pencil' Blue text='Edit' />
+                    <Link Icon='be-icon-trash' text='Remove' />
+                    <Link Icon='be-icon-mail' text='' />
+                    <Link Icon='be-icon-check' Green text='' />
+                    <Link Icon='be-icon-more' text='' />
+                    <Link Icon='be-icon-search' Red text='' />
+                  </Linklist>
+
                 </div>
                 <div className='col-xs-12 color4 padding-10'>
                   <Linklist>

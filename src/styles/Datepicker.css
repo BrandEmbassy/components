@@ -1,5 +1,5 @@
 
-@import '~react-daterange-picker/dist/css/react-calendar.css';
+@import 'react-daterange-picker/dist/css/react-calendar.css';
 
 .daterangepicker .DateRangePicker {
   min-height: 270px;
