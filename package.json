@@ -57,7 +57,7 @@
     "pretest": "yarn run lint && npm run flow",
     "test": "yarn run jest",
     "lint": "standard './src/**/*.js' './stories/**/*.js' './src/**/*.jsx'",
-    "lib": "babel src/package --out-dir lib --copy-files",
+    "lib": "babel src/package src/styles --out-dir lib --copy-files",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "library": "yarn run build && yarn run build-storybook && node scripts/storybook.js && yarn run storybook",
