@@ -1,5 +1,5 @@
 .Linklist {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   padding: 10px 0;
   & a {
