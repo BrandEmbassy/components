@@ -9,6 +9,9 @@ use BrandEmbassy\Components\UiComponent;
 final class SelectboxOption implements UiComponent
 {
 
+    public const IS_SELECTED = true;
+    public const IS_NOT_SELECTED = false;
+
     /**
      * @var string
      */
