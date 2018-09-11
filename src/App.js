@@ -215,7 +215,7 @@ export default class App extends Component {
                     <Link Icon='be-icon-more' text='' />
                     <Link Icon='be-icon-search' Red text='' />
                   </Linklist>
-                  
+
                 </div>
                 <div className='col-xs-12 color4 padding-10'>
                   <Linklist>
