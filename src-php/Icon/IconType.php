@@ -164,5 +164,7 @@ final class IconType extends Enum
     public const IF_LINE_MESSAGE_2559802 = 'be-icon-if-line-message-2559802';
     public const IF_66_WECHAT_1181189 = 'be-icon-if-66-wechat-1181189';
     public const ALIGN_LEFT_1 = 'be-icon-align-left-1';
+    public const TRIANGLE_UP = 'be-icon-triangle-up';
+    public const TRIANGLE_DOWN = 'be-icon-triangle-down';
 
 }
