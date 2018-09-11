@@ -23,6 +23,6 @@ final class LinkList implements UiComponent
 
     public function render(): string
     {
-        return '<div>' . ArrayRenderer::render($this->links) . '</div>';
+        return '<div class="Linklist__Linklist">' . ArrayRenderer::render($this->links) . '</div>';
     }
 }

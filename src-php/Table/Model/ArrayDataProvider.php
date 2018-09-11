@@ -2,7 +2,6 @@
 
 namespace BrandEmbassy\Components\Table\Model;
 
-use ArrayIterator;
 use Assert\Assertion;
 use Iterator;
 
@@ -30,9 +29,13 @@ final class ArrayDataProvider implements DataProvider
         $this->data = $data;
     }
 
-    public function getIterator(): Iterator
+    public function getIterator(): TableIterator
     {
-        return new ArrayIterator($this->data);
+        return new TableIterator($this->data);
     }
 
+    public function count(): int
+    {
+        return \count($this->data);
+    }
 }

@@ -3,12 +3,14 @@
 namespace BrandEmbassy\Components\Table\Ui;
 
 use BrandEmbassy\Components\Table\Model\InconsistentDataException;
+use BrandEmbassy\Components\Table\Model\TableIterator;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Table\Model\CellData;
 use BrandEmbassy\Components\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\Table\Model\DataProvider;
 use BrandEmbassy\Components\Table\Model\RowData;
 use BrandEmbassy\Components\Table\Model\TableDefinition;
+use LogicException;
 
 final class Table implements UiComponent
 {
@@ -24,7 +26,7 @@ final class Table implements UiComponent
     private $dataProvider;
 
     /**
-     * @var (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell)[]
+     * @var (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell)[]
      */
     private $cellRenderCallbacks;
 
@@ -73,7 +75,8 @@ final class Table implements UiComponent
     private function renderBody(): string
     {
         $result = '<tbody>';
-        foreach ($this->dataProvider->getIterator() as $rowData) {
+        $iterator = $this->dataProvider->getIterator();
+        foreach ($iterator as $rowData) {
             \assert($rowData instanceof RowData);
             $cellsData = $rowData->getCellsData();
 
@@ -84,14 +87,15 @@ final class Table implements UiComponent
                 $renderFunction = $this->getCellRenderFunction($columnDefinition->getKey());
 
                 if (\in_array($columnKey, $this->columnsNotInDataSet, true)) {
-                    $cells[] = $renderFunction(new CellData($columnKey, ''), $rowData, $columnDefinition);
+                    $cells[] = $renderFunction(new CellData($columnKey, ''), $rowData, $columnDefinition, $iterator);
 
                 } elseif (isset($cellsData[$columnKey])) {
-                    $cells[] = $renderFunction($cellsData[$columnKey], $rowData, $columnDefinition);
+                    $cells[] = $renderFunction($cellsData[$columnKey], $rowData, $columnDefinition, $iterator);
 
                 } else {
                     throw InconsistentDataException::byCoordinates($columnKey, $rowData->getRowIdentifier());
                 }
+
             }
             $result .= (new Row($cells))->render();
         }
@@ -102,7 +106,7 @@ final class Table implements UiComponent
 
     /**
      * @param string $key
-     * @return callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell
+     * @return callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell
      */
     private function getCellRenderFunction(string $key): callable
     {
@@ -110,7 +114,12 @@ final class Table implements UiComponent
             return $this->cellRenderCallbacks[$key];
         }
 
-        return function (CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell {
+        return function (
+            CellData $cellData,
+            RowData $rowData,
+            ColumnDefinition $columnDefinition,
+            TableIterator $iterator
+        ): Cell {
             return new Cell($cellData->getValue(), $columnDefinition->getAlign());
         };
     }
