@@ -418,7 +418,7 @@
       color: #ffc36b;
     }
   }
-  &.listening, &.kbm-1 {
+  &.listening, &.kbm-1, &.default {
     background-color: #dcdcdc;
     font-size: 14.4px;
     color: #a2a2a2;
@@ -562,7 +562,7 @@
         font-size: 44px;
       }
     }
-    &.listening, &.kbm-1 {
+    &.listening, &.kbm-1, &.default {
       font-size: 36px;
     }
   }
@@ -696,7 +696,7 @@
         font-size: 29px;
       }
     }
-    &.listening, &.kbm-1 {
+    &.listening, &.kbm-1, &.default {
       font-size: 24px;
     }
   }
@@ -806,7 +806,7 @@
         font-size: 14px;
       }
     }
-    &.listening, &.kbm-1 {
+    &.listening, &.kbm-1, &.default {
       font-size: 12px;
     }
     &.apple-imessage, &.apple-business {
@@ -918,7 +918,7 @@
         font-size: 11px;
       }
     }
-    &.listening, &.kbm-1 {
+    &.listening, &.kbm-1, &.default {
       font-size: 9.6px;
     }
     &.apple-imessage, &.apple-business {
