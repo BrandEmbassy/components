@@ -9,6 +9,7 @@ use BrandEmbassy\Components\Grid\GridRowOption;
 use BrandEmbassy\Components\Typography\Heading;
 use BrandEmbassy\Components\Typography\HeadingLevel;
 use BrandEmbassy\Components\UiComponent;
+use BrandEmbassy\Components\Utilities\UtilitiesOption;
 
 final class NonIdealState implements UiComponent
 {
@@ -42,7 +43,8 @@ final class NonIdealState implements UiComponent
 
         $childrenCol = new GridColumn(
             $this->children,
-            [GridColumnOption::get(GridColumnOption::XS_12)]
+            [GridColumnOption::get(GridColumnOption::XS_12)],
+            [UtilitiesOption::get(UtilitiesOption::PADDING_20)]
         );
 
         $rowOptions = [GridRowOption::get(GridRowOption::XS_CENTER)];
