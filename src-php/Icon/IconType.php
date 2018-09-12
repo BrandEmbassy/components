@@ -166,5 +166,6 @@ final class IconType extends Enum
     public const ALIGN_LEFT_1 = 'be-icon-align-left-1';
     public const TRIANGLE_UP = 'be-icon-triangle-up';
     public const TRIANGLE_DOWN = 'be-icon-triangle-down';
+    public const FILTER = 'be-icon-filter';
 
 }
