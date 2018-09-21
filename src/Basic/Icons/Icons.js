@@ -299,7 +299,7 @@ export default class Icons extends PureComponent {
               <div className='be-icon-filter' />
               <div className='be-icon-triangle-down' />
               <div className='be-icon-triangle-up' />
-
+              <div className='be-icon-sec-chatbot-builder' />
             </div>
           </div>
         </div>

@@ -542,6 +542,9 @@
 :global(.be-icon-triangle-up:before) {
   content: "\e04c";
 }
+.be-icon-sec-chatbot-builder:before {
+  content: "\e04d";
+}
 
 
 [class^="be-icon"] {
