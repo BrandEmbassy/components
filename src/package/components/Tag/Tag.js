@@ -12,7 +12,7 @@ type Props = {
   color: string,
   styleName: string
 }
-
+// test
 export default class Tag extends React.Component<Props> {
   render () {
     const { styleName, color } = this.props
