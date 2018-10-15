@@ -51,7 +51,7 @@ export default class Carusel extends PureComponent<Props, State> {
     const { index } = this.state
 
     return (
-      <div className={styles.PluginFrame} data-cy='CARUSEL' >
+      <div className={styles.PluginFrame} data-cy="CARUSEL" >
         <div className={styles.ArrowWrapper}>
           {<div className={styles.LeftRow} onMouseDown={this.handleLeftArrowClick} />}
         </div>
