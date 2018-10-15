@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Gallery should render gallery 1`] = `
-<div>
+<div
+  data-cy="GALLERY"
+>
   <div>
     <div
       style="position:absolute;width:0;height:0;visibility:hidden;display:none"

@@ -31,18 +31,20 @@ export default class PluginWrapper extends PureComponent<Props> {
 
   render () {
     const { elements, onClick, hideButtons, disableCarusel, width } = this.props
+    const type = elements[0].type
+
     if (elements.length > 1 && disableCarusel) {
       return <Gallery elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else if (elements.length > 1) {
       return <Carusel elements={elements} onClick={onClick} hideButtons={hideButtons} />
     } else if (this.isPluginWithoutWrapper(elements[0])) {
       return (
-        <div className={styles.PluginFrame}>
+        <div className={styles.PluginFrame} data-cy={type}>
           <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} level={1} />
         </div>
       )
     } else {
-      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} level={1} />
+      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} level={1} type={type} />
     }
   }
 }
