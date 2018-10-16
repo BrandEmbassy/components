@@ -252,7 +252,9 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
     hideButtons={false}
     onClick={[Function]}
   >
-    <div>
+    <div
+      data-cy="CARUSEL"
+    >
       <div>
         <div
           onMouseDown={[Function]}
@@ -1345,7 +1347,9 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
     hideButtons={false}
     onClick={[Function]}
   >
-    <div>
+    <div
+      data-cy="GALLERY"
+    >
       <div>
         <ResizeDetector
           handleHeight={false}
@@ -2052,10 +2056,13 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
     hideButtons={false}
     level={1}
     onClick={[Function]}
+    type="MENU"
     width="100%"
   >
     <div>
-      <div>
+      <div
+        data-cy="MENU"
+      >
         <div
           style={
             Object {
@@ -2110,6 +2117,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
             hideButtons={false}
             level={1}
             onClick={[Function]}
+            type="MENU"
             width="100%"
           >
             <div>
@@ -2443,7 +2451,9 @@ exports[`Plugin index should render standalone plugin 1`] = `
   hideButtons={false}
   onClick={[Function]}
 >
-  <div>
+  <div
+    data-cy="QUICK_REPLIES"
+  >
     <ComposedElement
       elements={
         Array [
