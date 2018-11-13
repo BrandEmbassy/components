@@ -13,33 +13,22 @@ type Props = {
   isActive: boolean
 }
 
-type State = {
-  isActive: boolean
-}
-
 export default class Switcher extends React.Component<Props, State> {
-  constructor (props: Props) {
-    super(props)
-    this.state = { isActive: this.props.isActive }
-  }
-
   render () {
-    const { styleName, isActive } = this.props
+    const { styleName, isActive, SwitcherClick } = this.props
+    const { Switcher, Switch, Label, LabelOn, LabelOff } = styles
 
-    const className = cx(styles.Switcher, styleName, {
+    const On = cx(Label, LabelOn)
+    const Off = cx(Label, LabelOff)
+    const className = cx(Switcher, styleName, {
       isActive
     })
 
     return (
-      <div
-        onClick={(e) => {
-          e.stopPropagation()
-          this.setState({ isActive: !this.state.isActive })
-        }}
-        className={className}>
-        <div className='Label Label--on'>On</div>
-        <div className='Switch' />
-        <div className='Label Label--off'>Off</div>
+      <div className={className} onClick={SwitcherClick} data-jest='click' >
+        <div className={On}>On</div>
+        <div className={Switch} />
+        <div className={Off}>Off</div>
       </div>
     )
   }

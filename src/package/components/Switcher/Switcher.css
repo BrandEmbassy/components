@@ -5,6 +5,7 @@
   height: 24px;
   line-height: 24px;
   cursor: pointer;
+  margin: 4px;
 
   & .Label {
     position: relative;
@@ -15,17 +16,17 @@
     font-size: 13px;
     transition: all .18s;
 
-    & on {
+    &.LabelOn {
       color: #999999;
     }
 
-    & off {
+    &.Label--off {
       font-weight: 700;
       color: #999999;
     }
   }
 
-  &__switch {
+  & .Switch {
     position: relative;
     flex: 0 1 auto;
     width: 44px;
@@ -44,25 +45,27 @@
       display: block;
       width: 16px;
       height: 16px;
-      margin: 3px;
+      margin: 4px 3px;
       border-radius: 2px;
       background-color: #999;
       transition: all .18s;
     }
   }
 
-  &--isActive {
-    .Switcher {
-      &__label {
-        &--on {
+  &.isActive {
+    &.Switcher {
+      & .Label {
+        &.LabelOn {
           font-weight: 700;
           color: #36a909;
+          padding-right: 7px;
         }
-        &--off {
+        &.LabelOff {
           font-weight: 400;
+          color: #999999;
         }
       }
-      &__switch {
+      & .Switch {
         &:after {
           right: 20px;
           background-color: #36a909;
