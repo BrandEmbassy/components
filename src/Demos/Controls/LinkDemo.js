@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Link from './../../package/components/Link/Link'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Link } from 'components';`
 
@@ -28,9 +25,9 @@ export default class LinkDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Link Icon='be-icon-pencil' text='edit' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Link Icon='be-icon-pencil' text='edit' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row padding-20'>
@@ -48,9 +45,9 @@ export default class LinkDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Link Icon='be-icon-pencil' Blue text='edit' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Link Icon='be-icon-pencil' Blue text='edit' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row padding-20'>
@@ -68,9 +65,9 @@ export default class LinkDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Link Icon='be-icon-pencil' White text='edit' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Link Icon='be-icon-pencil' White text='edit' />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

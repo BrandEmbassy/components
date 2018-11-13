@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Statuses from './../../package/components/Statuses/Statuses'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Statuses } from 'components';`
 
@@ -31,9 +28,9 @@ export default class StatusesDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Statuses status='New' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Statuses status='New' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row'>
@@ -53,9 +50,9 @@ export default class StatusesDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Statuses status='New' Reversed />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Statuses status='New' Reversed />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

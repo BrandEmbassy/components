@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Textarea from './../../package/components/Textarea/Textarea'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Textarea } from 'components';`
 
@@ -30,9 +27,9 @@ export default class TextareaDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Textarea label='Label here' desc='description here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Textarea label='Label here' desc='description here' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row padding-20'>
@@ -46,9 +43,9 @@ export default class TextareaDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Textarea label='Label here' desc='description here' isDisabled />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Textarea label='Label here' desc='description here' isDisabled />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row padding-20'>
@@ -61,9 +58,9 @@ export default class TextareaDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Textarea label='Label here' desc='description here' isError />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Textarea label='Label here' desc='description here' isError />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import Submit from './../../package/components/Submit/Submit'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Submit } from 'components';`
 
@@ -29,9 +26,9 @@ export default class SubmitDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Submit value='Submit here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Submit value='Submit here' />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Notification from './../../package/components/Notification/Notification'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Notification } from 'components';`
 
@@ -25,9 +22,9 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification Fix text='notification text here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Notification Fix text='notification text here' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row padding-20'>
@@ -43,9 +40,9 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification Fixed type='success' text='notification text here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Notification Fixed type='success' text='notification text here' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row padding-20'>
@@ -60,9 +57,9 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification type='success' text='notification text here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Notification type='success' text='notification text here' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row'>
@@ -77,9 +74,9 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification type='error' text='notification text here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Notification type='error' text='notification text here' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row'>
@@ -94,9 +91,9 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification type='warning' text='notification text here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Notification type='warning' text='notification text here' />
+            </StorybookHighlighter >
           </div>
         </div>
 
@@ -112,9 +109,9 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification type='info' text='notification text here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Notification type='info' text='notification text here' />
+            </StorybookHighlighter >
           </div>
         </div>
 
@@ -130,9 +127,9 @@ export default class NotificationDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Notification type='default' text='notification text here' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Notification type='default' text='notification text here' />
+            </StorybookHighlighter >
           </div>
         </div>
 

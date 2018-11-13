@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 import Switcher from '../../package/components/Switcher/Switcher'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
 
 const importComponent = `import { Switcher } from 'components';`
 
@@ -39,9 +36,9 @@ export default class SwitcherDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Switcher />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Switcher />
+            </StorybookHighlighter>
           </div>
         </div>
 

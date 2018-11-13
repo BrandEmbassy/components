@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Tag from './../../package/components/Tag/Tag'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Tag } from 'components';`
 
@@ -34,9 +31,9 @@ export default class TagDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Tag color='Green' text='Tag name' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Tag color='Green' text='Tag name' />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

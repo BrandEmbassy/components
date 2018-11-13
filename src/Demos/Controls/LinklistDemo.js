@@ -2,10 +2,7 @@ import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Linklist from '../../package/components/Linklist/Linklist'
 import Link from '../../package/components/Link/Link'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Linklist } from 'components';`
 
@@ -34,18 +31,17 @@ export default class LinklistDemo extends PureComponent {
         </div>
         <div className='row'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(
-                <Linklist>
-                  <Link Icon='be-icon-plus' Green text='Add' />
-                  <Link Icon='be-icon-pencil' Blue text='Edit' />
-                  <Link Icon='be-icon-trash' text='Remove' />
-                  <Link Icon='be-icon-mail' text='' />
-                  <Link Icon='be-icon-check' Green text='' />
-                  <Link Icon='be-icon-more' text='' />
-                  <Link Icon='be-icon-search' Red text='' />
-                </Linklist>))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Linklist>
+                <Link Icon='be-icon-plus' Green text='Add' />
+                <Link Icon='be-icon-pencil' Blue text='Edit' />
+                <Link Icon='be-icon-trash' text='Remove' />
+                <Link Icon='be-icon-mail' text='' />
+                <Link Icon='be-icon-check' Green text='' />
+                <Link Icon='be-icon-more' text='' />
+                <Link Icon='be-icon-search' Red text='' />
+              </Linklist>
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

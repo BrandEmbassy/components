@@ -2,10 +2,7 @@ import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import ButtonGroup from './../../package/components/ButtonGroup/ButtonGroup'
 import Button from './../../package/components/Button/Button'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { ButtonGroup } from 'components';`
 
@@ -35,8 +32,8 @@ export default class ButtonGroupDemo extends PureComponent {
         </div>
         <div className='row'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<ButtonGroup>
+            <StorybookHighlighter >
+              <ButtonGroup>
                 <Button text='buttonA' >
                   <div className='be-icon-plus' />
                 </Button>
@@ -45,8 +42,8 @@ export default class ButtonGroupDemo extends PureComponent {
                 <Button text='buttonD' />
                 <Button text='buttonE' Disabled />
                 <Button text='buttonF' Negative />
-              </ButtonGroup>))}
-            </SyntaxHighlighter>
+              </ButtonGroup>
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

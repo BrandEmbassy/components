@@ -1,10 +1,7 @@
 import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Channel from './../../package/components/Channel/Channel'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Channel } from 'components';`
 
@@ -17,19 +14,15 @@ export default class ChannelDemo extends PureComponent {
             <h2 className='h2'>Channel</h2>
             <h3 className='h3'>{importComponent}</h3>
           </div>
-
           <div className='col-xs-12 padding-10'>
             <h3 className='h3'>Facebook</h3>
             <Channel type='facebook' />
-
           </div>
-
           <div className='col-xs-12 padding-10'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='facebook' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Channel type='facebook' />
+            </StorybookHighlighter >
           </div>
-
           <div className='col-xs-12 padding-10'>
             <h3 className='h3'>Size</h3>
             <h4 className='h4'>for 60px use class size60</h4>
@@ -45,9 +38,9 @@ export default class ChannelDemo extends PureComponent {
           </div>
 
           <div className='col-xs-12 padding-10'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='facebook' size='XL' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Channel type='facebook' size='XL' />
+            </StorybookHighlighter >
           </div>
         </div>
 
@@ -63,9 +56,9 @@ export default class ChannelDemo extends PureComponent {
           </div>
 
           <div className='col-xs-12 padding-10'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Channel type='facebook-dm' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Channel type='facebook-dm' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row'>

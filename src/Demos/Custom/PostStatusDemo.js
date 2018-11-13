@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import PostStatus from './../../package/components/PostStatus/PostStatus'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { PostStatus } from 'components';`
 
@@ -27,9 +24,9 @@ export default class PostStatusDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<PostStatus status='New' />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <PostStatus status='New' />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row'>
@@ -45,9 +42,9 @@ export default class PostStatusDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<PostStatus status='New' Reversed />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <PostStatus status='New' Reversed />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

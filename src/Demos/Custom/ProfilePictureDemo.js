@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import ProfilePicture from './../../package/components/ProfilePicture/ProfilePicture'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { ProfilePicture } from 'components';`
 
@@ -41,9 +38,9 @@ export default class ProfilePictureDemo extends Component {
         </div>
         <div className='row padding-20'>
           <div className='col-xs-12 '>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<ProfilePicture Size24 />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <ProfilePicture Size24 />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

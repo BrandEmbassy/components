@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Table from './../../package/components/Table/Table'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 
 const importComponent = `import { Table } from 'components';`
 
@@ -30,9 +27,9 @@ export default class TableDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Table />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Table />
+            </StorybookHighlighter >
           </div>
         </div>
         <div className='row'>
@@ -46,9 +43,9 @@ export default class TableDemo extends Component {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Table Fixed />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Table Fixed />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>

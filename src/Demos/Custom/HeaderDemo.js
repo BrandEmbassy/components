@@ -1,10 +1,7 @@
 import React, { PureComponent } from 'react'
 import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
 import Header from './../../package/components/Header/Header'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
-import { renderToString } from 'react-dom/server'
-import beautify from 'js-beautify'
+import StorybookHighlighter from './../../utils/StorybookHighlighter'
 import Link from './../../package/components/Link/Link'
 
 const importComponent = `import { Header } from 'components';`
@@ -26,9 +23,9 @@ export default class HeaderDemo extends PureComponent {
         </div>
         <div className='row'>
           <div className='col-xs-12'>
-            <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
-              {beautify.html(renderToString(<Header />))}
-            </SyntaxHighlighter>
+            <StorybookHighlighter >
+              <Header />
+            </StorybookHighlighter >
           </div>
         </div>
       </div>
