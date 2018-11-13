@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switcher should render switcher OFF 1`] = `
+<div
+  className=""
+  data-jest="click"
+>
+  <div
+    className=""
+  >
+    On
+  </div>
+  <div />
+  <div
+    className=""
+  >
+    Off
+  </div>
+</div>
+`;
+
+exports[`Switcher should render switcher ON 1`] = `
+<div
+  className="isActive"
+  data-jest="click"
+>
+  <div
+    className=""
+  >
+    On
+  </div>
+  <div />
+  <div
+    className=""
+  >
+    Off
+  </div>
+</div>
+`;
