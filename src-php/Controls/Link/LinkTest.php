@@ -51,6 +51,11 @@ final class LinkTest extends TestCase
                 __DIR__ . '/__snapshots__/linkOnClick.html',
                 new Link('Edit', null, null, null, 'return confirm(\'Are you sure?\')'),
             ],
+
+            'linkTarget' => [
+                __DIR__ . '/__snapshots__/linkTarget.html',
+                new Link('Foo', null, null, null, null, LinkTarget::get(LinkTarget::BLANK)),
+            ],
         ];
     }
 
