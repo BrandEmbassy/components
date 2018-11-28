@@ -10,10 +10,11 @@ const cx = classNames.bind(styles)
 type Props = {
   title: string,
   styleName: string,
-  isActive: boolean
+  isActive: boolean,
+  SwitcherClick: Function
 }
 
-export default class Switcher extends React.Component<Props, State> {
+export default class Switcher extends React.Component<Props> {
   render () {
     const { styleName, isActive, SwitcherClick } = this.props
     const { Switcher, Switch, Label, LabelOn, LabelOff } = styles
