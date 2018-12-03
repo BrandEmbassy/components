@@ -58,7 +58,7 @@
     height: 28px;
     padding: 0 22px;
     line-height: 28px;
-    margin: 0;
+    margin: 5px;
     font-size: 13px;
     & [class^='be-icon'] {
       line-height: 13px;
