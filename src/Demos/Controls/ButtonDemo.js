@@ -41,7 +41,7 @@ export default class ButtonDemo extends PureComponent {
           </div>
           <div className='col-xs-5 col-xs-offset-1'>
             <h2 className='h2'>cancel</h2>
-            <Button text='button' isNegative Icon='be-icon-cross' />
+            <Button text='button' Negative Icon='be-icon-cross' />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Button text='button' Negative Icon='be-icon-cross' />))}
             </SyntaxHighlighter>
