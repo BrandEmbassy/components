@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 import Button from './../../package/components/Button/Button'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'
@@ -41,7 +41,7 @@ export default class ButtonDemo extends PureComponent {
           </div>
           <div className='col-xs-5 col-xs-offset-1'>
             <h2 className='h2'>cancel</h2>
-            <Button text='button' isNegative Icon='be-icon-cross' />
+            <Button text='button' Negative Icon='be-icon-cross' />
             <SyntaxHighlighter language='jsx' style={base16AteliersulphurpoolLight}>
               {beautify.html(renderToString(<Button text='button' Negative Icon='be-icon-cross' />))}
             </SyntaxHighlighter>

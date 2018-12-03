@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 
 import Switcher from '../../package/components/Switcher/Switcher'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
