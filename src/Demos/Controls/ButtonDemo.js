@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 import Button from './../../package/components/Button/Button'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
 import { base16AteliersulphurpoolLight } from 'react-syntax-highlighter/styles/prism'

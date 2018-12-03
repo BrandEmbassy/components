@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import '!style-loader!css-loader!../../styles/Base.css' //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 import styles from './Icons.css'
 
 export default class Icons extends PureComponent {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './styles/Base.css'
+import './package/components/Base.css'
 import styles from './App.css'
 
 import Breadcrumbs from './package/components/Breadcrumbs'

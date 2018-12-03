@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 import Header from './../../package/components/Header/Header'
 import Button from './../../package/components/Button/Button'
 import styles from './../../App.css'

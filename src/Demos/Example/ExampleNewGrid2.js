@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '!style-loader!css-loader!./../../styles/Base.css'  //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 import Header from './../../package/components/Header/Header'
 import Checkbox from './../../package/components/Checkbox/Checkbox'
 import Channel from './../../package/components/Channel/Channel'

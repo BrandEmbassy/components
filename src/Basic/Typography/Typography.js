@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 // @flow-skip-next-line
-import '!style-loader!css-loader!../../styles/Base.css' //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 
 type Props = {||}
 export default class Typography extends Component<Props> {

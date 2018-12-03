@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '!style-loader!css-loader!./../../styles/Base.css' //eslint-disable-line
+import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 import Label from './../../package/components/Label/Label'
 import ProfilePicture from './../../package/components/ProfilePicture/ProfilePicture'
 import Channel from './../../package/components/Channel/Channel'
