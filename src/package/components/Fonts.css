@@ -579,3 +579,9 @@
     float: inherit;
   }
 }
+
+[class^="be-icon"]:before {
+  height: inherit;
+  line-height: inherit;
+  float: inherit;
+}
