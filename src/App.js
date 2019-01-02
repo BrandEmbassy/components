@@ -23,6 +23,7 @@ import Radio from './package/components/Radio'
 import Selectbox from './package/components/Selectbox'
 import Statuses from './package/components/Statuses'
 import Switcher from './package/components/Switcher'
+import ToggleSwitch from './package/components/ToggleSwitch'
 import Submit from './package/components/Submit'
 import Table from './package/components/Table'
 import Tag from './package/components/Tag'
@@ -46,6 +47,8 @@ export default class App extends Component {
                 <div className='col-xs-12 padding-10'>
                   <Switcher />
                   <Switcher isActive />
+                  <ToggleSwitch />
+                  <ToggleSwitch round />
                 </div>
                 <div className='col-xs-12 padding-10'>
                   <Checkbox name='nameA' id='aaa' />
