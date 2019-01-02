@@ -8,10 +8,9 @@ import styles from './ToggleSwitch.css'
 const cx = classNames.bind(styles)
 
 type Props = {
-  title: string,
   styleName: string,
-  isActive: boolean,
-  SwitcherClick: Function
+  ToggleSwitchClick: Function,
+  round?: boolean
 }
 
 export default class ToggleSwitch extends React.Component<Props> {
