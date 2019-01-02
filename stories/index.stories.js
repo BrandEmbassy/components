@@ -19,6 +19,7 @@ import ButtonGroupDemo from './../src/Demos/Controls/ButtonGroupDemo'
 import LinkDemo from './../src/Demos/Controls/LinkDemo'
 import LinklistDemo from './../src/Demos/Controls/LinklistDemo'
 import SwitcherDemo from './../src/Demos/Controls/SwitcherDemo'
+import ToggleSwitchDemo from './../src/Demos/Controls/ToggleSwitchDemo'
 
 import BreadcrumbsDemo from './../src/Demos/Navigation/BreadcrumbsDemo'
 
@@ -59,6 +60,7 @@ storiesOf('Controls', module)
   .add('Link', () => <LinkDemo />)
   .add('Linklist', () => <LinklistDemo />)
   .add('Switcher', () => <SwitcherDemo />)
+  .add('ToggleSwitch', () => <ToggleSwitchDemo />)
 
 storiesOf('Navigation', module)
   .add('Breadcrumbs', () => <BreadcrumbsDemo />)
