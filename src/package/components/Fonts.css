@@ -542,8 +542,29 @@
 :global(.be-icon-triangle-up:before) {
   content: "\e04c";
 }
-.be-icon-sec-chatbot-builder:before {
+:global(.be-icon-sec-chatbot-builder:before) {
   content: "\e04d";
+}
+:global(.be-icon-list-add:before) {
+  content: "\e04e";
+}
+:global(.be-icon-list:before) {
+  content: "\e04f";
+}
+:global(.be-icon-character:before) {
+  content: "\e050";
+}
+:global(.be-icon-clipboard-pencil:before) {
+  content: "\e051";
+}
+:global(.be-icon-file-text-o:before) {
+  content: "\e052";
+}
+:global(.be-icon-file-text:before) {
+  content: "\e053";
+}
+:global(.be-icon-pencil-square-o:before) {
+  content: "\e054";
 }
 
 
@@ -557,4 +578,10 @@
     line-height: inherit;
     float: inherit;
   }
+}
+
+[class^="be-icon"]:before {
+  height: inherit;
+  line-height: inherit;
+  float: inherit;
 }

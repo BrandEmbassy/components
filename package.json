@@ -116,7 +116,9 @@
   },
   "standard": {
     "parser": "babel-eslint",
-    "ignore": [],
+    "ignore": [
+      "/config"
+    ],
     "globals": [
       "fetch",
       "URL",
