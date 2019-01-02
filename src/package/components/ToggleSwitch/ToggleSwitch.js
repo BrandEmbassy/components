@@ -25,8 +25,8 @@ export default class ToggleSwitch extends React.Component<Props> {
 
     return (
       <label className={Switch} onClick={ToggleSwitchClick} data-jest='click'>
-        <input type="checkbox" />
-        <span className={className}></span>
+        <input type='checkbox' />
+        <span className={className} />
       </label>
     )
   }

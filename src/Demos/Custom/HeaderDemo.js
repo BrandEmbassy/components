@@ -14,7 +14,7 @@ export default class HeaderDemo extends PureComponent {
     return (
       <div className='container'>
         <div className='row'>
-          <Header title="Header title" >
+          <Header title='Header title' >
             <Link text='Go back to settings' White Icon='be-icon-long-arrow-left' />
           </Header >
         </div>
