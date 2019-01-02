@@ -24,6 +24,7 @@ import Selectbox from './package/components/Selectbox'
 import Statuses from './package/components/Statuses'
 import Switcher from './package/components/Switcher'
 import ToggleSwitch from './package/components/ToggleSwitch'
+import Range from './package/components/Range'
 import Submit from './package/components/Submit'
 import Table from './package/components/Table'
 import Tag from './package/components/Tag'
@@ -44,6 +45,9 @@ export default class App extends Component {
           <div className='row around-xs padding-20'>
             <div className='col-xs-6 background padding-20'>
               <div className='row padding-15'>
+              <div className='col-xs-5 padding-10'>
+                  <Range />
+                </div>
                 <div className='col-xs-12 padding-10'>
                   <Switcher />
                   <Switcher isActive />
