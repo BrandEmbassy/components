@@ -18,7 +18,8 @@ type Props = {
 
 export default class Channel extends React.Component<Props> {
   static defaultProps = {
-    size: SizeTypes.M
+    size: SizeTypes.M,
+    type: 'default'
   }
 
   render () {

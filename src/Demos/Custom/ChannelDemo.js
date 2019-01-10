@@ -19,8 +19,9 @@ export default class ChannelDemo extends PureComponent {
           </div>
 
           <div className='col-xs-12 padding-10'>
-            <h3 className='h3'>Facebook</h3>
-            <Channel type='facebook' />
+            <h3 className='h3'>default (size 24px, type default)
+            </h3>
+            <Channel />
 
           </div>
 
