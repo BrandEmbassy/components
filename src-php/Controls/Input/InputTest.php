@@ -27,6 +27,17 @@ final class InputTest extends TestCase
                 __DIR__ . '/__snapshots__/textInput.html',
                 new Input('input-name', 'Input value', InputType::byValue(InputType::TEXT), 'Some description'),
             ],
+            'textInputSmall' => [
+                __DIR__ . '/__snapshots__/textInputSmall.html',
+                new Input(
+                    'input-name',
+                    'Input value',
+                    InputType::byValue(InputType::TEXT),
+                    'Some description',
+                    false,
+                    InputSize::byValue(InputSize::SMALL)
+                ),
+            ],
             'textInputWithErrorOnly' => [
                 __DIR__ . '/__snapshots__/textInputWithErrorOnly.html',
                 new Input('input-name', 'Input value', InputType::byValue(InputType::TEXT), '', true),
