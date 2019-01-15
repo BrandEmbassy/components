@@ -5,16 +5,12 @@ exports[`Carusel should render carusel 1`] = `
   data-cy="CARUSEL"
 >
   <div>
-    <div>
-      
-    </div>
+    <div />
   </div>
   <div>
     <div
       style="position:absolute;width:0;height:0;visibility:hidden;display:none"
-    >
-      
-    </div>
+    />
     <div
       style="overflow-x:hidden"
     >
@@ -33,9 +29,7 @@ exports[`Carusel should render carusel 1`] = `
                 <div>
                   <img
                     src="https://picsum.photos/300/150"
-                  >
-                    
-                  </img>
+                  />
                 </div>
               </div>
               <h1>
@@ -72,9 +66,7 @@ exports[`Carusel should render carusel 1`] = `
     </div>
   </div>
   <div>
-    <div>
-      
-    </div>
+    <div />
   </div>
 </div>
 `;
