@@ -39,9 +39,9 @@ final class Rgb2Hsl
             }
             $hue /= 6;
         }
-        $hue = floor($hue * 360);
-        $saturation = floor($saturation * 100);
-        $luminosity = floor($luminosity * 100);
+        $hue = (int)floor($hue * 360);
+        $saturation = (int)floor($saturation * 100);
+        $luminosity = (int)floor($luminosity * 100);
 
         return [$hue, $saturation, $luminosity];
     }

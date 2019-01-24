@@ -120,7 +120,7 @@ final class Table implements UiComponent
             ColumnDefinition $columnDefinition,
             TableIterator $iterator
         ): Cell {
-            return new Cell($cellData->getValue(), $columnDefinition->getAlign());
+            return new Cell($cellData->getValue(), $columnDefinition);
         };
     }
 
