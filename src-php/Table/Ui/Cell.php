@@ -4,6 +4,7 @@ namespace BrandEmbassy\Components\Table\Ui;
 
 use BrandEmbassy\Components\Align;
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\Styles;
 use BrandEmbassy\Components\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\UiComponent;
 
@@ -32,10 +33,15 @@ final class Cell implements UiComponent
 
     public function render(): string
     {
-        $align = $this->columnDefinition->getAlign();
-        $styles = $align ? $align->getStyles()->getHtmlAttribute() : '';
+        $width = $this->columnDefinition->getWidth();
+        $styles = new Styles($width !== '' ? ['width' => $width, 'max-width' => $width] : []);
 
-        return '<td' . $styles . '>' . ArrayRenderer::render($this->children) . '</td>';
+        $align = $this->columnDefinition->getAlign();
+        if ($align !== null) {
+            $styles = $styles->merge($align->getStyles());
+        }
+
+        return '<td' . $styles->getHtmlAttribute() . '>' . ArrayRenderer::render($this->children) . '</td>';
     }
 
 }

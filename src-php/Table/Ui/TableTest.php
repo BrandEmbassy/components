@@ -29,7 +29,7 @@ final class TableTest extends TestCase
         $columnDefinition = [
             new ColumnDefinition('name', 'Name'),
             new ColumnDefinition('surname', 'Surname'),
-            new ColumnDefinition('actions', 'Actions', Align::get(Align::RIGHT)),
+            new ColumnDefinition('actions', 'Actions', Align::get(Align::RIGHT), '50%'),
         ];
         $table = new Table(new TableDefinition($columnDefinition), $dataProvider);
         $table->setColumnsNotInDataSet(['actions']);
