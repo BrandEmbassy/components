@@ -31,9 +31,9 @@ final class Cell implements UiComponent
 
     public function render(): string
     {
-        $align = $this->align ? $this->align->getHtmlAttribute() : '';
+        $styles = $this->align ? $this->align->getStyles()->getHtmlAttribute() : '';
 
-        return '<td' . $align . '>' . ArrayRenderer::render($this->children) . '</td>';
+        return '<td' . $styles . '>' . ArrayRenderer::render($this->children) . '</td>';
     }
 
 }

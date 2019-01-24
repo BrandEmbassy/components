@@ -35,7 +35,7 @@ final class Input implements UiComponent
     private $isError;
 
     /**
-     * @var InputSize|null
+     * @var InputSize
      */
     private $inputSize;
 
@@ -52,7 +52,7 @@ final class Input implements UiComponent
         $this->type = (string)$type->getValue();
         $this->description = $description;
         $this->isError = $isError;
-        $this->inputSize = $inputSize !== null ? $inputSize : InputSize::byValue(InputSize::AUTOMATIC);
+        $this->inputSize = $inputSize ?? InputSize::byValue(InputSize::AUTOMATIC);
     }
 
     public function render(): string

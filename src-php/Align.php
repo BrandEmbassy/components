@@ -11,9 +11,9 @@ final class Align extends Enum
     public const CENTER = 'center';
     public const RIGHT = 'right';
 
-    public function getHtmlAttribute(): string
+    public function getStyles(): Styles
     {
-        return ' style="text-align: ' . $this->getValue() . ';"';
+        return new Styles(['text-align' => $this->getValue()]);
     }
 
 }

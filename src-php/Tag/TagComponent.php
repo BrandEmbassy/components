@@ -33,9 +33,9 @@ final class TagComponent implements UiComponent
     {
         $hashColor = str_replace('#', '', $hashColor);
         \assert(\strlen($hashColor) === 6);
-        $this->red = \hexdec(substr($hashColor, 0, 2));
-        $this->green = \hexdec(substr($hashColor, 2, 2));
-        $this->blue = \hexdec(substr($hashColor, 4, 2));
+        $this->red = (int)\hexdec(substr($hashColor, 0, 2));
+        $this->green = (int)\hexdec(substr($hashColor, 2, 2));
+        $this->blue = (int)\hexdec(substr($hashColor, 4, 2));
         $this->title = $title;
     }
 

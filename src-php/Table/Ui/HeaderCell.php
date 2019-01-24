@@ -31,9 +31,9 @@ final class HeaderCell implements UiComponent
 
     public function render(): string
     {
-        $align = $this->align ? $this->align->getHtmlAttribute() : '';
+        $styles = $this->align ? $this->align->getStyles()->getHtmlAttribute() : '';
 
-        return '<th' . $align . '>' . ArrayRenderer::render($this->children) . '</th>';
+        return '<th' . $styles . '>' . ArrayRenderer::render($this->children) . '</th>';
     }
 
 }
