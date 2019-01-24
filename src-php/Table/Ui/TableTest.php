@@ -42,7 +42,7 @@ final class TableTest extends TestCase
                     LinkColor::get(LinkColor::BLUE)
                 );
 
-                return new Cell($link, $columnDefinition->getAlign());
+                return new Cell($link, $columnDefinition);
             }
         );
 

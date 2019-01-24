@@ -4,6 +4,7 @@ namespace BrandEmbassy\Components\Table\Ui;
 
 use BrandEmbassy\Components\Align;
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\UiComponent;
 
 final class Cell implements UiComponent
@@ -15,23 +16,24 @@ final class Cell implements UiComponent
     private $children;
 
     /**
-     * @var Align|null
+     * @var ColumnDefinition
      */
-    private $align;
+    private $columnDefinition;
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param Align|null $align
+     * @param ColumnDefinition $columnDefinition
      */
-    public function __construct($children, ?Align $align = null)
+    public function __construct($children, ColumnDefinition $columnDefinition)
     {
         $this->children = \is_array($children) ? $children : [$children];
-        $this->align = $align;
+        $this->columnDefinition = $columnDefinition;
     }
 
     public function render(): string
     {
-        $styles = $this->align ? $this->align->getStyles()->getHtmlAttribute() : '';
+        $align = $this->columnDefinition->getAlign();
+        $styles = $align ? $align->getStyles()->getHtmlAttribute() : '';
 
         return '<td' . $styles . '>' . ArrayRenderer::render($this->children) . '</td>';
     }
