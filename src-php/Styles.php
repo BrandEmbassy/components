@@ -2,6 +2,8 @@
 
 namespace BrandEmbassy\Components;
 
+use Assert\Assertion;
+
 final class Styles
 {
 
@@ -12,6 +14,7 @@ final class Styles
 
     public function __construct(array $styles)
     {
+        Assertion::allString(array_keys($styles), 'Array must be associative, all keys must be strings.');
         $this->styles = $styles;
     }
 
