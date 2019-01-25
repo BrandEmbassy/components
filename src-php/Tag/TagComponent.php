@@ -4,6 +4,7 @@ namespace BrandEmbassy\Components\Tag;
 
 use BrandEmbassy\Components\Rgb2Hsl;
 use BrandEmbassy\Components\StringEscaper;
+use BrandEmbassy\Components\Styles;
 use BrandEmbassy\Components\UiComponent;
 
 final class TagComponent implements UiComponent
@@ -42,10 +43,15 @@ final class TagComponent implements UiComponent
     public function render(): string
     {
         [$hue, $saturation] = Rgb2Hsl::rgb2hsl($this->red, $this->green, $this->blue);
-        $color = \sprintf('color: hsl(%s, %s%%, %s%%);', $hue, $saturation, 31);
-        $background = \sprintf('background-color: hsl(%s, %s%%, %s%%);', $hue, $saturation, 92);
 
-        return '<div class="Tag__Tag" style="' . $background . $color . ';">'
+        $styles = new Styles(
+            [
+                'color' => \sprintf('hsl(%s, %s%%, %s%%)', $hue, $saturation, 31),
+                'background-color' => \sprintf('hsl(%s, %s%%, %s%%)', $hue, $saturation, 92),
+            ]
+        );
+
+        return '<div class="Tag__Tag"' . $styles->getHtmlAttribute() . '>'
             . StringEscaper::escapeHtml($this->title)
             . '</div>';
     }
