@@ -52,7 +52,7 @@ final class Table implements UiComponent
 
     public function render(): string
     {
-        $result = '<div class="Table__Table"><table>';
+        $result = '<div class="Table__Table Table__isStriped"><table>';
         $result .= $this->renderHead();
         $result .= $this->renderBody();
         $result .= '</table></div>';
