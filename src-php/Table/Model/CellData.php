@@ -2,6 +2,8 @@
 
 namespace BrandEmbassy\Components\Table\Model;
 
+use BrandEmbassy\Components\UiComponent;
+
 final class CellData
 {
 
@@ -11,11 +13,11 @@ final class CellData
     private $key;
 
     /**
-     * @var string
+     * @var UiComponent|string
      */
     private $value;
 
-    public function __construct(string $key, string $value)
+    public function __construct(string $key, $value)
     {
         $this->key = $key;
         $this->value = $value;
@@ -26,7 +28,10 @@ final class CellData
         return $this->key;
     }
 
-    public function getValue(): string
+    /**
+     * @return UiComponent|string
+     */
+    public function getValue()
     {
         return $this->value;
     }

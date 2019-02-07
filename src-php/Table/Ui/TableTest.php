@@ -11,6 +11,7 @@ use BrandEmbassy\Components\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\Table\Model\RowData;
 use BrandEmbassy\Components\Table\Model\TableDefinition;
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use BrandEmbassy\Components\Typography\Paragraph;
 use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
 
@@ -22,7 +23,13 @@ final class TableTest extends TestCase
     public function testRendering(): void
     {
         $rowsData = [
-            new RowData('1', ['name' => new CellData('name', 'John'), 'surname' => new CellData('surname', 'Smith')]),
+            new RowData(
+                '1',
+                [
+                    'name' => new CellData('name', new Paragraph('John')),
+                    'surname' => new CellData('surname', new Paragraph('Smith')),
+                ]
+            ),
             new RowData('2', ['name' => new CellData('name', 'Harry'), 'surname' => new CellData('surname', 'Potter')]),
         ];
         $dataProvider = new ArrayDataProvider($rowsData);
