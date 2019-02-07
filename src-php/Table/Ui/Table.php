@@ -33,7 +33,7 @@ final class Table implements UiComponent
     /**
      * @var string[]
      */
-    private $columnsNotInDataSet;
+    private $columnsNotInDataSet = [];
 
     public function __construct(TableDefinition $tableDefinition, DataProvider $dataProvider)
     {
