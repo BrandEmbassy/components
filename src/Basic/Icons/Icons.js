@@ -305,8 +305,10 @@ export default class Icons extends PureComponent {
               <div className='be-icon-character' />
               <div className='be-icon-clipboard-pencil' />
               <div className='be-icon-file-text-o' />
-              <div className='be-icon-file-text />
-              <div className='be-icon-pencil-square-o />
+              <div className='be-icon-file-text' />
+              <div className='be-icon-pencil-square-o' />
+
+              <div className='be-icon-baseline-send-24px' />
             </div>
           </div>
         </div>
