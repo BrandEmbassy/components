@@ -566,6 +566,9 @@
 :global(.be-icon-pencil-square-o:before) {
   content: "\e054";
 }
+:global(.be-icon-baseline-send-24px:before) {
+  content: "\e055";
+}
 
 
 [class^="be-icon"] {
