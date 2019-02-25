@@ -8,18 +8,19 @@ final class InputSize extends Enum
 {
 
     public const SMALL = 'small';
+    public const MIDDLE = 'middle';
     public const AUTOMATIC = 'automatic';
 
     private const WITHOUT_MAX_SIZE = null;
-    private const MAX_SIZE_FOR_SMALL_INPUT = 90;
+
+    private const MAX_SIZE = [
+        self::SMALL => 90,
+        self::MIDDLE => 150,
+    ];
 
     public function getMaxWidth(): ?int
     {
-        if ($this->is(InputSize::SMALL)) {
-            return self::MAX_SIZE_FOR_SMALL_INPUT;
-        }
-
-        return self::WITHOUT_MAX_SIZE;
+        return self::MAX_SIZE[$this->getValue()] ?? self::WITHOUT_MAX_SIZE;
     }
 
 }
