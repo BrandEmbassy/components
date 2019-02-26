@@ -24,7 +24,7 @@ final class SelectList implements UiComponent
     public function render(): string
     {
         return \sprintf(
-            '<div class="select-list-654d padding-10">%s</div>',
+            '<div class="select-list-654d">%s</div>',
             ArrayRenderer::render($this->children)
         );
     }
