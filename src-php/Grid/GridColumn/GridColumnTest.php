@@ -2,6 +2,7 @@
 
 namespace BrandEmbassy\Components\Grid\GridColumn;
 
+use BrandEmbassy\Components\Styles;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use PHPUnit\Framework\TestCase;
@@ -11,16 +12,40 @@ final class GridColumnTest extends TestCase
 
     use SnapshotAssertTrait;
 
-    public function testShouldRenderColumn(): void
+    /**
+     * @dataProvider columnsToRenderProvider
+     * @param string $expectedSnapshot
+     * @param GridColumn $columnToRender
+     */
+    public function testShouldRenderColumn(string $expectedSnapshot, GridColumn $columnToRender): void
     {
-        $snapshot = __DIR__ . '/__snapshots__/column.html';
-        $padding10 = UtilitiesOption::byValue(UtilitiesOption::PADDING_10);
-        $gridLg4 = GridColumnOption::byValue(GridColumnOption::LG_4);
-        $gridMd3 = GridColumnOption::byValue(GridColumnOption::MD_3);
+        $this->assertSnapshot($expectedSnapshot, $columnToRender);
+    }
 
-        $column = new GridColumn('Some text', [$gridLg4, $gridMd3], [$padding10]);
-
-        $this->assertSnapshot($snapshot, $column);
+    public function columnsToRenderProvider(): array
+    {
+        return [
+            [
+                __DIR__ . '/__snapshots__/column.html',
+                new GridColumn(
+                    'Some text',
+                   [
+                       GridColumnOption::byValue(GridColumnOption::LG_4),
+                       GridColumnOption::byValue(GridColumnOption::MD_3),
+                   ],
+                   [UtilitiesOption::byValue(UtilitiesOption::PADDING_10)]
+                ),
+            ],
+            [
+                __DIR__ . '/__snapshots__/columnWithStyles.html',
+                new GridColumn(
+                    'Some text',
+                    [],
+                    [UtilitiesOption::byValue(UtilitiesOption::PADDING_10)],
+                    new Styles(['display' => 'none'])
+                ),
+            ],
+        ];
     }
 
 }
