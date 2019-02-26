@@ -11,7 +11,10 @@ trait SnapshotAssertTrait
         \assert($snapshot !== false);
         $snapshot = \str_replace(['  ', "\n", "\r", "\t"], '', $snapshot);
 
-        $this->assertEquals($snapshot, $component->render());
+        $renderedComponent = $component->render();
+        $renderedComponent = \str_replace(['  ', "\n", "\r", "\t"], '', $renderedComponent);
+
+        $this->assertEquals($snapshot, $renderedComponent);
     }
 
 }
