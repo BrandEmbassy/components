@@ -5,7 +5,7 @@ namespace BrandEmbassy\Components\SelectList;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
 
-class SelectListItem implements UiComponent
+final class SelectListItem implements UiComponent
 {
 
     /**

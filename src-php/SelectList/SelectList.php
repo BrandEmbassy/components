@@ -5,10 +5,8 @@ namespace BrandEmbassy\Components\SelectList;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
 
-class SelectList implements UiComponent
+final class SelectList implements UiComponent
 {
-
-    private const CSS_CLASS = 'select-list-654d';
 
     /**
      * @var UiComponent[]|string[]
@@ -26,8 +24,7 @@ class SelectList implements UiComponent
     public function render(): string
     {
         return \sprintf(
-            '<div class="%s">%s</div>',
-            self::CSS_CLASS,
+            '<div class="select-list-654d padding-10">%s</div>',
             ArrayRenderer::render($this->children)
         );
     }
