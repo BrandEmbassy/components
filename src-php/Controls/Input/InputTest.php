@@ -59,6 +59,18 @@ final class InputTest extends TestCase
                     '<script>alert(\'Hello\');</script>'
                 ),
             ],
+            'textInputWithPlaceholder' => [
+                __DIR__ . '/__snapshots__/textInputWithPlaceholder.html',
+                new Input(
+                    'input-name',
+                    'Input value',
+                    InputType::byValue(InputType::TEXT),
+                    'Some description',
+                    false,
+                    null,
+                    'Foo bar'
+                ),
+            ],
         ];
     }
 
