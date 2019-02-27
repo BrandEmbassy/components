@@ -39,13 +39,19 @@ final class Input implements UiComponent
      */
     private $inputSize;
 
+    /**
+     * @var string
+     */
+    private $placeholder;
+
     public function __construct(
         string $name,
         string $value,
         InputType $type,
         $description = '',
         bool $isError = false,
-        ?InputSize $inputSize = null
+        ?InputSize $inputSize = null,
+        string $placeholder = ''
     ) {
         $this->name = $name;
         $this->value = $value;
@@ -53,6 +59,7 @@ final class Input implements UiComponent
         $this->description = $description;
         $this->isError = $isError;
         $this->inputSize = $inputSize ?? InputSize::byValue(InputSize::AUTOMATIC);
+        $this->placeholder = $placeholder;
     }
 
     public function render(): string
@@ -62,13 +69,18 @@ final class Input implements UiComponent
             ? '<div class="Input__Desc">' . ArrayRenderer::render([$this->description]) . '</div>'
             : '';
 
+        $placeholder = $this->placeholder !== '' ?
+            \sprintf('placeholder="%s" ', StringEscaper::escapeHtmlAttribute($this->placeholder))
+            : '';
+
         $maxWidth = $this->inputSize->getMaxWidth();
         $maxWidthArgument = $maxWidth !== null ? 'style="max-width: ' . $maxWidth . 'px;" ' : '';
 
         return '<div class="Input__Input' . $errorClass . '" data-reactroot="">'
             . '<div class="Input__Field">'
             . '<input type="' . $this->type . '" name="' . StringEscaper::escapeHtmlAttribute($this->name)
-            . '" value="' . StringEscaper::escapeHtmlAttribute($this->value) . '" ' . $maxWidthArgument . '/></div>'
+            . '" value="' . StringEscaper::escapeHtmlAttribute($this->value) . '" '
+            . $placeholder . $maxWidthArgument . '/></div>'
             . $description . '</div>';
     }
 
