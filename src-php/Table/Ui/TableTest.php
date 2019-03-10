@@ -22,8 +22,20 @@ final class TableTest extends TestCase
     public function testRendering(): void
     {
         $rowsData = [
-            new RowData('1', ['name' => new CellData('name', 'John'), 'surname' => new CellData('surname', 'Smith')]),
-            new RowData('2', ['name' => new CellData('name', 'Harry'), 'surname' => new CellData('surname', 'Potter')]),
+            new RowData(
+                '1', [
+                    'name' => new CellData('name', 'John'),
+                    'surname' => new CellData('surname', 'Smith'),
+                    'age' => new CellData('age', 40),
+                ]
+            ),
+            new RowData(
+                '2', [
+                    'name' => new CellData('name', 'Harry'),
+                    'surname' => new CellData('surname', 'Potter'),
+                    'age' => new CellData('age', 22),
+                ]
+            ),
         ];
         $dataProvider = new ArrayDataProvider($rowsData);
         $columnDefinition = [
@@ -47,6 +59,22 @@ final class TableTest extends TestCase
         );
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/table.html', $table);
+    }
+
+    public function testRaisesErrorOnInvalidDataForRendering(): void
+    {
+        $rowsData = [new RowData('1', ['datetime' => new CellData('datetime', new \DateTimeImmutable())])];
+        $dataProvider = new ArrayDataProvider($rowsData);
+        $columnDefinition = [new ColumnDefinition('datetime', 'Datetime')];
+        $table = new Table(new TableDefinition($columnDefinition), $dataProvider);
+
+        $this->expectException(\LogicException::class);
+        $this->expectExceptionMessage(
+            'Default cell render function can only render string/int values but "object" given. '
+            . 'If you want to render other types, register your own render function via: setCellRenderCallback() method'
+        );
+
+        $table->render();
     }
 
 }

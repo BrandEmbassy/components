@@ -11,11 +11,15 @@ final class CellData
     private $key;
 
     /**
-     * @var string
+     * @var mixed
      */
     private $value;
 
-    public function __construct(string $key, string $value)
+    /**
+     * @param string $key
+     * @param mixed $value
+     */
+    public function __construct(string $key, $value)
     {
         $this->key = $key;
         $this->value = $value;
@@ -26,7 +30,10 @@ final class CellData
         return $this->key;
     }
 
-    public function getValue(): string
+    /**
+     * @return mixed
+     */
+    public function getValue()
     {
         return $this->value;
     }

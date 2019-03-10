@@ -120,7 +120,18 @@ final class Table implements UiComponent
             ColumnDefinition $columnDefinition,
             TableIterator $iterator
         ): Cell {
-            return new Cell($cellData->getValue(), $columnDefinition);
+            $value = $cellData->getValue();
+            if (!\is_string($value) && !\is_int($value)) {
+                $errorMessage = \sprintf(
+                    'Default cell render function can only render string/int values but "%s" given. '
+                    . 'If you want to render other types, register your own render function via: '
+                    . 'setCellRenderCallback() method',
+                    \gettype($value)
+                );
+                throw new LogicException($errorMessage);
+            }
+
+            return new Cell($value, $columnDefinition);
         };
     }
 
