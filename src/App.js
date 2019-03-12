@@ -28,9 +28,12 @@ import Submit from './package/components/Submit'
 import Table from './package/components/Table'
 import Tag from './package/components/Tag'
 import Textarea from './package/components/Textarea'
+import Markdown from './package/components/ChatBot/Plugin/Markdown'
 
 export default class App extends Component {
   render () {
+    const input = '# This is a H1  \n## This is a H2  \n###### This is a H6'
+
     return (
       <div className={styles.App} >
         <Global />
@@ -44,6 +47,9 @@ export default class App extends Component {
           <div className='row around-xs padding-20'>
             <div className='col-xs-6 background padding-20'>
               <div className='row padding-15'>
+                <div className='col-xs-12 padding-10'>
+                  <Markdown text={input} />
+                </div>
                 <div className='col-xs-12 padding-10'>
                   <Switcher />
                   <Switcher isActive />
