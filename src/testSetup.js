@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import jsdom from 'jsdom'
+import { JSDOM } from 'jsdom'
 // Polyfills
 import '../config/polyfills'
 import { configure, shallow, mount, render } from 'enzyme'
@@ -11,8 +11,9 @@ configure({ adapter: new Adapter() })
 
 /// /////
 // JSDOM
-const doc = jsdom.jsdom('<html><head></head><body><script></script></body></html>')
-const win = doc.defaultView
+const dom = new JSDOM('<html><head></head><body></body></html>')
+const win = dom.window
+const doc = dom.window.document
 
 // Set our data
 win.process = { env: process.env }

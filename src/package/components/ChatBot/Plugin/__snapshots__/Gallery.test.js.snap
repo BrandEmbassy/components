@@ -7,18 +7,14 @@ exports[`Gallery should render gallery 1`] = `
   <div>
     <div
       style="position:absolute;width:0;height:0;visibility:hidden;display:none"
-    >
-      
-    </div>
+    />
     <div>
       <div>
         <div>
           <div>
             <img
               src="https://picsum.photos/300/150"
-            >
-              
-            </img>
+            />
           </div>
         </div>
         <h1>
@@ -56,9 +52,7 @@ exports[`Gallery should render gallery 1`] = `
           <div>
             <img
               src="https://picsum.photos/300/150"
-            >
-              
-            </img>
+            />
           </div>
         </div>
         <h1>
@@ -96,9 +90,7 @@ exports[`Gallery should render gallery 1`] = `
           <div>
             <img
               src="https://picsum.photos/300/150"
-            >
-              
-            </img>
+            />
           </div>
         </div>
         <h1>
