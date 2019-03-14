@@ -21,39 +21,41 @@ export type IElement = ButtonElementProps & HeadingElementProps &
 
 export default function Element (props: IElement) {
   const {type, level} = props
-  const headingType = [
-    ElementType.HEADING,
-    ElementType.TITLE,
-    ElementType.SUBTITLE
-  ]
 
-  if (type === ElementType.BUTTON) {
-    return <Button {...props} label={props.text} />
-  }
-  if (headingType.indexOf(type) > -1) {
-    const level = type === ElementType.SUBTITLE ? SUBTITLE_HEADING_LEVEL : TITLE_HEADING_LEVEL
-    return <Heading content={props.text} level={level} />
-  }
-  if (type === ElementType.TEXT) {
-    return <Text content={props.text} showAsMessage={props.showTextAsMessage} />
-  }
-  if (type === ElementType.MARKDOWN) {
-    return <Markdown text={props.text} />
+  let component = null
+
+  switch (type) {
+    case ElementType.BUTTON:
+      component = <Button {...props} label={props.text} />
+      break
+    case ElementType.TEXT:
+      component = <Text content={props.text} showAsMessage={props.showTextAsMessage} />
+      break
+    case ElementType.MARKDOWN:
+      component = <Markdown text={props.text} />
+      break
+    case ElementType.IMAGE:
+      component = <Image src={props.url} />
+      break
+    case ElementType.QUICK_REPLIES:
+      component = <QuickReplies {...props} />
+      break
+    case ElementType.FILE:
+      component = <File {...props} />
+      break
+    case ElementType.HEADING:
+    case ElementType.TITLE:
+    case ElementType.SUBTITLE:
+      const level = type === ElementType.SUBTITLE ? SUBTITLE_HEADING_LEVEL : TITLE_HEADING_LEVEL
+      component = <Heading content={props.text} level={level} />
+      break
+    default:
+      component = null
   }
 
-  // IMAGE will not be supported from next release onward but we keep it here for backward compatibility.
-  if (type === ElementType.IMAGE) {
-    return <Image src={props.url} />
-  }
-  if (type === ElementType.QUICK_REPLIES) {
-    return <QuickReplies {...props} />
-  }
-  if (type === ElementType.FILE) {
-    return <File {...props} />
-  }
   if (Array.isArray(props.elements)) {
     const showTextAsMessage = (type === ElementType.TEXT_AND_BUTTONS)
     return <ComposedElement {...props} showTextAsMessage={showTextAsMessage} level={level + 1} />
   }
-  return null
+  return component
 }
