@@ -2549,7 +2549,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
           standalone={true}
           type="QUICK_REPLIES"
         >
-          <QuickReplies
+          <ComposedElement
             elements={
               Array [
                 Object {
@@ -2589,46 +2589,180 @@ exports[`Plugin index should render standalone plugin 1`] = `
             }
             hideButtons={false}
             id="Ek4tPy1h4"
-            level={1}
+            level={2}
             onClick={[MockFunction]}
+            showTextAsMessage={false}
             standalone={true}
             type="QUICK_REPLIES"
           >
             <div>
-              <div>
-                <Bubble
-                  text="Lorem Impsum..."
+              <Element
+                hideButtons={false}
+                id="Uk4tPy1h2"
+                key="Uk4tPy1h2"
+                level={2}
+                onClick={[MockFunction]}
+                showTextAsMessage={false}
+                standalone={false}
+                type="IMAGE"
+                url="https://picsum.photos/300/150"
+              >
+                <Image
+                  src="https://picsum.photos/300/150"
                 >
                   <div>
-                    Lorem Impsum...
+                    <div>
+                      <img
+                        src="https://picsum.photos/300/150"
+                      />
+                    </div>
                   </div>
-                </Bubble>
-              </div>
-              <div>
-                <button
-                  key="Nkm0hRAiE"
-                  onClick={[Function]}
-                  title="Click me!"
+                </Image>
+              </Element>
+              <Element
+                hideButtons={false}
+                id="Ck4tPy1h3"
+                key="Ck4tPy1h3"
+                level={2}
+                onClick={[MockFunction]}
+                showTextAsMessage={false}
+                standalone={false}
+                text="Hello!"
+                type="TITLE"
+              >
+                <Heading
+                  content="Hello!"
+                  level={1}
                 >
-                  Click me!
-                </button>
-                <button
-                  key="NkGJ6CAiN"
-                  onClick={[Function]}
-                  title="No click me!"
+                  <h1>
+                    Hello!
+                  </h1>
+                </Heading>
+              </Element>
+              <Element
+                hideButtons={false}
+                id="Ek4tPy1h1"
+                key="Ek4tPy1h1"
+                level={2}
+                onClick={[MockFunction]}
+                showTextAsMessage={false}
+                standalone={false}
+                text="Lorem Impsum..."
+                type="TEXT"
+              >
+                <Text
+                  content="Lorem Impsum..."
+                  showAsMessage={false}
                 >
-                  No click me!
-                </button>
-                <button
-                  key="EyCyTRCi4"
-                  onClick={[Function]}
-                  title="Aww don\`t click on me"
+                  <p>
+                    Lorem Impsum...
+                  </p>
+                </Text>
+              </Element>
+              <Element
+                hideButtons={false}
+                id="Nkm0hRAiE"
+                key="Nkm0hRAiE"
+                level={2}
+                onClick={[MockFunction]}
+                postback="click-on-button-1"
+                showTextAsMessage={false}
+                standalone={false}
+                text="Click me!"
+                type="BUTTON"
+              >
+                <Button
+                  hideButtons={false}
+                  id="Nkm0hRAiE"
+                  label="Click me!"
+                  level={2}
+                  onClick={[MockFunction]}
+                  postback="click-on-button-1"
+                  showTextAsMessage={false}
+                  standalone={false}
+                  text="Click me!"
+                  type="BUTTON"
                 >
-                  Aww don\`t click on me
-                </button>
-              </div>
+                  <div>
+                    <button
+                      onClick={[Function]}
+                      title="Click me!"
+                    >
+                      Click me!
+                    </button>
+                  </div>
+                </Button>
+              </Element>
+              <Element
+                hideButtons={false}
+                id="NkGJ6CAiN"
+                key="NkGJ6CAiN"
+                level={2}
+                onClick={[MockFunction]}
+                postback="click-on-button-2"
+                showTextAsMessage={false}
+                standalone={false}
+                text="No click me!"
+                type="BUTTON"
+              >
+                <Button
+                  hideButtons={false}
+                  id="NkGJ6CAiN"
+                  label="No click me!"
+                  level={2}
+                  onClick={[MockFunction]}
+                  postback="click-on-button-2"
+                  showTextAsMessage={false}
+                  standalone={false}
+                  text="No click me!"
+                  type="BUTTON"
+                >
+                  <div>
+                    <button
+                      onClick={[Function]}
+                      title="No click me!"
+                    >
+                      No click me!
+                    </button>
+                  </div>
+                </Button>
+              </Element>
+              <Element
+                hideButtons={false}
+                id="EyCyTRCi4"
+                key="EyCyTRCi4"
+                level={2}
+                onClick={[MockFunction]}
+                postback="click-on-button-3"
+                showTextAsMessage={false}
+                standalone={false}
+                text="Aww don\`t click on me"
+                type="BUTTON"
+              >
+                <Button
+                  hideButtons={false}
+                  id="EyCyTRCi4"
+                  label="Aww don\`t click on me"
+                  level={2}
+                  onClick={[MockFunction]}
+                  postback="click-on-button-3"
+                  showTextAsMessage={false}
+                  standalone={false}
+                  text="Aww don\`t click on me"
+                  type="BUTTON"
+                >
+                  <div>
+                    <button
+                      onClick={[Function]}
+                      title="Aww don\`t click on me"
+                    >
+                      Aww don\`t click on me
+                    </button>
+                  </div>
+                </Button>
+              </Element>
             </div>
-          </QuickReplies>
+          </ComposedElement>
         </Element>
       </div>
     </ComposedElement>
