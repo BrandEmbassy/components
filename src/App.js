@@ -28,7 +28,7 @@ import Submit from './package/components/Submit'
 import Table from './package/components/Table'
 import Tag from './package/components/Tag'
 import Textarea from './package/components/Textarea'
-import Markdown from './package/components/ChatBot/Plugin/Markdown'
+import Markdown from './package/components/ChatBot/Plugin/Element/Markdown'
 
 export default class App extends Component {
   render () {

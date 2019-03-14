@@ -12,6 +12,7 @@ import ElementType from './ElementType'
 import type ButtonElementProps from './Button'
 import type QuickRepliesProps from './QuickReplies'
 import type FileElementsProps from './File'
+import Markdown from './Markdown'
 
 // @todo use Disjoint Unions from flow-typed
 export type IElement = ButtonElementProps & HeadingElementProps &
@@ -35,6 +36,9 @@ export default function Element (props: IElement) {
   }
   if (type === ElementType.TEXT) {
     return <Text content={props.text} showAsMessage={props.showTextAsMessage} />
+  }
+  if (type === ElementType.MARKDOWN) {
+    return <Markdown text={props.text} />
   }
 
   // IMAGE will not be supported from next release onward but we keep it here for backward compatibility.
