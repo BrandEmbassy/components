@@ -6,16 +6,17 @@ use Psr\Http\Message\UriInterface;
 
 final class UriRenderer
 {
-
     public static function uriToHrefFragment(?UriInterface $url): string
     {
         return $url !== null ? (' href="' . self::urlToString($url) . '"') : '';
     }
 
+
     public static function uriToSrcFragment(?UriInterface $url): string
     {
         return $url !== null ? (' src="' . self::urlToString($url) . '"') : '';
     }
+
 
     private static function urlToString(UriInterface $url): string
     {
@@ -47,5 +48,4 @@ final class UriRenderer
 
         return $uri;
     }
-
 }

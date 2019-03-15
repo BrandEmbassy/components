@@ -8,12 +8,12 @@ use PHPUnit\Framework\TestCase;
 
 class ParagraphTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider paragraphData
-     * @param string $snapshot
+     * @param string    $snapshot
      * @param Paragraph $p
      */
     public function testShouldRenderParagraph(string $snapshot, Paragraph $p): void
@@ -21,6 +21,10 @@ class ParagraphTest extends TestCase
         $this->assertSnapshot($snapshot, $p);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function paragraphData(): array
     {
         $padding10 = UtilitiesOption::byValue(UtilitiesOption::PADDING_10);
@@ -30,11 +34,10 @@ class ParagraphTest extends TestCase
                 __DIR__ . '/__snapshots__/pMoreLines.html',
                 new Paragraph(['Some text', 'Another line'], [$padding10], Paragraph::NEW_LINE),
             ],
-            'One line' => [
+            'One line'   => [
                 __DIR__ . '/__snapshots__/pOneLine.html',
                 new Paragraph('Some text', [$padding10]),
             ],
         ];
     }
-
 }

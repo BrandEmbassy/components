@@ -7,11 +7,11 @@ use BrandEmbassy\Components\UiComponent;
 
 final class LinkList implements UiComponent
 {
-
     /**
      * @var array|Link[]
      */
     private $links;
+
 
     /**
      * @param Link[] $links
@@ -20,6 +20,7 @@ final class LinkList implements UiComponent
     {
         $this->links = $links;
     }
+
 
     public function render(): string
     {

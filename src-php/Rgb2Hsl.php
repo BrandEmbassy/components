@@ -2,9 +2,12 @@
 
 namespace BrandEmbassy\Components;
 
+use function floor;
+use function max;
+use function min;
+
 final class Rgb2Hsl
 {
-
     /**
      * @param int $red
      * @param int $green

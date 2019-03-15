@@ -2,19 +2,25 @@
 
 namespace BrandEmbassy\Components\Table\Ui;
 
-use BrandEmbassy\Components\Table\Model\InconsistentDataException;
-use BrandEmbassy\Components\Table\Model\TableIterator;
-use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Table\Model\CellData;
 use BrandEmbassy\Components\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\Table\Model\DataProvider;
+use BrandEmbassy\Components\Table\Model\InconsistentDataException;
 use BrandEmbassy\Components\Table\Model\RowData;
 use BrandEmbassy\Components\Table\Model\TableDefinition;
+use BrandEmbassy\Components\Table\Model\TableIterator;
+use BrandEmbassy\Components\UiComponent;
 use LogicException;
+use function array_map;
+use function assert;
+use function gettype;
+use function in_array;
+use function is_int;
+use function is_string;
+use function sprintf;
 
 final class Table implements UiComponent
 {
-
     /**
      * @var TableDefinition
      */
@@ -27,6 +33,7 @@ final class Table implements UiComponent
 
     /**
      * @var (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell)[]
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification
      */
     private $cellRenderCallbacks;
 
@@ -35,20 +42,23 @@ final class Table implements UiComponent
      */
     private $columnsNotInDataSet = [];
 
+
     public function __construct(TableDefinition $tableDefinition, DataProvider $dataProvider)
     {
         $this->tableDefinition = $tableDefinition;
         $this->dataProvider = $dataProvider;
     }
 
+
     /**
-     * @param string $column
+     * @param string            $column
      * @param callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell $function
      */
     public function setCellRenderCallback(string $column, callable $function): void
     {
         $this->cellRenderCallbacks[$column] = $function;
     }
+
 
     public function render(): string
     {
@@ -59,6 +69,7 @@ final class Table implements UiComponent
 
         return $result;
     }
+
 
     private function renderHead(): string
     {
@@ -72,12 +83,13 @@ final class Table implements UiComponent
         return '<thead>' . (new HeaderRow($headerCells))->render() . '</thead>';
     }
 
+
     private function renderBody(): string
     {
         $result = '<tbody>';
         $iterator = $this->dataProvider->getIterator();
         foreach ($iterator as $rowData) {
-            \assert($rowData instanceof RowData);
+            assert($rowData instanceof RowData);
             $cellsData = $rowData->getCellsData();
 
             /** @var Cell[] $cells */
@@ -86,16 +98,13 @@ final class Table implements UiComponent
                 $columnKey = $columnDefinition->getKey();
                 $renderFunction = $this->getCellRenderFunction($columnDefinition->getKey());
 
-                if (\in_array($columnKey, $this->columnsNotInDataSet, true)) {
+                if (in_array($columnKey, $this->columnsNotInDataSet, true)) {
                     $cells[] = $renderFunction(new CellData($columnKey, ''), $rowData, $columnDefinition, $iterator);
-
                 } elseif (isset($cellsData[$columnKey])) {
                     $cells[] = $renderFunction($cellsData[$columnKey], $rowData, $columnDefinition, $iterator);
-
                 } else {
                     throw InconsistentDataException::byCoordinates($columnKey, $rowData->getRowIdentifier());
                 }
-
             }
             $result .= (new Row($cells))->render();
         }
@@ -103,6 +112,7 @@ final class Table implements UiComponent
 
         return $result;
     }
+
 
     /**
      * @param string $key
@@ -121,19 +131,25 @@ final class Table implements UiComponent
             TableIterator $iterator
         ): Cell {
             $value = $cellData->getValue();
-            if (!\is_string($value) && !\is_int($value)) {
-                $errorMessage = \sprintf(
+            if (is_int($value)) {
+                $value = (string)$value;
+            }
+
+            if (!is_string($value)) {
+                $errorMessage = sprintf(
                     'Default cell render function can only render string/int values but "%s" given. '
                     . 'If you want to render other types, register your own render function via: '
                     . 'setCellRenderCallback() method',
-                    \gettype($value)
+                    gettype($value)
                 );
+
                 throw new LogicException($errorMessage);
             }
 
             return new Cell($value, $columnDefinition);
         };
     }
+
 
     /**
      * @param string[] $columnsNotInDataSet

@@ -3,20 +3,27 @@
 namespace BrandEmbassy\Components;
 
 use Assert\Assertion;
+use function array_keys;
+use function array_merge;
+use function implode;
 
 final class Styles
 {
-
     /**
      * @var array<string, string>
      */
     private $styles;
 
+
+    /**
+     * @param array<string, string> $styles
+     */
     public function __construct(array $styles)
     {
         Assertion::allString(array_keys($styles), 'Array must be associative, all keys must be strings.');
         $this->styles = $styles;
     }
+
 
     public function with(string $key, string $value): self
     {
@@ -26,10 +33,12 @@ final class Styles
         return new self($styles);
     }
 
+
     public function merge(Styles $other): self
     {
-        return new Styles(\array_merge($this->styles, $other->styles));
+        return new Styles(array_merge($this->styles, $other->styles));
     }
+
 
     public function getHtmlAttribute(): string
     {
@@ -42,7 +51,6 @@ final class Styles
             $styles[] = $key . ': ' . $value . ';';
         }
 
-        return ' style="' . \implode(' ', $styles) . '"';
+        return ' style="' . implode(' ', $styles) . '"';
     }
-
 }

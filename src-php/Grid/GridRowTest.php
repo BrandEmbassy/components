@@ -2,14 +2,14 @@
 
 namespace BrandEmbassy\Components\Grid;
 
-use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use PHPUnit\Framework\TestCase;
 
 final class GridRowTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     public function testShouldRenderRow(): void
     {
@@ -20,5 +20,4 @@ final class GridRowTest extends TestCase
 
         $this->assertSnapshot($snapshot, $row);
     }
-
 }

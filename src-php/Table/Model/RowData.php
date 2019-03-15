@@ -6,7 +6,6 @@ use Assert\Assertion;
 
 final class RowData
 {
-
     /**
      * @var CellData[]
      */
@@ -17,8 +16,9 @@ final class RowData
      */
     private $rowIdentifier;
 
+
     /**
-     * @param string $rowIdentifier
+     * @param string     $rowIdentifier
      * @param CellData[] $cellsData
      */
     public function __construct(string $rowIdentifier, array $cellsData)
@@ -28,6 +28,7 @@ final class RowData
         $this->cellsData = $cellsData;
     }
 
+
     /**
      * @return CellData[]
      */
@@ -36,9 +37,9 @@ final class RowData
         return $this->cellsData;
     }
 
+
     public function getRowIdentifier(): string
     {
         return $this->rowIdentifier;
     }
-
 }

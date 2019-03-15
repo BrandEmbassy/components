@@ -8,11 +8,11 @@ use BrandEmbassy\Components\UiComponent;
 
 final class Layout implements UiComponent
 {
-
     /**
      * @var SubLayout[]
      */
     private $subLayouts;
+
 
     /**
      * @param SubLayout[] $subLayouts
@@ -23,9 +23,9 @@ final class Layout implements UiComponent
         $this->subLayouts = $subLayouts;
     }
 
+
     public function render(): string
     {
         return '<div class="App__App">' . ArrayRenderer::render($this->subLayouts) . '</div>';
     }
-
 }

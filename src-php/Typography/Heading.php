@@ -6,10 +6,10 @@ use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\EnumValuesToString;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
+use function is_array;
 
 class Heading implements UiComponent
 {
-
     /**
      * @var UiComponent[]|string[]
      */
@@ -25,17 +25,19 @@ class Heading implements UiComponent
      */
     private $level;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param UtilitiesOption[] $utilityOptions
-     * @param HeadingLevel $level
+     * @param UtilitiesOption[]                         $utilityOptions
+     * @param HeadingLevel                              $level
      */
     public function __construct($children, array $utilityOptions, HeadingLevel $level)
     {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
-        $this->level = (string)$level->getValue();
+        $this->level = $level->getValue();
     }
+
 
     public function render(): string
     {
@@ -43,5 +45,4 @@ class Heading implements UiComponent
             . ArrayRenderer::render($this->children)
             . '</h' . $this->level . '>';
     }
-
 }

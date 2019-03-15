@@ -10,10 +10,10 @@ use BrandEmbassy\Components\Typography\Heading;
 use BrandEmbassy\Components\Typography\HeadingLevel;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
+use function is_array;
 
 final class NonIdealState implements UiComponent
 {
-
     /**
      * @var UiComponent[]|string[]
      */
@@ -24,15 +24,17 @@ final class NonIdealState implements UiComponent
      */
     private $heading;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param string $heading
+     * @param string                                    $heading
      */
     public function __construct($children, string $heading)
     {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->heading = $heading;
     }
+
 
     public function render(): string
     {

@@ -8,10 +8,10 @@ use BrandEmbassy\Components\Icon\Icon;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\UiComponent;
 use Psr\Http\Message\UriInterface;
+use function is_array;
 
 final class Link implements UiComponent
 {
-
     /**
      * @var IconType|null
      */
@@ -42,13 +42,14 @@ final class Link implements UiComponent
      */
     private $target;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param UriInterface|null $uri
-     * @param LinkColor|null $color
-     * @param IconType|null $icon
-     * @param null|string $onclick
-     * @param LinkTarget|null $target
+     * @param UriInterface|null                         $uri
+     * @param LinkColor|null                            $color
+     * @param IconType|null                             $icon
+     * @param string|null                               $onclick
+     * @param LinkTarget|null                           $target
      */
     public function __construct(
         $children,
@@ -61,10 +62,11 @@ final class Link implements UiComponent
         $this->icon = $icon;
         $this->color = $color;
         $this->uri = $uri;
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->onclick = $onclick;
         $this->target = $target ?: LinkTarget::get(LinkTarget::CURRENT_CONTEXT);
     }
+
 
     public function render(): string
     {
@@ -82,5 +84,4 @@ final class Link implements UiComponent
             . ArrayRenderer::render($this->children)
             . '</span></a>';
     }
-
 }

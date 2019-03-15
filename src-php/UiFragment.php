@@ -4,11 +4,11 @@ namespace BrandEmbassy\Components;
 
 final class UiFragment implements UiComponent
 {
-
     /**
      * @var array|UiComponent[]
      */
     private $components;
+
 
     /**
      * @param UiComponent[] $components
@@ -18,9 +18,9 @@ final class UiFragment implements UiComponent
         $this->components = $components;
     }
 
+
     public function render(): string
     {
         return ArrayRenderer::render($this->components);
     }
-
 }

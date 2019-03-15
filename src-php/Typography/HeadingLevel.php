@@ -4,12 +4,13 @@ namespace BrandEmbassy\Components\Typography;
 
 use MabeEnum\Enum;
 
+/**
+ * @method string getValue()
+ */
 final class HeadingLevel extends Enum
 {
-
     public const H1 = '1';
     public const H2 = '2';
     public const H3 = '3';
     public const H4 = '4';
-
 }

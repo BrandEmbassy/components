@@ -2,19 +2,16 @@
 
 namespace BrandEmbassy\Components\Controls\Button;
 
-use function Assert\thatAll;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\Color;
-use BrandEmbassy\Components\Controls\UriRenderer;
 use BrandEmbassy\Components\Icon\Icon;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\Size;
 use BrandEmbassy\Components\UiComponent;
-use Psr\Http\Message\UriInterface;
+use function is_array;
 
 final class Button implements UiComponent
 {
-
     /**
      * @var Color
      */
@@ -35,11 +32,12 @@ final class Button implements UiComponent
      */
     private $size;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param Color|null $color
-     * @param IconType|null $icon
-     * @param Size|null $size
+     * @param Color|null                                $color
+     * @param IconType|null                             $icon
+     * @param Size|null                                 $size
      */
     public function __construct(
         $children,
@@ -47,11 +45,12 @@ final class Button implements UiComponent
         ?IconType $icon = null,
         ?Size $size = null
     ) {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->icon = $icon;
         $this->color = $color ?? Color::get(Color::POSITIVE);
         $this->size = $size ?? Size::get(Size::DEFAULT);
     }
+
 
     public function render(): string
     {

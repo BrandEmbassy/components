@@ -7,8 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 class UiFragmentTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     public function testShouldRenderRow(): void
     {
@@ -18,5 +18,4 @@ class UiFragmentTest extends TestCase
 
         $this->assertSnapshot($snapshot, $row);
     }
-
 }

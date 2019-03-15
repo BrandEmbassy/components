@@ -4,7 +4,5 @@ namespace BrandEmbassy\Components;
 
 interface UiComponent
 {
-
     public function render(): string;
-
 }

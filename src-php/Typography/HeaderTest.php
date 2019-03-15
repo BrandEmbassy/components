@@ -8,12 +8,12 @@ use PHPUnit\Framework\TestCase;
 
 final class HeaderTest extends TestCase
 {
-
     use SnapshotAssertTrait;
 
+
     /**
-     * @dataProvider HeaderDataProvider
-     * @param string $snapshot
+     * @dataProvider headerDataProvider
+     * @param string  $snapshot
      * @param Heading $header
      */
     public function testShouldRenderHeader(string $snapshot, Heading $header): void
@@ -21,7 +21,11 @@ final class HeaderTest extends TestCase
         $this->assertSnapshot($snapshot, $header);
     }
 
-    public function HeaderDataProvider(): array
+
+    /**
+     * @return mixed[]
+     */
+    public function headerDataProvider(): array
     {
         $padding10 = UtilitiesOption::byValue(UtilitiesOption::PADDING_10);
         $h1 = HeadingLevel::byValue(HeadingLevel::H1);
@@ -38,5 +42,4 @@ final class HeaderTest extends TestCase
             ],
         ];
     }
-
 }

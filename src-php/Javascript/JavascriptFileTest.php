@@ -7,8 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 final class JavascriptFileTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     public function testJavascriptFileIsRendered(): void
     {
@@ -17,5 +17,4 @@ final class JavascriptFileTest extends TestCase
 
         $this->assertSnapshot($snapshot, new JavascriptFile($filePath));
     }
-
 }

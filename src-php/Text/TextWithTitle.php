@@ -4,10 +4,10 @@ namespace BrandEmbassy\Components\Text;
 
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
+use function is_array;
 
 final class TextWithTitle implements UiComponent
 {
-
     /**
      * @var UiComponent[]|string[]
      */
@@ -18,19 +18,20 @@ final class TextWithTitle implements UiComponent
      */
     private $title;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param string $title
+     * @param string                                    $title
      */
     public function __construct($children, string $title)
     {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->title = $title;
     }
+
 
     public function render(): string
     {
         return '<span title="' . $this->title . '">' . ArrayRenderer::render($this->children) . '</span>';
     }
-
 }

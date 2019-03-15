@@ -7,12 +7,12 @@ use PHPUnit\Framework\TestCase;
 
 final class SelectboxTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider getButtonsData
-     * @param string $snapshot
+     * @param string    $snapshot
      * @param Selectbox $selectbox
      */
     public function testShouldRenderSelectbox(string $snapshot, Selectbox $selectbox): void
@@ -20,6 +20,10 @@ final class SelectboxTest extends TestCase
         $this->assertSnapshot($snapshot, $selectbox);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function getButtonsData(): array
     {
         $selectboxOptions = [
@@ -28,7 +32,7 @@ final class SelectboxTest extends TestCase
         ];
 
         return [
-            'selectboxNormal' => [
+            'selectboxNormal'                  => [
                 __DIR__ . '/__snapshots__/selectboxNormal.html',
                 new Selectbox(
                     $selectboxOptions,
@@ -37,7 +41,7 @@ final class SelectboxTest extends TestCase
                     'Some <strong>description</strong>'
                 ),
             ],
-            'selectboxWithErrorOnly' => [
+            'selectboxWithErrorOnly'           => [
                 __DIR__ . '/__snapshots__/selectboxWithErrorOnly.html',
                 new Selectbox(
                     $selectboxOptions,
@@ -57,11 +61,10 @@ final class SelectboxTest extends TestCase
                     true
                 ),
             ],
-            'selectboxWide' => [
+            'selectboxWide'                    => [
                 __DIR__ . '/__snapshots__/selectboxWide.html',
                 new Selectbox($selectboxOptions, 'selectbox-name', SelectboxType::byValue(SelectboxType::WIDE)),
             ],
         ];
     }
-
 }

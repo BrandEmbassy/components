@@ -5,10 +5,10 @@ namespace BrandEmbassy\Components\Navigation\Breadcrumbs;
 use Assert\Assertion;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
+use function is_array;
 
 final class Breadcrumbs implements UiComponent
 {
-
     /**
      * @var Step[]
      */
@@ -19,16 +19,18 @@ final class Breadcrumbs implements UiComponent
      */
     private $children;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param Step[] $steps
+     * @param Step[]                                    $steps
      */
     public function __construct($children, array $steps)
     {
         Assertion::allIsInstanceOf($steps, Step::class);
         $this->steps = $steps;
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
     }
+
 
     public function render(): string
     {

@@ -3,13 +3,10 @@
 namespace BrandEmbassy\Components\Icon;
 
 use BrandEmbassy\Components\Color;
-use BrandEmbassy\Components\ColorHex;
 use BrandEmbassy\Components\UiComponent;
-use BrandEmbassy\Components\Utilities\UtilitiesOption;
 
 final class Icon implements UiComponent
 {
-
     private const DEFAULT_PIXEL_SIZE = 14;
 
     /**
@@ -32,6 +29,7 @@ final class Icon implements UiComponent
      */
     private $paddingRight;
 
+
     public function __construct(
         IconType $iconType,
         ?Color $color = null,
@@ -43,6 +41,7 @@ final class Icon implements UiComponent
         $this->fontSizePixels = $fontSizePixels;
         $this->paddingRight = $paddingRight;
     }
+
 
     public function render(): string
     {

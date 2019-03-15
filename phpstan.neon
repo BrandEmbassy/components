@@ -1,0 +1,5 @@
+includes:
+    - vendor/brandembassy/coding-standard/default-phpstan.neon
+parameters:
+    ignoreErrors:
+        - '~Parameter #1 $styles of class BrandEmbassy\Components\Styles constructor expects array<string, string>, array<int|string,int|string> given.~'

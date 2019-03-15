@@ -7,23 +7,27 @@ use PHPUnit\Framework\TestCase;
 
 final class RadioTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider radioDataProvider
      * @param string $snapshot
-     * @param Radio $radio
+     * @param Radio  $radio
      */
     public function testButtonRendering(string $snapshot, Radio $radio): void
     {
         $this->assertSnapshot($snapshot, $radio);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function radioDataProvider(): array
     {
         return [
-            'radioChecked' => [
+            'radioChecked'    => [
                 __DIR__ . '/__snapshots__/radioChecked.html',
                 new Radio('Foo label', 'fooId', 'fooName', 'fooValue', Radio::CHECKED),
             ],
@@ -33,5 +37,4 @@ final class RadioTest extends TestCase
             ],
         ];
     }
-
 }

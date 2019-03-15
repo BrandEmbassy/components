@@ -10,8 +10,8 @@ use PHPUnit\Framework\TestCase;
 
 final class ButtonTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider getButtonsData
@@ -23,15 +23,18 @@ final class ButtonTest extends TestCase
         $this->assertSnapshot($snapshot, $button);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function getButtonsData(): array
     {
-
         return [
-            'buttonNoIcon' => [
+            'buttonNoIcon'               => [
                 __DIR__ . '/__snapshots__/buttonNoIcon.html',
                 new Button('Save'),
             ],
-            'buttonNoIconPositive' => [
+            'buttonNoIconPositive'       => [
                 __DIR__ . '/__snapshots__/buttonNoIcon.html',
                 new Button('Save', Color::get(Color::POSITIVE)),
             ],
@@ -39,19 +42,18 @@ final class ButtonTest extends TestCase
                 __DIR__ . '/__snapshots__/buttonNoIconWithXssAttempt.html',
                 new Button('<script>alert(\'Ahoj!\');</script>'),
             ],
-            'buttonWithIcon' => [
+            'buttonWithIcon'             => [
                 __DIR__ . '/__snapshots__/buttonWithIcon.html',
                 new Button('Save', Color::get(Color::POSITIVE), IconType::get(IconType::PLUS)),
             ],
-            'buttonNegative' => [
+            'buttonNegative'             => [
                 __DIR__ . '/__snapshots__/buttonNegative.html',
                 new Button('Save', Color::get(Color::NEGATIVE)),
             ],
-            'buttonSmallNegative' => [
+            'buttonSmallNegative'        => [
                 __DIR__ . '/__snapshots__/buttonSmallNegative.html',
                 new Button('Save', Color::get(Color::NEGATIVE), null, Size::get(Size::SMALL)),
             ],
         ];
     }
-
 }

@@ -11,12 +11,12 @@ use PHPUnit\Framework\TestCase;
 
 final class ButtonLinkTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider getButtonsData
-     * @param string $snapshot
+     * @param string     $snapshot
      * @param ButtonLink $button
      */
     public function testButtonRendering(string $snapshot, ButtonLink $button): void
@@ -24,15 +24,18 @@ final class ButtonLinkTest extends TestCase
         $this->assertSnapshot($snapshot, $button);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function getButtonsData(): array
     {
-
         return [
-            'buttonNoIcon' => [
+            'buttonNoIcon'               => [
                 __DIR__ . '/__snapshots__/buttonNoIcon.html',
                 new ButtonLink('Save'),
             ],
-            'buttonNoIconPositive' => [
+            'buttonNoIconPositive'       => [
                 __DIR__ . '/__snapshots__/buttonNoIcon.html',
                 new ButtonLink('Save', Color::get(Color::POSITIVE)),
             ],
@@ -40,19 +43,19 @@ final class ButtonLinkTest extends TestCase
                 __DIR__ . '/__snapshots__/buttonNoIconWithXssAttempt.html',
                 new ButtonLink('<script>alert(\'Ahoj!\');</script>'),
             ],
-            'buttonWithIcon' => [
+            'buttonWithIcon'             => [
                 __DIR__ . '/__snapshots__/buttonWithIcon.html',
                 new ButtonLink('Save', Color::get(Color::POSITIVE), IconType::get(IconType::PLUS)),
             ],
-            'buttonNegative' => [
+            'buttonNegative'             => [
                 __DIR__ . '/__snapshots__/buttonNegative.html',
                 new ButtonLink('Save', Color::get(Color::NEGATIVE)),
             ],
-            'buttonSmallNegative' => [
+            'buttonSmallNegative'        => [
                 __DIR__ . '/__snapshots__/buttonSmallNegative.html',
                 new ButtonLink('Save', Color::get(Color::NEGATIVE), null, Size::get(Size::SMALL)),
             ],
-            'buttonAsHyperlink' => [
+            'buttonAsHyperlink'          => [
                 __DIR__ . '/__snapshots__/buttonAsHyperlink.html',
                 new ButtonLink(
                     'Save',
@@ -64,5 +67,4 @@ final class ButtonLinkTest extends TestCase
             ],
         ];
     }
-
 }

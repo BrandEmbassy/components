@@ -3,15 +3,15 @@
 namespace BrandEmbassy\Components\Table\Model;
 
 use Assert\Assertion;
-use Iterator;
+use function count;
 
 final class ArrayDataProvider implements DataProvider
 {
-
     /**
      * @var RowData[]
      */
     private $data;
+
 
     /**
      * Example of the array:
@@ -29,13 +29,15 @@ final class ArrayDataProvider implements DataProvider
         $this->data = $data;
     }
 
+
     public function getIterator(): TableIterator
     {
         return new TableIterator($this->data);
     }
 
+
     public function count(): int
     {
-        return \count($this->data);
+        return count($this->data);
     }
 }

@@ -1,1 +1,1 @@
-console.log('Foo bar')
+console.log('Foo bar');

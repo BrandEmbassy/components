@@ -8,12 +8,12 @@ use PHPUnit\Framework\TestCase;
 
 final class TextWithTitleTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider textWithTitleData
-     * @param string $snapshot
+     * @param string        $snapshot
      * @param TextWithTitle $textWithTitle
      */
     public function testRenderedTextWithTitle(string $snapshot, TextWithTitle $textWithTitle): void
@@ -21,10 +21,14 @@ final class TextWithTitleTest extends TestCase
         $this->assertSnapshot($snapshot, $textWithTitle);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function textWithTitleData(): array
     {
         return [
-            'Text with title' => [
+            'Text with title'                 => [
                 __DIR__ . '/__snapshots__/textWithTitle.html',
                 new TextWithTitle('Some text', 'Title'),
             ],
@@ -34,5 +38,4 @@ final class TextWithTitleTest extends TestCase
             ],
         ];
     }
-
 }

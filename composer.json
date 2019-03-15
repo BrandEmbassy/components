@@ -14,9 +14,10 @@
         "zendframework/zend-escaper": "^2.6"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master",
+        "brandembassy/coding-standard": "^5.2",
+        "mockery/mockery": "^1.2",
         "phpunit/phpunit": "^8",
-        "phpstan/phpstan": "^0.10.3",
+        "roave/security-advisories": "dev-master",
         "guzzlehttp/psr7": "^1.4"
     },
     "archive": {
@@ -39,7 +40,13 @@
         ]
     },
     "scripts": {
-        "test": "./vendor/bin/phpunit src-php",
-        "phpstan": "./vendor/bin/phpstan analyze -l max src-php"
+        "phpcs": "./vendor/bin/phpcs --standard=BrandEmbassyCodingStandard src-php",
+        "phpcbf": "./vendor/bin/phpcbf --standard=BrandEmbassyCodingStandard src-php",
+        "phpstan": "./vendor/bin/phpstan analyse src-php",
+        "test": "./vendor/bin/phpunit src-php"
+    },
+    "config": {
+        "sort-packages": true,
+        "process-timeout": 600
     }
 }

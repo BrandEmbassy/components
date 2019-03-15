@@ -8,7 +8,6 @@ use BrandEmbassy\Components\UiComponent;
 
 final class SelectboxOption implements UiComponent
 {
-
     public const IS_SELECTED = true;
     public const IS_NOT_SELECTED = false;
 
@@ -27,17 +26,14 @@ final class SelectboxOption implements UiComponent
      */
     private $selected;
 
-    /**
-     * @param string $value
-     * @param string $text
-     * @param bool $isSelected
-     */
+
     public function __construct(string $value, string $text, bool $isSelected)
     {
         $this->value = $value;
         $this->text = $text;
         $this->selected = $isSelected ? ' selected="selected"' : '';
     }
+
 
     public function render(): string
     {
@@ -46,14 +42,15 @@ final class SelectboxOption implements UiComponent
             . '</option>';
     }
 
+
     public function getValue(): string
     {
         return $this->value;
     }
 
+
     public function getText(): string
     {
         return $this->text;
     }
-
 }

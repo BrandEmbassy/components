@@ -2,15 +2,14 @@
 
 namespace BrandEmbassy\Components\Table\Ui;
 
-use BrandEmbassy\Components\Align;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\Styles;
 use BrandEmbassy\Components\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\UiComponent;
+use function is_array;
 
 final class Cell implements UiComponent
 {
-
     /**
      * @var UiComponent[]|string[]
      */
@@ -21,15 +20,17 @@ final class Cell implements UiComponent
      */
     private $columnDefinition;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param ColumnDefinition $columnDefinition
+     * @param ColumnDefinition                          $columnDefinition
      */
     public function __construct($children, ColumnDefinition $columnDefinition)
     {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->columnDefinition = $columnDefinition;
     }
+
 
     public function render(): string
     {
@@ -43,5 +44,4 @@ final class Cell implements UiComponent
 
         return '<td' . $styles->getHtmlAttribute() . '>' . ArrayRenderer::render($this->children) . '</td>';
     }
-
 }

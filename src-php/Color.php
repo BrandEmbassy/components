@@ -3,10 +3,13 @@
 namespace BrandEmbassy\Components;
 
 use MabeEnum\Enum;
+use function array_key_exists;
 
+/**
+ * @method string getValue()
+ */
 final class Color extends Enum
 {
-
     public const POSITIVE = 'Green';
     public const NEGATIVE = 'Negative';
     public const DISABLED = 'Disabled';
@@ -17,18 +20,18 @@ final class Color extends Enum
         self::POSITIVE => '#329d53',
         self::NEGATIVE => '#E8585D',
         self::DISABLED => '#cfcfcf',
-        self::DEFAULT => '#000000',
+        self::DEFAULT  => '#000000',
     ];
+
 
     public function getRgbHex(): string
     {
-        $value = (string)$this->getValue();
+        $value = $this->getValue();
 
-        if (\array_key_exists($value, self::COLOR_MAP)) {
+        if (array_key_exists($value, self::COLOR_MAP)) {
             return self::COLOR_MAP[$value];
         }
 
         return '#000000';
     }
-
 }

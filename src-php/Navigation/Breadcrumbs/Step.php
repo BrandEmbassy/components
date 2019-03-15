@@ -9,22 +9,23 @@ use Psr\Http\Message\UriInterface;
 
 final class Step implements UiComponent
 {
-
     /**
      * @var string
      */
     private $text;
 
     /**
-     * @var null|UriInterface
+     * @var UriInterface|null
      */
     private $url;
+
 
     public function __construct(string $text, ?UriInterface $url = null)
     {
         $this->text = $text;
         $this->url = $url;
     }
+
 
     public function render(): string
     {

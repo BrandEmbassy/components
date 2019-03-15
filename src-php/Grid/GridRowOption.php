@@ -4,9 +4,11 @@ namespace BrandEmbassy\Components\Grid;
 
 use MabeEnum\Enum;
 
+/**
+ * @method string getValue()
+ */
 final class GridRowOption extends Enum
 {
-
     public const XS_START = 'start-xs';
     public const XS_CENTER = 'center-xs';
     public const XS_END = 'end-xs';
@@ -30,5 +32,4 @@ final class GridRowOption extends Enum
     public const LG_TOP = 'top-lg';
     public const LG_MIDDLE = 'middle-lg';
     public const LG_BOTTOM = 'bottom-lg';
-
 }
