@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Tag;
 
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use BrandEmbassy\Components\TagColor;
 use PHPUnit\Framework\TestCase;
 
 class TagComponentTest extends TestCase
@@ -10,9 +11,16 @@ class TagComponentTest extends TestCase
     use SnapshotAssertTrait;
 
 
-    public function testShouldRenderTag(): void
+    public function testRenderTagWithHslStyle(): void
     {
         $component = new TagComponent('#12f457', 'Foo');
-        $this->assertSnapshot(__DIR__ . '/__snapshots__/tag.html', $component);
+        $this->assertSnapshot(__DIR__ . '/__snapshots__/hslTag.html', $component);
+    }
+
+
+    public function testRenderTagWithClass(): void
+    {
+        $component = new TagComponent(TagColor::get(TagColor::RED), 'Foo');
+        $this->assertSnapshot(__DIR__ . '/__snapshots__/classTag.html', $component);
     }
 }
