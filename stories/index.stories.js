@@ -2,9 +2,9 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import Grid from './../src/Basic/Grid/Grid'
-import Typography from './../src/Basic/Typography/Typography'
-import Icons from './../src/Basic/Icons/Icons'
+import Grid from './../src/Demos/Grid/Grid'
+import Typography from './../src/Demos/Typography/Typography'
+import Icons from './../src/Demos/Icons/Icons'
 
 import InputDemo from './../src/Demos/Forms/InputDemo'
 import SelectboxDemo from './../src/Demos/Forms/SelectboxDemo'

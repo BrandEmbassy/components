@@ -20,7 +20,7 @@ export type IElement = ButtonElementProps & HeadingElementProps &
   QuickRepliesProps & FileElementsProps & ComposedElement
 
 export default function Element (props: IElement) {
-  const {type, level} = props
+  const { type, level } = props
 
   let component = null
 
@@ -53,9 +53,13 @@ export default function Element (props: IElement) {
       component = null
   }
 
+  if (component) {
+    return component
+  }
+
   if (Array.isArray(props.elements)) {
     const showTextAsMessage = (type === ElementType.TEXT_AND_BUTTONS)
     return <ComposedElement {...props} showTextAsMessage={showTextAsMessage} level={level + 1} />
   }
-  return component
+  return null
 }

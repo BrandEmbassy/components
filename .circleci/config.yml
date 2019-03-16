@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build-php:
     docker:
       - image: brandembassy/php:7.2-fpm-noxdebug
     working_directory: ~/repo
@@ -23,3 +23,93 @@ jobs:
       - run: composer test
       - run: composer phpcs
       - run: composer phpstan
+
+  build-js:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-js-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-js
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-js-{{ checksum "package.json" }}
+      - run: yarn lint
+      - run: yarn flow-typed
+      - run: yarn flow
+      - run: yarn test
+      - run: rm -rf ./lib/*,
+      - run: yarn build
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - .
+
+  publish:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: |
+            set +e
+            tempLog=$(mktemp)
+            npm publish > ${tempLog} 2>&1
+
+            if [ $? -eq 0 ]; then
+              echo "Package has been successfully published!"
+            else
+              # npm publish action is idempotent
+              grep -q "npm ERR! code E403" ${tempLog}
+              grepStatus=$?
+
+              if [ $grepStatus -eq 0 ]; then
+                echo "Package is already published. Please increase the package version in package.json"
+                exit 0
+              else
+                cat ${tempLog}
+                exit 1
+              fi
+
+              rm -f ${tempLog}
+            fi
+
+            rm -f ${tempLog}
+
+workflows:
+  version: 2
+  build-publish:
+    jobs:
+      - build-php:
+          filters:
+            branches:
+              only: /.*/
+
+      - build-js:
+          filters:
+            branches:
+              only: /.*/
+
+      - publish:
+          filters:
+            branches:
+                only:
+                  - master
+          requires:
+            - build-js
