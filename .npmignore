@@ -7,7 +7,6 @@ composer.json
 composer.lock
 Jenkinsfile
 
-
 # npm types
 /flow-typed/npm
 
@@ -15,6 +14,7 @@ Jenkinsfile
 /coverage
 
 # files unneeded by js
+/.circleci
 /.storybook
 /config
 /public
