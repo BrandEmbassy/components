@@ -32,7 +32,7 @@ final class Table implements UiComponent
     private $dataProvider;
 
     /**
-     * @var (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell)[]
+     * @var           (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell)[]
      * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification
      */
     private $cellRenderCallbacks;
@@ -42,11 +42,17 @@ final class Table implements UiComponent
      */
     private $columnsNotInDataSet = [];
 
+    /**
+     * @var bool
+     */
+    private $hasHover;
 
-    public function __construct(TableDefinition $tableDefinition, DataProvider $dataProvider)
+
+    public function __construct(TableDefinition $tableDefinition, DataProvider $dataProvider, bool $hasHover = false)
     {
         $this->tableDefinition = $tableDefinition;
         $this->dataProvider = $dataProvider;
+        $this->hasHover = $hasHover;
     }
 
 
@@ -62,7 +68,13 @@ final class Table implements UiComponent
 
     public function render(): string
     {
-        $result = '<div class="Table__Table Table__isStriped"><table>';
+        $tableClass = 'Table__Table Table__isStriped';
+
+        if ($this->hasHover) {
+            $tableClass .= ' Table__hasRowHover';
+        }
+
+        $result = '<div class="' . $tableClass . '"><table>';
         $result .= $this->renderHead();
         $result .= $this->renderBody();
         $result .= '</table></div>';
@@ -116,6 +128,7 @@ final class Table implements UiComponent
 
     /**
      * @param string $key
+     *
      * @return callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell
      */
     private function getCellRenderFunction(string $key): callable

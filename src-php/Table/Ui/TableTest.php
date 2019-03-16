@@ -66,6 +66,14 @@ final class TableTest extends TestCase
     }
 
 
+    public function testRenderWithHover(): void
+    {
+        $table = new Table(new TableDefinition([]), new ArrayDataProvider([]), true);
+
+        $this->assertSnapshot(__DIR__ . '/__snapshots__/tableWithHover.html', $table);
+    }
+
+
     public function testRaisesErrorOnInvalidDataForRendering(): void
     {
         $rowsData = [new RowData('1', ['datetime' => new CellData('datetime', new DateTimeImmutable())])];
