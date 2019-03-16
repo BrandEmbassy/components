@@ -7,12 +7,12 @@ use PHPUnit\Framework\TestCase;
 
 final class NotificationMessageTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider getNotificationsData
-     * @param string $snapshot
+     * @param string              $snapshot
      * @param NotificationMessage $message
      */
     public function testComponentRendering(string $snapshot, NotificationMessage $message): void
@@ -20,6 +20,10 @@ final class NotificationMessageTest extends TestCase
         $this->assertSnapshot($snapshot, $message);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function getNotificationsData(): array
     {
         return [
@@ -27,7 +31,7 @@ final class NotificationMessageTest extends TestCase
                 __DIR__ . '/__snapshots__/success.html',
                 new NotificationMessage('Text text <strong>message</strong>', NotificationType::byValue(NotificationType::SUCCESS)),
             ],
-            'notificationFixed' => [
+            'notificationFixed'   => [
                 __DIR__ . '/__snapshots__/success_fixed.html',
                 new NotificationMessage(
                     'Text text message',
@@ -35,11 +39,10 @@ final class NotificationMessageTest extends TestCase
                     NotificationMessage::FIXED
                 ),
             ],
-            'notificationError' => [
+            'notificationError'   => [
                 __DIR__ . '/__snapshots__/error.html',
                 new NotificationMessage('Text text message', NotificationType::byValue(NotificationType::ERROR)),
             ],
         ];
     }
-
 }

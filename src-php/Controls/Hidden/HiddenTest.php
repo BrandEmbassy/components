@@ -7,8 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 final class HiddenTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider getInputData
@@ -20,10 +20,14 @@ final class HiddenTest extends TestCase
         $this->assertSnapshot($snapshot, $input);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function getInputData(): array
     {
         return [
-            'hiddenInput' => [
+            'hiddenInput'                 => [
                 __DIR__ . '/__snapshots__/hiddenInput.html',
                 new Hidden('input-name', 'Input value'),
             ],
@@ -36,5 +40,4 @@ final class HiddenTest extends TestCase
             ],
         ];
     }
-
 }

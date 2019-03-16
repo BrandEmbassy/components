@@ -3,15 +3,14 @@
 namespace BrandEmbassy\Components\Table\Model;
 
 use RuntimeException;
+use function sprintf;
 
 final class InconsistentDataException extends RuntimeException
 {
-
     public static function byCoordinates(string $columnKey, string $rowIdentifier): self
     {
         return new self(
-            \sprintf('Column "%s" was not found in data provider at row "%s".', $columnKey, $rowIdentifier)
+            sprintf('Column "%s" was not found in data provider at row "%s".', $columnKey, $rowIdentifier)
         );
     }
-
 }

@@ -2,14 +2,14 @@
 
 namespace BrandEmbassy\Components\Grid\GridColumn;
 
-use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use PHPUnit\Framework\TestCase;
 
 final class GridColumnTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     public function testShouldRenderColumn(): void
     {
@@ -22,5 +22,4 @@ final class GridColumnTest extends TestCase
 
         $this->assertSnapshot($snapshot, $column);
     }
-
 }

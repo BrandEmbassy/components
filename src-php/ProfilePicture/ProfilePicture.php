@@ -9,7 +9,6 @@ use Psr\Http\Message\UriInterface;
 
 final class ProfilePicture implements UiComponent
 {
-
     /**
      * @var UriInterface
      */
@@ -25,12 +24,14 @@ final class ProfilePicture implements UiComponent
      */
     private $title;
 
+
     public function __construct(UriInterface $src, ProfilePictureSize $size, string $title = '')
     {
         $this->src = $src;
         $this->size = $size;
         $this->title = $title;
     }
+
 
     public function render(): string
     {
@@ -44,5 +45,4 @@ final class ProfilePicture implements UiComponent
 
         return $html;
     }
-
 }

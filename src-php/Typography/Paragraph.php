@@ -6,10 +6,10 @@ use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\EnumValuesToString;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
+use function is_array;
 
 final class Paragraph implements UiComponent
 {
-
     public const NEW_LINE = '<br />';
 
     /**
@@ -27,17 +27,19 @@ final class Paragraph implements UiComponent
      */
     private $childrenSeparator;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param UtilitiesOption[] $utilityOptions
-     * @param string $childrenSeparator
+     * @param UtilitiesOption[]                         $utilityOptions
+     * @param string                                    $childrenSeparator
      */
     public function __construct($children, array $utilityOptions = [], string $childrenSeparator = '')
     {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
         $this->childrenSeparator = $childrenSeparator;
     }
+
 
     public function render(): string
     {
@@ -45,5 +47,4 @@ final class Paragraph implements UiComponent
             . ArrayRenderer::render($this->children, $this->childrenSeparator)
             . '</p>';
     }
-
 }

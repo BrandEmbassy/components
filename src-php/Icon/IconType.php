@@ -4,9 +4,11 @@ namespace BrandEmbassy\Components\Icon;
 
 use MabeEnum\Enum;
 
+/**
+ * @method string getValue()
+ */
 final class IconType extends Enum
 {
-
     public const TRASH = 'be-icon-trash';
     public const PENCIL = 'be-icon-pencil';
     public const CHECK = 'be-icon-check';
@@ -136,7 +138,7 @@ final class IconType extends Enum
     public const ALIGN_JUSTIFY = 'be-icon-align-justify';
     public const ALIGN_CENTER = 'be-icon-align-center';
     public const CHAIN_BROKEN = 'be-icon-chain-broken';
-    public const SORT_AMOUNTvASC = 'be-icon-sort-amount-asc';
+    public const SORT_AMOUNT_ASC = 'be-icon-sort-amount-asc';
     public const SORT_AMOUNT_DESC = 'be-icon-sort-amount-desc';
     public const PAGE_EXPORT = 'be-icon-page-export';
     public const BRIEFCASE = 'be-icon-briefcase';
@@ -167,5 +169,4 @@ final class IconType extends Enum
     public const TRIANGLE_UP = 'be-icon-triangle-up';
     public const TRIANGLE_DOWN = 'be-icon-triangle-down';
     public const FILTER = 'be-icon-filter';
-
 }

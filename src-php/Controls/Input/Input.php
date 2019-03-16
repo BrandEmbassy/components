@@ -5,10 +5,10 @@ namespace BrandEmbassy\Components\Controls\Input;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
+use function sprintf;
 
 final class Input implements UiComponent
 {
-
     /**
      * @var string
      */
@@ -44,23 +44,25 @@ final class Input implements UiComponent
      */
     private $placeholder;
 
+
     public function __construct(
         string $name,
         string $value,
         InputType $type,
-        $description = '',
+        string $description = '',
         bool $isError = false,
         ?InputSize $inputSize = null,
         string $placeholder = ''
     ) {
         $this->name = $name;
         $this->value = $value;
-        $this->type = (string)$type->getValue();
+        $this->type = $type->getValue();
         $this->description = $description;
         $this->isError = $isError;
         $this->inputSize = $inputSize ?? InputSize::byValue(InputSize::AUTOMATIC);
         $this->placeholder = $placeholder;
     }
+
 
     public function render(): string
     {
@@ -70,7 +72,7 @@ final class Input implements UiComponent
             : '';
 
         $placeholder = $this->placeholder !== '' ?
-            \sprintf('placeholder="%s" ', StringEscaper::escapeHtmlAttribute($this->placeholder))
+            sprintf('placeholder="%s" ', StringEscaper::escapeHtmlAttribute($this->placeholder))
             : '';
 
         $maxWidth = $this->inputSize->getMaxWidth();
@@ -83,5 +85,4 @@ final class Input implements UiComponent
             . $placeholder . $maxWidthArgument . '/></div>'
             . $description . '</div>';
     }
-
 }

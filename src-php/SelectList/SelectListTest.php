@@ -8,8 +8,8 @@ use PHPUnit\Framework\TestCase;
 
 final class SelectListTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     public function testRendering(): void
     {
@@ -19,5 +19,4 @@ final class SelectListTest extends TestCase
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/selectList.html', $selectList);
     }
-
 }

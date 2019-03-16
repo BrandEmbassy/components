@@ -8,7 +8,6 @@ use BrandEmbassy\Components\UiComponent;
 
 final class Selectbox implements UiComponent
 {
-
     private const CLASS_SELECTBOX = 'Selectbox__Selectbox';
     private const CLASS_SELECTBOX_WIDE = 'Selectbox__Wide';
 
@@ -37,18 +36,19 @@ final class Selectbox implements UiComponent
      */
     private $isError;
 
+
     /**
      * @param SelectboxOption[] $options
-     * @param string $name
-     * @param SelectboxType $type
-     * @param string $description
-     * @param bool $isError
+     * @param string            $name
+     * @param SelectboxType     $type
+     * @param string            $description
+     * @param bool              $isError
      */
     public function __construct(
         array $options,
         string $name,
         SelectboxType $type,
-        $description = '',
+        string $description = '',
         bool $isError = false
     ) {
         $this->options = $options;
@@ -60,6 +60,7 @@ final class Selectbox implements UiComponent
             $this->selectboxClass .= ' ' . self::CLASS_SELECTBOX_WIDE;
         }
     }
+
 
     public function render(): string
     {
@@ -73,5 +74,4 @@ final class Selectbox implements UiComponent
             . ArrayRenderer::render($this->options)
             . '</select>' . $description . '</div>';
     }
-
 }

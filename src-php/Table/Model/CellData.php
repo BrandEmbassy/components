@@ -4,7 +4,6 @@ namespace BrandEmbassy\Components\Table\Model;
 
 final class CellData
 {
-
     /**
      * @var string
      */
@@ -15,9 +14,10 @@ final class CellData
      */
     private $value;
 
+
     /**
      * @param string $key
-     * @param mixed $value
+     * @param mixed  $value
      */
     public function __construct(string $key, $value)
     {
@@ -25,10 +25,12 @@ final class CellData
         $this->value = $value;
     }
 
+
     public function getKey(): string
     {
         return $this->key;
     }
+
 
     /**
      * @return mixed
@@ -37,5 +39,4 @@ final class CellData
     {
         return $this->value;
     }
-
 }

@@ -8,12 +8,12 @@ use PHPUnit\Framework\TestCase;
 
 final class ProfilePictureTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider profilePicturesProvider
-     * @param string $expectedSnapshot
+     * @param string         $expectedSnapshot
      * @param ProfilePicture $picture
      */
     public function testRendering(string $expectedSnapshot, ProfilePicture $picture): void
@@ -21,6 +21,10 @@ final class ProfilePictureTest extends TestCase
         $this->assertSnapshot($expectedSnapshot, $picture);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function profilePicturesProvider(): array
     {
         $size24 = ProfilePictureSize::get(ProfilePictureSize::SIZE_24);

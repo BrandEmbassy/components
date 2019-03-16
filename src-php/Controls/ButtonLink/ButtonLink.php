@@ -2,7 +2,6 @@
 
 namespace BrandEmbassy\Components\Controls\ButtonLink;
 
-use function Assert\thatAll;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\Color;
 use BrandEmbassy\Components\Controls\UriRenderer;
@@ -11,10 +10,10 @@ use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\Size;
 use BrandEmbassy\Components\UiComponent;
 use Psr\Http\Message\UriInterface;
+use function is_array;
 
 final class ButtonLink implements UiComponent
 {
-
     /**
      * @var Color
      */
@@ -40,12 +39,13 @@ final class ButtonLink implements UiComponent
      */
     private $uri;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param Color|null $color
-     * @param IconType|null $icon
-     * @param Size|null $size
-     * @param UriInterface|null $uri Only accepted if $asHypertextLink === true
+     * @param Color|null                                $color
+     * @param IconType|null                             $icon
+     * @param Size|null                                 $size
+     * @param UriInterface|null                         $uri      Only accepted if $asHypertextLink === true
      */
     public function __construct(
         $children,
@@ -54,12 +54,13 @@ final class ButtonLink implements UiComponent
         ?Size $size = null,
         ?UriInterface $uri = null
     ) {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->icon = $icon;
         $this->color = $color ?? Color::get(Color::POSITIVE);
         $this->size = $size ?? Size::get(Size::DEFAULT);
         $this->uri = $uri;
     }
+
 
     public function render(): string
     {

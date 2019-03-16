@@ -4,10 +4,8 @@ namespace BrandEmbassy\Components;
 
 final class EmptyComponent implements UiComponent
 {
-
     public function render(): string
     {
         return '';
     }
-
 }

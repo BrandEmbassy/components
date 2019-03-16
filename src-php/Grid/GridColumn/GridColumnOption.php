@@ -4,9 +4,11 @@ namespace BrandEmbassy\Components\Grid\GridColumn;
 
 use MabeEnum\Enum;
 
+/**
+ * @method string getValue()
+ */
 final class GridColumnOption extends Enum
 {
-
     public const XS_1 = 'col-xs-1';
     public const XS_2 = 'col-xs-2';
     public const XS_3 = 'col-xs-3';
@@ -45,5 +47,4 @@ final class GridColumnOption extends Enum
     public const LG_10 = 'col-lg-10';
     public const LG_11 = 'col-lg-11';
     public const LG_12 = 'col-lg-12';
-
 }

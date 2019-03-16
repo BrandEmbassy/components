@@ -7,12 +7,12 @@ use PHPUnit\Framework\TestCase;
 
 final class SelectboxOptionTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     /**
      * @dataProvider optionsData
-     * @param string $snapshot
+     * @param string          $snapshot
      * @param SelectboxOption $option
      */
     public function testShouldRenderSelectboxOption(string $snapshot, SelectboxOption $option): void
@@ -20,10 +20,14 @@ final class SelectboxOptionTest extends TestCase
         $this->assertSnapshot($snapshot, $option);
     }
 
+
+    /**
+     * @return mixed[]
+     */
     public function optionsData(): array
     {
         return [
-            'optionSelected' => [
+            'optionSelected'    => [
                 __DIR__ . '/__snapshots__/optionSelected.html',
                 new SelectboxOption('test-value-"test"', 'Test value <strong>text</strong>', true),
             ],
@@ -33,5 +37,4 @@ final class SelectboxOptionTest extends TestCase
             ],
         ];
     }
-
 }

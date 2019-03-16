@@ -6,10 +6,12 @@ use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\EnumValuesToString;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
+use function assert;
+use function count;
+use function is_array;
 
 final class GridColumn implements UiComponent
 {
-
     /**
      * @var UiComponent[]|string[]
      */
@@ -25,19 +27,21 @@ final class GridColumn implements UiComponent
      */
     private $utilityOptions;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param GridColumnOption[] $columnOptions
-     * @param UtilitiesOption[] $utilityOptions
+     * @param GridColumnOption[]                        $columnOptions
+     * @param UtilitiesOption[]                         $utilityOptions
      */
     public function __construct($children, array $columnOptions, array $utilityOptions = [])
     {
-        \assert(\count($columnOptions) > 0);
+        assert(count($columnOptions) > 0);
 
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->columnOptions = EnumValuesToString::transform($columnOptions);
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
     }
+
 
     public function render(): string
     {
@@ -45,5 +49,4 @@ final class GridColumn implements UiComponent
 
         return '<div class="' . $options . '">' . ArrayRenderer::render($this->children) . '</div>';
     }
-
 }

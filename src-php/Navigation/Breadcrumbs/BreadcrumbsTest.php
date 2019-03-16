@@ -9,8 +9,8 @@ use PHPUnit\Framework\TestCase;
 
 final class BreadcrumbsTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     public function testRendering(): void
     {
@@ -21,5 +21,4 @@ final class BreadcrumbsTest extends TestCase
         $breadcrumbs = new Breadcrumbs(new Button('Add'), $steps);
         $this->assertSnapshot(__DIR__ . '/__snapshots__/breadcrumbs.html', $breadcrumbs);
     }
-
 }

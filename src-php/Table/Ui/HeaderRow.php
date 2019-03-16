@@ -8,11 +8,11 @@ use BrandEmbassy\Components\UiComponent;
 
 final class HeaderRow implements UiComponent
 {
-
     /**
-     * @var array
+     * @var HeaderCell[]
      */
     private $cells;
+
 
     /**
      * @param HeaderCell[] $cells
@@ -22,6 +22,7 @@ final class HeaderRow implements UiComponent
         Assertion::allIsInstanceOf($cells, HeaderCell::class);
         $this->cells = $cells;
     }
+
 
     public function render(): string
     {

@@ -4,10 +4,10 @@ namespace BrandEmbassy\Components\Grid;
 
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\UiComponent;
+use function is_array;
 
 final class SubLayout implements UiComponent
 {
-
     /**
      * @var UiComponent[]|string[]
      */
@@ -18,15 +18,17 @@ final class SubLayout implements UiComponent
      */
     private $appType;
 
+
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param SubLayoutType $appType
+     * @param SubLayoutType                             $appType
      */
     public function __construct($children, SubLayoutType $appType)
     {
-        $this->children = \is_array($children) ? $children : [$children];
+        $this->children = is_array($children) ? $children : [$children];
         $this->appType = $appType;
     }
+
 
     public function render(): string
     {
@@ -34,5 +36,4 @@ final class SubLayout implements UiComponent
             . ArrayRenderer::render($this->children)
             . '</div>';
     }
-
 }

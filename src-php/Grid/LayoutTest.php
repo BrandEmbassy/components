@@ -7,8 +7,8 @@ use PHPUnit\Framework\TestCase;
 
 final class LayoutTest extends TestCase
 {
-
     use SnapshotAssertTrait;
+
 
     public function testShouldRenderRow(): void
     {
@@ -23,5 +23,4 @@ final class LayoutTest extends TestCase
 
         $this->assertSnapshot($snapshot, $row);
     }
-
 }

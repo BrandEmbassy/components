@@ -6,11 +6,11 @@ use Assert\Assertion;
 
 final class TableDefinition
 {
-
     /**
      * @var ColumnDefinition[]
      */
     private $columnDefinitions;
+
 
     /**
      * @param ColumnDefinition[] $columnDefinitions
@@ -21,6 +21,7 @@ final class TableDefinition
         $this->columnDefinitions = $columnDefinitions;
     }
 
+
     /**
      * @return ColumnDefinition[]
      */
@@ -28,5 +29,4 @@ final class TableDefinition
     {
         return $this->columnDefinitions;
     }
-
 }

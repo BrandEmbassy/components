@@ -6,7 +6,6 @@ use BrandEmbassy\Components\Align;
 
 final class ColumnDefinition
 {
-
     /**
      * @var string
      */
@@ -27,6 +26,7 @@ final class ColumnDefinition
      */
     private $width;
 
+
     public function __construct(string $key, string $headerLabel, ?Align $align = null, string $width = '')
     {
         $this->key = $key;
@@ -35,24 +35,27 @@ final class ColumnDefinition
         $this->width = $width;
     }
 
+
     public function getKey(): string
     {
         return $this->key;
     }
+
 
     public function getHeaderLabel(): string
     {
         return $this->headerLabel;
     }
 
+
     public function getAlign(): ?Align
     {
         return $this->align;
     }
 
+
     public function getWidth(): string
     {
         return $this->width;
     }
-
 }
