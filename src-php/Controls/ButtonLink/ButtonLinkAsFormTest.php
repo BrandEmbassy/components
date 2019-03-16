@@ -27,8 +27,8 @@ class ButtonLinkAsFormTest extends TestCase
     {
         return [
             'buttonLinkAsForm' => [
-                __DIR__ . '/__snapshots__/buttonLinkAsForm.html.html',
-                new ButtonLinkAsForm('Save', new Uri('https://google.com')),
+                __DIR__ . '/__snapshots__/buttonLinkAsForm.html',
+                new ButtonLinkAsForm('Save', new Uri('/process-form')),
             ],
         ];
     }
