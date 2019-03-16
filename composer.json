@@ -42,7 +42,7 @@
     "scripts": {
         "phpcs": "./vendor/bin/phpcs --standard=BrandEmbassyCodingStandard src-php",
         "phpcbf": "./vendor/bin/phpcbf --standard=BrandEmbassyCodingStandard src-php",
-        "phpstan": "./vendor/bin/phpstan analyse src-php",
+        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon src-php",
         "test": "./vendor/bin/phpunit src-php",
         "phpunit": "@test"
     },
