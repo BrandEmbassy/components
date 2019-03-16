@@ -1,6 +1,6 @@
 {
   "name": "@brandembassy/ui-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "BrandEmbassy React components",
   "main": "lib/index.js",
   "repository": "git@github.com:BrandEmbassy/ui-components.git",
@@ -10,7 +10,6 @@
     "start": "node scripts/start.js",
     "build": "yarn run lib",
     "pretest": "yarn run lint && npm run flow",
-    "prepublish": "yarn build",
     "test": "yarn run jest",
     "lint": "standard './src/**/*.js' './stories/**/*.js' './src/**/*.jsx'",
     "lib": "babel src/package --out-dir lib --copy-files",
