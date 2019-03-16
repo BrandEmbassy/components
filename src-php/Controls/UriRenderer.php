@@ -18,6 +18,12 @@ final class UriRenderer
     }
 
 
+    public static function uriToActionFragment(?UriInterface $url): string
+    {
+        return $url !== null ? (' action="' . self::urlToString($url) . '"') : '';
+    }
+
+
     private static function urlToString(UriInterface $url): string
     {
         $scheme = $url->getScheme();

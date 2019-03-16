@@ -4,6 +4,7 @@ namespace BrandEmbassy\Components\Controls\ButtonLink;
 
 use BrandEmbassy\Components\Color;
 use BrandEmbassy\Components\Controls\Button\Button;
+use BrandEmbassy\Components\Controls\UriRenderer;
 use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\Size;
 use BrandEmbassy\Components\UiComponent;
@@ -39,7 +40,7 @@ final class ButtonLinkAsForm implements UiComponent
 
     public function render(): string
     {
-        return '<form action="' . $this->uri . '" method="post">'
+        return '<form' . UriRenderer::uriToActionFragment($this->uri) . ' method="post">'
             . $this->button->render()
             . '</form>';
     }
