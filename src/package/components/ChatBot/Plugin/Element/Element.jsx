@@ -12,7 +12,6 @@ import ElementType from './ElementType'
 import type ButtonElementProps from './Button'
 import type QuickRepliesProps from './QuickReplies'
 import type FileElementsProps from './File'
-import Markdown from './Markdown'
 
 // @todo use Disjoint Unions from flow-typed
 export type IElement = ButtonElementProps & HeadingElementProps &
@@ -29,10 +28,7 @@ export default function Element (props: IElement) {
       component = <Button {...props} label={props.text} />
       break
     case ElementType.TEXT:
-      component = <Text content={props.text} showAsMessage={props.showTextAsMessage} />
-      break
-    case ElementType.MARKDOWN:
-      component = <Markdown text={props.text} />
+      component = <Text content={props.text} showAsMessage={props.showTextAsMessage} mimeType={props.mimeType} />
       break
     case ElementType.IMAGE:
       component = <Image src={props.url} />
