@@ -11,10 +11,6 @@ export type TextElementProps = {
 
 export default function Text ({ content, showAsMessage = false, mimeType = TextType.TEXT_PLAIN }) {
   const className = showAsMessage ? styles.MessageText : styles.Text
-  if (mimeType === TextType.TEXT_MARKDOWN) {
-    return (
-      <Markdown text={content} />
-    )
-  }
-  return <p className={className}>{content}</p>
+  const messageContent = (mimeType === TextType.TEXT_MARKDOWN) ? <Markdown text={content} /> : content
+  return <p className={className}>{messageContent}</p>
 }
