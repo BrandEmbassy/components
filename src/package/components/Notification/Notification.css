@@ -18,6 +18,13 @@
   text-overflow: ellipsis;
   z-index: 10000;
 
+  &.isMultiline {
+    white-space: pre-wrap;
+    height: auto;
+    line-height: 20px;
+    padding: 6px ;
+  }
+
   &.Fixed {
     position: fixed;
     top: 50px;
