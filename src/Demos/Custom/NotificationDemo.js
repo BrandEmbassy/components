@@ -144,6 +144,14 @@ export default class NotificationDemo extends Component {
             <Notification type='warning' text='notification longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer text here' />
           </div>
         </div>
+        <div className='row padding-20'>
+          <div className='col-xs-12 padding-10' >
+            <h3 className='h3'>Notification multiline</h3>
+          </div>
+          <div className='col-xs-12' >
+            <Notification isMultiline type='warning' text='notification longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer text here notification longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer text here notification longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer text here notification longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer longer text here' />
+          </div>
+        </div>
         <div className='row padding-20' />
       </div>
     )

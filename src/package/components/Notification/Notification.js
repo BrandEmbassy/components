@@ -9,7 +9,8 @@ const cx = classNames.bind(styles)
 
 type Props = {
   text: string,
-  Fixed: boolean,
+  Fixed?: boolean,
+  isMultiline?: boolean,
   type: string,
   styleName: string
 }
@@ -26,7 +27,7 @@ export default class Notification extends React.Component<Props> {
   };
 
   render () {
-    const { Fixed, type, styleName } = this.props
+    const { Fixed, type, styleName, isMultiline } = this.props
 
     const className = cx(styles.Notification, styleName, {
       Fixed,
@@ -34,7 +35,8 @@ export default class Notification extends React.Component<Props> {
       isError: type === 'error',
       isSuccess: type === 'success',
       isInfo: type === 'info',
-      isDefault: type === 'default'
+      isDefault: type === 'default',
+      isMultiline
     })
 
     return (
