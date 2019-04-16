@@ -21,6 +21,9 @@ final class TextareaTest extends TestCase
     }
 
 
+    /**
+     * @return mixed[]
+     */
     public function textareaToTest(): array
     {
         return [

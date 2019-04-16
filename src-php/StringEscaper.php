@@ -2,7 +2,10 @@
 
 namespace BrandEmbassy\Components;
 
+use InvalidArgumentException;
+use Nette\Utils\Strings;
 use Zend\Escaper\Escaper;
+use function sprintf;
 
 final class StringEscaper
 {
@@ -12,6 +15,16 @@ final class StringEscaper
     public static function escapeHtml(string $input): string
     {
         return self::getEscaper()->escapeHtml($input);
+    }
+
+
+    public static function validateInputName(string $name): void
+    {
+        if (Strings::match($name, '~^[0-9a-zA-Z\-\_\[\]]+$~') === null) {
+            throw new InvalidArgumentException(
+                sprintf('Name must be alphanumerical and (-_[]) but "%s" given.', $name)
+            );
+        }
     }
 
 
