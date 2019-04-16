@@ -35,6 +35,10 @@ final class RadioTest extends TestCase
                 __DIR__ . '/__snapshots__/radioNotChecked.html',
                 new Radio('Foo label', 'fooId', 'fooName', 'fooValue', Radio::NOT_CHECKED),
             ],
+            'radioDisabled'   => [
+                __DIR__ . '/__snapshots__/radioDisabled.html',
+                new Radio('', 'fooId', 'fooName', '', Radio::NOT_CHECKED, true),
+            ],
         ];
     }
 }

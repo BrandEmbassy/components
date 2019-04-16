@@ -36,27 +36,40 @@ final class Radio implements UiComponent
      */
     private $checked;
 
+    /**
+     * @var bool
+     */
+    private $disabled;
 
-    public function __construct(string $label, string $id, string $name, string $value, bool $checked)
-    {
+
+    public function __construct(
+        string $label,
+        string $id,
+        string $name,
+        string $value,
+        bool $checked,
+        bool $disabled = false
+    ) {
         $this->label = $label;
         $this->id = $id;
         $this->name = $name;
         $this->value = $value;
         $this->checked = $checked;
+        $this->disabled = $disabled;
     }
 
 
     public function render(): string
     {
         $checkedAsHtml = $this->checked ? ' checked="checked"' : '';
+        $disabled = $this->disabled ? ' disabled' : '';
 
-        $inputHtmlTemplate = '<input type="radio" id="%s" name="%s" value="%s"%s />';
+        $inputHtmlTemplate = '<input' . $disabled . ' type="radio" id="%s" name="%s" value="%s"%s />';
         $inputHtml = sprintf($inputHtmlTemplate, $this->id, $this->name, $this->value, $checkedAsHtml);
 
         $onclick = sprintf('onclick="document.getElementById(\'%s\').click();"', $this->id);
 
-        $html = sprintf('<div class="Radio__RadioContent" data-reactroot="" %s>', $onclick);
+        $html = sprintf('<div class="Radio__RadioContent" %s>', $onclick);
         $html .= '<div class="Radio__Radio">'
             . $inputHtml
             . sprintf('<label for="%s"></label>', $this->id)

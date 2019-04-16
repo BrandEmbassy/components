@@ -87,7 +87,7 @@ final class Input implements UiComponent
 
         $disabled = $this->disabled ? ' disabled' : '';
 
-        return '<div class="Input__Input' . $errorClass . '" data-reactroot="">'
+        return '<div class="Input__Input' . $errorClass . '">'
             . '<div class="Input__Field">'
             . '<input' . $disabled . ' type="' . $this->type . '" name="' . StringEscaper::escapeHtmlAttribute($this->name)
             . '" value="' . StringEscaper::escapeHtmlAttribute($this->value) . '" '
