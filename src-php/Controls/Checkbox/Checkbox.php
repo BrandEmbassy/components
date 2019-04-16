@@ -39,6 +39,11 @@ final class Checkbox implements UiComponent
      */
     private $label;
 
+    /**
+     * @var bool
+     */
+    private $disabled;
+
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
@@ -47,32 +52,48 @@ final class Checkbox implements UiComponent
      * @param string                                    $name
      * @param string                                    $value
      * @param bool                                      $checked
+     * @param bool                                      $disabled
      */
-    public function __construct($children, string $label, string $id, string $name, string $value, bool $checked)
-    {
+    public function __construct(
+        $children,
+        string $label,
+        string $id,
+        string $name,
+        string $value,
+        bool $checked,
+        bool $disabled = false
+    ) {
         $this->children = is_array($children) ? $children : [$children];
         $this->label = $label;
         $this->id = $id;
         $this->name = $name;
         $this->value = $value;
         $this->checked = $checked;
+        $this->disabled = $disabled;
     }
 
 
     public function render(): string
     {
-        $checkedAsHtml = $this->checked ? 'checked="checked"' : '';
+        $checkedAsHtml = $this->checked ? ' checked="checked"' : '';
+        $disabled = $this->disabled ? ' disabled' : '';
 
-        $inputHtml = '<input type="checkbox"';
-        $inputHtml .= ' id="' . $this->id . '" value="' . $this->value . '"';
-        $inputHtml .= ' name="' . $this->name . '" ' . $checkedAsHtml . '/>';
+        $escapedId = StringEscaper::escapeHtmlAttribute($this->id);
 
-        $onclick = 'onclick="document.getElementById(\'' . $this->id . '\').click();"';
+        StringEscaper::validateInputName($this->name);
+
+        $inputHtml = '<input' . $disabled . ' type="checkbox"';
+        $inputHtml .= ' id="' . $escapedId . '"';
+        $inputHtml .= ' value="' . StringEscaper::escapeHtmlAttribute($this->value) . '"';
+        $inputHtml .= ' name="' . $this->name . '"';
+        $inputHtml .= $checkedAsHtml . '/>';
+
+        $onclick = 'onclick="document.getElementById(\'' . $escapedId . '\').click();"';
 
         $html = '<div class="Checkbox__CheckboxContent Checkbox__hasBorder" ' . $onclick . '>';
         $html .= '<div class="Checkbox__Checkbox">'
             . $inputHtml
-            . '<label onclick="return false;" for="' . $this->id . '"></label>'
+            . '<label onclick="return false;" for="' . $escapedId . '"></label>'
             . '</div>';
         $html .= ArrayRenderer::render($this->children);
         $html .= '<div class="Checkbox__Label">' . StringEscaper::escapeHtml($this->label) . '</div>';

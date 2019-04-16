@@ -36,6 +36,11 @@ final class Selectbox implements UiComponent
      */
     private $isError;
 
+    /**
+     * @var bool
+     */
+    private $disabled;
+
 
     /**
      * @param SelectboxOption[] $options
@@ -43,18 +48,21 @@ final class Selectbox implements UiComponent
      * @param SelectboxType     $type
      * @param string            $description
      * @param bool              $isError
+     * @param bool              $disabled
      */
     public function __construct(
         array $options,
         string $name,
         SelectboxType $type,
         string $description = '',
-        bool $isError = false
+        bool $isError = false,
+        bool $disabled = false
     ) {
         $this->options = $options;
         $this->name = $name;
         $this->description = $description;
         $this->isError = $isError;
+        $this->disabled = $disabled;
 
         if ($type->getValue() === SelectboxType::WIDE) {
             $this->selectboxClass .= ' ' . self::CLASS_SELECTBOX_WIDE;
@@ -69,8 +77,10 @@ final class Selectbox implements UiComponent
             ? '<div class="Selectbox__Desc">' . ArrayRenderer::render([$this->description]) . '</div>'
             : '';
 
-        return '<div class="' . $this->selectboxClass . $errorClass . '" data-reactroot="">'
-            . '<select name="' . StringEscaper::escapeHtmlAttribute($this->name) . '">'
+        $disabled = $this->disabled ? ' disabled' : '';
+
+        return '<div class="' . $this->selectboxClass . $errorClass . '">'
+            . '<select' . $disabled . ' name="' . StringEscaper::escapeHtmlAttribute($this->name) . '">'
             . ArrayRenderer::render($this->options)
             . '</select>' . $description . '</div>';
     }

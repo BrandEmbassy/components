@@ -39,6 +39,6 @@ final class NotificationMessage implements UiComponent
         $fixedClass = $this->fixed ? ' Notification__Fixed' : '';
 
         return '<div class="Notification__Notification' . $fixedClass . ' ' . $this->type->getValue()
-            . '" data-reactroot=""><span>' . StringEscaper::escapeHtml($this->message) . '</span></div>';
+            . '"><span>' . StringEscaper::escapeHtml($this->message) . '</span></div>';
     }
 }
