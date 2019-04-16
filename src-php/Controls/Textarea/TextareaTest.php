@@ -10,14 +10,32 @@ final class TextareaTest extends TestCase
     use SnapshotAssertTrait;
 
 
-    public function testRender(): void
+    /**
+     * @dataProvider textareaToTest
+     * @param string   $expectedSnapshotPath
+     * @param Textarea $textarea
+     */
+    public function testRender(string $expectedSnapshotPath, Textarea $textarea): void
     {
-        $textarea = new Textarea(
-            '"><script>alert(\'ahoj\');</script><"',
-            '"><script>alert(\'ahoj\');</script><"',
-            14
-        );
+        $this->assertSnapshot($expectedSnapshotPath, $textarea);
+    }
 
-        $this->assertSnapshot(__DIR__ . '/__snapshot__/render.html', $textarea);
+
+    public function textareaToTest(): array
+    {
+        return [
+            [
+                __DIR__ . '/__snapshot__/render.html',
+                new Textarea(
+                    '"><script>alert(\'ahoj\');</script><"',
+                    '"><script>alert(\'ahoj\');</script><"',
+                    14
+                ),
+            ],
+            [
+                __DIR__ . '/__snapshot__/renderDisabled.html',
+                new Textarea('foo', 'bar', 14, true),
+            ],
+        ];
     }
 }

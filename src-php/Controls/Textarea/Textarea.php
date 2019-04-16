@@ -22,12 +22,18 @@ final class Textarea implements UiComponent
      */
     private $name;
 
+    /**
+     * @var bool
+     */
+    private $disabled;
 
-    public function __construct(string $name, string $value, int $rows)
+
+    public function __construct(string $name, string $value, int $rows, bool $disabled = false)
     {
         $this->name = $name;
         $this->value = $value;
         $this->rows = $rows;
+        $this->disabled = $disabled;
     }
 
 
@@ -35,10 +41,11 @@ final class Textarea implements UiComponent
     {
         $value = StringEscaper::escapeHtmlAttribute($this->value);
         $name = StringEscaper::escapeHtml($this->name);
+        $disabled = $this->disabled ? ' disabled' : '';
 
         return '<div class="Textarea__Textarea">
             <div class="Textarea__Field">
-                <textarea rows="' . $this->rows . '" name="' . $name . '">' . $value . '</textarea>
+                <textarea' . $disabled . ' rows="' . $this->rows . '" name="' . $name . '">' . $value . '</textarea>
             </div>
         </div>';
     }
