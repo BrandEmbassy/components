@@ -41,6 +41,17 @@ final class SelectboxTest extends TestCase
                     'Some <strong>description</strong>'
                 ),
             ],
+            'selectboxDisabled'                => [
+                __DIR__ . '/__snapshots__/selectboxDisabled.html',
+                new Selectbox(
+                    [],
+                    'selectbox-"name"',
+                    SelectboxType::byValue(SelectboxType::NORMAL),
+                    'Some <strong>description</strong>',
+                    false,
+                    true
+                ),
+            ],
             'selectboxWithErrorOnly'           => [
                 __DIR__ . '/__snapshots__/selectboxWithErrorOnly.html',
                 new Selectbox(
