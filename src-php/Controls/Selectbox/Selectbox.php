@@ -77,9 +77,10 @@ final class Selectbox implements UiComponent
             ? '<div class="Selectbox__Desc">' . ArrayRenderer::render([$this->description]) . '</div>'
             : '';
 
-        $disabled = $this->disabled ? ' disabled' : '';
+        $disabled = $this->disabled ? ' disabled="disabled"' : '';
+        $disabledClass = $this->disabled ? ' Selectbox__Disabled' : '';
 
-        return '<div class="' . $this->selectboxClass . $errorClass . '">'
+        return '<div class="' . $this->selectboxClass . $errorClass . $disabledClass . '">'
             . '<select' . $disabled . ' name="' . StringEscaper::escapeHtmlAttribute($this->name) . '">'
             . ArrayRenderer::render($this->options)
             . '</select>' . $description . '</div>';
