@@ -54,6 +54,10 @@ final class ButtonTest extends TestCase
                 __DIR__ . '/__snapshots__/buttonSmallNegative.html',
                 new Button('Save', Color::get(Color::NEGATIVE), null, Size::get(Size::SMALL)),
             ],
+            'buttonDisabled'             => [
+                __DIR__ . '/__snapshots__/buttonDisabled.html',
+                new Button('Save', null, null, null, true),
+            ],
         ];
     }
 }
