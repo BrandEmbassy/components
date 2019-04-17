@@ -527,8 +527,12 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             src="https://picsum.photos/300/150"
                           >
                             <div>
+                              <div
+                                className="be-icon-multi-image"
+                              />
                               <div>
                                 <img
+                                  onLoad={[Function]}
                                   src="https://picsum.photos/300/150"
                                 />
                               </div>
@@ -735,8 +739,12 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             src="https://picsum.photos/300/150"
                           >
                             <div>
+                              <div
+                                className="be-icon-multi-image"
+                              />
                               <div>
                                 <img
+                                  onLoad={[Function]}
                                   src="https://picsum.photos/300/150"
                                 />
                               </div>
@@ -943,8 +951,12 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                             src="https://picsum.photos/300/150"
                           >
                             <div>
+                              <div
+                                className="be-icon-multi-image"
+                              />
                               <div>
                                 <img
+                                  onLoad={[Function]}
                                   src="https://picsum.photos/300/150"
                                 />
                               </div>
@@ -1429,8 +1441,12 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   src="https://picsum.photos/300/150"
                 >
                   <div>
+                    <div
+                      className="be-icon-multi-image"
+                    />
                     <div>
                       <img
+                        onLoad={[Function]}
                         src="https://picsum.photos/300/150"
                       />
                     </div>
@@ -1623,8 +1639,12 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   src="https://picsum.photos/300/150"
                 >
                   <div>
+                    <div
+                      className="be-icon-multi-image"
+                    />
                     <div>
                       <img
+                        onLoad={[Function]}
                         src="https://picsum.photos/300/150"
                       />
                     </div>
@@ -1817,8 +1837,12 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                   src="https://picsum.photos/300/150"
                 >
                   <div>
+                    <div
+                      className="be-icon-multi-image"
+                    />
                     <div>
                       <img
+                        onLoad={[Function]}
                         src="https://picsum.photos/300/150"
                       />
                     </div>
@@ -2232,8 +2256,12 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                         src="https://picsum.photos/300/150"
                       >
                         <div>
+                          <div
+                            className="be-icon-multi-image"
+                          />
                           <div>
                             <img
+                              onLoad={[Function]}
                               src="https://picsum.photos/300/150"
                             />
                           </div>

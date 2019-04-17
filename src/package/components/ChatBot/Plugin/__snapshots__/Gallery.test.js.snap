@@ -11,6 +11,9 @@ exports[`Gallery should render gallery 1`] = `
     <div>
       <div>
         <div>
+          <div
+            class="be-icon-multi-image"
+          />
           <div>
             <img
               src="https://picsum.photos/300/150"
@@ -49,6 +52,9 @@ exports[`Gallery should render gallery 1`] = `
     <div>
       <div>
         <div>
+          <div
+            class="be-icon-multi-image"
+          />
           <div>
             <img
               src="https://picsum.photos/300/150"
@@ -87,6 +93,9 @@ exports[`Gallery should render gallery 1`] = `
     <div>
       <div>
         <div>
+          <div
+            class="be-icon-multi-image"
+          />
           <div>
             <img
               src="https://picsum.photos/300/150"

@@ -11,7 +11,7 @@ import ElementType from './ElementType'
 
 import type ButtonElementProps from './Button'
 import type QuickRepliesProps from './QuickReplies'
-import type FileElementsProps from './File'
+import type { FileElementsProps } from './File'
 
 // @todo use Disjoint Unions from flow-typed
 export type IElement = ButtonElementProps & HeadingElementProps &
@@ -31,7 +31,7 @@ export default function Element (props: IElement) {
       component = <Text content={props.text} showAsMessage={props.showTextAsMessage} mimeType={props.mimeType} />
       break
     case ElementType.IMAGE:
-      component = <Image src={props.url} />
+      component = <Image src={props.url} onLoad={props.onLoad} />
       break
     case ElementType.QUICK_REPLIES:
       component = <QuickReplies {...props} />
