@@ -12,6 +12,7 @@ type Props = {
   disableCarusel?: boolean,
   hideButtons?: boolean,
   onClick: Function,
+  onLoad?: Function,
   elements: Array<Object>,
   width?: string
 }
@@ -30,7 +31,14 @@ export default class PluginWrapper extends PureComponent<Props> {
   }
 
   render () {
-    const { elements, onClick, hideButtons, disableCarusel, width } = this.props
+    const {
+      elements,
+      onClick,
+      hideButtons,
+      disableCarusel,
+      width,
+      onLoad
+    } = this.props
     const type = elements[0].type
 
     if (elements.length > 1 && disableCarusel) {
@@ -40,11 +48,26 @@ export default class PluginWrapper extends PureComponent<Props> {
     } else if (this.isPluginWithoutWrapper(elements[0])) {
       return (
         <div className={styles.PluginFrame} data-cy={type}>
-          <ComposedElement elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} level={1} />
+          <ComposedElement
+            elements={elements}
+            onClick={onClick}
+            onLoad={onLoad}
+            hideButtons={hideButtons}
+            width={width}
+            level={1}
+          />
         </div>
       )
     } else {
-      return <Plugin elements={elements} onClick={onClick} hideButtons={hideButtons} width={width} level={1} type={type} />
+      return <Plugin
+        elements={elements}
+        onClick={onClick}
+        onLoad={onLoad}
+        hideButtons={hideButtons}
+        width={width}
+        level={1}
+        type={type}
+      />
     }
   }
 }

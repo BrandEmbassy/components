@@ -1,6 +1,6 @@
 {
   "name": "@brandembassy/ui-components",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "BrandEmbassy React components",
   "main": "lib/index.js",
   "repository": "git@github.com:BrandEmbassy/ui-components.git",
@@ -24,9 +24,9 @@
     "build:ostrava": "node scripts/build.js && yarn concat-css"
   },
   "dependencies": {
-    "react": "^16.7.0",
+    "react": "^16.8.6",
     "react-daterange-picker": "^2.0.1",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.8.6",
     "react-markdown": "^4.0.6",
     "react-resize-detector": "^2.3.0",
     "react-swipeable-views": "^0.12.13",
@@ -71,7 +71,7 @@
     "eslint-plugin-react": "7.7.0",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
-    "flow-bin": "^0.71.0",
+    "flow-bin": "^0.97.0",
     "flow-typed": "^2.4.0",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",

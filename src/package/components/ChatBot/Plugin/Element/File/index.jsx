@@ -12,10 +12,11 @@ export type FileElementsProps = {
   mimeType: string,
   filename?: string,
   level: number,
-  standalone: boolean
+  standalone: boolean,
+  onLoad?: Function,
 }
 
-export default function File ({url, mimeType, filename, level, standalone}: FileElementsProps) {
+export default function File ({url, mimeType, filename, level, standalone, onLoad}: FileElementsProps) {
   if (mimeType.indexOf('image') >= 0) {
     if (standalone) {
       return (
@@ -23,6 +24,7 @@ export default function File ({url, mimeType, filename, level, standalone}: File
           src={url}
           title={filename}
           mimeType={mimeType}
+          onLoad={onLoad}
         />
       )
     }
@@ -32,6 +34,7 @@ export default function File ({url, mimeType, filename, level, standalone}: File
         src={url}
         title={filename}
         mimeType={mimeType}
+        onLoad={onLoad}
       />
     )
   }

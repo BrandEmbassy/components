@@ -6,6 +6,7 @@ import styles from './index.css'
 type Props = {
   elements: Array<any>,
   onClick: Function,
+  onLoad?: Function,
   hideButtons?: boolean,
   level: number,
   width?: string,

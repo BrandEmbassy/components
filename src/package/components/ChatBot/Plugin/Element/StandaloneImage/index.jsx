@@ -4,20 +4,34 @@ import styles from './index.css'
 
 export type ImageElementProps = {
   src: string,
-  title: string
+  title: string,
+  onLoad?: Function
 }
 
 type Props = {
   src: string,
-  title?: string
+  title?: string,
+  onLoad?: Function,
 }
 
-export default function StandaloneImage ({ src, title }: Props): React.Node {
+export default function StandaloneImage ({ src, title, onLoad }: Props): React.Node {
+  const [isLoading, setIsLoading] = React.useState(true)
+  const handleOnLoad = () => setIsLoading(false)
+  React.useEffect(
+    () => {
+      if (isLoading === false && onLoad && typeof onLoad === 'function') {
+        onLoad()
+      }
+    },
+    [isLoading]
+  )
+
   return (
     <div className={styles.StandaloneImageWrapper}>
+      {isLoading && <div className='be-icon-multi-image' />}
       <div className={styles.ImageIn}>
         <div className={styles.isImage}>
-          <img src={src} className={styles.Img} alt='avatar' />
+          <img src={src} className={styles.Img} alt='avatar' onLoad={handleOnLoad} />
           <div className={styles.Mask}>
             <div className={styles.Pointer}>
               <a href={src} className='be-icon-enlarge' target='_blank' />
