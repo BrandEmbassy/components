@@ -3,19 +3,18 @@
 namespace BrandEmbassy\Components;
 
 use function array_map;
-use function array_reduce;
+use function implode;
 
 final class ArrayRenderer
 {
     /**
      * @param UiComponent[]|string[] $components
-     * @param string                 $separator
      * @return string
      */
-    public static function render(array $components, string $separator = ''): string
+    public static function render(array $components): string
     {
         $rendered = array_map(
-            function ($component): string {
+            static function ($component): string {
                 if ($component instanceof UiComponent) {
                     return $component->render();
                 }
@@ -25,16 +24,6 @@ final class ArrayRenderer
             $components
         );
 
-        $reduced = array_reduce(
-            $rendered,
-            function (string $carry, string $item) use ($separator): string {
-                $itemsSeparator = $carry !== '' ? $separator : '';
-
-                return $carry . $itemsSeparator . $item;
-            },
-            ''
-        );
-
-        return $reduced;
+        return implode('', $rendered);
     }
 }

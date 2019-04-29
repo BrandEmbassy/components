@@ -6,7 +6,7 @@ use BrandEmbassy\Components\SnapshotAssertTrait;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use PHPUnit\Framework\TestCase;
 
-class ParagraphTest extends TestCase
+final class ParagraphTest extends TestCase
 {
     use SnapshotAssertTrait;
 
@@ -30,13 +30,21 @@ class ParagraphTest extends TestCase
         $padding10 = UtilitiesOption::byValue(UtilitiesOption::PADDING_10);
 
         return [
-            'More lines' => [
+            'More lines with separator'    => [
                 __DIR__ . '/__snapshots__/pMoreLines.html',
-                new Paragraph(['Some text', 'Another line'], [$padding10], Paragraph::NEW_LINE),
+                new Paragraph(['Some text', 'Another line'], [$padding10], new NewLine()),
             ],
-            'One line'   => [
+            'More lines without separator' => [
+                __DIR__ . '/__snapshots__/pMoreLinesWithoutSeparator.html',
+                new Paragraph(['Some text', 'Another line'], [$padding10]),
+            ],
+            'One line'                     => [
                 __DIR__ . '/__snapshots__/pOneLine.html',
                 new Paragraph('Some text', [$padding10]),
+            ],
+            'One line with separator'      => [
+                __DIR__ . '/__snapshots__/pOneLine.html',
+                new Paragraph('Some text', [$padding10], new NewLine()),
             ],
         ];
     }

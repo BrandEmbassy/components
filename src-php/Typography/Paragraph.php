@@ -3,15 +3,17 @@
 namespace BrandEmbassy\Components\Typography;
 
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\EmptyComponent;
 use BrandEmbassy\Components\EnumValuesToString;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
+use function array_shift;
+use function assert;
+use function count;
 use function is_array;
 
 final class Paragraph implements UiComponent
 {
-    public const NEW_LINE = '<br />';
-
     /**
      * @var UiComponent[]|string[]
      */
@@ -22,29 +24,49 @@ final class Paragraph implements UiComponent
      */
     private $utilityOptions;
 
-    /**
-     * @var string
-     */
-    private $childrenSeparator;
-
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param UtilitiesOption[]                         $utilityOptions
-     * @param string                                    $childrenSeparator
+     * @param UiComponent                               $childrenSeparator
      */
-    public function __construct($children, array $utilityOptions = [], string $childrenSeparator = '')
+    public function __construct($children, array $utilityOptions = [], ?UiComponent $childrenSeparator = null)
     {
-        $this->children = is_array($children) ? $children : [$children];
+        $this->children = $this->getChildrenMixedWithSeparator(
+            is_array($children) ? $children : [$children],
+            $childrenSeparator ?? new EmptyComponent()
+        );
         $this->utilityOptions = EnumValuesToString::transform($utilityOptions);
-        $this->childrenSeparator = $childrenSeparator;
     }
 
 
     public function render(): string
     {
         return '<p class="' . $this->utilityOptions . '">'
-            . ArrayRenderer::render($this->children, $this->childrenSeparator)
+            . ArrayRenderer::render($this->children)
             . '</p>';
+    }
+
+
+    /**
+     * @param UiComponent[]|string[] $children
+     * @param UiComponent            $separator
+     * @return UiComponent[]|string[]
+     */
+    private function getChildrenMixedWithSeparator(array $children, UiComponent $separator): array
+    {
+        $childrenWithSeparator = [];
+
+        while (count($children) > 0) {
+            if ($childrenWithSeparator !== []) {
+                $childrenWithSeparator[] = $separator;
+            }
+
+            $childToAdd = array_shift($children);
+            assert($childToAdd !== null);
+            $childrenWithSeparator[] = $childToAdd;
+        }
+
+        return $childrenWithSeparator;
     }
 }

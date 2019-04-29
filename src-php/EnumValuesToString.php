@@ -18,7 +18,7 @@ final class EnumValuesToString
     public static function transform(array $options): string
     {
         $optionsAsString = array_map(
-            function (Enum $option): string {
+            static function (Enum $option): string {
                 $value = $option->getValue();
                 assert(is_string($value) || is_int($value));
 

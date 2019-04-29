@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Text;
 
 use BrandEmbassy\Components\ArrayRenderer;
+use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
 use function is_array;
 
@@ -32,6 +33,8 @@ final class TextWithTitle implements UiComponent
 
     public function render(): string
     {
-        return '<span title="' . $this->title . '">' . ArrayRenderer::render($this->children) . '</span>';
+        return '<span title="' . StringEscaper::escapeHtmlAttribute($this->title) . '">'
+            . ArrayRenderer::render($this->children)
+            . '</span>';
     }
 }

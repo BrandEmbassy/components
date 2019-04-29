@@ -6,7 +6,7 @@ use BrandEmbassy\Components\SnapshotAssertTrait;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use PHPUnit\Framework\TestCase;
 
-final class HeaderTest extends TestCase
+final class HeadingTest extends TestCase
 {
     use SnapshotAssertTrait;
 
