@@ -11,9 +11,31 @@ class StandardTagComponentTest extends TestCase
     use SnapshotAssertTrait;
 
 
-    public function testRenderTagWithClass(): void
+    /**
+     * @dataProvider standardTagComponentProvider
+     * @param string               $snapshotFileName
+     * @param StandardTagComponent $component
+     */
+    public function testRenderTagWithClass(string $snapshotFileName, StandardTagComponent $component): void
     {
-        $component = new StandardTagComponent('Foo', TagColor::get(TagColor::RED));
-        $this->assertSnapshot(__DIR__ . '/__snapshots__/standardTag.html', $component);
+        $this->assertSnapshot($snapshotFileName, $component);
+    }
+
+
+    /**
+     * @return mixed[]
+     */
+    public function standardTagComponentProvider(): array
+    {
+        return [
+            [
+                __DIR__ . '/__snapshots__/standardTag.html',
+                new StandardTagComponent('Foo', TagColor::get(TagColor::RED)),
+            ],
+            [
+                __DIR__ . '/__snapshots__/standardTagWithXssTitle.html',
+                new StandardTagComponent('<script>alert(\'I am XSS Attack\');</script>', TagColor::get(TagColor::RED)),
+            ],
+        ];
     }
 }

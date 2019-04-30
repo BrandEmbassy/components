@@ -64,15 +64,24 @@ final class Radio implements UiComponent
         $checkedAsHtml = $this->checked ? ' checked="checked"' : '';
         $disabled = $this->disabled ? ' disabled' : '';
 
-        $inputHtmlTemplate = '<input' . $disabled . ' type="radio" id="%s" name="%s" value="%s"%s />';
-        $inputHtml = sprintf($inputHtmlTemplate, $this->id, $this->name, $this->value, $checkedAsHtml);
+        $escapedId = StringEscaper::escapeHtmlAttribute($this->id);
+        StringEscaper::validateInputName($this->name);
 
-        $onclick = sprintf('onclick="document.getElementById(\'%s\').click();"', $this->id);
+        $inputHtmlTemplate = '<input' . $disabled . ' type="radio" id="%s" name="%s" value="%s"%s />';
+        $inputHtml = sprintf(
+            $inputHtmlTemplate,
+            $escapedId,
+            $this->name,
+            StringEscaper::escapeHtmlAttribute($this->value),
+            $checkedAsHtml
+        );
+
+        $onclick = sprintf('onclick="document.getElementById(\'%s\').click();"', $escapedId);
 
         $html = sprintf('<div class="Radio__RadioContent" %s>', $onclick);
         $html .= '<div class="Radio__Radio">'
             . $inputHtml
-            . sprintf('<label for="%s"></label>', $this->id)
+            . sprintf('<label for="%s"></label>', $escapedId)
             . '</div>';
         $html .= sprintf('<div class="Radio__Label">%s</div>', StringEscaper::escapeHtml($this->label));
         $html .= '</div>';

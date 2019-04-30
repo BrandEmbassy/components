@@ -27,17 +27,31 @@ final class RadioTest extends TestCase
     public function radioDataProvider(): array
     {
         return [
-            'radioChecked'    => [
+            'radioChecked'       => [
                 __DIR__ . '/__snapshots__/radioChecked.html',
                 new Radio('Foo label', 'fooId', 'fooName', 'fooValue', Radio::CHECKED),
             ],
-            'radioNotChecked' => [
+            'radioNotChecked'    => [
                 __DIR__ . '/__snapshots__/radioNotChecked.html',
                 new Radio('Foo label', 'fooId', 'fooName', 'fooValue', Radio::NOT_CHECKED),
             ],
-            'radioDisabled'   => [
+            'radioDisabled'      => [
                 __DIR__ . '/__snapshots__/radioDisabled.html',
                 new Radio('', 'fooId', 'fooName', '', Radio::NOT_CHECKED, true),
+            ],
+            'radioXss'           => [
+                __DIR__ . '/__snapshots__/radioXss.html',
+                new Radio(
+                    '<strong>label</strong>',
+                    '<strong>id</strong>',
+                    'name',
+                    '<strong>value</strong>',
+                    Radio::CHECKED
+                ),
+            ],
+            'radioWithArrayName' => [
+                __DIR__ . '/__snapshots__/radioWithArrayName.html',
+                new Radio('Foo label', 'fooId', 'fooName[bar]', 'fooValue', Radio::CHECKED),
             ],
         ];
     }

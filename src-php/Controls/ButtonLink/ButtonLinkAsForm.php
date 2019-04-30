@@ -25,6 +25,10 @@ final class ButtonLinkAsForm implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
+     * @param UriInterface                              $uri
+     * @param Color|null                                $color
+     * @param IconType|null                             $icon
+     * @param Size|null                                 $size
      */
     public function __construct(
         $children,

@@ -51,7 +51,7 @@ final class TableTest extends TestCase
         $table->setColumnsNotInDataSet(['actions']);
         $table->setCellRenderCallback(
             'actions',
-            function (CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell {
+            static function (CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell {
                 $link = new Link(
                     'Delete',
                     new Uri('http://yolo?id=' . $rowData->getRowIdentifier()),

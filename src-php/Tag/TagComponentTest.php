@@ -5,14 +5,36 @@ namespace BrandEmbassy\Components\Tag;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use PHPUnit\Framework\TestCase;
 
-class TagComponentTest extends TestCase
+final class TagComponentTest extends TestCase
 {
     use SnapshotAssertTrait;
 
 
-    public function testRenderTagWithHslStyle(): void
+    /**
+     * @dataProvider tagComponentProvider
+     * @param string       $snapshotFileName
+     * @param TagComponent $component
+     */
+    public function testRenderTagWithHslStyle(string $snapshotFileName, TagComponent $component): void
     {
-        $component = new TagComponent('#12f457', 'Foo');
-        $this->assertSnapshot(__DIR__ . '/__snapshots__/hslTag.html', $component);
+        $this->assertSnapshot($snapshotFileName, $component);
+    }
+
+
+    /**
+     * @return mixed[]
+     */
+    public function tagComponentProvider(): array
+    {
+        return [
+            [
+                __DIR__ . '/__snapshots__/hslTag.html',
+                new TagComponent('#12f457', 'Foo'),
+            ],
+            [
+                __DIR__ . '/__snapshots__/hslTagWithXssTitle.html',
+                new TagComponent('#12f457', '<script>alert(\'I am XSS Attack\');</script>'),
+            ],
+        ];
     }
 }

@@ -86,7 +86,7 @@ final class Table implements UiComponent
     private function renderHead(): string
     {
         $headerCells = array_map(
-            function (ColumnDefinition $columnDefinition): HeaderCell {
+            static function (ColumnDefinition $columnDefinition): HeaderCell {
                 return new HeaderCell($columnDefinition->getHeaderLabel(), $columnDefinition->getAlign());
             },
             $this->tableDefinition->getColumnDefinitions()
