@@ -79,6 +79,7 @@ function PluginWrapper (props: Props): ?React.Node {
       )
     }
   }
+  return null
 }
 
 PluginWrapper.defaultProps = {
