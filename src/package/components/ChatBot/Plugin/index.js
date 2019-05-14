@@ -23,12 +23,12 @@ const isPluginWithoutWrapper = (element: any): boolean => {
   return Boolean(element && element.type === ElementType.QUICK_REPLIES)
 }
 
-export default function PluginWrapper (props: Props): ?React.Node {
+function PluginWrapper (props: Props): ?React.Node {
   const {
-    elements = [],
+    elements,
     onClick,
-    hideButtons = false,
-    disableCarusel = false,
+    hideButtons,
+    disableCarusel,
     width,
     onLoad
   } = props
@@ -80,3 +80,11 @@ export default function PluginWrapper (props: Props): ?React.Node {
     }
   }
 }
+
+PluginWrapper.defaultProps = {
+  elements: [],
+  hideButtons: false,
+  disableCarusel: false
+}
+
+export default PluginWrapper
