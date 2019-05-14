@@ -1,5 +1,5 @@
 // @flow
-import React, { PureComponent } from 'react'
+import * as React from 'react'
 import Plugin from './Plugin'
 import Carusel from './Carusel'
 import Gallery from './Gallery'
@@ -19,33 +19,40 @@ type Props = {
 
 export { isPluginVideo }
 
-export default class PluginWrapper extends PureComponent<Props> {
-  static defaultProps = {
-    elements: [],
-    hideButtons: false,
-    disableCarusel: false
-  }
+const isPluginWithoutWrapper = (element: any): boolean => {
+  return Boolean(element && element.type === ElementType.QUICK_REPLIES)
+}
 
-  isPluginWithoutWrapper (element: any) {
-    return element && element.type === ElementType.QUICK_REPLIES
-  }
+export default function PluginWrapper (props: Props): ?React.Node {
+  const {
+    elements = [],
+    onClick,
+    hideButtons = false,
+    disableCarusel = false,
+    width,
+    onLoad
+  } = props
 
-  render () {
-    const {
-      elements,
-      onClick,
-      hideButtons,
-      disableCarusel,
-      width,
-      onLoad
-    } = this.props
+  if (elements && elements.length > 0) {
     const type = elements[0].type
 
     if (elements.length > 1 && disableCarusel) {
-      return <Gallery elements={elements} onClick={onClick} hideButtons={hideButtons} />
+      return (
+        <Gallery
+          elements={elements}
+          onClick={onClick}
+          hideButtons={hideButtons}
+        />
+      )
     } else if (elements.length > 1) {
-      return <Carusel elements={elements} onClick={onClick} hideButtons={hideButtons} />
-    } else if (this.isPluginWithoutWrapper(elements[0])) {
+      return (
+        <Carusel
+          elements={elements}
+          onClick={onClick}
+          hideButtons={hideButtons}
+        />
+      )
+    } else if (isPluginWithoutWrapper(elements[0])) {
       return (
         <div className={styles.PluginFrame} data-cy={type}>
           <ComposedElement
@@ -59,15 +66,17 @@ export default class PluginWrapper extends PureComponent<Props> {
         </div>
       )
     } else {
-      return <Plugin
-        elements={elements}
-        onClick={onClick}
-        onLoad={onLoad}
-        hideButtons={hideButtons}
-        width={width}
-        level={1}
-        type={type}
-      />
+      return (
+        <Plugin
+          elements={elements}
+          onClick={onClick}
+          onLoad={onLoad}
+          hideButtons={hideButtons}
+          width={width}
+          level={1}
+          type={type}
+        />
+      )
     }
   }
 }
