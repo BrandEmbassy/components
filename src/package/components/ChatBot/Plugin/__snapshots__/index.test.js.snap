@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Plugin index renders empty compoment if elements are empty array 1`] = `""`;
+
 exports[`Plugin index should render carusel inside plugin 1`] = `
 <PluginWrapper
   disableCarusel={false}
