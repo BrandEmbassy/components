@@ -3,9 +3,7 @@
 exports[`Plugin should render plugin 1`] = `
 <div>
   <div>
-    <div>
-      <div />
-    </div>
+    <div />
   </div>
 </div>
 `;

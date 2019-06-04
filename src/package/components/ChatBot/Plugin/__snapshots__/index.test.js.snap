@@ -2085,69 +2085,116 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
     type="MENU"
     width="100%"
   >
-    <div>
+    <div
+      data-cy="MENU"
+      data-selector="MENU"
+    >
       <div
-        data-cy="MENU"
-      >
-        <div
-          style={
-            Object {
-              "width": "100%",
-            }
+        style={
+          Object {
+            "width": "100%",
           }
+        }
+      >
+        <ComposedElement
+          elements={
+            Array [
+              Object {
+                "elements": Array [
+                  Object {
+                    "id": "Uk4tPy1h2",
+                    "type": "IMAGE",
+                    "url": "https://picsum.photos/300/150",
+                  },
+                  Object {
+                    "id": "Ck4tPy1h3",
+                    "text": "Hello!",
+                    "type": "TITLE",
+                  },
+                  Object {
+                    "id": "Ek4tPy1h1",
+                    "text": "Lorem Impsum...",
+                    "type": "TEXT",
+                  },
+                  Object {
+                    "id": "Nkm0hRAiE",
+                    "postback": "click-on-button-1",
+                    "text": "Click me!",
+                    "type": "BUTTON",
+                  },
+                  Object {
+                    "id": "NkGJ6CAiN",
+                    "postback": "click-on-button-2",
+                    "text": "No click me!",
+                    "type": "BUTTON",
+                  },
+                  Object {
+                    "id": "EyCyTRCi4",
+                    "postback": "click-on-button-3",
+                    "text": "Aww don\`t click on me",
+                    "type": "BUTTON",
+                  },
+                ],
+                "id": "Ek4tPy1h4",
+                "type": "MENU",
+              },
+            ]
+          }
+          hideButtons={false}
+          level={1}
+          onClick={[MockFunction]}
+          type="MENU"
+          width="100%"
         >
-          <ComposedElement
-            elements={
-              Array [
-                Object {
-                  "elements": Array [
-                    Object {
-                      "id": "Uk4tPy1h2",
-                      "type": "IMAGE",
-                      "url": "https://picsum.photos/300/150",
-                    },
-                    Object {
-                      "id": "Ck4tPy1h3",
-                      "text": "Hello!",
-                      "type": "TITLE",
-                    },
-                    Object {
-                      "id": "Ek4tPy1h1",
-                      "text": "Lorem Impsum...",
-                      "type": "TEXT",
-                    },
-                    Object {
-                      "id": "Nkm0hRAiE",
-                      "postback": "click-on-button-1",
-                      "text": "Click me!",
-                      "type": "BUTTON",
-                    },
-                    Object {
-                      "id": "NkGJ6CAiN",
-                      "postback": "click-on-button-2",
-                      "text": "No click me!",
-                      "type": "BUTTON",
-                    },
-                    Object {
-                      "id": "EyCyTRCi4",
-                      "postback": "click-on-button-3",
-                      "text": "Aww don\`t click on me",
-                      "type": "BUTTON",
-                    },
-                  ],
-                  "id": "Ek4tPy1h4",
-                  "type": "MENU",
-                },
-              ]
-            }
-            hideButtons={false}
-            level={1}
-            onClick={[MockFunction]}
-            type="MENU"
-            width="100%"
-          >
-            <div>
-              <Element
+          <div>
+            <Element
+              elements={
+                Array [
+                  Object {
+                    "id": "Uk4tPy1h2",
+                    "type": "IMAGE",
+                    "url": "https://picsum.photos/300/150",
+                  },
+                  Object {
+                    "id": "Ck4tPy1h3",
+                    "text": "Hello!",
+                    "type": "TITLE",
+                  },
+                  Object {
+                    "id": "Ek4tPy1h1",
+                    "text": "Lorem Impsum...",
+                    "type": "TEXT",
+                  },
+                  Object {
+                    "id": "Nkm0hRAiE",
+                    "postback": "click-on-button-1",
+                    "text": "Click me!",
+                    "type": "BUTTON",
+                  },
+                  Object {
+                    "id": "NkGJ6CAiN",
+                    "postback": "click-on-button-2",
+                    "text": "No click me!",
+                    "type": "BUTTON",
+                  },
+                  Object {
+                    "id": "EyCyTRCi4",
+                    "postback": "click-on-button-3",
+                    "text": "Aww don\`t click on me",
+                    "type": "BUTTON",
+                  },
+                ]
+              }
+              hideButtons={false}
+              id="Ek4tPy1h4"
+              key="Ek4tPy1h4"
+              level={1}
+              onClick={[MockFunction]}
+              standalone={true}
+              type="MENU"
+              width="100%"
+            >
+              <ComposedElement
                 elements={
                   Array [
                     Object {
@@ -2187,135 +2234,101 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                 }
                 hideButtons={false}
                 id="Ek4tPy1h4"
-                key="Ek4tPy1h4"
-                level={1}
+                level={2}
                 onClick={[MockFunction]}
+                showTextAsMessage={false}
                 standalone={true}
                 type="MENU"
                 width="100%"
               >
-                <ComposedElement
-                  elements={
-                    Array [
-                      Object {
-                        "id": "Uk4tPy1h2",
-                        "type": "IMAGE",
-                        "url": "https://picsum.photos/300/150",
-                      },
-                      Object {
-                        "id": "Ck4tPy1h3",
-                        "text": "Hello!",
-                        "type": "TITLE",
-                      },
-                      Object {
-                        "id": "Ek4tPy1h1",
-                        "text": "Lorem Impsum...",
-                        "type": "TEXT",
-                      },
-                      Object {
-                        "id": "Nkm0hRAiE",
-                        "postback": "click-on-button-1",
-                        "text": "Click me!",
-                        "type": "BUTTON",
-                      },
-                      Object {
-                        "id": "NkGJ6CAiN",
-                        "postback": "click-on-button-2",
-                        "text": "No click me!",
-                        "type": "BUTTON",
-                      },
-                      Object {
-                        "id": "EyCyTRCi4",
-                        "postback": "click-on-button-3",
-                        "text": "Aww don\`t click on me",
-                        "type": "BUTTON",
-                      },
-                    ]
-                  }
-                  hideButtons={false}
-                  id="Ek4tPy1h4"
-                  level={2}
-                  onClick={[MockFunction]}
-                  showTextAsMessage={false}
-                  standalone={true}
-                  type="MENU"
-                  width="100%"
-                >
-                  <div>
-                    <Element
-                      hideButtons={false}
-                      id="Uk4tPy1h2"
-                      key="Uk4tPy1h2"
-                      level={2}
-                      onClick={[MockFunction]}
-                      showTextAsMessage={false}
-                      standalone={false}
-                      type="IMAGE"
-                      url="https://picsum.photos/300/150"
-                      width="100%"
+                <div>
+                  <Element
+                    hideButtons={false}
+                    id="Uk4tPy1h2"
+                    key="Uk4tPy1h2"
+                    level={2}
+                    onClick={[MockFunction]}
+                    showTextAsMessage={false}
+                    standalone={false}
+                    type="IMAGE"
+                    url="https://picsum.photos/300/150"
+                    width="100%"
+                  >
+                    <Image
+                      src="https://picsum.photos/300/150"
                     >
-                      <Image
-                        src="https://picsum.photos/300/150"
-                      >
+                      <div>
+                        <div
+                          className="be-icon-multi-image"
+                        />
                         <div>
-                          <div
-                            className="be-icon-multi-image"
+                          <img
+                            onLoad={[Function]}
+                            src="https://picsum.photos/300/150"
                           />
-                          <div>
-                            <img
-                              onLoad={[Function]}
-                              src="https://picsum.photos/300/150"
-                            />
-                          </div>
                         </div>
-                      </Image>
-                    </Element>
-                    <Element
-                      hideButtons={false}
-                      id="Ck4tPy1h3"
-                      key="Ck4tPy1h3"
-                      level={2}
-                      onClick={[MockFunction]}
-                      showTextAsMessage={false}
-                      standalone={false}
-                      text="Hello!"
-                      type="TITLE"
-                      width="100%"
+                      </div>
+                    </Image>
+                  </Element>
+                  <Element
+                    hideButtons={false}
+                    id="Ck4tPy1h3"
+                    key="Ck4tPy1h3"
+                    level={2}
+                    onClick={[MockFunction]}
+                    showTextAsMessage={false}
+                    standalone={false}
+                    text="Hello!"
+                    type="TITLE"
+                    width="100%"
+                  >
+                    <Heading
+                      content="Hello!"
+                      level={1}
                     >
-                      <Heading
-                        content="Hello!"
-                        level={1}
-                      >
-                        <h1>
-                          Hello!
-                        </h1>
-                      </Heading>
-                    </Element>
-                    <Element
-                      hideButtons={false}
-                      id="Ek4tPy1h1"
-                      key="Ek4tPy1h1"
-                      level={2}
-                      onClick={[MockFunction]}
-                      showTextAsMessage={false}
-                      standalone={false}
-                      text="Lorem Impsum..."
-                      type="TEXT"
-                      width="100%"
+                      <h1>
+                        Hello!
+                      </h1>
+                    </Heading>
+                  </Element>
+                  <Element
+                    hideButtons={false}
+                    id="Ek4tPy1h1"
+                    key="Ek4tPy1h1"
+                    level={2}
+                    onClick={[MockFunction]}
+                    showTextAsMessage={false}
+                    standalone={false}
+                    text="Lorem Impsum..."
+                    type="TEXT"
+                    width="100%"
+                  >
+                    <Text
+                      content="Lorem Impsum..."
+                      showAsMessage={false}
                     >
-                      <Text
-                        content="Lorem Impsum..."
-                        showAsMessage={false}
-                      >
-                        <p>
-                          Lorem Impsum...
-                        </p>
-                      </Text>
-                    </Element>
-                    <Element
+                      <p>
+                        Lorem Impsum...
+                      </p>
+                    </Text>
+                  </Element>
+                  <Element
+                    hideButtons={false}
+                    id="Nkm0hRAiE"
+                    key="Nkm0hRAiE"
+                    level={2}
+                    onClick={[MockFunction]}
+                    postback="click-on-button-1"
+                    showTextAsMessage={false}
+                    standalone={false}
+                    text="Click me!"
+                    type="BUTTON"
+                    width="100%"
+                  >
+                    <Button
                       hideButtons={false}
                       id="Nkm0hRAiE"
-                      key="Nkm0hRAiE"
+                      label="Click me!"
                       level={2}
                       onClick={[MockFunction]}
                       postback="click-on-button-1"
@@ -2325,33 +2338,33 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       type="BUTTON"
                       width="100%"
                     >
-                      <Button
-                        hideButtons={false}
-                        id="Nkm0hRAiE"
-                        label="Click me!"
-                        level={2}
-                        onClick={[MockFunction]}
-                        postback="click-on-button-1"
-                        showTextAsMessage={false}
-                        standalone={false}
-                        text="Click me!"
-                        type="BUTTON"
-                        width="100%"
-                      >
-                        <div>
-                          <button
-                            onClick={[Function]}
-                            title="Click me!"
-                          >
-                            Click me!
-                          </button>
-                        </div>
-                      </Button>
-                    </Element>
-                    <Element
+                      <div>
+                        <button
+                          onClick={[Function]}
+                          title="Click me!"
+                        >
+                          Click me!
+                        </button>
+                      </div>
+                    </Button>
+                  </Element>
+                  <Element
+                    hideButtons={false}
+                    id="NkGJ6CAiN"
+                    key="NkGJ6CAiN"
+                    level={2}
+                    onClick={[MockFunction]}
+                    postback="click-on-button-2"
+                    showTextAsMessage={false}
+                    standalone={false}
+                    text="No click me!"
+                    type="BUTTON"
+                    width="100%"
+                  >
+                    <Button
                       hideButtons={false}
                       id="NkGJ6CAiN"
-                      key="NkGJ6CAiN"
+                      label="No click me!"
                       level={2}
                       onClick={[MockFunction]}
                       postback="click-on-button-2"
@@ -2361,33 +2374,33 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       type="BUTTON"
                       width="100%"
                     >
-                      <Button
-                        hideButtons={false}
-                        id="NkGJ6CAiN"
-                        label="No click me!"
-                        level={2}
-                        onClick={[MockFunction]}
-                        postback="click-on-button-2"
-                        showTextAsMessage={false}
-                        standalone={false}
-                        text="No click me!"
-                        type="BUTTON"
-                        width="100%"
-                      >
-                        <div>
-                          <button
-                            onClick={[Function]}
-                            title="No click me!"
-                          >
-                            No click me!
-                          </button>
-                        </div>
-                      </Button>
-                    </Element>
-                    <Element
+                      <div>
+                        <button
+                          onClick={[Function]}
+                          title="No click me!"
+                        >
+                          No click me!
+                        </button>
+                      </div>
+                    </Button>
+                  </Element>
+                  <Element
+                    hideButtons={false}
+                    id="EyCyTRCi4"
+                    key="EyCyTRCi4"
+                    level={2}
+                    onClick={[MockFunction]}
+                    postback="click-on-button-3"
+                    showTextAsMessage={false}
+                    standalone={false}
+                    text="Aww don\`t click on me"
+                    type="BUTTON"
+                    width="100%"
+                  >
+                    <Button
                       hideButtons={false}
                       id="EyCyTRCi4"
-                      key="EyCyTRCi4"
+                      label="Aww don\`t click on me"
                       level={2}
                       onClick={[MockFunction]}
                       postback="click-on-button-3"
@@ -2397,35 +2410,21 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                       type="BUTTON"
                       width="100%"
                     >
-                      <Button
-                        hideButtons={false}
-                        id="EyCyTRCi4"
-                        label="Aww don\`t click on me"
-                        level={2}
-                        onClick={[MockFunction]}
-                        postback="click-on-button-3"
-                        showTextAsMessage={false}
-                        standalone={false}
-                        text="Aww don\`t click on me"
-                        type="BUTTON"
-                        width="100%"
-                      >
-                        <div>
-                          <button
-                            onClick={[Function]}
-                            title="Aww don\`t click on me"
-                          >
-                            Aww don\`t click on me
-                          </button>
-                        </div>
-                      </Button>
-                    </Element>
-                  </div>
-                </ComposedElement>
-              </Element>
-            </div>
-          </ComposedElement>
-        </div>
+                      <div>
+                        <button
+                          onClick={[Function]}
+                          title="Aww don\`t click on me"
+                        >
+                          Aww don\`t click on me
+                        </button>
+                      </div>
+                    </Button>
+                  </Element>
+                </div>
+              </ComposedElement>
+            </Element>
+          </div>
+        </ComposedElement>
       </div>
     </div>
   </Plugin>
