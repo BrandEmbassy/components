@@ -3,6 +3,7 @@
 exports[`Gallery should render gallery 1`] = `
 <div
   data-cy="GALLERY"
+  data-selector="GALLERY"
 >
   <div>
     <div

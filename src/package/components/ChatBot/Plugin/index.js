@@ -54,7 +54,7 @@ function PluginWrapper (props: Props): ?React.Node {
       )
     } else if (isPluginWithoutWrapper(elements[0])) {
       return (
-        <div className={styles.PluginFrame} data-cy={type}>
+        <div className={styles.PluginFrame} data-cy={type} data-selector={type}>
           <ComposedElement
             elements={elements}
             onClick={onClick}

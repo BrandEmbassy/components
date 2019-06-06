@@ -3,6 +3,7 @@
 exports[`Carusel should render carusel 1`] = `
 <div
   data-cy="CARUSEL"
+  data-selector="CARUSEL"
 >
   <div>
     <div />
