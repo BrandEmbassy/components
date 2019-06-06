@@ -256,6 +256,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
   >
     <div
       data-cy="CARUSEL"
+      data-selector="CARUSEL"
     >
       <div>
         <div
@@ -1363,6 +1364,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
   >
     <div
       data-cy="GALLERY"
+      data-selector="GALLERY"
     >
       <div>
         <ResizeDetector
@@ -2482,6 +2484,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
 >
   <div
     data-cy="QUICK_REPLIES"
+    data-selector="QUICK_REPLIES"
   >
     <ComposedElement
       elements={
