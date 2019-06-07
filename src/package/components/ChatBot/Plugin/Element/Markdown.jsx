@@ -1,16 +1,24 @@
 // @flow
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import type { ReactMarkdownProps } from 'react-markdown'
 import style from './Markdown.css'
 
 type Props = {
-  text: string
+  text: string,
+  options?: ReactMarkdownProps
 }
 
-export default function Markdown (props: Props) {
+function Markdown ({ text, options }: Props) {
   return (
     <div className={style.Markdown}>
-      <ReactMarkdown source={props.text} />
+      <ReactMarkdown source={text} {...options} />
     </div>
   )
 }
+
+Markdown.defaultProps = {
+  options: { linkTarget: '_blank' }
+}
+
+export default Markdown

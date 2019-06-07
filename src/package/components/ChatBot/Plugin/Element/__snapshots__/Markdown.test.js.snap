@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown renders component with formatted text 1`] = `
+<Markdown
+  options={
+    Object {
+      "linkTarget": "_blank",
+    }
+  }
+  text="**Lorem** ipsum"
+>
+  <div>
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      linkTarget="_blank"
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="**Lorem** ipsum"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1"
+      >
+        <p
+          key="paragraph-1-1"
+        >
+          <strong
+            key="strong-1-1"
+          >
+            <TextRenderer
+              key="text-1-3"
+              nodeKey="text-1-3"
+              value="Lorem"
+            >
+              Lorem
+            </TextRenderer>
+          </strong>
+          <TextRenderer
+            key="text-1-10"
+            nodeKey="text-1-10"
+            value=" ipsum"
+          >
+             ipsum
+          </TextRenderer>
+        </p>
+      </Root>
+    </ReactMarkdown>
+  </div>
+</Markdown>
+`;
+
+exports[`Markdown renders links with target="blank" 1`] = `
+<Markdown
+  options={
+    Object {
+      "linkTarget": "_blank",
+    }
+  }
+  text="**Lorem** ipsum [BE](https://brandembassy.com)"
+>
+  <div>
+    <ReactMarkdown
+      astPlugins={Array []}
+      escapeHtml={true}
+      linkTarget="_blank"
+      plugins={Array []}
+      rawSourcePos={false}
+      renderers={Object {}}
+      skipHtml={false}
+      source="**Lorem** ipsum [BE](https://brandembassy.com)"
+      sourcePos={false}
+      transformLinkUri={[Function]}
+    >
+      <Root
+        key="root-1-1"
+      >
+        <p
+          key="paragraph-1-1"
+        >
+          <strong
+            key="strong-1-1"
+          >
+            <TextRenderer
+              key="text-1-3"
+              nodeKey="text-1-3"
+              value="Lorem"
+            >
+              Lorem
+            </TextRenderer>
+          </strong>
+          <TextRenderer
+            key="text-1-10"
+            nodeKey="text-1-10"
+            value=" ipsum "
+          >
+             ipsum 
+          </TextRenderer>
+          <a
+            href="https://brandembassy.com"
+            key="link-1-17"
+            target="_blank"
+          >
+            <TextRenderer
+              key="text-1-18"
+              nodeKey="text-1-18"
+              value="BE"
+            >
+              BE
+            </TextRenderer>
+          </a>
+        </p>
+      </Root>
+    </ReactMarkdown>
+  </div>
+</Markdown>
+`;
