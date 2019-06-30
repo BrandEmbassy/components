@@ -112,10 +112,11 @@
 }
 :global(.be-icon-outbound:before) {
   content: "\41";
+  transform: rotate(90deg)
 }
 :global(.be-icon-inbound:before) {
   content: "\41";
-  transform: rotate(180deg)
+  transform: rotate(270deg)
 }
 :global(.be-icon-external-link:before) {
   content: "\43";

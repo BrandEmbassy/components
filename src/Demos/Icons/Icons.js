@@ -1,318 +1,343 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import '!style-loader!css-loader!../../package/components/Base.css' //eslint-disable-line
 import styles from './Icons.css'
 
-export default class Icons extends PureComponent {
-  render () {
-    return (
-      <div className='container'>
-        <div className='row padding-20'>
-          <div className='col-xs-12'>
-            <div className={styles.Icons}>
+const copyIcon = e => {
+  const element = document.getElementById('clipboardHelper')
+  element.value = e.target.className
+  element.focus()
+  element.select()
+  document.execCommand('copy')
+  alert(`"${element.value}" was copied to clipboard`)
+}
 
-              <div className='be-icon-arrows' />
+export default function Icons () {
+  const icons = [
+    'be-icon-arrows',
 
-              <div className='be-icon-trash' />
+    'be-icon-inbound',
 
-              <div className='be-icon-pencil' />
+    'be-icon-outbound',
 
-              <div className='be-icon-check' />
+    'be-icon-hide',
+    'be-icon-eye-slash',
 
-              <div className='be-icon-cross' />
+    'be-icon-trash',
 
-              <div className='be-icon-more' />
+    'be-icon-pencil',
 
-              <div className='be-icon-plus' />
+    'be-icon-check',
 
-              <div className='be-icon-mail' />
+    'be-icon-cross',
 
-              <div className='be-icon-linkedin' />
+    'be-icon-more',
 
-              <div className='be-icon-youtube' />
+    'be-icon-plus',
 
-              <div className='be-icon-facebook' />
+    'be-icon-mail',
 
-              <div className='be-icon-twitter' />
+    'be-icon-linkedin',
 
-              <div className='be-icon-messenger' />
+    'be-icon-youtube',
 
-              <div className='be-icon-gplus' />
+    'be-icon-facebook',
 
-              <div className='be-icon-livechat' />
+    'be-icon-twitter',
 
-              <div className='be-icon-forum' />
+    'be-icon-messenger',
 
-              <div className='be-icon-copy' />
+    'be-icon-gplus',
 
-              <div className='be-icon-long-arrow-left' />
+    'be-icon-livechat',
 
-              <div className='be-icon-vk' />
+    'be-icon-forum',
 
-              <div className='be-icon-search' />
+    'be-icon-copy',
 
-              <div className='be-icon-calendar-o' />
+    'be-icon-long-arrow-left',
 
-              <div className='be-icon-calendar' />
+    'be-icon-vk',
 
-              <div className='be-icon-refresh' />
+    'be-icon-search',
 
-              <div className='be-icon-reply' />
+    'be-icon-calendar-o',
 
-              <div className='be-icon-external-link' />
+    'be-icon-calendar',
 
-              <div className='be-icon-download' />
+    'be-icon-refresh',
 
-              <div className='be-icon-user-secret' />
+    'be-icon-reply',
 
-              <div className='be-icon-users' />
+    'be-icon-external-link',
 
-              <div className='be-icon-link' />
+    'be-icon-download',
 
-              <div className='be-icon-info-circle' />
+    'be-icon-user-secret',
 
-              <div className='be-icon-spinner' />
+    'be-icon-users',
 
-              <div className='be-icon-arrow-right' />
+    'be-icon-link',
 
-              <div className='be-icon-arrow-down' />
+    'be-icon-info-circle',
 
-              <div className='be-icon-icon-insta' />
+    'be-icon-spinner',
 
-              <div className='be-icon-activity' />
+    'be-icon-arrow-right',
 
-              <div className='be-icon-flags' />
+    'be-icon-arrow-down',
 
-              <div className='be-icon-foods' />
+    'be-icon-icon-insta',
 
-              <div className='be-icon-people' />
+    'be-icon-activity',
 
-              <div className='be-icon-recent' />
+    'be-icon-flags',
 
-              <div className='be-icon-symbols' />
+    'be-icon-foods',
 
-              <div className='be-icon-places' />
+    'be-icon-people',
 
-              <div className='be-icon-nature' />
+    'be-icon-recent',
 
-              <div className='be-icon-objects' />
+    'be-icon-symbols',
 
-              <div className='be-icon-expand' />
+    'be-icon-places',
 
-              <div className='be-icon-inbox' />
+    'be-icon-nature',
 
-              <div className='be-icon-pending' />
+    'be-icon-objects',
 
-              <div className='be-icon-starred' />
+    'be-icon-expand',
 
-              <div className='be-icon-life-ring' />
+    'be-icon-inbox',
 
-              <div className='be-icon-sec-settings' />
+    'be-icon-pending',
 
-              <div className='be-icon-arrow-left' />
+    'be-icon-starred',
 
-              <div className='be-icon-resolved' />
+    'be-icon-life-ring',
 
-              <div className='be-icon-sec-care' />
+    'be-icon-sec-settings',
 
-              <div className='be-icon-sec-crm' />
+    'be-icon-arrow-left',
 
-              <div className='be-icon-escalated' />
+    'be-icon-resolved',
 
-              <div className='be-icon-sec-reports' />
+    'be-icon-sec-care',
 
-              <div className='be-icon-plus-1' />
+    'be-icon-sec-crm',
 
-              <div className='be-icon-flag' />
+    'be-icon-escalated',
 
-              <div className='be-icon-envelope' />
+    'be-icon-sec-reports',
 
-              <div className='be-icon-logout' />
+    'be-icon-plus-1',
 
-              <div className='be-icon-be-symbol' />
+    'be-icon-flag',
 
-              <div className='be-icon-lock' />
+    'be-icon-envelope',
 
-              <div className='be-icon-icon-dm' />
+    'be-icon-logout',
 
-              <div className='be-icon-sec-engage' />
+    'be-icon-be-symbol',
 
-              <div className='be-icon-icon-cross' />
+    'be-icon-lock',
 
-              <div className='be-icon-phone' />
+    'be-icon-icon-dm',
 
-              <div className='be-icon-video-camera' />
+    'be-icon-sec-engage',
 
-              <div className='be-icon-volume-off' />
+    'be-icon-icon-cross',
 
-              <div className='be-icon-volume-up' />
+    'be-icon-phone',
 
-              <div className='be-icon-icon-minimize' />
+    'be-icon-video-camera',
 
-              <div className='be-icon-zendesk' />
+    'be-icon-volume-off',
 
-              <div className='be-icon-tag' />
+    'be-icon-volume-up',
 
-              <div className='be-icon-sentiment' />
+    'be-icon-icon-minimize',
 
-              <div className='be-icon-reply-2' />
+    'be-icon-zendesk',
 
-              <div className='be-icon-random' />
+    'be-icon-tag',
 
-              <div className='be-icon-repeat' />
+    'be-icon-sentiment',
 
-              <div className='be-icon-alert' />
+    'be-icon-reply-2',
 
-              <div className='be-icon-long-arrow-right' />
+    'be-icon-random',
 
-              <div className='be-icon-api' />
+    'be-icon-repeat',
 
-              <div className='be-icon-chevron-down' />
+    'be-icon-alert',
 
-              <div className='be-icon-copy-1' />
+    'be-icon-long-arrow-right',
 
-              <div className='be-icon-drag-hor' />
+    'be-icon-api',
 
-              <div className='be-icon-drag-vert' />
+    'be-icon-chevron-down',
 
-              <div className='be-icon-gallery' />
+    'be-icon-copy-1',
 
-              <div className='be-icon-menu' />
+    'be-icon-drag-hor',
 
-              <div className='be-icon-play' />
+    'be-icon-drag-vert',
 
-              <div className='be-icon-quick-replies' />
+    'be-icon-gallery',
 
-              <div className='be-icon-quit' />
+    'be-icon-menu',
 
-              <div className='be-icon-redirect' />
+    'be-icon-play',
 
-              <div className='be-icon-store' />
+    'be-icon-quick-replies',
 
-              <div className='be-icon-text' />
+    'be-icon-quit',
 
-              <div className='be-icon-multi-audio' />
+    'be-icon-redirect',
 
-              <div className='be-icon-multi-file' />
+    'be-icon-store',
 
-              <div className='be-icon-multi-image' />
+    'be-icon-text',
 
-              <div className='be-icon-multi-video' />
+    'be-icon-multi-audio',
 
-              <div className='be-icon-male' />
+    'be-icon-multi-file',
 
-              <div className='be-icon-file' />
+    'be-icon-multi-image',
 
-              <div className='be-icon-paperclip' />
+    'be-icon-multi-video',
 
-              <div className='be-icon-exclamation-triangle' />
+    'be-icon-male',
 
-              <div className='be-icon-download-1' />
+    'be-icon-file',
 
-              <div className='be-icon-external-link-square' />
+    'be-icon-paperclip',
 
-              <div className='be-icon-livechat-2' />
+    'be-icon-exclamation-triangle',
 
-              <div className='be-icon-rating-1' />
+    'be-icon-download-1',
 
-              <div className='be-icon-rating-2' />
+    'be-icon-external-link-square',
 
-              <div className='be-icon-rating-3' />
+    'be-icon-livechat-2',
 
-              <div className='be-icon-rating-5' />
+    'be-icon-rating-1',
 
-              <div className='be-icon-thumb-down' />
+    'be-icon-rating-2',
 
-              <div className='be-icon-thumb-up' />
+    'be-icon-rating-3',
 
-              <div className='be-icon-close-big' />
+    'be-icon-rating-5',
 
-              <div className='be-icon-chevron-right' />
+    'be-icon-thumb-down',
 
-              <div className='be-icon-chevron-left' />
+    'be-icon-thumb-up',
 
-              <div className='be-icon-emoji' />
+    'be-icon-close-big',
 
-              <div className='be-icon-be-logo' />
+    'be-icon-chevron-right',
 
-              <div className='be-icon-rating-4' />
+    'be-icon-chevron-left',
 
-              <div className='be-icon-arrow-drop' />
+    'be-icon-emoji',
 
-              <div className='be-icon-file-drop' />
+    'be-icon-be-logo',
 
-              <div className='be-icon-enlarge' />
+    'be-icon-rating-4',
 
-              <div className='be-icon-mail-1' />
+    'be-icon-arrow-drop',
 
-              <div className='be-icon-agent' />
+    'be-icon-file-drop',
 
-              <div className='be-icon-moon' />
+    'be-icon-enlarge',
 
-              <div className='be-icon-livechat-off' />
+    'be-icon-mail-1',
 
-              <div className='be-icon-plug' />
+    'be-icon-agent',
 
-              <div className='be-icon-bold' />
-              <div className='be-icon-underline' />
-              <div className='be-icon-italic' />
-              <div className='be-icon-list-ul' />
-              <div className='be-icon-list-ol' />
-              <div className='be-icon-align-left' />
-              <div className='be-icon-align-right' />
-              <div className='be-icon-align-justify' />
-              <div className='be-icon-align-center' />
-              <div className='be-icon-chain-broken' />
-              <div className='be-icon-sort-amount-asc' />
-              <div className='be-icon-sort-amount-desc' />
-              <div className='be-icon-page-export' />
-              <div className='be-icon-briefcase' />
-              <div className='be-icon-arrow-right-1' />
+    'be-icon-moon',
 
-              <div className='be-icon-vcard' />
-              <div className='be-icon-pinterest' />
-              <div className='be-icon-tumblr' />
-              <div className='be-icon-social-snapchat' />
-              <div className='be-icon-slack' />
-              <div className='be-icon-kik' />
-              <div className='be-icon-amazon' />
-              <div className='be-icon-search-1' />
-              <div className='be-icon-whatsapp-logo' />
-              <div className='be-icon-microphone' />
-              <div className='be-icon-viber' />
-              <div className='be-icon-odnoklassniki-logo' />
+    'be-icon-livechat-off',
 
-              <div className='be-icon-google-play' />
-              <div className='be-icon-google' />
-              <div className='be-icon-app-store' />
-              <div className='be-icon-rss' />
-              <div className='be-icon-telegram' />
-              <div className='be-icon-apple' />
-              <div className='be-icon-speech-bubble' />
-              <div className='be-icon-map-marker' />
-              <div className='be-icon-app-store-1' />
-              <div className='be-icon-speech-bubble-1' />
-              <div className='be-icon-if-line-message-2559802' />
-              <div className='be-icon-if-66-wechat-1181189' />
-              <div className='be-icon-align-left-1' />
+    'be-icon-plug',
 
-              <div className='be-icon-sitemap' />
-              <div className='be-icon-filter' />
-              <div className='be-icon-triangle-down' />
-              <div className='be-icon-triangle-up' />
-              <div className='be-icon-sec-chatbot-builder' />
-              <div className='be-icon-list-add' />
-              <div className='be-icon-list' />
-              <div className='be-icon-character' />
-              <div className='be-icon-clipboard-pencil' />
-              <div className='be-icon-file-text-o' />
-              <div className='be-icon-file-text' />
-              <div className='be-icon-pencil-square-o' />
+    'be-icon-bold',
+    'be-icon-underline',
+    'be-icon-italic',
+    'be-icon-list-ul',
+    'be-icon-list-ol',
+    'be-icon-align-left',
+    'be-icon-align-right',
+    'be-icon-align-justify',
+    'be-icon-align-center',
+    'be-icon-chain-broken',
+    'be-icon-sort-amount-asc',
+    'be-icon-sort-amount-desc',
+    'be-icon-page-export',
+    'be-icon-briefcase',
+    'be-icon-arrow-right-1',
 
-              <div className='be-icon-baseline-send-24px' />
-            </div>
+    'be-icon-vcard',
+    'be-icon-pinterest',
+    'be-icon-tumblr',
+    'be-icon-social-snapchat',
+    'be-icon-slack',
+    'be-icon-kik',
+    'be-icon-amazon',
+    'be-icon-search-1',
+    'be-icon-whatsapp-logo',
+    'be-icon-microphone',
+    'be-icon-viber',
+    'be-icon-odnoklassniki-logo',
+
+    'be-icon-google-play',
+    'be-icon-google',
+    'be-icon-app-store',
+    'be-icon-rss',
+    'be-icon-telegram',
+    'be-icon-apple',
+    'be-icon-speech-bubble',
+    'be-icon-map-marker',
+    'be-icon-app-store-1',
+    'be-icon-speech-bubble-1',
+    'be-icon-if-line-message-2559802',
+    'be-icon-if-66-wechat-1181189',
+    'be-icon-align-left-1',
+
+    'be-icon-sitemap',
+    'be-icon-filter',
+    'be-icon-triangle-down',
+    'be-icon-triangle-up',
+    'be-icon-sec-chatbot-builder',
+    'be-icon-list-add',
+    'be-icon-list',
+    'be-icon-character',
+    'be-icon-clipboard-pencil',
+    'be-icon-file-text-o',
+    'be-icon-file-text',
+    'be-icon-pencil-square-o',
+
+    'be-icon-baseline-send-24px'
+  ]
+
+  return (
+    <div className="container">
+      <p>Hover or click on the icon</p>
+      <div className="row padding-20">
+        <div className="col-xs-12">
+          <div className={styles.Icons} onClick={copyIcon}>
+            {icons.map(icon => (
+              <div
+                className={icon}
+                style={{ cursor: 'pointer' }}
+                title={`Icon name: "${icon}"`}
+              />
+            ))}
           </div>
         </div>
       </div>
-    )
-  }
+      <input id="clipboardHelper" style={{position: 'absolute', top: '-1000px'}} />
+    </div>
+  )
 }
