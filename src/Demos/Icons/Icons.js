@@ -322,10 +322,10 @@ export default function Icons () {
   ]
 
   return (
-    <div className="container">
+    <div className='container'>
       <p>Hover or click on the icon</p>
-      <div className="row padding-20">
-        <div className="col-xs-12">
+      <div className='row padding-20'>
+        <div className='col-xs-12'>
           <div className={styles.Icons} onClick={copyIcon}>
             {icons.map(icon => (
               <div
@@ -337,7 +337,7 @@ export default function Icons () {
           </div>
         </div>
       </div>
-      <input id="clipboardHelper" style={{position: 'absolute', top: '-1000px'}} />
+      <input id='clipboardHelper' style={{position: 'absolute', top: '-1000px'}} />
     </div>
   )
 }
