@@ -18,8 +18,6 @@ export default class Statuses extends React.Component<Props> {
   renderText () {
     const { status } = this.props
 
-    //   // return <FormattedMessage id={`${status}`} defaultMessage="Default value if translation is not available" />
-
     if (!status) {
       return 'empty'
     } else {
@@ -30,16 +28,12 @@ export default class Statuses extends React.Component<Props> {
   render () {
     const { styleName, Reversed, status } = this.props
 
-    const className = cx(styles.Statuses, styleName, {
-      Reversed,
-      New: status === 'New',
-      Open: status === 'Open',
-      Resolved: status === 'Resolved',
-      Pending: status === 'Pending',
-      Escalated: status === 'Escalated',
-      Closed: status === 'Closed',
-      Trashed: status === 'Trashed'
-    })
+    const className = cx(
+      styles.Statuses,
+      styleName,
+      status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
+      { Reversed }
+    )
 
     return (
       <div className={className}>
