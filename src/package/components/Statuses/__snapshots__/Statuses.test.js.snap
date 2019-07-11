@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Statuses should render status with {"status":"new"} 1`] = `
+<div
+  className="New"
+>
+  new
+</div>
+`;
+
+exports[`Statuses should render status with {"text":"custom label","status":"new"} 1`] = `
+<div
+  className="New"
+>
+  custom label
+</div>
+`;
