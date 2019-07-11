@@ -8,37 +8,21 @@ import styles from './Statuses.css'
 const cx = classNames.bind(styles)
 
 type Props = {
-  text: string,
+  text: ?(string | React.Node),
   status: string,
-  styleName: string,
-  Reversed: boolean
+  styleName: ?string,
+  Reversed: ?boolean
 }
 
-export default class Statuses extends React.Component<Props> {
-  renderText () {
-    const { status } = this.props
+export default function Statuses (props: Props) {
+  const { styleName, Reversed, status, text } = props
 
-    if (!status) {
-      return 'empty'
-    } else {
-      return (`${status}`)
-    }
-  };
+  const className = cx(
+    styles.Statuses,
+    styleName,
+    status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
+    { Reversed }
+  )
 
-  render () {
-    const { styleName, Reversed, status } = this.props
-
-    const className = cx(
-      styles.Statuses,
-      styleName,
-      status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
-      { Reversed }
-    )
-
-    return (
-      <div className={className}>
-        {this.renderText()}
-      </div>
-    )
-  }
+  return <div className={className}>{text || status}</div>
 }
