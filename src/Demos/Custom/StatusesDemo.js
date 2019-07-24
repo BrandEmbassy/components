@@ -9,7 +9,7 @@ import beautify from 'js-beautify'
 const importComponent = `import { Statuses } from 'components';`
 
 export default class StatusesDemo extends Component {
-  render() {
+  render () {
     return (
       <div className='container'>
         <div className='row padding-20'>
@@ -49,7 +49,6 @@ export default class StatusesDemo extends Component {
             <Statuses status='Closed' Reversed />
             <Statuses status='Trashed' Reversed />
             <Statuses status='Reversed' Reversed />
-
 
             <Statuses status='Checked' Reversed Clickable />
             <Statuses status='New' Reversed Clickable />

@@ -11,10 +11,11 @@ type Props = {
   text: ?(string | React.Node),
   status: string,
   styleName: ?string,
-  Reversed: ?boolean
+  Reversed: ?boolean,
+  Clickable: ?boolean
 }
 
-export default function Statuses(props: Props) {
+export default function Statuses (props: Props) {
   const { styleName, Reversed, status, text, Clickable } = props
 
   const className = cx(

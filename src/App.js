@@ -31,7 +31,7 @@ import Textarea from './package/components/Textarea'
 import Markdown from './package/components/ChatBot/Plugin/Element/Markdown'
 
 export default class App extends Component {
-  render() {
+  render () {
     const input = '# This is a H1  \n## This is a H2  \n###### This is a H6'
 
     return (
