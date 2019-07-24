@@ -6,7 +6,7 @@
   height: auto;
   margin-right: 6px;
   padding: 3px 6px;
-  line-height: inherit;
+  /* line-height: inherit; */
   font-size: 10px;
   font-weight: 700;
   color: #8d1616;
@@ -23,6 +23,19 @@
     &.Reversed {
       color: #ffffff;
       background-color: #F57D4A;
+      &.Clickable {
+        &:hover {
+          color: #F57D4A;
+          border-color: #F57D4A;      
+        }
+      }
+    }
+
+    &.Clickable {
+      &:hover {
+        color: #ffffff;
+        background-color: #F57D4A;
+      }
     }
   }
 
@@ -92,6 +105,18 @@
     &.Reversed {
       color: #ffffff;
       background-color: #9A9A9A;
+      &.Clickable {
+        &:hover {
+          color: #9A9A9A;
+          border-color: #9A9A9A;
+        }
+      }
+    }
+    &.Clickable {
+      &:hover {
+        color: #ffffff;
+        background-color: #9A9A9A;
+      }
     }
   }
 }
