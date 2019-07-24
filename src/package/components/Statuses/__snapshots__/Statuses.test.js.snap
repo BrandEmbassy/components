@@ -3,6 +3,7 @@
 exports[`Statuses should render status with {"status":"new"} 1`] = `
 <div
   className="New"
+  data-cy=""
 >
   new
 </div>
@@ -11,6 +12,7 @@ exports[`Statuses should render status with {"status":"new"} 1`] = `
 exports[`Statuses should render status with {"text":"custom label","status":"new"} 1`] = `
 <div
   className="New"
+  data-cy=""
 >
   custom label
 </div>
