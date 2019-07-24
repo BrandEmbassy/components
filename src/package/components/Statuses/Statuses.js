@@ -15,7 +15,7 @@ type Props = {
 }
 
 export default function Statuses(props: Props) {
-  const { styleName, Reversed, status, text } = props
+  const { styleName, Reversed, status, text, Clickable } = props
 
   const className = cx(
     styles.Statuses,
@@ -25,5 +25,6 @@ export default function Statuses(props: Props) {
     { Reversed }
   )
 
-  return <div className={className} data-cy={Clickable ? 'CLICKABLE' : ''}>{text || status}</div>
+  return <div className={className} {Clickable ? data - cy='CLICKABLE' : ''
+}> { text || status}</div >
 }
