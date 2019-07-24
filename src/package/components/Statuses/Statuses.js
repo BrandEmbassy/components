@@ -20,11 +20,9 @@ export default function Statuses(props: Props) {
   const className = cx(
     styles.Statuses,
     styleName,
-    Clickable,
     status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
     { Reversed }
   )
 
-  return <div className={className} {Clickable ? data - cy='CLICKABLE' : ''
-}> { text || status}</div >
+  return <div className={className} data-cy={Clickable ? 'CLICKABLE' : ''}>{text || status}</div>
 }
