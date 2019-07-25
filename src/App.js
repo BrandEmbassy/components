@@ -269,8 +269,6 @@ export default class App extends Component {
                   <Statuses status='Trashed' />
                   <Statuses status='Reversed' />
 
-                  <Statuses status='Checked' Reversed Clickable />
-                  <Statuses status='New' Reversed Clickable />
                 </div>
                 <div className='col-xs-12 padding-15'>
                   <Statuses status='New' Reversed />

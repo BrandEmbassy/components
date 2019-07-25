@@ -11,12 +11,11 @@ type Props = {
   text: ?(string | React.Node),
   status: string,
   styleName: ?string,
-  Reversed: ?boolean,
-  Clickable: ?boolean
+  Reversed: ?boolean
 }
 
 export default function Statuses (props: Props) {
-  const { styleName, Reversed, status, text, Clickable } = props
+  const { styleName, Reversed, status, text } = props
 
   const className = cx(
     styles.Statuses,
@@ -25,5 +24,5 @@ export default function Statuses (props: Props) {
     { Reversed }
   )
 
-  return <div className={className} data-cy={Clickable ? 'CLICKABLE' : ''}>{text || status}</div>
+  return <div className={className} >{text || status}</div>
 }

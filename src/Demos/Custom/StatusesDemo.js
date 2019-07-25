@@ -49,9 +49,6 @@ export default class StatusesDemo extends Component {
             <Statuses status='Closed' Reversed />
             <Statuses status='Trashed' Reversed />
             <Statuses status='Reversed' Reversed />
-
-            <Statuses status='Checked' Reversed Clickable />
-            <Statuses status='New' Reversed Clickable />
           </div>
         </div>
         <div className='row'>
