@@ -24,5 +24,5 @@ export default function Statuses (props: Props) {
     { Reversed }
   )
 
-  return <div className={className}>{text || status}</div>
+  return <div className={className} >{text || status}</div>
 }

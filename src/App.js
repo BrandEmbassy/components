@@ -161,7 +161,7 @@ export default class App extends Component {
               <H2>test H2</H2>
               <H3>test H3</H3>
               <P>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sodales turpis, ac sollicitudin sem. Sed et eros porttitor, ullamcorper ante vel, consectetur metus. Integer in ante nec leo viverra varius et egestas mauris. Vestibulum consequat orci laoreet tellus condimentum lacinia. Maecenas eu justo sit amet nulla aliquam consectetur. Aenean nec fermentum velit. Mauris dictum justo ipsum, vitae pharetra nibh sodales ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce dapibus felis et nunc consequat sollicitudin.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet sodales turpis, ac sollicitudin sem. Sed et eros porttitor, ullamcorper ante vel, consectetur metus. Integer in ante nec leo viverra varius et egestas mauris. Vestibulum consequat orci laoreet tellus condimentum lacinia. Maecenas eu justo sit amet nulla aliquam consectetur. Aenean nec fermentum velit. Mauris dictum justo ipsum, vitae pharetra nibh sodales ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce dapibus felis et nunc consequat sollicitudin.
               </P>
             </div>
           </div>
@@ -268,6 +268,7 @@ export default class App extends Component {
                   <Statuses status='Closed' />
                   <Statuses status='Trashed' />
                   <Statuses status='Reversed' />
+
                 </div>
                 <div className='col-xs-12 padding-15'>
                   <Statuses status='New' Reversed />
