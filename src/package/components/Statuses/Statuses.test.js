@@ -3,7 +3,7 @@ import Statuses from './Statuses'
 
 describe('Statuses', () => {
   const dataProvider = [
-    { text: 'custom label', status: 'new' },
+    { text: 'custom label', status: 'new', hasHover: true },
     { status: 'new' }
   ]
 

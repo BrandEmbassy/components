@@ -16,6 +16,13 @@
   user-select: none;
   text-transform: uppercase;
 
+  &.hasHover {
+    cursor: pointer;
+    &:hover {
+      filter: opacity(0.8);
+      transition: 0.18s;
+    }
+  }
   &.New {
     color: #F57D4A;
     border-color: #F57D4A;

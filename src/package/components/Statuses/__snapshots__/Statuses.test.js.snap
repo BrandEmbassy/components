@@ -8,9 +8,9 @@ exports[`Statuses should render status with {"status":"new"} 1`] = `
 </div>
 `;
 
-exports[`Statuses should render status with {"text":"custom label","status":"new"} 1`] = `
+exports[`Statuses should render status with {"text":"custom label","status":"new","hasHover":true} 1`] = `
 <div
-  className="New"
+  className="New hasHover"
 >
   custom label
 </div>
