@@ -11,17 +11,18 @@ type Props = {
   text: ?(string | React.Node),
   status: string,
   styleName: ?string,
-  Reversed: ?boolean
+  Reversed: ?boolean,
+  hasHover: ?boolean
 }
 
 export default function Statuses (props: Props) {
-  const { styleName, Reversed, status, text } = props
+  const { styleName, Reversed, status, text, hasHover } = props
 
   const className = cx(
     styles.Statuses,
     styleName,
     status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
-    { Reversed }
+    { Reversed, hasHover }
   )
 
   return <div className={className} >{text || status}</div>
