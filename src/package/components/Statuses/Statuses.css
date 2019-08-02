@@ -101,4 +101,13 @@
       background-color: #9A9A9A;
     }
   }
+  &.Approval {
+    border-color: #ca4b5b;
+    color: #ca4b5b;
+
+    &.Reversed {
+      background-color: #ca4b5b;
+      color: #f7bac2;
+    }
+  }
 }
