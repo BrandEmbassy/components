@@ -4,7 +4,6 @@ import Image from '../Image'
 import StandaloneImage from '../StandaloneImage'
 import Video from '../Video'
 import styles from './index.css'
-import './videoPlayerStylesLoader'
 
 export type FileElementsProps = {
   type: 'FILE',

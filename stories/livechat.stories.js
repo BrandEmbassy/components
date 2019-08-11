@@ -2,6 +2,9 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, object, boolean } from '@storybook/addon-knobs/react'
 
+// @flow-skip-next-line
+import '!style-loader!css-loader!video-react/dist/video-react.css' //eslint-disable-line
+
 import QuickReplies from '../src/package/components/ChatBot/Plugin/Element/QuickReplies'
 import Button from '../src/package/components/ChatBot/Plugin/Element/Button'
 import Heading from '../src/package/components/ChatBot/Plugin/Element/Heading'
@@ -68,13 +71,51 @@ storiesOf('Chatbots elements', module)
 
   .add('Button', () => <Button label={text('label', 'Click me!')} />)
   .add('Heading', () => <Heading content={text('content', 'Lorem Ipsum!')} />)
-  .add('Image', () => <Image src={text('src', 'http://via.placeholder.com/350x150')} />)
+  .add('Image', () => (
+    <Image src={text('src', 'http://via.placeholder.com/350x150')} />
+  ))
   .add('Text', () => <Text content={text('content', 'Hello world!')} />)
-  .add('QuickReplies', () => <QuickReplies elements={object('elements', repliesButtons)} onClick={clickHandler} />)
-  .add('File - basic', () => <File url='http://via.placeholder.com/350x150' mimeType='audio/mp3' title='file.txt' />)
-  .add('File - image', () => <File url='http://via.placeholder.com/350x150' mimeType='image/jpeg' />)
-  .add('File - newImage', () => <File url='http://via.placeholder.com/350x150' mimeType='image/jpeg' filename='file.txt' topLevel />)
-  .add('File - video', () => <File url='https://www.w3schools.com/tags/movie.mp4' mimeType='video/mp4' />)
+  .add('QuickReplies', () => (
+    <QuickReplies
+      elements={object('elements', repliesButtons)}
+      onClick={clickHandler}
+    />
+  ))
+  .add('File - basic', () => (
+    <File
+      url="http://via.placeholder.com/350x150"
+      mimeType="audio/mp3"
+      title="file.txt"
+    />
+  ))
+  .add('File - image', () => (
+    <File url="http://via.placeholder.com/350x150" mimeType="image/jpeg" />
+  ))
+  .add('File - newImage', () => (
+    <File
+      url="http://via.placeholder.com/350x150"
+      mimeType="image/jpeg"
+      filename="file.txt"
+      topLevel
+    />
+  ))
+  .add('File - video', () => (
+    <div>
+      <p>
+        <strong>
+          You have to install <code>vireo-react</code> package to your project
+          and import <code>video-react/dist/video-react.css'</code> in your
+          project
+        </strong>
+      </p>
+      <p>
+        <File
+          url="https://www.w3schools.com/tags/movie.mp4"
+          mimeType="video/mp4"
+        />
+      </p>
+    </div>
+  ))
 
 storiesOf('Chatbots Plugins', module)
   .addDecorator(withKnobs)
