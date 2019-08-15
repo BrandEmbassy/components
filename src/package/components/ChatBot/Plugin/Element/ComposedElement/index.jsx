@@ -1,6 +1,6 @@
 import React from 'react'
 import Element from '../Element'
-import styles from './index.css'
+import styles from './index.module.css'
 
 export default function ComposedElement ({ elements, level, ...composedElementRestProps }) {
   const standalone = elements.length === 1 && level === 1

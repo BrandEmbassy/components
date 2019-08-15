@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import type { ReactMarkdownProps } from 'react-markdown'
-import style from './Markdown.css'
+import style from './Markdown.module.css'
 
 type Props = {
   text: string,

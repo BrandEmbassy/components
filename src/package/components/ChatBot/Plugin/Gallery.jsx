@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 // @flow-skip-next-line
 import ReactResizeDetector from 'react-resize-detector'
 import ComposedElement from './Element/ComposedElement'
-import styles from './index.css'
+import styles from './index.module.css'
 
 type Props = {
   elements: Array<any>,

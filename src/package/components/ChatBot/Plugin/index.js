@@ -6,7 +6,7 @@ import Gallery from './Gallery'
 import ComposedElement from './Element/ComposedElement'
 import ElementType from './Element/ElementType'
 import {isPluginVideo} from './Element/Video/index'
-import styles from './index.css'
+import styles from './index.module.css'
 
 type Props = {
   disableCarusel?: boolean,
