@@ -1,5 +1,3 @@
-/* eslint-disable import/first */
-jest.mock('./videoPlayerStylesLoader')
 import React from 'react'
 import File from './index'
 

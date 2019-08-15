@@ -1,5 +1,3 @@
-/* eslint-disable import/first */
-jest.mock('./Element/File/videoPlayerStylesLoader')
 import React from 'react'
 import { default as Plugin, isPluginVideo } from './index'
 import elements from './__fixtures__/index.json'
