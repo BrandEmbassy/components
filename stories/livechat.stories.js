@@ -83,19 +83,19 @@ storiesOf('Chatbots elements', module)
   ))
   .add('File - basic', () => (
     <File
-      url="http://via.placeholder.com/350x150"
-      mimeType="audio/mp3"
-      title="file.txt"
+      url='http://via.placeholder.com/350x150'
+      mimeType='audio/mp3'
+      title='file.txt'
     />
   ))
   .add('File - image', () => (
-    <File url="http://via.placeholder.com/350x150" mimeType="image/jpeg" />
+    <File url='http://via.placeholder.com/350x150' mimeType='image/jpeg' />
   ))
   .add('File - newImage', () => (
     <File
-      url="http://via.placeholder.com/350x150"
-      mimeType="image/jpeg"
-      filename="file.txt"
+      url='http://via.placeholder.com/350x150'
+      mimeType='image/jpeg'
+      filename='file.txt'
       topLevel
     />
   ))
@@ -110,8 +110,8 @@ storiesOf('Chatbots elements', module)
       </p>
       <p>
         <File
-          url="https://www.w3schools.com/tags/movie.mp4"
-          mimeType="video/mp4"
+          url='https://www.w3schools.com/tags/movie.mp4'
+          mimeType='video/mp4'
         />
       </p>
     </div>
