@@ -529,7 +529,9 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           <Image
                             src="https://picsum.photos/300/150"
                           >
-                            <div>
+                            <div
+                              data-cy="chatbotPluginImage"
+                            >
                               <div
                                 className="be-icon-multi-image"
                               />
@@ -741,7 +743,9 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           <Image
                             src="https://picsum.photos/300/150"
                           >
-                            <div>
+                            <div
+                              data-cy="chatbotPluginImage"
+                            >
                               <div
                                 className="be-icon-multi-image"
                               />
@@ -953,7 +957,9 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           <Image
                             src="https://picsum.photos/300/150"
                           >
-                            <div>
+                            <div
+                              data-cy="chatbotPluginImage"
+                            >
                               <div
                                 className="be-icon-multi-image"
                               />
@@ -1444,7 +1450,9 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 <Image
                   src="https://picsum.photos/300/150"
                 >
-                  <div>
+                  <div
+                    data-cy="chatbotPluginImage"
+                  >
                     <div
                       className="be-icon-multi-image"
                     />
@@ -1642,7 +1650,9 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 <Image
                   src="https://picsum.photos/300/150"
                 >
-                  <div>
+                  <div
+                    data-cy="chatbotPluginImage"
+                  >
                     <div
                       className="be-icon-multi-image"
                     />
@@ -1840,7 +1850,9 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 <Image
                   src="https://picsum.photos/300/150"
                 >
-                  <div>
+                  <div
+                    data-cy="chatbotPluginImage"
+                  >
                     <div
                       className="be-icon-multi-image"
                     />
@@ -2259,7 +2271,9 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     <Image
                       src="https://picsum.photos/300/150"
                     >
-                      <div>
+                      <div
+                        data-cy="chatbotPluginImage"
+                      >
                         <div
                           className="be-icon-multi-image"
                         />
