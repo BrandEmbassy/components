@@ -28,17 +28,3 @@ global.window = win
 global.navigator = {
   userAgent: 'node.js'
 }
-
-// Skip createElement warnings but fail tests on any other warning
-console.error = message => {
-  if (!/(React.createElement: type should not be null)/.test(message)) {
-    throw new Error(message)
-  }
-}
-
-// Some tests failing due to warnings in test environment
-// example:
-// Warning: This browser doesn't support the `onScroll` event
-console.warn = message => {
-  throw new Error(message)
-}

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './index.css'
+import styles from './index.module.css'
 
 export const TITLE_HEADING_LEVEL = 1
 export const SUBTITLE_HEADING_LEVEL = 2

@@ -5,7 +5,7 @@ import { Player, ControlBar,
 } from 'video-react'
 import ElementType from '../ElementType'
 import type IElement from '../Element'
-import styles from './index.css'
+import styles from './index.module.css'
 
 export type VideoElementProps = {
   url: string

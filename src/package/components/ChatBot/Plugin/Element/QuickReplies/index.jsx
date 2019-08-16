@@ -2,7 +2,7 @@
 import * as React from 'react'
 import ElementType from '../ElementType'
 import Bubble from '../Text/Bubble'
-import styles from './index.css'
+import styles from './index.module.css'
 
 export type QuickRepliesProps = {
   type: 'QUICK_REPLIES',

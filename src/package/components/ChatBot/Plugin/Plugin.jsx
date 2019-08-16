@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react'
 import ComposedElement from './Element/ComposedElement'
-import styles from './index.css'
+import styles from './index.module.css'
 
 type Props = {
   elements: Array<any>,

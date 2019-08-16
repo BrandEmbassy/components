@@ -70,9 +70,7 @@ module.exports = {
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
-      path
-        .relative(paths.appSrc, info.absoluteResourcePath)
-        .replace(/\\/g, '/')
+      path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/')
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -91,7 +89,6 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web'
@@ -118,14 +115,13 @@ module.exports = {
         test: /\.(js|jsx|mjs)$/,
         enforce: 'pre',
         use: [
-        // {
-        //   options: {
-        //     formatter: eslintFormatter,
-        //     eslintPath: require.resolve('eslint')
-
-        //   },
-        //   loader: require.resolve('eslint-loader')
-        // }
+          // {
+          //   options: {
+          //     formatter: eslintFormatter,
+          //     eslintPath: require.resolve('eslint')
+          //   },
+          //   loader: require.resolve('eslint-loader')
+          // }
         ],
         include: paths.appSrc
       },
@@ -150,7 +146,6 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-
               compact: true
             }
           },
@@ -176,7 +171,7 @@ module.exports = {
                   options: {
                     importLoaders: 1,
                     modules: true,
-                    localIdentName: '[name]__[local]'
+                    localIdentName: '[name]__[local]__[hash:base64]'
                   }
                 },
                 {
@@ -188,9 +183,7 @@ module.exports = {
                     plugins: () => [
                       require('postcss-flexbugs-fixes'),
                       require('postcss-import')({
-                        addModulesDirectories: [
-                          require.resolve(paths.appSrc)
-                        ]
+                        addModulesDirectories: [require.resolve(paths.appSrc)]
                       }),
                       require('postcss-cssnext')({
                         browsers: [
@@ -348,7 +341,7 @@ module.exports = {
       // about it being stale, and the cache-busting can be skipped.
       dontCacheBustUrlsMatching: /\.\w{8}\./,
       filename: 'service-worker.js',
-      logger (message) {
+      logger(message) {
         if (message.indexOf('Total precache size is') === 0) {
           // This message occurs for every build and is a bit too noisy.
           return
