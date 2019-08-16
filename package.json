@@ -1,6 +1,6 @@
 {
   "name": "@brandembassy/ui-components",
-  "version": "0.1.10-beta.2",
+  "version": "0.1.10-beta.3",
   "description": "BrandEmbassy React components",
   "main": "lib/index.js",
   "repository": "git@github.com:BrandEmbassy/ui-components.git",
@@ -24,9 +24,9 @@
     "build:ostrava": "node scripts/build.js && yarn concat-css"
   },
   "dependencies": {
-    "react": "^16.8.6",
+    "react": "^16.9.0",
     "react-daterange-picker": "^2.0.1",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.9.0",
     "react-markdown": "^4.0.6",
     "react-resize-detector": "^2.3.0",
     "react-swipeable-views": "^0.12.13",
