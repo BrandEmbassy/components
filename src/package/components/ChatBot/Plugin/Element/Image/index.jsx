@@ -20,7 +20,7 @@ export default function Image ({ src, title, onLoad }) {
   )
 
   return (
-    <div className={styles.ImageWrapper}>
+    <div className={styles.ImageWrapper} data-cy='chatbotPluginImage'>
       {isLoading && <div className='be-icon-multi-image' />}
       <div className={styles.Image}>
         <img
