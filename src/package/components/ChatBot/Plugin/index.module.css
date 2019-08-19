@@ -1,26 +1,44 @@
 .PluginFrame {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 10px;
 }
 
 .CaruselContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   overflow: hidden;
   width: 100%;
 }
 
 .Plugin {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background: #fff;
   border-radius: 12px;
   border: solid 1px #e6e6e6;
   margin: 0;
   margin-bottom: 1px;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
   overflow: hidden;
   min-width: 150px;
   max-width: 660px;
@@ -36,26 +54,37 @@
 }
 
 .ArrowWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .LeftRow {
-  border-right: 10px solid #666;
-  &:hover {
-    border-right: 10px solid #333;
-  }
+  border-right: 10px solid #666
+}
+
+.LeftRow:hover {
+  border-right: 10px solid #333;
 }
 
 .RightRow {
-  border-left: 10px solid #666;
-  &:hover {
-    border-left: 10px solid #333;
-  }
+  border-left: 10px solid #666
+}
+
+.RightRow:hover {
+  border-left: 10px solid #333;
 }
 
 .Carusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }

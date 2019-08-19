@@ -7,119 +7,130 @@
   overflow: hidden;
 }
 
-:root {
-  --bubblePaddingVertical: 8px;
-  --bubblePaddingHorizontal: 12px;
-  --bubbleLineHeight: 18px;
-}
-
 .StandaloneImageWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 100%;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 0px 0 0px;
 }
 
 .ImageIn {
   position: relative;
-  min-height: calc(2 * var(--bubblePaddingVertical) + var(--bubbleLineHeight));
-  line-height: var(--bubbleLineHeight);
+  min-height: 34px;
+  line-height: 18px;
   border-radius: 12px;
   background-color: #e6e6e6;
   font-size: 14px;
   font-weight: 400;
   color: #333333;
   white-space: pre-wrap;
-  overflow: hidden;
-
-  &:hover {
-    & + .Time {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+  overflow: hidden
 }
 
-.isImage {
-  &.Bubble {
-    padding: 0px;
-  }
+.ImageIn:hover + .Time {
+  opacity: 1;
+  visibility: visible;
+}
 
-  & img {
-    float: left;
-  }
+.isImage.Bubble {
+  padding: 0px;
+}
 
-  & .Mask {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-size: 28px;
-    color:#ffffff;
-    z-index: 50;
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity .18s;
-  }
+.isImage img {
+  float: left;
+}
 
-  & [class^="be-icon-"]{
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  }
+.isImage .Mask {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  color:#ffffff;
+  z-index: 50;
+  opacity: 0.5;
+  cursor: pointer;
+  -webkit-transition: opacity .18s;
+  transition: opacity .18s;
+}
 
-  & .Pointer [class^="be-icon-"]::before {
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  }
+.isImage [class^="be-icon-"] {
+  text-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+}
 
-  & .Pointer a {
-    color: inherit;
-  }
+.isImage .Pointer [class^="be-icon-"]::before {
+  text-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+}
 
-  & .Mask:hover {
-    opacity: 1;
-  }
+.isImage .Pointer a {
+  color: inherit;
+}
 
-  & .Download {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-    bottom: 0;
-    right: 0;
-    font-size: 18px;
-    color:#ffffff;
-    z-index: 60;
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity .18s;
-  }
+.isImage .Mask:hover {
+  opacity: 1;
+}
 
-  & .Download:hover {
-    opacity: 1;
-  }
+.isImage .Download {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  bottom: 0;
+  right: 0;
+  font-size: 18px;
+  color:#ffffff;
+  z-index: 60;
+  opacity: 0.5;
+  cursor: pointer;
+  -webkit-transition: opacity .18s;
+  transition: opacity .18s;
+}
 
-  &.isImageUploading {
-    & img {
-      filter: blur(2px);
-    }
+.isImage .Download:hover {
+  opacity: 1;
+}
 
-    & .SpinnerIcon {
-      width: 28px;
-      height: 28px;
-      margin: 0;
-      animation: spinner infinite 4s linear;
-      & [class^="be-icon-"]{
-        float: left;
-        top: -6px;
-      }
-      & [class^="be-icon-"]::before{
-        float: left;
-        top: 6px;
-        position: relative;
-      }
-    }
-  }
+.isImage.isImageUploading img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="2" /></filter></svg>#filter');
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.isImage.isImageUploading .SpinnerIcon {
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  -webkit-animation: spinner infinite 4s linear;
+          animation: spinner infinite 4s linear;
+}
+
+.isImage.isImageUploading .SpinnerIcon [class^="be-icon-"] {
+  float: left;
+  top: -6px;
+}
+
+.isImage.isImageUploading .SpinnerIcon [class^="be-icon-"]::before {
+  float: left;
+  top: 6px;
+  position: relative;
 }

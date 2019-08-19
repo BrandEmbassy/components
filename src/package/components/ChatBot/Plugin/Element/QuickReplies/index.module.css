@@ -1,20 +1,35 @@
 .QuickReplies {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 100%;
   overflow: hidden;
 }
 
 .Message {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .ButtonsGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: wrap;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
   width: 100%;
 }
 
@@ -31,11 +46,12 @@
   background-color: #0099e6;
   color: #fff;
   overflow: hidden;
-  cursor: pointer;
-  &:hover {
-    border: solid 2px #0077b3;
-    background-color: #0077b3;
-    background: #0077b3;
-    color: #fff;
-  }
+  cursor: pointer
+}
+
+.QuickReplyButton:hover {
+  border: solid 2px #0077b3;
+  background-color: #0077b3;
+  background: #0077b3;
+  color: #fff;
 }
