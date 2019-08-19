@@ -6,16 +6,15 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: auto
+}
+.Video video {
+  width: 100%;
   height: auto;
-
-  & video {
-    width: 100%;
-    height: auto;
-  }
-
-  & button {
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%);
-  }
+}
+.Video button {
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
