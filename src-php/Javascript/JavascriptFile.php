@@ -13,15 +13,25 @@ final class JavascriptFile implements UiComponent
      */
     private $filePath;
 
+    /**
+     * @var ConstantCollection
+     */
+    private $configuration;
 
-    public function __construct(string $filePath)
+
+    public function __construct(string $filePath, ?ConstantCollection $configuration = null)
     {
         $this->filePath = $filePath;
+        $this->configuration = $configuration ?? new ConstantCollection();
     }
 
 
     public function render(): string
     {
-        return sprintf('<script type="text/javascript">%s</script>', file_get_contents($this->filePath));
+        return sprintf(
+            '<script type="text/javascript">%s%s</script>',
+            $this->configuration->render(),
+            file_get_contents($this->filePath)
+        );
     }
 }

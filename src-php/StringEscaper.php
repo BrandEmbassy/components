@@ -34,6 +34,12 @@ final class StringEscaper
     }
 
 
+    public static function escapeJs(string $input): string
+    {
+        return self::getEscaper()->escapeJs($input);
+    }
+
+
     private static function getEscaper(): Escaper
     {
         return new Escaper(self::ENCODING);
