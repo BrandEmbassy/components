@@ -14,7 +14,7 @@
         "zendframework/zend-escaper": "^2.6"
     },
     "require-dev": {
-        "brandembassy/coding-standard": "^5.2",
+        "brandembassy/coding-standard": "^6.0",
         "mockery/mockery": "^1.2",
         "phpunit/phpunit": "^8",
         "roave/security-advisories": "dev-master",

@@ -28,16 +28,34 @@ final class TextareaTest extends TestCase
     {
         return [
             [
-                __DIR__ . '/__snapshot__/render.html',
-                new Textarea(
+                'expectedSnapshotPath' => __DIR__ . '/__snapshot__/render.html',
+                'textarea' => new Textarea(
                     '"><script>alert(\'ahoj\');</script><"',
                     '"><script>alert(\'ahoj\');</script><"',
                     14
                 ),
             ],
             [
-                __DIR__ . '/__snapshot__/renderDisabled.html',
-                new Textarea('foo', 'bar', 14, true),
+                'expectedSnapshotPath' => __DIR__ . '/__snapshot__/renderDisabled.html',
+                'textarea' => new Textarea('foo', 'bar', 14, true),
+            ],
+            [
+                'expectedSnapshotPath' => __DIR__ . '/__snapshot__/renderWithDescription.html',
+                'textarea' => new Textarea('myName', 'content', 14, false, 'Foo'),
+            ],
+            [
+                'expectedSnapshotPath' => __DIR__ . '/__snapshot__/renderWithXssDescription.html',
+                'textarea' => new Textarea(
+                    'myName',
+                    'content',
+                    14,
+                    false,
+                    '"><script>alert(\'ahoj\');</script><"'
+                ),
+            ],
+            [
+                'expectedSnapshotPath' => __DIR__ . '/__snapshot__/renderWithError.html',
+                'textarea' => new Textarea('myName', 'content', 14, false, '', true),
             ],
         ];
     }
