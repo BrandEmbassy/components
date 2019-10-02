@@ -8,13 +8,13 @@ use BrandEmbassy\Components\UiComponent;
 final class LinkList implements UiComponent
 {
     /**
-     * @var array|Link[]
+     * @var UiComponent[]
      */
     private $links;
 
 
     /**
-     * @param Link[] $links
+     * @param UiComponent[] $links
      */
     public function __construct(array $links)
     {
