@@ -1,0 +1,64 @@
+<style type="text/css">
+
+    div.TableRowDivider:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 1px;
+        right: -45px;
+        background: #b7b7b7;
+    }
+
+    div.TableRowDivider:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 1px;
+        left: -45px;
+        background: #b7b7b7;
+    }
+
+    tr.TableRowDivider {
+        background: linear-gradient(0deg, #FAFAFA 50%, #FFFFFF 50%);
+    }
+    tr.TableRowDivider:nth-child(even) {
+        background: linear-gradient(0deg, #FFFFFF 50%, #FAFAFA 50%);
+    }
+
+</style>
+<div class="Table__Table Table__isStriped">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Expression</th>
+            <th style="text-align: right;">Flags</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Addition</td>
+            <td>a + b</td>
+            <td style="width: 10%; max-width: 10%; text-align: right;">G</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center; padding: 2px 0; height: auto; user-select: none;"><div class="TableRowDivider">OR</div></td>
+        </tr>
+        <tr>
+            <td>Subtraction</td>
+            <td>a - b</td>
+            <td style="width: 10%; max-width: 10%; text-align: right;">G</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center; padding: 2px 0; height: auto; user-select: none;"><div class="TableRowDivider">OR</div></td>
+        </tr>
+        <tr>
+            <td>Multiplication</td>
+            <td>a * b</td>
+            <td style="width: 10%; max-width: 10%; text-align: right;">L</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -11,6 +11,8 @@ use BrandEmbassy\Components\Table\Model\CellData;
 use BrandEmbassy\Components\Table\Model\ColumnDefinition;
 use BrandEmbassy\Components\Table\Model\RowData;
 use BrandEmbassy\Components\Table\Model\TableDefinition;
+use BrandEmbassy\Components\Table\Model\TableRowDivider;
+use BrandEmbassy\Components\Table\Model\TableRowDividerStyle;
 use DateTimeImmutable;
 use GuzzleHttp\Psr7\Uri;
 use LogicException;
@@ -71,6 +73,72 @@ final class TableTest extends TestCase
         $table = new Table(new TableDefinition([]), new ArrayDataProvider([]), true);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/tableWithHover.html', $table);
+    }
+
+
+    /**
+     * @dataProvider tableRowDividerStylesData
+     * @param string $htmlFile
+     * @param string $tableRowDividerStyle
+     */
+    public function testRenderWithRowDivider(string $htmlFile, string $tableRowDividerStyle): void
+    {
+        $rowsData = [
+            new RowData(
+                '1',
+                [
+                    'name' => new CellData('name', 'Addition'),
+                    'expression' => new CellData('expression', 'a + b'),
+                    'flags' => new CellData('flags', 'G'),
+                ]
+            ),
+            new RowData(
+                '2',
+                [
+                    'name' => new CellData('name', 'Subtraction'),
+                    'expression' => new CellData('expression', 'a - b'),
+                    'flags' => new CellData('flags', 'G'),
+                ]
+            ),
+            new RowData(
+                '3',
+                [
+                    'name' => new CellData('name', 'Multiplication'),
+                    'expression' => new CellData('expression', 'a * b'),
+                    'flags' => new CellData('flags', 'L'),
+                ]
+            ),
+        ];
+        $dataProvider = new ArrayDataProvider($rowsData);
+        $columnDefinition = [
+            new ColumnDefinition('name', 'Name'),
+            new ColumnDefinition('expression', 'Expression'),
+            new ColumnDefinition('flags', 'Flags', Align::get(Align::RIGHT), '10%'),
+        ];
+        $tableDefinition = new TableDefinition($columnDefinition);
+        $tableRowDivider = new TableRowDivider(TableRowDividerStyle::get($tableRowDividerStyle), 'OR');
+        $tableDefinition->setRowDivider($tableRowDivider);
+        $table = new Table($tableDefinition, $dataProvider);
+
+        $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $htmlFile . '.html', $table);
+    }
+
+
+    /**
+     * @return string[][]
+     */
+    public function tableRowDividerStylesData(): array
+    {
+        return [
+            [
+                'htmlFile' => 'tableWithRowDividerSingle',
+                'tableRowDividerStyle' => TableRowDividerStyle::LABEL_SINGLE_ROW,
+            ],
+            [
+                'htmlFile' => 'tableWithRowDividerSplitted',
+                'tableRowDividerStyle' => TableRowDividerStyle::LABEL_SPLITTED_ROW,
+            ],
+        ];
     }
 
 
