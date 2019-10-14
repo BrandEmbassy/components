@@ -77,8 +77,6 @@ final class Table implements UiComponent
 
         $result = '';
         if ($this->tableDefinition->getRowDivider() !== null) {
-            // FIXME: due to difficulties with deployment to https://components.brandembassy.com/2.0/css/components.css
-            // I must give style directly here; once "components.css" will be regenerated, this may disappear
             $result .= $this->renderRowDividerStyles();
         }
         $result .= '<div class="' . $tableClass . '"><table>';
@@ -180,6 +178,11 @@ final class Table implements UiComponent
     }
 
 
+    /**
+     * @deprecated Due to difficulties with deployment to https://components.brandembassy.com/2.0/css/components.css.
+     *             I must give style directly here; once "components.css" will be regenerated, this may disappear.
+     * @return string
+     */
     private function renderRowDividerStyles(): string
     {
         return <<<STYLE

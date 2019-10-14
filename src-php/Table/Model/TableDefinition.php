@@ -27,7 +27,7 @@ final class TableDefinition
     }
 
 
-    public function setRowDivider(TableRowDivider $tableRowDivider): void
+    public function setRowDivider(?TableRowDivider $tableRowDivider): void
     {
         $this->tableRowDivider = $tableRowDivider;
     }
