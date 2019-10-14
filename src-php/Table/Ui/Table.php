@@ -207,6 +207,9 @@ div.TableRowDivider:after {
     left: -45px;
     background: #b7b7b7;
 }
+div.TableRowDivider {
+    font-weight: bold;
+}
 
 div.HasRowDividers table tbody tr:first-child td {
     padding-top: 10px;

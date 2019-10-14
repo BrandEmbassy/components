@@ -35,7 +35,7 @@ final class TableRowDividerRenderer implements UiComponent
             $htmlFragment .= sprintf('<tr><td colspan="%d" style="display: none;">&nbsp;</td></tr>', $this->numberOfColumns);
             $rowPattern = <<<PAT
 <tr class="TableRowDivider">
-  <td colspan="%d" style="text-align: center; padding: 0; height: auto; user-select: none;">%s</td>
+  <td colspan="%d" style="text-align: center; padding: 0; height: auto; user-select: none; font-weight: bold;">%s</td>
 </tr>
 PAT;
         } else {
