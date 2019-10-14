@@ -11,6 +11,11 @@ final class TableDefinition
      */
     private $columnDefinitions;
 
+    /**
+     * @var TableRowDivider|null
+     */
+    private $tableRowDivider;
+
 
     /**
      * @param ColumnDefinition[] $columnDefinitions
@@ -22,11 +27,23 @@ final class TableDefinition
     }
 
 
+    public function setRowDivider(?TableRowDivider $tableRowDivider): void
+    {
+        $this->tableRowDivider = $tableRowDivider;
+    }
+
+
     /**
      * @return ColumnDefinition[]
      */
     public function getColumnDefinitions(): array
     {
         return $this->columnDefinitions;
+    }
+
+
+    public function getRowDivider(): ?TableRowDivider
+    {
+        return $this->tableRowDivider;
     }
 }

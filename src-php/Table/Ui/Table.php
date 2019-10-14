@@ -13,6 +13,7 @@ use BrandEmbassy\Components\UiComponent;
 use LogicException;
 use function array_map;
 use function assert;
+use function count;
 use function gettype;
 use function in_array;
 use function is_int;
@@ -74,7 +75,11 @@ final class Table implements UiComponent
             $tableClass .= ' Table__hasRowHover';
         }
 
-        $result = '<div class="' . $tableClass . '"><table>';
+        $result = '';
+        if ($this->tableDefinition->getRowDivider() !== null) {
+            $result .= $this->renderRowDividerStyles();
+        }
+        $result .= '<div class="' . $tableClass . '"><table>';
         $result .= $this->renderHead();
         $result .= $this->renderBody();
         $result .= '</table></div>';
@@ -98,6 +103,7 @@ final class Table implements UiComponent
 
     private function renderBody(): string
     {
+        $tableRowDivider = $this->tableDefinition->getRowDivider();
         $result = '<tbody>';
         $iterator = $this->dataProvider->getIterator();
         foreach ($iterator as $rowData) {
@@ -119,6 +125,14 @@ final class Table implements UiComponent
                 }
             }
             $result .= (new Row($cells))->render();
+
+            if ($tableRowDivider !== null && !$iterator->isLast()) {
+                $tableRowDividerRenderer = new TableRowDividerRenderer(
+                    $tableRowDivider,
+                    count($this->tableDefinition->getColumnDefinitions())
+                );
+                $result .= $tableRowDividerRenderer->render();
+            }
         }
         $result .= '</tbody>';
 
@@ -161,6 +175,47 @@ final class Table implements UiComponent
 
             return new Cell($value, $columnDefinition);
         };
+    }
+
+
+    /**
+     * @deprecated Due to difficulties with deployment to https://components.brandembassy.com/2.0/css/components.css.
+     *             I must give style directly here; once "components.css" will be regenerated, this may disappear.
+     * @return string
+     */
+    private function renderRowDividerStyles(): string
+    {
+        return <<<STYLE
+<style type="text/css">
+
+div.TableRowDivider:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    right: -45px;
+    background: #b7b7b7;
+}
+
+div.TableRowDivider:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 1px;
+    left: -45px;
+    background: #b7b7b7;
+}
+
+tr.TableRowDivider {
+	background: linear-gradient(0deg, #FAFAFA 50%, #FFFFFF 50%);
+}
+tr.TableRowDivider:nth-child(even) {
+	background: linear-gradient(0deg, #FFFFFF 50%, #FAFAFA 50%);
+}	
+</style>
+STYLE;
     }
 
 

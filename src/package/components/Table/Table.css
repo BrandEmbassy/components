@@ -46,6 +46,14 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+
+  & tr.TableRowDivider {
+    background: linear-gradient(0deg, #FAFAFA 50%, #FFFFFF 50%);
+  }
+
+  & tr.TableRowDivider:nth-child(even) {
+    background: linear-gradient(0deg, #FFFFFF 50%, #FAFAFA 50%);
+  }
 }
 
 .Fixed {
@@ -64,4 +72,24 @@
   & table tr:hover {
     background-color: #e9e9e9;
   }
+}
+
+div.TableRowDivider:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  right: -45px;
+  background: #b7b7b7;
+}
+
+div.TableRowDivider:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  left: -45px;
+  background: #b7b7b7;
 }
