@@ -77,6 +77,7 @@ final class Table implements UiComponent
 
         $result = '';
         if ($this->tableDefinition->getRowDivider() !== null) {
+            $tableClass .= ' HasRowDividers';
             $result .= $this->renderRowDividerStyles();
         }
         $result .= '<div class="' . $tableClass . '"><table>';
@@ -197,7 +198,6 @@ div.TableRowDivider:before {
     right: -45px;
     background: #b7b7b7;
 }
-
 div.TableRowDivider:after {
     content: '';
     position: absolute;
@@ -207,13 +207,23 @@ div.TableRowDivider:after {
     left: -45px;
     background: #b7b7b7;
 }
+div.TableRowDivider {
+    font-weight: bold;
+}
 
+div.HasRowDividers table tbody tr:first-child td {
+    padding-top: 10px;
+}
+div.HasRowDividers table tbody tr:last-child td {
+    padding-bottom: 10px;
+}
 tr.TableRowDivider {
 	background: linear-gradient(0deg, #FAFAFA 50%, #FFFFFF 50%);
 }
 tr.TableRowDivider:nth-child(even) {
 	background: linear-gradient(0deg, #FFFFFF 50%, #FAFAFA 50%);
-}	
+}
+
 </style>
 STYLE;
     }

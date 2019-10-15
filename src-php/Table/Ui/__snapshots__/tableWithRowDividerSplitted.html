@@ -9,7 +9,6 @@
         right: -45px;
         background: #b7b7b7;
     }
-
     div.TableRowDivider:after {
         content: '';
         position: absolute;
@@ -19,7 +18,16 @@
         left: -45px;
         background: #b7b7b7;
     }
+    div.TableRowDivider {
+        font-weight: bold;
+    }
 
+    div.HasRowDividers table tbody tr:first-child td {
+        padding-top: 10px;
+    }
+    div.HasRowDividers table tbody tr:last-child td {
+        padding-bottom: 10px;
+    }
     tr.TableRowDivider {
         background: linear-gradient(0deg, #FAFAFA 50%, #FFFFFF 50%);
     }
@@ -28,7 +36,7 @@
     }
 
 </style>
-<div class="Table__Table Table__isStriped">
+<div class="Table__Table Table__isStriped HasRowDividers">
     <table>
         <thead>
         <tr>
@@ -47,7 +55,7 @@
             <td colspan="3" style="display: none;">&nbsp;</td>
         </tr>
         <tr class="TableRowDivider">
-            <td colspan="3" style="text-align: center; padding: 0; height: auto; user-select: none;">OR</td>
+            <td colspan="3" style="text-align: center; padding: 0; height: auto; user-select: none; font-weight: bold;">OR</td>
         </tr>
         <tr>
             <td>Subtraction</td>
@@ -58,7 +66,7 @@
             <td colspan="3" style="display: none;">&nbsp;</td>
         </tr>
         <tr class="TableRowDivider">
-            <td colspan="3" style="text-align: center; padding: 0; height: auto; user-select: none;">OR</td>
+            <td colspan="3" style="text-align: center; padding: 0; height: auto; user-select: none; font-weight: bold;">OR</td>
         </tr>
         <tr>
             <td>Multiplication</td>
