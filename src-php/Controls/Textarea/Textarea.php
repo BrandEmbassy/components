@@ -4,6 +4,8 @@ namespace BrandEmbassy\Components\Controls\Textarea;
 
 use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
+use function is_string;
+use function sprintf;
 
 final class Textarea implements UiComponent
 {
@@ -28,7 +30,7 @@ final class Textarea implements UiComponent
     private $disabled;
 
     /**
-     * @var string
+     * @var string|UiComponent
      */
     private $description;
 
@@ -38,12 +40,20 @@ final class Textarea implements UiComponent
     private $isError;
 
 
+    /**
+     * @param string             $name
+     * @param string             $value
+     * @param int                $rows
+     * @param bool               $disabled
+     * @param string|UiComponent $description
+     * @param bool               $isError
+     */
     public function __construct(
         string $name,
         string $value,
         int $rows,
         bool $disabled = false,
-        string $description = '',
+        $description = '',
         bool $isError = false
     ) {
         $this->name = $name;
@@ -61,9 +71,14 @@ final class Textarea implements UiComponent
         $name = StringEscaper::escapeHtml($this->name);
         $disabled = $this->disabled ? ' disabled' : '';
         $errorClass = $this->isError ? ' Textarea__Error' : '';
-        $description = $this->description !== ''
-            ? '<div class="Textarea__Desc">' . StringEscaper::escapeHtml($this->description) . '</div>'
-            : '';
+        $descriptionTemplate = '<div class="Textarea__Desc">%s</div>';
+        if (is_string($this->description) && $this->description !== '') {
+            $description = sprintf($descriptionTemplate, StringEscaper::escapeHtml($this->description));
+        } elseif ($this->description instanceof UiComponent) {
+            $description = sprintf($descriptionTemplate, $this->description->render());
+        } else {
+            $description = '';
+        }
 
         return '<div class="Textarea__Textarea' . $errorClass . '">
             <div class="Textarea__Field">
