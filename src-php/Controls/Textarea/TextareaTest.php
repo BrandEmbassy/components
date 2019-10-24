@@ -57,6 +57,18 @@ final class TextareaTest extends TestCase
                 'expectedSnapshotPath' => __DIR__ . '/__snapshot__/renderWithError.html',
                 'textarea' => new Textarea('myName', 'content', 14, false, '', true),
             ],
+            [
+                'expectedSnapshotPath' => __DIR__ . '/__snapshot__/renderWithPlaceholder.html',
+                'textarea' => new Textarea(
+                    'with-ph',
+                    'my text',
+                    4,
+                    false,
+                    '',
+                    false,
+                    'ABCD'
+                ),
+            ],
         ];
     }
 }

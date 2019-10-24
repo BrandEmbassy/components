@@ -35,6 +35,11 @@ final class Textarea implements UiComponent
     private $description;
 
     /**
+     * @var string|null
+     */
+    private $placeholder;
+
+    /**
      * @var bool
      */
     private $isError;
@@ -47,6 +52,7 @@ final class Textarea implements UiComponent
      * @param bool               $disabled
      * @param string|UiComponent $description
      * @param bool               $isError
+     * @param string|null        $placeholder
      */
     public function __construct(
         string $name,
@@ -54,7 +60,8 @@ final class Textarea implements UiComponent
         int $rows,
         bool $disabled = false,
         $description = '',
-        bool $isError = false
+        bool $isError = false,
+        ?string $placeholder = null
     ) {
         $this->name = $name;
         $this->value = $value;
@@ -62,6 +69,7 @@ final class Textarea implements UiComponent
         $this->disabled = $disabled;
         $this->description = $description;
         $this->isError = $isError;
+        $this->placeholder = $placeholder;
     }
 
 
@@ -79,10 +87,15 @@ final class Textarea implements UiComponent
         } else {
             $description = '';
         }
+        $placeholder = $this->placeholder !== null
+            ? ' placeholder="' . StringEscaper::escapeHtml($this->placeholder) . '"'
+            : '';
 
         return '<div class="Textarea__Textarea' . $errorClass . '">
             <div class="Textarea__Field">
-                <textarea' . $disabled . ' rows="' . $this->rows . '" name="' . $name . '">' . $value . '</textarea>
+                <textarea' . $disabled . ' rows="' . $this->rows . '" name="' . $name . '"' . $placeholder . '>'
+            . $value
+            . '</textarea>
             </div>
             ' . $description . '
         </div>';
