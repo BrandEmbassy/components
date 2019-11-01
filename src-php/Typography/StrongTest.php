@@ -15,7 +15,7 @@ final class StrongTest extends TestCase
      * @param string $snapshot
      * @param Strong $strong
      */
-    public function testShouldRenderParagraph(string $snapshot, Strong $strong): void
+    public function testStrongIsRendered(string $snapshot, Strong $strong): void
     {
         $this->assertSnapshot($snapshot, $strong);
     }
