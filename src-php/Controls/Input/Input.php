@@ -50,11 +50,21 @@ final class Input implements UiComponent
     private $disabled;
 
 
+    /**
+     * @param string             $name
+     * @param string             $value
+     * @param InputType          $type
+     * @param UiComponent|string $description
+     * @param bool               $isError
+     * @param InputSize|null     $inputSize
+     * @param string             $placeholder
+     * @param bool               $disabled
+     */
     public function __construct(
         string $name,
         string $value,
         InputType $type,
-        string $description = '',
+        $description = '',
         bool $isError = false,
         ?InputSize $inputSize = null,
         string $placeholder = '',
