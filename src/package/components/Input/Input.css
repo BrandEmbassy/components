@@ -34,14 +34,14 @@
       width: 100%;
       height: 36px;
       padding: 8px 10px;
-      box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 0 0 #fff;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 #fff;
       border: 1px solid #ccc;
       border-radius: 3px;
       font-size: 13px;
       font-weight: 400;
       font-style: normal;
       color: #4a4a4a;
-      transition: border .15s linear, box-shadow .15s linear;
+      transition: border 0.15s linear, box-shadow 0.15s linear;
       resize: none;
       background-color: #fff;
       outline: none;
@@ -54,10 +54,10 @@
         /* box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 0 0 #fff; */
         border: 1px solid rgb(184, 184, 184);
       }
-      
+
       &:focus {
         border-color: #81b9e8;
-        box-shadow: inset 0 0 0 #fff, 0 0 6px rgba(80,147,205,.5);
+        box-shadow: inset 0 0 0 #fff, 0 0 6px rgba(80, 147, 205, 0.5);
       }
     }
   }
@@ -74,11 +74,22 @@
     color: #9b9b9b;
   }
 
+  & .Description {
+    position: relative;
+    display: block;
+    height: auto;
+    margin-top: 2px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #9b9b9b;
+  }
+
   &.Disabled {
     & .Label {
       color: #9b9b9b;
     }
-
 
     & .Field {
       & input {
@@ -86,7 +97,7 @@
         background-color: #f5f5f5;
 
         &:hover {
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 0 0 #fff;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 #fff;
         }
       }
     }
@@ -97,7 +108,6 @@
   }
 
   &.Error {
-
     & .Field {
       & input {
         border-color: #e73133;
@@ -110,4 +120,3 @@
     }
   }
 }
-
