@@ -27,7 +27,7 @@ exports[`Gallery should render gallery 1`] = `
           Hello!
         </h1>
         <p>
-          Lorem Impsum...
+          Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
         </p>
         <div>
           <button
@@ -70,7 +70,7 @@ exports[`Gallery should render gallery 1`] = `
           Hello!
         </h1>
         <p>
-          Lorem Impsum...
+          Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
         </p>
         <div>
           <button
@@ -113,7 +113,7 @@ exports[`Gallery should render gallery 1`] = `
           Hello!
         </h1>
         <p>
-          Lorem Impsum...
+          Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
         </p>
         <div>
           <button

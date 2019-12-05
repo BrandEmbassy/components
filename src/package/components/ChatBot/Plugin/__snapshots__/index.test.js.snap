@@ -21,7 +21,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
           },
           Object {
             "id": "Ek4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -60,7 +60,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
           },
           Object {
             "id": "aEk4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -99,7 +99,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
           },
           Object {
             "id": "bEk4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -146,7 +146,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
             },
             Object {
               "id": "Ek4tPy1h1",
-              "text": "Lorem Impsum...",
+              "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
               "type": "TEXT",
             },
             Object {
@@ -185,7 +185,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
             },
             Object {
               "id": "aEk4tPy1h1",
-              "text": "Lorem Impsum...",
+              "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
               "type": "TEXT",
             },
             Object {
@@ -224,7 +224,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
             },
             Object {
               "id": "bEk4tPy1h1",
-              "text": "Lorem Impsum...",
+              "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
               "type": "TEXT",
             },
             Object {
@@ -258,11 +258,6 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
       data-cy="CARUSEL"
       data-selector="CARUSEL"
     >
-      <div>
-        <div
-          onMouseDown={[Function]}
-        />
-      </div>
       <div>
         <ResizeDetector
           handleHeight={false}
@@ -301,7 +296,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                   },
                   Object {
                     "id": "Ek4tPy1h1",
-                    "text": "Lorem Impsum...",
+                    "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                     "type": "TEXT",
                   },
                   Object {
@@ -340,7 +335,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                   },
                   Object {
                     "id": "aEk4tPy1h1",
-                    "text": "Lorem Impsum...",
+                    "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                     "type": "TEXT",
                   },
                   Object {
@@ -379,7 +374,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                   },
                   Object {
                     "id": "bEk4tPy1h1",
-                    "text": "Lorem Impsum...",
+                    "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                     "type": "TEXT",
                   },
                   Object {
@@ -490,7 +485,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           },
                           Object {
                             "id": "Ek4tPy1h1",
-                            "text": "Lorem Impsum...",
+                            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                             "type": "TEXT",
                           },
                           Object {
@@ -568,14 +563,14 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="Ek4tPy1h1"
                           onClick={[MockFunction]}
                           standalone={false}
-                          text="Lorem Impsum..."
+                          text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                           type="TEXT"
                         >
                           <Text
-                            content="Lorem Impsum..."
+                            content="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                           >
                             <p>
-                              Lorem Impsum...
+                              Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                             </p>
                           </Text>
                         </Element>
@@ -704,7 +699,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           },
                           Object {
                             "id": "aEk4tPy1h1",
-                            "text": "Lorem Impsum...",
+                            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                             "type": "TEXT",
                           },
                           Object {
@@ -782,14 +777,14 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="aEk4tPy1h1"
                           onClick={[MockFunction]}
                           standalone={false}
-                          text="Lorem Impsum..."
+                          text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                           type="TEXT"
                         >
                           <Text
-                            content="Lorem Impsum..."
+                            content="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                           >
                             <p>
-                              Lorem Impsum...
+                              Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                             </p>
                           </Text>
                         </Element>
@@ -918,7 +913,7 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           },
                           Object {
                             "id": "bEk4tPy1h1",
-                            "text": "Lorem Impsum...",
+                            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                             "type": "TEXT",
                           },
                           Object {
@@ -996,14 +991,14 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
                           key="bEk4tPy1h1"
                           onClick={[MockFunction]}
                           standalone={false}
-                          text="Lorem Impsum..."
+                          text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                           type="TEXT"
                         >
                           <Text
-                            content="Lorem Impsum..."
+                            content="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                           >
                             <p>
-                              Lorem Impsum...
+                              Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                             </p>
                           </Text>
                         </Element>
@@ -1105,11 +1100,25 @@ exports[`Plugin index should render carusel inside plugin 1`] = `
             </div>
           </ReactSwipableView>
         </CaruselItems>
-      </div>
-      <div>
         <div
-          onMouseDown={[Function]}
-        />
+          data-selector="DOTS"
+        >
+          <div
+            className="isActive"
+            key="Ek4tPy1h4"
+            onClick={[Function]}
+          />
+          <div
+            className=""
+            key="aEk4tPy1h5"
+            onClick={[Function]}
+          />
+          <div
+            className=""
+            key="bEk4tPy1h6"
+            onClick={[Function]}
+          />
+        </div>
       </div>
     </div>
   </Carusel>
@@ -1135,7 +1144,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
           },
           Object {
             "id": "Ek4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -1174,7 +1183,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
           },
           Object {
             "id": "aEk4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -1213,7 +1222,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
           },
           Object {
             "id": "bEk4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -1260,7 +1269,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
             },
             Object {
               "id": "Ek4tPy1h1",
-              "text": "Lorem Impsum...",
+              "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
               "type": "TEXT",
             },
             Object {
@@ -1299,7 +1308,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
             },
             Object {
               "id": "aEk4tPy1h1",
-              "text": "Lorem Impsum...",
+              "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
               "type": "TEXT",
             },
             Object {
@@ -1338,7 +1347,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
             },
             Object {
               "id": "bEk4tPy1h1",
-              "text": "Lorem Impsum...",
+              "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
               "type": "TEXT",
             },
             Object {
@@ -1411,7 +1420,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 },
                 Object {
                   "id": "Ek4tPy1h1",
-                  "text": "Lorem Impsum...",
+                  "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                   "type": "TEXT",
                 },
                 Object {
@@ -1489,14 +1498,14 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="Ek4tPy1h1"
                 onClick={[MockFunction]}
                 standalone={false}
-                text="Lorem Impsum..."
+                text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                 type="TEXT"
               >
                 <Text
-                  content="Lorem Impsum..."
+                  content="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                 >
                   <p>
-                    Lorem Impsum...
+                    Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                   </p>
                 </Text>
               </Element>
@@ -1611,7 +1620,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 },
                 Object {
                   "id": "aEk4tPy1h1",
-                  "text": "Lorem Impsum...",
+                  "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                   "type": "TEXT",
                 },
                 Object {
@@ -1689,14 +1698,14 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="aEk4tPy1h1"
                 onClick={[MockFunction]}
                 standalone={false}
-                text="Lorem Impsum..."
+                text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                 type="TEXT"
               >
                 <Text
-                  content="Lorem Impsum..."
+                  content="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                 >
                   <p>
-                    Lorem Impsum...
+                    Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                   </p>
                 </Text>
               </Element>
@@ -1811,7 +1820,7 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 },
                 Object {
                   "id": "bEk4tPy1h1",
-                  "text": "Lorem Impsum...",
+                  "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                   "type": "TEXT",
                 },
                 Object {
@@ -1889,14 +1898,14 @@ exports[`Plugin index should render gallery inside plugin 1`] = `
                 key="bEk4tPy1h1"
                 onClick={[MockFunction]}
                 standalone={false}
-                text="Lorem Impsum..."
+                text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                 type="TEXT"
               >
                 <Text
-                  content="Lorem Impsum..."
+                  content="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                 >
                   <p>
-                    Lorem Impsum...
+                    Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                   </p>
                 </Text>
               </Element>
@@ -2018,7 +2027,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
           },
           Object {
             "id": "Ek4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -2066,7 +2075,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
             },
             Object {
               "id": "Ek4tPy1h1",
-              "text": "Lorem Impsum...",
+              "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
               "type": "TEXT",
             },
             Object {
@@ -2127,7 +2136,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                   },
                   Object {
                     "id": "Ek4tPy1h1",
-                    "text": "Lorem Impsum...",
+                    "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                     "type": "TEXT",
                   },
                   Object {
@@ -2176,7 +2185,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                   },
                   Object {
                     "id": "Ek4tPy1h1",
-                    "text": "Lorem Impsum...",
+                    "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                     "type": "TEXT",
                   },
                   Object {
@@ -2223,7 +2232,7 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     },
                     Object {
                       "id": "Ek4tPy1h1",
-                      "text": "Lorem Impsum...",
+                      "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                       "type": "TEXT",
                     },
                     Object {
@@ -2315,16 +2324,16 @@ exports[`Plugin index should render raw element inside plugin 1`] = `
                     onClick={[MockFunction]}
                     showTextAsMessage={false}
                     standalone={false}
-                    text="Lorem Impsum..."
+                    text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                     type="TEXT"
                     width="100%"
                   >
                     <Text
-                      content="Lorem Impsum..."
+                      content="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                       showAsMessage={false}
                     >
                       <p>
-                        Lorem Impsum...
+                        Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                       </p>
                     </Text>
                   </Element>
@@ -2466,7 +2475,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
           },
           Object {
             "id": "Ek4tPy1h1",
-            "text": "Lorem Impsum...",
+            "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
             "type": "TEXT",
           },
           Object {
@@ -2517,7 +2526,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
               },
               Object {
                 "id": "Ek4tPy1h1",
-                "text": "Lorem Impsum...",
+                "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                 "type": "TEXT",
               },
               Object {
@@ -2564,7 +2573,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
               },
               Object {
                 "id": "Ek4tPy1h1",
-                "text": "Lorem Impsum...",
+                "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                 "type": "TEXT",
               },
               Object {
@@ -2610,7 +2619,7 @@ exports[`Plugin index should render standalone plugin 1`] = `
                 },
                 Object {
                   "id": "Ek4tPy1h1",
-                  "text": "Lorem Impsum...",
+                  "text": "Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...",
                   "type": "TEXT",
                 },
                 Object {
@@ -2643,10 +2652,10 @@ exports[`Plugin index should render standalone plugin 1`] = `
             <div>
               <div>
                 <Bubble
-                  text="Lorem Impsum..."
+                  text="Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum..."
                 >
                   <div>
-                    Lorem Impsum...
+                    Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
                   </div>
                 </Bubble>
               </div>

@@ -3,8 +3,13 @@
   margin: 0;
 }
 
-h1 + .Text, h2 + .Text {
+h1 + .Text,
+h2 + .Text {
   padding-top: 0;
+}
+
+.Text {
+  flex: 1 0 auto;
 }
 
 .MessageText {
