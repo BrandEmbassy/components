@@ -1,12 +1,12 @@
 // @flow
-import React, { PureComponent } from 'react'
+import React, { PureComponent } from "react";
 // @flow-skip-next-line
-import ReactResizeDetector from 'react-resize-detector'
-import CaruselItems from './CaruselItems'
-import styles from './index.module.css'
-import classNames from 'classnames/bind'
+import ReactResizeDetector from "react-resize-detector";
+import CaruselItems from "./CaruselItems";
+import styles from "./index.module.css";
+import classNames from "classnames/bind";
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 type Props = {
   elements: Array<Object>,
@@ -27,45 +27,49 @@ export default class Carusel extends PureComponent<Props, State> {
   };
 
   handleLeftArrowClick = () => {
-    this.swipe(this.SCROLL_DIRECTION_LEFT)
+    this.swipe(this.SCROLL_DIRECTION_LEFT);
   };
 
   handleRightArrowClick = () => {
-    this.swipe(this.SCROLL_DIRECTION_RIGHT)
+    this.swipe(this.SCROLL_DIRECTION_RIGHT);
   };
 
   handleChangeIndex = (index: number) => {
-    this.setState({ index })
+    this.setState({ index });
   };
 
   handleDotClick = (index: number) => () => {
-    this.setState({ index })
+    this.setState({ index });
+  };
+
+  handleChangeIndex = (index: number) => {
+    this.setState({ index });
   };
 
   swipe = (direction: number) => {
-    const { index } = this.state
-    const { elements } = this.props
+    const { index } = this.state;
+    const { elements } = this.props;
 
     if (
       (index === elements.length - 1 &&
         direction === this.SCROLL_DIRECTION_RIGHT) ||
       (index === 0 && direction === this.SCROLL_DIRECTION_LEFT)
     ) {
-      return
+      return;
     }
 
-    this.setState({ index: index + direction })
+    this.setState({ index: index + direction });
   };
 
-  render () {
-    const { index } = this.state
-    const { elements } = this.props
+  render() {
+    const { index } = this.state;
+    const { elements } = this.props;
 
     return (
       <div
         className={styles.PluginFrame}
-        data-cy='CARUSEL'
-        data-selector='CARUSEL'
+        data-cy="CARUSEL"
+        data-selector="CARUSEL"
       >
         <div className={styles.CaruselContent}>
           <ReactResizeDetector />
@@ -74,7 +78,7 @@ export default class Carusel extends PureComponent<Props, State> {
             index={index}
             handleChangeIndex={this.handleChangeIndex}
           />
-          <div className={styles.Dots} data-selector='DOTS'>
+          <div className={styles.Dots} data-selector="DOTS">
             {elements.map((element, arrayIndex) => (
               <div
                 key={element.id}
@@ -87,6 +91,6 @@ export default class Carusel extends PureComponent<Props, State> {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
