@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "repository": "git@github.com:BrandEmbassy/ui-components.git",
   "author": "techacct@brandembassy.com",
+  "license": "UNLICENSED",
   "scripts": {
     "jest": "jest",
     "start": "node scripts/start.js",

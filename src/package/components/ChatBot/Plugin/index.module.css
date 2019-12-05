@@ -4,11 +4,11 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 10px;
 }
 
@@ -18,10 +18,12 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   overflow: hidden;
   width: 100%;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 .Plugin {
@@ -30,21 +32,23 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   background: #fff;
   border-radius: 12px;
   border: solid 1px #e6e6e6;
   margin: 0;
   margin-bottom: 1px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   min-width: 150px;
   max-width: 660px;
+  height: calc(100% - 3px);
 }
 
-.LeftRow, .RightRow {
+.LeftRow,
+.RightRow {
   margin-top: 50%;
   width: 0;
   height: 0;
@@ -59,12 +63,36 @@
   display: flex;
   height: 100%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Dots {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.isActive {
+  background-color: rgb(88, 88, 88);
+}
+
+.Dot:hover {
+  background-color: rgb(88, 88, 88);
 }
 
 .LeftRow {
-  border-right: 10px solid #666
+  border-right: 10px solid #666;
 }
 
 .LeftRow:hover {
@@ -72,7 +100,7 @@
 }
 
 .RightRow {
-  border-left: 10px solid #666
+  border-left: 10px solid #666;
 }
 
 .RightRow:hover {
@@ -85,6 +113,6 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }

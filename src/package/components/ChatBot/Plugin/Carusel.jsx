@@ -4,51 +4,62 @@ import React, { PureComponent } from 'react'
 import ReactResizeDetector from 'react-resize-detector'
 import CaruselItems from './CaruselItems'
 import styles from './index.module.css'
+import classNames from 'classnames/bind'
+
+const cx = classNames.bind(styles)
 
 type Props = {
   elements: Array<Object>,
   onClick: Function,
   hideButtons?: boolean
-}
+};
 
 type State = {
   index: number
-}
+};
 
 export default class Carusel extends PureComponent<Props, State> {
-  SCROLL_DIRECTION_RIGHT = 1
-  SCROLL_DIRECTION_LEFT = -1
+  SCROLL_DIRECTION_RIGHT = 1;
+  SCROLL_DIRECTION_LEFT = -1;
 
   state = {
     index: 0
-  }
+  };
 
   handleLeftArrowClick = () => {
     this.swipe(this.SCROLL_DIRECTION_LEFT)
-  }
+  };
 
   handleRightArrowClick = () => {
     this.swipe(this.SCROLL_DIRECTION_RIGHT)
-  }
+  };
 
   handleChangeIndex = (index: number) => {
     this.setState({ index })
-  }
+  };
+
+  handleDotClick = (index: number) => () => {
+    this.setState({ index })
+  };
 
   swipe = (direction: number) => {
     const { index } = this.state
     const { elements } = this.props
 
-    if ((index === elements.length - 1 && direction === this.SCROLL_DIRECTION_RIGHT) ||
-      (index === 0 && direction === this.SCROLL_DIRECTION_LEFT)) {
+    if (
+      (index === elements.length - 1 &&
+        direction === this.SCROLL_DIRECTION_RIGHT) ||
+      (index === 0 && direction === this.SCROLL_DIRECTION_LEFT)
+    ) {
       return
     }
 
     this.setState({ index: index + direction })
-  }
+  };
 
   render () {
     const { index } = this.state
+    const { elements } = this.props
 
     return (
       <div
@@ -56,14 +67,6 @@ export default class Carusel extends PureComponent<Props, State> {
         data-cy='CARUSEL'
         data-selector='CARUSEL'
       >
-        <div className={styles.ArrowWrapper}>
-          {
-            <div
-              className={styles.LeftRow}
-              onMouseDown={this.handleLeftArrowClick}
-            />
-          }
-        </div>
         <div className={styles.CaruselContent}>
           <ReactResizeDetector />
           <CaruselItems
@@ -71,14 +74,17 @@ export default class Carusel extends PureComponent<Props, State> {
             index={index}
             handleChangeIndex={this.handleChangeIndex}
           />
-        </div>
-        <div className={styles.ArrowWrapper}>
-          {
-            <div
-              className={styles.RightRow}
-              onMouseDown={this.handleRightArrowClick}
-            />
-          }
+          <div className={styles.Dots} data-selector='DOTS'>
+            {elements.map((element, arrayIndex) => (
+              <div
+                key={element.id}
+                className={cx(styles.Dot, {
+                  isActive: index === arrayIndex
+                })}
+                onClick={this.handleDotClick(arrayIndex)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     )

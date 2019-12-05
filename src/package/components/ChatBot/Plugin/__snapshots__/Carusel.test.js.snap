@@ -6,9 +6,6 @@ exports[`Carusel should render carusel 1`] = `
   data-selector="CARUSEL"
 >
   <div>
-    <div />
-  </div>
-  <div>
     <div
       style="position:absolute;width:0;height:0;visibility:hidden;display:none"
     />
@@ -42,7 +39,7 @@ exports[`Carusel should render carusel 1`] = `
                 Hello!
               </h1>
               <p>
-                Lorem Impsum...
+                Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...Lorem Impsum...
               </p>
               <div>
                 <button
@@ -70,9 +67,19 @@ exports[`Carusel should render carusel 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div>
-    <div />
+    <div
+      data-selector="DOTS"
+    >
+      <div
+        class="isActive"
+      />
+      <div
+        class=""
+      />
+      <div
+        class=""
+      />
+    </div>
   </div>
 </div>
 `;
