@@ -47,19 +47,14 @@ final class Input implements UiComponent
     /**
      * @var bool
      */
-    private $disabled;
-
+    private $isDisabled;
 
     /**
-     * @param string             $name
-     * @param string             $value
-     * @param InputType          $type
-     * @param UiComponent|string $description
-     * @param bool               $isError
-     * @param InputSize|null     $inputSize
-     * @param string             $placeholder
-     * @param bool               $disabled
+     * @var bool
      */
+    private $isReadOnly;
+
+
     public function __construct(
         string $name,
         string $value,
@@ -68,7 +63,8 @@ final class Input implements UiComponent
         bool $isError = false,
         ?InputSize $inputSize = null,
         string $placeholder = '',
-        bool $disabled = false
+        bool $isDisabled = false,
+        bool $isReadOnly = false
     ) {
         $this->name = $name;
         $this->value = $value;
@@ -77,7 +73,8 @@ final class Input implements UiComponent
         $this->isError = $isError;
         $this->inputSize = $inputSize ?? InputSize::byValue(InputSize::AUTOMATIC);
         $this->placeholder = $placeholder;
-        $this->disabled = $disabled;
+        $this->isDisabled = $isDisabled;
+        $this->isReadOnly = $isReadOnly;
     }
 
 
@@ -95,11 +92,17 @@ final class Input implements UiComponent
         $maxWidth = $this->inputSize->getMaxWidth();
         $maxWidthArgument = $maxWidth !== null ? 'style="max-width: ' . $maxWidth . 'px;" ' : '';
 
-        $disabled = $this->disabled ? ' disabled' : '';
+        $disabled = $this->isDisabled ? ' disabled' : '';
+        $disabledClass = $this->isDisabled ? ' Input__Disabled' : '';
 
-        return '<div class="Input__Input' . $errorClass . '">'
+        $readOnly = $this->isReadOnly ? ' readonly' : '';
+        $readOnlyClass = $this->isReadOnly ? ' Input__Disabled' : '';
+
+        $attributes = $disabled . $readOnly;
+
+        return '<div class="Input__Input' . $errorClass . $disabledClass . $readOnlyClass . '">'
             . '<div class="Input__Field">'
-            . '<input' . $disabled . ' type="' . $this->type . '" name="' . StringEscaper::escapeHtmlAttribute($this->name)
+            . '<input' . $attributes . ' type="' . $this->type . '" name="' . StringEscaper::escapeHtmlAttribute($this->name)
             . '" value="' . StringEscaper::escapeHtmlAttribute($this->value) . '" '
             . $placeholder . $maxWidthArgument . '/></div>'
             . $description . '</div>';
