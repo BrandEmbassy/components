@@ -13,6 +13,7 @@ final class InputTest extends TestCase
 
     /**
      * @dataProvider getInputData
+     *
      * @param string $snapshot
      * @param Input  $input
      */
@@ -96,6 +97,20 @@ final class InputTest extends TestCase
                     false,
                     null,
                     'Foo bar'
+                ),
+            ],
+            'textInputReadOnly'          => [
+                __DIR__ . '/__snapshots__/textInputReadOnly.html',
+                new Input(
+                    'input-name',
+                    '',
+                    InputType::byValue(InputType::TEXT),
+                    '',
+                    false,
+                    null,
+                    '',
+                    false,
+                    true
                 ),
             ],
         ];
