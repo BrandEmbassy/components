@@ -21,17 +21,13 @@ final class CodeSnippet implements UiComponent
 
     public function render(): string
     {
-        return '
-        <pre style="
+        return '<pre style="
                 white-space: pre-wrap;
                 box-sizing: border-box;
                 background-color: #f4f4f4;
                 width: 100%;
                 margin-top: 20px;
                 padding: 14px;
-            ">
-            ' . htmlspecialchars($this->code) . '
-        </pre>
-        ';
+            ">' . htmlspecialchars($this->code) . '</pre>';
     }
 }

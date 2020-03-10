@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Typography;
 
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use Nette\Utils\FileSystem;
 use PHPUnit\Framework\TestCase;
 
 final class CodeSnippetTest extends TestCase
@@ -12,11 +13,7 @@ final class CodeSnippetTest extends TestCase
 
     public function testCodeSnippetIsRendered(): void
     {
-        $code = <<<EOT
-<script type="text/javascript">
-        alert('Hello boys & girls!')
-    </script>
-EOT;
+        $code = FileSystem::read(__DIR__ . '/__snapshots__/exampleSnippet.html');
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/codeSnippet.html', new CodeSnippet($code));
     }
