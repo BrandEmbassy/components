@@ -55,6 +55,17 @@ final class Input implements UiComponent
     private $isReadOnly;
 
 
+    /**
+     * @param string             $name
+     * @param string             $value
+     * @param InputType          $type
+     * @param UiComponent|string $description
+     * @param bool               $isError
+     * @param InputSize|null     $inputSize
+     * @param string             $placeholder
+     * @param bool               $isDisabled
+     * @param bool               $isReadOnly
+     */
     public function __construct(
         string $name,
         string $value,
