@@ -13,6 +13,7 @@ final class TextWithTitleTest extends TestCase
 
     /**
      * @dataProvider textWithTitleData
+     *
      * @param string        $snapshot
      * @param TextWithTitle $textWithTitle
      */

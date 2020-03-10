@@ -5,13 +5,13 @@ namespace BrandEmbassy\Components;
 final class UiFragment implements UiComponent
 {
     /**
-     * @var array|UiComponent[]
+     * @var UiComponent[]|string[]
      */
     private $components;
 
 
     /**
-     * @param UiComponent[] $components
+     * @param UiComponent[]|string[] $components
      */
     public function __construct(array $components)
     {

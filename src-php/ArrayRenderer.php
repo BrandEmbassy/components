@@ -2,28 +2,32 @@
 
 namespace BrandEmbassy\Components;
 
+use BrandEmbassy\Components\Text\UiString;
 use function array_map;
-use function implode;
 
+/**
+ * @deprecated use ComponentRenderer instead
+ */
 final class ArrayRenderer
 {
     /**
      * @param UiComponent[]|string[] $components
+     *
      * @return string
      */
     public static function render(array $components): string
     {
-        $rendered = array_map(
-            static function ($component): string {
-                if ($component instanceof UiComponent) {
-                    return $component->render();
+        $uiComponents = array_map(
+            static function ($component): UiComponent {
+                if (!$component instanceof UiComponent) {
+                    return new UiString($component);
                 }
 
-                return StringEscaper::escapeHtml($component);
+                return $component;
             },
             $components
         );
 
-        return implode('', $rendered);
+        return ComponentRenderer::renderMultiple($uiComponents);
     }
 }
