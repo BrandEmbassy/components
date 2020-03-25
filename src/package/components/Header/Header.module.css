@@ -6,36 +6,34 @@
   height: 40px;
   margin: 0;
   padding: 0px 10px;
-  background-color: #B93537;
+  background-color: #b93537;
   font-size: 15px;
   font-weight: 700;
   font-style: normal;
-  color: #fff; 
+  color: #fff;
+}
+.Header .Title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  & .Title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  & .Logo {
-    position: relative;
-    display: inline-flex;
-    width: auto;
-    margin-top: 10px;
-    height: 40px;
-    margin-right: 15px;
-    line-height: 40px;
-    font-size: 30px;
-    font-weight: 700;
-    color: #fff;
-
-    & [class^='be-icon'] {
-      line-height: 30px;
-      float: left;
-      font-size: 30px;
-      color: #fff;
-    }
-  }
+.Header .Logo {
+  position: relative;
+  display: inline-flex;
+  width: auto;
+  margin-top: 10px;
+  height: 40px;
+  margin-right: 15px;
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.Header .Logo [class^="be-icon"] {
+  line-height: 30px;
+  float: left;
+  font-size: 30px;
+  color: #fff;
 }

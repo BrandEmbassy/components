@@ -13,45 +13,44 @@
   cursor: pointer;
   transition-duration: 0.11s;
   user-select: none;
+}
+.Link:hover {
+  filter: brightness(115%);
+}
 
-  &:hover{
-    filter:brightness(115%);
-  }
+.Link .Text {
+  display: inline;
+  color: inherit;
+  margin-left: 4px;
+}
 
-  & .Text{
-    display: inline;
-    color: inherit;
-    margin-left: 4px;
-  }
+.Link [class^="be-icon"] {
+  line-height: inherit;
+  float: left;
+  font-size: 13px;
+  color: inherit;
+}
 
-  & [class^='be-icon'] {
-    line-height: inherit;
-    float: left;
-    font-size: 13px;
-    color: inherit;
-  }
+.Link.Blue {
+  color: #2eaae8;
+}
 
-  &.Blue {
-    color: #2eaae8;
-  }
+.Link.White {
+  color: #ffffff;
+}
 
-  &.White {
-    color: #ffffff;
+.Link.White:hover {
+  filter: brightness(80%);
+}
 
-    &:hover {
-      filter:brightness(80%);
-    }
-  }
-  
-  &.Green {
-    color: #329d53;
-  }
+.Link.Green {
+  color: #329d53;
+}
 
-  &.Red {
-    color: #E8585D;
-  }
-  
-  &.Black {
-    color: #000000;
-  }
+.Link.Red {
+  color: #e8585d;
+}
+
+.Link.Black {
+  color: #000000;
 }

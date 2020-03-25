@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   height: auto;
-  margin: 10px 0 0 ;
+  margin: 10px 0 0;
   padding: 10px 0px;
   line-height: 28px;
   float: left;
@@ -12,50 +12,49 @@
   font-size: 15px;
   font-weight: 700;
   font-style: normal;
-  color: #9b9b9b; 
+  color: #9b9b9b;
+}
+.Breadcrumbs .Textwrap {
+  flex: 1;
+}
 
-  & .Textwrap {
-    flex: 1;
-  }
+.Breadcrumbs .Step {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  float: left;
+  cursor: pointer;
+  color: #9b9b9b;
+}
+.Breadcrumbs .Step:first-child {
+  padding-left: 0;
+}
 
-  & .Step {
-    position: relative;
-    display: inline-block;
-    padding-left: 30px;
-    float: left;
-    cursor: pointer;
-    color: #9b9b9b; 
+.Breadcrumbs .Step:first-child:before {
+  content: "";
+}
 
-    &:first-child {
-      padding-left: 0;
-  
-      &:before {
-        content: "";
-      }
-    }
-    &:last-child{
-      color: #4a4a4a;
-      cursor: default;
-    }
-  
-    &:before{
-      content: "z";
-      position: absolute;
-      top: 0;
-      left: 8px;
-      display: block;
-      font-family: be-engager!important;
-      font-style: normal!important;
-      font-weight: 400!important;
-      font-variant: normal!important;
-      text-transform: none!important;
-      color: #9b9b9b!important;
-      pointer-events: none;
-      cursor: default!important;
-    }
-  }
+.Breadcrumbs .Step:last-child {
+  color: #4a4a4a;
+  cursor: default;
+}
 
-  & .Right {
-    align-self: flex-end;
-  }
+.Breadcrumbs .Step:before {
+  content: "z";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  display: block;
+  font-family: be-engager !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  color: #9b9b9b !important;
+  pointer-events: none;
+  cursor: default !important;
+}
+
+.Breadcrumbs .Right {
+  align-self: flex-end;
 }

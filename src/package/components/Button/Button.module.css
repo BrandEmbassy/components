@@ -17,56 +17,54 @@
   cursor: pointer;
   transition-duration: 0.11s;
   user-select: none;
+}
+.Button [class^="be-icon"] {
+  display: inline-flex;
+  margin-right: 8px;
+  line-height: 15px;
+  font-size: inherit;
+  color: inherit;
+  height: auto;
+}
 
-  & [class^='be-icon'] {
-    display: inline-flex;
-    margin-right: 8px;
-    line-height: 15px;
-    font-size: inherit;
-    color: inherit;
-    height: auto;
-  }
+.Button:hover {
+  filter: brightness(115%);
+}
 
-  &:hover {
-    filter:brightness(115%);
-  }
+.Button.Reversed {
+  color: #329d53;
+  background-color: #fff;
+}
 
-  &.Reversed {
-    color: #329d53;
-    background-color: #fff;
-  }
+.Button.Negative {
+  background-color: #e8585d;
+}
 
-  &.Negative {
-    background-color: #E8585D;
-  }
+.Button.Cancel {
+  color: #e8585d;
+  background-color: #fff;
+}
 
-  &.Cancel {
-    color: #E8585D ;
-    background-color: #fff;
-  }
+.Button.Disabled {
+  border-color: #c5c5c5 !important;
+  background-color: #cfcfcf !important;
+  color: #a6a6a6 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  box-shadow: none;
+}
 
-  &.Disabled {
-    border-color: #c5c5c5!important;
-    background-color: #cfcfcf!important;
-    color: #a6a6a6!important;
-    cursor: not-allowed!important;
-    pointer-events: none!important;
-    box-shadow: none;
-  }
-
-  &.Small {
-    height: 28px;
-    padding: 0 22px;
-    line-height: 28px;
-    margin: 5px;
-    font-size: 13px;
-    & [class^='be-icon'] {
-      line-height: 13px;
-    }
-  }
-
-  &.Wide {
-    width: 100%;
-    margin: 5px 0;
-  }
+.Button.Small {
+  height: 28px;
+  padding: 0 22px;
+  line-height: 28px;
+  margin: 5px;
+  font-size: 13px;
+}
+.Button.Small [class^="be-icon"] {
+  line-height: 13px;
+}
+.Button.Wide {
+  width: 100%;
+  margin: 5px 0;
 }

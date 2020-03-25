@@ -2,7 +2,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   padding: 10px 0;
-  & a {
-    margin-right: 10px;
-  }
+}
+.Linklist a {
+  margin-right: 10px;
 }

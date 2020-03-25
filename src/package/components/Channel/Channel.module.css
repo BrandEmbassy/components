@@ -1,4 +1,3 @@
-
 .Channel {
   position: relative;
   display: inline-block;
@@ -12,924 +11,1014 @@
   text-align: center;
   font-size: 12px;
   color: #fff;
+}
+.Channel:before,
+.Channel:after {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  height: inherit;
+  line-height: inherit;
+  float: left;
+  font-family: "be-engager" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+.Channel:after {
+  content: none;
+}
+.Channel.isPrivate:before,
+.Channel.message:before {
+  width: 24px;
+}
+.Channel.isPrivate:after,
+.Channel.message:after {
+  content: "9";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  height: 18px;
+  width: 18px;
+  line-height: 19px;
+  font-size: 17px;
+  color: #ffc36b;
+}
 
-  &:before, &:after {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    content: "";
-    height: inherit;
-    line-height: inherit;
-    float: left;
-    font-family: "be-engager" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-  }
-  &:after {
-    content: none;
-  }
-  &.isPrivate, &.message {
-    &:before {
-      width: 24px;
-    }
-    &:after {
-      content: "9";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: block;
-      height: 18px;
-      width: 18px;
-      line-height: 19px;
-      font-size: 17px;
-      color: #ffc36b;
-    }
-  }
+.Channel.facebook {
+  line-height: 25px;
+  background-color: #3b5998;
+  font-size: 12px;
+}
+.Channel.facebook:before {
+  content: "\6d";
+}
 
-  &.facebook {
-    line-height: 25px;
-    background-color: #3b5998;
-    font-size: 12px;
-    &:before {
-      content: "\6d";
-    }
-  }
-  &.facebook-dm {
-    line-height: 25px;
-    background-color: #3b5998;
-    font-size: 12px;
-    &:before {
-      content: "\6d";
-      width: 24px;
-    }
-    &:after {
-      content: "9";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: block;
-      height: 18px;
-      width: 18px;
-      line-height: 19px;
-      font-size: 17px;
-      color: #ffc36b;
-    }
-  }
-  &.facebook-messenger {
-    line-height: 25px;
-    background-color: #448aff;
-    font-size: 12px;
-    &:before {
-      content: "\o";
-    }
-  }
-  &.twitter {
-    background-color: #55acee;
-    &:before {
-      content: "\6e";
-    }
-  }
-  &.co-browsing {
-    background-color: #cf6dca;
-    &:before {
-      content: "\U";
-    }
-  }
-  &.in-app-messaging {
-    background-color: #cf6dca;
-    &:before {
-      content: "\U";
-    }
-  }
-  &.kakao-talk {
-    background-color: #ffe812;
-    color: #000;
-    &:before {
-      content: "\U";
-    }
-  }
-  &.tango {
-    background-color: #db4301;
-    &:before {
-      content: "\U";
-    }
-  }
-  &.twitter-dm {
-    background-color: #55acee;
-    &:before {
-      content: "\6e";
-      width: 24px;
-    }
-    &:after {
-      content: "9";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: block;
-      height: 18px;
-      width: 18px;
-      line-height: 19px;
-      font-size: 17px;
-      color: #ffc36b;
-    }
-  }
-  &.instagram {
-    background-color: #55acee00;
-    background: linear-gradient( 45deg, #ee8252, #eb4b66, #a8478c);
-    font-size: 14.4px;
-    &:before {
-      content: "\73";
-    }
-  }
-  &.instagram-dm {
-    background-color: #55acee00;
-    background: linear-gradient( 45deg, #ee8252, #eb4b66, #a8478c);
-    font-size: 14.4px;
-    &:before {
-      content: "\73";
-      width: 24px;
-    }
-    &:after {
-      content: "9";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: block;
-      height: 18px;
-      width: 18px;
-      line-height: 19px;
-      font-size: 17px;
-      color: #ffc36b;
-    }
-  }
-  &.google {
-    background-color: #dd4b39;
-    font-size: 14.4px;
-    &:before {
-      content: "\70";
-    }
-  }
-  &.google-dm {
-    background-color: #dd4b39;
-    font-size: 14.4px;
-    &:before {
-      content: "\70";
-      width: 24px;
-    }
-    &:after {
-      content: "9";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: block;
-      height: 18px;
-      width: 18px;
-      line-height: 19px;
-      font-size: 17px;
-      color: #ffc36b;
-    }
-  }
-  &.google-search {
-    background-color: #000000;
-    font-size: 14.4px;
-    &:before {
-      content: "\v";
-    }
-  }
-  &.google-play {
-    background-color: #000000;
-    background: linear-gradient( 145deg, #00ceff, #d53f62, #f8c971);
-    font-size: 14.4px;
-    &:before {
-      content: "\E036";
-    }
-  }
-  &.google-maps {
-    background-color: #8fc24e;
-    background: linear-gradient( 0deg, #a0cf61, #8fc24e);
-    font-size: 14.4px;
-    &:before {
-      content: "\e03d";
-      color:#ea4b36;
-    }
-  }
-  &.telegram {
-    background-color: #229dd8;
-    &:before {
-      content: "\E03A";
-    }
-  }
-  &.youtube {
-    background-color: #b00;
-    &:before {
-      content: "\6c";
-    }
-  }
-  &.rcs {
-    background-color: #000000;
+.Channel.facebook-dm {
+  line-height: 25px;
+  background-color: #3b5998;
+  font-size: 12px;
+}
+.Channel.facebook-dm:before {
+  content: "\6d";
+  width: 24px;
+}
+.Channel.facebook-dm:after {
+  content: "9";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  height: 18px;
+  width: 18px;
+  line-height: 19px;
+  font-size: 17px;
+  color: #ffc36b;
+}
 
-    &:before {
-      content: "\E006";
-    }
-  }
-  &.pinterest {
-    background-color: #d63633;
-    &:before {
-      content: "\E02B";
-    }
-  }
-  &.wechat, &.we-chat {
-    background-color: #2dc100;
-    &:before {
-      content: "\E038";
-    }
-  }
-  &.voice {
-    background-color: #145de4;
-    background: linear-gradient( 180deg, #145de4, #0f44a7);
-    &:before {
-      content: "\#";
-    }
-  }
-  &.whatsapp {
-    background-color: #009d00;
-    &:before {
-      content: "\E033";
-    }
-  }
-  &.contact-form {
-    background-color: #000000;
-    &:before {
-      content: "\E042";
-    }
-  }
-  &.viber {
-    background-color: #7b519d;
-    &:before {
-      content: "\E034";
-    }
-  }
-  &.apple-apps, &.apple-apps-reviews {
-    background-color: #0269e2;
-    background: linear-gradient( 180deg, #1ac1fb, #1d77f2);
-    &:before {
-      content: "\e03e";
-    }
-  }
-  &.apple {
-    background-color: #a7a7a7;
-    background: linear-gradient( 180deg,#bbbbbb, #a7a7a7);
-    color: #000;
-    &:before {
-      content: "\E03B";
-    }
-  }
-  &.apple-imessage, &.apple-business {
-    background: linear-gradient( 180deg,#5bf677, #00b618);
-    font-size: 28px;
-    &:before {
-      content: "\E040";
-    }
-  }
-  &.sms, &.twilio {
-    background-color: #a228b7;
-    color: #fff;
-    &:before {
-      content: "\E03C";
-    }
-  }
-  &.rss {
-    background-color: #ffa500;
-    &:before {
-      content: "\E039";
-    }
-  }
-  &.ok-ru {
-    background-color: #f68634;
-    &:before {
-      content: "\E035";
-    }
-  }
-  &.kik {
-    background-color: #000000;
-    color:#7db703;
-    &:before {
-      content: "\E02F";
-    }
-  }
-  &.linkedin {
-    background-color: #007bb6;
-    &:before {
-      content: "\6b";
-    }
-  }
-  &.livechat-contact-form {
-    background-color: #b42c2a;
-    &:before {
-      content: "\E019";
-    }
-  }
-  &.slack {
-    background-color: #77d4b6;
-    color: #fff;
-    &:before {
-      content: "\E02E";
-    }
-  }
-  &.tumblr {
-    background-color: #395a76;
-    &:before {
-      content: "\E02C";
-    }
-  }
-  &.snapchat {
-    background-color: #ece000;
+.Channel.facebook-messenger {
+  line-height: 25px;
+  background-color: #448aff;
+  font-size: 12px;
+}
+.Channel.facebook-messenger:before {
+  content: "\o";
+}
 
-    &:before {
-      content: "\E02D";
-      -webkit-text-stroke: 1px black;
-    }
-  }
-  &.amazon {
-    background-color: #000000;
-    color: #f90;
-    color:#fff;
-    &:before {
-      content: "\E031";
-    }
-  }
-  &.livechat, &.live-chat {
-    background-color: #b42c2a;
-    &:before {
-      content: "\71";
-    }
-  }
-  &.line-message, &.line {
-    background: linear-gradient( 180deg, #35be19, #32b418);
-    font-size: 18px;
-    &:before {
-      content: "\E041";
-    }
-  }
-  &.email {
-    background-color: #dee4eb;
-    font-size: 13.2px;
-    color: #545968;
-    &:before {
-      content: "\69";
-    }
-  }
-  &.forum {
-    background-color: #4a4a4a;
-    font-size: 10.8px;
-    &:before {
-      content: "\64";
-    }
-  }
-  &.vkontakte {
-    background-color: #45668e;
-    font-size: 12px;
-    &:before {
-      content: "\74";
-    }
-  }
-  &.vkontakte-dm {
-    background-color: #45668e;
-    font-size: 12px;
-    &:before {
-      content: "\74";
-      width: 24px;
-    }
-    &:after {
-      content: "9";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: block;
-      height: 18px;
-      width: 18px;
-      line-height: 19px;
-      font-size: 17px;
-      color: #ffc36b;
-    }
-  }
-  &.listening, &.kbm-1, &.default {
-    background-color: #dcdcdc;
-    font-size: 14.4px;
-    color: #a2a2a2;
-    &:before {
-      content: "\46";
-    }
-  }
+.Channel.twitter {
+  background-color: #55acee;
+}
 
-  /* SIZE XL */
+.Channel.twitter:before {
+  content: "\6e";
+}
 
-  &.sizeXL {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 30px;
-    border-radius: 7px;
+.Channel.co-browsing {
+  background-color: #cf6dca;
+}
+.Channel.co-browsing:before {
+  content: "\U";
+}
 
-    &.isPrivate, &.message {
-      &:before {
-        width: 60px;
-      }
-      &:after {
-        height: 45px;
-        width: 45px;
-        line-height: 46px;
-        font-size: 44px;
-      }
-    }
-    &.facebook {
-      line-height: 60px;
-      font-size: 30px;
-    }
-    &.facebook-dm {
-      line-height: 60px;
-      font-size: 30px;
-      &:before {
-        width: 60px;
-      }
-      &:after {
-        height: 45px;
-        width: 45px;
-        line-height: 46px;
-        font-size: 44px;
-      }
-    }
-    &.twitter-dm {
-      line-height: 60px;
-      &:before {
-        width: 60px;
-      }
-      &:after {
-        height: 45px;
-        width: 45px;
-        line-height: 46px;
-        font-size: 44px;
-      }
-    }
-    &.apple-apps, &.apple-apps-reviews {
-      font-size: 46px;
-    }
-    &.wechat, &.we-chat {
-      font-size: 42px;
-    }
-    &.apple-imessage, &.apple-business {
-      font-size: 65px;
-    }
-    &.sms, &.twilio {
-      font-size: 40px;
-    }
-    &.co-browsing {
-      font-size: 40px;
-    }
-    &.telegram {
-      font-size: 36px;
-    }
-    &.instagram {
-      font-size: 36px;
-    }
-    &.instagram-dm {
-      line-height: 60px;
-      font-size: 36px;
-      &:before {
-        width: 60px;
-      }
-      &:after {
-        height: 45px;
-        width: 45px;
-        line-height: 46px;
-        font-size: 44px;
-      }
-    }
-    &.amazon {
-      font-size: 36px;
-    }
-    &.snapchat {
-      font-size: 38px;
-    }
-    &.google {
-      font-size: 36px;
-    }
-    &.google-dm {
-      line-height: 60px;
-      font-size: 36px;
-      &:before {
-        width: 60px;
-      }
-      &:after {
-        height: 45px;
-        width: 45px;
-        line-height: 46px;
-        font-size: 44px;
-      }
-    }
-    &.google-maps {
-      font-size: 40px;
-    }
-    &.email {
-      font-size: 33px;
-    }
-    &.line-message, &.line {
-      font-size: 50px;
-    }
-    &.forum {
-      font-size: 27px;
-    }
-    &.voice {
-      font-size: 36px;
-    }
-    &.vkontakte {
-      font-size: 30px;
-    }
-    &.vkontakte-dm {
-      font-size: 30px;
-      &:before {
-        width: 60px;
-      }
-      &:after {
-        height: 45px;
-        width: 45px;
-        line-height: 46px;
-        font-size: 44px;
-      }
-    }
-    &.listening, &.kbm-1, &.default {
-      font-size: 36px;
-    }
-  }
+.Channel.in-app-messaging {
+  background-color: #cf6dca;
+}
+.Channel.in-app-messaging:before {
+  content: "\U";
+}
 
-  /* SIZE L */
+.Channel.kakao-talk {
+  background-color: #ffe812;
+  color: #000;
+}
+.Channel.kakao-talk:before {
+  content: "\U";
+}
 
-  &.sizeL {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
-    border-radius: 5px;
+.Channel.tango {
+  background-color: #db4301;
+}
+.Channel.tango:before {
+  content: "\U";
+}
 
-    &.isPrivate, &.message {
-      &:before {
-        width: 40px;
-      }
-      &:after {
-        height: 30px;
-        width: 30px;
-        line-height: 31px;
-        font-size: 29px;
-      }
-    }
-    &.facebook {
-      line-height: 40px;
-      font-size: 20px;
-    }
-    &.facebook-dm {
-      line-height: 40px;
-      font-size: 20px;
-      &:before {
-        width: 40px;
-      }
-      &:after {
-        height: 30px;
-        width: 30px;
-        line-height: 31px;
-        font-size: 29px;
-      }
-    }
-    &.twitter-dm {
-      line-height: 40px;
-      &:before {
-        width: 40px;
-      }
-      &:after {
-        height: 30px;
-        width: 30px;
-        line-height: 31px;
-        font-size: 29px;
-      }
-    }
-    &.apple-apps, &.apple-apps-reviews {
-      font-size: 28px;
-    }
-    &.apple-imessage, &.apple-business {
-      font-size: 44px;
-    }
-    &.line-message, &.line {
-      font-size: 26px;
-    }
-    &.sms, &.twilio {
-      font-size: 26px;
-    }
-    &.wechat, &.we-chat {
-      font-size: 26px;
-    }
-    &.voice {
-      font-size: 26px;
-    }
-    &.amazon {
-      font-size: 26px;
-    }
-    &.snapchat {
-      font-size: 26px;
-    }
-    &.instagram {
-      font-size: 24px;
-    }
-    &.instagram-dm {
-      line-height: 40px;
-      font-size: 24px;
-      &:before {
-        width: 40px;
-      }
-      &:after {
-        height: 30px;
-        width: 30px;
-        line-height: 31px;
-        font-size: 29px;
-      }
-    }
-    &.google {
-      font-size: 24px;
-    }
-    &.google-dm {
-      line-height: 40px;
-      font-size: 24px;
-      &:before {
-        width: 40px;
-      }
-      &:after {
-        height: 30px;
-        width: 30px;
-        line-height: 31px;
-        font-size: 29px;
-      }
-    }
-    &.google-maps {
-      font-size: 26px;
-    }
-    &.email {
-      font-size: 22px;
-    }
-    &.forum {
-      font-size: 18px;
-    }
-    &.vkontakte {
-      font-size: 20px;
-    }
-    &.vkontakte-dm {
-      font-size: 20px;
-      &:before {
-        width: 40px;
-      }
-      &:after {
-        height: 30px;
-        width: 30px;
-        line-height: 31px;
-        font-size: 29px;
-      }
-    }
-    &.listening, &.kbm-1, &.default {
-      font-size: 24px;
-    }
-  }
+.Channel.twitter-dm {
+  background-color: #55acee;
+}
+.Channel.twitter-dm:before {
+  content: "\6e";
+  width: 24px;
+}
+.Channel.twitter-dm:after {
+  content: "9";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  height: 18px;
+  width: 18px;
+  line-height: 19px;
+  font-size: 17px;
+  color: #ffc36b;
+}
 
-  /* SIZE S */
+.Channel.instagram {
+  background-color: #55acee00;
+  background: linear-gradient(45deg, #ee8252, #eb4b66, #a8478c);
+  font-size: 14.4px;
+}
+.Channel.instagram:before {
+  content: "\73";
+}
 
-  &.sizeS {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 10px;
+.Channel.instagram-dm {
+  background-color: #55acee00;
+  background: linear-gradient(45deg, #ee8252, #eb4b66, #a8478c);
+  font-size: 14.4px;
+}
 
-    &.isPrivate, &.message {
-      &:before {
-        width: 20px;
-      }
-      &:after {
-        height: 15px;
-        width: 15px;
-        line-height: 16px;
-        font-size: 14px;
-      }
-    }
-    &.facebook {
-      line-height: 20px;
-      font-size: 10px;
-    }
-    &.facebook-dm {
-      line-height: 20px;
-      font-size: 10px;
-      &:before {
-        width: 20px;
-      }
-      &:after {
-        height: 15px;
-        width: 15px;
-        line-height: 16px;
-        font-size: 14px;
-      }
-    }
-    &.twitter-dm {
-      line-height: 20px;
-      font-size: 10px;
-      &:before {
-        width: 20px;
-      }
-      &:after {
-        height: 15px;
-        width: 15px;
-        line-height: 16px;
-        font-size: 14px;
-      }
-    }
-    &.instagram {
-      font-size: 12px;
-    }
-    &.line-message, &.line {
-      font-size: 14px;
-    }
-    &.instagram-dm {
-      line-height: 20px;
-      font-size: 12px;
-      &:before {
-        width: 20px;
-      }
-      &:after {
-        height: 15px;
-        width: 15px;
-        line-height: 16px;
-        font-size: 14px;
-      }
-    }
-    &.google {
-      font-size: 12px;
-    }
-    &.google-dm {
-      line-height: 20px;
-      font-size: 12px;
-      &:before {
-        width: 20px;
-      }
-      &:after {
-        height: 15px;
-        width: 15px;
-        line-height: 16px;
-        font-size: 14px;
-      }
-    }
-    &.email {
-      font-size: 11px;
-    }
-    &.forum {
-      font-size: 9px;
-    }
-    &.vkontakte {
-      font-size: 10px;
-    }
-    &.vkontakte-dm {
-      font-size: 10px;
-      &:before {
-        width: 20px;
-      }
-      &:after {
-        height: 15px;
-        width: 15px;
-        line-height: 16px;
-        font-size: 14px;
-      }
-    }
-    &.listening, &.kbm-1, &.default {
-      font-size: 12px;
-    }
-    &.apple-imessage, &.apple-business {
-      font-size: 20px;
-    }
-  }
+.Channel.instagram-dm:before {
+  content: "\73";
+  width: 24px;
+}
+.Channel.instagram-dm:after {
+  content: "9";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  height: 18px;
+  width: 18px;
+  line-height: 19px;
+  font-size: 17px;
+  color: #ffc36b;
+}
 
-  /* SIZE XS */
+.Channel.google {
+  background-color: #dd4b39;
+  font-size: 14.4px;
+}
+.Channel.google:before {
+  content: "\70";
+}
 
-  &.sizeXS {
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    font-size: 8px;
+.Channel.google-dm {
+  background-color: #dd4b39;
+  font-size: 14.4px;
+}
+.Channel.google-dm:before {
+  content: "\70";
+  width: 24px;
+}
+.Channel.google-dm:after {
+  content: "9";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  height: 18px;
+  width: 18px;
+  line-height: 19px;
+  font-size: 17px;
+  color: #ffc36b;
+}
 
-    &.isPrivate, &.message {
-      &:before {
-        width: 16px;
-      }
-      &:after {
-        height: 12px;
-        width: 12px;
-        line-height: 13px;
-        font-size: 11px;
-      }
-    }
-    &.facebook {
-      line-height: 16px;
-      font-size: 8px;
-    }
-    &.facebook-dm {
-      line-height: 16px;
-      font-size: 8px;
-      &:before {
-        width: 16px;
-      }
-      &:after {
-        height: 12px;
-        width: 12px;
-        line-height: 13px;
-        font-size: 11px;
-      }
-    }
-    &.line-message, &.line {
-      font-size: 12px;
-    }
-    &.twitter-dm {
-      line-height: 16px;
-      font-size: 8px;
-      &:before {
-        width: 16px;
-      }
-      &:after {
-        height: 12px;
-        width: 12px;
-        line-height: 13px;
-        font-size: 11px;
-      }
-    }
-    &.instagram {
-      font-size: 9.6px;
-    }
-    &.instagram-dm {
-      line-height: 16px;
-      font-size: 9.6px;
-      &:before {
-        width: 16px;
-      }
-      &:after {
-        height: 12px;
-        width: 12px;
-        line-height: 13px;
-        font-size: 11px;
-      }
-    }
-    &.google {
-      font-size: 9.6px;
-    }
-    &.google-dm {
-      font-size: 9.6px;
-      &:before {
-        width: 16px;
-      }
-      &:after {
-        height: 12px;
-        width: 12px;
-        line-height: 13px;
-        font-size: 11px;
-      }
-    }
-    &.email {
-      font-size: 8.8px;
-    }
-    &.forum {
-      font-size: 7.2px;
-    }
-    &.vkontakte {
-      font-size: 8px;
-    }
-    &.vkontakte-dm {
-      font-size: 8px;
-      &:before {
-        width: 16px;
-      }
-      &:after {
-        height: 12px;
-        width: 12px;
-        line-height: 13px;
-        font-size: 11px;
-      }
-    }
-    &.listening, &.kbm-1, &.default {
-      font-size: 9.6px;
-    }
-    &.apple-imessage, &.apple-business {
-      font-size: 16px;
-    }
-  }
-  &.isGrayscale {
-    background-color: #00000000;
-    color: #fff;
-    &.active {
-      color: #666;
-    }
-  }
+.Channel.google-search {
+  background-color: #000000;
+  font-size: 14.4px;
+}
+.Channel.google-search:before {
+  content: "\v";
+}
+
+.Channel.google-play {
+  background-color: #000000;
+  background: linear-gradient(145deg, #00ceff, #d53f62, #f8c971);
+  font-size: 14.4px;
+}
+.Channel.google-play:before {
+  content: "\E036";
+}
+
+.Channel.google-maps {
+  background-color: #8fc24e;
+  background: linear-gradient(0deg, #a0cf61, #8fc24e);
+  font-size: 14.4px;
+}
+.Channel.google-maps:before {
+  content: "\e03d";
+  color: #ea4b36;
+}
+
+.Channel.telegram {
+  background-color: #229dd8;
+}
+
+.Channel.telegram:before {
+  content: "\E03A";
+}
+
+.Channel.youtube {
+  background-color: #b00;
+}
+
+.Channel.youtube:before {
+  content: "\6c";
+}
+
+.Channel.rcs {
+  background-color: #000000;
+}
+.Channel.rcs:before {
+  content: "\E006";
+}
+
+.Channel.pinterest {
+  background-color: #d63633;
+}
+.Channel.pinterest:before {
+  content: "\E02B";
+}
+
+.Channel.wechat,
+.Channel.we-chat {
+  background-color: #2dc100;
+}
+.Channel.wechat:before,
+.Channel.we-chat:before {
+  content: "\E038";
+}
+
+.Channel.voice {
+  background-color: #145de4;
+  background: linear-gradient(180deg, #145de4, #0f44a7);
+}
+.Channel.voice:before {
+  content: "\#";
+}
+
+.Channel.whatsapp {
+  background-color: #009d00;
+}
+.Channel.whatsapp:before {
+  content: "\E033";
+}
+
+.Channel.contact-form {
+  background-color: #000000;
+}
+.Channel.contact-form:before {
+  content: "\E042";
+}
+
+.Channel.viber {
+  background-color: #7b519d;
+}
+.Channel.viber:before {
+  content: "\E034";
+}
+
+.Channel.apple-apps,
+.Channel.apple-apps-reviews {
+  background-color: #0269e2;
+  background: linear-gradient(180deg, #1ac1fb, #1d77f2);
+}
+.Channel.apple-apps:before,
+.Channel.apple-apps-reviews:before {
+  content: "\e03e";
+}
+
+.Channel.apple {
+  background-color: #a7a7a7;
+  background: linear-gradient(180deg, #bbbbbb, #a7a7a7);
+  color: #000;
+}
+.Channel.apple:before {
+  content: "\E03B";
+}
+
+.Channel.apple-imessage,
+.Channel.apple-business {
+  background: linear-gradient(180deg, #5bf677, #00b618);
+  font-size: 28px;
+}
+.Channel.apple-imessage:before,
+.Channel.apple-business:before {
+  content: "\E040";
+}
+
+.Channel.sms,
+.Channel.twilio {
+  background-color: #a228b7;
+  color: #fff;
+}
+
+.Channel.sms:before,
+.Channel.twilio:before {
+  content: "\E03C";
+}
+
+.Channel.rss {
+  background-color: #ffa500;
+}
+
+.Channel.rss:before {
+  content: "\E039";
+}
+
+.Channel.ok-ru {
+  background-color: #f68634;
+}
+
+.Channel.ok-ru:before {
+  content: "\E035";
+}
+
+.Channel.kik {
+  background-color: #000000;
+  color: #7db703;
+}
+
+.Channel.kik:before {
+  content: "\E02F";
+}
+
+.Channel.linkedin {
+  background-color: #007bb6;
+}
+
+.Channel.linkedin:before {
+  content: "\6b";
+}
+
+.Channel.livechat-contact-form {
+  background-color: #b42c2a;
+}
+
+.Channel.livechat-contact-form:before {
+  content: "\E019";
+}
+
+.Channel.slack {
+  background-color: #77d4b6;
+  color: #fff;
+}
+.Channel.slack:before {
+  content: "\E02E";
+}
+
+.Channel.tumblr {
+  background-color: #395a76;
+}
+
+.Channel.tumblr:before {
+  content: "\E02C";
+}
+
+.Channel.snapchat {
+  background-color: #ece000;
+}
+.Channel.snapchat :before {
+  content: "\E02D";
+  -webkit-text-stroke: 1px black;
+}
+
+.Channel.amazon {
+  background-color: #000000;
+  color: #f90;
+  color: #fff;
+}
+
+.Channel.amazon :before {
+  content: "\E031";
+}
+
+.Channel.livechat,
+.Channel.live-chat {
+  background-color: #b42c2a;
+}
+
+.Channel.livechat:before,
+.Channel.live-chat:before {
+  content: "\71";
+}
+
+.Channel.line-message,
+.Channel.line {
+  background: linear-gradient(180deg, #35be19, #32b418);
+  font-size: 18px;
+}
+.Channel.line-message:before,
+.Channel.line:before {
+  content: "\E041";
+}
+
+.Channel.email {
+  background-color: #dee4eb;
+  font-size: 13.2px;
+  color: #545968;
+}
+.Channel.email:before {
+  content: "\69";
+}
+
+.Channel.forum {
+  background-color: #4a4a4a;
+  font-size: 10.8px;
+}
+.Channel.forum:before {
+  content: "\64";
+}
+
+.Channel.vkontakte {
+  background-color: #45668e;
+  font-size: 12px;
+}
+.Channel.vkontakte:before {
+  content: "\74";
+}
+
+.Channel.vkontakte-dm {
+  background-color: #45668e;
+  font-size: 12px;
+}
+.Channel.vkontakte-dm:before {
+  content: "\74";
+  width: 24px;
+}
+.Channel.vkontakte-dm:after {
+  content: "9";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  height: 18px;
+  width: 18px;
+  line-height: 19px;
+  font-size: 17px;
+  color: #ffc36b;
+}
+
+.Channel.listening,
+.Channel.kbm-1,
+.Channel.default {
+  background-color: #dcdcdc;
+  font-size: 14.4px;
+  color: #a2a2a2;
+}
+
+.Channel.listening:before,
+.Channel.kbm-1:before,
+.Channel.default:before {
+  content: "\46";
+}
+
+/* SIZE XL */
+
+.Channel.sizeXL {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 30px;
+  border-radius: 7px;
+}
+.Channel.sizeXL.isPrivate:before,
+.Channel.sizeXL.message:before {
+  width: 60px;
+}
+.Channel.sizeXL.isPrivate:after,
+.Channel.sizeXL.message:after {
+  height: 45px;
+  width: 45px;
+  line-height: 46px;
+  font-size: 44px;
+}
+.Channel.sizeXL.facebook {
+  line-height: 60px;
+  font-size: 30px;
+}
+.Channel.sizeXL.facebook-dm {
+  line-height: 60px;
+  font-size: 30px;
+}
+.Channel.sizeXL.facebook-dm:before {
+  width: 60px;
+}
+.Channel.sizeXL.facebook-dm:after {
+  height: 45px;
+  width: 45px;
+  line-height: 46px;
+  font-size: 44px;
+}
+.Channel.sizeXL.twitter-dm {
+  line-height: 60px;
+}
+.Channel.sizeXL.twitter-dm:before {
+  width: 60px;
+}
+.Channel.sizeXL.twitter-dm:after {
+  height: 45px;
+  width: 45px;
+  line-height: 46px;
+  font-size: 44px;
+}
+.Channel.sizeXL.apple-apps,
+.Channel.sizeXL.apple-apps-reviews {
+  font-size: 46px;
+}
+.Channel.sizeXL.wechat,
+.Channel.sizeXL.we-chat {
+  font-size: 42px;
+}
+.Channel.sizeXL.apple-imessage,
+.Channel.sizeXL.apple-business {
+  font-size: 65px;
+}
+.Channel.sizeXL.sms,
+.Channel.sizeXL.twilio {
+  font-size: 40px;
+}
+.Channel.sizeXL.co-browsing {
+  font-size: 40px;
+}
+.Channel.sizeXL.telegram {
+  font-size: 36px;
+}
+.Channel.sizeXL.instagram {
+  font-size: 36px;
+}
+.Channel.sizeXL.instagram-dm {
+  line-height: 60px;
+  font-size: 36px;
+}
+.Channel.sizeXL.instagram-dm:before {
+  width: 60px;
+}
+.Channel.sizeXL.instagram-dm:after {
+  height: 45px;
+  width: 45px;
+  line-height: 46px;
+  font-size: 44px;
+}
+.Channel.sizeXL.amazon {
+  font-size: 36px;
+}
+.Channel.sizeXL.snapchat {
+  font-size: 38px;
+}
+.Channel.sizeXL.google {
+  font-size: 36px;
+}
+.Channel.sizeXL.google-dm {
+  line-height: 60px;
+  font-size: 36px;
+}
+.Channel.sizeXL.google-dm:before {
+  width: 60px;
+}
+.Channel.sizeXL.google-dm:after {
+  height: 45px;
+  width: 45px;
+  line-height: 46px;
+  font-size: 44px;
+}
+.Channel.sizeXL.google-maps {
+  font-size: 40px;
+}
+.Channel.sizeXL.email {
+  font-size: 33px;
+}
+.Channel.sizeXL.line-message,
+.Channel.sizeXL.line {
+  font-size: 50px;
+}
+.Channel.sizeXL.forum {
+  font-size: 27px;
+}
+.Channel.sizeXL.voice {
+  font-size: 36px;
+}
+.Channel.sizeXL.vkontakte {
+  font-size: 30px;
+}
+.Channel.sizeXL.vkontakte-dm {
+  font-size: 30px;
+}
+.Channel.sizeXL.vkontakte-dm:before {
+  width: 60px;
+}
+.Channel.sizeXL.vkontakte-dm:after {
+  height: 45px;
+  width: 45px;
+  line-height: 46px;
+  font-size: 44px;
+}
+.Channel.sizeXL.listening,
+.Channel.sizeXL.kbm-1,
+.Channel.sizeXL.default {
+  font-size: 36px;
+}
+
+/* SIZE L */
+
+.Channel.sizeL {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.Channel.sizeL.isPrivate:before,
+.Channel.sizeL.message:before {
+  width: 40px;
+}
+.Channel.sizeL.isPrivate:after,
+.Channel.sizeL.message:after {
+  height: 30px;
+  width: 30px;
+  line-height: 31px;
+  font-size: 29px;
+}
+.Channel.sizeL.facebook {
+  line-height: 40px;
+  font-size: 20px;
+}
+.Channel.sizeL.facebook-dm {
+  line-height: 40px;
+  font-size: 20px;
+}
+.Channel.sizeL.facebook-dm:before {
+  width: 40px;
+}
+.Channel.sizeL.facebook-dm:after {
+  height: 30px;
+  width: 30px;
+  line-height: 31px;
+  font-size: 29px;
+}
+.Channel.sizeL.twitter-dm {
+  line-height: 40px;
+}
+.Channel.sizeL.twitter-dm:before {
+  width: 40px;
+}
+.Channel.sizeL.twitter-dm:after {
+  height: 30px;
+  width: 30px;
+  line-height: 31px;
+  font-size: 29px;
+}
+.Channel.sizeL.apple-apps,
+.Channel.sizeL.apple-apps-reviews {
+  font-size: 28px;
+}
+.Channel.sizeL.apple-imessage,
+.Channel.sizeL.apple-business {
+  font-size: 44px;
+}
+.Channel.sizeL.line-message,
+.Channel.sizeL.line {
+  font-size: 26px;
+}
+.Channel.sizeL.sms,
+.Channel.sizeL.twilio {
+  font-size: 26px;
+}
+.Channel.sizeL.wechat,
+.Channel.sizeL.we-chat {
+  font-size: 26px;
+}
+.Channel.sizeL.voice {
+  font-size: 26px;
+}
+.Channel.sizeL.amazon {
+  font-size: 26px;
+}
+.Channel.sizeL.snapchat {
+  font-size: 26px;
+}
+.Channel.sizeL.instagram {
+  font-size: 24px;
+}
+.Channel.sizeL.instagram-dm {
+  line-height: 40px;
+  font-size: 24px;
+}
+.Channel.sizeL.instagram-dm:before {
+  width: 40px;
+}
+.Channel.sizeL.instagram-dm:after {
+  height: 30px;
+  width: 30px;
+  line-height: 31px;
+  font-size: 29px;
+}
+.Channel.sizeL.google {
+  font-size: 24px;
+}
+.Channel.sizeL.google-dm {
+  line-height: 40px;
+  font-size: 24px;
+}
+.Channel.sizeL.google-dm:before {
+  width: 40px;
+}
+.Channel.sizeL.google-dm:after {
+  height: 30px;
+  width: 30px;
+  line-height: 31px;
+  font-size: 29px;
+}
+.Channel.sizeL.google-maps {
+  font-size: 26px;
+}
+.Channel.sizeL.email {
+  font-size: 22px;
+}
+.Channel.sizeL.forum {
+  font-size: 18px;
+}
+.Channel.sizeL.vkontakte {
+  font-size: 20px;
+}
+.Channel.sizeL.vkontakte-dm {
+  font-size: 20px;
+}
+.Channel.sizeL.vkontakte-dm:before {
+  width: 40px;
+}
+.Channel.sizeL.vkontakte-dm:after {
+  height: 30px;
+  width: 30px;
+  line-height: 31px;
+  font-size: 29px;
+}
+.Channel.sizeL.listening,
+.Channel.sizeL.kbm-1,
+.Channel.sizeL.default {
+  font-size: 24px;
+}
+
+/* SIZE S */
+
+.Channel.sizeS {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+.Channel.sizeS.isPrivate:before,
+.Channel.sizeS.message:before {
+  width: 20px;
+}
+.Channel.sizeS.isPrivate:after,
+.Channel.sizeS.message:after {
+  height: 15px;
+  width: 15px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.Channel.sizeS.facebook {
+  line-height: 20px;
+  font-size: 10px;
+}
+.Channel.sizeS.facebook-dm {
+  line-height: 20px;
+  font-size: 10px;
+}
+.Channel.sizeS.facebook-dm:before {
+  width: 20px;
+}
+.Channel.sizeS.facebook-dm:after {
+  height: 15px;
+  width: 15px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.Channel.sizeS.twitter-dm {
+  line-height: 20px;
+  font-size: 10px;
+}
+.Channel.sizeS.twitter-dm:before {
+  width: 20px;
+}
+.Channel.sizeS.twitter-dm:after {
+  height: 15px;
+  width: 15px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.Channel.sizeS.instagram {
+  font-size: 12px;
+}
+.Channel.sizeS.line-message,
+.Channel.sizeS.line {
+  font-size: 14px;
+}
+.Channel.sizeS.instagram-dm {
+  line-height: 20px;
+  font-size: 12px;
+}
+.Channel.sizeS.instagram-dm:before {
+  width: 20px;
+}
+.Channel.sizeS.instagram-dm:after {
+  height: 15px;
+  width: 15px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.Channel.sizeS.google {
+  font-size: 12px;
+}
+.Channel.sizeS.google-dm {
+  line-height: 20px;
+  font-size: 12px;
+}
+.Channel.sizeS.google-dm:before {
+  width: 20px;
+}
+.Channel.sizeS.google-dm:after {
+  height: 15px;
+  width: 15px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.Channel.sizeS.email {
+  font-size: 11px;
+}
+.Channel.sizeS.forum {
+  font-size: 9px;
+}
+.Channel.sizeS.vkontakte {
+  font-size: 10px;
+}
+.Channel.sizeS.vkontakte-dm {
+  font-size: 10px;
+}
+.Channel.sizeS.vkontakte-dm:before {
+  width: 20px;
+}
+.Channel.sizeS.vkontakte-dm:after {
+  height: 15px;
+  width: 15px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.Channel.sizeS.listening,
+.Channel.sizeS.kbm-1,
+.Channel.sizeS.default {
+  font-size: 12px;
+}
+.Channel.sizeS.apple-imessage,
+.Channel.sizeS.apple-business {
+  font-size: 20px;
+}
+
+/* SIZE XS */
+
+.Channel.sizeXS {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 8px;
+}
+.Channel.sizeXS.isPrivate:before,
+.Channel.sizeXS.message:before {
+  width: 16px;
+}
+.Channel.sizeXS.isPrivate:after,
+.Channel.sizeXS.message:after {
+  height: 12px;
+  width: 12px;
+  line-height: 13px;
+  font-size: 11px;
+}
+.Channel.sizeXS.facebook {
+  line-height: 16px;
+  font-size: 8px;
+}
+.Channel.sizeXS.facebook-dm {
+  line-height: 16px;
+  font-size: 8px;
+}
+.Channel.sizeXS.facebook-dm:before {
+  width: 16px;
+}
+.Channel.sizeXS.facebook-dm:after {
+  height: 12px;
+  width: 12px;
+  line-height: 13px;
+  font-size: 11px;
+}
+.Channel.sizeXS.line-message,
+.Channel.sizeXS.line {
+  font-size: 12px;
+}
+.Channel.sizeXS.twitter-dm {
+  line-height: 16px;
+  font-size: 8px;
+}
+.Channel.sizeXS.twitter-dm:before {
+  width: 16px;
+}
+.Channel.sizeXS.twitter-dm:after {
+  height: 12px;
+  width: 12px;
+  line-height: 13px;
+  font-size: 11px;
+}
+.Channel.sizeXS.instagram {
+  font-size: 9.6px;
+}
+.Channel.sizeXS.instagram-dm {
+  line-height: 16px;
+  font-size: 9.6px;
+}
+.Channel.sizeXS.instagram-dm:before {
+  width: 16px;
+}
+.Channel.sizeXS.instagram-dm:after {
+  height: 12px;
+  width: 12px;
+  line-height: 13px;
+  font-size: 11px;
+}
+.Channel.sizeXS.google {
+  font-size: 9.6px;
+}
+.Channel.sizeXS.google-dm {
+  font-size: 9.6px;
+}
+.Channel.sizeXS.google-dm:before {
+  width: 16px;
+}
+.Channel.sizeXS.google-dm:after {
+  height: 12px;
+  width: 12px;
+  line-height: 13px;
+  font-size: 11px;
+}
+.Channel.sizeXS.email {
+  font-size: 8.8px;
+}
+.Channel.sizeXS.forum {
+  font-size: 7.2px;
+}
+.Channel.sizeXS.vkontakte {
+  font-size: 8px;
+}
+.Channel.sizeXS.vkontakte-dm {
+  font-size: 8px;
+}
+.Channel.sizeXS.vkontakte-dm:before {
+  width: 16px;
+}
+.Channel.sizeXS.vkontakte-dm:after {
+  height: 12px;
+  width: 12px;
+  line-height: 13px;
+  font-size: 11px;
+}
+.Channel.sizeXS.listening,
+.Channel.sizeXS.kbm-1,
+.Channel.sizeXS.default {
+  font-size: 9.6px;
+}
+.Channel.sizeXS.apple-imessage,
+.Channel.sizeXS.apple-business {
+  font-size: 16px;
+}
+.Channel.isGrayscale {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+.Channel.isGrayscale.active {
+  color: #666;
 }
