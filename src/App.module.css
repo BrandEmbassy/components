@@ -5,41 +5,36 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-
-  &.isHorizontal {
-    position: absolute;
-    flex-direction: row;
-    z-index: 1;
-  }
-
-  & .Static {
-    position: relative;
-    flex: 0 1 auto;
-    z-index: 2;
-  }
-
-  & .Flex {
-    position: relative;
-    flex: 1 1 auto;
-    overflow-y: scroll;
-    z-index: 1;
-  }
-
-  & .Flexcols {
-    position: relative;
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: row;
-    overflow-y: hidden;
-    z-index: 1;
-  }
-
-  & .Flexrows {
-    position: relative;
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    overflow-y: hidden;
-    z-index: 1;
-  }
+}
+.App.isHorizontal {
+  position: absolute;
+  flex-direction: row;
+  z-index: 1;
+}
+.App .Static {
+  position: relative;
+  flex: 0 1 auto;
+  z-index: 2;
+}
+.App .Flex {
+  position: relative;
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  z-index: 1;
+}
+.App .Flexcols {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  overflow-y: hidden;
+  z-index: 1;
+}
+.App .Flexrows {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow-y: hidden;
+  z-index: 1;
 }

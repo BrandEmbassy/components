@@ -16,50 +16,40 @@
   border-radius: 3px;
   text-decoration: none;
   user-select: none;
-
-  &.Pink {
-    color: #A65297;
-    background-color: #F4D8EF;
-  }
-
-  &.Yellow {
-    color: #C78A30;
-    background-color: #FFF1DC;
-  }
-  
-  &.Green {
-    color: #3EA271;
-    background-color: #DDF5E9;
-  }
-
-  &.Blue {
-    color: #398DF2;
-    background-color: #D7E8FF;
-  }
-
-  &.LightBlue {
-    color: #3AA2D5;
-    background-color: #DCF4FF;
-  }
-  
-  &.Purple {
-    color: #434483;
-    background-color: #E6E6FF;
-  }
-
-  &.DarkPurple {
-    color: #5B4657;
-    background-color: #EBDDE7;
-  }
-
-  &.Turquoise {
-    color: #38A0A0;
-    background-color: #CFF4F4;
-  }
-    
-  &.Red {
-    color: #E9575B;
-    background-color: #FFE1E1;
-  }
-  
+}
+.Tag.Pink {
+  color: #a65297;
+  background-color: #f4d8ef;
+}
+.Tag.Yellow {
+  color: #c78a30;
+  background-color: #fff1dc;
+}
+.Tag.Green {
+  color: #3ea271;
+  background-color: #ddf5e9;
+}
+.Tag.Blue {
+  color: #398df2;
+  background-color: #d7e8ff;
+}
+.Tag.LightBlue {
+  color: #3aa2d5;
+  background-color: #dcf4ff;
+}
+.Tag.Purple {
+  color: #434483;
+  background-color: #e6e6ff;
+}
+.Tag.DarkPurple {
+  color: #5b4657;
+  background-color: #ebdde7;
+}
+.Tag.Turquoise {
+  color: #38a0a0;
+  background-color: #cff4f4;
+}
+.Tag.Red {
+  color: #e9575b;
+  background-color: #ffe1e1;
 }
