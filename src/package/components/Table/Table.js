@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from 'react'
+import * as React from "react";
 // @flow-skip-next-line
-import classNames from 'classnames/bind'
-import styles from './Table.css'
+import classNames from "classnames/bind";
+import styles from "./Table.module.css";
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 type Props = {
   children?: React.Node,
@@ -13,17 +13,17 @@ type Props = {
   styleName: string,
   isStriped: boolean,
   hasRowHover: boolean
-}
+};
 
 export default class Table extends React.Component<Props> {
-  render () {
-    const { styleName, Fixed, isStriped, hasRowHover } = this.props
+  render() {
+    const { styleName, Fixed, isStriped, hasRowHover } = this.props;
 
     const className = cx(styles.Table, styleName, {
       Fixed,
       isStriped,
       hasRowHover
-    })
+    });
 
     return (
       <div className={className}>
@@ -41,123 +41,63 @@ export default class Table extends React.Component<Props> {
           </thead>
           <tbody>
             <tr>
-              <td>
-               someting here
-              </td>
+              <td>someting here</td>
               <td>
                 <span>acc.socialmedia@homecredit.co.id</span>
               </td>
-              <td>
-                test
-              </td>
-              <td>
-              testtest
-              </td>
-              <td>
-              testtesttest
-              </td>
-              <td>
-                maybe
-              </td>
-              <td>
-                and here
-              </td>
+              <td>test</td>
+              <td>testtest</td>
+              <td>testtesttest</td>
+              <td>maybe</td>
+              <td>and here</td>
             </tr>
             <tr>
-              <td>
-                some checkbox
-              </td>
+              <td>some checkbox</td>
               <td>
                 <span>acc.nevim@nevim.co.id</span>
               </td>
-              <td>
-                test2131
-              </td>
-              <td>
-              testtest32
-              </td>
-              <td>
-              testtesttest31
-              </td>
-              <td>
-                link
-              </td>
-              <td>
-                link
-              </td>
+              <td>test2131</td>
+              <td>testtest32</td>
+              <td>testtesttest31</td>
+              <td>link</td>
+              <td>link</td>
             </tr>
             <tr>
-              <td>
-              some checkbox
-              </td>
+              <td>some checkbox</td>
               <td>
                 <span>acc.nevim@nevim.co.id</span>
               </td>
-              <td>
-              test2131
-              </td>
-              <td>
-            testtest32
-              </td>
-              <td>
-            testtesttest31
-              </td>
-              <td>
-              link
-              </td>
-              <td>
-              link
-              </td>
+              <td>test2131</td>
+              <td>testtest32</td>
+              <td>testtesttest31</td>
+              <td>link</td>
+              <td>link</td>
             </tr>
             <tr>
-              <td>
-            some checkbox
-              </td>
+              <td>some checkbox</td>
               <td>
                 <span>acc.nevim@nevim.co.id</span>
               </td>
-              <td>
-            test2131
-              </td>
-              <td>
-          testtest32
-              </td>
-              <td>
-          testtesttest31
-              </td>
-              <td>
-            link
-              </td>
-              <td>
-            link
-              </td>
+              <td>test2131</td>
+              <td>testtest32</td>
+              <td>testtesttest31</td>
+              <td>link</td>
+              <td>link</td>
             </tr>
             <tr>
-              <td>
-          some checkbox
-              </td>
+              <td>some checkbox</td>
               <td>
                 <span>acc.nevim@nevim.co.id</span>
               </td>
-              <td>
-          test2131
-              </td>
-              <td>
-        testtest32
-              </td>
-              <td>
-        testtesttest31
-              </td>
-              <td>
-          link
-              </td>
-              <td>
-          link
-              </td>
+              <td>test2131</td>
+              <td>testtest32</td>
+              <td>testtesttest31</td>
+              <td>link</td>
+              <td>link</td>
             </tr>
           </tbody>
         </table>
       </div>
-    )
+    );
   }
 }

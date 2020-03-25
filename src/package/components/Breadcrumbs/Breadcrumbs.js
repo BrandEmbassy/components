@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react'
-import styles from './Breadcrumbs.css'
+import styles from './Breadcrumbs.module.css'
 
 type Props = {
   onClick: Function,

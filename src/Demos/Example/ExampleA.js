@@ -15,7 +15,7 @@ import Label from './../../package/components/Label/Label'
 import Notification from './../../package/components/Notification/Notification'
 import Statuses from './../../package/components/Statuses/Statuses'
 import Tag from './../../package/components/Tag/Tag'
-import styles from './../../App.css'
+import styles from './../../App.module.css'
 
 export default class ExampleA extends Component {
   constructor (props) {

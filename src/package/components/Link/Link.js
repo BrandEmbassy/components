@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from 'react'
+import * as React from "react";
 // @flow-skip-next-line
-import classNames from 'classnames/bind'
-import styles from './Link.css'
+import classNames from "classnames/bind";
+import styles from "./Link.module.css";
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 type Props = {
   onClick: Function,
@@ -17,20 +17,27 @@ type Props = {
   Red: boolean,
   Black: boolean,
   styleName: string
-}
+};
 
 export default class Link extends React.Component<Props> {
-  renderIcon () {
+  renderIcon() {
     if (this.props.Icon) {
-      return (
-        <div className={this.props.Icon} />
-      )
+      return <div className={this.props.Icon} />;
     }
-    return null
+    return null;
   }
 
-  render () {
-    const { Blue, White, Green, Red, Black, styleName, text, onClick } = this.props
+  render() {
+    const {
+      Blue,
+      White,
+      Green,
+      Red,
+      Black,
+      styleName,
+      text,
+      onClick
+    } = this.props;
 
     const className = cx(styles.Link, styleName, {
       Blue,
@@ -38,15 +45,13 @@ export default class Link extends React.Component<Props> {
       Green,
       Red,
       Black
-    })
+    });
 
     return (
       <a className={className} onClick={onClick}>
         {this.renderIcon()}
-        <div className={styles.Text}>
-          {text}
-        </div>
+        <div className={styles.Text}>{text}</div>
       </a>
-    )
+    );
   }
 }

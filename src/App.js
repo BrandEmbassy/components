@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './package/components/Base.css'
-import styles from './App.css'
+import styles from './App.module.css'
 
 import Breadcrumbs from './package/components/Breadcrumbs'
 import Button from './package/components/Button'
