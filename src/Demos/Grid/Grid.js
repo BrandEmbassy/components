@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "!style-loader!css-loader!../../package/components/Base.css"; //eslint-disable-line
-import "!style-loader!css-loader!./GridDemo.css"; //eslint-disable-line
+import "../../package/components/Base.css"; //eslint-disable-line
+import "./GridDemo.css"; //eslint-disable-line
 import SyntaxHighlighter from "react-syntax-highlighter/prism";
 import { base16AteliersulphurpoolLight } from "react-syntax-highlighter/styles/prism";
 import styles from "./../../App.module.css";
