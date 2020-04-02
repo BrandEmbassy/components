@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from 'react'
+import * as React from "react";
 // @flow-skip-next-line
-import classNames from 'classnames/bind'
-import styles from './Input.css'
+import classNames from "classnames/bind";
+import styles from "./Input.module.css";
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 type Props = {
   onChange: Function,
@@ -18,42 +18,46 @@ type Props = {
   isError: boolean,
   desc: string,
   styleName: string
-}
+};
 
 export default class Input extends React.Component<Props> {
-  renderLabel () {
+  renderLabel() {
     if (this.props.label) {
-      return (
-        <div className={styles.Label}>
-          {this.props.label}
-        </div>
-      )
+      return <div className={styles.Label}>{this.props.label}</div>;
     }
-    return null
+    return null;
   }
 
-  renderDesc () {
+  renderDesc() {
     if (this.props.desc) {
       return (
         <div className={`${styles.Desc} ${styles.isRed} `}>
           {this.props.desc}
         </div>
-      )
+      );
     }
-    return null
+    return null;
   }
 
-  render () {
-    const { isDisabled, isError, styleName, type, name, placeholder, onChange, value } = this.props
+  render() {
+    const {
+      isDisabled,
+      isError,
+      styleName,
+      type,
+      name,
+      placeholder,
+      onChange,
+      value
+    } = this.props;
 
     const className = cx(styles.Input, styleName, {
       Disabled: isDisabled,
       Error: isError
-    })
+    });
 
     return (
       <div className={className}>
-
         {this.renderLabel()}
         <div className={styles.Field}>
           <input
@@ -62,10 +66,11 @@ export default class Input extends React.Component<Props> {
             placeholder={placeholder}
             disabled={isDisabled}
             onChange={onChange}
-            value={value} />
+            value={value}
+          />
         </div>
         {this.renderDesc()}
       </div>
-    )
+    );
   }
 }

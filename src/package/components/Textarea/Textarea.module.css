@@ -1,0 +1,99 @@
+.Textarea {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+.Textarea .Label {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 2px;
+  line-height: 20px;
+  font-style: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 400;
+  color: #4a4a4a;
+  overflow: hidden;
+}
+.Textarea .Field {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.Textarea .Field textarea {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  padding: 12px 12px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  color: #4a4a4a;
+  font-style: normal;
+  transition: border 0.15s linear, box-shadow 0.15s linear;
+  resize: none;
+  outline: none;
+  font-family: Open Sans;
+}
+.Textarea .Field textarea:placeholder {
+  color: #999;
+}
+.Textarea .Field textarea:hover {
+  border: 1px solid rgb(184, 184, 184);
+}
+.Textarea .Field textarea:focus {
+  border-color: #81b9e8;
+  box-shadow: inset 0 0 0 #fff, 0 0 6px rgba(80, 147, 205, 0.5);
+}
+.Textarea .Desc {
+  position: relative;
+  display: block;
+  height: 20px;
+  margin-top: 2px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  color: #9b9b9b;
+}
+.Textarea.Disabled .Label {
+  color: #9b9b9b;
+}
+.Textarea.Disabled .Field textarea {
+  background-color: #f5f5f5;
+  border: 1px solid #b3b3b3;
+}
+.Textarea.Disabled .Field textarea:hover {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 #fff;
+}
+.Textarea.Disabled textarea::-webkit-input-placeholder {
+  color: #b3b3b3;
+}
+.Textarea.Disabled textarea:-ms-input-placeholder {
+  color: #b3b3b3;
+}
+.Textarea.Disabled textarea::-ms-input-placeholder {
+  color: #b3b3b3;
+}
+.Textarea.Disabled textarea::placeholder {
+  color: #b3b3b3;
+}
+.Textarea.Error .Field textarea {
+  border-color: #e73133;
+  box-shadow: inset 0 0 0 #fff, 0 0 6px #e73133;
+}
+.Textarea.Error .Field textarea:focus {
+  outline: none;
+}

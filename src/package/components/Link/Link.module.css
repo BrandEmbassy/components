@@ -1,0 +1,56 @@
+.Link {
+  position: relative;
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.11s;
+  user-select: none;
+}
+.Link:hover {
+  filter: brightness(115%);
+}
+
+.Link .Text {
+  display: inline;
+  color: inherit;
+  margin-left: 4px;
+}
+
+.Link [class^="be-icon"] {
+  line-height: inherit;
+  float: left;
+  font-size: 13px;
+  color: inherit;
+}
+
+.Link.Blue {
+  color: #2eaae8;
+}
+
+.Link.White {
+  color: #ffffff;
+}
+
+.Link.White:hover {
+  filter: brightness(80%);
+}
+
+.Link.Green {
+  color: #329d53;
+}
+
+.Link.Red {
+  color: #e8585d;
+}
+
+.Link.Black {
+  color: #000000;
+}

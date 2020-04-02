@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from 'react'
+import * as React from "react";
 // @flow-skip-next-line
-import classNames from 'classnames/bind'
-import styles from './Textarea.css'
+import classNames from "classnames/bind";
+import styles from "./Textarea.module.css";
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 type Props = {
   name: string,
@@ -18,38 +18,43 @@ type Props = {
   desc: string,
   styleName: string,
   label: string
-}
+};
 
 export default class Textarea extends React.Component<Props> {
-  renderLabel () {
+  renderLabel() {
     if (this.props.label) {
-      return (
-        <div className={styles.Label}>
-          {this.props.label}
-        </div>
-      )
+      return <div className={styles.Label}>{this.props.label}</div>;
     }
-    return null
+    return null;
   }
 
-  renderDesc () {
+  renderDesc() {
     if (this.props.desc) {
       return (
         <div className={`${styles.Desc} ${styles.isRed} `}>
           {this.props.desc}
         </div>
-      )
+      );
     }
-    return null
+    return null;
   }
 
-  render () {
-    const { styleName, isDisabled, isError, name, rows, value, placeholder, onChange } = this.props
+  render() {
+    const {
+      styleName,
+      isDisabled,
+      isError,
+      name,
+      rows,
+      value,
+      placeholder,
+      onChange
+    } = this.props;
 
     const className = cx(styles.Textarea, styleName, {
       Disabled: isDisabled,
       Error: isError
-    })
+    });
 
     return (
       <div className={className}>
@@ -61,10 +66,11 @@ export default class Textarea extends React.Component<Props> {
             value={value}
             placeholder={placeholder}
             disabled={isDisabled}
-            onChange={onChange} />
+            onChange={onChange}
+          />
         </div>
         {this.renderDesc()}
       </div>
-    )
+    );
   }
 }

@@ -1,0 +1,55 @@
+.Tag {
+  position: relative;
+  display: inline-flex;
+  align-self: center;
+  width: auto;
+  min-width: 0.1px;
+  min-height: 12px;
+  height: auto;
+  margin-right: 6px;
+  padding: 2px 8px;
+  line-height: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  color: #111111;
+  background-color: #dadada;
+  border-radius: 3px;
+  text-decoration: none;
+  user-select: none;
+}
+.Tag.Pink {
+  color: #a65297;
+  background-color: #f4d8ef;
+}
+.Tag.Yellow {
+  color: #c78a30;
+  background-color: #fff1dc;
+}
+.Tag.Green {
+  color: #3ea271;
+  background-color: #ddf5e9;
+}
+.Tag.Blue {
+  color: #398df2;
+  background-color: #d7e8ff;
+}
+.Tag.LightBlue {
+  color: #3aa2d5;
+  background-color: #dcf4ff;
+}
+.Tag.Purple {
+  color: #434483;
+  background-color: #e6e6ff;
+}
+.Tag.DarkPurple {
+  color: #5b4657;
+  background-color: #ebdde7;
+}
+.Tag.Turquoise {
+  color: #38a0a0;
+  background-color: #cff4f4;
+}
+.Tag.Red {
+  color: #e9575b;
+  background-color: #ffe1e1;
+}

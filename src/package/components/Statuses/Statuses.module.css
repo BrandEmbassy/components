@@ -1,0 +1,106 @@
+.Statuses {
+  position: relative;
+  display: inline-flex;
+  align-self: center;
+  width: auto;
+  height: auto;
+  margin-right: 6px;
+  padding: 3px 6px;
+  line-height: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #8d1616;
+  border: solid 2px #dadada;
+  border-radius: 3px;
+  text-decoration: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+.Statuses.hasHover {
+  cursor: pointer;
+}
+.Statuses.hasHover:hover {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncA type="table" tableValues="0 0.8" /></feComponentTransfer></filter></svg>#filter');
+  filter: opacity(0.8);
+  transition: 0.18s;
+}
+.Statuses.New {
+  color: #f57d4a;
+  border-color: #f57d4a;
+}
+.Statuses.New.Reversed {
+  color: #ffffff;
+  background-color: #f57d4a;
+}
+.Statuses.Open {
+  color: #f6af4a;
+  border-color: #f6af4a;
+}
+.Statuses.Open.Reversed {
+  color: #ffffff;
+  background-color: #f6af4a;
+}
+.Statuses.Resolved {
+  color: #31b272;
+  border-color: #31b272;
+}
+.Statuses.Resolved.Reversed {
+  color: #ffffff;
+  background-color: #31b272;
+}
+.Statuses.Pending {
+  color: #2a84f1;
+  border-color: #2a84f1;
+}
+.Statuses.Pending.Reversed {
+  color: #ffffff;
+  background-color: #2a84f1;
+}
+.Statuses.Escalated {
+  color: #9c418c;
+  border-color: #9c418c;
+}
+.Statuses.Escalated.Reversed {
+  color: #ffffff;
+  background-color: #9c418c;
+}
+.Statuses.Closed {
+  color: #e9575b;
+  border-color: #e9575b;
+}
+.Statuses.Closed.Reversed {
+  color: #ffffff;
+  background-color: #e9575b;
+}
+.Statuses.Trashed {
+  color: #9a9a9a;
+  border-color: #9a9a9a;
+}
+.Statuses.Trashed.Reversed {
+  color: #ffffff;
+  background-color: #9a9a9a;
+}
+.Statuses.Checked {
+  color: #9a9a9a;
+  border-color: #9a9a9a;
+}
+.Statuses.Checked.Reversed {
+  color: #ffffff;
+  background-color: #9a9a9a;
+}
+.Statuses.Approval {
+  border-color: #ca4b5b;
+  color: #ca4b5b;
+}
+.Statuses.Approval.Reversed {
+  background-color: #ca4b5b;
+  color: #f7bac2;
+}
+.Statuses.Assigntoyou {
+  border-color: #ca4b5b;
+  color: #ca4b5b;
+}
+.Statuses.Assigntoyou.Reversed {
+  background-color: #ca4b5b;
+  color: #f7bac2;
+}

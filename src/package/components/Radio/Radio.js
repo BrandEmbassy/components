@@ -1,33 +1,33 @@
 // @flow
 
-import * as React from 'react'
+import * as React from "react";
 // @flow-skip-next-line
-import classNames from 'classnames/bind'
-import styles from './Radio.css'
+import classNames from "classnames/bind";
+import styles from "./Radio.module.css";
 
-const cx = classNames.bind(styles)
+const cx = classNames.bind(styles);
 
 type Props = {
   id: string,
   name: string,
   label: string,
   styleName: string
-}
+};
 
 export default class Radio extends React.Component<Props> {
-  render () {
-    const { styleName, name, id, label } = this.props
+  render() {
+    const { styleName, name, id, label } = this.props;
 
-    const className = cx(styles.RadioContent, styleName)
+    const className = cx(styles.RadioContent, styleName);
 
     return (
-      <div className={className} >
-        <div className={styles.Radio} >
-          <input type='radio' name={name} id={id} />
+      <div className={className}>
+        <div className={styles.Radio}>
+          <input type="radio" name={name} id={id} />
           <label for={id} />
         </div>
         <div className={styles.Label}>{label}</div>
       </div>
-    )
+    );
   }
 }

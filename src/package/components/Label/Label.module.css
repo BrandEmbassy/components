@@ -1,0 +1,14 @@
+.Label {
+  display: flex;
+  flex: 0 0 auto;
+  padding: 10px 0;
+}
+.Label .Children {
+  flex: 0 1 auto;
+}
+
+.Label .Text {
+  flex: 1 1 auto;
+  align-self: center;
+  margin-left: 7px;
+}
