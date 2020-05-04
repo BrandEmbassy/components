@@ -24,7 +24,7 @@ export default function Statuses(props: Props) {
     status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
     { Reversed, hasHover }
   );
-  const dataCy = `status-${status || text}`;
+  const dataCy = `status-${status.toLowerCase() || text.toLowerCase()}`;
 
   return (
     <div data-cy={dataCy} className={className}>
