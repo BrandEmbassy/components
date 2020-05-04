@@ -4,7 +4,7 @@ import Statuses from './Statuses'
 describe('Statuses', () => {
   const dataProvider = [
     { text: 'custom label', status: 'new', hasHover: true },
-    { status: 'new' }
+    { status: 'resolved' }
   ]
 
   dataProvider.forEach(dataSet => {

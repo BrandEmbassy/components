@@ -3,14 +3,25 @@
 exports[`Statuses should render status with {"status":"new"} 1`] = `
 <div
   className="New"
+  data-cy="status-new"
 >
   new
+</div>
+`;
+
+exports[`Statuses should render status with {"status":"resolved"} 1`] = `
+<div
+  className="Resolved"
+  data-cy="status-resolved"
+>
+  resolved
 </div>
 `;
 
 exports[`Statuses should render status with {"text":"custom label","status":"new","hasHover":true} 1`] = `
 <div
   className="New hasHover"
+  data-cy="status-new"
 >
   custom label
 </div>
