@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./Input.module.css";
+import classNames from 'classnames/bind'
+import styles from './Input.module.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   onChange: Function,
@@ -21,25 +21,25 @@ type Props = {
 };
 
 export default class Input extends React.Component<Props> {
-  renderLabel() {
+  renderLabel () {
     if (this.props.label) {
-      return <div className={styles.Label}>{this.props.label}</div>;
+      return <div className={styles.Label}>{this.props.label}</div>
     }
-    return null;
+    return null
   }
 
-  renderDesc() {
+  renderDesc () {
     if (this.props.desc) {
       return (
         <div className={`${styles.Desc} ${styles.isRed} `}>
           {this.props.desc}
         </div>
-      );
+      )
     }
-    return null;
+    return null
   }
 
-  render() {
+  render () {
     const {
       isDisabled,
       isError,
@@ -49,12 +49,12 @@ export default class Input extends React.Component<Props> {
       placeholder,
       onChange,
       value
-    } = this.props;
+    } = this.props
 
     const className = cx(styles.Input, styleName, {
       Disabled: isDisabled,
       Error: isError
-    });
+    })
 
     return (
       <div className={className}>
@@ -71,6 +71,6 @@ export default class Input extends React.Component<Props> {
         </div>
         {this.renderDesc()}
       </div>
-    );
+    )
   }
 }

@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./Statuses.module.css";
+import classNames from 'classnames/bind'
+import styles from './Statuses.module.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   text: ?(string | React.Node),
@@ -15,20 +15,20 @@ type Props = {
   hasHover: ?boolean
 };
 
-export default function Statuses(props: Props) {
-  const { styleName, Reversed, status, text, hasHover } = props;
+export default function Statuses (props: Props) {
+  const { styleName, Reversed, status, text, hasHover } = props
 
   const className = cx(
     styles.Statuses,
     styleName,
     status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
     { Reversed, hasHover }
-  );
-  const dataCy = `status-${status.toLowerCase() || text.toLowerCase()}`;
+  )
+  const dataCy = `status-${status.toLowerCase() || text.toLowerCase()}`
 
   return (
     <div data-cy={dataCy} className={className}>
       {text || status}
     </div>
-  );
+  )
 }

@@ -1,30 +1,30 @@
 // @flow
-import React, { Component } from "react";
+import React, { Component } from 'react'
 // @flow-skip-next-line
 import "../../package/components/Base.css"; //eslint-disable-line
 
 type Props = {||};
 export default class Typography extends Component<Props> {
-  render() {
+  render () {
     return (
-      <div className="container">
-        <div className="row padding-20">
-          <div className="col-xs-12">
-            <h1 className="h1">Typohgraphy .h1</h1>
+      <div className='container'>
+        <div className='row padding-20'>
+          <div className='col-xs-12'>
+            <h1 className='h1'>Typohgraphy .h1</h1>
 
-            <h2 className="h2">Typohgraphy .h2</h2>
+            <h2 className='h2'>Typohgraphy .h2</h2>
 
-            <h3 className="h3">Typohgraphy .h3</h3>
+            <h3 className='h3'>Typohgraphy .h3</h3>
 
-            <h4 className="h4">Typohgraphy .h4</h4>
+            <h4 className='h4'>Typohgraphy .h4</h4>
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-xs-12">
-            <h2 className="h2">.p</h2>
+        <div className='row'>
+          <div className='col-xs-12'>
+            <h2 className='h2'>.p</h2>
 
-            <p className="p">
+            <p className='p'>
               Paragraph Lorem ipsum dolor sit amet, consectetuer adipiscing
               elit. Vivamus porttitor turpis ac leo. Nunc auctor. Vivamus
               porttitor turpis ac leo. In laoreet, magna id viverra tincidunt,
@@ -39,9 +39,9 @@ export default class Typography extends Component<Props> {
               vestibulum in, elit. In dapibus augue non sapien.
             </p>
 
-            <h2 className="h2">.justify</h2>
+            <h2 className='h2'>.justify</h2>
 
-            <p className="p justify">
+            <p className='p justify'>
               Etiam quis quam. In convallis. Praesent in mauris eu tortor
               porttitor accumsan. Pellentesque arcu. In rutrum. Aenean fermentum
               risus id tortor. Ut tempus purus at lorem. Sed elit dui,
@@ -60,6 +60,6 @@ export default class Typography extends Component<Props> {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

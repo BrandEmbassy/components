@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./Table.module.css";
+import classNames from 'classnames/bind'
+import styles from './Table.module.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   children?: React.Node,
@@ -16,14 +16,14 @@ type Props = {
 };
 
 export default class Table extends React.Component<Props> {
-  render() {
-    const { styleName, Fixed, isStriped, hasRowHover } = this.props;
+  render () {
+    const { styleName, Fixed, isStriped, hasRowHover } = this.props
 
     const className = cx(styles.Table, styleName, {
       Fixed,
       isStriped,
       hasRowHover
-    });
+    })
 
     return (
       <div className={className}>
@@ -98,6 +98,6 @@ export default class Table extends React.Component<Props> {
           </tbody>
         </table>
       </div>
-    );
+    )
   }
 }

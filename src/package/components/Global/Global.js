@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
 import "./../Base.css"; //eslint-disable-line
 
@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default class Global extends React.PureComponent<Props> {
-  render() {
-    return <div>{this.props.children}</div>;
+  render () {
+    return <div>{this.props.children}</div>
   }
 }

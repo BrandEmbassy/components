@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./../Button/Button.module.css";
+import classNames from 'classnames/bind'
+import styles from './../Button/Button.module.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   text: string,
@@ -15,13 +15,13 @@ type Props = {
 };
 
 export default class Submit extends React.Component<Props> {
-  render() {
-    const { styleName } = this.props;
+  render () {
+    const { styleName } = this.props
 
-    const className = cx(styles.Button, styleName);
+    const className = cx(styles.Button, styleName)
 
     return (
-      <input className={className} type="submit" value={this.props.text} />
-    );
+      <input className={className} type='submit' value={this.props.text} />
+    )
   }
 }
