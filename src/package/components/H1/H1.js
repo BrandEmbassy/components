@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./H1.module.css";
+import classNames from 'classnames/bind'
+import styles from './H1.module.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   styleName: string,
@@ -13,11 +13,11 @@ type Props = {
 };
 
 export default class H1 extends React.Component<Props> {
-  render() {
-    const { styleName, children } = this.props;
+  render () {
+    const { styleName, children } = this.props
 
-    const className = cx(styles.H1, styleName);
+    const className = cx(styles.H1, styleName)
 
-    return <h1 className={className}>{children}</h1>;
+    return <h1 className={className}>{children}</h1>
   }
 }

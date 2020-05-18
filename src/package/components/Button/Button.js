@@ -1,10 +1,10 @@
 // @flow
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./Button.module.css";
+import classNames from 'classnames/bind'
+import styles from './Button.module.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   onClick: Function,
@@ -20,15 +20,15 @@ type Props = {
 };
 
 export default class Button extends React.Component<Props> {
-  renderIcon(): ?React.Element<any> {
+  renderIcon (): ?React.Element<any> {
     if (this.props.Icon) {
-      return <div className={this.props.Icon} />;
+      return <div className={this.props.Icon} />
     }
 
-    return null;
+    return null
   }
 
-  render() {
+  render () {
     const {
       Disabled,
       Reversed,
@@ -37,7 +37,7 @@ export default class Button extends React.Component<Props> {
       Small,
       Wide,
       styleName
-    } = this.props;
+    } = this.props
 
     const className = cx(styles.Button, styleName, {
       Disabled,
@@ -46,13 +46,13 @@ export default class Button extends React.Component<Props> {
       Cancel,
       Small,
       Wide
-    });
+    })
 
     return (
       <button className={className} onClick={this.props.onClick}>
         {this.renderIcon()}
         {this.props.text}
       </button>
-    );
+    )
   }
 }

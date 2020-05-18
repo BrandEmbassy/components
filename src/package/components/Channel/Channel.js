@@ -1,12 +1,12 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./Channel.module.css";
-import SizeTypes from "./SizeTypes";
+import classNames from 'classnames/bind'
+import styles from './Channel.module.css'
+import SizeTypes from './SizeTypes'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   styleName: string,
@@ -19,18 +19,18 @@ type Props = {
 export default class Channel extends React.Component<Props> {
   static defaultProps = {
     size: SizeTypes.M,
-    type: "default"
+    type: 'default'
   };
 
-  render() {
-    const { styleName, size, isPrivate, isGrayscale, type } = this.props;
+  render () {
+    const { styleName, size, isPrivate, isGrayscale, type } = this.props
 
     const className = cx(styles.Channel, styleName, type, {
       [`size${size}`]: size,
       isGrayscale,
       isPrivate
-    });
+    })
 
-    return <div className={className} />;
+    return <div className={className} />
   }
 }

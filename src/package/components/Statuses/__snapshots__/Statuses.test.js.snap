@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Statuses should render status with {"status":"new"} 1`] = `
-<div
-  className="New"
-  data-cy="status-new"
->
-  new
-</div>
-`;
-
 exports[`Statuses should render status with {"status":"resolved"} 1`] = `
 <div
   className="Resolved"

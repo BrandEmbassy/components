@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from "react";
+import * as React from 'react'
 // @flow-skip-next-line
-import classNames from "classnames/bind";
-import styles from "./Tag.module.css";
+import classNames from 'classnames/bind'
+import styles from './Tag.module.css'
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(styles)
 
 type Props = {
   text: string,
@@ -14,22 +14,22 @@ type Props = {
 };
 
 export default class Tag extends React.Component<Props> {
-  render() {
-    const { styleName, color } = this.props;
+  render () {
+    const { styleName, color } = this.props
 
     const className = cx(styles.Tag, styleName, {
-      Pink: color === "Pink",
-      Yellow: color === "Yellow",
-      Green: color === "Green",
-      Blue: color === "Blue",
-      LightBlue: color === "LightBlue",
-      Purple: color === "Purple",
-      Turquoise: color === "Turquoise",
-      DarkPurple: color === "DarkPurple",
-      Red: color === "Red",
-      Grey: color === "Grey"
-    });
+      Pink: color === 'Pink',
+      Yellow: color === 'Yellow',
+      Green: color === 'Green',
+      Blue: color === 'Blue',
+      LightBlue: color === 'LightBlue',
+      Purple: color === 'Purple',
+      Turquoise: color === 'Turquoise',
+      DarkPurple: color === 'DarkPurple',
+      Red: color === 'Red',
+      Grey: color === 'Grey'
+    })
 
-    return <div className={className}>{this.props.text}</div>;
+    return <div className={className}>{this.props.text}</div>
   }
 }
