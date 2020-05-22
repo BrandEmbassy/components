@@ -21,7 +21,7 @@
     "flow": "flow check",
     "flow:watch": "flow",
     "flow-typed": "flow-typed install",
-    "build:ostrava": "node scripts/build.js && yarn concat-css"
+    "build:ostrava": "node scripts/build.js && yarn concat-css && sed -i '' 's/-module__/__/g' ./build/static/css/components.css"
   },
   "dependencies": {
     "react": "^16.9.0",
