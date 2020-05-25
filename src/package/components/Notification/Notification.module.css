@@ -21,6 +21,7 @@
 .Notification.isMultiline {
   white-space: pre-wrap;
   height: auto;
+  display: inline-table;
   line-height: 20px;
   padding: 6px;
 }
