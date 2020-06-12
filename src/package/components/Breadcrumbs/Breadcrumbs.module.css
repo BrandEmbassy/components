@@ -56,5 +56,9 @@
 }
 
 .Breadcrumbs .Right {
+  display: flex;
   align-self: flex-end;
+}
+.Breadcrumbs .Right a {
+  margin-right: 10px;
 }
