@@ -23,6 +23,10 @@
   border: none;
 }
 
+.Table table [class*="be-icon"] {
+  height: auto;
+}
+
 .Table table tr th:first-child,
 .Table table tr td:first-child {
   padding-left: 20px;
