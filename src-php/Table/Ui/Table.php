@@ -152,7 +152,7 @@ final class Table implements UiComponent
             return $this->cellRenderCallbacks[$key];
         }
 
-        return function (
+        return static function (
             CellData $cellData,
             RowData $rowData,
             ColumnDefinition $columnDefinition,
@@ -160,21 +160,21 @@ final class Table implements UiComponent
         ): Cell {
             $value = $cellData->getValue();
             if (is_int($value)) {
-                $value = (string)$value;
+                return new Cell((string)$value, $columnDefinition);
             }
 
-            if (!is_string($value)) {
-                $errorMessage = sprintf(
-                    'Default cell render function can only render string/int values but "%s" given. '
-                    . 'If you want to render other types, register your own render function via: '
-                    . 'setCellRenderCallback() method',
-                    gettype($value)
-                );
-
-                throw new LogicException($errorMessage);
+            if (is_string($value) || $value instanceof UiComponent) {
+                return new Cell($value, $columnDefinition);
             }
 
-            return new Cell($value, $columnDefinition);
+            $errorMessage = sprintf(
+                'Default cell render function can only render string|int|UiComponent values but "%s" given. '
+                . 'If you want to render other types, register your own render function via: '
+                . 'setCellRenderCallback() method',
+                gettype($value)
+            );
+
+            throw new LogicException($errorMessage);
         };
     }
 

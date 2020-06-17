@@ -5,6 +5,8 @@ namespace BrandEmbassy\Components\Table\Ui;
 use BrandEmbassy\Components\Align;
 use BrandEmbassy\Components\Controls\Link\Link;
 use BrandEmbassy\Components\Controls\Link\LinkColor;
+use BrandEmbassy\Components\Icon\Icon;
+use BrandEmbassy\Components\Icon\IconType;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use BrandEmbassy\Components\Table\Model\ArrayDataProvider;
 use BrandEmbassy\Components\Table\Model\CellData;
@@ -13,6 +15,7 @@ use BrandEmbassy\Components\Table\Model\RowData;
 use BrandEmbassy\Components\Table\Model\TableDefinition;
 use BrandEmbassy\Components\Table\Model\TableRowDivider;
 use BrandEmbassy\Components\Table\Model\TableRowDividerStyle;
+use BrandEmbassy\Components\Text\UiString;
 use DateTimeImmutable;
 use GuzzleHttp\Psr7\Uri;
 use LogicException;
@@ -40,6 +43,14 @@ final class TableTest extends TestCase
                     'name'    => new CellData('name', 'Harry'),
                     'surname' => new CellData('surname', 'Potter'),
                     'age'     => new CellData('age', 22),
+                ]
+            ),
+            new RowData(
+                '3',
+                [
+                    'name'    => new CellData('name', new UiString('Prokop')),
+                    'surname' => new CellData('surname', new Icon(IconType::get(IconType::AGENT))),
+                    'age'     => new CellData('age', 55),
                 ]
             ),
         ];
@@ -151,7 +162,7 @@ final class TableTest extends TestCase
 
         $this->expectException(LogicException::class);
         $this->expectExceptionMessage(
-            'Default cell render function can only render string/int values but "object" given. '
+            'Default cell render function can only render string|int|UiComponent values but "object" given. '
             . 'If you want to render other types, register your own render function via: setCellRenderCallback() method'
         );
 
