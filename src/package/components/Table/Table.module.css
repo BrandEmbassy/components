@@ -16,7 +16,7 @@
 }
 
 .Table table {
-  table-layout: auto;
+  table-layout: fixed;
   position: relative;
   width: 100%;
   border-collapse: collapse;
@@ -50,7 +50,7 @@
   color: gray;
   display: table-cell;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
   text-overflow: ellipsis;
 }
 
