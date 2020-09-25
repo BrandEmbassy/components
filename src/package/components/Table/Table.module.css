@@ -54,6 +54,10 @@
   text-overflow: ellipsis;
 }
 
+.isWhiteSpaceNormal table tr td {
+  white-space: normal;
+}
+
 .Table tr.TableRowDivider {
   background: linear-gradient(0deg, #fafafa 50%, #ffffff 50%);
 }
