@@ -16,7 +16,7 @@
 }
 
 .Table table {
-  table-layout: auto;
+  table-layout: fixed;
   position: relative;
   width: 100%;
   border-collapse: collapse;
