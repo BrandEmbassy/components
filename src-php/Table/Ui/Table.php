@@ -93,7 +93,7 @@ final class Table implements UiComponent
     {
         $headerCells = array_map(
             static function (ColumnDefinition $columnDefinition): HeaderCell {
-                return new HeaderCell($columnDefinition->getHeaderLabel(), $columnDefinition->getAlign());
+                return new HeaderCell($columnDefinition->getHeaderLabel(), $columnDefinition);
             },
             $this->tableDefinition->getColumnDefinitions()
         );
