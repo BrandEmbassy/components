@@ -10,6 +10,7 @@ final class TextWithTitleTest extends TestCase
 {
     use SnapshotAssertTrait;
 
+
     /**
      * @dataProvider textWithTitleData
      */

@@ -25,6 +25,7 @@ final class TableTest extends TestCase
 {
     use SnapshotAssertTrait;
 
+
     public function testRendering(): void
     {
         $rowsData = [

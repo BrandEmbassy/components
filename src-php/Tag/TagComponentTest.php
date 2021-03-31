@@ -9,6 +9,7 @@ final class TagComponentTest extends TestCase
 {
     use SnapshotAssertTrait;
 
+
     /**
      * @dataProvider tagComponentProvider
      */
