@@ -1,5 +1,6 @@
 {
     "name": "brandembassy/ui-components",
+    "description": "",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -7,9 +8,9 @@
         }
     },
     "require": {
-        "php": "~7.2",
-        "marc-mabe/php-enum": "^3.0",
+        "php": ">=7.2",
         "beberlei/assert": "^3.0",
+        "marc-mabe/php-enum": "^3.1 || ^4.4",
         "psr/http-message": "^1.0",
         "zendframework/zend-escaper": "^2.6"
     },
@@ -43,8 +44,7 @@
         "phpcs": "./vendor/bin/phpcs --standard=BrandEmbassyCodingStandard src-php",
         "phpcbf": "./vendor/bin/phpcbf --standard=BrandEmbassyCodingStandard src-php",
         "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon src-php",
-        "test": "./vendor/bin/phpunit src-php --no-coverage",
-        "phpunit": "@test"
+        "phpunit": "./vendor/bin/phpunit src-php --no-coverage"
     },
     "config": {
         "sort-packages": true,
