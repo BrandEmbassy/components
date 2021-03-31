@@ -9,7 +9,6 @@ final class IconTest extends TestCase
 {
     use SnapshotAssertTrait;
 
-
     public function testRendering(): void
     {
         $this->assertSnapshot(__DIR__ . '/__snapshots__/icon.html', new Icon(IconType::get(IconType::PLUS)));

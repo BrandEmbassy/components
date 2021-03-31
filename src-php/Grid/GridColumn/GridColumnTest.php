@@ -10,7 +10,6 @@ final class GridColumnTest extends TestCase
 {
     use SnapshotAssertTrait;
 
-
     public function testShouldRenderColumn(): void
     {
         $snapshot = __DIR__ . '/__snapshots__/column.html';

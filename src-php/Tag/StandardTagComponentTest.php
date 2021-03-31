@@ -10,7 +10,6 @@ class StandardTagComponentTest extends TestCase
 {
     use SnapshotAssertTrait;
 
-
     /**
      * @dataProvider standardTagComponentProvider
      */

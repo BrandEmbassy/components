@@ -53,7 +53,7 @@ final class TagComponent implements UiComponent
 
         $styles = new Styles(
             [
-                'color'            => sprintf('hsl(%s, %s%%, %s%%)', $hue, $saturation, 31),
+                'color' => sprintf('hsl(%s, %s%%, %s%%)', $hue, $saturation, 31),
                 'background-color' => sprintf('hsl(%s, %s%%, %s%%)', $hue, $saturation, 92),
             ]
         );

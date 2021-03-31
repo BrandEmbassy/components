@@ -9,7 +9,6 @@ final class LayoutTest extends TestCase
 {
     use SnapshotAssertTrait;
 
-
     public function testShouldRenderRow(): void
     {
         $snapshot = __DIR__ . '/__snapshots__/layout.html';

@@ -16,7 +16,7 @@ final class CellData
 
 
     /**
-     * @param mixed  $value
+     * @param mixed $value
      */
     public function __construct(string $key, $value)
     {

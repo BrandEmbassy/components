@@ -10,7 +10,6 @@ final class GridRowTest extends TestCase
 {
     use SnapshotAssertTrait;
 
-
     public function testShouldRenderRow(): void
     {
         $snapshot = __DIR__ . '/__snapshots__/row.html';
