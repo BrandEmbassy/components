@@ -16,8 +16,6 @@ final class ButtonLinkTest extends TestCase
 
     /**
      * @dataProvider getButtonsData
-     * @param string     $snapshot
-     * @param ButtonLink $button
      */
     public function testButtonRendering(string $snapshot, ButtonLink $button): void
     {

@@ -13,8 +13,6 @@ final class HeadingTest extends TestCase
 
     /**
      * @dataProvider headerDataProvider
-     * @param string  $snapshot
-     * @param Heading $header
      */
     public function testShouldRenderHeader(string $snapshot, Heading $header): void
     {

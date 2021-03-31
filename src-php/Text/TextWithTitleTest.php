@@ -13,9 +13,6 @@ final class TextWithTitleTest extends TestCase
 
     /**
      * @dataProvider textWithTitleData
-     *
-     * @param string        $snapshot
-     * @param TextWithTitle $textWithTitle
      */
     public function testRenderedTextWithTitle(string $snapshot, TextWithTitle $textWithTitle): void
     {

@@ -15,8 +15,6 @@ final class ComponentRenderer
 
     /**
      * @param UiComponent[] $components
-     *
-     * @return string
      */
     public static function renderMultiple(array $components): string
     {

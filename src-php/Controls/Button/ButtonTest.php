@@ -15,8 +15,6 @@ final class ButtonTest extends TestCase
 
     /**
      * @dataProvider getButtonsData
-     * @param string $snapshot
-     * @param Button $button
      */
     public function testButtonRendering(string $snapshot, Button $button): void
     {

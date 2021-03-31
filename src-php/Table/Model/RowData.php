@@ -18,7 +18,6 @@ final class RowData
 
 
     /**
-     * @param string     $rowIdentifier
      * @param CellData[] $cellsData
      */
     public function __construct(string $rowIdentifier, array $cellsData)

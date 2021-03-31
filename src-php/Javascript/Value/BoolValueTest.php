@@ -9,8 +9,6 @@ final class BoolValueTest extends TestCase
 {
     /**
      * @dataProvider boolValueProvider
-     * @param string $expectedJsRepresentation
-     * @param bool   $phpValue
      */
     public function testStringValueIsRendered(string $expectedJsRepresentation, bool $phpValue): void
     {

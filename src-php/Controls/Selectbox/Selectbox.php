@@ -44,11 +44,6 @@ final class Selectbox implements UiComponent
 
     /**
      * @param SelectboxOption[] $options
-     * @param string            $name
-     * @param SelectboxType     $type
-     * @param string            $description
-     * @param bool              $isError
-     * @param bool              $disabled
      */
     public function __construct(
         array $options,

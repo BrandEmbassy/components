@@ -29,7 +29,6 @@ class Heading implements UiComponent
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param UtilitiesOption[]                         $utilityOptions
-     * @param HeadingLevel                              $level
      */
     public function __construct($children, array $utilityOptions, HeadingLevel $level)
     {

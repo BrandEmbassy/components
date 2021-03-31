@@ -12,8 +12,6 @@ final class EmphasizedTest extends TestCase
 
     /**
      * @dataProvider emphasizedDataProvider
-     * @param string     $snapshot
-     * @param Emphasized $emphasized
      */
     public function testEmphasizedIsRendered(string $snapshot, Emphasized $emphasized): void
     {

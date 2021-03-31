@@ -89,8 +89,6 @@ final class TableTest extends TestCase
 
     /**
      * @dataProvider tableRowDividerStylesData
-     * @param string $htmlFile
-     * @param string $tableRowDividerStyle
      */
     public function testRenderWithRowDivider(string $htmlFile, string $tableRowDividerStyle): void
     {

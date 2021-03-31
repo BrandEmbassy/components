@@ -12,8 +12,6 @@ final class NotificationMessageTest extends TestCase
 
     /**
      * @dataProvider getNotificationsData
-     * @param string              $snapshot
-     * @param NotificationMessage $message
      */
     public function testComponentRendering(string $snapshot, NotificationMessage $message): void
     {

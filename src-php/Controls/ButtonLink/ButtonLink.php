@@ -42,9 +42,6 @@ final class ButtonLink implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param Color|null                                $color
-     * @param IconType|null                             $icon
-     * @param Size|null                                 $size
      * @param UriInterface|null                         $uri      Only accepted if $asHypertextLink === true
      */
     public function __construct(

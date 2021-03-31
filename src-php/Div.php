@@ -4,7 +4,6 @@ namespace BrandEmbassy\Components;
 
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use function array_shift;
-use function assert;
 use function count;
 use function is_array;
 use function sprintf;
@@ -30,8 +29,6 @@ final class Div implements UiComponent
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param UtilitiesOption[]                         $utilityOptions
-     * @param UiComponent|null                          $childrenSeparator
-     * @param string|null                               $id
      */
     public function __construct(
         $children,
@@ -65,7 +62,6 @@ final class Div implements UiComponent
 
     /**
      * @param UiComponent[]|string[] $children
-     * @param UiComponent            $separator
      *
      * @return UiComponent[]|string[]
      */
@@ -79,7 +75,6 @@ final class Div implements UiComponent
             }
 
             $childToAdd = array_shift($children);
-            assert($childToAdd !== null);
             $childrenWithSeparator[] = $childToAdd;
         }
 

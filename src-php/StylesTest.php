@@ -2,7 +2,6 @@
 
 namespace BrandEmbassy\Components;
 
-use Assert\InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 final class StylesTest extends TestCase
@@ -26,13 +25,5 @@ final class StylesTest extends TestCase
         $merged = $styles->merge(new Styles(['a' => 'a2', 'c' => 'c1']));
 
         self::assertEquals(' style="a: a2; b: b1; c: c1;"', $merged->getHtmlAttribute());
-    }
-
-
-    public function testInvalidArrayIntoConstructor(): void
-    {
-        $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Array must be associative, all keys must be strings.');
-        new Styles(['a' => 'b', 2]);
     }
 }

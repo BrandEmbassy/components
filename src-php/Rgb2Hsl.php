@@ -9,9 +9,6 @@ use function min;
 final class Rgb2Hsl
 {
     /**
-     * @param int $red
-     * @param int $green
-     * @param int $blue
      * @return int[]
      */
     public static function rgb2hsl(int $red, int $green, int $blue): array

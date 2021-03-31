@@ -12,8 +12,6 @@ final class TextareaTest extends TestCase
 
     /**
      * @dataProvider textareaToTest
-     * @param string   $expectedSnapshotPath
-     * @param Textarea $textarea
      */
     public function testRender(string $expectedSnapshotPath, Textarea $textarea): void
     {

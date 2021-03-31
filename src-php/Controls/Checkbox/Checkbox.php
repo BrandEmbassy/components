@@ -47,12 +47,6 @@ final class Checkbox implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param string                                    $label
-     * @param string                                    $id
-     * @param string                                    $name
-     * @param string                                    $value
-     * @param bool                                      $checked
-     * @param bool                                      $disabled
      */
     public function __construct(
         $children,

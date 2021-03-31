@@ -40,10 +40,6 @@ final class Button implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param Color|null                                $color
-     * @param IconType|null                             $icon
-     * @param Size|null                                 $size
-     * @param bool                                      $disabled
      */
     public function __construct(
         $children,

@@ -13,9 +13,6 @@ final class DivTest extends TestCase
 
     /**
      * @dataProvider divData
-     *
-     * @param string $snapshot
-     * @param Div    $div
      */
     public function testRenderDiv(string $snapshot, Div $div): void
     {

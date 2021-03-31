@@ -7,5 +7,8 @@ use IteratorAggregate;
 
 interface DataProvider extends IteratorAggregate, Countable
 {
+    /**
+     * @return TableIterator<RowData>
+     */
     public function getIterator(): TableIterator;
 }

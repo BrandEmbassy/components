@@ -22,7 +22,6 @@ final class TextWithTitle implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param string                                    $title
      */
     public function __construct($children, string $title)
     {

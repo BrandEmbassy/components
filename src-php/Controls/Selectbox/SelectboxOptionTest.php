@@ -12,8 +12,6 @@ final class SelectboxOptionTest extends TestCase
 
     /**
      * @dataProvider optionsData
-     * @param string          $snapshot
-     * @param SelectboxOption $option
      */
     public function testShouldRenderSelectboxOption(string $snapshot, SelectboxOption $option): void
     {

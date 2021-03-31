@@ -12,8 +12,6 @@ final class TagComponentTest extends TestCase
 
     /**
      * @dataProvider tagComponentProvider
-     * @param string       $snapshotFileName
-     * @param TagComponent $component
      */
     public function testRenderTagWithHslStyle(string $snapshotFileName, TagComponent $component): void
     {
