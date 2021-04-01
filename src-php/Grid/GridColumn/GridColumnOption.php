@@ -21,6 +21,7 @@ final class GridColumnOption extends Enum
     public const XS_10 = 'col-xs-10';
     public const XS_11 = 'col-xs-11';
     public const XS_12 = 'col-xs-12';
+
     public const MD_1 = 'col-md-1';
     public const MD_2 = 'col-md-2';
     public const MD_3 = 'col-md-3';
@@ -33,6 +34,7 @@ final class GridColumnOption extends Enum
     public const MD_10 = 'col-md-10';
     public const MD_11 = 'col-md-11';
     public const MD_12 = 'col-md-12';
+
     public const LG_1 = 'col-lg-1';
     public const LG_2 = 'col-lg-2';
     public const LG_3 = 'col-lg-3';
