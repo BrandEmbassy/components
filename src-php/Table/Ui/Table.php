@@ -12,7 +12,6 @@ use BrandEmbassy\Components\Table\Model\TableIterator;
 use BrandEmbassy\Components\UiComponent;
 use LogicException;
 use function array_map;
-use function assert;
 use function count;
 use function gettype;
 use function in_array;
@@ -28,13 +27,12 @@ final class Table implements UiComponent
     private $tableDefinition;
 
     /**
-     * @var DataProvider
+     * @var DataProvider<RowData>
      */
     private $dataProvider;
 
     /**
-     * @var           (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell)[]
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification
+     * @var (callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell)[]
      */
     private $cellRenderCallbacks;
 
@@ -58,7 +56,6 @@ final class Table implements UiComponent
 
 
     /**
-     * @param string            $column
      * @param callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell $function
      */
     public function setCellRenderCallback(string $column, callable $function): void
@@ -108,7 +105,6 @@ final class Table implements UiComponent
         $result = '<tbody>';
         $iterator = $this->dataProvider->getIterator();
         foreach ($iterator as $rowData) {
-            assert($rowData instanceof RowData);
             $cellsData = $rowData->getCellsData();
 
             /** @var Cell[] $cells */
@@ -141,11 +137,6 @@ final class Table implements UiComponent
     }
 
 
-    /**
-     * @param string $key
-     *
-     * @return callable(CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition, TableIterator $iterator): Cell
-     */
     private function getCellRenderFunction(string $key): callable
     {
         if (isset($this->cellRenderCallbacks[$key])) {
@@ -182,7 +173,6 @@ final class Table implements UiComponent
     /**
      * @deprecated Due to difficulties with deployment to https://components.brandembassy.com/2.0/css/components.css.
      *             I must give style directly here; once "components.css" will be regenerated, this may disappear.
-     * @return string
      */
     private function renderRowDividerStyles(): string
     {

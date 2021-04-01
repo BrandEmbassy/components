@@ -13,8 +13,6 @@ final class ProfilePictureTest extends TestCase
 
     /**
      * @dataProvider profilePicturesProvider
-     * @param string         $expectedSnapshot
-     * @param ProfilePicture $picture
      */
     public function testRendering(string $expectedSnapshot, ProfilePicture $picture): void
     {

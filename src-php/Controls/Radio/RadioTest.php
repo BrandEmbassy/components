@@ -12,8 +12,6 @@ final class RadioTest extends TestCase
 
     /**
      * @dataProvider radioDataProvider
-     * @param string $snapshot
-     * @param Radio  $radio
      */
     public function testButtonRendering(string $snapshot, Radio $radio): void
     {

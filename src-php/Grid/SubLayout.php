@@ -21,7 +21,6 @@ final class SubLayout implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param SubLayoutType                             $appType
      */
     public function __construct($children, SubLayoutType $appType)
     {

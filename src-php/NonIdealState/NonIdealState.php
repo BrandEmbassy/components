@@ -27,7 +27,6 @@ final class NonIdealState implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param string                                    $heading
      */
     public function __construct($children, string $heading)
     {

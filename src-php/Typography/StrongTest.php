@@ -12,8 +12,6 @@ final class StrongTest extends TestCase
 
     /**
      * @dataProvider strongDataProvider
-     * @param string $snapshot
-     * @param Strong $strong
      */
     public function testStrongIsRendered(string $snapshot, Strong $strong): void
     {

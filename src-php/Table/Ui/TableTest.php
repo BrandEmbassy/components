@@ -32,25 +32,25 @@ final class TableTest extends TestCase
             new RowData(
                 '1',
                 [
-                    'name'    => new CellData('name', 'John'),
+                    'name' => new CellData('name', 'John'),
                     'surname' => new CellData('surname', 'Smith'),
-                    'age'     => new CellData('age', 40),
+                    'age' => new CellData('age', 40),
                 ]
             ),
             new RowData(
                 '2',
                 [
-                    'name'    => new CellData('name', 'Harry'),
+                    'name' => new CellData('name', 'Harry'),
                     'surname' => new CellData('surname', 'Potter'),
-                    'age'     => new CellData('age', 22),
+                    'age' => new CellData('age', 22),
                 ]
             ),
             new RowData(
                 '3',
                 [
-                    'name'    => new CellData('name', new UiString('Prokop')),
+                    'name' => new CellData('name', new UiString('Prokop')),
                     'surname' => new CellData('surname', new Icon(IconType::get(IconType::AGENT))),
-                    'age'     => new CellData('age', 55),
+                    'age' => new CellData('age', 55),
                 ]
             ),
         ];
@@ -89,8 +89,6 @@ final class TableTest extends TestCase
 
     /**
      * @dataProvider tableRowDividerStylesData
-     * @param string $htmlFile
-     * @param string $tableRowDividerStyle
      */
     public function testRenderWithRowDivider(string $htmlFile, string $tableRowDividerStyle): void
     {

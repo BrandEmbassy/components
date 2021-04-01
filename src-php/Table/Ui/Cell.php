@@ -23,7 +23,6 @@ final class Cell implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param ColumnDefinition                          $columnDefinition
      */
     public function __construct($children, ColumnDefinition $columnDefinition)
     {

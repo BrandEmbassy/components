@@ -13,8 +13,6 @@ class StandardTagComponentTest extends TestCase
 
     /**
      * @dataProvider standardTagComponentProvider
-     * @param string               $snapshotFileName
-     * @param StandardTagComponent $component
      */
     public function testRenderTagWithClass(string $snapshotFileName, StandardTagComponent $component): void
     {

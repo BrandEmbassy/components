@@ -45,11 +45,6 @@ final class Link implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param UriInterface|null                         $uri
-     * @param LinkColor|null                            $color
-     * @param IconType|null                             $icon
-     * @param string|null                               $onclick
-     * @param LinkTarget|null                           $target
      */
     public function __construct(
         $children,
@@ -64,7 +59,7 @@ final class Link implements UiComponent
         $this->uri = $uri;
         $this->children = is_array($children) ? $children : [$children];
         $this->onclick = $onclick;
-        $this->target = $target ?: LinkTarget::get(LinkTarget::CURRENT_CONTEXT);
+        $this->target = $target ?? LinkTarget::get(LinkTarget::CURRENT_CONTEXT);
     }
 
 

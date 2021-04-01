@@ -13,9 +13,6 @@ final class InputTest extends TestCase
 
     /**
      * @dataProvider getInputData
-     *
-     * @param string $snapshot
-     * @param Input  $input
      */
     public function testShouldRenderInput(string $snapshot, Input $input): void
     {

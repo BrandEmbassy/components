@@ -8,7 +8,6 @@ use BrandEmbassy\Components\EnumValuesToString;
 use BrandEmbassy\Components\UiComponent;
 use BrandEmbassy\Components\Utilities\UtilitiesOption;
 use function array_shift;
-use function assert;
 use function count;
 use function is_array;
 
@@ -28,7 +27,6 @@ final class Paragraph implements UiComponent
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
      * @param UtilitiesOption[]                         $utilityOptions
-     * @param UiComponent                               $childrenSeparator
      */
     public function __construct($children, array $utilityOptions = [], ?UiComponent $childrenSeparator = null)
     {
@@ -50,7 +48,7 @@ final class Paragraph implements UiComponent
 
     /**
      * @param UiComponent[]|string[] $children
-     * @param UiComponent            $separator
+     *
      * @return UiComponent[]|string[]
      */
     private function getChildrenMixedWithSeparator(array $children, UiComponent $separator): array
@@ -63,7 +61,6 @@ final class Paragraph implements UiComponent
             }
 
             $childToAdd = array_shift($children);
-            assert($childToAdd !== null);
             $childrenWithSeparator[] = $childToAdd;
         }
 

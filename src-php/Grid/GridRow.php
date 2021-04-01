@@ -29,8 +29,8 @@ final class GridRow implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param GridRowOption[]                           $rowOptions
-     * @param UtilitiesOption[]                         $utilityOptions
+     * @param GridRowOption[] $rowOptions
+     * @param UtilitiesOption[] $utilityOptions
      */
     public function __construct($children, array $rowOptions = [], array $utilityOptions = [])
     {

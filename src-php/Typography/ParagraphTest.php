@@ -13,8 +13,6 @@ final class ParagraphTest extends TestCase
 
     /**
      * @dataProvider paragraphData
-     * @param string    $snapshot
-     * @param Paragraph $p
      */
     public function testShouldRenderParagraph(string $snapshot, Paragraph $p): void
     {

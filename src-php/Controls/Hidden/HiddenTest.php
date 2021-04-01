@@ -12,8 +12,6 @@ final class HiddenTest extends TestCase
 
     /**
      * @dataProvider getInputData
-     * @param string $snapshot
-     * @param Hidden $input
      */
     public function testRenderedHiddenField(string $snapshot, Hidden $input): void
     {

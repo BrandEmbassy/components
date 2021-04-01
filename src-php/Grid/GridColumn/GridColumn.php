@@ -30,8 +30,8 @@ final class GridColumn implements UiComponent
 
     /**
      * @param UiComponent[]|string[]|UiComponent|string $children
-     * @param GridColumnOption[]                        $columnOptions
-     * @param UtilitiesOption[]                         $utilityOptions
+     * @param GridColumnOption[] $columnOptions
+     * @param UtilitiesOption[] $utilityOptions
      */
     public function __construct($children, array $columnOptions, array $utilityOptions = [])
     {

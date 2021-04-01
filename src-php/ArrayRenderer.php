@@ -12,8 +12,6 @@ final class ArrayRenderer
 {
     /**
      * @param UiComponent[]|string[] $components
-     *
-     * @return string
      */
     public static function render(array $components): string
     {

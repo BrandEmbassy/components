@@ -14,8 +14,6 @@ final class LinkTest extends TestCase
 
     /**
      * @dataProvider getLinkData
-     * @param string $snapshot
-     * @param Link   $link
      */
     public function testRendering(string $snapshot, Link $link): void
     {

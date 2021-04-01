@@ -13,8 +13,6 @@ final class CheckboxTest extends TestCase
 
     /**
      * @dataProvider getInputData
-     * @param string   $snapshot
-     * @param Checkbox $checkbox
      */
     public function testShouldRenderInput(string $snapshot, Checkbox $checkbox): void
     {

@@ -3,8 +3,8 @@
 namespace BrandEmbassy\Components;
 
 use InvalidArgumentException;
+use Laminas\Escaper\Escaper;
 use Nette\Utils\Strings;
-use Zend\Escaper\Escaper;
 use function sprintf;
 
 final class StringEscaper

@@ -30,6 +30,9 @@ final class ArrayDataProvider implements DataProvider
     }
 
 
+    /**
+     * @return TableIterator<RowData>
+     */
     public function getIterator(): TableIterator
     {
         return new TableIterator($this->data);

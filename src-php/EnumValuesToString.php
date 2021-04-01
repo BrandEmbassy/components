@@ -13,7 +13,6 @@ final class EnumValuesToString
 {
     /**
      * @param Enum[] $options
-     * @return string
      */
     public static function transform(array $options): string
     {

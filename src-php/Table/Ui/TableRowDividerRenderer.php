@@ -32,7 +32,10 @@ final class TableRowDividerRenderer implements UiComponent
         $htmlFragment = '';
         $style = $this->tableRowDivider->getStyle();
         if ($style->is(TableRowDividerStyle::LABEL_SPLITTED_ROW)) {
-            $htmlFragment .= sprintf('<tr><td colspan="%d" style="display: none;">&nbsp;</td></tr>', $this->numberOfColumns);
+            $htmlFragment .= sprintf(
+                '<tr><td colspan="%d" style="display: none;">&nbsp;</td></tr>',
+                $this->numberOfColumns
+            );
             $rowPattern = <<<PAT
 <tr class="TableRowDivider">
   <td colspan="%d" style="text-align: center; padding: 0; height: auto; user-select: none; font-weight: bold;">%s</td>

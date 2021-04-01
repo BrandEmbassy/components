@@ -13,9 +13,6 @@ final class TextWithTitleTest extends TestCase
 
     /**
      * @dataProvider textWithTitleData
-     *
-     * @param string        $snapshot
-     * @param TextWithTitle $textWithTitle
      */
     public function testRenderedTextWithTitle(string $snapshot, TextWithTitle $textWithTitle): void
     {
@@ -29,11 +26,11 @@ final class TextWithTitleTest extends TestCase
     public function textWithTitleData(): array
     {
         return [
-            'Text with title'                                => [
+            'Text with title' => [
                 __DIR__ . '/__snapshots__/textWithTitle.html',
                 new TextWithTitle('Some text', 'Title'),
             ],
-            'Text containing link with title'                => [
+            'Text containing link with title' => [
                 __DIR__ . '/__snapshots__/textContainingLinkWithTitle.html',
                 new TextWithTitle(new Link('Test link'), 'Title'),
             ],

@@ -21,7 +21,6 @@ final class ListComponent implements UiComponent
 
     /**
      * @param ListItem[] $items
-     * @param ListType   $listType
      */
     public function __construct(array $items, ListType $listType)
     {

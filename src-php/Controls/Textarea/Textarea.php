@@ -46,13 +46,7 @@ final class Textarea implements UiComponent
 
 
     /**
-     * @param string             $name
-     * @param string             $value
-     * @param int                $rows
-     * @param bool               $disabled
      * @param string|UiComponent $description
-     * @param bool               $isError
-     * @param string|null        $placeholder
      */
     public function __construct(
         string $name,
