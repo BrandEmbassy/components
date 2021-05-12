@@ -3,20 +3,18 @@
 namespace BrandEmbassy\Components\Navigation\Pagination;
 
 use BrandEmbassy\Components\UiComponent;
+use Nette\Utils\FileSystem;
 use function ceil;
-use function file_get_contents;
 use function in_array;
 use function sprintf;
 use function str_replace;
 
 final class Pagination implements UiComponent
 {
-    private const BLANK = '';
     private const FIRST_PAGE = 1;
     private const MAX_PAGES_TO_DISPLAY = 5;
     private const FIRST_PAGE_SVGS = ['arrow-first', 'arrow-back'];
     private const LAST_PAGE_SVGS = ['arrow-next', 'arrow-last'];
-    private const CURRENT_PAGE_CLASS = 'class="current" ';
     private const DISABLED_CLASS = 'class="disableClick"';
 
     /**
@@ -74,13 +72,7 @@ final class Pagination implements UiComponent
 
     public static function renderStyles(): string
     {
-        $styles = file_get_contents(__DIR__ . '/css/Pagination.css');
-
-        if ((bool)$styles) {
-            return (string)$styles;
-        }
-
-        return self::BLANK;
+        return FileSystem::read(__DIR__ . '/css/Pagination.css');
     }
 
 
@@ -103,48 +95,46 @@ final class Pagination implements UiComponent
     private function renderPageAnchorTags(): string
     {
         if (($this->pageNumberRequested - 2) < 1) {
-            $firstPage = self::FIRST_PAGE;
-            $lastPage = self::MAX_PAGES_TO_DISPLAY;
-        } else if ($this->pageNumberRequested + 2 > $this->totalPageCount) {
-            $firstPage = $this->totalPageCount - (self::MAX_PAGES_TO_DISPLAY - 1);
-            $lastPage = $this->totalPageCount;
-        } else {
-            $firstPage = $this->pageNumberRequested - 2;
-            $lastPage = $this->pageNumberRequested + 2;
+            return $this->renderPageAnchors(self::FIRST_PAGE, self::MAX_PAGES_TO_DISPLAY);
         }
 
+        if ($this->pageNumberRequested + 2 > $this->totalPageCount) {
+            return $this->renderPageAnchors(
+                $this->totalPageCount - (self::MAX_PAGES_TO_DISPLAY - 1),
+                $this->totalPageCount
+            );
+        }
+
+        return $this->renderPageAnchors($this->pageNumberRequested - 2, $this->pageNumberRequested + 2);
+    }
+
+
+    private function renderPageAnchors(int $firstPage, int $lastPage): string
+    {
         $anchors = '';
         for ($pageNumber = $firstPage; $pageNumber <= $lastPage; $pageNumber++) {
             $anchors .= $this->renderPageAnchorTag($pageNumber);
         }
-        
+
         return $anchors;
     }
 
-    
+
     private function renderPageAnchorTag(int $pageNumber): string
     {
         if ($pageNumber === $this->pageNumberRequested) {
-            $class = self::CURRENT_PAGE_CLASS;
-            $href = self::BLANK;
-        } else {
-            $class = self::BLANK;
-            $href = sprintf('href="%s/%d"', $this->pageRoutePath, $pageNumber);
+            return sprintf('<a class="current">%d</a>', $pageNumber);
         }
 
-        return sprintf('<a %s%s>%d</a>', $class, $href, $pageNumber);
+        return sprintf('<a href="%s/%2$d">%2$d</a>', $this->pageRoutePath, $pageNumber);
     }
 
 
     private function renderSvgAnchorTag(string $svgName, int $anchorPage): string
     {
         $attrs = $this->renderSvgAnchorAttributes($svgName, $anchorPage);
-        $svgContents = file_get_contents(__DIR__ . '/images/' . $svgName . '.svg');
-        $svg = self::BLANK;
-
-        if ((bool)$svgContents) {
-            $svg = str_replace($svgName . '-svg', 'svgPagination', (string)$svgContents);
-        }
+        $svgContents = FileSystem::read(__DIR__ . '/images/' . $svgName . '.svg');
+        $svg = str_replace($svgName . '-svg', 'svgPagination', $svgContents);
 
         return sprintf('<a %s>%s</a>', $attrs, $svg);
     }
