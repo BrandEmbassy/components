@@ -35,53 +35,54 @@ final class Pagination implements UiComponent
     /**
      * @var int
      */
-    private $totalPageCount;
+    private $pageSize;
 
 
     public function __construct(
         string $pageRoutePath,
         int $totalItemCount,
         int $pageNumberRequested,
-        int $totalPageCount
+        int $pageSize
     ) {
         $this->pageRoutePath = $pageRoutePath;
         $this->totalItemCount = $totalItemCount;
         $this->pageNumberRequested = $pageNumberRequested;
-        $this->totalPageCount = $totalPageCount;
+        $this->pageSize = $pageSize;
     }
 
 
     public function render(): string
     {
+        $totalPageCount = (int)ceil($this->totalItemCount / $this->pageSize);
+
         $prevPageNumber = ($this->pageNumberRequested - 1) <= 0 ? 1 : $this->pageNumberRequested - 1;
-        $nextPageNumber = ($this->pageNumberRequested + 1) >= $this->totalPageCount
-            ? $this->totalPageCount
+        $nextPageNumber = ($this->pageNumberRequested + 1) >= $totalPageCount
+            ? $totalPageCount
             : $this->pageNumberRequested + 1;
 
-        return '<hr><div class="main">'
+        return '<div class="paginationComponent">'
             . '<div class="displayCounts">' . $this->renderDisplayCounts() . '</div>'
             . '<div class="center">'
-            . $this->renderSvgAnchorTag('arrow-first', 1)
-            . $this->renderSvgAnchorTag('arrow-back', $prevPageNumber)
-            . '<div class="pagination">' . $this->renderPageAnchorTags() . '</div>'
-            . $this->renderSvgAnchorTag('arrow-next', $nextPageNumber)
-            . $this->renderSvgAnchorTag('arrow-last', $this->totalPageCount)
+            . $this->renderSvgAnchorTag('arrow-first', 1, $totalPageCount)
+            . $this->renderSvgAnchorTag('arrow-back', $prevPageNumber, $totalPageCount)
+            . '<div class="pagination">' . $this->renderPageAnchorTags($totalPageCount) . '</div>'
+            . $this->renderSvgAnchorTag('arrow-next', $nextPageNumber, $totalPageCount)
+            . $this->renderSvgAnchorTag('arrow-last', $totalPageCount, $totalPageCount)
             . '</div></div>';
     }
 
 
     public static function renderStyles(): string
     {
-        return FileSystem::read(__DIR__ . '/css/Pagination.css');
+        return FileSystem::read(__DIR__ . '/Pagination.css');
     }
 
 
     private function renderDisplayCounts(): string
     {
-        $pageSize = (int)ceil($this->totalItemCount / $this->totalPageCount);
-        $lastItemCalculated = $this->pageNumberRequested * $pageSize;
+        $lastItemCalculated = $this->pageNumberRequested * $this->pageSize;
         $lastItemDisplayed = $lastItemCalculated > $this->totalItemCount ? $this->totalItemCount : $lastItemCalculated;
-        $firstItemDisplayed = $lastItemCalculated - $pageSize + 1;
+        $firstItemDisplayed = $lastItemCalculated - $this->pageSize + 1;
 
         return sprintf(
             'Displaying %d - %d of %d',
@@ -92,16 +93,20 @@ final class Pagination implements UiComponent
     }
 
 
-    private function renderPageAnchorTags(): string
+    private function renderPageAnchorTags(int $totalPageCount): string
     {
+        $lastPage = $totalPageCount <= self::MAX_PAGES_TO_DISPLAY
+            ? $totalPageCount
+            : self::MAX_PAGES_TO_DISPLAY;
+
         if (($this->pageNumberRequested - 2) < 1) {
-            return $this->renderPageAnchors(self::FIRST_PAGE, self::MAX_PAGES_TO_DISPLAY);
+            return $this->renderPageAnchors(self::FIRST_PAGE, $lastPage);
         }
 
-        if ($this->pageNumberRequested + 2 > $this->totalPageCount) {
+        if ($this->pageNumberRequested + 2 > $totalPageCount) {
             return $this->renderPageAnchors(
-                $this->totalPageCount - (self::MAX_PAGES_TO_DISPLAY - 1),
-                $this->totalPageCount
+                $totalPageCount - ($lastPage - 1),
+                $totalPageCount
             );
         }
 
@@ -130,9 +135,9 @@ final class Pagination implements UiComponent
     }
 
 
-    private function renderSvgAnchorTag(string $svgName, int $anchorPage): string
+    private function renderSvgAnchorTag(string $svgName, int $anchorPage, $totalPageCount): string
     {
-        $attrs = $this->renderSvgAnchorAttributes($svgName, $anchorPage);
+        $attrs = $this->renderSvgAnchorAttributes($svgName, $anchorPage, $totalPageCount);
         $svgContents = FileSystem::read(__DIR__ . '/images/' . $svgName . '.svg');
         $svg = str_replace($svgName . '-svg', 'svgPagination', $svgContents);
 
@@ -140,13 +145,13 @@ final class Pagination implements UiComponent
     }
 
 
-    private function renderSvgAnchorAttributes(string $svgName, int $expectedPageNumber): string
+    private function renderSvgAnchorAttributes(string $svgName, int $expectedPageNumber, int $totalPageCount): string
     {
         if ($this->pageNumberRequested === self::FIRST_PAGE && in_array($svgName, self::FIRST_PAGE_SVGS, true)) {
             return self::DISABLED_CLASS;
         }
 
-        if ($this->pageNumberRequested === $this->totalPageCount && in_array($svgName, self::LAST_PAGE_SVGS, true)) {
+        if ($this->pageNumberRequested === $totalPageCount && in_array($svgName, self::LAST_PAGE_SVGS, true)) {
             return self::DISABLED_CLASS;
         }
 
