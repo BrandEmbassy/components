@@ -135,7 +135,7 @@ final class Pagination implements UiComponent
     }
 
 
-    private function renderSvgAnchorTag(string $svgName, int $anchorPage, $totalPageCount): string
+    private function renderSvgAnchorTag(string $svgName, int $anchorPage, int $totalPageCount): string
     {
         $attrs = $this->renderSvgAnchorAttributes($svgName, $anchorPage, $totalPageCount);
         $svgContents = FileSystem::read(__DIR__ . '/images/' . $svgName . '.svg');

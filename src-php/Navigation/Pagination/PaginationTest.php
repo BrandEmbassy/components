@@ -9,6 +9,7 @@ final class PaginationTest extends TestCase
 {
     use SnapshotAssertTrait;
 
+
     /**
      * @dataProvider getLessThanMaxPagesDataProvider
      *
@@ -29,6 +30,9 @@ final class PaginationTest extends TestCase
     }
 
 
+    /**
+     * @return mixed[]
+     */
     public function getLessThanMaxPagesDataProvider(): array
     {
         return [
@@ -80,6 +84,9 @@ final class PaginationTest extends TestCase
     }
 
 
+    /**
+     * @return mixed[]
+     */
     public function getGreaterThanMaxPagesDataProvider(): array
     {
         return [
@@ -109,6 +116,8 @@ final class PaginationTest extends TestCase
             ],
         ];
     }
+
+    
     /**
      * @dataProvider getEqualToMaxPagesDataProvider
      *
@@ -129,6 +138,9 @@ final class PaginationTest extends TestCase
     }
 
 
+    /**
+     * @return mixed[]
+     */
     public function getEqualToMaxPagesDataProvider(): array
     {
         return [
