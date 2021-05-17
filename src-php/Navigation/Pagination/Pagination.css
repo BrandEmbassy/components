@@ -53,10 +53,6 @@
     pointer-events: none;
 }
 
-.center {
-    margin-left: 15em;
-}
-
 .disableClick {
     pointer-events: none;
 }

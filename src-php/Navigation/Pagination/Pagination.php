@@ -60,15 +60,19 @@ final class Pagination implements UiComponent
             ? $totalPageCount
             : $this->pageNumberRequested + 1;
 
-        return '<div class="paginationComponent">'
-            . '<div class="displayCounts">' . $this->renderDisplayCounts() . '</div>'
-            . '<div class="center">'
-            . $this->renderSvgAnchorTag('arrow-first', 1, $totalPageCount)
-            . $this->renderSvgAnchorTag('arrow-back', $prevPageNumber, $totalPageCount)
-            . '<div class="pagination">' . $this->renderPageAnchorTags($totalPageCount) . '</div>'
-            . $this->renderSvgAnchorTag('arrow-next', $nextPageNumber, $totalPageCount)
-            . $this->renderSvgAnchorTag('arrow-last', $totalPageCount, $totalPageCount)
-            . '</div></div>';
+        return '<hr><div class="paginationComponent">'
+            . '<table cellpadding="0" cellspacing="0" width="100%" border="0">'
+            . '<tr>'
+                . '<td width="33%"><div class="displayCounts">' . $this->renderDisplayCounts() . '</div></td>'
+                . '<td width="33%" align="center">'
+                    . $this->renderSvgAnchorTag('arrow-first', 1, $totalPageCount)
+                    . $this->renderSvgAnchorTag('arrow-back', $prevPageNumber, $totalPageCount)
+                    . '<div class="pagination">' . $this->renderPageAnchorTags($totalPageCount) . '</div>'
+                    . $this->renderSvgAnchorTag('arrow-next', $nextPageNumber, $totalPageCount)
+                    . $this->renderSvgAnchorTag('arrow-last', $totalPageCount, $totalPageCount)
+                . '</td>'
+                . '<td width="33%"></td>'
+            . '</tr></table></div>';
     }
 
 
