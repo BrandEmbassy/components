@@ -63,3 +63,14 @@ hr {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+table {
+    border: 0;
+    width: 100%;
+    padding: 0;
+    border-spacing: 0;
+}
+
+td {
+    width: 33%;
+}
