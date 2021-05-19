@@ -2,8 +2,10 @@
 
 namespace BrandEmbassy\Components\Navigation\Pagination;
 
+use BrandEmbassy\Components\Controls\UriRenderer;
 use BrandEmbassy\Components\UiComponent;
 use Nette\Utils\FileSystem;
+use Psr\Http\Message\UriInterface;
 use function ceil;
 use function in_array;
 use function sprintf;
@@ -20,7 +22,7 @@ final class Pagination implements UiComponent
     /**
      * @var string
      */
-    private $pageRoutePath;
+    private $uri;
 
     /**
      * @var int
@@ -39,12 +41,12 @@ final class Pagination implements UiComponent
 
 
     public function __construct(
-        string $pageRoutePath,
+        UriInterface $uri,
         int $totalItemCount,
         int $pageNumberRequested,
         int $pageSize
     ) {
-        $this->pageRoutePath = $pageRoutePath;
+        $this->uri = $uri;
         $this->totalItemCount = $totalItemCount;
         $this->pageNumberRequested = $pageNumberRequested;
         $this->pageSize = $pageSize;
@@ -60,7 +62,7 @@ final class Pagination implements UiComponent
             ? $totalPageCount
             : $this->pageNumberRequested + 1;
 
-        return '<hr><div class="paginationComponent">'
+        return '<div class="paginationComponent">'
             . '<table>'
             . '<tr>'
                 . '<td><div class="displayCounts">' . $this->renderDisplayCounts() . '</div></td>'
@@ -135,7 +137,11 @@ final class Pagination implements UiComponent
             return sprintf('<a class="current">%d</a>', $pageNumber);
         }
 
-        return sprintf('<a href="%s/%2$d">%2$d</a>', $this->pageRoutePath, $pageNumber);
+        return sprintf(
+            '<a href="%s?pageNumber=%2$d">%2$d</a>',
+            UriRenderer::urlToString($this->uri),
+            $pageNumber
+        );
     }
 
 
@@ -159,6 +165,10 @@ final class Pagination implements UiComponent
             return self::DISABLED_CLASS;
         }
 
-        return sprintf('class="pagination" href="%s/%d"', $this->pageRoutePath, $expectedPageNumber);
+        return sprintf(
+            'class="pagination" href="%s?pageNumber=%d"',
+            UriRenderer::urlToString($this->uri),
+            $expectedPageNumber
+        );
     }
 }

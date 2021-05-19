@@ -3,6 +3,7 @@
 namespace BrandEmbassy\Components\Navigation\Pagination;
 
 use BrandEmbassy\Components\SnapshotAssertTrait;
+use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
 
 final class PaginationTest extends TestCase
@@ -24,7 +25,7 @@ final class PaginationTest extends TestCase
         int $pageNumberRequested,
         int $pageSize
     ): void {
-        $pagination = new Pagination('/page-number', $totalItemCount, $pageNumberRequested, $pageSize);
+        $pagination = new Pagination(new Uri('/items'), $totalItemCount, $pageNumberRequested, $pageSize);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $expectedSnapshot, $pagination);
     }
@@ -78,7 +79,7 @@ final class PaginationTest extends TestCase
         int $pageNumberRequested,
         int $pageSize
     ): void {
-        $pagination = new Pagination('/page-number', $totalItemCount, $pageNumberRequested, $pageSize);
+        $pagination = new Pagination(new Uri('/items'), $totalItemCount, $pageNumberRequested, $pageSize);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $expectedSnapshot, $pagination);
     }
@@ -132,7 +133,7 @@ final class PaginationTest extends TestCase
         int $pageNumberRequested,
         int $pageSize
     ): void {
-        $pagination = new Pagination('/page-number', $totalItemCount, $pageNumberRequested, $pageSize);
+        $pagination = new Pagination(new Uri('/items'), $totalItemCount, $pageNumberRequested, $pageSize);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $expectedSnapshot, $pagination);
     }
