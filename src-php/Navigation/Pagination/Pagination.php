@@ -20,7 +20,7 @@ final class Pagination implements UiComponent
     private const DISABLED_CLASS = 'class="disableClick"';
 
     /**
-     * @var string
+     * @var UriInterface
      */
     private $uri;
 
