@@ -21,6 +21,7 @@ final class Color extends Enum
         self::NEGATIVE => '#E8585D',
         self::DISABLED => '#cfcfcf',
         self::DEFAULT  => '#000000',
+        self::NEUTRAL => '#808080',
     ];
 
 
