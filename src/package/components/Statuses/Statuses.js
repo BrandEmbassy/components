@@ -27,13 +27,13 @@ export default function Statuses (props: Props) {
   )
 
   var altText = ''
-  switch(typeof(text)) {
+  switch (typeof (text)) {
     case 'string':
       altText = text
-      break;
-    case React:Node:
-      altText = renderToString(text ?? '')
-      break;
+      break
+    case React.Node:
+      altText = renderToString(text !== null && text !== undefined ? text : '')
+      break
   }
   const dataCy = `status-${status.toLowerCase() || altText.toLowerCase()}`
 
