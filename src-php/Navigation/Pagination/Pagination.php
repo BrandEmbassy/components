@@ -2,11 +2,11 @@
 
 namespace BrandEmbassy\Components\Navigation\Pagination;
 
-use BrandEmbassy\Components\Controls\UriRenderer;
 use BrandEmbassy\Components\UiComponent;
 use Nette\Utils\FileSystem;
 use Psr\Http\Message\UriInterface;
 use function ceil;
+use function http_build_query;
 use function in_array;
 use function sprintf;
 use function str_replace;
@@ -25,14 +25,14 @@ final class Pagination implements UiComponent
     private $uri;
 
     /**
-     * @var int
+     * @var string
      */
-    private $totalItemCount;
+    private $pageParameterName;
 
     /**
      * @var int
      */
-    private $pageNumberRequested;
+    private $totalItemCount;
 
     /**
      * @var int
@@ -42,51 +42,50 @@ final class Pagination implements UiComponent
 
     public function __construct(
         UriInterface $uri,
+        string $pageParameterName,
         int $totalItemCount,
-        int $pageNumberRequested,
         int $pageSize
     ) {
         $this->uri = $uri;
+        $this->pageParameterName = $pageParameterName;
         $this->totalItemCount = $totalItemCount;
-        $this->pageNumberRequested = $pageNumberRequested;
         $this->pageSize = $pageSize;
     }
 
 
     public function render(): string
     {
+        $uriParser = new UriParser($this->uri);
+        $pageNumberRequested = $uriParser->getPageNumberRequested($this->pageParameterName);
+
         $totalPageCount = (int)ceil($this->totalItemCount / $this->pageSize);
 
-        $prevPageNumber = ($this->pageNumberRequested - 1) <= 0 ? 1 : $this->pageNumberRequested - 1;
-        $nextPageNumber = ($this->pageNumberRequested + 1) >= $totalPageCount
+        $prevPageNumber = ($pageNumberRequested - 1) <= 0 ? 1 : $pageNumberRequested - 1;
+        $nextPageNumber = ($pageNumberRequested + 1) >= $totalPageCount
             ? $totalPageCount
-            : $this->pageNumberRequested + 1;
+            : $pageNumberRequested + 1;
 
         return '<div class="paginationComponent">'
             . '<table>'
             . '<tr>'
-                . '<td><div class="displayCounts">' . $this->renderDisplayCounts() . '</div></td>'
+                . '<td><div class="displayCounts">' . $this->renderDisplayCounts($pageNumberRequested) . '</div></td>'
                 . '<td align="center">'
-                    . $this->renderSvgAnchorTag('arrow-first', 1, $totalPageCount)
-                    . $this->renderSvgAnchorTag('arrow-back', $prevPageNumber, $totalPageCount)
-                    . '<div class="pagination">' . $this->renderPageAnchorTags($totalPageCount) . '</div>'
-                    . $this->renderSvgAnchorTag('arrow-next', $nextPageNumber, $totalPageCount)
-                    . $this->renderSvgAnchorTag('arrow-last', $totalPageCount, $totalPageCount)
+                    . $this->renderSvgAnchorTag($uriParser, 'arrow-first', 1, $totalPageCount)
+                    . $this->renderSvgAnchorTag($uriParser, 'arrow-back', $prevPageNumber, $totalPageCount)
+                    . '<div class="pagination">'
+                        . $this->renderPageAnchorTags($uriParser, $totalPageCount)
+                    . '</div>'
+                    . $this->renderSvgAnchorTag($uriParser, 'arrow-next', $nextPageNumber, $totalPageCount)
+                    . $this->renderSvgAnchorTag($uriParser, 'arrow-last', $totalPageCount, $totalPageCount)
                 . '</td>'
                 . '<td></td>'
             . '</tr></table></div>';
     }
 
 
-    public static function renderStyles(): string
+    private function renderDisplayCounts(int $pageNumberRequested): string
     {
-        return FileSystem::read(__DIR__ . '/Pagination.css');
-    }
-
-
-    private function renderDisplayCounts(): string
-    {
-        $lastItemCalculated = $this->pageNumberRequested * $this->pageSize;
+        $lastItemCalculated = $pageNumberRequested * $this->pageSize;
         $lastItemDisplayed = $lastItemCalculated > $this->totalItemCount ? $this->totalItemCount : $lastItemCalculated;
         $firstItemDisplayed = $lastItemCalculated - $this->pageSize + 1;
 
@@ -99,55 +98,66 @@ final class Pagination implements UiComponent
     }
 
 
-    private function renderPageAnchorTags(int $totalPageCount): string
+    private function renderPageAnchorTags(UriParser $uriParser, int $totalPageCount): string
     {
         $lastPage = $totalPageCount <= self::MAX_PAGES_TO_DISPLAY
             ? $totalPageCount
             : self::MAX_PAGES_TO_DISPLAY;
 
-        if (($this->pageNumberRequested - 2) < 1) {
-            return $this->renderPageAnchors(self::FIRST_PAGE, $lastPage);
+        $pageNumberRequested = $uriParser->getPageNumberRequested($this->pageParameterName);
+
+        if (($pageNumberRequested - 2) < 1) {
+            return $this->renderPageAnchors($uriParser, self::FIRST_PAGE, $lastPage);
         }
 
-        if ($this->pageNumberRequested + 2 > $totalPageCount) {
+        if ($pageNumberRequested + 2 > $totalPageCount) {
             return $this->renderPageAnchors(
+                $uriParser,
                 $totalPageCount - ($lastPage - 1),
                 $totalPageCount
             );
         }
 
-        return $this->renderPageAnchors($this->pageNumberRequested - 2, $this->pageNumberRequested + 2);
+        return $this->renderPageAnchors(
+            $uriParser,
+            $pageNumberRequested - 2,
+            $pageNumberRequested + 2
+        );
     }
 
 
-    private function renderPageAnchors(int $firstPage, int $lastPage): string
+    private function renderPageAnchors(UriParser $uriParser, int $firstPage, int $lastPage): string
     {
         $anchors = '';
         for ($pageNumber = $firstPage; $pageNumber <= $lastPage; $pageNumber++) {
-            $anchors .= $this->renderPageAnchorTag($pageNumber);
+            $anchors .= $this->renderPageAnchorTag($uriParser, $pageNumber);
         }
 
         return $anchors;
     }
 
 
-    private function renderPageAnchorTag(int $pageNumber): string
+    private function renderPageAnchorTag(UriParser $uriParser, int $pageNumber): string
     {
-        if ($pageNumber === $this->pageNumberRequested) {
+        if ($pageNumber === $uriParser->getPageNumberRequested($this->pageParameterName)) {
             return sprintf('<a class="current">%d</a>', $pageNumber);
         }
 
         return sprintf(
-            '<a href="%s?pageNumber=%2$d">%2$d</a>',
-            UriRenderer::urlToString($this->uri),
+            '<a href="%s">%d</a>',
+            $this->renderTargetPageHref($uriParser, $pageNumber),
             $pageNumber
         );
     }
 
 
-    private function renderSvgAnchorTag(string $svgName, int $anchorPage, int $totalPageCount): string
-    {
-        $attrs = $this->renderSvgAnchorAttributes($svgName, $anchorPage, $totalPageCount);
+    private function renderSvgAnchorTag(
+        UriParser $uriParser,
+        string $svgName,
+        int $anchorPage,
+        int $totalPageCount
+    ): string {
+        $attrs = $this->renderSvgAnchorAttributes($uriParser, $svgName, $anchorPage, $totalPageCount);
         $svgContents = FileSystem::read(__DIR__ . '/images/' . $svgName . '.svg');
         $svg = str_replace($svgName . '-svg', 'svgPagination', $svgContents);
 
@@ -155,20 +165,34 @@ final class Pagination implements UiComponent
     }
 
 
-    private function renderSvgAnchorAttributes(string $svgName, int $expectedPageNumber, int $totalPageCount): string
-    {
-        if ($this->pageNumberRequested === self::FIRST_PAGE && in_array($svgName, self::FIRST_PAGE_SVGS, true)) {
+    private function renderSvgAnchorAttributes(
+        UriParser $uriParser,
+        string $svgName,
+        int $expectedPageNumber,
+        int $totalPageCount
+    ): string {
+        $pageNumberRequested = $uriParser->getPageNumberRequested($this->pageParameterName);
+
+        if ($pageNumberRequested === self::FIRST_PAGE && in_array($svgName, self::FIRST_PAGE_SVGS, true)) {
             return self::DISABLED_CLASS;
         }
 
-        if ($this->pageNumberRequested === $totalPageCount && in_array($svgName, self::LAST_PAGE_SVGS, true)) {
+        if ($pageNumberRequested === $totalPageCount && in_array($svgName, self::LAST_PAGE_SVGS, true)) {
             return self::DISABLED_CLASS;
         }
 
         return sprintf(
-            'class="pagination" href="%s?pageNumber=%d"',
-            UriRenderer::urlToString($this->uri),
-            $expectedPageNumber
+            'class="pagination" href="%s"',
+            $this->renderTargetPageHref($uriParser, $expectedPageNumber)
         );
+    }
+
+
+    private function renderTargetPageHref(UriParser $uriParser, int $targetPageNumber): string
+    {
+        $queryParams = $uriParser->getQueryParameters();
+        $queryParams[$this->pageParameterName] = $targetPageNumber;
+
+        return sprintf('%s?%s', $uriParser->getBaseUrl(), http_build_query($queryParams));
     }
 }

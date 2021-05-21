@@ -5,6 +5,7 @@ namespace BrandEmbassy\Components\Navigation\Pagination;
 use BrandEmbassy\Components\SnapshotAssertTrait;
 use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\TestCase;
+use function sprintf;
 
 final class PaginationTest extends TestCase
 {
@@ -13,11 +14,6 @@ final class PaginationTest extends TestCase
 
     /**
      * @dataProvider getLessThanMaxPagesDataProvider
-     *
-     * @param string $expectedSnapshot
-     * @param int $totalItemCount
-     * @param int $pageNumberRequested
-     * @param int $pageSize
      */
     public function testRenderingFewerThanMaxPages(
         string $expectedSnapshot,
@@ -25,7 +21,10 @@ final class PaginationTest extends TestCase
         int $pageNumberRequested,
         int $pageSize
     ): void {
-        $pagination = new Pagination(new Uri('/items'), $totalItemCount, $pageNumberRequested, $pageSize);
+        $pageParameterName = 'pageNumber';
+        $url = sprintf('/items?%s=%d', $pageParameterName, $pageNumberRequested);
+
+        $pagination = new Pagination(new Uri($url), $pageParameterName, $totalItemCount, $pageSize);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $expectedSnapshot, $pagination);
     }
@@ -67,11 +66,6 @@ final class PaginationTest extends TestCase
 
     /**
      * @dataProvider getGreaterThanMaxPagesDataProvider
-     *
-     * @param string $expectedSnapshot
-     * @param int $totalItemCount
-     * @param int $pageNumberRequested
-     * @param int $pageSize
      */
     public function testRenderingGreaterThanMaxPages(
         string $expectedSnapshot,
@@ -79,7 +73,10 @@ final class PaginationTest extends TestCase
         int $pageNumberRequested,
         int $pageSize
     ): void {
-        $pagination = new Pagination(new Uri('/items'), $totalItemCount, $pageNumberRequested, $pageSize);
+        $pageParameterName = 'pageNumber';
+        $url = sprintf('/items?%s=%d', $pageParameterName, $pageNumberRequested);
+
+        $pagination = new Pagination(new Uri($url), $pageParameterName, $totalItemCount, $pageSize);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $expectedSnapshot, $pagination);
     }
@@ -118,14 +115,9 @@ final class PaginationTest extends TestCase
         ];
     }
 
-    
+
     /**
      * @dataProvider getEqualToMaxPagesDataProvider
-     *
-     * @param string $expectedSnapshot
-     * @param int $totalItemCount
-     * @param int $pageNumberRequested
-     * @param int $pageSize
      */
     public function testRenderingEqualToMaxPages(
         string $expectedSnapshot,
@@ -133,7 +125,10 @@ final class PaginationTest extends TestCase
         int $pageNumberRequested,
         int $pageSize
     ): void {
-        $pagination = new Pagination(new Uri('/items'), $totalItemCount, $pageNumberRequested, $pageSize);
+        $pageParameterName = 'pageNumber';
+        $url = sprintf('/items?%s=%d', $pageParameterName, $pageNumberRequested);
+
+        $pagination = new Pagination(new Uri($url), $pageParameterName, $totalItemCount, $pageSize);
 
         $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $expectedSnapshot, $pagination);
     }
@@ -168,6 +163,48 @@ final class PaginationTest extends TestCase
                 'totalItemCount' => 23,
                 'pageNumberRequested' => 4,
                 'pageSize' => 5,
+            ],
+        ];
+    }
+
+
+    /**
+     * @dataProvider getQueryParametersDataProvider
+     */
+    public function testUriQueryParameters(
+        string $expectedSnapshot,
+        string $url,
+        string $pageParameterName
+    ): void {
+        $totalItemCount = 37;
+        $pageSize = 5;
+
+        $pagination = new Pagination(new Uri($url), $pageParameterName, $totalItemCount, $pageSize);
+
+        $this->assertSnapshot(__DIR__ . '/__snapshots__/' . $expectedSnapshot, $pagination);
+    }
+
+
+    /**
+     * @return mixed[]
+     */
+    public function getQueryParametersDataProvider(): array
+    {
+        return [
+            'page param at head' => [
+                'expectedSnapshot' => 'withPageParameterAtHead.html',
+                'url' => '/items?pageNum=2&finalParam=abc',
+                'pageParameterName' => 'pageNum',
+            ],
+            'page param at tail' => [
+                'expectedSnapshot' => 'withPageParameterAtTail.html',
+                'url' => '/items?tableId=123&userPage=2',
+                'pageParameterName' => 'userPage',
+            ],
+            'page param between 2 other parameters' => [
+                'expectedSnapshot' => 'withPageParameterBetween2OtherParameters.html',
+                'url' => '/items?tableId=123&otherPageNum=2&otherParam=xyz',
+                'pageParameterName' => 'otherPageNum',
             ],
         ];
     }
