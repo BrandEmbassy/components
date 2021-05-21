@@ -1,8 +1,9 @@
 // @flow
 
 import * as React from 'react'
-// @flow-skip-next-line
 import { renderToString } from 'react-dom/server'
+
+// @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Statuses.module.css'
 
