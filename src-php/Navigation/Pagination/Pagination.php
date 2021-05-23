@@ -2,6 +2,7 @@
 
 namespace BrandEmbassy\Components\Navigation\Pagination;
 
+use BrandEmbassy\Components\Controls\UriParser;
 use BrandEmbassy\Components\UiComponent;
 use Nette\Utils\FileSystem;
 use Psr\Http\Message\UriInterface;
@@ -56,7 +57,7 @@ final class Pagination implements UiComponent
     public function render(): string
     {
         $uriParser = new UriParser($this->uri);
-        $pageNumberRequested = $uriParser->getPageNumberRequested($this->pageParameterName);
+        $pageNumberRequested = (int)$uriParser->getParameterValue($this->pageParameterName);
 
         $totalPageCount = (int)ceil($this->totalItemCount / $this->pageSize);
 
@@ -104,7 +105,7 @@ final class Pagination implements UiComponent
             ? $totalPageCount
             : self::MAX_PAGES_TO_DISPLAY;
 
-        $pageNumberRequested = $uriParser->getPageNumberRequested($this->pageParameterName);
+        $pageNumberRequested = (int)$uriParser->getParameterValue($this->pageParameterName);
 
         if (($pageNumberRequested - 2) < 1) {
             return $this->renderPageAnchors($uriParser, self::FIRST_PAGE, $lastPage);
@@ -139,7 +140,7 @@ final class Pagination implements UiComponent
 
     private function renderPageAnchorTag(UriParser $uriParser, int $pageNumber): string
     {
-        if ($pageNumber === $uriParser->getPageNumberRequested($this->pageParameterName)) {
+        if ($pageNumber === (int)$uriParser->getParameterValue($this->pageParameterName)) {
             return sprintf('<a class="current">%d</a>', $pageNumber);
         }
 
@@ -171,7 +172,7 @@ final class Pagination implements UiComponent
         int $expectedPageNumber,
         int $totalPageCount
     ): string {
-        $pageNumberRequested = $uriParser->getPageNumberRequested($this->pageParameterName);
+        $pageNumberRequested = (int)$uriParser->getParameterValue($this->pageParameterName);
 
         if ($pageNumberRequested === self::FIRST_PAGE && in_array($svgName, self::FIRST_PAGE_SVGS, true)) {
             return self::DISABLED_CLASS;

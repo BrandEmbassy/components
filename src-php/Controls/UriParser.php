@@ -1,8 +1,7 @@
 <?php declare(strict_types = 1);
 
-namespace BrandEmbassy\Components\Navigation\Pagination;
+namespace BrandEmbassy\Components\Controls;
 
-use BrandEmbassy\Components\Controls\UriRenderer;
 use Psr\Http\Message\UriInterface;
 use function array_key_exists;
 use function explode;
@@ -50,16 +49,21 @@ final class UriParser
     }
 
 
-    public function getPageNumberRequested(string $pageParameterName): int
+    /**
+     * @param string $parameterName
+
+     * @return mixed
+     */
+    public function getParameterValue(string $parameterName)
     {
-        if (!array_key_exists($pageParameterName, $this->queryParams)) {
+        if (!array_key_exists($parameterName, $this->queryParams)) {
             return self::FIRST_PAGE;
         }
 
-        if (!is_numeric($this->queryParams[$pageParameterName])) {
+        if (!is_numeric($this->queryParams[$parameterName])) {
             return self::FIRST_PAGE;
         }
 
-        return (int)$this->queryParams[$pageParameterName];
+        return (int)$this->queryParams[$parameterName];
     }
 }
