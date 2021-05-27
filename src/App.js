@@ -353,6 +353,11 @@ export default class App extends Component {
                   <Submit />
                 </div>
               </div>
+              <div className='row'>
+                <div className='col-xs'>
+                  <Pagination />
+                </div>
+              </div>
             </div>
           </div>
         </div>
