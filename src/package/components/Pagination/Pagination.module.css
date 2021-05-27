@@ -1,5 +1,6 @@
+
 .paginationComponent {
-    display: flex;
+    display: block;
     align-items: center;
 }
 
@@ -18,7 +19,7 @@
     fill: dimgrey;
 }
 
-.pagination {
+.Pagination {
     display: inline-block;
     height: 20px;
     line-height: 20px;;
@@ -26,7 +27,7 @@
     align-items: center;
 }
 
-.pagination a {
+.Pagination a {
     fill: lightgrey;
     color: lightgrey;
     width: 30px;
@@ -34,20 +35,20 @@
     transition: background-color .3s;
 }
 
-.pagination a.active {
+.Pagination a.active {
     color: black;
     font-weight: 900
 }
 
-.pagination a:hover:not(.active) {
+.Pagination a:hover:not(.active) {
     color: black;
 }
 
-.pagination a:hover:not(.active) {
+.Pagination a:hover:not(.active) {
     color: black;
 }
 
-.pagination a.current {
+.Pagination a.current {
     color: black;
     font-weight: 900;
     pointer-events: none;
@@ -57,20 +58,18 @@
     pointer-events: none;
 }
 
-hr {
-    height: 1px;
-    background-color: lightgrey;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-table {
+.table {
     border: 0;
     width: 100%;
     padding: 0;
     border-spacing: 0;
 }
 
-td {
+.td {
     width: 33%;
+}
+
+.tdCentered {
+    width: 33%;
+    text-align: center;
 }

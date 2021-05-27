@@ -18,7 +18,7 @@ final class Pagination implements UiComponent
     private const MAX_PAGES_TO_DISPLAY = 5;
     private const FIRST_PAGE_SVGS = ['arrow-first', 'arrow-back'];
     private const LAST_PAGE_SVGS = ['arrow-next', 'arrow-last'];
-    private const DISABLED_CLASS = 'class="disableClick"';
+    private const DISABLED_CLASS = 'class="Pagination__disableClick"';
 
     /**
      * @var UriInterface
@@ -66,20 +66,22 @@ final class Pagination implements UiComponent
             ? $totalPageCount
             : $pageNumberRequested + 1;
 
-        return '<div class="paginationComponent">'
-            . '<table>'
+        return '<div class="Pagination__paginationComponent">'
+            . '<table class="Pagination__table">'
             . '<tr>'
-                . '<td><div class="displayCounts">' . $this->renderDisplayCounts($pageNumberRequested) . '</div></td>'
-                . '<td align="center">'
+                . '<td class="Pagination__td"><div class="Pagination__displayCounts">'
+                    . $this->renderDisplayCounts($pageNumberRequested)
+                . '</div></td>'
+                . '<td class="Pagination__tdCentered">'
                     . $this->renderSvgAnchorTag($uriParser, 'arrow-first', 1, $totalPageCount)
                     . $this->renderSvgAnchorTag($uriParser, 'arrow-back', $prevPageNumber, $totalPageCount)
-                    . '<div class="pagination">'
+                    . '<div class="Pagination__Pagination">'
                         . $this->renderPageAnchorTags($uriParser, $totalPageCount)
                     . '</div>'
                     . $this->renderSvgAnchorTag($uriParser, 'arrow-next', $nextPageNumber, $totalPageCount)
                     . $this->renderSvgAnchorTag($uriParser, 'arrow-last', $totalPageCount, $totalPageCount)
                 . '</td>'
-                . '<td></td>'
+                . '<td class="Pagination__td"></td>'
             . '</tr></table></div>';
     }
 
@@ -141,7 +143,7 @@ final class Pagination implements UiComponent
     private function renderPageAnchorTag(UriParser $uriParser, int $pageNumber): string
     {
         if ($pageNumber === (int)$uriParser->getParameterValue($this->pageParameterName)) {
-            return sprintf('<a class="current">%d</a>', $pageNumber);
+            return sprintf('<a class="Pagination__current">%d</a>', $pageNumber);
         }
 
         return sprintf(
@@ -160,7 +162,7 @@ final class Pagination implements UiComponent
     ): string {
         $attrs = $this->renderSvgAnchorAttributes($uriParser, $svgName, $anchorPage, $totalPageCount);
         $svgContents = FileSystem::read(__DIR__ . '/images/' . $svgName . '.svg');
-        $svg = str_replace($svgName . '-svg', 'svgPagination', $svgContents);
+        $svg = str_replace($svgName . '-svg', 'Pagination__svgPagination', $svgContents);
 
         return sprintf('<a %s>%s</a>', $attrs, $svg);
     }
@@ -183,7 +185,7 @@ final class Pagination implements UiComponent
         }
 
         return sprintf(
-            'class="pagination" href="%s"',
+            'class="Pagination__Pagination" href="%s"',
             $this->renderTargetPageHref($uriParser, $expectedPageNumber)
         );
     }
