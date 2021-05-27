@@ -10,13 +10,13 @@ use function implode;
 final class Styles
 {
     /**
-     * @var array<string, string>
+     * @var array<string, string|Color>
      */
     private $styles;
 
 
     /**
-     * @param array<string, string> $styles
+     * @param array<string, string|Color> $styles
      */
     public function __construct(array $styles)
     {
@@ -25,7 +25,10 @@ final class Styles
     }
 
 
-    public function with(string $key, string $value): self
+    /**
+     * @param string|Color $value
+     */
+    public function with(string $key, $value): self
     {
         $styles = $this->styles;
         $styles[$key] = $value;
@@ -48,7 +51,8 @@ final class Styles
 
         $styles = [];
         foreach ($this->styles as $key => $value) {
-            $styles[] = $key . ': ' . $value . ';';
+            $trueValue = $value instanceof Color ? $value->getRgbHex() : $value;
+            $styles[] = $key . ': ' . $trueValue . ';';
         }
 
         return ' style="' . implode(' ', $styles) . '"';
