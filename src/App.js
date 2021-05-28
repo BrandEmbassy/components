@@ -18,6 +18,7 @@ import Link from './package/components/Link/Link'
 import Linklist from './package/components/Linklist/Linklist'
 import Notification from './package/components/Notification/Notification'
 import P from './package/components/P/P'
+import Pagination from './package/components/Pagination/Pagination'
 import ProfilePicture from './package/components/ProfilePicture/ProfilePicture'
 import Radio from './package/components/Radio/Radio'
 import Selectbox from './package/components/Selectbox/Selectbox'
@@ -350,6 +351,11 @@ export default class App extends Component {
                   <ProfilePicture />
                   <Selectbox />
                   <Submit />
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-xs'>
+                  <Pagination />
                 </div>
               </div>
             </div>

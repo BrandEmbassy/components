@@ -40,6 +40,10 @@
   background-color: #e8585d;
 }
 
+.Button.Neutral {
+  background-color: #808080;
+}
+
 .Button.Cancel {
   color: #e8585d;
   background-color: #fff;

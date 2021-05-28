@@ -26,4 +26,11 @@ final class StylesTest extends TestCase
 
         self::assertEquals(' style="a: a2; b: b1; c: c1;"', $merged->getHtmlAttribute());
     }
+
+
+    public function testColorObjectRenderedAsColorString(): void
+    {
+        $styles = new Styles(['a' => 'a1', 'color' => Color::get(Color::NEGATIVE)]);
+        self::assertEquals(' style="a: a1; color: #E8585D;"', $styles->getHtmlAttribute());
+    }
 }

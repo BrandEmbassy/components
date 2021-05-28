@@ -1,6 +1,8 @@
 // @flow
 
 import * as React from 'react'
+import { renderToString } from 'react-dom/server'
+
 // @flow-skip-next-line
 import classNames from 'classnames/bind'
 import styles from './Statuses.module.css'
@@ -24,7 +26,17 @@ export default function Statuses (props: Props) {
     status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(),
     { Reversed, hasHover }
   )
-  const dataCy = `status-${status.toLowerCase() || text.toLowerCase()}`
+
+  var altText = ''
+  switch (typeof (text)) {
+    case 'string':
+      altText = text
+      break
+    case React.Node:
+      altText = renderToString(text !== null && text !== undefined ? text : '')
+      break
+  }
+  const dataCy = `status-${status.toLowerCase() || altText.toLowerCase()}`
 
   return (
     <div data-cy={dataCy} className={className}>

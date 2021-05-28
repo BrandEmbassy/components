@@ -24,7 +24,7 @@ final class UriRenderer
     }
 
 
-    private static function urlToString(UriInterface $url): string
+    public static function urlToString(UriInterface $url): string
     {
         $scheme = $url->getScheme();
         $authority = $url->getAuthority();
