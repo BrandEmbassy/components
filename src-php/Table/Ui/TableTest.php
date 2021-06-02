@@ -166,4 +166,45 @@ final class TableTest extends TestCase
 
         $table->render();
     }
+
+
+    public function testRenderingWithImageInCell(): void
+    {
+        $rowsData = [
+            new RowData(
+                '1',
+                [
+                    'imageUrl' => new CellData('image', 'https://some-domain/john.png'),
+                    'name' => new CellData('name', 'John'),
+                ]
+            ),
+            new RowData(
+                '2',
+                [
+                    'imageUrl' => new CellData('image', 'https://some-domain/harry.png'),
+                    'name' => new CellData('name', 'Harry'),
+                ]
+            ),
+        ];
+        $dataProvider = new ArrayDataProvider($rowsData);
+        $columnDefinition = [
+            new ColumnDefinition('image', 'Image'),
+            new ColumnDefinition('name', 'Name'),
+        ];
+        $table = new Table(new TableDefinition($columnDefinition), $dataProvider);
+        $table->setColumnsNotInDataSet(['image']);
+        $table->setCellRenderCallback(
+            'image',
+            static function (CellData $cellData, RowData $rowData, ColumnDefinition $columnDefinition): Cell {
+                $uri = new Uri($rowData->getCellsData()['imageUrl']->getValue());
+
+                return new Cell(
+                    new CellImage($uri, 'some-class', '50px'),
+                    $columnDefinition
+                );
+            }
+        );
+
+        $this->assertSnapshot(__DIR__ . '/__snapshots__/tableWithImageInCell.html', $table);
+    }
 }
