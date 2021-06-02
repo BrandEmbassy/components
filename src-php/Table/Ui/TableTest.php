@@ -199,7 +199,7 @@ final class TableTest extends TestCase
                 $uri = new Uri($rowData->getCellsData()['imageUrl']->getValue());
 
                 return new Cell(
-                    new CellImage($uri, 'some-class'),
+                    new CellImage($uri, 'some-class', '50px'),
                     $columnDefinition
                 );
             }
