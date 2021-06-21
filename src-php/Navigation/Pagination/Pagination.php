@@ -19,6 +19,7 @@ final class Pagination implements UiComponent
     private const FIRST_PAGE_SVGS = ['arrow-first', 'arrow-back'];
     private const LAST_PAGE_SVGS = ['arrow-next', 'arrow-last'];
     private const DISABLED_CLASS = 'class="Pagination__disableClick"';
+    private const EMPTY_COMPONENT = '';
 
     /**
      * @var UriInterface
@@ -56,6 +57,10 @@ final class Pagination implements UiComponent
 
     public function render(): string
     {
+        if ($this->totalItemCount <= 0) {
+            return self::EMPTY_COMPONENT;
+        }
+
         $uriParser = new UriParser($this->uri);
         $pageNumberRequested = (int)$uriParser->getParameterValue($this->pageParameterName);
 

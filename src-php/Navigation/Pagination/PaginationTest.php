@@ -36,6 +36,12 @@ final class PaginationTest extends TestCase
     public function getLessThanMaxPagesDataProvider(): array
     {
         return [
+            'zero items on page' => [
+                'expectedSnapshot' => 'empty.html',
+                'totalItemCount' => 0,
+                'pageNumberRequested' => 1,
+                'pageSize' => 20,
+            ],
             'first page' => [
                 'expectedSnapshot' => 'lessThanMax_firstPage.html',
                 'totalItemCount' => 47,
