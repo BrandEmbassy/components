@@ -5,6 +5,7 @@ namespace BrandEmbassy\Components\Controls\Selectbox;
 use BrandEmbassy\Components\ArrayRenderer;
 use BrandEmbassy\Components\StringEscaper;
 use BrandEmbassy\Components\UiComponent;
+use function sprintf;
 
 final class Selectbox implements UiComponent
 {
@@ -41,6 +42,16 @@ final class Selectbox implements UiComponent
      */
     private $disabled;
 
+    /**
+     * @var string|null
+     */
+    private $id;
+
+    /**
+     * @var string|null
+     */
+    private $onChange;
+
 
     /**
      * @param SelectboxOption[] $options
@@ -51,13 +62,17 @@ final class Selectbox implements UiComponent
         SelectboxType $type,
         string $description = '',
         bool $isError = false,
-        bool $disabled = false
+        bool $disabled = false,
+        ?string $id = null,
+        ?string $onChange = null
     ) {
         $this->options = $options;
         $this->name = $name;
         $this->description = $description;
         $this->isError = $isError;
         $this->disabled = $disabled;
+        $this->id = $id;
+        $this->onChange = $onChange;
 
         if ($type->getValue() === SelectboxType::WIDE) {
             $this->selectboxClass .= ' ' . self::CLASS_SELECTBOX_WIDE;
@@ -75,8 +90,17 @@ final class Selectbox implements UiComponent
         $disabled = $this->disabled ? ' disabled="disabled"' : '';
         $disabledClass = $this->disabled ? ' Selectbox__Disabled' : '';
 
+        $id = $this->id !== null ? sprintf(' id="%s"', $this->id) : '';
+        $name = sprintf(' name="%s"', StringEscaper::escapeHtmlAttribute($this->name));
+        $onChange = $this->onChange !== null ? sprintf(' onchange="%s"', $this->onChange) : '';
+
         return '<div class="' . $this->selectboxClass . $errorClass . $disabledClass . '">'
-            . '<select' . $disabled . ' name="' . StringEscaper::escapeHtmlAttribute($this->name) . '">'
+            . '<select'
+                . $disabled
+                . $id
+                . $name
+                . $onChange
+                . '>'
             . ArrayRenderer::render($this->options)
             . '</select>' . $description . '</div>';
     }

@@ -31,8 +31,8 @@ final class SelectboxTest extends TestCase
 
         return [
             'selectboxNormal'                  => [
-                __DIR__ . '/__snapshots__/selectboxNormal.html',
-                new Selectbox(
+                'snapshot'  => __DIR__ . '/__snapshots__/selectboxNormal.html',
+                'selectbox' => new Selectbox(
                     $selectboxOptions,
                     'selectbox-"name"',
                     SelectboxType::byValue(SelectboxType::NORMAL),
@@ -40,8 +40,8 @@ final class SelectboxTest extends TestCase
                 ),
             ],
             'selectboxDisabled'                => [
-                __DIR__ . '/__snapshots__/selectboxDisabled.html',
-                new Selectbox(
+                'snapshot'  => __DIR__ . '/__snapshots__/selectboxDisabled.html',
+                'selectbox' => new Selectbox(
                     [],
                     'selectbox-"name"',
                     SelectboxType::byValue(SelectboxType::NORMAL),
@@ -51,8 +51,8 @@ final class SelectboxTest extends TestCase
                 ),
             ],
             'selectboxWithErrorOnly'           => [
-                __DIR__ . '/__snapshots__/selectboxWithErrorOnly.html',
-                new Selectbox(
+                'snapshot'  => __DIR__ . '/__snapshots__/selectboxWithErrorOnly.html',
+                'selectbox' => new Selectbox(
                     $selectboxOptions,
                     'selectbox-name',
                     SelectboxType::byValue(SelectboxType::NORMAL),
@@ -61,8 +61,8 @@ final class SelectboxTest extends TestCase
                 ),
             ],
             'selectboxWithErrorAndDescription' => [
-                __DIR__ . '/__snapshots__/selectboxWithErrorAndDescription.html',
-                new Selectbox(
+                'snapshot'  => __DIR__ . '/__snapshots__/selectboxWithErrorAndDescription.html',
+                'selectbox' => new Selectbox(
                     $selectboxOptions,
                     'selectbox-name',
                     SelectboxType::byValue(SelectboxType::NORMAL),
@@ -71,8 +71,33 @@ final class SelectboxTest extends TestCase
                 ),
             ],
             'selectboxWide'                    => [
-                __DIR__ . '/__snapshots__/selectboxWide.html',
-                new Selectbox($selectboxOptions, 'selectbox-name', SelectboxType::byValue(SelectboxType::WIDE)),
+                'snapshot'  => __DIR__ . '/__snapshots__/selectboxWide.html',
+                'selectbox' => new Selectbox($selectboxOptions, 'selectbox-name', SelectboxType::byValue(SelectboxType::WIDE)),
+            ],
+            'selectboxWithId'                => [
+                'snapshot'  => __DIR__ . '/__snapshots__/selectboxWithId.html',
+                'selectbox' => new Selectbox(
+                    [],
+                    'selectbox-"name"',
+                    SelectboxType::byValue(SelectboxType::NORMAL),
+                    'Some <strong>description</strong>',
+                    false,
+                    false,
+                    'some-id'
+                ),
+            ],
+            'selectboxWithOnChange'                => [
+                'snapshot'  => __DIR__ . '/__snapshots__/selectboxWithOnChange.html',
+                'selectbox' => new Selectbox(
+                    [],
+                    'selectbox-"name"',
+                    SelectboxType::byValue(SelectboxType::NORMAL),
+                    'Some <strong>description</strong>',
+                    false,
+                    false,
+                    null,
+                    'someFunction(someVar)'
+                ),
             ],
         ];
     }
